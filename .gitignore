@@ -2,3 +2,4 @@
 /bench/.zig-cache
 /vendor/bzip3/build-aux
 /vendor/bzip3
+/zig-out/bin

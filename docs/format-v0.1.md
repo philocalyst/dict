@@ -1,6 +1,6 @@
-# Snapshot format v0.1 (minor 3)
+# Snapshot format v0.1 (minor 4)
 
-This document describes the format emitted and accepted by the current `src/lexicon.zig` implementation. It is an in-memory snapshot format: `Writer.build` creates a byte slice and `Reader.open` validates a byte slice. There is no file container, encryption, signature, or streaming I/O layer in this snapshot format. Minor 3 embeds independently addressable raw or pinned-upstream-bzip3 payload blocks through the reusable codec layer in [`src/codec.zig`](../src/codec.zig), including the bzip3 state size needed for portable decoding. All multi-byte integers are little-endian and all offsets are byte offsets within the snapshot or section explicitly stated below. Readers decode fields explicitly; they never reinterpret on-wire bytes as Zig structs or pointers.
+This document describes the format emitted and accepted by the current `src/lexicon.zig` implementation. It is an in-memory snapshot format: `Writer.build` creates a byte slice and `Reader.open` validates a byte slice. There is no file container, encryption, signature, or streaming I/O layer in this snapshot format. Minor 3 embeds independently addressable raw or pinned-upstream-bzip3 payload blocks through the reusable codec layer in [`src/codec.zig`](../src/codec.zig), including the bzip3 state size needed for portable decoding. Minor 4 adds adaptive frame-of-reference postings while retaining the exact raw fallback layout. All multi-byte integers are little-endian and all offsets are byte offsets within the snapshot or section explicitly stated below. Readers decode fields explicitly; they never reinterpret on-wire bytes as Zig structs or pointers.
 
 ## Container
 
@@ -12,7 +12,7 @@ The snapshot starts with a 64-byte header, followed by three 8-byte-aligned sect
 |---:|---:|---|---|
 | 0 | 8 | bytes | ASCII `LEXSNAP\0` |
 | 8 | 2 | `u16` | major format version, currently `1` |
-| 10 | 2 | `u16` | minor format version, emitted as `3`; readers also accept `0`, `1`, and `2` |
+| 10 | 2 | `u16` | minor format version, emitted as `4`; readers also accept `0`, `1`, `2`, and `3` |
 | 12 | 4 | `u32` | feature flags; currently `0` |
 | 16 | 8 | `u64` | total snapshot length |
 | 24 | 8 | `u64` | directory offset |
@@ -49,16 +49,16 @@ The first 16 bytes are:
 | 0 | 4 | `u32` | number of distinct keys |
 | 4 | 2 | `u16` | front-coding restart interval, currently `8` |
 | 6 | 2 | `u16` | reserved; `0` |
-| 8 | 8 | `u64` | minor 0: reserved `0`; minor 1/2/3: byte offset of the restart directory within the keys section |
+| 8 | 8 | `u64` | minor 0: reserved `0`; minor 1–4: byte offset of the restart directory within the keys section |
 
-For minor 0, each key record follows at offset 16 and the section ends after the final record. For minor 1, 2, and 3, the key record stream ends at the offset in the header and a restart directory follows it. Keys are sorted by unsigned byte lexicographic order. Every eighth key is a restart record:
+For minor 0, each key record follows at offset 16 and the section ends after the final record. For minor 1–4, the key record stream ends at the offset in the header and a restart directory follows it. Keys are sorted by unsigned byte lexicographic order. Every eighth key is a restart record:
 
 - marker `0` (`u8`), full key length (`u32`), full key bytes;
 - marker `1` (`u8`) otherwise, common-prefix length with the previous key (`u16`), suffix length (`u32`), suffix bytes.
 
-Both forms then contain a posting start (`u64`) and posting count (`u64`). The posting start is an index into the posting ID array, after its eight-byte count header. Keys are non-empty and valid UTF-8. Prefix lookup uses literal `startsWith` byte semantics.
+Both forms then contain a posting start (`u64`) and posting count (`u64`). The posting start is an index into the posting stream, independent of its raw or packed physical representation. Keys are non-empty and valid UTF-8. Prefix lookup uses literal `startsWith` byte semantics.
 
-### Minor 1/2/3 restart directory
+### Minor 1–4 restart directory
 
 The restart directory begins at the header's offset and has an eight-byte header followed by one 16-byte entry per restart record:
 
@@ -74,7 +74,20 @@ The table occupies the remainder of the keys section exactly. The reader checks 
 
 ## Postings section (kind 2)
 
-At offset 0 is the total posting count (`u64`), followed by that many record IDs as consecutive `u64` values. A key's posting range is the half-open range beginning at its key-section posting start and containing its posting count IDs. IDs within a key's range are sorted ascending because records are canonically sorted by key and then ID. The current format has one posting per record, so the total posting count equals the payload atom count.
+For minor 0–3, offset 0 is the total posting count (`u64`), followed by that many record IDs as consecutive `u64` values. Minor 4 keeps this exact representation for raw fallback. In the minor-4 adaptive representation, offset 0 stores the count with bit 63 set; the remaining 63 bits are the posting count. The 16-byte extension at offset 8 is:
+
+| Offset | Size | Type | Meaning |
+|---:|---:|---|---|
+| 8 | 8 | `u64` | global minimum record ID (`min`) |
+| 16 | 4 | `u32` | packed data byte length |
+| 20 | 1 | `u8` | fixed offset width in bits, `0..64` |
+| 21 | 1 | `u8` | meaningful bits in the final packed byte (`0..7`; `0` means full byte) |
+| 22 | 1 | `u8` | flags; currently `0` |
+| 23 | 1 | `u8` | reserved; must be `0` |
+
+Packed data begins at offset 24. Entry `i` is the fixed-width little-endian bit field at bit offset `i * width`, and its ID is `min + offset`. Width zero is valid and represents repeated `min` values; for an empty stream the minimum and packed data are zero. The packed length, tail-bit count, all reserved bits, and every unused tail bit are checked strictly. A scalar read computes its bit address directly and loads at most nine bytes, so random access remains O(1) even for unaligned 64-bit fields. The adaptive writer emits this form only when its complete header plus packed data is strictly smaller than the eight-byte count plus eight bytes per ID raw form; `.raw` forces the legacy stream. IDs remain arbitrary unsigned 64-bit values and are never renumbered.
+
+A key's posting range is the half-open range beginning at its key-section posting start and containing its posting count IDs. IDs within a key's range are sorted ascending because records are canonically sorted by key and then ID. The current format has one posting per record, so the total posting count equals the payload atom count.
 
 ## Payload section (kind 3)
 
@@ -145,4 +158,4 @@ remains a separate checked limit, and allocator exhaustion maps to
 
 ## Compatibility scope
 
-Version checks accept major `1` and minor versions `0`, `1`, `2`, and `3`; section versions must be `1`. Minor 0 snapshots use the validated scan path, minor 1 snapshots use the restart directory, minor 2 snapshots add the payload codec fields described above, and minor 3 adds the bzip3 state size. The writer emits minor 3 deterministically. This is a prototype contract and may change before a published on-disk compatibility promise. No C ABI, DICT protocol, TEI model, semantic query language, language-analysis profile, or editor metadata is encoded by this version.
+Version checks accept major `1` and minor versions `0` through `4`; section versions must be `1`. Minor 0 snapshots use the validated scan path, minor 1 snapshots use the restart directory, minor 2 snapshots add the payload codec fields described above, minor 3 adds the bzip3 state size, and minor 4 adds adaptive postings while retaining the previous reader paths. The writer emits minor 4 deterministically. This is a prototype contract and may change before a published on-disk compatibility promise. No C ABI, DICT protocol, TEI model, semantic query language, language-analysis profile, or editor metadata is encoded by this version.

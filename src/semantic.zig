@@ -445,6 +445,11 @@ pub const Builder = struct {
                 if (!validDocumentId(self.documents.items, child_id)) return Error.InvalidReference;
                 if (child_id.index == parent.index) return Error.DocumentCycle;
                 const child_node = &self.documents.items[child_id.index];
+                if (parent_node.source) |parent_source| {
+                    if (child_node.source) |child_source| {
+                        if (parent_source.index != child_source.index) return Error.InvalidDocument;
+                    }
+                }
                 if (child_node.parent) |old_parent| {
                     if (old_parent.index != parent.index) return Error.DocumentMultipleParent;
                     return Error.DuplicateChild;
@@ -459,6 +464,7 @@ pub const Builder = struct {
             },
         }
         const owned = try self.copyChild(child);
+        errdefer freeChild(self.allocator, owned);
         try parent_node.children.append(self.allocator, owned);
         if (child == .node) self.documents.items[child.node.index].parent = parent;
     }
@@ -517,6 +523,7 @@ pub const Builder = struct {
             self.allocator.free(documents);
         }
         const roots = try self.roots.toOwnedSlice(self.allocator);
+        errdefer self.allocator.free(roots);
         const entity_anchors = try self.entity_anchors.toOwnedSlice(self.allocator);
         errdefer self.allocator.free(entity_anchors);
         const assertion_anchors = try self.assertion_anchors.toOwnedSlice(self.allocator);
@@ -637,6 +644,7 @@ pub const Builder = struct {
             self.allocator.free(out);
         }
         for (input, 0..) |attribute, i| {
+            try self.validateQualifiedName(attribute.name);
             try self.requireValue(attribute.value);
             out[i] = .{ .name = try self.copyQualifiedName(attribute.name), .value = attribute.value };
             copied += 1;
@@ -743,6 +751,10 @@ pub const Builder = struct {
                 if (evidence.document) |id| try self.requireDocument(id);
                 if (evidence.quote) |id| try self.requireValue(id);
                 if (evidence.provenance) |id| try self.requireValue(id);
+                for (evidence.attributes) |attribute| {
+                    try self.validateQualifiedName(attribute.name);
+                    try self.requireValue(attribute.value);
+                }
             }
             if (assertion.temporal) |temporal| try validateTemporal(temporal);
             try self.validateContext(assertion.context);
@@ -778,6 +790,11 @@ pub const Builder = struct {
             }
             if (document.parent) |parent| {
                 try self.requireDocument(parent);
+                if (document.source) |source| {
+                    if (self.documents.items[parent.index].source) |parent_source| {
+                        if (source.index != parent_source.index) return Error.InvalidDocument;
+                    }
+                }
                 if (seen_roots[i]) return Error.InvalidDocument;
                 if (!hasNodeChild(documentId(i), self.documents.items[parent.index].children.items)) return Error.InvalidDocument;
             } else if (!seen_roots[i]) return Error.InvalidDocument;
@@ -1344,10 +1361,47 @@ fn allocationFailureFixture(allocator: std.mem.Allocator) !void {
         .certainty = .certain,
     });
     const root = try builder.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "root" }, .attributes = &.{.{ .name = .{ .namespace = ns, .local = "kind" }, .value = value }} });
+    // Force child-vector growth after the PI target has been allocated.
+    for (0..40) |_| try builder.appendChild(root, .{ .processing_instruction = .{ .target = "editor", .data = value } });
     _ = try builder.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "child" }, .parent = root });
     try builder.addDocumentRoot(root);
+    const source_id = try builder.addSource(.{ .external_id = "source.xml", .base_uri = "urn:source" });
+    try builder.addEntityAnchor(source, .{ .source = source_id, .node = root });
+    try builder.addAssertionAnchor(.{ .index = 0 }, .{ .source = source_id, .node = root });
     var model = try builder.build();
     defer model.deinit();
+}
+
+test "evidence rejects invalid qualified attribute names at insertion" {
+    var builder = Builder.init(std.testing.allocator);
+    defer builder.deinit();
+    const value = try builder.addValue(.{ .text = .{ .bytes = "evidence" } });
+    const predicate = try builder.addEntity(.{ .kind = .annotation });
+    try std.testing.expectError(Error.InvalidNamespace, builder.addAssertion(.{
+        .predicate = predicate,
+        .participants = &.{
+            .{ .role = "subject", .target = .{ .value = value } },
+            .{ .role = "object", .target = .{ .value = value } },
+        },
+        .attributes = &.{},
+        .evidence = &.{.{ .attributes = &.{.{ .name = .{ .namespace = .{ .index = 99 }, .local = "source" }, .value = value }} }},
+        .state = .asserted,
+        .certainty = .certain,
+    }));
+    try std.testing.expectEqual(@as(usize, 0), builder.assertions.items.len);
+}
+
+test "appending an existing document cannot bypass source ownership validation" {
+    var builder = Builder.init(std.testing.allocator);
+    defer builder.deinit();
+    const ns = try builder.addNamespace("urn:test", "");
+    const source_a = try builder.addSource(.{});
+    const source_b = try builder.addSource(.{});
+    const root = try builder.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "entry" }, .source = source_a });
+    const child = try builder.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "sense" }, .source = source_b });
+    try std.testing.expectError(Error.InvalidDocument, builder.appendChild(root, .{ .node = child }));
+    try std.testing.expectEqual(@as(usize, 0), builder.documents.items[root.index].children.items.len);
+    try std.testing.expectEqual(null, builder.documents.items[child.index].parent);
 }
 
 test "typed values preserve bytes, text, and explicit absence" {

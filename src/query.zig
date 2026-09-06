@@ -20,6 +20,8 @@ pub const QueryOptions = struct {
     max_scan_items: usize = 1_000_000,
     max_depth: u32 = 64,
     max_result_bytes: usize = 64 * 1024 * 1024,
+    /// Temporary membership bitmaps used by source-node semijoins.
+    max_temporary_bytes: usize = 8 * 1024 * 1024,
 };
 
 pub const Options = QueryOptions;
@@ -184,18 +186,16 @@ pub const Evaluator = struct {
     pub fn filterEntities(self: *const Evaluator, filter: EntityFilter) Error!EntityResult {
         if (filter.source) |source| try self.requireSource(source);
         if (filter.source_node) |node| try self.validateNodeFilter(filter.source, node);
-        if (filter.source_node != null) {
-            try self.ensureScan(self.model.entity_anchors.len);
-            for (self.model.entity_anchors) |item| try self.validateEntityAnchor(item);
-        }
         try self.ensureScan(self.model.entities.len);
+        var node_matches = if (filter.source_node) |node| try self.anchorMembership(.entity, node, filter.source) else null;
+        defer if (node_matches) |*bits| bits.deinit(self.allocator);
         var ids: std.ArrayList(semantic.EntityId) = .empty;
         errdefer ids.deinit(self.allocator);
         for (self.model.entities, 0..) |entity, index| {
             if (entity.source) |source| try self.requireSource(source);
             if (filter.kind) |kind| if (entity.kind != kind) continue;
             if (filter.source) |source| if (entity.source == null or entity.source.?.index != source.index) continue;
-            if (filter.source_node) |node| if (!self.entityHasNode(.{ .index = @intCast(index) }, node, filter.source)) continue;
+            if (node_matches) |bits| if (!bits.isSet(index)) continue;
             try self.appendBounded(semantic.EntityId, &ids, .{ .index = @intCast(index) });
         }
         return .{ .allocator = self.allocator, .ids = try ids.toOwnedSlice(self.allocator) };
@@ -211,11 +211,9 @@ pub const Evaluator = struct {
             .unresolved_status => {},
         };
         if (filter.context) |context| try self.validateContext(context);
-        if (filter.source_node != null) {
-            try self.ensureScan(self.model.assertion_anchors.len);
-            for (self.model.assertion_anchors) |item| try self.validateAssertionAnchor(item);
-        }
         try self.ensureScan(self.model.assertions.len);
+        var node_matches = if (filter.source_node) |node| try self.anchorMembership(.assertion, node, filter.source) else null;
+        defer if (node_matches) |*bits| bits.deinit(self.allocator);
         var ids: std.ArrayList(semantic.AssertionId) = .empty;
         errdefer ids.deinit(self.allocator);
         for (self.model.assertions, 0..) |assertion_value, index| {
@@ -226,7 +224,7 @@ pub const Evaluator = struct {
             if (filter.participant) |participant| if (!hasParticipant(assertion_value, participant)) continue;
             if (filter.context) |context| if (!contextEqual(assertion_value.context, context)) continue;
             if (filter.source) |source| if (assertion_value.source == null or assertion_value.source.?.index != source.index) continue;
-            if (filter.source_node) |node| if (!self.assertionHasNode(.{ .index = @intCast(index) }, node, filter.source)) continue;
+            if (node_matches) |bits| if (!bits.isSet(index)) continue;
             try self.appendBounded(semantic.AssertionId, &ids, .{ .index = @intCast(index) });
         }
         return .{ .allocator = self.allocator, .ids = try ids.toOwnedSlice(self.allocator) };
@@ -397,14 +395,27 @@ pub const Evaluator = struct {
         if (source) |source_id| if (self.model.documents[node.index].source) |node_source| if (node_source.index != source_id.index) return Error.InvalidArgument;
     }
 
-    fn entityHasNode(self: *const Evaluator, entity: semantic.EntityId, node: semantic.DocumentNodeId, source: ?semantic.SourceId) bool {
-        for (self.model.entity_anchors) |item| if (item.entity.index == entity.index and item.anchor.node.index == node.index and (source == null or item.anchor.source.index == source.?.index)) return true;
-        return false;
-    }
-
-    fn assertionHasNode(self: *const Evaluator, assertion_id: semantic.AssertionId, node: semantic.DocumentNodeId, source: ?semantic.SourceId) bool {
-        for (self.model.assertion_anchors) |item| if (item.assertion.index == assertion_id.index and item.anchor.node.index == node.index and (source == null or item.anchor.source.index == source.?.index)) return true;
-        return false;
+    /// One anchor scan and one bit per candidate replace a nested scan. The
+    /// bitmap is query-local; no reverse graph is persisted or occurrences
+    /// deduplicated. The enclosing semijoin returns each candidate once.
+    fn anchorMembership(self: *const Evaluator, comptime domain: enum { entity, assertion }, node: semantic.DocumentNodeId, source: ?semantic.SourceId) Error!std.DynamicBitSetUnmanaged {
+        const anchors = if (domain == .entity) self.model.entity_anchors else self.model.assertion_anchors;
+        const count = if (domain == .entity) self.model.entities.len else self.model.assertions.len;
+        const scan_count = std.math.add(usize, count, anchors.len) catch return Error.BudgetExceeded;
+        try self.ensureScan(scan_count);
+        const words = count / @bitSizeOf(usize) + @intFromBool(count % @bitSizeOf(usize) != 0);
+        const storage_bytes = if (count == 0) 0 else std.math.mul(usize, words + 1, @sizeOf(usize)) catch return Error.BudgetExceeded;
+        if (storage_bytes > self.options.max_temporary_bytes) return Error.BudgetExceeded;
+        var bits = try std.DynamicBitSetUnmanaged.initEmpty(self.allocator, count);
+        errdefer bits.deinit(self.allocator);
+        for (anchors) |item| {
+            if (domain == .entity) try self.validateEntityAnchor(item) else try self.validateAssertionAnchor(item);
+            if (item.anchor.node.index != node.index) continue;
+            if (source) |id| if (item.anchor.source.index != id.index) continue;
+            const id = @field(item, if (domain == .entity) "entity" else "assertion");
+            bits.set(id.index);
+        }
+        return bits;
     }
 
     fn validateAnchorFilter(self: *const Evaluator, filter: AnchorFilter) Error!void {
@@ -487,7 +498,7 @@ pub const Evaluator = struct {
 
     fn copyAttributes(self: *const Evaluator, source: []const semantic.Attribute) Error!AttributeResult {
         if (source.len > self.options.max_results) return Error.BudgetExceeded;
-        var required_bytes = checkedByteSum(source.len, @sizeOf(semantic.Attribute)) catch return Error.BudgetExceeded;
+        var required_bytes = std.math.mul(usize, source.len, @sizeOf(semantic.Attribute)) catch return Error.BudgetExceeded;
         for (source) |attribute| {
             required_bytes = checkedByteSum(required_bytes, attribute.name.local.len) catch return Error.BudgetExceeded;
             required_bytes = checkedByteSum(required_bytes, attribute.name.prefix.len) catch return Error.BudgetExceeded;
@@ -735,6 +746,56 @@ test "source scope and anchors are bounded query dimensions" {
     try std.testing.expectEqual(@as(usize, 1), assertion_anchors.items.len);
     try std.testing.expectEqual(assertion_b.index, assertion_anchors.items[0].assertion.index);
     try std.testing.expectError(Error.BudgetExceeded, (try Evaluator.init(&model, std.testing.allocator, .{ .max_results = 0 })).entityAnchors(.{}));
+}
+
+test "source-node semijoin charges aggregate scan work and temporary bits" {
+    var b = semantic.Builder.init(std.testing.allocator);
+    defer b.deinit();
+    const ns = try b.addNamespace("urn:test", "");
+    const source = try b.addSource(.{});
+    const entity = try b.addEntity(.{ .kind = .entry, .source = source });
+    const root = try b.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "entry" }, .source = source });
+    try b.addDocumentRoot(root);
+    try b.addEntityAnchor(entity, .{ .source = source, .node = root });
+    var model = try b.build();
+    defer model.deinit();
+
+    // One candidate plus one anchor is two units of work. Checking each array
+    // against the limit separately used to admit this query at a limit of one.
+    const scan_limited = try Evaluator.init(&model, std.testing.allocator, .{ .max_scan_items = 1 });
+    try std.testing.expectError(Error.BudgetExceeded, scan_limited.filterEntities(.{ .source_node = root }));
+
+    // The membership bitmap is explicit query memory and obeys its own cap.
+    const memory_limited = try Evaluator.init(&model, std.testing.allocator, .{ .max_scan_items = 2, .max_temporary_bytes = 0 });
+    try std.testing.expectError(Error.BudgetExceeded, memory_limited.filterEntities(.{ .source_node = root }));
+
+    var result = try (try Evaluator.init(&model, std.testing.allocator, .{ .max_scan_items = 2 })).filterEntities(.{ .source_node = root });
+    defer result.deinit();
+    try std.testing.expectEqualSlices(semantic.EntityId, &.{entity}, result.ids);
+}
+
+test "attribute byte budget charges every result structure" {
+    var b = semantic.Builder.init(std.testing.allocator);
+    defer b.deinit();
+    const ns = try b.addNamespace("urn:test", "");
+    const value = try b.addValue(.{ .text = .{ .bytes = "v" } });
+    const root = try b.addDocumentNode(.{
+        .name = .{ .namespace = ns, .local = "entry" },
+        .attributes = &.{
+            .{ .name = .{ .namespace = ns, .local = "a" }, .value = value },
+            .{ .name = .{ .namespace = ns, .local = "b" }, .value = value },
+        },
+    });
+    try b.addDocumentRoot(root);
+    var model = try b.build();
+    defer model.deinit();
+
+    const exact_bytes = 2 * @sizeOf(semantic.Attribute) + 2;
+    const too_small = try Evaluator.init(&model, std.testing.allocator, .{ .max_result_bytes = exact_bytes - 1 });
+    try std.testing.expectError(Error.BudgetExceeded, too_small.documentAttributes(root));
+    var exact = try (try Evaluator.init(&model, std.testing.allocator, .{ .max_result_bytes = exact_bytes })).documentAttributes(root);
+    defer exact.deinit();
+    try std.testing.expectEqual(@as(usize, 2), exact.items.len);
 }
 
 fn fixture() !semantic.Model {

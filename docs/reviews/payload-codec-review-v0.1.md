@@ -1,5 +1,20 @@
 # Payload codec integration review v0.1
 
+## Resolution update — 6 September 2026
+
+The findings below record the original minor-2 review, not the current state.
+Minor 3 adds explicit decoder state sizes, with a 300 KiB definition / 512 KiB
+state regression. Encoded block ownership now has cleanup until transfer;
+short probes are zero initialized; invalid codec configuration returns errors.
+Definition lookup binary-searches the atom directory and accepts a decode
+allocator and memory ceiling through `Reader.Options`. Repaired-checksum codec
+corruption and allocator failure are tested, and the benchmark distinguishes
+whole raw/bzip3 snapshots from its low-level codec experiment.
+
+These repairs resolve the concrete findings. They do not establish the full
+performance rubric below: representative cold p99, concurrent decoder budgets,
+cache behavior, and matched legacy comparisons remain separate release gates.
+
 Reviewed surface: `src/lexicon.zig` minor-2 payload records, `src/codec.zig`,
 `src/codec/raw.zig`, `src/codec/bzip3.zig`, the vendored libbz3 API, and
 `docs/format-v0.1.md`. The Debug and ReleaseSafe test suites pass, and
@@ -130,6 +145,6 @@ tests or a reproducible benchmark artifact:
 | Measurement | Raw, bzip3, and any alternate profiles report complete snapshot bytes, build time, p50/p95/p99 lookup time, decoded bytes, payload reads, peak memory, and block counts on the same fixture and answers. |
 | Documentation | Format tables, codec options, lazy verification semantics, fallback policy, benchmark methodology, and third-party licensing agree exactly with the implementation. |
 
-Current score: **not 10/10**. The P0 state-size omission must be resolved before
+Original review score: **not 10/10**. The P0 state-size omission must be resolved before
 minor 2 can be treated as a complete, portable codec format; the P1 findings
 must be fixed before adversarial or long-lived use.

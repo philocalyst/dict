@@ -16,6 +16,7 @@ const default_warmup: usize = 2_000;
 const max_key_bytes = 256;
 
 const PayloadCodec = enum { raw, bzip3 };
+const PostingEncoding = enum { raw, adaptive };
 
 const Config = struct {
     records: usize = default_records,
@@ -23,6 +24,7 @@ const Config = struct {
     warmup: usize = default_warmup,
     seed: u64 = default_seed,
     payload_codec: PayloadCodec = .raw,
+    posting_encoding: PostingEncoding = .adaptive,
     low_level_codec: bool = true,
 };
 
@@ -317,6 +319,30 @@ fn printMetrics(prefix: []const u8, metrics: Metrics) void {
     std.debug.print("metric\t{s}.checksum\t{any}\n", .{ prefix, metrics.checksum });
 }
 
+fn printSnapshotLedger(snapshot: []const u8) void {
+    if (snapshot.len < 64) return;
+    const directory_offset: usize = @intCast(std.mem.readInt(u64, snapshot[24..32], .little));
+    const directory_length: usize = @intCast(std.mem.readInt(u64, snapshot[32..40], .little));
+    printMetric("fixture.snapshot.header_bytes", @as(usize, 64));
+    printMetric("fixture.snapshot.directory_bytes", directory_length);
+    if (directory_offset > snapshot.len or directory_length > snapshot.len - directory_offset) return;
+    var at = directory_offset;
+    const end = directory_offset + directory_length;
+    while (at + 48 <= end) : (at += 48) {
+        const kind = std.mem.readInt(u32, snapshot[at..][0..4], .little);
+        const offset: usize = @intCast(std.mem.readInt(u64, snapshot[at + 8 ..][0..8], .little));
+        const length: usize = @intCast(std.mem.readInt(u64, snapshot[at + 16 ..][0..8], .little));
+        const name = switch (kind) {
+            1 => "keys",
+            2 => "postings",
+            3 => "payload",
+            else => "unknown",
+        };
+        std.debug.print("metric\tfixture.snapshot.section_{s}_bytes\t{}\n", .{ name, length });
+        _ = offset;
+    }
+}
+
 fn runCodecBenchmark(io: std.Io, allocator: std.mem.Allocator, fixture: *const Fixture, config: Config) !void {
     if (!@hasDecl(lex, "Codec")) {
         std.debug.print("metric\tcodec.status\tunavailable\n", .{});
@@ -393,6 +419,15 @@ fn parseConfig(allocator: std.mem.Allocator, process_args: std.process.Args) !Co
             } else {
                 return error.InvalidArgument;
             }
+        } else if (std.mem.startsWith(u8, arg, "--posting-encoding=")) {
+            const value = arg["--posting-encoding=".len..];
+            if (std.mem.eql(u8, value, "raw")) {
+                config.posting_encoding = .raw;
+            } else if (std.mem.eql(u8, value, "adaptive")) {
+                config.posting_encoding = .adaptive;
+            } else {
+                return error.InvalidArgument;
+            }
         } else if (std.mem.startsWith(u8, arg, "--records=")) {
             config.records = try std.fmt.parseUnsigned(usize, arg[10..], 10);
         } else if (std.mem.startsWith(u8, arg, "--repetitions=")) {
@@ -411,16 +446,24 @@ fn parseConfig(allocator: std.mem.Allocator, process_args: std.process.Args) !Co
     return config;
 }
 
-fn buildSnapshot(allocator: std.mem.Allocator, fixture: *const Fixture, payload_codec: PayloadCodec) anyerror![]u8 {
-    var writer = switch (payload_codec) {
+fn initWriter(allocator: std.mem.Allocator, payload_codec: PayloadCodec, posting_encoding: PostingEncoding) anyerror!lex.Writer {
+    if (comptime @hasField(lex.Writer.Options, "posting_encoding")) {
+        return lex.Writer.initWithOptions(allocator, .{
+            .payload_codec = if (payload_codec == .raw) .raw else .bzip3,
+            .posting_encoding = if (posting_encoding == .raw) .raw else .adaptive,
+        });
+    }
+    return switch (payload_codec) {
         .raw => lex.Writer.init(allocator),
-        .bzip3 => blk: {
-            if (comptime @hasDecl(lex.Writer, "initWithOptions")) {
-                break :blk lex.Writer.initWithOptions(allocator, .{ .payload_codec = .bzip3 });
-            }
-            return error.PayloadCodecUnavailable;
-        },
+        .bzip3 => if (comptime @hasDecl(lex.Writer, "initWithOptions"))
+            lex.Writer.initWithOptions(allocator, .{ .payload_codec = .bzip3 })
+        else
+            error.PayloadCodecUnavailable,
     };
+}
+
+fn buildSnapshot(allocator: std.mem.Allocator, fixture: *const Fixture, payload_codec: PayloadCodec, posting_encoding: PostingEncoding) anyerror![]u8 {
+    var writer = try initWriter(allocator, payload_codec, posting_encoding);
     defer writer.deinit();
     for (fixture.keys.items, fixture.definitions.items, 0..) |key, definition, index| {
         try writer.add(.{ .id = @intCast(index), .key = key, .definition = definition });
@@ -437,7 +480,7 @@ pub fn main(init: std.process.Init) !void {
     defer workload.deinit();
 
     var timer = Timer.start(init.io);
-    const snapshot = buildSnapshot(allocator, &fixture, config.payload_codec) catch |err| switch (err) {
+    const snapshot = buildSnapshot(allocator, &fixture, config.payload_codec, config.posting_encoding) catch |err| switch (err) {
         error.PayloadCodecUnavailable => {
             std.debug.print("metric\tconfig.payload_codec\t{s}\n", .{@tagName(config.payload_codec)});
             std.debug.print("metric\tpayload_profile.status\tunavailable\n", .{});
@@ -463,9 +506,12 @@ pub fn main(init: std.process.Init) !void {
     printMetric("config.warmup", config.warmup);
     printMetric("config.seed", config.seed);
     std.debug.print("metric\tconfig.payload_codec\t{s}\n", .{@tagName(config.payload_codec)});
+    std.debug.print("metric\tconfig.posting_encoding\t{s}\n", .{@tagName(config.posting_encoding)});
+    std.debug.print("metric\tposting.status\t{s}\n", .{if (comptime @hasField(lex.Writer.Options, "posting_encoding")) "measured" else "unavailable"});
     printMetric("fixture.digest", digest);
     printMetric("fixture.snapshot_bytes", snapshot.len);
     printMetric("fixture.build_ns", build_ns);
+    printSnapshotLedger(snapshot);
 
     reader.resetLookupMetrics();
     try warmExact(&reader, &workload, config.warmup, ids);
@@ -518,9 +564,9 @@ test "raw and bzip3 payload profiles preserve lookup answers" {
     var fixture = try Fixture.init(std.testing.allocator, config);
     defer fixture.deinit();
 
-    const raw_snapshot = try buildSnapshot(std.testing.allocator, &fixture, .raw);
+    const raw_snapshot = try buildSnapshot(std.testing.allocator, &fixture, .raw, .adaptive);
     defer std.testing.allocator.free(raw_snapshot);
-    const bzip_snapshot = try buildSnapshot(std.testing.allocator, &fixture, .bzip3);
+    const bzip_snapshot = try buildSnapshot(std.testing.allocator, &fixture, .bzip3, .adaptive);
     defer std.testing.allocator.free(bzip_snapshot);
     var raw_reader = try lex.Reader.open(raw_snapshot);
     var bzip_reader = try lex.Reader.open(bzip_snapshot);
@@ -546,6 +592,26 @@ test "raw and bzip3 payload profiles preserve lookup answers" {
     }
     try std.testing.expect(raw_snapshot.len != 0);
     try std.testing.expect(bzip_snapshot.len != 0);
+}
+
+test "posting profiles preserve answers under the same payload codec" {
+    if (comptime !@hasField(lex.Writer.Options, "posting_encoding")) return error.SkipZigTest;
+    const config = Config{ .records = 64, .repetitions = 16 };
+    var fixture = try Fixture.init(std.testing.allocator, config);
+    defer fixture.deinit();
+    const raw_postings = try buildSnapshot(std.testing.allocator, &fixture, .raw, .raw);
+    defer std.testing.allocator.free(raw_postings);
+    const adaptive_postings = try buildSnapshot(std.testing.allocator, &fixture, .raw, .adaptive);
+    defer std.testing.allocator.free(adaptive_postings);
+    var raw_reader = try lex.Reader.open(raw_postings);
+    var adaptive_reader = try lex.Reader.open(adaptive_postings);
+    var raw_ids: [64]u64 = undefined;
+    var adaptive_ids: [64]u64 = undefined;
+    const key = fixture.keys.items[11];
+    const raw_count = try raw_reader.lookupPrefix(key[0..@max(@as(usize, 1), key.len / 2)], raw_ids[0..]);
+    const adaptive_count = try adaptive_reader.lookupPrefix(key[0..@max(@as(usize, 1), key.len / 2)], adaptive_ids[0..]);
+    try std.testing.expectEqual(raw_count, adaptive_count);
+    try std.testing.expectEqualSlices(u64, raw_ids[0..raw_count], adaptive_ids[0..adaptive_count]);
 }
 
 test "metrics report only completed operations" {

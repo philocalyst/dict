@@ -12,16 +12,19 @@ zig build --build-file bench/build.zig -Doptimize=ReleaseFast
 ./bench/zig-out/bin/lexicon-bench --records=20000 --repetitions=20000 --warmup=2000
 ```
 
-Select the complete snapshot payload profile explicitly:
+Select the complete snapshot payload and posting profiles explicitly:
 
 ```sh
-./bench/zig-out/bin/lexicon-bench --payload-codec=raw --no-codec
-./bench/zig-out/bin/lexicon-bench --payload-codec=bzip3 --no-codec
+./bench/zig-out/bin/lexicon-bench --payload-codec=raw --posting-encoding=raw --no-codec
+./bench/zig-out/bin/lexicon-bench --payload-codec=raw --posting-encoding=adaptive --no-codec
+./bench/zig-out/bin/lexicon-bench --payload-codec=bzip3 --posting-encoding=raw --no-codec
+./bench/zig-out/bin/lexicon-bench --payload-codec=bzip3 --posting-encoding=adaptive --no-codec
 ```
 
-Both commands build and measure the selected complete snapshot, and report the
-selected profile as `config.payload_codec`. `--no-codec` skips the separate
-low-level block comparison; it does not change the snapshot profile. If a
+Each command builds and measures the selected complete snapshot, and reports
+both selections as `config.payload_codec` and `config.posting_encoding`.
+`--no-codec` skips the separate low-level block comparison; it does not change
+the snapshot profile. If a
 checkout predates `Writer.initWithOptions`, a bzip3 profile must be reported as
 unavailable rather than relabeling a raw snapshot. Low-level codec measurements
 are emitted under `lowlevel_codec.*` and must not be presented as a
@@ -56,7 +59,9 @@ The main measurements are:
 | Metric | Meaning |
 | --- | --- |
 | `fixture.snapshot_bytes` | Complete encoded snapshot length, including all sections and directory overhead. |
+| `fixture.snapshot.*_bytes` | Header, directory, and per-section ledger entries included in the complete snapshot. |
 | `fixture.build_ns` | Writer build time after fixture construction, including canonical sorting and payload layout. |
+| `config.posting_encoding` | Posting representation selected for this run: raw or adaptive. |
 | `exact.*` | Exact hit/miss lookup time, throughput, output count, and key records examined. |
 | `prefix.*` | Prefix hit/miss lookup time, throughput, output count, and key records examined. |
 | `definition.*` | Definition retrieval time, returned bytes, and payload reads. |
@@ -85,3 +90,25 @@ tests belong to the semantic model and serialization suites. Likewise, the
 low-level codec comparison does not establish that bzip3 is the best layout;
 block placement, metadata, cache policy, and complete-file overhead are
 included only in the selected complete snapshot profile.
+
+`bench/semantic_benchmark.zig` measures the semantic model separately. It
+builds repeated-string and unique-string fixtures containing multilingual
+values, distinct source occurrences, QNames, repeated roles and namespaces,
+evidence, anchors, mixed text/comments/processing instructions, and temporal
+assertions. For each fixture it reports complete reference and compact encoded
+bytes, encode/decode time per repetition, checksums, and a decoded-model query
+checksum. The compact profile is reported unavailable until the compact API is
+present; the harness never labels the reference encoding as compact. Run it
+with:
+
+```sh
+zig build --build-file bench/build.zig semantic-test -Dsemantic=true -Doptimize=Debug
+zig build --build-file bench/build.zig -Dsemantic=true -Doptimize=ReleaseSafe
+./bench/zig-out/bin/semantic-bench --records=16 --repetitions=8
+```
+
+The semantic byte metric is the complete encoded artifact returned by the
+format API, including its header, section counts, shared value pools, IDs,
+checksums, and all metadata. No component is omitted from the reported total.
+The repeated and unique fixtures are controls for measuring interning gains;
+they are not forecasts for a production corpus.

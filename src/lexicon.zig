@@ -7,6 +7,9 @@ pub const semantic_format = @import("semantic_format.zig");
 pub const SemanticFormat = semantic_format;
 pub const SemanticBuilder = semantic.Builder;
 pub const SemanticModel = semantic.Model;
+pub const language = @import("language.zig");
+pub const lexical = @import("lexical.zig");
+pub const scopes = @import("scopes.zig");
 pub const query = @import("query.zig");
 pub const Query = query.Evaluator;
 pub const QueryOptions = query.QueryOptions;
@@ -17,6 +20,9 @@ test {
     _ = @import("semantic.zig");
     _ = @import("query.zig");
     _ = @import("semantic_format.zig");
+    _ = @import("language.zig");
+    _ = @import("lexical.zig");
+    _ = @import("scopes.zig");
     _ = @import("codec.zig");
 }
 
@@ -24,9 +30,9 @@ test {
 /// are little endian and are decoded explicitly; no on-disk value is a Zig
 /// struct or a native pointer.
 pub const format_major: u16 = 1;
-/// Minor three adds the bzip3 state size to each codec-tagged payload block.
-/// Readers continue to accept minor zero, one and two snapshots.
-pub const format_minor: u16 = 3;
+/// Minor four adds adaptive frame-of-reference postings. Readers continue to
+/// accept minor zero through three snapshots.
+pub const format_minor: u16 = 4;
 pub const max_key_bytes: usize = 65_535;
 pub const raw_block_bytes: usize = 65_536;
 
@@ -37,6 +43,11 @@ const restart_interval: u16 = 8;
 const format_id: u64 = 0x4c455849434f4e31;
 const section_version: u16 = 1;
 const required_section_flag: u16 = 1;
+/// Minor four reserves the high bit of the posting count word for the packed
+/// frame-of-reference encoding.  Posting counts are bounded by the payload's
+/// u32 atom count, so this does not reduce the representable count domain.
+const adaptive_posting_flag: u64 = 1 << 63;
+const adaptive_posting_header_bytes: usize = 24;
 
 const RestartMeta = struct {
     ordinal: u32,
@@ -47,6 +58,21 @@ const KeyLayout = struct {
     stream_end: usize,
     table_offset: usize,
     restart_count: usize,
+};
+
+pub const PostingEncoding = enum {
+    raw,
+    adaptive,
+};
+
+const PostingLayout = struct {
+    count: u64,
+    encoding: PostingEncoding,
+    minimum: u64,
+    width: u8,
+    tail_bits: u8,
+    packed_length: usize,
+    data_offset: usize,
 };
 
 const DecodedKey = struct {
@@ -136,10 +162,15 @@ pub const Writer = struct {
     records: std.ArrayList(OwnedRecord) = .empty,
     payload_codec: codec.Kind = .raw,
     payload_codec_options: codec.Options = .{},
+    posting_encoding: PostingEncoding = .adaptive,
 
     pub const Options = struct {
         payload_codec: codec.Kind = .raw,
         codec_options: codec.Options = .{},
+        /// Adaptive uses a global frame of reference and fixed-width bit
+        /// packing when it is smaller than the exact legacy raw stream.
+        /// Raw forces the legacy count-plus-u64-ID representation.
+        posting_encoding: PostingEncoding = .adaptive,
     };
 
     pub fn init(allocator: std.mem.Allocator) Writer {
@@ -151,6 +182,7 @@ pub const Writer = struct {
         writer.payload_codec = options.payload_codec;
         writer.payload_codec_options = options.codec_options;
         writer.payload_codec_options.kind = options.payload_codec;
+        writer.posting_encoding = options.posting_encoding;
         return writer;
     }
 
@@ -315,26 +347,49 @@ pub const Writer = struct {
     }
 
     fn encodePostings(self: *Writer) ![]u8 {
-        var groups: std.ArrayList(KeyMeta) = .empty;
-        defer groups.deinit(self.allocator);
-        var i: usize = 0;
-        while (i < self.records.items.len) {
-            const begin = i;
-            const key = self.records.items[i].key;
-            while (i < self.records.items.len and std.mem.eql(u8, key, self.records.items[i].key)) : (i += 1) {}
-            try groups.append(self.allocator, .{
-                .key = key,
-                .posting_start = try toU64(begin),
-                .posting_count = try toU64(i - begin),
-            });
+        const count = self.records.items.len;
+        var minimum: u64 = std.math.maxInt(u64);
+        var maximum_offset: u64 = 0;
+        for (self.records.items) |record| minimum = @min(minimum, record.id);
+        if (count == 0) minimum = 0;
+        for (self.records.items) |record| {
+            const offset = record.id - minimum;
+            maximum_offset = @max(maximum_offset, offset);
         }
+        const width = bitWidth(maximum_offset);
+        const total_bits = try std.math.mul(u64, try toU64(count), width);
+        const packed_length_u64 = try std.math.add(u64, total_bits, 7) / 8;
+        const packed_length = try toUsize(packed_length_u64);
+        const adaptive_length = try checkedAdd(adaptive_posting_header_bytes, packed_length);
+        const raw_length = try checkedAdd(8, try mul(count, 8));
+
         var out: std.ArrayList(u8) = .empty;
         errdefer out.deinit(self.allocator);
-        try putU64(&out, self.allocator, try toU64(self.records.items.len));
-        for (groups.items) |group| {
-            var j = try toUsize(group.posting_start);
-            const end = try checkedAdd(j, try toUsize(group.posting_count));
-            while (j < end) : (j += 1) try putU64(&out, self.allocator, self.records.items[j].id);
+        const use_adaptive = self.posting_encoding == .adaptive and adaptive_length < raw_length;
+        if (!use_adaptive) {
+            // Raw minor-four postings deliberately retain the exact legacy
+            // byte layout. The high bit of the count word identifies packed
+            // sections, so arbitrary u64 IDs remain valid without escaping.
+            try putU64(&out, self.allocator, try toU64(count));
+            for (self.records.items) |record| try putU64(&out, self.allocator, record.id);
+            return out.toOwnedSlice(self.allocator);
+        }
+
+        try putU64(&out, self.allocator, adaptive_posting_flag | try toU64(count));
+        try putU64(&out, self.allocator, minimum);
+        try putU32(&out, self.allocator, try toU32(packed_length));
+        try out.append(self.allocator, width);
+        const tail_bits: u8 = @intCast(total_bits % 8);
+        try out.append(self.allocator, tail_bits);
+        try out.appendNTimes(self.allocator, 0, 2); // flags and reserved
+        try out.appendNTimes(self.allocator, 0, packed_length);
+        if (width != 0) {
+            const packed_bytes = out.items[adaptive_posting_header_bytes..];
+            for (self.records.items, 0..) |record, index| {
+                const value = record.id - minimum;
+                const bit_offset = try std.math.mul(usize, index, @as(usize, width));
+                packBits(packed_bytes, bit_offset, value, width);
+            }
         }
         return out.toOwnedSlice(self.allocator);
     }
@@ -553,6 +608,12 @@ pub const Reader = struct {
     postings: []const u8,
     payload: []const u8,
     format_minor: u16,
+    posting_count: u64,
+    posting_encoding: PostingEncoding,
+    posting_minimum: u64,
+    posting_width: u8,
+    posting_packed_length: usize,
+    posting_data_offset: usize,
     key_stream_end: usize,
     restart_table_offset: usize,
     restart_count: usize,
@@ -641,16 +702,23 @@ pub const Reader = struct {
         const postings = sections[1].?;
         const payload = sections[2].?;
         if (section_items[0] != try toU64(try readU32(keys, 0)) or
-            section_items[1] != try readU64(postings, 0) or
+            section_items[1] != (try readU64(postings, 0) & ~adaptive_posting_flag) or
             section_items[2] != try toU64(try readU32(payload, 0))) return Error.CorruptSection;
         try validatePayload(payload, snapshot_minor);
-        const key_layout = try validateKeys(keys, postings, payload, snapshot_minor);
+        const posting_layout = try parsePostings(postings, payload, snapshot_minor);
+        const key_layout = try validateKeys(keys, postings, payload, snapshot_minor, posting_layout);
         return .{
             .bytes = bytes,
             .keys = keys,
             .postings = postings,
             .payload = payload,
             .format_minor = snapshot_minor,
+            .posting_count = posting_layout.count,
+            .posting_encoding = posting_layout.encoding,
+            .posting_minimum = posting_layout.minimum,
+            .posting_width = posting_layout.width,
+            .posting_packed_length = posting_layout.packed_length,
+            .posting_data_offset = posting_layout.data_offset,
             .key_stream_end = key_layout.stream_end,
             .restart_table_offset = key_layout.table_offset,
             .restart_count = key_layout.restart_count,
@@ -681,6 +749,22 @@ pub const Reader = struct {
         self.key_records_examined = 0;
         self.atom_records_examined = 0;
         self.payload_reads = 0;
+    }
+
+    /// Read one posting with checked O(1) addressing. Packed values use a
+    /// single little-endian bit window (at most nine bytes for a 64-bit
+    /// value); they never scan a variable-length integer or the preceding
+    /// postings.
+    fn readPosting(self: *const Reader, index: u64) !u64 {
+        return readPostingAt(self.postings, .{
+            .count = self.posting_count,
+            .encoding = self.posting_encoding,
+            .minimum = self.posting_minimum,
+            .width = self.posting_width,
+            .tail_bits = 0,
+            .packed_length = self.posting_packed_length,
+            .data_offset = self.posting_data_offset,
+        }, index);
     }
 
     pub fn lookupExact(self: *Reader, key: []const u8, out: []u64) !usize {
@@ -816,7 +900,7 @@ pub const Reader = struct {
             const posting_count = try readU64(self.keys, cursor + 8);
             cursor += 16;
             self.key_records_examined += 1;
-            const posting_total = try readU64(self.postings, 0);
+            const posting_total = self.posting_count;
             if (posting_start > posting_total or posting_count > posting_total - posting_start) return Error.CorruptSection;
             const matches = if (prefix) std.mem.startsWith(u8, key_buf[0..key_len], needle) else std.mem.eql(u8, key_buf[0..key_len], needle);
             if (matches) {
@@ -824,8 +908,7 @@ pub const Reader = struct {
                 var p: u64 = 0;
                 while (p < posting_count) : (p += 1) {
                     const posting_index = try addU64(posting_start, p);
-                    const at = try checkedAdd(8, try mul(@as(usize, @intCast(posting_index)), 8));
-                    out[output_len] = try readU64(self.postings, at);
+                    out[output_len] = try self.readPosting(posting_index);
                     output_len += 1;
                 }
                 if (!prefix) return output_len;
@@ -911,8 +994,7 @@ pub const Reader = struct {
             var p: u64 = 0;
             while (p < record.posting_count) : (p += 1) {
                 const posting_index = try addU64(record.posting_start, p);
-                const at = try checkedAdd(8, try mul(try toUsize(posting_index), 8));
-                out[output_len] = try readU64(self.postings, at);
+                out[output_len] = try self.readPosting(posting_index);
                 output_len += 1;
             }
         }
@@ -972,7 +1054,63 @@ pub const Reader = struct {
     }
 };
 
-fn validateKeys(keys: []const u8, postings: []const u8, payload: []const u8, snapshot_minor: u16) !KeyLayout {
+fn parsePostings(postings: []const u8, payload: []const u8, snapshot_minor: u16) !PostingLayout {
+    if (postings.len < 8 or payload.len < 4) return Error.CorruptSection;
+    const wire_count = try readU64(postings, 0);
+    const count = wire_count & ~adaptive_posting_flag;
+    const atom_count = try toU64(try readU32(payload, 0));
+    if (count != atom_count) return Error.CorruptSection;
+
+    // Minor zero through three are the original count-plus-u64 stream.
+    // Minor four keeps that exact representation as its size-safe fallback.
+    if (snapshot_minor < 4 or (wire_count & adaptive_posting_flag) == 0) {
+        const posting_bytes = try mul(try toUsize(count), 8);
+        const expected_length = try checkedAdd(8, posting_bytes);
+        if (postings.len != expected_length) return Error.CorruptSection;
+        return .{
+            .count = count,
+            .encoding = .raw,
+            .minimum = 0,
+            .width = 64,
+            .tail_bits = 0,
+            .packed_length = posting_bytes,
+            .data_offset = 8,
+        };
+    }
+
+    if (postings.len < adaptive_posting_header_bytes) return Error.CorruptSection;
+    const minimum = try readU64(postings, 8);
+    const packed_length = try toUsize(try readU32(postings, 16));
+    const width = try readU8(postings, 20);
+    const tail_bits = try readU8(postings, 21);
+    if (width > 64 or try readU8(postings, 22) != 0 or try readU8(postings, 23) != 0) return Error.CorruptSection;
+    const total_bits = std.math.mul(u64, count, width) catch return Error.Overflow;
+    const expected_packed_u64 = std.math.add(u64, total_bits, 7) catch return Error.Overflow;
+    const expected_packed = try toUsize(expected_packed_u64 / 8);
+    const expected_tail: u8 = @intCast(total_bits % 8);
+    if (packed_length != expected_packed or tail_bits != expected_tail) return Error.CorruptSection;
+    if (try checkedAdd(adaptive_posting_header_bytes, packed_length) != postings.len) return Error.CorruptSection;
+    if (count == 0 and (minimum != 0 or width != 0 or packed_length != 0 or tail_bits != 0)) return Error.CorruptSection;
+    if (width == 0 and (count != 0 and packed_length != 0)) return Error.CorruptSection;
+    if (packed_length == 0) {
+        if (count != 0 and width != 0) return Error.CorruptSection;
+    } else if (tail_bits != 0) {
+        const last = postings[postings.len - 1];
+        const used_mask: u8 = @intCast((@as(u16, 1) << @intCast(tail_bits)) - 1);
+        if (last & ~used_mask != 0) return Error.CorruptSection;
+    }
+    return .{
+        .count = count,
+        .encoding = .adaptive,
+        .minimum = minimum,
+        .width = width,
+        .tail_bits = tail_bits,
+        .packed_length = packed_length,
+        .data_offset = adaptive_posting_header_bytes,
+    };
+}
+
+fn validateKeys(keys: []const u8, postings: []const u8, payload: []const u8, snapshot_minor: u16, posting_layout: PostingLayout) !KeyLayout {
     if (keys.len < 16 or postings.len < 8) return Error.CorruptSection;
     const count = try readU32(keys, 0);
     const interval = try readU16(keys, 4);
@@ -983,7 +1121,7 @@ fn validateKeys(keys: []const u8, postings: []const u8, payload: []const u8, sna
     var restart_count: usize = 0;
     if (snapshot_minor == 0) {
         if (declared_table_offset != 0) return Error.CorruptSection;
-    } else if (snapshot_minor == 1 or snapshot_minor == 2 or snapshot_minor == 3) {
+    } else if (snapshot_minor >= 1 and snapshot_minor <= 4) {
         table_offset = try toUsize(declared_table_offset);
         if (table_offset < 16 or table_offset > keys.len or keys.len - table_offset < 8) return Error.CorruptSection;
         stream_end = table_offset;
@@ -1005,12 +1143,9 @@ fn validateKeys(keys: []const u8, postings: []const u8, payload: []const u8, sna
             previous_offset = offset;
         }
     } else return Error.UnsupportedVersion;
-    const posting_count = try readU64(postings, 0);
+    const posting_count = posting_layout.count;
     const atom_count = try readU32(payload, 0);
     if (posting_count != atom_count) return Error.CorruptSection;
-    const posting_bytes = try mul(try toUsize(posting_count), 8);
-    const expected_postings_len = try checkedAdd(8, posting_bytes);
-    if (postings.len != expected_postings_len) return Error.CorruptSection;
     var cursor: usize = 16;
     var previous_len: usize = 0;
     var previous_key: [max_key_bytes]u8 = undefined;
@@ -1061,11 +1196,11 @@ fn validateKeys(keys: []const u8, postings: []const u8, payload: []const u8, sna
         var p: u64 = 0;
         while (p < amount) : (p += 1) {
             const posting_index = try addU64(start, p);
-            const id = try readU64(postings, try checkedAdd(8, try mul(try toUsize(posting_index), 8)));
+            const id = try readPostingAt(postings, posting_layout, posting_index);
             if (!payloadHasId(payload, id)) return Error.CorruptSection;
             var prior: u64 = 0;
             while (prior < posting_index) : (prior += 1) {
-                const old = try readU64(postings, try checkedAdd(8, try mul(try toUsize(prior), 8)));
+                const old = try readPostingAt(postings, posting_layout, prior);
                 if (old == id) return Error.CorruptSection;
             }
         }
@@ -1089,6 +1224,29 @@ fn payloadHasId(payload: []const u8, id: u64) bool {
     if (low == toUsize(count) catch return false) return false;
     const at = checkedAdd(16, mul(low, 32) catch return false) catch return false;
     return (readU64(payload, at) catch return false) == id;
+}
+
+fn readPostingAt(postings: []const u8, layout: PostingLayout, index: u64) !u64 {
+    if (index >= layout.count) return Error.CorruptSection;
+    if (layout.encoding == .raw) {
+        return readU64(postings, try checkedAdd(8, try mul(try toUsize(index), 8)));
+    }
+    if (layout.width == 0) return layout.minimum;
+    const bit_offset = try std.math.mul(u64, index, layout.width);
+    const byte_offset = try toUsize(bit_offset / 8);
+    const shift: u6 = @intCast(bit_offset % 8);
+    if (byte_offset >= layout.packed_length) return Error.CorruptSection;
+    const start = try checkedAdd(layout.data_offset, byte_offset);
+    const read_length = @min(@as(usize, 9), layout.packed_length - byte_offset);
+    var window: u128 = 0;
+    var i: usize = 0;
+    while (i < read_length) : (i += 1) window |= @as(u128, postings[start + i]) << @intCast(i * 8);
+    const mask: u128 = if (layout.width == 64)
+        std.math.maxInt(u64)
+    else
+        (@as(u128, 1) << @intCast(layout.width)) - 1;
+    const value: u64 = @intCast((window >> shift) & mask);
+    return std.math.add(u64, layout.minimum, value) catch Error.CorruptSection;
 }
 
 fn validatePayload(payload: []const u8, snapshot_minor: u16) !void {
@@ -1186,6 +1344,25 @@ fn commonPrefix(a: []const u8, b: []const u8) usize {
     return i;
 }
 
+fn bitWidth(value: u64) u8 {
+    if (value == 0) return 0;
+    return @intCast(64 - @clz(value));
+}
+
+fn packBits(bytes: []u8, bit_offset: usize, value: u64, width: u8) void {
+    if (width == 0) return;
+    const byte_offset = bit_offset / 8;
+    const shift: u6 = @intCast(bit_offset % 8);
+    const mask: u128 = if (width == 64) std.math.maxInt(u64) else (@as(u128, 1) << @intCast(width)) - 1;
+    var window: u128 = 0;
+    var i: usize = 0;
+    const read_length = @min(@as(usize, 9), bytes.len - byte_offset);
+    while (i < read_length) : (i += 1) window |= @as(u128, bytes[byte_offset + i]) << @intCast(i * 8);
+    window |= (@as(u128, value) & mask) << shift;
+    i = 0;
+    while (i < read_length) : (i += 1) bytes[byte_offset + i] = @intCast((window >> @intCast(i * 8)) & 0xff);
+}
+
 fn checkedMul(a: usize, b: usize) !usize {
     return std.math.mul(usize, a, b) catch Error.Overflow;
 }
@@ -1210,7 +1387,7 @@ fn nextPrefixUpper(prefix: []const u8, storage: *[max_key_bytes]u8) ?[]const u8 
 fn sectionItemCount(index: usize, records: usize, keys: []const u8, postings: []const u8, payload: []const u8) !u64 {
     return switch (index) {
         0 => try toU64(try readU32(keys, 0)),
-        1 => try readU64(postings, 0),
+        1 => (try readU64(postings, 0)) & ~adaptive_posting_flag,
         2 => try toU64(try readU32(payload, 0)),
         else => try toU64(records),
     };
@@ -1716,6 +1893,149 @@ test "generated reference model agrees with exact and prefix lookup" {
     }
     try std.testing.expectEqual(@as(usize, count), try reader.lookupPrefix("k", ids[0..count]));
     for (ids[0..count], 0..) |id, index| try std.testing.expectEqual(@as(u64, 10_000 + index), id);
+}
+
+test "adaptive postings preserve high IDs, tails, and raw fallback" {
+    const count = 17;
+    var writer = Writer.init(std.testing.allocator);
+    defer writer.deinit();
+    var keys: [count][8]u8 = undefined;
+    var definitions: [count][8]u8 = undefined;
+    const base = std.math.maxInt(u64) - count + 1;
+    for (0..count) |i| {
+        const key = std.fmt.bufPrint(&keys[i], "same", .{}) catch unreachable;
+        const definition = std.fmt.bufPrint(&definitions[i], "v{d:0>2}", .{i}) catch unreachable;
+        try writer.add(.{ .id = base + i, .key = key, .definition = definition });
+    }
+    const snapshot = try writer.build();
+    defer std.testing.allocator.free(snapshot);
+    const postings = try mutableSection(snapshot, 2);
+    try std.testing.expect((try readU64(postings, 0) & adaptive_posting_flag) != 0);
+    try std.testing.expectEqual(@as(u8, 5), try readU8(postings, 20));
+    try std.testing.expectEqual(@as(u8, 5), try readU8(postings, 21));
+    try std.testing.expectEqual(@as(u32, 11), try readU32(postings, 16));
+
+    var reader = try Reader.open(snapshot);
+    var ids: [count]u64 = undefined;
+    try std.testing.expectEqual(@as(usize, count), try reader.lookupExact("same", ids[0..]));
+    for (ids, 0..) |id, i| try std.testing.expectEqual(base + i, id);
+    try std.testing.expectEqual(@as(u64, 0), reader.payloadReadCount());
+
+    var raw_writer = Writer.initWithOptions(std.testing.allocator, .{ .posting_encoding = .raw });
+    defer raw_writer.deinit();
+    for (0..count) |i| try raw_writer.add(.{ .id = base + i, .key = "same", .definition = "x" });
+    const raw_snapshot = try raw_writer.build();
+    defer std.testing.allocator.free(raw_snapshot);
+    const raw_postings = try mutableSection(raw_snapshot, 2);
+    try std.testing.expectEqual(@as(usize, 8 + count * 8), raw_postings.len);
+    try std.testing.expectEqual(@as(u64, count), try readU64(raw_postings, 0));
+
+    const damaged = try std.testing.allocator.dupe(u8, snapshot);
+    defer std.testing.allocator.free(damaged);
+    const damaged_postings = try mutableSection(damaged, 2);
+    damaged_postings[damaged_postings.len - 1] |= 0x80;
+    refreshIntegrity(damaged, 2);
+    try std.testing.expectError(Error.CorruptSection, Reader.open(damaged));
+
+    const bad_width = try std.testing.allocator.dupe(u8, snapshot);
+    defer std.testing.allocator.free(bad_width);
+    const bad_width_postings = try mutableSection(bad_width, 2);
+    bad_width_postings[20] = 65;
+    refreshIntegrity(bad_width, 2);
+    try std.testing.expectError(Error.CorruptSection, Reader.open(bad_width));
+
+    const bad_length = try std.testing.allocator.dupe(u8, snapshot);
+    defer std.testing.allocator.free(bad_length);
+    const bad_length_postings = try mutableSection(bad_length, 2);
+    std.mem.writeInt(u32, bad_length_postings[16..20], 10, .little);
+    refreshIntegrity(bad_length, 2);
+    try std.testing.expectError(Error.CorruptSection, Reader.open(bad_length));
+
+    const bad_flags = try std.testing.allocator.dupe(u8, snapshot);
+    defer std.testing.allocator.free(bad_flags);
+    const bad_flags_postings = try mutableSection(bad_flags, 2);
+    bad_flags_postings[22] = 1;
+    refreshIntegrity(bad_flags, 2);
+    try std.testing.expectError(Error.CorruptSection, Reader.open(bad_flags));
+}
+
+test "checkAllAllocationFailures releases Writer build resources" {
+    const block_a = try std.testing.allocator.alloc(u8, 40_000);
+    defer std.testing.allocator.free(block_a);
+    const block_b = try std.testing.allocator.alloc(u8, 40_000);
+    defer std.testing.allocator.free(block_b);
+    const block_c = try std.testing.allocator.alloc(u8, 40_000);
+    defer std.testing.allocator.free(block_c);
+    @memset(block_a, 'a');
+    @memset(block_b, 'b');
+    @memset(block_c, 'c');
+
+    var probe_allocator = std.testing.FailingAllocator.init(std.testing.allocator, .{});
+    var probe_writer = Writer.init(probe_allocator.allocator());
+    try probe_writer.add(.{ .id = 1, .key = "allocation-a", .definition = block_a });
+    try probe_writer.add(.{ .id = 2, .key = "allocation-b", .definition = block_b });
+    try probe_writer.add(.{ .id = 3, .key = "allocation-c", .definition = block_c });
+    const build_begin = probe_allocator.alloc_index;
+    const probe_snapshot = try probe_writer.build();
+    probe_allocator.allocator().free(probe_snapshot);
+    const build_end = probe_allocator.alloc_index;
+    probe_writer.deinit();
+    try std.testing.expect(build_end > build_begin);
+    try std.testing.expectEqual(probe_allocator.allocations, probe_allocator.deallocations);
+
+    // Re-run every build allocation with that exact allocation denied. This
+    // exercises ArrayList growth, packed posting bytes, both raw payload
+    // blocks, and all deferred encoded-block ownership paths.
+    var failure_index = build_begin;
+    while (failure_index < build_end) : (failure_index += 1) {
+        var failing = std.testing.FailingAllocator.init(std.testing.allocator, .{});
+        var writer = Writer.init(failing.allocator());
+        try writer.add(.{ .id = 1, .key = "allocation-a", .definition = block_a });
+        try writer.add(.{ .id = 2, .key = "allocation-b", .definition = block_b });
+        try writer.add(.{ .id = 3, .key = "allocation-c", .definition = block_c });
+        try std.testing.expectEqual(build_begin, failing.alloc_index);
+        failing.fail_index = failure_index;
+        const result = writer.build();
+        if (result) |snapshot| {
+            failing.allocator().free(snapshot);
+        } else |err| switch (err) {
+            error.OutOfMemory, error.AllocationFailed => {},
+            else => return err,
+        }
+        writer.deinit();
+        try std.testing.expectEqual(failing.allocations, failing.deallocations);
+    }
+}
+
+test "packed posting scalar extraction covers widths and tail boundaries" {
+    const count: u64 = 13;
+    const minimum: u64 = 10_000;
+    var width: u8 = 0;
+    while (width <= 64) : (width += 1) {
+        const total_bits = count * width;
+        const packed_length: usize = @intCast((total_bits + 7) / 8);
+        var bytes: [128]u8 = undefined;
+        @memset(&bytes, 0);
+        const maximum = if (width == 0) 0 else if (width == 64) std.math.maxInt(u64) else (@as(u64, 1) << @intCast(width)) - 1;
+        const frame_minimum = if (width == 64) 0 else minimum;
+        for (0..@as(usize, @intCast(count))) |i| {
+            const value = if (maximum == 0) 0 else maximum - @as(u64, @intCast(i));
+            packBits(bytes[0..packed_length], i * @as(usize, width), value, width);
+        }
+        const layout = PostingLayout{
+            .count = count,
+            .encoding = .adaptive,
+            .minimum = frame_minimum,
+            .width = width,
+            .tail_bits = @intCast(total_bits % 8),
+            .packed_length = packed_length,
+            .data_offset = 0,
+        };
+        for (0..@as(usize, @intCast(count))) |i| {
+            const expected = frame_minimum + (if (maximum == 0) 0 else maximum - @as(u64, @intCast(i)));
+            try std.testing.expectEqual(expected, try readPostingAt(bytes[0..packed_length], layout, i));
+        }
+    }
 }
 
 test "restart index bounds key work and agrees with a reference scan" {

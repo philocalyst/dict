@@ -7,7 +7,7 @@ const semantic = @import("semantic.zig");
 /// version after this representation is used as the semantic oracle.
 pub const magic = "LEXSEM\x00\x01";
 pub const format_major: u16 = 0;
-pub const format_minor: u16 = 3;
+pub const format_minor: u16 = 4;
 pub const header_bytes: usize = 112;
 
 pub const Error = error{
@@ -97,6 +97,23 @@ const Writer = struct {
         try self.putByte(if (x == null) 0 else 1);
         if (x) |s| try self.string(s);
     }
+    /// Canonical unsigned LEB128.  The compact format uses this for every
+    /// count and local id; rejecting non-minimal encodings keeps re-encoding
+    /// deterministic and prevents alternate byte strings for one snapshot.
+    fn varu(self: *Writer, value: u64) Error!void {
+        var x = value;
+        while (true) {
+            var b: u8 = @intCast(x & 0x7f);
+            x >>= 7;
+            if (x != 0) b |= 0x80;
+            try self.putByte(b);
+            if (x == 0) return;
+        }
+    }
+    fn vari(self: *Writer, value: i64) Error!void {
+        const zigzag = (@as(u64, @bitCast(value)) << 1) ^ @as(u64, @bitCast(value >> 63));
+        try self.varu(zigzag);
+    }
 };
 
 const Reader = struct {
@@ -147,9 +164,35 @@ const Reader = struct {
             else => Error.InvalidTag,
         };
     }
+    fn varu(self: *Reader) Error!u64 {
+        var value: u64 = 0;
+        var shift: u6 = 0;
+        var digits: usize = 0;
+        while (digits < 10) : (digits += 1) {
+            const b = try self.byte();
+            if (digits == 9 and ((b & 0x7e) != 0 or (b & 0x80) != 0)) return Error.Overflow;
+            value |= (@as(u64, b & 0x7f) << shift);
+            if ((b & 0x80) == 0) {
+                if (digits != 0 and (b & 0x7f) == 0) return Error.InvalidLength;
+                return value;
+            }
+            shift += 7;
+        }
+        return Error.Overflow;
+    }
+    fn vari(self: *Reader) Error!i64 {
+        const zigzag = try self.varu();
+        const value = (zigzag >> 1) ^ (0 -% (zigzag & 1));
+        return @bitCast(value);
+    }
+    fn vcount(self: *Reader, max: usize) Error!usize {
+        const x = try self.varu();
+        if (x > max or x > std.math.maxInt(usize)) return Error.ResourceLimit;
+        return @intCast(x);
+    }
 };
 
-pub fn encode(allocator: std.mem.Allocator, model: *const semantic.Model) Error![]u8 {
+fn encodeLegacy(allocator: std.mem.Allocator, model: *const semantic.Model) Error![]u8 {
     try validateModel(model);
     var w = Writer{ .allocator = allocator };
     errdefer w.deinit();
@@ -166,7 +209,7 @@ pub fn encode(allocator: std.mem.Allocator, model: *const semantic.Model) Error!
     const total = std.math.cast(u64, w.bytes.items.len) orelse return Error.Overflow;
     @memcpy(w.bytes.items[0..magic.len], magic);
     std.mem.writeInt(u16, w.bytes.items[8..10], format_major, .little);
-    std.mem.writeInt(u16, w.bytes.items[10..12], format_minor, .little);
+    std.mem.writeInt(u16, w.bytes.items[10..12], 3, .little);
     std.mem.writeInt(u32, w.bytes.items[12..16], 0, .little);
     std.mem.writeInt(u32, w.bytes.items[16..20], header_bytes, .little);
     std.mem.writeInt(u64, w.bytes.items[20..28], total, .little);
@@ -180,7 +223,7 @@ pub fn encode(allocator: std.mem.Allocator, model: *const semantic.Model) Error!
     return w.bytes.toOwnedSlice(allocator) catch return Error.OutOfMemory;
 }
 
-pub fn decode(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOptions) Error!semantic.Model {
+fn decodeLegacy(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOptions) Error!semantic.Model {
     if (bytes.len > options.max_total_bytes) return Error.ResourceLimit;
     if (bytes.len < header_bytes) return Error.Truncated;
     if (!std.mem.eql(u8, bytes[0..magic.len], magic)) return Error.InvalidMagic;
@@ -188,7 +231,7 @@ pub fn decode(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOp
     // are not self-describing, accepting v0.2 here would silently reinterpret
     // bytes. Require the explicitly versioned v0.3 encoding instead of
     // guessing.
-    if (std.mem.readInt(u16, bytes[8..10], .little) != format_major or std.mem.readInt(u16, bytes[10..12], .little) != format_minor) return Error.UnsupportedVersion;
+    if (std.mem.readInt(u16, bytes[8..10], .little) != format_major or std.mem.readInt(u16, bytes[10..12], .little) != 3) return Error.UnsupportedVersion;
     if (std.mem.readInt(u32, bytes[12..16], .little) != 0) return Error.UnsupportedFlags;
     if (std.mem.readInt(u32, bytes[16..20], .little) != header_bytes) return Error.InvalidHeader;
     const declared_length = std.mem.readInt(u64, bytes[20..28], .little);
@@ -292,6 +335,542 @@ pub fn decode(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOp
     if (r.at != bytes.len) return Error.TrailingBytes;
     return b.build() catch |e| return mapSemantic(e);
 }
+
+/// v0.4 is the distribution encoding.  It keeps the model's identity and
+/// ordering columns intact, but moves every byte string into one exact-byte
+/// atom pool and uses canonical varints for counts, ids, and integers.  The
+/// old fixed-width v0.3 reader remains available through the dispatcher below.
+pub fn encode(allocator: std.mem.Allocator, model: *const semantic.Model) Error![]u8 {
+    try validateModel(model);
+    var pool = AtomPool.init(allocator);
+    defer pool.deinit();
+    try collectAtoms(&pool, model);
+    var w = Writer{ .allocator = allocator };
+    errdefer w.deinit();
+    w.bytes.appendNTimes(allocator, 0, header_bytes) catch return Error.OutOfMemory;
+    try w.varu(pool.items.items.len);
+    for (pool.items.items) |atom| {
+        try w.varu(atom.len);
+        try w.raw(atom);
+    }
+    try compactNamespaces(&w, model.namespaces, &pool);
+    try compactSources(&w, model.sources, &pool);
+    try compactValues(&w, model.values, &pool);
+    try compactEntities(&w, model.entities, &pool);
+    try compactDocuments(&w, model.documents, &pool);
+    try compactRoots(&w, model.roots);
+    try compactAssertions(&w, model.assertions, &pool);
+    try compactEntityAnchors(&w, model.entity_anchors);
+    try compactAssertionAnchors(&w, model.assertion_anchors);
+    const total = std.math.cast(u64, w.bytes.items.len) orelse return Error.Overflow;
+    @memcpy(w.bytes.items[0..magic.len], magic);
+    std.mem.writeInt(u16, w.bytes.items[8..10], format_major, .little);
+    std.mem.writeInt(u16, w.bytes.items[10..12], format_minor, .little);
+    std.mem.writeInt(u32, w.bytes.items[12..16], 1, .little); // compact/pool codec
+    std.mem.writeInt(u32, w.bytes.items[16..20], header_bytes, .little);
+    std.mem.writeInt(u64, w.bytes.items[20..28], total, .little);
+    std.mem.writeInt(u64, w.bytes.items[28..36], checksum(w.bytes.items[header_bytes..]), .little);
+    const counts = [_]u64{ @intCast(model.namespaces.len), @intCast(model.values.len), @intCast(model.entities.len), @intCast(model.assertions.len), @intCast(model.documents.len), @intCast(model.roots.len), @intCast(model.sources.len), @intCast(model.entity_anchors.len), @intCast(model.assertion_anchors.len) };
+    var at: usize = 36;
+    for (counts) |x| {
+        std.mem.writeInt(u64, w.bytes.items[at..][0..8], x, .little);
+        at += 8;
+    }
+    return w.bytes.toOwnedSlice(allocator) catch return Error.OutOfMemory;
+}
+
+/// Reference bytes for size and regression measurements.  It is deliberately
+/// opt-in so callers cannot accidentally publish the wide v0.3 layout.
+pub fn encodeReference(allocator: std.mem.Allocator, model: *const semantic.Model) Error![]u8 {
+    return encodeLegacy(allocator, model);
+}
+
+pub fn decode(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOptions) Error!semantic.Model {
+    if (bytes.len < header_bytes) return Error.Truncated;
+    if (!std.mem.eql(u8, bytes[0..magic.len], magic)) return Error.InvalidMagic;
+    const major = std.mem.readInt(u16, bytes[8..10], .little);
+    const minor = std.mem.readInt(u16, bytes[10..12], .little);
+    if (major != format_major) return Error.UnsupportedVersion;
+    if (minor == 3) return decodeLegacy(allocator, bytes, options);
+    if (minor != format_minor) return Error.UnsupportedVersion;
+    return decodeCompact(allocator, bytes, options);
+}
+
+const AtomPool = struct {
+    allocator: std.mem.Allocator,
+    items: std.ArrayList([]const u8) = .empty,
+    map: std.StringHashMap(u32),
+    fn init(allocator: std.mem.Allocator) AtomPool {
+        return .{ .allocator = allocator, .map = std.StringHashMap(u32).init(allocator) };
+    }
+    fn deinit(self: *AtomPool) void {
+        self.map.deinit();
+        self.items.deinit(self.allocator);
+    }
+    fn add(self: *AtomPool, bytes: []const u8) Error!u32 {
+        if (self.map.get(bytes)) |id| return id;
+        // Optional references reserve zero for null and add one to this id.
+        // Keep the largest atom id representable after that addition.
+        if (self.items.items.len >= std.math.maxInt(u32)) return Error.Overflow;
+        const id: u32 = @intCast(self.items.items.len);
+        self.items.append(self.allocator, bytes) catch return Error.OutOfMemory;
+        self.map.put(bytes, id) catch {
+            _ = self.items.pop();
+            return Error.OutOfMemory;
+        };
+        return id;
+    }
+    fn optional(self: *AtomPool, bytes: ?[]const u8) Error!void {
+        if (bytes) |x| _ = try self.add(x);
+    }
+};
+
+fn collectAtoms(pool: *AtomPool, model: *const semantic.Model) Error!void {
+    for (model.namespaces) |x| { _ = try pool.add(x.uri); _ = try pool.add(x.prefix); }
+    for (model.sources) |x| { try pool.optional(x.external_id); try pool.optional(x.base_uri); }
+    for (model.values) |x| switch (x) {
+        .text => |v| { _ = try pool.add(v.bytes); try pool.optional(v.language); try pool.optional(v.script); try pool.optional(v.notation); },
+        .bytes => |v| _ = try pool.add(v),
+        .uri => |v| _ = try pool.add(v),
+        .qualified_name => |v| { _ = try pool.add(v.local); _ = try pool.add(v.prefix); },
+        .unknown => |v| try pool.optional(v.reason),
+        else => {},
+    };
+    for (model.entities) |x| try pool.optional(x.external_id);
+    for (model.documents) |x| {
+        try collectName(pool, x.name);
+        for (x.attributes) |a| try collectName(pool, a.name);
+        for (x.children.items) |c| {
+            if (c == .processing_instruction) _ = try pool.add(c.processing_instruction.target);
+        }
+    }
+    for (model.assertions) |x| {
+        for (x.participants) |p| {
+            _ = try pool.add(p.role);
+            if (p.target == .unresolved) {
+                const u = p.target.unresolved;
+                _ = try pool.add(u.bytes); try pool.optional(u.uri); try pool.optional(u.label);
+            }
+        }
+        for (x.attributes) |a| try collectName(pool, a.name);
+        for (x.evidence) |e| for (e.attributes) |a| try collectName(pool, a.name);
+    }
+}
+fn collectName(pool: *AtomPool, name: semantic.QualifiedName) Error!void {
+    _ = try pool.add(name.local);
+    _ = try pool.add(name.prefix);
+}
+
+fn atomRef(w: *Writer, pool: *AtomPool, bytes: []const u8) Error!void { try w.varu((try pool.add(bytes))); }
+fn atomOpt(w: *Writer, pool: *AtomPool, bytes: ?[]const u8) Error!void {
+    if (bytes) |x| try w.varu((try pool.add(x)) + 1) else try w.varu(0);
+}
+fn idVar(w: *Writer, id: u32) Error!void { try w.varu(id); }
+fn optId(w: *Writer, id: anytype) Error!void { if (id) |x| try w.varu(@as(u64, x.index) + 1) else try w.varu(0); }
+fn compactName(w: *Writer, x: semantic.QualifiedName, pool: *AtomPool) Error!void {
+    try idVar(w, x.namespace.index); try atomRef(w, pool, x.local); try atomRef(w, pool, x.prefix);
+}
+fn compactAttributes(w: *Writer, xs: []const semantic.Attribute, pool: *AtomPool) Error!void {
+    try w.varu(xs.len);
+    for (xs) |x| { try compactName(w, x.name, pool); try idVar(w, x.value.index); }
+}
+fn compactNamespaces(w: *Writer, xs: []const semantic.Namespace, pool: *AtomPool) Error!void {
+    for (xs) |x| { try atomRef(w, pool, x.uri); try atomRef(w, pool, x.prefix); }
+}
+fn compactSources(w: *Writer, xs: []const semantic.Source, pool: *AtomPool) Error!void {
+    for (xs) |x| { try atomOpt(w, pool, x.external_id); try atomOpt(w, pool, x.base_uri); }
+}
+fn compactValues(w: *Writer, xs: []const semantic.Value, pool: *AtomPool) Error!void {
+    for (xs) |x| switch (x) {
+        .text => |v| { try w.putByte(0); try atomRef(w, pool, v.bytes); try atomOpt(w, pool, v.language); try atomOpt(w, pool, v.script); try atomOpt(w, pool, v.notation); },
+        .bytes => |v| { try w.putByte(1); try atomRef(w, pool, v); },
+        .boolean => |v| { try w.putByte(2); try w.putByte(if (v) 1 else 0); },
+        .signed_integer => |v| { try w.putByte(3); try w.vari(v); },
+        .unsigned_integer => |v| { try w.putByte(4); try w.varu(v); },
+        .decimal => |v| { try w.putByte(5); try w.vari(v.coefficient); try w.vari(v.scale); },
+        .uri => |v| { try w.putByte(6); try atomRef(w, pool, v); },
+        .qualified_name => |v| { try w.putByte(7); try compactName(w, v, pool); },
+        .entity => |v| { try w.putByte(8); try idVar(w, v.index); },
+        .sequence => |v| { try w.putByte(9); try w.varu(v.len); for (v) |id| try idVar(w, id.index); },
+        .unknown => |v| { try w.putByte(10); try atomOpt(w, pool, v.reason); },
+        .absent => try w.putByte(11),
+        .uncertain => |v| { try w.putByte(12); try idVar(w, v.value.index); try w.putByte(@intFromEnum(v.certainty)); },
+    };
+}
+fn compactEntities(w: *Writer, xs: []const semantic.Entity, pool: *AtomPool) Error!void {
+    for (xs) |x| { try w.putByte(@intFromEnum(x.kind)); try atomOpt(w, pool, x.external_id); try optId(w, x.label); try optId(w, x.source); }
+}
+fn compactDocuments(w: *Writer, xs: []const semantic.DocumentNodeOwned, pool: *AtomPool) Error!void {
+    for (xs) |x| {
+        try compactName(w, x.name, pool); try optId(w, x.source); try optId(w, x.parent); try compactAttributes(w, x.attributes, pool);
+        try w.varu(x.children.items.len);
+        for (x.children.items) |c| switch (c) {
+            .node => |id| { try w.putByte(0); try idVar(w, id.index); },
+            .text => |id| { try w.putByte(1); try idVar(w, id.index); },
+            .comment => |id| { try w.putByte(2); try idVar(w, id.index); },
+            .processing_instruction => |pi| { try w.putByte(3); try atomRef(w, pool, pi.target); try idVar(w, pi.data.index); },
+        };
+    }
+}
+fn compactRoots(w: *Writer, xs: []const semantic.DocumentNodeId) Error!void { for (xs) |x| try idVar(w, x.index); }
+fn compactTarget(w: *Writer, x: semantic.Target, pool: *AtomPool) Error!void {
+    switch (x) {
+        .entity => |id| { try w.putByte(0); try idVar(w, id.index); },
+        .value => |id| { try w.putByte(1); try idVar(w, id.index); },
+        .statement => |id| { try w.putByte(3); try idVar(w, id.index); },
+        .unresolved => |u| { try w.putByte(2); try atomRef(w, pool, u.bytes); try atomOpt(w, pool, u.uri); try atomOpt(w, pool, u.label); try w.putByte(@intFromEnum(u.status)); },
+    }
+}
+fn compactTemporal(w: *Writer, x: ?semantic.Temporal) Error!void {
+    if (x == null) return w.putByte(0);
+    try w.putByte(1); try compactDate(w, x.?.start); try compactDate(w, x.?.end);
+    if (x.?.precision) |p| { try w.putByte(1); try w.putByte(@intFromEnum(p)); } else try w.putByte(0);
+}
+fn compactDate(w: *Writer, x: ?semantic.Date) Error!void {
+    if (x == null) return w.putByte(0);
+    try w.putByte(1); try w.vari(x.?.year);
+    if (x.?.month) |m| { try w.putByte(1); try w.putByte(m); } else try w.putByte(0);
+    if (x.?.day) |d| { try w.putByte(1); try w.putByte(d); } else try w.putByte(0);
+}
+fn compactContext(w: *Writer, x: semantic.GraphContext) Error!void {
+    switch (x) {
+        .default => try w.putByte(0),
+        .named => |id| { try w.putByte(1); try idVar(w, id.index); },
+        .anonymous => |a| {
+            try w.putByte(2);
+            if (a.source) |s| {
+                try w.putByte(1);
+                switch (s) { .entity => |id| { try w.putByte(0); try idVar(w, id.index); }, .document => |id| { try w.putByte(1); try idVar(w, id.index); } }
+            } else try w.putByte(0);
+            try w.varu(a.id);
+        },
+    }
+}
+fn compactAssertions(w: *Writer, xs: []const semantic.Assertion, pool: *AtomPool) Error!void {
+    for (xs) |x| {
+        try idVar(w, x.predicate.index); try optId(w, x.source); try w.varu(x.participants.len);
+        for (x.participants) |p| { try atomRef(w, pool, p.role); try compactTarget(w, p.target, pool); }
+        try compactAttributes(w, x.attributes, pool); try w.varu(x.evidence.len);
+        for (x.evidence) |e| { try optId(w, e.source); try optId(w, e.document); try optId(w, e.quote); try optId(w, e.provenance); try compactAttributes(w, e.attributes, pool); }
+        try w.putByte(@intFromEnum(x.state)); try w.putByte(@intFromEnum(x.certainty)); try compactTemporal(w, x.temporal); try compactContext(w, x.context);
+    }
+}
+fn compactAnchor(w: *Writer, x: semantic.SourceAnchor) Error!void {
+    try idVar(w, x.source.index); try idVar(w, x.node.index);
+    if (x.span) |s| { try w.putByte(1); try w.putByte(@intFromEnum(s.unit)); try w.varu(s.start); try w.varu(s.end); } else try w.putByte(0);
+}
+fn compactEntityAnchors(w: *Writer, xs: []const semantic.EntityAnchor) Error!void { for (xs) |x| { try idVar(w, x.entity.index); try compactAnchor(w, x.anchor); } }
+fn compactAssertionAnchors(w: *Writer, xs: []const semantic.AssertionAnchor) Error!void { for (xs) |x| { try idVar(w, x.assertion.index); try compactAnchor(w, x.anchor); } }
+
+const CompactAtoms = struct {
+    allocator: std.mem.Allocator,
+    items: []const []const u8,
+    fn deinit(self: *CompactAtoms) void {
+        for (self.items) |x| self.allocator.free(x);
+        self.allocator.free(self.items);
+    }
+};
+fn readAtoms(r: *Reader, a: std.mem.Allocator) Error!CompactAtoms {
+    const n = try r.vcount(r.options.max_items);
+    const items = a.alloc([]const u8, n) catch return Error.OutOfMemory;
+    var made: usize = 0;
+    errdefer { for (items[0..made]) |x| a.free(x); a.free(items); }
+    while (made < n) : (made += 1) {
+        const len = try r.vcount(r.options.max_string_bytes);
+        const raw = try r.take(len);
+        const copy = a.dupe(u8, raw) catch return Error.OutOfMemory;
+        items[made] = copy;
+    }
+    return .{ .allocator = a, .items = items };
+}
+fn atomAt(atoms: *const CompactAtoms, r: *Reader, raw: bool) Error![]const u8 {
+    const id = try r.varu();
+    if (id >= atoms.items.len) return Error.InvalidReference;
+    const x = atoms.items[@intCast(id)];
+    if (!raw and !std.unicode.utf8ValidateSlice(x)) return Error.InvalidUtf8;
+    return x;
+}
+fn atomOwned(atoms: *const CompactAtoms, r: *Reader, a: std.mem.Allocator, raw: bool) Error![]const u8 {
+    return a.dupe(u8, try atomAt(atoms, r, raw)) catch return Error.OutOfMemory;
+}
+fn atomOptionalOwned(atoms: *const CompactAtoms, r: *Reader, a: std.mem.Allocator, raw: bool) Error!?[]const u8 {
+    const ref = try r.varu();
+    if (ref == 0) return null;
+    const id = ref - 1;
+    if (id >= atoms.items.len) return Error.InvalidReference;
+    const x = atoms.items[@intCast(id)];
+    if (!raw and !std.unicode.utf8ValidateSlice(x)) return Error.InvalidUtf8;
+    return a.dupe(u8, x) catch return Error.OutOfMemory;
+}
+fn readCompactId(r: *Reader, n: usize) Error!u32 { const x = try r.varu(); if (x >= n or x > std.math.maxInt(u32)) return Error.InvalidReference; return @intCast(x); }
+fn readCompactOptId(r: *Reader, n: usize) Error!?u32 {
+    const x = try r.varu(); if (x == 0) return null; const id = x - 1;
+    if (id >= n or id > std.math.maxInt(u32)) return Error.InvalidReference; return @intCast(id);
+}
+fn compactNameOwned(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nspaces: usize) Error!semantic.QualifiedName {
+    const namespace = try readCompactId(r, nspaces);
+    const local = try atomOwned(atoms, r, a, false);
+    errdefer a.free(local);
+    if (local.len == 0) return Error.InvalidName;
+    const prefix = try atomOwned(atoms, r, a, false);
+    return .{ .namespace = .{ .index = namespace }, .local = local, .prefix = prefix };
+}
+fn compactAttributesOwned(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nspaces: usize, nvalues: usize) Error![]semantic.Attribute {
+    const n = try r.vcount(r.options.max_attributes);
+    const out = a.alloc(semantic.Attribute, n) catch return Error.OutOfMemory;
+    var made: usize = 0;
+    errdefer { for (out[0..made]) |x| freeCompactName(a, x.name); a.free(out); }
+    while (made < n) : (made += 1) {
+        const name = try compactNameOwned(r, atoms, a, nspaces);
+        errdefer freeCompactName(a, name);
+        const value = try readCompactId(r, nvalues);
+        out[made] = .{ .name = name, .value = .{ .index = value } };
+    }
+    return out;
+}
+fn decodeCompact(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOptions) Error!semantic.Model {
+    if (bytes.len > options.max_total_bytes) return Error.ResourceLimit;
+    if (bytes.len < header_bytes) return Error.Truncated;
+    if (std.mem.readInt(u32, bytes[12..16], .little) != 1) return Error.UnsupportedFlags;
+    if (std.mem.readInt(u32, bytes[16..20], .little) != header_bytes) return Error.InvalidHeader;
+    const declared = std.mem.readInt(u64, bytes[20..28], .little);
+    if (declared > bytes.len) return Error.Truncated;
+    if (declared < bytes.len) return Error.InvalidLength;
+    if (std.mem.readInt(u64, bytes[28..36], .little) != checksum(bytes[header_bytes..])) return Error.InvalidChecksum;
+    if (std.mem.readInt(u32, bytes[108..112], .little) != 0) return Error.InvalidHeader;
+    const counts = [9]u64{
+        std.mem.readInt(u64, bytes[36..44], .little), std.mem.readInt(u64, bytes[44..52], .little), std.mem.readInt(u64, bytes[52..60], .little),
+        std.mem.readInt(u64, bytes[60..68], .little), std.mem.readInt(u64, bytes[68..76], .little), std.mem.readInt(u64, bytes[76..84], .little),
+        std.mem.readInt(u64, bytes[84..92], .little), std.mem.readInt(u64, bytes[92..100], .little), std.mem.readInt(u64, bytes[100..108], .little),
+    };
+    for (counts) |x| if (x > options.max_items or x > std.math.maxInt(usize)) return Error.ResourceLimit;
+    var r = Reader{ .bytes = bytes, .at = header_bytes, .options = options, .allocator = allocator };
+    var atoms = try readAtoms(&r, allocator);
+    defer atoms.deinit();
+    var b = semantic.Builder.init(allocator);
+    b.setDocumentDepthBudget(options.max_document_depth);
+    errdefer b.deinit();
+    const ns_count: usize = @intCast(counts[0]);
+    var i: usize = 0;
+    while (i < ns_count) : (i += 1) {
+        const uri = try atomOwned(&atoms, &r, allocator, false); errdefer allocator.free(uri);
+        const prefix = try atomOwned(&atoms, &r, allocator, false);
+        b.namespaces.append(allocator, .{ .uri = uri, .prefix = prefix }) catch { allocator.free(prefix); return Error.OutOfMemory; };
+    }
+    const source_count: usize = @intCast(counts[6]);
+    i = 0;
+    while (i < source_count) : (i += 1) {
+        const external = try atomOptionalOwned(&atoms, &r, allocator, false);
+        const base = atomOptionalOwned(&atoms, &r, allocator, false) catch |err| {
+            if (external) |x| allocator.free(x);
+            return err;
+        };
+        const source = semantic.Source{ .external_id = external, .base_uri = base };
+        b.sources.append(allocator, source) catch { if (base) |x| allocator.free(x); if (external) |x| allocator.free(x); return Error.OutOfMemory; };
+    }
+    const value_count: usize = @intCast(counts[1]);
+    i = 0;
+    while (i < value_count) : (i += 1) {
+        const value = try readCompactValue(&r, &atoms, allocator, ns_count, value_count, @intCast(counts[2]));
+        b.values.append(allocator, value) catch { freeCompactValue(allocator, value); return Error.OutOfMemory; };
+    }
+    const entity_count: usize = @intCast(counts[2]);
+    i = 0;
+    while (i < entity_count) : (i += 1) {
+        const kind = try enumValue(semantic.EntityKind, try r.byte());
+        const external = try atomOptionalOwned(&atoms, &r, allocator, false);
+        const label = try readCompactOptId(&r, value_count);
+        const source = try readCompactOptId(&r, source_count);
+        const entity = semantic.Entity{ .kind = kind, .external_id = external, .label = if (label) |x| .{ .index = x } else null, .source = if (source) |x| .{ .index = x } else null };
+        b.entities.append(allocator, entity) catch { if (external) |x| allocator.free(x); return Error.OutOfMemory; };
+    }
+    const doc_count: usize = @intCast(counts[4]);
+    i = 0;
+    while (i < doc_count) : (i += 1) {
+        const node = try readCompactDocument(&r, &atoms, allocator, ns_count, source_count, value_count, doc_count, options);
+        b.documents.append(allocator, node) catch { freeCompactDocument(allocator, node); return Error.OutOfMemory; };
+    }
+    const root_count: usize = @intCast(counts[5]);
+    i = 0; while (i < root_count) : (i += 1) { const id = try readCompactId(&r, doc_count); b.roots.append(allocator, .{ .index = id }) catch return Error.OutOfMemory; }
+    const assertion_count: usize = @intCast(counts[3]);
+    i = 0;
+    while (i < assertion_count) : (i += 1) {
+        const assertion = try readCompactAssertion(&r, &atoms, allocator, entity_count, value_count, doc_count, source_count, i, options);
+        b.assertions.append(allocator, assertion) catch { freeCompactAssertion(allocator, assertion); return Error.OutOfMemory; };
+    }
+    const entity_anchor_count: usize = @intCast(counts[7]);
+    i = 0; while (i < entity_anchor_count) : (i += 1) { const entity = try readCompactId(&r, entity_count); const anchor = try readCompactAnchor(&r, source_count, doc_count); b.entity_anchors.append(allocator, .{ .entity = .{ .index = entity }, .anchor = anchor }) catch return Error.OutOfMemory; }
+    const assertion_anchor_count: usize = @intCast(counts[8]);
+    i = 0; while (i < assertion_anchor_count) : (i += 1) { const assertion = try readCompactId(&r, assertion_count); const anchor = try readCompactAnchor(&r, source_count, doc_count); b.assertion_anchors.append(allocator, .{ .assertion = .{ .index = assertion }, .anchor = anchor }) catch return Error.OutOfMemory; }
+    if (r.at != bytes.len) return Error.TrailingBytes;
+    return b.build() catch |e| return mapSemantic(e);
+}
+fn readCompactValue(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nspaces: usize, nvalues: usize, nentities: usize) Error!semantic.Value {
+    return switch (try r.byte()) {
+        0 => try readCompactText(r, atoms, a),
+        1 => .{ .bytes = try atomOwned(atoms, r, a, true) },
+        2 => switch (try r.byte()) { 0 => .{ .boolean = false }, 1 => .{ .boolean = true }, else => Error.InvalidTag },
+        3 => .{ .signed_integer = try r.vari() },
+        4 => .{ .unsigned_integer = try r.varu() },
+        5 => .{ .decimal = .{ .coefficient = try r.vari(), .scale = std.math.cast(i32, try r.vari()) orelse return Error.Overflow } },
+        6 => .{ .uri = try atomOwned(atoms, r, a, false) },
+        7 => .{ .qualified_name = try compactNameOwned(r, atoms, a, nspaces) },
+        8 => .{ .entity = .{ .index = try readCompactId(r, nentities) } },
+        9 => blk: {
+            const n = try r.vcount(r.options.max_sequence_items);
+            const ids = a.alloc(semantic.ValueId, n) catch return Error.OutOfMemory;
+            errdefer a.free(ids);
+            for (ids) |*id| id.* = .{ .index = try readCompactId(r, nvalues) };
+            break :blk .{ .sequence = ids };
+        },
+        10 => .{ .unknown = .{ .reason = try atomOptionalOwned(atoms, r, a, false) } },
+        11 => .absent,
+        12 => .{ .uncertain = .{ .value = .{ .index = try readCompactId(r, nvalues) }, .certainty = try enumValue(semantic.Certainty, try r.byte()) } },
+        else => Error.InvalidTag,
+    };
+}
+fn readCompactText(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator) Error!semantic.Value {
+    const bytes = try atomOwned(atoms, r, a, false);
+    errdefer a.free(bytes);
+    const language = try atomOptionalOwned(atoms, r, a, false);
+    errdefer if (language) |x| a.free(x);
+    const script = try atomOptionalOwned(atoms, r, a, false);
+    errdefer if (script) |x| a.free(x);
+    const notation = try atomOptionalOwned(atoms, r, a, false);
+    return .{ .text = .{ .bytes = bytes, .language = language, .script = script, .notation = notation } };
+}
+fn readCompactDocument(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nspaces: usize, nsources: usize, nvalues: usize, ndocuments: usize, options: DecodeOptions) Error!semantic.DocumentNodeOwned {
+    const name = try compactNameOwned(r, atoms, a, nspaces);
+    errdefer freeCompactName(a, name);
+    const source = try readCompactOptId(r, nsources);
+    const parent = try readCompactOptId(r, ndocuments);
+    const attrs = try compactAttributesOwned(r, atoms, a, nspaces, nvalues);
+    errdefer freeCompactAttributes(a, attrs);
+    var children: std.ArrayList(semantic.DocumentChild) = .empty;
+    errdefer {
+        freeCompactChildren(a, children.items);
+        children.deinit(a);
+    }
+    const n = try r.vcount(options.max_children);
+    var i: usize = 0;
+    while (i < n) : (i += 1) {
+        const child: semantic.DocumentChild = switch (try r.byte()) {
+            0 => .{ .node = .{ .index = try readCompactId(r, ndocuments) } },
+            1 => .{ .text = .{ .index = try readCompactId(r, nvalues) } },
+            2 => .{ .comment = .{ .index = try readCompactId(r, nvalues) } },
+            3 => blk: {
+                const target = try atomOwned(atoms, r, a, false);
+                errdefer a.free(target);
+                const data = try readCompactId(r, nvalues);
+                break :blk .{ .processing_instruction = .{ .target = target, .data = .{ .index = data } } };
+            },
+            else => return Error.InvalidTag,
+        };
+        children.append(a, child) catch { if (child == .processing_instruction) a.free(child.processing_instruction.target); return Error.OutOfMemory; };
+    }
+    return .{ .name = name, .source = if (source) |x| .{ .index = x } else null, .parent = if (parent) |x| .{ .index = x } else null, .children = children, .attributes = attrs };
+}
+fn readCompactTarget(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nentities: usize, nvalues: usize, nassertions: usize) Error!semantic.Target {
+    return switch (try r.byte()) {
+        0 => .{ .entity = .{ .index = try readCompactId(r, nentities) } },
+        1 => .{ .value = .{ .index = try readCompactId(r, nvalues) } },
+        3 => .{ .statement = .{ .index = try readCompactId(r, nassertions) } },
+        2 => try readCompactUnresolved(r, atoms, a),
+        else => Error.InvalidTag,
+    };
+}
+fn readCompactUnresolved(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator) Error!semantic.Target {
+    const bytes = try atomOwned(atoms, r, a, false);
+    errdefer a.free(bytes);
+    const uri = try atomOptionalOwned(atoms, r, a, false);
+    errdefer if (uri) |x| a.free(x);
+    const label = try atomOptionalOwned(atoms, r, a, false);
+    errdefer if (label) |x| a.free(x);
+    const status = try enumValue(semantic.ResolutionStatus, try r.byte());
+    return .{ .unresolved = .{ .bytes = bytes, .uri = uri, .label = label, .status = status } };
+}
+fn readCompactTemporal(r: *Reader) Error!?semantic.Temporal {
+    return switch (try r.byte()) {
+        0 => null,
+        1 => .{ .start = try readCompactDate(r), .end = try readCompactDate(r), .precision = switch (try r.byte()) { 0 => null, 1 => try enumValue(semantic.TemporalPrecision, try r.byte()), else => return Error.InvalidTag } },
+        else => Error.InvalidTag,
+    };
+}
+fn readCompactDate(r: *Reader) Error!?semantic.Date {
+    return switch (try r.byte()) {
+        0 => null,
+        1 => blk: {
+            const year = std.math.cast(i32, try r.vari()) orelse return Error.Overflow;
+            const month: ?u8 = switch (try r.byte()) { 0 => null, 1 => try r.byte(), else => return Error.InvalidTag };
+            const day: ?u8 = switch (try r.byte()) { 0 => null, 1 => try r.byte(), else => return Error.InvalidTag };
+            break :blk .{ .year = year, .month = month, .day = day };
+        },
+        else => Error.InvalidTag,
+    };
+}
+fn readCompactContext(r: *Reader, nentities: usize, ndocuments: usize) Error!semantic.GraphContext {
+    return switch (try r.byte()) {
+        0 => .default,
+        1 => .{ .named = .{ .index = try readCompactId(r, nentities) } },
+        2 => blk: {
+            const has = switch (try r.byte()) { 0 => false, 1 => true, else => return Error.InvalidTag };
+            const source: ?semantic.ContextSource = if (has) switch (try r.byte()) { 0 => .{ .entity = .{ .index = try readCompactId(r, nentities) } }, 1 => .{ .document = .{ .index = try readCompactId(r, ndocuments) } }, else => return Error.InvalidTag } else null;
+            break :blk .{ .anonymous = .{ .source = source, .id = try r.varu() } };
+        },
+        else => Error.InvalidTag,
+    };
+}
+fn readCompactAssertion(r: *Reader, atoms: *const CompactAtoms, a: std.mem.Allocator, nentities: usize, nvalues: usize, ndocuments: usize, nsources: usize, assertion_index: usize, options: DecodeOptions) Error!semantic.Assertion {
+    const predicate = try readCompactId(r, nentities);
+    const source = try readCompactOptId(r, nsources);
+    const pn = try r.vcount(options.max_participants);
+    if (pn < 2) return Error.InvalidCardinality;
+    const participants = a.alloc(semantic.Participant, pn) catch return Error.OutOfMemory;
+    var made: usize = 0;
+    errdefer { freeCompactParticipants(a, participants[0..made]); a.free(participants); }
+    while (made < pn) : (made += 1) {
+        const role = try atomOwned(atoms, r, a, false);
+        errdefer a.free(role);
+        const target = try readCompactTarget(r, atoms, a, nentities, nvalues, assertion_index);
+        participants[made] = .{ .role = role, .target = target };
+    }
+    const attrs = try compactAttributesOwned(r, atoms, a, std.math.maxInt(usize), nvalues);
+    errdefer freeCompactAttributes(a, attrs);
+    const en = try r.vcount(options.max_evidence);
+    const evidence = a.alloc(semantic.Evidence, en) catch return Error.OutOfMemory;
+    var emade: usize = 0;
+    errdefer { freeCompactEvidence(a, evidence[0..emade]); a.free(evidence); }
+    while (emade < en) : (emade += 1) {
+        const es = try readCompactOptId(r, nentities); const ed = try readCompactOptId(r, ndocuments); const eq = try readCompactOptId(r, nvalues); const ep = try readCompactOptId(r, nvalues);
+        const ea = try compactAttributesOwned(r, atoms, a, std.math.maxInt(usize), nvalues);
+        evidence[emade] = .{ .source = if (es) |x| .{ .index = x } else null, .document = if (ed) |x| .{ .index = x } else null, .quote = if (eq) |x| .{ .index = x } else null, .provenance = if (ep) |x| .{ .index = x } else null, .attributes = ea };
+    }
+    const state = try enumValue(semantic.AssertionState, try r.byte());
+    const certainty = try enumValue(semantic.Certainty, try r.byte());
+    const temporal = try readCompactTemporal(r);
+    const context = try readCompactContext(r, nentities, ndocuments);
+    return .{ .predicate = .{ .index = predicate }, .participants = participants, .attributes = attrs, .evidence = evidence, .state = state, .certainty = certainty, .temporal = temporal, .context = context, .source = if (source) |x| .{ .index = x } else null };
+}
+fn readCompactAnchor(r: *Reader, nsources: usize, ndocuments: usize) Error!semantic.SourceAnchor {
+    const source = try readCompactId(r, nsources); const node = try readCompactId(r, ndocuments);
+    const span: ?semantic.SourceSpan = switch (try r.byte()) { 0 => null, 1 => .{ .unit = try enumValue(semantic.SourceSpanUnit, try r.byte()), .start = try r.varu(), .end = try r.varu() }, else => return Error.InvalidTag };
+    if (span) |x| if (x.start > x.end) return Error.InvalidDocument;
+    return .{ .source = .{ .index = source }, .node = .{ .index = node }, .span = span };
+}
+fn freeCompactName(a: std.mem.Allocator, x: semantic.QualifiedName) void { a.free(x.local); a.free(x.prefix); }
+fn freeCompactAttributes(a: std.mem.Allocator, xs: []const semantic.Attribute) void { for (xs) |x| freeCompactName(a, x.name); a.free(xs); }
+fn freeCompactValue(a: std.mem.Allocator, x: semantic.Value) void {
+    switch (x) {
+        .text => |v| { a.free(v.bytes); if (v.language) |s| a.free(s); if (v.script) |s| a.free(s); if (v.notation) |s| a.free(s); },
+        .bytes => |s| a.free(s), .uri => |s| a.free(s), .qualified_name => |n| freeCompactName(a, n), .sequence => |ids| a.free(ids), .unknown => |u| if (u.reason) |s| a.free(s), else => {},
+    }
+}
+fn freeCompactTarget(a: std.mem.Allocator, x: semantic.Target) void { if (x == .unresolved) { const u = x.unresolved; a.free(u.bytes); if (u.uri) |s| a.free(s); if (u.label) |s| a.free(s); } }
+fn freeCompactParticipants(a: std.mem.Allocator, xs: []const semantic.Participant) void { for (xs) |x| { a.free(x.role); freeCompactTarget(a, x.target); } }
+fn freeCompactEvidence(a: std.mem.Allocator, xs: []const semantic.Evidence) void { for (xs) |x| freeCompactAttributes(a, x.attributes); }
+fn freeCompactAssertion(a: std.mem.Allocator, x: semantic.Assertion) void { freeCompactParticipants(a, x.participants); a.free(x.participants); freeCompactAttributes(a, x.attributes); freeCompactEvidence(a, x.evidence); a.free(x.evidence); }
+fn freeCompactDocument(a: std.mem.Allocator, x: semantic.DocumentNodeOwned) void { freeCompactName(a, x.name); for (x.children.items) |c| if (c == .processing_instruction) a.free(c.processing_instruction.target); @constCast(&x.children).deinit(a); freeCompactAttributes(a, x.attributes); }
+fn freeCompactChildren(a: std.mem.Allocator, xs: []const semantic.DocumentChild) void { for (xs) |c| if (c == .processing_instruction) a.free(c.processing_instruction.target); }
 pub fn decodeWithLimits(allocator: std.mem.Allocator, bytes: []const u8, options: DecodeOptions) Error!semantic.Model {
     return decode(allocator, bytes, options);
 }
@@ -1065,8 +1644,8 @@ test "semantic snapshot distinguishes truncation, corruption, and resource budge
     try std.testing.expectError(Error.InvalidChecksum, decode(std.testing.allocator, bad, .{}));
     var invalid_tag = try std.testing.allocator.dupe(u8, bytes);
     defer std.testing.allocator.free(invalid_tag);
-    // Empty namespace/source sections (8 bytes each), value count (8 bytes), then value tag.
-    invalid_tag[136] = 0xff;
+    // Compact body: atom count, atom length/bytes, then the first value tag.
+    invalid_tag[115] = 0xff;
     std.mem.writeInt(u64, invalid_tag[28..36], checksum(invalid_tag[header_bytes..]), .little);
     try std.testing.expectError(Error.InvalidTag, decode(std.testing.allocator, invalid_tag, .{}));
     try std.testing.expectError(Error.ResourceLimit, decode(std.testing.allocator, bytes, .{ .max_total_bytes = bytes.len - 1 }));
@@ -1163,4 +1742,132 @@ test "v0.3 preserves source scoped identities and typed occurrence anchors" {
     const reencoded = try encode(std.testing.allocator, &decoded);
     defer std.testing.allocator.free(reencoded);
     try std.testing.expectEqualSlices(u8, encoded, reencoded);
+}
+
+fn allocationFixture(allocator: std.mem.Allocator) !semantic.Model {
+    var b = semantic.Builder.init(allocator);
+    errdefer b.deinit();
+    const ns = try b.addNamespace("urn:fixture", "fx");
+    const source = try b.addSource(.{ .external_id = "fixture.xml", .base_uri = "https://example.test/fixture/" });
+    const word = try b.addValue(.{ .text = .{ .bytes = "naïve", .language = "fr", .script = "Latn", .notation = "IPA" } });
+    const raw = try b.addValue(.{ .bytes = &.{ 0, 0xff, 1, 2 } });
+    const unknown = try b.addValue(.{ .unknown = .{ .reason = "editorial" } });
+    const absent = try b.addValue(.absent);
+    const uri = try b.addValue(.{ .uri = "https://example.test/term" });
+    const predicate = try b.addEntity(.{ .kind = .other, .external_id = "rel:predicate" });
+    const source_entity = try b.addEntity(.{ .kind = .source, .external_id = "source-agent", .source = source });
+    const subject = try b.addEntity(.{ .kind = .sense, .external_id = "sense-1", .label = word, .source = source });
+    const root = try b.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "entry", .prefix = "fx" }, .source = source, .attributes = &.{.{ .name = .{ .namespace = ns, .local = "xml:id", .prefix = "xml" }, .value = word }} });
+    _ = try b.addDocumentNode(.{ .name = .{ .namespace = ns, .local = "form", .prefix = "fx" }, .source = source, .parent = root });
+    try b.appendChild(root, .{ .text = word });
+    try b.appendChild(root, .{ .comment = unknown });
+    try b.appendChild(root, .{ .processing_instruction = .{ .target = "xml-stylesheet", .data = uri } });
+    try b.addDocumentRoot(root);
+    _ = raw;
+    _ = try b.addAssertion(.{
+        .predicate = predicate,
+        .participants = &.{
+            .{ .role = "subject", .target = .{ .entity = subject } },
+            .{ .role = "translation", .target = .{ .unresolved = .{ .bytes = "banque", .uri = "urn:target:bank", .label = "French equivalent", .status = .ambiguous } } },
+            .{ .role = "quoted", .target = .{ .value = word } },
+        },
+        .attributes = &.{.{ .name = .{ .namespace = ns, .local = "confidence", .prefix = "fx" }, .value = uri }},
+        .evidence = &.{.{ .source = source_entity, .document = root, .quote = word, .provenance = unknown, .attributes = &.{.{ .name = .{ .namespace = ns, .local = "note", .prefix = "fx" }, .value = absent }} }},
+        .state = .asserted,
+        .certainty = .probable,
+        .temporal = .{ .start = .{ .year = 2020, .month = 1, .day = 2 }, .end = .{ .year = 2021, .month = 2, .day = 3 }, .precision = .exact },
+        .context = .{ .anonymous = .{ .source = .{ .entity = source_entity }, .id = 17 } },
+        .source = source,
+    });
+    return b.build();
+}
+
+test "compact encoding and decoding release every allocation on injected failure" {
+    var model = try allocationFixture(std.testing.allocator);
+    defer model.deinit();
+    const encoded = try encode(std.testing.allocator, &model);
+    defer std.testing.allocator.free(encoded);
+    var fail_index: usize = 0;
+    var encode_completed = false;
+    while (fail_index < 512) : (fail_index += 1) {
+        var failing = std.testing.FailingAllocator.init(std.testing.allocator, .{ .fail_index = fail_index });
+        const result = encode(failing.allocator(), &model);
+        if (result) |bytes| {
+            failing.allocator().free(bytes);
+            if (!failing.has_induced_failure) encode_completed = true;
+        } else |err| try std.testing.expectEqual(Error.OutOfMemory, err);
+        try std.testing.expectEqual(failing.allocations, failing.deallocations);
+        if (encode_completed) break;
+    }
+    try std.testing.expect(encode_completed);
+
+    fail_index = 0;
+    var decode_completed = false;
+    while (fail_index < 512) : (fail_index += 1) {
+        var failing = std.testing.FailingAllocator.init(std.testing.allocator, .{ .fail_index = fail_index });
+        const result = decode(failing.allocator(), encoded, .{});
+        if (result) |decoded| {
+            var owned = decoded;
+            owned.deinit();
+            if (!failing.has_induced_failure) decode_completed = true;
+        } else |err| try std.testing.expectEqual(Error.OutOfMemory, err);
+        try std.testing.expectEqual(failing.allocations, failing.deallocations);
+        if (decode_completed) break;
+    }
+    try std.testing.expect(decode_completed);
+}
+
+test "compact parser rejects noncanonical varints, out of range atom refs, and atom budgets" {
+    var empty_builder = semantic.Builder.init(std.testing.allocator);
+    defer empty_builder.deinit();
+    _ = try empty_builder.addValue(.absent);
+    var empty_model = try empty_builder.build();
+    defer empty_model.deinit();
+    const empty_bytes = try encode(std.testing.allocator, &empty_model);
+    defer std.testing.allocator.free(empty_bytes);
+    var noncanonical = try std.testing.allocator.dupe(u8, empty_bytes);
+    defer std.testing.allocator.free(noncanonical);
+    noncanonical[112] = 0x80;
+    noncanonical[113] = 0;
+    std.mem.writeInt(u64, noncanonical[28..36], checksum(noncanonical[header_bytes..]), .little);
+    try std.testing.expectError(Error.InvalidLength, decode(std.testing.allocator, noncanonical, .{}));
+
+    var model = try allocationFixture(std.testing.allocator);
+    defer model.deinit();
+    const encoded = try encode(std.testing.allocator, &model);
+    defer std.testing.allocator.free(encoded);
+    var reader = Reader{ .bytes = encoded, .at = header_bytes, .options = .{}, .allocator = std.testing.allocator };
+    const atom_count = try reader.varu();
+    var atom_i: u64 = 0;
+    while (atom_i < atom_count) : (atom_i += 1) _ = try reader.take(@intCast(try reader.varu()));
+    const ref_at = reader.at;
+    var bad_ref = try std.testing.allocator.dupe(u8, encoded);
+    defer std.testing.allocator.free(bad_ref);
+    bad_ref[ref_at] = 0x7f;
+    std.mem.writeInt(u64, bad_ref[28..36], checksum(bad_ref[header_bytes..]), .little);
+    try std.testing.expectError(Error.InvalidReference, decode(std.testing.allocator, bad_ref, .{}));
+
+    // Locate a processing-instruction child tag in the compact body and make
+    // its following value reference invalid.  The checksum is repaired so the
+    // parser reaches the child decoder; this exercises target cleanup on a
+    // malformed child rather than stopping at the integrity guard.
+    var malformed_child = try std.testing.allocator.dupe(u8, encoded);
+    defer std.testing.allocator.free(malformed_child);
+    var child_failure_observed = false;
+    var at: usize = header_bytes;
+    while (at + 2 < malformed_child.len) : (at += 1) {
+        if (encoded[at] != 3) continue;
+        malformed_child[at + 2] = 0x7f;
+        std.mem.writeInt(u64, malformed_child[28..36], checksum(malformed_child[header_bytes..]), .little);
+        if (decode(std.testing.allocator, malformed_child, .{})) |decoded| {
+            var owned = decoded;
+            owned.deinit();
+        } else |err| if (err == Error.InvalidReference) {
+            child_failure_observed = true;
+            break;
+        }
+        malformed_child[at + 2] = encoded[at + 2];
+    }
+    try std.testing.expect(child_failure_observed);
+    try std.testing.expectError(Error.ResourceLimit, decode(std.testing.allocator, encoded, .{ .max_string_bytes = 1 }));
 }
