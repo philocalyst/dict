@@ -1,0 +1,4 @@
+/.zig-cache
+/bench/.zig-cache
+/vendor/bzip3/build-aux
+/vendor/bzip3
