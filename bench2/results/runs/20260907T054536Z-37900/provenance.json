@@ -1,0 +1,539 @@
+{
+  "executable": {
+    "path": "zig-out/bin/bench2",
+    "sha256": "29918109cdde1095beee8b393cec900b66ead124161864c6962e399e6532b78e",
+    "size": 1059800
+  },
+  "flake": {
+    "files": {
+      "flake.lock": {
+        "path": "flake.lock",
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "size": 567
+      },
+      "flake.nix": {
+        "path": "flake.nix",
+        "sha256": "3bba092f0e80ebec6d9482bc087be6dd4f3a06bf35c31b465cf63e0338795b0e",
+        "size": 998
+      }
+    },
+    "hashes": {
+      "flake.lock": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+      "flake.nix": "3bba092f0e80ebec6d9482bc087be6dd4f3a06bf35c31b465cf63e0338795b0e"
+    },
+    "locked_inputs": [
+      {
+        "locked": {
+          "lastModified": 1788614874,
+          "narHash": "sha256-7QYjT2vHLuX9Z1pdxHXDKCbh1CR3D/2rywB9Tx0MPRg=",
+          "owner": "NixOS",
+          "repo": "nixpkgs",
+          "rev": "c043004d1c6985732bcc1cbc5a9c9aecbbb4e0f0",
+          "type": "github"
+        },
+        "node": "nixpkgs"
+      }
+    ],
+    "locked_inputs_sha256": "f87df8212ffc4c4c74fb0ca66d793a94ee8d8be8bfc2694e3668629806a45ed4"
+  },
+  "git": {
+    "available": true,
+    "dirty": true,
+    "head": "a6250a904fe4b8ea038575009969117dbb45a418",
+    "status": [
+      " A flake.lock",
+      " A flake.nix",
+      " M docs/reviews/structural-compactness-audit.md",
+      "?? bench2.zig",
+      "?? bench2/BENCHMARKS.md",
+      "?? bench2/__pycache__/external_baselines.cpython-314.pyc",
+      "?? bench2/__pycache__/hash_artifacts.cpython-314.pyc",
+      "?? bench2/__pycache__/parse_time.cpython-314.pyc",
+      "?? bench2/__pycache__/process_runner.cpython-314.pyc",
+      "?? bench2/__pycache__/provenance.cpython-314.pyc",
+      "?? bench2/__pycache__/render_report.cpython-314.pyc",
+      "?? bench2/__pycache__/tsv_to_json.cpython-314.pyc",
+      "?? bench2/external_baselines.py",
+      "?? bench2/hash_artifacts.py",
+      "?? bench2/parse_time.py",
+      "?? bench2/process_runner.py",
+      "?? bench2/provenance.py",
+      "?? bench2/render_report.py",
+      "?? bench2/results/BENCHMARKS.md",
+      "?? bench2/results/artifacts/flat/flat.dict",
+      "?? bench2/results/artifacts/flat/flat.dict.dz",
+      "?? bench2/results/artifacts/flat/flat.dict.gz",
+      "?? bench2/results/artifacts/flat/flat.idx",
+      "?? bench2/results/artifacts/flat/flat.ifo",
+      "?? bench2/results/artifacts/flat/flat.index",
+      "?? bench2/results/artifacts/flat/flat.lzma2.slob",
+      "?? bench2/results/artifacts/flat/flat.raw.slob",
+      "?? bench2/results/artifacts/flat/flat.sqlite",
+      "?? bench2/results/artifacts/flat/flat.sqlite.gz",
+      "?? bench2/results/artifacts/flat/flat.sqlite.zst",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.dict",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.dict.dz",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.dict.gz",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.idx",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.ifo",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.index",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.lzma2.slob",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.raw.slob",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.sqlite",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.sqlite.gz",
+      "?? bench2/results/artifacts/prose_heavy/prose_heavy.sqlite.zst",
+      "?? bench2/results/artifacts/repeated/repeated.dict",
+      "?? bench2/results/artifacts/repeated/repeated.dict.dz",
+      "?? bench2/results/artifacts/repeated/repeated.dict.gz",
+      "?? bench2/results/artifacts/repeated/repeated.idx",
+      "?? bench2/results/artifacts/repeated/repeated.ifo",
+      "?? bench2/results/artifacts/repeated/repeated.index",
+      "?? bench2/results/artifacts/repeated/repeated.lzma2.slob",
+      "?? bench2/results/artifacts/repeated/repeated.raw.slob",
+      "?? bench2/results/artifacts/repeated/repeated.sqlite",
+      "?? bench2/results/artifacts/repeated/repeated.sqlite.gz",
+      "?? bench2/results/artifacts/repeated/repeated.sqlite.zst",
+      "?? bench2/results/artifacts/rich/rich.dict",
+      "?? bench2/results/artifacts/rich/rich.dict.dz",
+      "?? bench2/results/artifacts/rich/rich.dict.gz",
+      "?? bench2/results/artifacts/rich/rich.idx",
+      "?? bench2/results/artifacts/rich/rich.ifo",
+      "?? bench2/results/artifacts/rich/rich.index",
+      "?? bench2/results/artifacts/rich/rich.lzma2.slob",
+      "?? bench2/results/artifacts/rich/rich.raw.slob",
+      "?? bench2/results/artifacts/rich/rich.sqlite",
+      "?? bench2/results/artifacts/rich/rich.sqlite.gz",
+      "?? bench2/results/artifacts/rich/rich.sqlite.zst",
+      "?? bench2/results/benchmark.json",
+      "?? bench2/results/raw/corpus-flat.tsv",
+      "?? bench2/results/raw/corpus-prose_heavy.tsv",
+      "?? bench2/results/raw/corpus-repeated.tsv",
+      "?? bench2/results/raw/corpus-rich.tsv",
+      "?? bench2/results/raw/external-flat.time",
+      "?? bench2/results/raw/external-flat.tsv",
+      "?? bench2/results/raw/external-flat.tsv.stderr",
+      "?? bench2/results/raw/external-flat.tsv.stdout",
+      "?? bench2/results/raw/external-prose_heavy.time",
+      "?? bench2/results/raw/external-prose_heavy.tsv",
+      "?? bench2/results/raw/external-prose_heavy.tsv.stderr",
+      "?? bench2/results/raw/external-prose_heavy.tsv.stdout",
+      "?? bench2/results/raw/external-repeated.time",
+      "?? bench2/results/raw/external-repeated.tsv",
+      "?? bench2/results/raw/external-repeated.tsv.stderr",
+      "?? bench2/results/raw/external-repeated.tsv.stdout",
+      "?? bench2/results/raw/external-rich.time",
+      "?? bench2/results/raw/external-rich.tsv",
+      "?? bench2/results/raw/external-rich.tsv.stderr",
+      "?? bench2/results/raw/external-rich.tsv.stdout",
+      "?? bench2/results/raw/machine.tsv",
+      "?? bench2/results/raw/process.tsv",
+      "?? bench2/results/raw/zig-flat.time",
+      "?? bench2/results/raw/zig-flat.tsv",
+      "?? bench2/results/raw/zig-prose_heavy.time",
+      "?? bench2/results/raw/zig-prose_heavy.tsv",
+      "?? bench2/results/raw/zig-repeated.time",
+      "?? bench2/results/raw/zig-repeated.tsv",
+      "?? bench2/results/raw/zig-rich.time",
+      "?? bench2/results/raw/zig-rich.tsv",
+      "?? bench2/results/runs/.staging-20260907T054536Z-37900/raw/machine.tsv",
+      "?? bench2/results/smoke/artifacts/flat.dict",
+      "?? bench2/results/smoke/artifacts/flat.dict.dz",
+      "?? bench2/results/smoke/artifacts/flat.dict.gz",
+      "?? bench2/results/smoke/artifacts/flat.idx",
+      "?? bench2/results/smoke/artifacts/flat.ifo",
+      "?? bench2/results/smoke/artifacts/flat.index",
+      "?? bench2/results/smoke/artifacts/flat.lzma2.slob",
+      "?? bench2/results/smoke/artifacts/flat.raw.slob",
+      "?? bench2/results/smoke/artifacts/flat.sqlite",
+      "?? bench2/results/smoke/artifacts/flat.sqlite.gz",
+      "?? bench2/results/smoke/artifacts/flat.sqlite.zst",
+      "?? bench2/results/smoke/external.stderr",
+      "?? bench2/results/smoke/external.stdout",
+      "?? bench2/results/smoke/external.tsv",
+      "?? bench2/results/smoke/flat.tsv",
+      "?? bench2/run.sh",
+      "?? bench2/tsv_to_json.py",
+      "?? build2.zig",
+      "?? docs/proposal-v2.md",
+      "?? src2/README.md",
+      "?? src2/adversarial_test.zig",
+      "?? src2/bits.zig",
+      "?? src2/bits_test.zig",
+      "?? src2/cold.zig",
+      "?? src2/columns.zig",
+      "?? src2/compile.zig",
+      "?? src2/compile_test.zig",
+      "?? src2/edges.zig",
+      "?? src2/forest.zig",
+      "?? src2/forest_test.zig",
+      "?? src2/integration_test.zig",
+      "?? src2/keys.zig",
+      "?? src2/keys_test.zig",
+      "?? src2/prose.zig",
+      "?? src2/prose_test.zig",
+      "?? src2/query.zig",
+      "?? src2/query_test.zig",
+      "?? src2/root.zig",
+      "?? src2/schema.zig",
+      "?? src2/snapshot.zig",
+      "?? src2/snapshot_test.zig",
+      "?? src2/text.zig",
+      "?? src2/wire.zig"
+    ]
+  },
+  "hash_algorithm": "sha256",
+  "repo_root": "/Users/mileswirht/Downloads/dictionary",
+  "run": {
+    "cli": [
+      "bench2/run.sh"
+    ],
+    "cwd": "/Users/mileswirht/Downloads/dictionary",
+    "environment": {
+      "CODEX_APP_TOOLS_PIPE_PATH": "/tmp/codex-browser-use/e6d2ff6a-e3be-4a9c-8667-d0f48df6fb1f.sock",
+      "CODEX_CI": "1",
+      "CODEX_INTERNAL_ORIGINATOR_OVERRIDE": "Codex Desktop",
+      "CODEX_MCP_NODE_PATH": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node",
+      "CODEX_PERMISSION_PROFILE": ":danger-full-access",
+      "CODEX_SAGE_BACKFILL_TRACKER_TAB_REUSE": "1",
+      "CODEX_SESSION_ID": "01a07974-6a0e-7383-9a13-d161c8e2c326",
+      "CODEX_SHELL": "1",
+      "CODEX_THREAD_ID": "01a07a35-ba41-7940-9da7-23497ab0f77e",
+      "COLORTERM": "",
+      "COLUMNS": "80",
+      "COMMAND_MODE": "unix2003",
+      "DISABLE_AUTO_UPDATE": "true",
+      "EDITOR": "nano",
+      "FPATH": "/Users/mileswirht/.nix-profile/share/zsh/site-functions:/Users/mileswirht/.nix-profile/share/zsh/5.9/functions:/Users/mileswirht/.nix-profile/share/zsh/vendor-completions:/etc/profiles/per-user/mileswirht/share/zsh/site-functions:/etc/profiles/per-user/mileswirht/share/zsh/5.9/functions:/etc/profiles/per-user/mileswirht/share/zsh/vendor-completions:/run/current-system/sw/share/zsh/site-functions:/run/current-system/sw/share/zsh/5.9/functions:/run/current-system/sw/share/zsh/vendor-completions:/nix/var/nix/profiles/default/share/zsh/site-functions:/nix/var/nix/profiles/default/share/zsh/5.9/functions:/nix/var/nix/profiles/default/share/zsh/vendor-completions:/Users/mileswirht/.nix-profile/share/zsh/site-functions:/Users/mileswirht/.nix-profile/share/zsh/5.9/functions:/Users/mileswirht/.nix-profile/share/zsh/vendor-completions:/etc/profiles/per-user/mileswirht/share/zsh/site-functions:/etc/profiles/per-user/mileswirht/share/zsh/5.9/functions:/etc/profiles/per-user/mileswirht/share/zsh/vendor-completions:/run/current-system/sw/share/zsh/site-functions:/run/current-system/sw/share/zsh/5.9/functions:/run/current-system/sw/share/zsh/vendor-completions:/nix/var/nix/profiles/default/share/zsh/site-functions:/nix/var/nix/profiles/default/share/zsh/5.9/functions:/nix/var/nix/profiles/default/share/zsh/vendor-completions:/opt/homebrew/share/zsh/site-functions:/Users/mileswirht/.nix-profile/share/zsh/site-functions:/Users/mileswirht/.nix-profile/share/zsh/5.9/functions:/Users/mileswirht/.nix-profile/share/zsh/vendor-completions:/etc/profiles/per-user/mileswirht/share/zsh/site-functions:/etc/profiles/per-user/mileswirht/share/zsh/5.9/functions:/etc/profiles/per-user/mileswirht/share/zsh/vendor-completions:/run/current-system/sw/share/zsh/site-functions:/run/current-system/sw/share/zsh/5.9/functions:/run/current-system/sw/share/zsh/vendor-completions:/nix/var/nix/profiles/default/share/zsh/site-functions:/nix/var/nix/profiles/default/share/zsh/5.9/functions:/nix/var/nix/profiles/default/share/zsh/vendor-completions:/usr/local/share/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.9/functions",
+      "GH_PAGER": "cat",
+      "GIT_PAGER": "cat",
+      "GPG_TTY": "not a tty",
+      "HOME": "/Users/mileswirht",
+      "HOMEBREW_CELLAR": "/opt/homebrew/Cellar",
+      "HOMEBREW_NO_AUTO_UPDATE": "1",
+      "HOMEBREW_PREFIX": "/opt/homebrew",
+      "HOMEBREW_REPOSITORY": "/opt/homebrew/Library/.homebrew-is-managed-by-nix",
+      "INFOPATH": "/opt/homebrew/share/info:",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LC_CTYPE": "C.UTF-8",
+      "LEX2_NIX_DONE": "1",
+      "LEX2_PRESETS": "latency",
+      "LEX2_RECORDS": "32",
+      "LEX2_REPETITIONS": "8",
+      "LEX2_WARMUP": "2",
+      "LINES": "24",
+      "LOGNAME": "mileswirht",
+      "LOG_FORMAT": "json",
+      "LaunchInstanceID": "D4533E17-E12E-4BCB-8BE9-3E7E5615BCC1",
+      "MallocNanoZone": "0",
+      "NIX_PATH": "nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels",
+      "NIX_PROFILES": "/nix/var/nix/profiles/default /run/current-system/sw /etc/profiles/per-user/mileswirht /Users/mileswirht/.nix-profile",
+      "NIX_SSL_CERT_FILE": "/etc/ssl/certs/ca-certificates.crt",
+      "NIX_USER_PROFILE_DIR": "/nix/var/nix/profiles/per-user/mileswirht",
+      "NO_COLOR": "1",
+      "NUDOX_EMBED_MODEL_DIR": "/Users/mileswirht/Library/Caches/nudox-embed-model/jina-code-v2",
+      "OILS_QUIET": "1",
+      "OLDPWD": "/Users/mileswirht/Downloads/dictionary",
+      "PAGER": "less -R",
+      "PATH": "/Users/mileswirht/.local/bin:/Users/mileswirht/.local/bin:/Users/mileswirht/.codex/tmp/arg0/codex-arg0aOuIzf:/Users/mileswirht/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/mileswirht/.local/bin:/Users/mileswirht/.nix-profile/bin:/etc/profiles/per-user/mileswirht/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mileswirht/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources",
+      "PWD": "/Users/mileswirht/Downloads/dictionary",
+      "RUST_LOG": "warn",
+      "SECURITYSESSIONID": "186b1",
+      "SHELL": "/bin/zsh",
+      "SHLVL": "1",
+      "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.kG3TkeAAOu/Listeners",
+      "TERM": "",
+      "TERMINFO_DIRS": "/Users/mileswirht/.nix-profile/share/terminfo:/etc/profiles/per-user/mileswirht/share/terminfo:/run/current-system/sw/share/terminfo:/nix/var/nix/profiles/default/share/terminfo:/usr/share/terminfo",
+      "TMPDIR": "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/",
+      "USER": "mileswirht",
+      "XDG_CONFIG_DIRS": "/Users/mileswirht/.nix-profile/etc/xdg:/etc/profiles/per-user/mileswirht/etc/xdg:/run/current-system/sw/etc/xdg:/nix/var/nix/profiles/default/etc/xdg",
+      "XDG_DATA_DIRS": "/Users/mileswirht/.nix-profile/share:/etc/profiles/per-user/mileswirht/share:/run/current-system/sw/share:/nix/var/nix/profiles/default/share",
+      "XPC_FLAGS": "0x0",
+      "XPC_SERVICE_NAME": "0",
+      "ZAI_API_KEY": "15d7730b4d0547d2b57d13a6c1948d79.huMQ1RMER6rhqtkQ",
+      "ZSH_TMUX_AUTOSTART": "false",
+      "ZSH_TMUX_AUTOSTARTED": "true",
+      "_": "/etc/profiles/per-user/mileswirht/bin/bash",
+      "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x0",
+      "__NIX_DARWIN_SET_ENVIRONMENT_DONE": "1"
+    },
+    "environment_sha256": "bf5dc923a4d7b1c5c174f3ec06f64a648c77eea2f9a01e4a12bc3a96b037b116"
+  },
+  "schema_version": 1,
+  "sources": {
+    "algorithm": "sha256",
+    "excluded_paths": [
+      "bench2/results/runs/.staging-20260907T054536Z-37900/provenance.json",
+      "bench2/results/runs/.staging-20260907T054536Z-37900/raw/provenance.tsv"
+    ],
+    "file_count": 53,
+    "files": [
+      {
+        "path": "bench2.zig",
+        "sha256": "fe0554b1434ed8265656c23dbc3c4485681bc01759824f6e03442948b2d0425c",
+        "size": 51306
+      },
+      {
+        "path": "bench2/external_baselines.py",
+        "sha256": "33aa1e3db3f7bbce5a88c51101bc8af2c9bfd707fff0d952270cb0963cd8748c",
+        "size": 25638
+      },
+      {
+        "path": "bench2/hash_artifacts.py",
+        "sha256": "3915f766729c27c828497d1cc7bccff65828cd8825703441fb1e1a0d63a7f643",
+        "size": 1029
+      },
+      {
+        "path": "bench2/parse_time.py",
+        "sha256": "bd41953bd7a6ed799ee5ffa7b95f52ca6f7cce922e7aeee3e66d3a255ff1a066",
+        "size": 1467
+      },
+      {
+        "path": "bench2/process_runner.py",
+        "sha256": "2319ac8c7c499a0fd3319d4c2679c4266833137d05fa44bfca9cf3070b253a7a",
+        "size": 2180
+      },
+      {
+        "path": "bench2/provenance.py",
+        "sha256": "9ba4cbb060191677718b3a89f26fcd59337ba5e55907a53297664a583b385e17",
+        "size": 26879
+      },
+      {
+        "path": "bench2/render_report.py",
+        "sha256": "f74a1905e4aac1f67c1424ca973dd6eec7aac3dd2d0f5bf34be36a641d48685d",
+        "size": 13186
+      },
+      {
+        "path": "bench2/run.sh",
+        "sha256": "fe23b58337a2cafaee7d3839878c6720e51cf011e78d0a840e5ecbc62a0e8e61",
+        "size": 5874
+      },
+      {
+        "path": "bench2/tsv_to_json.py",
+        "sha256": "17dc659d19a2bf046e5febe14f91a9b7ef982696106a1b3f0cad885bf308eae0",
+        "size": 3667
+      },
+      {
+        "path": "build.zig",
+        "sha256": "4e6594fbe7f49e70904e294f2b0d61e96461749bb344c85fd8d1eb6c30558bd9",
+        "size": 2071
+      },
+      {
+        "path": "build2.zig",
+        "sha256": "aa3090ea96220c4f85492adb7cf9e6b807b9469edbd76b9ff5fe7a22e44f2a28",
+        "size": 3762
+      },
+      {
+        "path": "flake.lock",
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "size": 567
+      },
+      {
+        "path": "flake.nix",
+        "sha256": "3bba092f0e80ebec6d9482bc087be6dd4f3a06bf35c31b465cf63e0338795b0e",
+        "size": 998
+      },
+      {
+        "path": "src/codec.zig",
+        "sha256": "5c298a2d95b25ea68d1aed7319a8600f83fa331727bd13875fff53b3d94a5853",
+        "size": 5555
+      },
+      {
+        "path": "src/codec/bzip3.zig",
+        "sha256": "d03bcfed955cebb25d6c60f0fdb24879e4cd16ba6d7d6836b33764ccd0e143ab",
+        "size": 16939
+      },
+      {
+        "path": "src/codec/raw.zig",
+        "sha256": "cd80364c112beb0e27ec34c4be35772f56b01b36f0f7d6623382d5f23a46d304",
+        "size": 3058
+      },
+      {
+        "path": "src/language.zig",
+        "sha256": "ea3472c9b42d49c53e37dd405f02515adaa51c128265d7be285256ffac66a336",
+        "size": 27590
+      },
+      {
+        "path": "src/lexical.zig",
+        "sha256": "19aeaeadc63305294bf2ffd7f786b89d12600c1d49cfe859f239d338089e756e",
+        "size": 41788
+      },
+      {
+        "path": "src/lexicon.zig",
+        "sha256": "97b665d41c271b1f48134335d0f596c0266ea3bfb792417c1459c7b4e1ea5041",
+        "size": 103757
+      },
+      {
+        "path": "src/main.zig",
+        "sha256": "fcf8b13aa9ea76f8193d17d66b58dd8ecf75978ea53726dc44559bb8b813ef68",
+        "size": 184
+      },
+      {
+        "path": "src/query.zig",
+        "sha256": "41bf0e9ed25cf7fddfb4c2c0d4f4c7bba60d412d4d54e2a18818f9c7871bf4ed",
+        "size": 43199
+      },
+      {
+        "path": "src/scopes.zig",
+        "sha256": "d67c48806ba077193e5d35842c969ce02284494e77d8921fcc1f73a89baa4f0d",
+        "size": 24999
+      },
+      {
+        "path": "src/semantic.zig",
+        "sha256": "98a1b76b8cf334e13cefa44838d2d26695829b2983e6b3586fac8f498758da43",
+        "size": 64522
+      },
+      {
+        "path": "src/semantic_format.zig",
+        "sha256": "2f43f4a0fc27e4f70b16ad9e713bff31da1655eb918f9f3711701d90d1c3e498",
+        "size": 94850
+      },
+      {
+        "path": "src2/adversarial_test.zig",
+        "sha256": "60548e12c468aa4305343b4b6f9756c9f890b7f8ea3aece12ea07d5aa9fa95ea",
+        "size": 23924
+      },
+      {
+        "path": "src2/bits.zig",
+        "sha256": "3cfd6682a499018d91fb52b90e730be0b90b79ba55bd70193a79cce1c5f4a005",
+        "size": 19998
+      },
+      {
+        "path": "src2/bits_test.zig",
+        "sha256": "5468c7991376a5abdf9a7ac59b3d8f96296845a3f15c0fe2416450c00e8011ec",
+        "size": 5381
+      },
+      {
+        "path": "src2/cold.zig",
+        "sha256": "3a5405ea9de07dbe8a785edb6adb8ff2e4504d9428d898a3be05f40eca6db664",
+        "size": 16323
+      },
+      {
+        "path": "src2/columns.zig",
+        "sha256": "11d076384c96ba99da887f189827128b9c5b42e9fea473690befc1eaeea997ee",
+        "size": 20270
+      },
+      {
+        "path": "src2/compile.zig",
+        "sha256": "fb0179bac5d3362b85df57d5ba517269f9ec9153aff7dae871a1942cef52fae4",
+        "size": 46862
+      },
+      {
+        "path": "src2/compile_test.zig",
+        "sha256": "3cebd9c62418139832e01ac879af32052088a52b92dc2447daf6aab0420638bd",
+        "size": 7181
+      },
+      {
+        "path": "src2/edges.zig",
+        "sha256": "8fb51544ceeb3cd52f179153312c35531b30fe04cfc5826b35015441b78bf116",
+        "size": 21391
+      },
+      {
+        "path": "src2/forest.zig",
+        "sha256": "5f6de6a8365bebea68d4a53089478803466bd933c7460d75a57a59fd806dd5f4",
+        "size": 23086
+      },
+      {
+        "path": "src2/forest_test.zig",
+        "sha256": "684afbb853d92fb709a2be02abce265ea8283b1140cb4e0885fef3bf574a014d",
+        "size": 6590
+      },
+      {
+        "path": "src2/integration_test.zig",
+        "sha256": "75cc208bf27eb9b2140797314c62ec35d600c12f640a27b0a427fea63a852966",
+        "size": 158
+      },
+      {
+        "path": "src2/keys.zig",
+        "sha256": "54ab89b0f07e141dcb76e3b8aa4cc1c5c011d27bcf867f7aaa91f33f0146ad77",
+        "size": 22433
+      },
+      {
+        "path": "src2/keys_test.zig",
+        "sha256": "1ce8c64c2b5fadac8194df98afa11deb014b6bbdd83d6124773eb5631c50c212",
+        "size": 5000
+      },
+      {
+        "path": "src2/prose.zig",
+        "sha256": "c5e2674360dff9e795cc916b229887c44d30e7046d5bc89131779dac77aa988e",
+        "size": 29102
+      },
+      {
+        "path": "src2/prose_test.zig",
+        "sha256": "11be0c095517c76c280f02e829fba0a0ac36e8df6a394466b4c12c27d2111b74",
+        "size": 9571
+      },
+      {
+        "path": "src2/query.zig",
+        "sha256": "b88d75365f102802b0364974b7d205df1b56185ca4f8d664dd2428af0d05ae01",
+        "size": 42089
+      },
+      {
+        "path": "src2/query_test.zig",
+        "sha256": "7f63ee56d92d30d514103b09e65bde9d34bc0e2710cc3c29c5d1413d1a0ebdf0",
+        "size": 11800
+      },
+      {
+        "path": "src2/root.zig",
+        "sha256": "5875bfd1c5bc56a6ace9876d4fcf2b3828ee3d6c8351018cb6df4211e056157e",
+        "size": 1739
+      },
+      {
+        "path": "src2/schema.zig",
+        "sha256": "bba4ea18f02db869e9b9539cc12f778120d094b5cbc9cec11ac412bfd8a42172",
+        "size": 18342
+      },
+      {
+        "path": "src2/snapshot.zig",
+        "sha256": "c52b283582950441c379b30399719e418614395b9102593794e2f7c4c7d95a5f",
+        "size": 33237
+      },
+      {
+        "path": "src2/snapshot_test.zig",
+        "sha256": "500455891a7757185669d0ce23cbc8124e7ad9867c94cbb6de2ecd4cd4da4f49",
+        "size": 5647
+      },
+      {
+        "path": "src2/text.zig",
+        "sha256": "53e0919122a73850a39b9d4bceb5d901b7a50441de15b884a81bf5b6e810e953",
+        "size": 3163
+      },
+      {
+        "path": "src2/wire.zig",
+        "sha256": "8314d04539b61489242fa5b473367d925f7e450d72ca2b601be68e1cef39a4ba",
+        "size": 6437
+      },
+      {
+        "path": "vendor/bzip3/include/common.h",
+        "sha256": "f87f5b286e4b733e79c32c0cd5ee521a41c843a4e73a85fec161c3f0e79011da",
+        "size": 4968
+      },
+      {
+        "path": "vendor/bzip3/include/libbz3.h",
+        "sha256": "ccb20f66402f4ca42656471ec401ceaaeac7c729d590dd976856d48967a734df",
+        "size": 9525
+      },
+      {
+        "path": "vendor/bzip3/include/libsais.h",
+        "sha256": "65d065a8bbf37fb01a2e02817cd571d5853ccfc068195da30d0586bdeb86487c",
+        "size": 214460
+      },
+      {
+        "path": "vendor/bzip3/include/yarg.h",
+        "sha256": "3beeb9c9b2b5a0d6b0339c8019013abd186571117b0f682bc807dad39106e81d",
+        "size": 9205
+      },
+      {
+        "path": "vendor/bzip3/src/libbz3.c",
+        "sha256": "7f3c79053898c25bc8dd2c67c9fdafa86f3b94bf8e3a3e3fc1dd7e8c7e8872ad",
+        "size": 36230
+      },
+      {
+        "path": "vendor/bzip3/src/main.c",
+        "sha256": "1ceec6003d2b473f1ccd60dd25d9ebb1b9c83e3cb9f2801eea7d55307831e5f2",
+        "size": 29030
+      }
+    ],
+    "manifest_sha256": "fee7310b6d1d014c73de8fb5a27baa744aec4b79942e44490c6af8a2d9641217"
+  }
+}

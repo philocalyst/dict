@@ -1,0 +1,261 @@
+meta	global	zig_version	0.16.0
+meta	global	target	macos-aarch64
+meta	global	seed	5495895892047298561
+meta	repeated	records	32
+meta	repeated	repetitions	8
+meta	repeated	warmup	2
+meta	repeated	seed	5495895892047298561
+meta	repeated	semantic_digest	17180257314182760903
+meta	repeated	logical_prose_bytes	6688
+meta	repeated	exact_hit_probes	5
+meta	repeated	exact_miss_probes	3
+meta	repeated	prefix_zero_probes	3
+meta	repeated	prefix_one_probes	0
+meta	repeated	prefix_many_probes	5
+meta	repeated	prefix_pathological_probes	0
+result	repeated	v1	raw	artifact_bytes	2952
+result	repeated	v1	raw	build_ns	453875
+sample	repeated	v1	raw	open	0	13291
+result	repeated	v1	raw	open.p50_ns	13291
+result	repeated	v1	raw	open.p95_ns	13291
+result	repeated	v1	raw	open.p99_ns	13291
+result	repeated	v1	raw	open_ns	13291
+result	repeated	v1	raw	semantic_digest	17180257314182760903
+result	repeated	v1	raw	query_checksum	4399029372800725924
+result	repeated	v1	raw	outputs	74
+sample	repeated	v1	raw	exact	0	542
+sample	repeated	v1	raw	exact	1	208
+sample	repeated	v1	raw	exact	2	416
+sample	repeated	v1	raw	exact	3	125
+sample	repeated	v1	raw	exact	4	334
+sample	repeated	v1	raw	exact	5	125
+sample	repeated	v1	raw	exact	6	291
+sample	repeated	v1	raw	exact	7	250
+result	repeated	v1	raw	exact.p50_ns	291
+result	repeated	v1	raw	exact.p95_ns	542
+result	repeated	v1	raw	exact.p99_ns	542
+sample	repeated	v1	raw	prefix	0	500
+sample	repeated	v1	raw	prefix	1	334
+sample	repeated	v1	raw	prefix	2	750
+sample	repeated	v1	raw	prefix	3	583
+sample	repeated	v1	raw	prefix	4	208
+sample	repeated	v1	raw	prefix	5	166
+sample	repeated	v1	raw	prefix	6	583
+sample	repeated	v1	raw	prefix	7	750
+result	repeated	v1	raw	prefix.p50_ns	583
+result	repeated	v1	raw	prefix.p95_ns	750
+result	repeated	v1	raw	prefix.p99_ns	750
+sample	repeated	v1	raw	render	0	958
+sample	repeated	v1	raw	render	1	917
+sample	repeated	v1	raw	render	2	917
+sample	repeated	v1	raw	render	3	916
+sample	repeated	v1	raw	render	4	916
+sample	repeated	v1	raw	render	5	958
+sample	repeated	v1	raw	render	6	917
+sample	repeated	v1	raw	render	7	917
+result	repeated	v1	raw	render.p50_ns	917
+result	repeated	v1	raw	render.p95_ns	958
+result	repeated	v1	raw	render.p99_ns	958
+result	repeated	v1	raw	exact.hit.p50_ns	334
+result	repeated	v1	raw	exact.hit.p95_ns	542
+result	repeated	v1	raw	exact.hit.p99_ns	542
+result	repeated	v1	raw	exact.miss.p50_ns	125
+result	repeated	v1	raw	exact.miss.p95_ns	208
+result	repeated	v1	raw	exact.miss.p99_ns	208
+result	repeated	v1	raw	prefix.zero.p50_ns	208
+result	repeated	v1	raw	prefix.zero.p95_ns	500
+result	repeated	v1	raw	prefix.zero.p99_ns	500
+result	repeated	v1	raw	prefix.one.p50_ns	-
+result	repeated	v1	raw	prefix.one.p95_ns	-
+result	repeated	v1	raw	prefix.one.p99_ns	-
+result	repeated	v1	raw	prefix.many.p50_ns	583
+result	repeated	v1	raw	prefix.many.p95_ns	750
+result	repeated	v1	raw	prefix.many.p99_ns	750
+result	repeated	v1	raw	prefix.pathological.p50_ns	-
+result	repeated	v1	raw	prefix.pathological.p95_ns	-
+result	repeated	v1	raw	prefix.pathological.p99_ns	-
+result	repeated	v1	bzip3	artifact_bytes	2384
+result	repeated	v1	bzip3	build_ns	596250
+sample	repeated	v1	bzip3	open	0	22292
+result	repeated	v1	bzip3	open.p50_ns	22292
+result	repeated	v1	bzip3	open.p95_ns	22292
+result	repeated	v1	bzip3	open.p99_ns	22292
+result	repeated	v1	bzip3	open_ns	22292
+result	repeated	v1	bzip3	semantic_digest	17180257314182760903
+result	repeated	v1	bzip3	query_checksum	4399029372800725924
+result	repeated	v1	bzip3	outputs	74
+sample	repeated	v1	bzip3	exact	0	2000
+sample	repeated	v1	bzip3	exact	1	375
+sample	repeated	v1	bzip3	exact	2	1041
+sample	repeated	v1	bzip3	exact	3	333
+sample	repeated	v1	bzip3	exact	4	666
+sample	repeated	v1	bzip3	exact	5	208
+sample	repeated	v1	bzip3	exact	6	750
+sample	repeated	v1	bzip3	exact	7	500
+result	repeated	v1	bzip3	exact.p50_ns	666
+result	repeated	v1	bzip3	exact.p95_ns	2000
+result	repeated	v1	bzip3	exact.p99_ns	2000
+sample	repeated	v1	bzip3	prefix	0	959
+sample	repeated	v1	bzip3	prefix	1	792
+sample	repeated	v1	bzip3	prefix	2	1417
+sample	repeated	v1	bzip3	prefix	3	1166
+sample	repeated	v1	bzip3	prefix	4	417
+sample	repeated	v1	bzip3	prefix	5	333
+sample	repeated	v1	bzip3	prefix	6	1209
+sample	repeated	v1	bzip3	prefix	7	1250
+result	repeated	v1	bzip3	prefix.p50_ns	1166
+result	repeated	v1	bzip3	prefix.p95_ns	1417
+result	repeated	v1	bzip3	prefix.p99_ns	1417
+sample	repeated	v1	bzip3	render	0	320500
+sample	repeated	v1	bzip3	render	1	277708
+sample	repeated	v1	bzip3	render	2	398917
+sample	repeated	v1	bzip3	render	3	86583
+sample	repeated	v1	bzip3	render	4	81833
+sample	repeated	v1	bzip3	render	5	214750
+sample	repeated	v1	bzip3	render	6	383625
+sample	repeated	v1	bzip3	render	7	387834
+result	repeated	v1	bzip3	render.p50_ns	320500
+result	repeated	v1	bzip3	render.p95_ns	398917
+result	repeated	v1	bzip3	render.p99_ns	398917
+result	repeated	v1	bzip3	exact.hit.p50_ns	750
+result	repeated	v1	bzip3	exact.hit.p95_ns	2000
+result	repeated	v1	bzip3	exact.hit.p99_ns	2000
+result	repeated	v1	bzip3	exact.miss.p50_ns	333
+result	repeated	v1	bzip3	exact.miss.p95_ns	375
+result	repeated	v1	bzip3	exact.miss.p99_ns	375
+result	repeated	v1	bzip3	prefix.zero.p50_ns	417
+result	repeated	v1	bzip3	prefix.zero.p95_ns	959
+result	repeated	v1	bzip3	prefix.zero.p99_ns	959
+result	repeated	v1	bzip3	prefix.one.p50_ns	-
+result	repeated	v1	bzip3	prefix.one.p95_ns	-
+result	repeated	v1	bzip3	prefix.one.p99_ns	-
+result	repeated	v1	bzip3	prefix.many.p50_ns	1209
+result	repeated	v1	bzip3	prefix.many.p95_ns	1417
+result	repeated	v1	bzip3	prefix.many.p99_ns	1417
+result	repeated	v1	bzip3	prefix.pathological.p50_ns	-
+result	repeated	v1	bzip3	prefix.pathological.p95_ns	-
+result	repeated	v1	bzip3	prefix.pathological.p99_ns	-
+result	repeated	v2	raw.latency	artifact_bytes	19168
+result	repeated	v2	raw.latency	build_ns	1836458
+sample	repeated	v2	raw.latency	open	0	284125
+result	repeated	v2	raw.latency	open.p50_ns	284125
+result	repeated	v2	raw.latency	open.p95_ns	284125
+result	repeated	v2	raw.latency	open.p99_ns	284125
+result	repeated	v2	raw.latency	open_ns	284125
+result	repeated	v2	raw.latency	semantic_digest	17180257314182760903
+result	repeated	v2	raw.latency	query_checksum	4399029372800725924
+result	repeated	v2	raw.latency	outputs	74
+result	repeated	v2	raw.latency	logical_prose_bytes	6688
+sample	repeated	v2	raw.latency	exact	0	291
+sample	repeated	v2	raw.latency	exact	1	292
+sample	repeated	v2	raw.latency	exact	2	292
+sample	repeated	v2	raw.latency	exact	3	83
+sample	repeated	v2	raw.latency	exact	4	167
+sample	repeated	v2	raw.latency	exact	5	83
+sample	repeated	v2	raw.latency	exact	6	208
+sample	repeated	v2	raw.latency	exact	7	375
+result	repeated	v2	raw.latency	exact.p50_ns	291
+result	repeated	v2	raw.latency	exact.p95_ns	375
+result	repeated	v2	raw.latency	exact.p99_ns	375
+sample	repeated	v2	raw.latency	prefix	0	208
+sample	repeated	v2	raw.latency	prefix	1	375
+sample	repeated	v2	raw.latency	prefix	2	792
+sample	repeated	v2	raw.latency	prefix	3	542
+sample	repeated	v2	raw.latency	prefix	4	125
+sample	repeated	v2	raw.latency	prefix	5	125
+sample	repeated	v2	raw.latency	prefix	6	542
+sample	repeated	v2	raw.latency	prefix	7	750
+result	repeated	v2	raw.latency	prefix.p50_ns	542
+result	repeated	v2	raw.latency	prefix.p95_ns	792
+result	repeated	v2	raw.latency	prefix.p99_ns	792
+sample	repeated	v2	raw.latency	render	0	167
+sample	repeated	v2	raw.latency	render	1	83
+sample	repeated	v2	raw.latency	render	2	83
+sample	repeated	v2	raw.latency	render	3	42
+sample	repeated	v2	raw.latency	render	4	42
+sample	repeated	v2	raw.latency	render	5	42
+sample	repeated	v2	raw.latency	render	6	83
+sample	repeated	v2	raw.latency	render	7	42
+result	repeated	v2	raw.latency	render.p50_ns	83
+result	repeated	v2	raw.latency	render.p95_ns	167
+result	repeated	v2	raw.latency	render.p99_ns	167
+result	repeated	v2	raw.latency	exact.hit.p50_ns	291
+result	repeated	v2	raw.latency	exact.hit.p95_ns	375
+result	repeated	v2	raw.latency	exact.hit.p99_ns	375
+result	repeated	v2	raw.latency	exact.miss.p50_ns	83
+result	repeated	v2	raw.latency	exact.miss.p95_ns	292
+result	repeated	v2	raw.latency	exact.miss.p99_ns	292
+result	repeated	v2	raw.latency	prefix.zero.p50_ns	125
+result	repeated	v2	raw.latency	prefix.zero.p95_ns	208
+result	repeated	v2	raw.latency	prefix.zero.p99_ns	208
+result	repeated	v2	raw.latency	prefix.one.p50_ns	-
+result	repeated	v2	raw.latency	prefix.one.p95_ns	-
+result	repeated	v2	raw.latency	prefix.one.p99_ns	-
+result	repeated	v2	raw.latency	prefix.many.p50_ns	542
+result	repeated	v2	raw.latency	prefix.many.p95_ns	792
+result	repeated	v2	raw.latency	prefix.many.p99_ns	792
+result	repeated	v2	raw.latency	prefix.pathological.p50_ns	-
+result	repeated	v2	raw.latency	prefix.pathological.p95_ns	-
+result	repeated	v2	raw.latency	prefix.pathological.p99_ns	-
+result	repeated	v2	bzip3.latency	artifact_bytes	12640
+result	repeated	v2	bzip3.latency	build_ns	2502042
+sample	repeated	v2	bzip3.latency	open	0	651917
+result	repeated	v2	bzip3.latency	open.p50_ns	651917
+result	repeated	v2	bzip3.latency	open.p95_ns	651917
+result	repeated	v2	bzip3.latency	open.p99_ns	651917
+result	repeated	v2	bzip3.latency	open_ns	651917
+result	repeated	v2	bzip3.latency	semantic_digest	17180257314182760903
+result	repeated	v2	bzip3.latency	query_checksum	4399029372800725924
+result	repeated	v2	bzip3.latency	outputs	74
+result	repeated	v2	bzip3.latency	logical_prose_bytes	6688
+sample	repeated	v2	bzip3.latency	exact	0	1375
+sample	repeated	v2	bzip3.latency	exact	1	916
+sample	repeated	v2	bzip3.latency	exact	2	917
+sample	repeated	v2	bzip3.latency	exact	3	208
+sample	repeated	v2	bzip3.latency	exact	4	500
+sample	repeated	v2	bzip3.latency	exact	5	167
+sample	repeated	v2	bzip3.latency	exact	6	500
+sample	repeated	v2	bzip3.latency	exact	7	833
+result	repeated	v2	bzip3.latency	exact.p50_ns	833
+result	repeated	v2	bzip3.latency	exact.p95_ns	1375
+result	repeated	v2	bzip3.latency	exact.p99_ns	1375
+sample	repeated	v2	bzip3.latency	prefix	0	500
+sample	repeated	v2	bzip3.latency	prefix	1	1084
+sample	repeated	v2	bzip3.latency	prefix	2	2208
+sample	repeated	v2	bzip3.latency	prefix	3	1375
+sample	repeated	v2	bzip3.latency	prefix	4	291
+sample	repeated	v2	bzip3.latency	prefix	5	250
+sample	repeated	v2	bzip3.latency	prefix	6	1250
+sample	repeated	v2	bzip3.latency	prefix	7	1417
+result	repeated	v2	bzip3.latency	prefix.p50_ns	1250
+result	repeated	v2	bzip3.latency	prefix.p95_ns	2208
+result	repeated	v2	bzip3.latency	prefix.p99_ns	2208
+sample	repeated	v2	bzip3.latency	render	0	306250
+sample	repeated	v2	bzip3.latency	render	1	340042
+sample	repeated	v2	bzip3.latency	render	2	263292
+sample	repeated	v2	bzip3.latency	render	3	188083
+sample	repeated	v2	bzip3.latency	render	4	122875
+sample	repeated	v2	bzip3.latency	render	5	368417
+sample	repeated	v2	bzip3.latency	render	6	357208
+sample	repeated	v2	bzip3.latency	render	7	422500
+result	repeated	v2	bzip3.latency	render.p50_ns	340042
+result	repeated	v2	bzip3.latency	render.p95_ns	422500
+result	repeated	v2	bzip3.latency	render.p99_ns	422500
+result	repeated	v2	bzip3.latency	exact.hit.p50_ns	833
+result	repeated	v2	bzip3.latency	exact.hit.p95_ns	1375
+result	repeated	v2	bzip3.latency	exact.hit.p99_ns	1375
+result	repeated	v2	bzip3.latency	exact.miss.p50_ns	208
+result	repeated	v2	bzip3.latency	exact.miss.p95_ns	916
+result	repeated	v2	bzip3.latency	exact.miss.p99_ns	916
+result	repeated	v2	bzip3.latency	prefix.zero.p50_ns	291
+result	repeated	v2	bzip3.latency	prefix.zero.p95_ns	500
+result	repeated	v2	bzip3.latency	prefix.zero.p99_ns	500
+result	repeated	v2	bzip3.latency	prefix.one.p50_ns	-
+result	repeated	v2	bzip3.latency	prefix.one.p95_ns	-
+result	repeated	v2	bzip3.latency	prefix.one.p99_ns	-
+result	repeated	v2	bzip3.latency	prefix.many.p50_ns	1375
+result	repeated	v2	bzip3.latency	prefix.many.p95_ns	2208
+result	repeated	v2	bzip3.latency	prefix.many.p99_ns	2208
+result	repeated	v2	bzip3.latency	prefix.pathological.p50_ns	-
+result	repeated	v2	bzip3.latency	prefix.pathological.p95_ns	-
+result	repeated	v2	bzip3.latency	prefix.pathological.p99_ns	-

@@ -1,0 +1,506 @@
+meta	rich	records	32
+meta	rich	semantic_digest	6775974522125595869
+result	rich	sqlite	raw	artifact_bytes	20480
+result	rich	sqlite	raw	build_ns	677542
+sample	rich	sqlite	raw	open	0	136375
+sample	rich	sqlite	raw	open	1	61459
+sample	rich	sqlite	raw	open	2	53750
+sample	rich	sqlite	raw	open	3	50208
+sample	rich	sqlite	raw	open	4	48334
+sample	rich	sqlite	raw	open	5	47666
+sample	rich	sqlite	raw	open	6	46375
+sample	rich	sqlite	raw	open	7	47625
+sample	rich	sqlite	raw	open	8	46125
+sample	rich	sqlite	raw	open	9	48666
+sample	rich	sqlite	raw	open	10	56000
+sample	rich	sqlite	raw	open	11	46000
+sample	rich	sqlite	raw	open	12	48417
+sample	rich	sqlite	raw	open	13	48625
+sample	rich	sqlite	raw	open	14	45500
+sample	rich	sqlite	raw	open	15	45250
+sample	rich	sqlite	raw	open	16	45834
+sample	rich	sqlite	raw	open	17	44291
+sample	rich	sqlite	raw	open	18	44875
+sample	rich	sqlite	raw	open	19	44667
+sample	rich	sqlite	raw	open	20	44959
+sample	rich	sqlite	raw	open	21	54834
+sample	rich	sqlite	raw	open	22	46667
+sample	rich	sqlite	raw	open	23	44542
+sample	rich	sqlite	raw	open	24	44542
+result	rich	sqlite	raw	open_ns	46667
+result	rich	sqlite	raw	semantic_digest	6775974522125595869
+result	rich	sqlite	raw	query_checksum	374819840078316771
+result	rich	sqlite	raw	outputs	135
+result	rich	sqlite	raw	logical_prose_bytes	6102
+sample	rich	sqlite	raw	exact	0	12125
+sample	rich	sqlite	raw	exact	1	12208
+sample	rich	sqlite	raw	exact	2	11792
+sample	rich	sqlite	raw	exact	3	11292
+sample	rich	sqlite	raw	exact	4	10916
+sample	rich	sqlite	raw	exact	5	10542
+sample	rich	sqlite	raw	exact	6	11042
+sample	rich	sqlite	raw	exact	7	10709
+sample	rich	sqlite	raw	prefix	0	18125
+sample	rich	sqlite	raw	prefix	1	42375
+sample	rich	sqlite	raw	prefix	2	81708
+sample	rich	sqlite	raw	prefix	3	84208
+sample	rich	sqlite	raw	prefix	4	80125
+sample	rich	sqlite	raw	prefix	5	18541
+sample	rich	sqlite	raw	prefix	6	16416
+sample	rich	sqlite	raw	prefix	7	14667
+sample	rich	sqlite	raw	render	0	8666
+sample	rich	sqlite	raw	render	1	6042
+sample	rich	sqlite	raw	render	2	5375
+sample	rich	sqlite	raw	render	3	5250
+sample	rich	sqlite	raw	render	4	4750
+sample	rich	sqlite	raw	render	5	4792
+sample	rich	sqlite	raw	render	6	5292
+sample	rich	sqlite	raw	render	7	5208
+result	rich	sqlite	raw	exact.p50_ns	11292
+result	rich	sqlite	raw	exact.p95_ns	12208
+result	rich	sqlite	raw	exact.p99_ns	12208
+result	rich	sqlite	raw	prefix.p50_ns	42375
+result	rich	sqlite	raw	prefix.p95_ns	84208
+result	rich	sqlite	raw	prefix.p99_ns	84208
+result	rich	sqlite	raw	render.p50_ns	5292
+result	rich	sqlite	raw	render.p95_ns	8666
+result	rich	sqlite	raw	render.p99_ns	8666
+result	rich	sqlite	raw	exact.hit.p50_ns	11042
+result	rich	sqlite	raw	exact.hit.p95_ns	12125
+result	rich	sqlite	raw	exact.hit.p99_ns	12125
+result	rich	sqlite	raw	exact.miss.p50_ns	11292
+result	rich	sqlite	raw	exact.miss.p95_ns	12208
+result	rich	sqlite	raw	exact.miss.p99_ns	12208
+result	rich	sqlite	raw	prefix.zero.p50_ns	18541
+result	rich	sqlite	raw	prefix.zero.p95_ns	18541
+result	rich	sqlite	raw	prefix.zero.p99_ns	18541
+result	rich	sqlite	raw	prefix.one.p50_ns	80125
+result	rich	sqlite	raw	prefix.one.p95_ns	80125
+result	rich	sqlite	raw	prefix.one.p99_ns	80125
+result	rich	sqlite	raw	prefix.many.p50_ns	81708
+result	rich	sqlite	raw	prefix.many.p95_ns	84208
+result	rich	sqlite	raw	prefix.many.p99_ns	84208
+result	rich	sqlite	raw	prefix.pathological.p50_ns	-
+result	rich	sqlite	raw	prefix.pathological.p95_ns	-
+result	rich	sqlite	raw	prefix.pathological.p99_ns	-
+result	rich	sqlite	zlib	artifact_bytes	1131
+unavailable	rich	sqlite	zlib	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	rich	sqlite	zstd	artifact_bytes	985
+unavailable	rich	sqlite	zstd	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	rich	stardict	raw	artifact_bytes	6974
+result	rich	stardict	raw	build_ns	638209
+sample	rich	stardict	raw	open	0	1174792
+sample	rich	stardict	raw	open	1	163958
+sample	rich	stardict	raw	open	2	1117291
+sample	rich	stardict	raw	open	3	527667
+sample	rich	stardict	raw	open	4	150666
+sample	rich	stardict	raw	open	5	72416
+sample	rich	stardict	raw	open	6	77083
+sample	rich	stardict	raw	open	7	220708
+sample	rich	stardict	raw	open	8	114375
+sample	rich	stardict	raw	open	9	70125
+sample	rich	stardict	raw	open	10	68541
+sample	rich	stardict	raw	open	11	83500
+sample	rich	stardict	raw	open	12	67375
+sample	rich	stardict	raw	open	13	272083
+sample	rich	stardict	raw	open	14	139042
+sample	rich	stardict	raw	open	15	69833
+sample	rich	stardict	raw	open	16	191875
+sample	rich	stardict	raw	open	17	99416
+sample	rich	stardict	raw	open	18	67625
+sample	rich	stardict	raw	open	19	65292
+sample	rich	stardict	raw	open	20	88250
+sample	rich	stardict	raw	open	21	66583
+sample	rich	stardict	raw	open	22	66167
+sample	rich	stardict	raw	open	23	67334
+sample	rich	stardict	raw	open	24	64542
+result	rich	stardict	raw	open_ns	83500
+result	rich	stardict	raw	semantic_digest	6775974522125595869
+result	rich	stardict	raw	query_checksum	374819840078316771
+result	rich	stardict	raw	outputs	135
+result	rich	stardict	raw	logical_prose_bytes	6102
+sample	rich	stardict	raw	exact	0	1542
+sample	rich	stardict	raw	exact	1	958
+sample	rich	stardict	raw	exact	2	917
+sample	rich	stardict	raw	exact	3	708
+sample	rich	stardict	raw	exact	4	875
+sample	rich	stardict	raw	exact	5	583
+sample	rich	stardict	raw	exact	6	750
+sample	rich	stardict	raw	exact	7	833
+sample	rich	stardict	raw	prefix	0	667
+sample	rich	stardict	raw	prefix	1	958
+sample	rich	stardict	raw	prefix	2	6208
+sample	rich	stardict	raw	prefix	3	5875
+sample	rich	stardict	raw	prefix	4	1041
+sample	rich	stardict	raw	prefix	5	667
+sample	rich	stardict	raw	prefix	6	5541
+sample	rich	stardict	raw	prefix	7	5791
+sample	rich	stardict	raw	render	0	1916
+sample	rich	stardict	raw	render	1	584
+sample	rich	stardict	raw	render	2	667
+sample	rich	stardict	raw	render	3	625
+sample	rich	stardict	raw	render	4	500
+sample	rich	stardict	raw	render	5	417
+sample	rich	stardict	raw	render	6	4458
+sample	rich	stardict	raw	render	7	875
+result	rich	stardict	raw	exact.p50_ns	875
+result	rich	stardict	raw	exact.p95_ns	1542
+result	rich	stardict	raw	exact.p99_ns	1542
+result	rich	stardict	raw	prefix.p50_ns	5541
+result	rich	stardict	raw	prefix.p95_ns	6208
+result	rich	stardict	raw	prefix.p99_ns	6208
+result	rich	stardict	raw	render.p50_ns	667
+result	rich	stardict	raw	render.p95_ns	4458
+result	rich	stardict	raw	render.p99_ns	4458
+result	rich	stardict	raw	exact.hit.p50_ns	875
+result	rich	stardict	raw	exact.hit.p95_ns	1542
+result	rich	stardict	raw	exact.hit.p99_ns	1542
+result	rich	stardict	raw	exact.miss.p50_ns	708
+result	rich	stardict	raw	exact.miss.p95_ns	958
+result	rich	stardict	raw	exact.miss.p99_ns	958
+result	rich	stardict	raw	prefix.zero.p50_ns	667
+result	rich	stardict	raw	prefix.zero.p95_ns	667
+result	rich	stardict	raw	prefix.zero.p99_ns	667
+result	rich	stardict	raw	prefix.one.p50_ns	1041
+result	rich	stardict	raw	prefix.one.p95_ns	1041
+result	rich	stardict	raw	prefix.one.p99_ns	1041
+result	rich	stardict	raw	prefix.many.p50_ns	5875
+result	rich	stardict	raw	prefix.many.p95_ns	6208
+result	rich	stardict	raw	prefix.many.p99_ns	6208
+result	rich	stardict	raw	prefix.pathological.p50_ns	-
+result	rich	stardict	raw	prefix.pathological.p95_ns	-
+result	rich	stardict	raw	prefix.pathological.p99_ns	-
+result	rich	stardict	gzip	artifact_bytes	1147
+unavailable	rich	stardict	gzip	reason	gzip is not StarDict dictzip random access; raw reader is the measured query baseline
+result	rich	dict-index	raw	artifact_bytes	6895
+result	rich	dict-index	raw	build_ns	1134792
+sample	rich	dict-index	raw	open	0	226625
+sample	rich	dict-index	raw	open	1	103625
+sample	rich	dict-index	raw	open	2	81250
+sample	rich	dict-index	raw	open	3	85042
+sample	rich	dict-index	raw	open	4	77916
+sample	rich	dict-index	raw	open	5	74041
+sample	rich	dict-index	raw	open	6	73417
+sample	rich	dict-index	raw	open	7	71792
+sample	rich	dict-index	raw	open	8	74250
+sample	rich	dict-index	raw	open	9	70209
+sample	rich	dict-index	raw	open	10	74416
+sample	rich	dict-index	raw	open	11	98416
+sample	rich	dict-index	raw	open	12	81458
+sample	rich	dict-index	raw	open	13	77416
+sample	rich	dict-index	raw	open	14	74625
+sample	rich	dict-index	raw	open	15	85917
+sample	rich	dict-index	raw	open	16	68333
+sample	rich	dict-index	raw	open	17	70375
+sample	rich	dict-index	raw	open	18	70875
+sample	rich	dict-index	raw	open	19	87500
+sample	rich	dict-index	raw	open	20	71250
+sample	rich	dict-index	raw	open	21	70750
+sample	rich	dict-index	raw	open	22	70875
+sample	rich	dict-index	raw	open	23	69583
+sample	rich	dict-index	raw	open	24	72917
+result	rich	dict-index	raw	open_ns	74250
+result	rich	dict-index	raw	semantic_digest	6775974522125595869
+result	rich	dict-index	raw	query_checksum	374819840078316771
+result	rich	dict-index	raw	outputs	135
+result	rich	dict-index	raw	logical_prose_bytes	6102
+sample	rich	dict-index	raw	exact	0	1541
+sample	rich	dict-index	raw	exact	1	667
+sample	rich	dict-index	raw	exact	2	750
+sample	rich	dict-index	raw	exact	3	625
+sample	rich	dict-index	raw	exact	4	750
+sample	rich	dict-index	raw	exact	5	542
+sample	rich	dict-index	raw	exact	6	791
+sample	rich	dict-index	raw	exact	7	792
+sample	rich	dict-index	raw	prefix	0	542
+sample	rich	dict-index	raw	prefix	1	917
+sample	rich	dict-index	raw	prefix	2	5666
+sample	rich	dict-index	raw	prefix	3	5834
+sample	rich	dict-index	raw	prefix	4	1000
+sample	rich	dict-index	raw	prefix	5	584
+sample	rich	dict-index	raw	prefix	6	5041
+sample	rich	dict-index	raw	prefix	7	5208
+sample	rich	dict-index	raw	render	0	1375
+sample	rich	dict-index	raw	render	1	625
+sample	rich	dict-index	raw	render	2	1000
+sample	rich	dict-index	raw	render	3	667
+sample	rich	dict-index	raw	render	4	625
+sample	rich	dict-index	raw	render	5	667
+sample	rich	dict-index	raw	render	6	667
+sample	rich	dict-index	raw	render	7	4334
+result	rich	dict-index	raw	exact.p50_ns	750
+result	rich	dict-index	raw	exact.p95_ns	1541
+result	rich	dict-index	raw	exact.p99_ns	1541
+result	rich	dict-index	raw	prefix.p50_ns	5041
+result	rich	dict-index	raw	prefix.p95_ns	5834
+result	rich	dict-index	raw	prefix.p99_ns	5834
+result	rich	dict-index	raw	render.p50_ns	667
+result	rich	dict-index	raw	render.p95_ns	4334
+result	rich	dict-index	raw	render.p99_ns	4334
+result	rich	dict-index	raw	exact.hit.p50_ns	791
+result	rich	dict-index	raw	exact.hit.p95_ns	1541
+result	rich	dict-index	raw	exact.hit.p99_ns	1541
+result	rich	dict-index	raw	exact.miss.p50_ns	625
+result	rich	dict-index	raw	exact.miss.p95_ns	667
+result	rich	dict-index	raw	exact.miss.p99_ns	667
+result	rich	dict-index	raw	prefix.zero.p50_ns	584
+result	rich	dict-index	raw	prefix.zero.p95_ns	584
+result	rich	dict-index	raw	prefix.zero.p99_ns	584
+result	rich	dict-index	raw	prefix.one.p50_ns	1000
+result	rich	dict-index	raw	prefix.one.p95_ns	1000
+result	rich	dict-index	raw	prefix.one.p99_ns	1000
+result	rich	dict-index	raw	prefix.many.p50_ns	5666
+result	rich	dict-index	raw	prefix.many.p95_ns	5834
+result	rich	dict-index	raw	prefix.many.p99_ns	5834
+result	rich	dict-index	raw	prefix.pathological.p50_ns	-
+result	rich	dict-index	raw	prefix.pathological.p95_ns	-
+result	rich	dict-index	raw	prefix.pathological.p99_ns	-
+result	rich	dict-index	dictzip	artifact_bytes	1088
+result	rich	dict-index	dictzip	build_ns	7775875
+sample	rich	dict-index	dictzip	open	0	442875
+sample	rich	dict-index	dictzip	open	1	80083
+sample	rich	dict-index	dictzip	open	2	163792
+sample	rich	dict-index	dictzip	open	3	186208
+sample	rich	dict-index	dictzip	open	4	103709
+sample	rich	dict-index	dictzip	open	5	61667
+sample	rich	dict-index	dictzip	open	6	58125
+sample	rich	dict-index	dictzip	open	7	72000
+sample	rich	dict-index	dictzip	open	8	118334
+sample	rich	dict-index	dictzip	open	9	112792
+sample	rich	dict-index	dictzip	open	10	71083
+sample	rich	dict-index	dictzip	open	11	51083
+sample	rich	dict-index	dictzip	open	12	50458
+sample	rich	dict-index	dictzip	open	13	54333
+sample	rich	dict-index	dictzip	open	14	49667
+sample	rich	dict-index	dictzip	open	15	81792
+sample	rich	dict-index	dictzip	open	16	73167
+sample	rich	dict-index	dictzip	open	17	42500
+sample	rich	dict-index	dictzip	open	18	26208
+sample	rich	dict-index	dictzip	open	19	24583
+sample	rich	dict-index	dictzip	open	20	23625
+sample	rich	dict-index	dictzip	open	21	29250
+sample	rich	dict-index	dictzip	open	22	22000
+sample	rich	dict-index	dictzip	open	23	22542
+sample	rich	dict-index	dictzip	open	24	22125
+result	rich	dict-index	dictzip	open_ns	58125
+result	rich	dict-index	dictzip	semantic_digest	6775974522125595869
+result	rich	dict-index	dictzip	query_checksum	374819840078316771
+result	rich	dict-index	dictzip	outputs	135
+result	rich	dict-index	dictzip	logical_prose_bytes	6102
+sample	rich	dict-index	dictzip	exact	0	14292
+sample	rich	dict-index	dictzip	exact	1	1375
+sample	rich	dict-index	dictzip	exact	2	1333
+sample	rich	dict-index	dictzip	exact	3	1083
+sample	rich	dict-index	dictzip	exact	4	959
+sample	rich	dict-index	dictzip	exact	5	834
+sample	rich	dict-index	dictzip	exact	6	750
+sample	rich	dict-index	dictzip	exact	7	1125
+sample	rich	dict-index	dictzip	prefix	0	2834
+sample	rich	dict-index	dictzip	prefix	1	1084
+sample	rich	dict-index	dictzip	prefix	2	8166
+sample	rich	dict-index	dictzip	prefix	3	5417
+sample	rich	dict-index	dictzip	prefix	4	1042
+sample	rich	dict-index	dictzip	prefix	5	708
+sample	rich	dict-index	dictzip	prefix	6	5250
+sample	rich	dict-index	dictzip	prefix	7	5417
+sample	rich	dict-index	dictzip	render	0	10407625
+sample	rich	dict-index	dictzip	render	1	9437583
+sample	rich	dict-index	dictzip	render	2	6610042
+sample	rich	dict-index	dictzip	render	3	7056792
+sample	rich	dict-index	dictzip	render	4	6690667
+sample	rich	dict-index	dictzip	render	5	6444334
+sample	rich	dict-index	dictzip	render	6	8283709
+sample	rich	dict-index	dictzip	render	7	6578250
+result	rich	dict-index	dictzip	exact.p50_ns	1125
+result	rich	dict-index	dictzip	exact.p95_ns	14292
+result	rich	dict-index	dictzip	exact.p99_ns	14292
+result	rich	dict-index	dictzip	prefix.p50_ns	5250
+result	rich	dict-index	dictzip	prefix.p95_ns	8166
+result	rich	dict-index	dictzip	prefix.p99_ns	8166
+result	rich	dict-index	dictzip	render.p50_ns	7056792
+result	rich	dict-index	dictzip	render.p95_ns	10407625
+result	rich	dict-index	dictzip	render.p99_ns	10407625
+result	rich	dict-index	dictzip	exact.hit.p50_ns	1125
+result	rich	dict-index	dictzip	exact.hit.p95_ns	14292
+result	rich	dict-index	dictzip	exact.hit.p99_ns	14292
+result	rich	dict-index	dictzip	exact.miss.p50_ns	1083
+result	rich	dict-index	dictzip	exact.miss.p95_ns	1375
+result	rich	dict-index	dictzip	exact.miss.p99_ns	1375
+result	rich	dict-index	dictzip	prefix.zero.p50_ns	2834
+result	rich	dict-index	dictzip	prefix.zero.p95_ns	2834
+result	rich	dict-index	dictzip	prefix.zero.p99_ns	2834
+result	rich	dict-index	dictzip	prefix.one.p50_ns	1084
+result	rich	dict-index	dictzip	prefix.one.p95_ns	1084
+result	rich	dict-index	dictzip	prefix.one.p99_ns	1084
+result	rich	dict-index	dictzip	prefix.many.p50_ns	5417
+result	rich	dict-index	dictzip	prefix.many.p95_ns	8166
+result	rich	dict-index	dictzip	prefix.many.p99_ns	8166
+result	rich	dict-index	dictzip	prefix.pathological.p50_ns	-
+result	rich	dict-index	dictzip	prefix.pathological.p95_ns	-
+result	rich	dict-index	dictzip	prefix.pathological.p99_ns	-
+result	rich	slob	raw	artifact_bytes	8580
+result	rich	slob	raw	build_ns	18903125
+sample	rich	slob	raw	open	0	656167
+sample	rich	slob	raw	open	1	565208
+sample	rich	slob	raw	open	2	345375
+sample	rich	slob	raw	open	3	228208
+sample	rich	slob	raw	open	4	167458
+sample	rich	slob	raw	open	5	347625
+sample	rich	slob	raw	open	6	221792
+sample	rich	slob	raw	open	7	76833
+sample	rich	slob	raw	open	8	65375
+sample	rich	slob	raw	open	9	61833
+sample	rich	slob	raw	open	10	60416
+sample	rich	slob	raw	open	11	60333
+sample	rich	slob	raw	open	12	61541
+sample	rich	slob	raw	open	13	59541
+sample	rich	slob	raw	open	14	58917
+sample	rich	slob	raw	open	15	57917
+sample	rich	slob	raw	open	16	58458
+sample	rich	slob	raw	open	17	56709
+sample	rich	slob	raw	open	18	58625
+sample	rich	slob	raw	open	19	60167
+sample	rich	slob	raw	open	20	245500
+sample	rich	slob	raw	open	21	61125
+sample	rich	slob	raw	open	22	59667
+sample	rich	slob	raw	open	23	60541
+sample	rich	slob	raw	open	24	56208
+result	rich	slob	raw	open_ns	61125
+result	rich	slob	raw	semantic_digest	6775974522125595869
+result	rich	slob	raw	query_checksum	374819840078316771
+result	rich	slob	raw	outputs	135
+result	rich	slob	raw	logical_prose_bytes	6102
+sample	rich	slob	raw	exact	0	244000
+sample	rich	slob	raw	exact	1	152625
+sample	rich	slob	raw	exact	2	593542
+sample	rich	slob	raw	exact	3	647916
+sample	rich	slob	raw	exact	4	746417
+sample	rich	slob	raw	exact	5	478500
+sample	rich	slob	raw	exact	6	245000
+sample	rich	slob	raw	exact	7	722208
+sample	rich	slob	raw	prefix	0	1236834
+sample	rich	slob	raw	prefix	1	998625
+sample	rich	slob	raw	prefix	2	2362250
+sample	rich	slob	raw	prefix	3	1168708
+sample	rich	slob	raw	prefix	4	460292
+sample	rich	slob	raw	prefix	5	436459
+sample	rich	slob	raw	prefix	6	3056083
+sample	rich	slob	raw	prefix	7	3031541
+sample	rich	slob	raw	render	0	53250
+sample	rich	slob	raw	render	1	24458
+sample	rich	slob	raw	render	2	21041
+sample	rich	slob	raw	render	3	20792
+sample	rich	slob	raw	render	4	20125
+sample	rich	slob	raw	render	5	19917
+sample	rich	slob	raw	render	6	19792
+sample	rich	slob	raw	render	7	19916
+result	rich	slob	raw	exact.p50_ns	593542
+result	rich	slob	raw	exact.p95_ns	746417
+result	rich	slob	raw	exact.p99_ns	746417
+result	rich	slob	raw	prefix.p50_ns	1236834
+result	rich	slob	raw	prefix.p95_ns	3056083
+result	rich	slob	raw	prefix.p99_ns	3056083
+result	rich	slob	raw	render.p50_ns	20792
+result	rich	slob	raw	render.p95_ns	53250
+result	rich	slob	raw	render.p99_ns	53250
+result	rich	slob	raw	exact.hit.p50_ns	593542
+result	rich	slob	raw	exact.hit.p95_ns	746417
+result	rich	slob	raw	exact.hit.p99_ns	746417
+result	rich	slob	raw	exact.miss.p50_ns	478500
+result	rich	slob	raw	exact.miss.p95_ns	647916
+result	rich	slob	raw	exact.miss.p99_ns	647916
+result	rich	slob	raw	prefix.zero.p50_ns	1236834
+result	rich	slob	raw	prefix.zero.p95_ns	1236834
+result	rich	slob	raw	prefix.zero.p99_ns	1236834
+result	rich	slob	raw	prefix.one.p50_ns	998625
+result	rich	slob	raw	prefix.one.p95_ns	998625
+result	rich	slob	raw	prefix.one.p99_ns	998625
+result	rich	slob	raw	prefix.many.p50_ns	3031541
+result	rich	slob	raw	prefix.many.p95_ns	3056083
+result	rich	slob	raw	prefix.many.p99_ns	3056083
+result	rich	slob	raw	prefix.pathological.p50_ns	-
+result	rich	slob	raw	prefix.pathological.p95_ns	-
+result	rich	slob	raw	prefix.pathological.p99_ns	-
+result	rich	slob	lzma2	artifact_bytes	2553
+result	rich	slob	lzma2	build_ns	25452708
+sample	rich	slob	lzma2	open	0	251291
+sample	rich	slob	lzma2	open	1	75083
+sample	rich	slob	lzma2	open	2	65375
+sample	rich	slob	lzma2	open	3	66125
+sample	rich	slob	lzma2	open	4	63417
+sample	rich	slob	lzma2	open	5	62917
+sample	rich	slob	lzma2	open	6	61750
+sample	rich	slob	lzma2	open	7	60417
+sample	rich	slob	lzma2	open	8	59875
+sample	rich	slob	lzma2	open	9	58583
+sample	rich	slob	lzma2	open	10	63500
+sample	rich	slob	lzma2	open	11	61041
+sample	rich	slob	lzma2	open	12	57042
+sample	rich	slob	lzma2	open	13	56375
+sample	rich	slob	lzma2	open	14	56041
+sample	rich	slob	lzma2	open	15	57750
+sample	rich	slob	lzma2	open	16	57542
+sample	rich	slob	lzma2	open	17	57458
+sample	rich	slob	lzma2	open	18	57750
+sample	rich	slob	lzma2	open	19	56917
+sample	rich	slob	lzma2	open	20	56084
+sample	rich	slob	lzma2	open	21	55958
+sample	rich	slob	lzma2	open	22	57125
+sample	rich	slob	lzma2	open	23	56958
+sample	rich	slob	lzma2	open	24	59125
+result	rich	slob	lzma2	open_ns	58583
+result	rich	slob	lzma2	semantic_digest	6775974522125595869
+result	rich	slob	lzma2	query_checksum	374819840078316771
+result	rich	slob	lzma2	outputs	135
+result	rich	slob	lzma2	logical_prose_bytes	6102
+sample	rich	slob	lzma2	exact	0	821084
+sample	rich	slob	lzma2	exact	1	711916
+sample	rich	slob	lzma2	exact	2	637042
+sample	rich	slob	lzma2	exact	3	283875
+sample	rich	slob	lzma2	exact	4	247208
+sample	rich	slob	lzma2	exact	5	213542
+sample	rich	slob	lzma2	exact	6	239000
+sample	rich	slob	lzma2	exact	7	273875
+sample	rich	slob	lzma2	prefix	0	329500
+sample	rich	slob	lzma2	prefix	1	1162125
+sample	rich	slob	lzma2	prefix	2	1552666
+sample	rich	slob	lzma2	prefix	3	2379209
+sample	rich	slob	lzma2	prefix	4	791417
+sample	rich	slob	lzma2	prefix	5	445583
+sample	rich	slob	lzma2	prefix	6	2613958
+sample	rich	slob	lzma2	prefix	7	2212458
+sample	rich	slob	lzma2	render	0	181375
+sample	rich	slob	lzma2	render	1	202250
+sample	rich	slob	lzma2	render	2	153083
+sample	rich	slob	lzma2	render	3	103167
+sample	rich	slob	lzma2	render	4	81709
+sample	rich	slob	lzma2	render	5	116292
+sample	rich	slob	lzma2	render	6	101333
+sample	rich	slob	lzma2	render	7	64917
+result	rich	slob	lzma2	exact.p50_ns	283875
+result	rich	slob	lzma2	exact.p95_ns	821084
+result	rich	slob	lzma2	exact.p99_ns	821084
+result	rich	slob	lzma2	prefix.p50_ns	1552666
+result	rich	slob	lzma2	prefix.p95_ns	2613958
+result	rich	slob	lzma2	prefix.p99_ns	2613958
+result	rich	slob	lzma2	render.p50_ns	116292
+result	rich	slob	lzma2	render.p95_ns	202250
+result	rich	slob	lzma2	render.p99_ns	202250
+result	rich	slob	lzma2	exact.hit.p50_ns	273875
+result	rich	slob	lzma2	exact.hit.p95_ns	821084
+result	rich	slob	lzma2	exact.hit.p99_ns	821084
+result	rich	slob	lzma2	exact.miss.p50_ns	283875
+result	rich	slob	lzma2	exact.miss.p95_ns	711916
+result	rich	slob	lzma2	exact.miss.p99_ns	711916
+result	rich	slob	lzma2	prefix.zero.p50_ns	445583
+result	rich	slob	lzma2	prefix.zero.p95_ns	445583
+result	rich	slob	lzma2	prefix.zero.p99_ns	445583
+result	rich	slob	lzma2	prefix.one.p50_ns	1162125
+result	rich	slob	lzma2	prefix.one.p95_ns	1162125
+result	rich	slob	lzma2	prefix.one.p99_ns	1162125
+result	rich	slob	lzma2	prefix.many.p50_ns	2379209
+result	rich	slob	lzma2	prefix.many.p95_ns	2613958
+result	rich	slob	lzma2	prefix.many.p99_ns	2613958
+result	rich	slob	lzma2	prefix.pathological.p50_ns	-
+result	rich	slob	lzma2	prefix.pathological.p95_ns	-
+result	rich	slob	lzma2	prefix.pathological.p99_ns	-

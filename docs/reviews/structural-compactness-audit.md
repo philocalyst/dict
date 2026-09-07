@@ -55,6 +55,11 @@ guard (`1208-1214`). `readAssertion` has the same participant/evidence pattern
 primarily a legacy compatibility and adversarial decoder issue, but it still
 matters because `encodeReference` and minor-3 inputs remain public.
 
+`readDocument` also has no guard for the already-owned `name` or `attrs` when a
+later child fails (`src/semantic_format.zig:1218-1237`), and `readNameOwned`
+can lose `local` if the prefix duplication fails (`1170-1172`). These are
+independent failure points and need to be included in the cleanup matrix.
+
 The compact entity loop has a corresponding malformed-input hole: it allocates
 `external` and then reads `label` and `source` before installing the entity
 (`src/semantic_format.zig:679-686`). If either ID read fails, `external` has
@@ -301,8 +306,8 @@ them.
 
 ### P2: query validation and model invariants still need adversarial closure
 
-The scan query also validates each assertion twice in traversal
-(`src/query.zig:304-318` in the current file), adding avoidable CPU cost. More
+The graph traversal revalidates every assertion for every queued source node
+(`src/query.zig:293-304`), adding repeated CPU cost on a fan-out graph. More
 seriously, malformed public models can pass query validation for unresolved
 targets and attribute names because `validateAssertion`/`validateAttributes`
 do not validate unresolved URI/UTF-8 or QName local-name rules at
@@ -342,6 +347,13 @@ occurrences; for document-node children it should either be rejected or
 represented as an occurrence list with the declared multiplicity. Add a
 duplicate-child check in final validation and a malformed-model query test.
 
+This is reproducible without unsafe pointer tricks: create a child with
+`parent = root`, append the same `.node = child` twice directly to
+`builder.documents[root].children` (the normal constructor already contributes
+one link), then call `build()`. It succeeds and retains three links because
+the color walk skips a node already marked `2`; a final validator must either
+reject the duplicate or make occurrence multiplicity an explicit schema fact.
+
 ## Word-part and multilingual acceptance matrix
 
 Before compactness tuning, pin a fixture with the following independent
@@ -380,8 +392,8 @@ and baseline accounting in `docs/fidelity-and-performance-gates.md` pass.
 ## Regression and redundancy ledger
 
 The caught defects need a named regression, not a nearby success case. The
-current root fixes are covered as follows; the first five pass in the current
-Debug test runs, while decoder-local ownership remains open.
+current root fixes are covered as follows; all listed builder/query fixes pass
+in the current Debug test runs, while decoder-local ownership remains open.
 
 | Defect and former trigger | Regression currently present | Status |
 | --- | --- | --- |

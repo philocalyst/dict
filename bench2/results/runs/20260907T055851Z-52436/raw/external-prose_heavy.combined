@@ -1,0 +1,506 @@
+meta	prose_heavy	records	32
+meta	prose_heavy	semantic_digest	12848969583906786549
+result	prose_heavy	sqlite	raw	artifact_bytes	188416
+result	prose_heavy	sqlite	raw	build_ns	861833
+sample	prose_heavy	sqlite	raw	open	0	385667
+sample	prose_heavy	sqlite	raw	open	1	175708
+sample	prose_heavy	sqlite	raw	open	2	212875
+sample	prose_heavy	sqlite	raw	open	3	146000
+sample	prose_heavy	sqlite	raw	open	4	131792
+sample	prose_heavy	sqlite	raw	open	5	131209
+sample	prose_heavy	sqlite	raw	open	6	111125
+sample	prose_heavy	sqlite	raw	open	7	137416
+sample	prose_heavy	sqlite	raw	open	8	268417
+sample	prose_heavy	sqlite	raw	open	9	292542
+sample	prose_heavy	sqlite	raw	open	10	220250
+sample	prose_heavy	sqlite	raw	open	11	182750
+sample	prose_heavy	sqlite	raw	open	12	191500
+sample	prose_heavy	sqlite	raw	open	13	173667
+sample	prose_heavy	sqlite	raw	open	14	86166
+sample	prose_heavy	sqlite	raw	open	15	77542
+sample	prose_heavy	sqlite	raw	open	16	51542
+sample	prose_heavy	sqlite	raw	open	17	47458
+sample	prose_heavy	sqlite	raw	open	18	162792
+sample	prose_heavy	sqlite	raw	open	19	50375
+sample	prose_heavy	sqlite	raw	open	20	48583
+sample	prose_heavy	sqlite	raw	open	21	47792
+sample	prose_heavy	sqlite	raw	open	22	52541
+sample	prose_heavy	sqlite	raw	open	23	50459
+sample	prose_heavy	sqlite	raw	open	24	47458
+result	prose_heavy	sqlite	raw	open_ns	131792
+result	prose_heavy	sqlite	raw	semantic_digest	12848969583906786549
+result	prose_heavy	sqlite	raw	query_checksum	13955515288332015025
+result	prose_heavy	sqlite	raw	outputs	135
+result	prose_heavy	sqlite	raw	logical_prose_bytes	163990
+sample	prose_heavy	sqlite	raw	exact	0	9834
+sample	prose_heavy	sqlite	raw	exact	1	9459
+sample	prose_heavy	sqlite	raw	exact	2	13208
+sample	prose_heavy	sqlite	raw	exact	3	8958
+sample	prose_heavy	sqlite	raw	exact	4	12833
+sample	prose_heavy	sqlite	raw	exact	5	12625
+sample	prose_heavy	sqlite	raw	exact	6	9084
+sample	prose_heavy	sqlite	raw	exact	7	8916
+sample	prose_heavy	sqlite	raw	prefix	0	12166
+sample	prose_heavy	sqlite	raw	prefix	1	15833
+sample	prose_heavy	sqlite	raw	prefix	2	23083
+sample	prose_heavy	sqlite	raw	prefix	3	17917
+sample	prose_heavy	sqlite	raw	prefix	4	127500
+sample	prose_heavy	sqlite	raw	prefix	5	77333
+sample	prose_heavy	sqlite	raw	prefix	6	67459
+sample	prose_heavy	sqlite	raw	prefix	7	28250
+sample	prose_heavy	sqlite	raw	render	0	16416
+sample	prose_heavy	sqlite	raw	render	1	20333
+sample	prose_heavy	sqlite	raw	render	2	17083
+sample	prose_heavy	sqlite	raw	render	3	115500
+sample	prose_heavy	sqlite	raw	render	4	151667
+sample	prose_heavy	sqlite	raw	render	5	42333
+sample	prose_heavy	sqlite	raw	render	6	57791
+sample	prose_heavy	sqlite	raw	render	7	153334
+result	prose_heavy	sqlite	raw	exact.p50_ns	9834
+result	prose_heavy	sqlite	raw	exact.p95_ns	13208
+result	prose_heavy	sqlite	raw	exact.p99_ns	13208
+result	prose_heavy	sqlite	raw	prefix.p50_ns	28250
+result	prose_heavy	sqlite	raw	prefix.p95_ns	127500
+result	prose_heavy	sqlite	raw	prefix.p99_ns	127500
+result	prose_heavy	sqlite	raw	render.p50_ns	57791
+result	prose_heavy	sqlite	raw	render.p95_ns	153334
+result	prose_heavy	sqlite	raw	render.p99_ns	153334
+result	prose_heavy	sqlite	raw	exact.hit.p50_ns	9834
+result	prose_heavy	sqlite	raw	exact.hit.p95_ns	13208
+result	prose_heavy	sqlite	raw	exact.hit.p99_ns	13208
+result	prose_heavy	sqlite	raw	exact.miss.p50_ns	9459
+result	prose_heavy	sqlite	raw	exact.miss.p95_ns	12625
+result	prose_heavy	sqlite	raw	exact.miss.p99_ns	12625
+result	prose_heavy	sqlite	raw	prefix.zero.p50_ns	77333
+result	prose_heavy	sqlite	raw	prefix.zero.p95_ns	77333
+result	prose_heavy	sqlite	raw	prefix.zero.p99_ns	77333
+result	prose_heavy	sqlite	raw	prefix.one.p50_ns	127500
+result	prose_heavy	sqlite	raw	prefix.one.p95_ns	127500
+result	prose_heavy	sqlite	raw	prefix.one.p99_ns	127500
+result	prose_heavy	sqlite	raw	prefix.many.p50_ns	28250
+result	prose_heavy	sqlite	raw	prefix.many.p95_ns	67459
+result	prose_heavy	sqlite	raw	prefix.many.p99_ns	67459
+result	prose_heavy	sqlite	raw	prefix.pathological.p50_ns	-
+result	prose_heavy	sqlite	raw	prefix.pathological.p95_ns	-
+result	prose_heavy	sqlite	raw	prefix.pathological.p99_ns	-
+result	prose_heavy	sqlite	zlib	artifact_bytes	2193
+unavailable	prose_heavy	sqlite	zlib	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	prose_heavy	sqlite	zstd	artifact_bytes	1288
+unavailable	prose_heavy	sqlite	zstd	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	prose_heavy	stardict	raw	artifact_bytes	164862
+result	prose_heavy	stardict	raw	build_ns	965834
+sample	prose_heavy	stardict	raw	open	0	127000
+sample	prose_heavy	stardict	raw	open	1	44125
+sample	prose_heavy	stardict	raw	open	2	38500
+sample	prose_heavy	stardict	raw	open	3	37291
+sample	prose_heavy	stardict	raw	open	4	36291
+sample	prose_heavy	stardict	raw	open	5	37666
+sample	prose_heavy	stardict	raw	open	6	36667
+sample	prose_heavy	stardict	raw	open	7	35958
+sample	prose_heavy	stardict	raw	open	8	35125
+sample	prose_heavy	stardict	raw	open	9	35250
+sample	prose_heavy	stardict	raw	open	10	160167
+sample	prose_heavy	stardict	raw	open	11	292666
+sample	prose_heavy	stardict	raw	open	12	170125
+sample	prose_heavy	stardict	raw	open	13	85500
+sample	prose_heavy	stardict	raw	open	14	81417
+sample	prose_heavy	stardict	raw	open	15	76459
+sample	prose_heavy	stardict	raw	open	16	90250
+sample	prose_heavy	stardict	raw	open	17	116750
+sample	prose_heavy	stardict	raw	open	18	80125
+sample	prose_heavy	stardict	raw	open	19	74375
+sample	prose_heavy	stardict	raw	open	20	74250
+sample	prose_heavy	stardict	raw	open	21	74125
+sample	prose_heavy	stardict	raw	open	22	74167
+sample	prose_heavy	stardict	raw	open	23	74375
+sample	prose_heavy	stardict	raw	open	24	200208
+result	prose_heavy	stardict	raw	open_ns	74375
+result	prose_heavy	stardict	raw	semantic_digest	12848969583906786549
+result	prose_heavy	stardict	raw	query_checksum	13955515288332015025
+result	prose_heavy	stardict	raw	outputs	135
+result	prose_heavy	stardict	raw	logical_prose_bytes	163990
+sample	prose_heavy	stardict	raw	exact	0	583
+sample	prose_heavy	stardict	raw	exact	1	458
+sample	prose_heavy	stardict	raw	exact	2	375
+sample	prose_heavy	stardict	raw	exact	3	292
+sample	prose_heavy	stardict	raw	exact	4	375
+sample	prose_heavy	stardict	raw	exact	5	209
+sample	prose_heavy	stardict	raw	exact	6	375
+sample	prose_heavy	stardict	raw	exact	7	458
+sample	prose_heavy	stardict	raw	prefix	0	250
+sample	prose_heavy	stardict	raw	prefix	1	417
+sample	prose_heavy	stardict	raw	prefix	2	2583
+sample	prose_heavy	stardict	raw	prefix	3	2416
+sample	prose_heavy	stardict	raw	prefix	4	542
+sample	prose_heavy	stardict	raw	prefix	5	292
+sample	prose_heavy	stardict	raw	prefix	6	2334
+sample	prose_heavy	stardict	raw	prefix	7	2500
+sample	prose_heavy	stardict	raw	render	0	584
+sample	prose_heavy	stardict	raw	render	1	21291
+sample	prose_heavy	stardict	raw	render	2	327250
+sample	prose_heavy	stardict	raw	render	3	22333
+sample	prose_heavy	stardict	raw	render	4	15833
+sample	prose_heavy	stardict	raw	render	5	19250
+sample	prose_heavy	stardict	raw	render	6	10959
+sample	prose_heavy	stardict	raw	render	7	26709
+result	prose_heavy	stardict	raw	exact.p50_ns	375
+result	prose_heavy	stardict	raw	exact.p95_ns	583
+result	prose_heavy	stardict	raw	exact.p99_ns	583
+result	prose_heavy	stardict	raw	prefix.p50_ns	2334
+result	prose_heavy	stardict	raw	prefix.p95_ns	2583
+result	prose_heavy	stardict	raw	prefix.p99_ns	2583
+result	prose_heavy	stardict	raw	render.p50_ns	21291
+result	prose_heavy	stardict	raw	render.p95_ns	327250
+result	prose_heavy	stardict	raw	render.p99_ns	327250
+result	prose_heavy	stardict	raw	exact.hit.p50_ns	375
+result	prose_heavy	stardict	raw	exact.hit.p95_ns	583
+result	prose_heavy	stardict	raw	exact.hit.p99_ns	583
+result	prose_heavy	stardict	raw	exact.miss.p50_ns	292
+result	prose_heavy	stardict	raw	exact.miss.p95_ns	458
+result	prose_heavy	stardict	raw	exact.miss.p99_ns	458
+result	prose_heavy	stardict	raw	prefix.zero.p50_ns	292
+result	prose_heavy	stardict	raw	prefix.zero.p95_ns	292
+result	prose_heavy	stardict	raw	prefix.zero.p99_ns	292
+result	prose_heavy	stardict	raw	prefix.one.p50_ns	542
+result	prose_heavy	stardict	raw	prefix.one.p95_ns	542
+result	prose_heavy	stardict	raw	prefix.one.p99_ns	542
+result	prose_heavy	stardict	raw	prefix.many.p50_ns	2500
+result	prose_heavy	stardict	raw	prefix.many.p95_ns	2583
+result	prose_heavy	stardict	raw	prefix.many.p99_ns	2583
+result	prose_heavy	stardict	raw	prefix.pathological.p50_ns	-
+result	prose_heavy	stardict	raw	prefix.pathological.p95_ns	-
+result	prose_heavy	stardict	raw	prefix.pathological.p99_ns	-
+result	prose_heavy	stardict	gzip	artifact_bytes	1842
+unavailable	prose_heavy	stardict	gzip	reason	gzip is not StarDict dictzip random access; raw reader is the measured query baseline
+result	prose_heavy	dict-index	raw	artifact_bytes	164862
+result	prose_heavy	dict-index	raw	build_ns	727125
+sample	prose_heavy	dict-index	raw	open	0	289125
+sample	prose_heavy	dict-index	raw	open	1	882000
+sample	prose_heavy	dict-index	raw	open	2	474500
+sample	prose_heavy	dict-index	raw	open	3	241458
+sample	prose_heavy	dict-index	raw	open	4	431459
+sample	prose_heavy	dict-index	raw	open	5	256875
+sample	prose_heavy	dict-index	raw	open	6	99125
+sample	prose_heavy	dict-index	raw	open	7	91084
+sample	prose_heavy	dict-index	raw	open	8	108375
+sample	prose_heavy	dict-index	raw	open	9	95208
+sample	prose_heavy	dict-index	raw	open	10	90125
+sample	prose_heavy	dict-index	raw	open	11	87833
+sample	prose_heavy	dict-index	raw	open	12	122417
+sample	prose_heavy	dict-index	raw	open	13	187458
+sample	prose_heavy	dict-index	raw	open	14	367375
+sample	prose_heavy	dict-index	raw	open	15	104958
+sample	prose_heavy	dict-index	raw	open	16	208000
+sample	prose_heavy	dict-index	raw	open	17	146125
+sample	prose_heavy	dict-index	raw	open	18	97208
+sample	prose_heavy	dict-index	raw	open	19	419875
+sample	prose_heavy	dict-index	raw	open	20	163708
+sample	prose_heavy	dict-index	raw	open	21	421291
+sample	prose_heavy	dict-index	raw	open	22	305917
+sample	prose_heavy	dict-index	raw	open	23	1375042
+sample	prose_heavy	dict-index	raw	open	24	239333
+result	prose_heavy	dict-index	raw	open_ns	208000
+result	prose_heavy	dict-index	raw	semantic_digest	12848969583906786549
+result	prose_heavy	dict-index	raw	query_checksum	13955515288332015025
+result	prose_heavy	dict-index	raw	outputs	135
+result	prose_heavy	dict-index	raw	logical_prose_bytes	163990
+sample	prose_heavy	dict-index	raw	exact	0	1375
+sample	prose_heavy	dict-index	raw	exact	1	667
+sample	prose_heavy	dict-index	raw	exact	2	833
+sample	prose_heavy	dict-index	raw	exact	3	667
+sample	prose_heavy	dict-index	raw	exact	4	750
+sample	prose_heavy	dict-index	raw	exact	5	4500
+sample	prose_heavy	dict-index	raw	exact	6	1459
+sample	prose_heavy	dict-index	raw	exact	7	1167
+sample	prose_heavy	dict-index	raw	prefix	0	708
+sample	prose_heavy	dict-index	raw	prefix	1	1083
+sample	prose_heavy	dict-index	raw	prefix	2	6125
+sample	prose_heavy	dict-index	raw	prefix	3	5542
+sample	prose_heavy	dict-index	raw	prefix	4	1292
+sample	prose_heavy	dict-index	raw	prefix	5	708
+sample	prose_heavy	dict-index	raw	prefix	6	5375
+sample	prose_heavy	dict-index	raw	prefix	7	6458
+sample	prose_heavy	dict-index	raw	render	0	4458
+sample	prose_heavy	dict-index	raw	render	1	8667
+sample	prose_heavy	dict-index	raw	render	2	9459
+sample	prose_heavy	dict-index	raw	render	3	10708
+sample	prose_heavy	dict-index	raw	render	4	10709
+sample	prose_heavy	dict-index	raw	render	5	15459
+sample	prose_heavy	dict-index	raw	render	6	9042
+sample	prose_heavy	dict-index	raw	render	7	10042
+result	prose_heavy	dict-index	raw	exact.p50_ns	1167
+result	prose_heavy	dict-index	raw	exact.p95_ns	4500
+result	prose_heavy	dict-index	raw	exact.p99_ns	4500
+result	prose_heavy	dict-index	raw	prefix.p50_ns	5375
+result	prose_heavy	dict-index	raw	prefix.p95_ns	6458
+result	prose_heavy	dict-index	raw	prefix.p99_ns	6458
+result	prose_heavy	dict-index	raw	render.p50_ns	10042
+result	prose_heavy	dict-index	raw	render.p95_ns	15459
+result	prose_heavy	dict-index	raw	render.p99_ns	15459
+result	prose_heavy	dict-index	raw	exact.hit.p50_ns	1167
+result	prose_heavy	dict-index	raw	exact.hit.p95_ns	1459
+result	prose_heavy	dict-index	raw	exact.hit.p99_ns	1459
+result	prose_heavy	dict-index	raw	exact.miss.p50_ns	667
+result	prose_heavy	dict-index	raw	exact.miss.p95_ns	4500
+result	prose_heavy	dict-index	raw	exact.miss.p99_ns	4500
+result	prose_heavy	dict-index	raw	prefix.zero.p50_ns	708
+result	prose_heavy	dict-index	raw	prefix.zero.p95_ns	708
+result	prose_heavy	dict-index	raw	prefix.zero.p99_ns	708
+result	prose_heavy	dict-index	raw	prefix.one.p50_ns	1292
+result	prose_heavy	dict-index	raw	prefix.one.p95_ns	1292
+result	prose_heavy	dict-index	raw	prefix.one.p99_ns	1292
+result	prose_heavy	dict-index	raw	prefix.many.p50_ns	6125
+result	prose_heavy	dict-index	raw	prefix.many.p95_ns	6458
+result	prose_heavy	dict-index	raw	prefix.many.p99_ns	6458
+result	prose_heavy	dict-index	raw	prefix.pathological.p50_ns	-
+result	prose_heavy	dict-index	raw	prefix.pathological.p95_ns	-
+result	prose_heavy	dict-index	raw	prefix.pathological.p99_ns	-
+result	prose_heavy	dict-index	dictzip	artifact_bytes	2242
+result	prose_heavy	dict-index	dictzip	build_ns	8273500
+sample	prose_heavy	dict-index	dictzip	open	0	475041
+sample	prose_heavy	dict-index	dictzip	open	1	725875
+sample	prose_heavy	dict-index	dictzip	open	2	774959
+sample	prose_heavy	dict-index	dictzip	open	3	136416
+sample	prose_heavy	dict-index	dictzip	open	4	65500
+sample	prose_heavy	dict-index	dictzip	open	5	242750
+sample	prose_heavy	dict-index	dictzip	open	6	38584
+sample	prose_heavy	dict-index	dictzip	open	7	111416
+sample	prose_heavy	dict-index	dictzip	open	8	36958
+sample	prose_heavy	dict-index	dictzip	open	9	27875
+sample	prose_heavy	dict-index	dictzip	open	10	25708
+sample	prose_heavy	dict-index	dictzip	open	11	175125
+sample	prose_heavy	dict-index	dictzip	open	12	100125
+sample	prose_heavy	dict-index	dictzip	open	13	66500
+sample	prose_heavy	dict-index	dictzip	open	14	58792
+sample	prose_heavy	dict-index	dictzip	open	15	77958
+sample	prose_heavy	dict-index	dictzip	open	16	96833
+sample	prose_heavy	dict-index	dictzip	open	17	61917
+sample	prose_heavy	dict-index	dictzip	open	18	56167
+sample	prose_heavy	dict-index	dictzip	open	19	54083
+sample	prose_heavy	dict-index	dictzip	open	20	54958
+sample	prose_heavy	dict-index	dictzip	open	21	52833
+sample	prose_heavy	dict-index	dictzip	open	22	55042
+sample	prose_heavy	dict-index	dictzip	open	23	61625
+sample	prose_heavy	dict-index	dictzip	open	24	51000
+result	prose_heavy	dict-index	dictzip	open_ns	61917
+result	prose_heavy	dict-index	dictzip	semantic_digest	12848969583906786549
+result	prose_heavy	dict-index	dictzip	query_checksum	13955515288332015025
+result	prose_heavy	dict-index	dictzip	outputs	135
+result	prose_heavy	dict-index	dictzip	logical_prose_bytes	163990
+sample	prose_heavy	dict-index	dictzip	exact	0	12291
+sample	prose_heavy	dict-index	dictzip	exact	1	3959
+sample	prose_heavy	dict-index	dictzip	exact	2	1959
+sample	prose_heavy	dict-index	dictzip	exact	3	1167
+sample	prose_heavy	dict-index	dictzip	exact	4	875
+sample	prose_heavy	dict-index	dictzip	exact	5	625
+sample	prose_heavy	dict-index	dictzip	exact	6	916
+sample	prose_heavy	dict-index	dictzip	exact	7	1375
+sample	prose_heavy	dict-index	dictzip	prefix	0	3083
+sample	prose_heavy	dict-index	dictzip	prefix	1	1084
+sample	prose_heavy	dict-index	dictzip	prefix	2	10625
+sample	prose_heavy	dict-index	dictzip	prefix	3	5875
+sample	prose_heavy	dict-index	dictzip	prefix	4	1209
+sample	prose_heavy	dict-index	dictzip	prefix	5	667
+sample	prose_heavy	dict-index	dictzip	prefix	6	5125
+sample	prose_heavy	dict-index	dictzip	prefix	7	5541
+sample	prose_heavy	dict-index	dictzip	render	0	6590958
+sample	prose_heavy	dict-index	dictzip	render	1	8366458
+sample	prose_heavy	dict-index	dictzip	render	2	11096834
+sample	prose_heavy	dict-index	dictzip	render	3	7645792
+sample	prose_heavy	dict-index	dictzip	render	4	7834166
+sample	prose_heavy	dict-index	dictzip	render	5	8402167
+sample	prose_heavy	dict-index	dictzip	render	6	5408208
+sample	prose_heavy	dict-index	dictzip	render	7	5512625
+result	prose_heavy	dict-index	dictzip	exact.p50_ns	1375
+result	prose_heavy	dict-index	dictzip	exact.p95_ns	12291
+result	prose_heavy	dict-index	dictzip	exact.p99_ns	12291
+result	prose_heavy	dict-index	dictzip	prefix.p50_ns	5125
+result	prose_heavy	dict-index	dictzip	prefix.p95_ns	10625
+result	prose_heavy	dict-index	dictzip	prefix.p99_ns	10625
+result	prose_heavy	dict-index	dictzip	render.p50_ns	7834166
+result	prose_heavy	dict-index	dictzip	render.p95_ns	11096834
+result	prose_heavy	dict-index	dictzip	render.p99_ns	11096834
+result	prose_heavy	dict-index	dictzip	exact.hit.p50_ns	1375
+result	prose_heavy	dict-index	dictzip	exact.hit.p95_ns	12291
+result	prose_heavy	dict-index	dictzip	exact.hit.p99_ns	12291
+result	prose_heavy	dict-index	dictzip	exact.miss.p50_ns	1167
+result	prose_heavy	dict-index	dictzip	exact.miss.p95_ns	3959
+result	prose_heavy	dict-index	dictzip	exact.miss.p99_ns	3959
+result	prose_heavy	dict-index	dictzip	prefix.zero.p50_ns	3083
+result	prose_heavy	dict-index	dictzip	prefix.zero.p95_ns	3083
+result	prose_heavy	dict-index	dictzip	prefix.zero.p99_ns	3083
+result	prose_heavy	dict-index	dictzip	prefix.one.p50_ns	1209
+result	prose_heavy	dict-index	dictzip	prefix.one.p95_ns	1209
+result	prose_heavy	dict-index	dictzip	prefix.one.p99_ns	1209
+result	prose_heavy	dict-index	dictzip	prefix.many.p50_ns	5875
+result	prose_heavy	dict-index	dictzip	prefix.many.p95_ns	10625
+result	prose_heavy	dict-index	dictzip	prefix.many.p99_ns	10625
+result	prose_heavy	dict-index	dictzip	prefix.pathological.p50_ns	-
+result	prose_heavy	dict-index	dictzip	prefix.pathological.p95_ns	-
+result	prose_heavy	dict-index	dictzip	prefix.pathological.p99_ns	-
+result	prose_heavy	slob	raw	artifact_bytes	166500
+result	prose_heavy	slob	raw	build_ns	14479708
+sample	prose_heavy	slob	raw	open	0	211333
+sample	prose_heavy	slob	raw	open	1	87250
+sample	prose_heavy	slob	raw	open	2	90709
+sample	prose_heavy	slob	raw	open	3	70709
+sample	prose_heavy	slob	raw	open	4	74042
+sample	prose_heavy	slob	raw	open	5	71208
+sample	prose_heavy	slob	raw	open	6	67375
+sample	prose_heavy	slob	raw	open	7	65625
+sample	prose_heavy	slob	raw	open	8	75667
+sample	prose_heavy	slob	raw	open	9	64083
+sample	prose_heavy	slob	raw	open	10	82667
+sample	prose_heavy	slob	raw	open	11	67250
+sample	prose_heavy	slob	raw	open	12	66042
+sample	prose_heavy	slob	raw	open	13	64750
+sample	prose_heavy	slob	raw	open	14	82584
+sample	prose_heavy	slob	raw	open	15	65583
+sample	prose_heavy	slob	raw	open	16	67291
+sample	prose_heavy	slob	raw	open	17	63709
+sample	prose_heavy	slob	raw	open	18	64792
+sample	prose_heavy	slob	raw	open	19	63125
+sample	prose_heavy	slob	raw	open	20	1869875
+sample	prose_heavy	slob	raw	open	21	373875
+sample	prose_heavy	slob	raw	open	22	387417
+sample	prose_heavy	slob	raw	open	23	436542
+sample	prose_heavy	slob	raw	open	24	524416
+result	prose_heavy	slob	raw	open_ns	71208
+result	prose_heavy	slob	raw	semantic_digest	12848969583906786549
+result	prose_heavy	slob	raw	query_checksum	13955515288332015025
+result	prose_heavy	slob	raw	outputs	135
+result	prose_heavy	slob	raw	logical_prose_bytes	163990
+sample	prose_heavy	slob	raw	exact	0	1439916
+sample	prose_heavy	slob	raw	exact	1	169166
+sample	prose_heavy	slob	raw	exact	2	251292
+sample	prose_heavy	slob	raw	exact	3	222375
+sample	prose_heavy	slob	raw	exact	4	248291
+sample	prose_heavy	slob	raw	exact	5	221459
+sample	prose_heavy	slob	raw	exact	6	244792
+sample	prose_heavy	slob	raw	exact	7	279833
+sample	prose_heavy	slob	raw	prefix	0	336667
+sample	prose_heavy	slob	raw	prefix	1	568583
+sample	prose_heavy	slob	raw	prefix	2	3279917
+sample	prose_heavy	slob	raw	prefix	3	1273833
+sample	prose_heavy	slob	raw	prefix	4	3856208
+sample	prose_heavy	slob	raw	prefix	5	1577084
+sample	prose_heavy	slob	raw	prefix	6	4479250
+sample	prose_heavy	slob	raw	prefix	7	2782333
+sample	prose_heavy	slob	raw	render	0	377709
+sample	prose_heavy	slob	raw	render	1	244834
+sample	prose_heavy	slob	raw	render	2	251542
+sample	prose_heavy	slob	raw	render	3	75083
+sample	prose_heavy	slob	raw	render	4	51417
+sample	prose_heavy	slob	raw	render	5	37000
+sample	prose_heavy	slob	raw	render	6	31084
+sample	prose_heavy	slob	raw	render	7	23875
+result	prose_heavy	slob	raw	exact.p50_ns	248291
+result	prose_heavy	slob	raw	exact.p95_ns	1439916
+result	prose_heavy	slob	raw	exact.p99_ns	1439916
+result	prose_heavy	slob	raw	prefix.p50_ns	2782333
+result	prose_heavy	slob	raw	prefix.p95_ns	4479250
+result	prose_heavy	slob	raw	prefix.p99_ns	4479250
+result	prose_heavy	slob	raw	render.p50_ns	75083
+result	prose_heavy	slob	raw	render.p95_ns	377709
+result	prose_heavy	slob	raw	render.p99_ns	377709
+result	prose_heavy	slob	raw	exact.hit.p50_ns	251292
+result	prose_heavy	slob	raw	exact.hit.p95_ns	1439916
+result	prose_heavy	slob	raw	exact.hit.p99_ns	1439916
+result	prose_heavy	slob	raw	exact.miss.p50_ns	221459
+result	prose_heavy	slob	raw	exact.miss.p95_ns	222375
+result	prose_heavy	slob	raw	exact.miss.p99_ns	222375
+result	prose_heavy	slob	raw	prefix.zero.p50_ns	1577084
+result	prose_heavy	slob	raw	prefix.zero.p95_ns	1577084
+result	prose_heavy	slob	raw	prefix.zero.p99_ns	1577084
+result	prose_heavy	slob	raw	prefix.one.p50_ns	3856208
+result	prose_heavy	slob	raw	prefix.one.p95_ns	3856208
+result	prose_heavy	slob	raw	prefix.one.p99_ns	3856208
+result	prose_heavy	slob	raw	prefix.many.p50_ns	3279917
+result	prose_heavy	slob	raw	prefix.many.p95_ns	4479250
+result	prose_heavy	slob	raw	prefix.many.p99_ns	4479250
+result	prose_heavy	slob	raw	prefix.pathological.p50_ns	-
+result	prose_heavy	slob	raw	prefix.pathological.p95_ns	-
+result	prose_heavy	slob	raw	prefix.pathological.p99_ns	-
+result	prose_heavy	slob	lzma2	artifact_bytes	3211
+result	prose_heavy	slob	lzma2	build_ns	21279625
+sample	prose_heavy	slob	lzma2	open	0	162375
+sample	prose_heavy	slob	lzma2	open	1	76084
+sample	prose_heavy	slob	lzma2	open	2	68541
+sample	prose_heavy	slob	lzma2	open	3	62834
+sample	prose_heavy	slob	lzma2	open	4	63208
+sample	prose_heavy	slob	lzma2	open	5	66875
+sample	prose_heavy	slob	lzma2	open	6	59500
+sample	prose_heavy	slob	lzma2	open	7	57292
+sample	prose_heavy	slob	lzma2	open	8	57125
+sample	prose_heavy	slob	lzma2	open	9	57750
+sample	prose_heavy	slob	lzma2	open	10	64584
+sample	prose_heavy	slob	lzma2	open	11	64458
+sample	prose_heavy	slob	lzma2	open	12	60208
+sample	prose_heavy	slob	lzma2	open	13	58625
+sample	prose_heavy	slob	lzma2	open	14	58667
+sample	prose_heavy	slob	lzma2	open	15	56542
+sample	prose_heavy	slob	lzma2	open	16	58167
+sample	prose_heavy	slob	lzma2	open	17	57917
+sample	prose_heavy	slob	lzma2	open	18	57042
+sample	prose_heavy	slob	lzma2	open	19	59458
+sample	prose_heavy	slob	lzma2	open	20	303750
+sample	prose_heavy	slob	lzma2	open	21	302083
+sample	prose_heavy	slob	lzma2	open	22	207834
+sample	prose_heavy	slob	lzma2	open	23	238000
+sample	prose_heavy	slob	lzma2	open	24	235500
+result	prose_heavy	slob	lzma2	open_ns	62834
+result	prose_heavy	slob	lzma2	semantic_digest	12848969583906786549
+result	prose_heavy	slob	lzma2	query_checksum	13955515288332015025
+result	prose_heavy	slob	lzma2	outputs	135
+result	prose_heavy	slob	lzma2	logical_prose_bytes	163990
+sample	prose_heavy	slob	lzma2	exact	0	249709
+sample	prose_heavy	slob	lzma2	exact	1	153167
+sample	prose_heavy	slob	lzma2	exact	2	740292
+sample	prose_heavy	slob	lzma2	exact	3	215916
+sample	prose_heavy	slob	lzma2	exact	4	246250
+sample	prose_heavy	slob	lzma2	exact	5	482917
+sample	prose_heavy	slob	lzma2	exact	6	713792
+sample	prose_heavy	slob	lzma2	exact	7	313625
+sample	prose_heavy	slob	lzma2	prefix	0	331625
+sample	prose_heavy	slob	lzma2	prefix	1	1123000
+sample	prose_heavy	slob	lzma2	prefix	2	3179208
+sample	prose_heavy	slob	lzma2	prefix	3	2497792
+sample	prose_heavy	slob	lzma2	prefix	4	2891875
+sample	prose_heavy	slob	lzma2	prefix	5	1305583
+sample	prose_heavy	slob	lzma2	prefix	6	946666
+sample	prose_heavy	slob	lzma2	prefix	7	2452917
+sample	prose_heavy	slob	lzma2	render	0	45750
+sample	prose_heavy	slob	lzma2	render	1	21958
+sample	prose_heavy	slob	lzma2	render	2	148334
+sample	prose_heavy	slob	lzma2	render	3	209916
+sample	prose_heavy	slob	lzma2	render	4	195250
+sample	prose_heavy	slob	lzma2	render	5	203167
+sample	prose_heavy	slob	lzma2	render	6	158208
+sample	prose_heavy	slob	lzma2	render	7	24833
+result	prose_heavy	slob	lzma2	exact.p50_ns	313625
+result	prose_heavy	slob	lzma2	exact.p95_ns	740292
+result	prose_heavy	slob	lzma2	exact.p99_ns	740292
+result	prose_heavy	slob	lzma2	prefix.p50_ns	2452917
+result	prose_heavy	slob	lzma2	prefix.p95_ns	3179208
+result	prose_heavy	slob	lzma2	prefix.p99_ns	3179208
+result	prose_heavy	slob	lzma2	render.p50_ns	158208
+result	prose_heavy	slob	lzma2	render.p95_ns	209916
+result	prose_heavy	slob	lzma2	render.p99_ns	209916
+result	prose_heavy	slob	lzma2	exact.hit.p50_ns	313625
+result	prose_heavy	slob	lzma2	exact.hit.p95_ns	740292
+result	prose_heavy	slob	lzma2	exact.hit.p99_ns	740292
+result	prose_heavy	slob	lzma2	exact.miss.p50_ns	215916
+result	prose_heavy	slob	lzma2	exact.miss.p95_ns	482917
+result	prose_heavy	slob	lzma2	exact.miss.p99_ns	482917
+result	prose_heavy	slob	lzma2	prefix.zero.p50_ns	1305583
+result	prose_heavy	slob	lzma2	prefix.zero.p95_ns	1305583
+result	prose_heavy	slob	lzma2	prefix.zero.p99_ns	1305583
+result	prose_heavy	slob	lzma2	prefix.one.p50_ns	2891875
+result	prose_heavy	slob	lzma2	prefix.one.p95_ns	2891875
+result	prose_heavy	slob	lzma2	prefix.one.p99_ns	2891875
+result	prose_heavy	slob	lzma2	prefix.many.p50_ns	2497792
+result	prose_heavy	slob	lzma2	prefix.many.p95_ns	3179208
+result	prose_heavy	slob	lzma2	prefix.many.p99_ns	3179208
+result	prose_heavy	slob	lzma2	prefix.pathological.p50_ns	-
+result	prose_heavy	slob	lzma2	prefix.pathological.p95_ns	-
+result	prose_heavy	slob	lzma2	prefix.pathological.p99_ns	-

@@ -1,0 +1,213 @@
+meta	global	zig_version	0.16.0
+meta	global	target	macos-aarch64
+meta	global	seed	5495895892047298561
+meta	prose_heavy	records	8
+meta	prose_heavy	repetitions	4
+meta	prose_heavy	warmup	1
+meta	prose_heavy	seed	5495895892047298561
+meta	prose_heavy	semantic_digest	7281851064008506163
+meta	prose_heavy	logical_prose_bytes	40992
+meta	prose_heavy	exact_hit_probes	2
+meta	prose_heavy	exact_miss_probes	2
+meta	prose_heavy	prefix_zero_probes	1
+meta	prose_heavy	prefix_one_probes	1
+meta	prose_heavy	prefix_many_probes	2
+meta	prose_heavy	prefix_pathological_probes	0
+result	prose_heavy	v1	raw	artifact_bytes	41824
+result	prose_heavy	v1	raw	build_ns	408708
+sample	prose_heavy	v1	raw	open	0	139834
+result	prose_heavy	v1	raw	open.p50_ns	139834
+result	prose_heavy	v1	raw	open.p95_ns	139834
+result	prose_heavy	v1	raw	open.p99_ns	139834
+result	prose_heavy	v1	raw	open_ns	139834
+result	prose_heavy	v1	raw	semantic_digest	7281851064008506163
+result	prose_heavy	v1	raw	query_checksum	15129643711833446718
+result	prose_heavy	v1	raw	outputs	19
+sample	prose_heavy	v1	raw	exact	0	250
+sample	prose_heavy	v1	raw	exact	1	167
+sample	prose_heavy	v1	raw	exact	2	333
+sample	prose_heavy	v1	raw	exact	3	125
+result	prose_heavy	v1	raw	exact.p50_ns	250
+result	prose_heavy	v1	raw	exact.p95_ns	333
+result	prose_heavy	v1	raw	exact.p99_ns	333
+sample	prose_heavy	v1	raw	prefix	0	292
+sample	prose_heavy	v1	raw	prefix	1	458
+sample	prose_heavy	v1	raw	prefix	2	500
+sample	prose_heavy	v1	raw	prefix	3	417
+result	prose_heavy	v1	raw	prefix.p50_ns	458
+result	prose_heavy	v1	raw	prefix.p95_ns	500
+result	prose_heavy	v1	raw	prefix.p99_ns	500
+sample	prose_heavy	v1	raw	render	0	45958
+sample	prose_heavy	v1	raw	render	1	46000
+sample	prose_heavy	v1	raw	render	2	45959
+sample	prose_heavy	v1	raw	render	3	61041
+result	prose_heavy	v1	raw	render.p50_ns	46000
+result	prose_heavy	v1	raw	render.p95_ns	61041
+result	prose_heavy	v1	raw	render.p99_ns	61041
+result	prose_heavy	v1	raw	exact.hit.p50_ns	333
+result	prose_heavy	v1	raw	exact.hit.p95_ns	333
+result	prose_heavy	v1	raw	exact.hit.p99_ns	333
+result	prose_heavy	v1	raw	exact.miss.p50_ns	167
+result	prose_heavy	v1	raw	exact.miss.p95_ns	167
+result	prose_heavy	v1	raw	exact.miss.p99_ns	167
+result	prose_heavy	v1	raw	prefix.zero.p50_ns	292
+result	prose_heavy	v1	raw	prefix.zero.p95_ns	292
+result	prose_heavy	v1	raw	prefix.zero.p99_ns	292
+result	prose_heavy	v1	raw	prefix.one.p50_ns	458
+result	prose_heavy	v1	raw	prefix.one.p95_ns	458
+result	prose_heavy	v1	raw	prefix.one.p99_ns	458
+result	prose_heavy	v1	raw	prefix.many.p50_ns	500
+result	prose_heavy	v1	raw	prefix.many.p95_ns	500
+result	prose_heavy	v1	raw	prefix.many.p99_ns	500
+result	prose_heavy	v1	raw	prefix.pathological.p50_ns	-
+result	prose_heavy	v1	raw	prefix.pathological.p95_ns	-
+result	prose_heavy	v1	raw	prefix.pathological.p99_ns	-
+result	prose_heavy	v1	bzip3	artifact_bytes	1064
+result	prose_heavy	v1	bzip3	build_ns	589583
+sample	prose_heavy	v1	bzip3	open	0	5291
+result	prose_heavy	v1	bzip3	open.p50_ns	5291
+result	prose_heavy	v1	bzip3	open.p95_ns	5291
+result	prose_heavy	v1	bzip3	open.p99_ns	5291
+result	prose_heavy	v1	bzip3	open_ns	5291
+result	prose_heavy	v1	bzip3	semantic_digest	7281851064008506163
+result	prose_heavy	v1	bzip3	query_checksum	15129643711833446718
+result	prose_heavy	v1	bzip3	outputs	19
+sample	prose_heavy	v1	bzip3	exact	0	1000
+sample	prose_heavy	v1	bzip3	exact	1	291
+sample	prose_heavy	v1	bzip3	exact	2	500
+sample	prose_heavy	v1	bzip3	exact	3	125
+result	prose_heavy	v1	bzip3	exact.p50_ns	500
+result	prose_heavy	v1	bzip3	exact.p95_ns	1000
+result	prose_heavy	v1	bzip3	exact.p99_ns	1000
+sample	prose_heavy	v1	bzip3	prefix	0	416
+sample	prose_heavy	v1	bzip3	prefix	1	458
+sample	prose_heavy	v1	bzip3	prefix	2	542
+sample	prose_heavy	v1	bzip3	prefix	3	416
+result	prose_heavy	v1	bzip3	prefix.p50_ns	458
+result	prose_heavy	v1	bzip3	prefix.p95_ns	542
+result	prose_heavy	v1	bzip3	prefix.p99_ns	542
+sample	prose_heavy	v1	bzip3	render	0	215542
+sample	prose_heavy	v1	bzip3	render	1	187333
+sample	prose_heavy	v1	bzip3	render	2	181292
+sample	prose_heavy	v1	bzip3	render	3	187292
+result	prose_heavy	v1	bzip3	render.p50_ns	187333
+result	prose_heavy	v1	bzip3	render.p95_ns	215542
+result	prose_heavy	v1	bzip3	render.p99_ns	215542
+result	prose_heavy	v1	bzip3	exact.hit.p50_ns	1000
+result	prose_heavy	v1	bzip3	exact.hit.p95_ns	1000
+result	prose_heavy	v1	bzip3	exact.hit.p99_ns	1000
+result	prose_heavy	v1	bzip3	exact.miss.p50_ns	291
+result	prose_heavy	v1	bzip3	exact.miss.p95_ns	291
+result	prose_heavy	v1	bzip3	exact.miss.p99_ns	291
+result	prose_heavy	v1	bzip3	prefix.zero.p50_ns	416
+result	prose_heavy	v1	bzip3	prefix.zero.p95_ns	416
+result	prose_heavy	v1	bzip3	prefix.zero.p99_ns	416
+result	prose_heavy	v1	bzip3	prefix.one.p50_ns	458
+result	prose_heavy	v1	bzip3	prefix.one.p95_ns	458
+result	prose_heavy	v1	bzip3	prefix.one.p99_ns	458
+result	prose_heavy	v1	bzip3	prefix.many.p50_ns	542
+result	prose_heavy	v1	bzip3	prefix.many.p95_ns	542
+result	prose_heavy	v1	bzip3	prefix.many.p99_ns	542
+result	prose_heavy	v1	bzip3	prefix.pathological.p50_ns	-
+result	prose_heavy	v1	bzip3	prefix.pathological.p95_ns	-
+result	prose_heavy	v1	bzip3	prefix.pathological.p99_ns	-
+result	prose_heavy	v2	raw.latency	artifact_bytes	51360
+result	prose_heavy	v2	raw.latency	build_ns	987917
+sample	prose_heavy	v2	raw.latency	open	0	46417
+result	prose_heavy	v2	raw.latency	open.p50_ns	46417
+result	prose_heavy	v2	raw.latency	open.p95_ns	46417
+result	prose_heavy	v2	raw.latency	open.p99_ns	46417
+result	prose_heavy	v2	raw.latency	open_ns	46417
+result	prose_heavy	v2	raw.latency	semantic_digest	7281851064008506163
+result	prose_heavy	v2	raw.latency	query_checksum	15129643711833446718
+result	prose_heavy	v2	raw.latency	outputs	19
+result	prose_heavy	v2	raw.latency	logical_prose_bytes	40992
+sample	prose_heavy	v2	raw.latency	exact	0	167
+sample	prose_heavy	v2	raw.latency	exact	1	167
+sample	prose_heavy	v2	raw.latency	exact	2	208
+sample	prose_heavy	v2	raw.latency	exact	3	84
+result	prose_heavy	v2	raw.latency	exact.p50_ns	167
+result	prose_heavy	v2	raw.latency	exact.p95_ns	208
+result	prose_heavy	v2	raw.latency	exact.p99_ns	208
+sample	prose_heavy	v2	raw.latency	prefix	0	125
+sample	prose_heavy	v2	raw.latency	prefix	1	209
+sample	prose_heavy	v2	raw.latency	prefix	2	375
+sample	prose_heavy	v2	raw.latency	prefix	3	291
+result	prose_heavy	v2	raw.latency	prefix.p50_ns	291
+result	prose_heavy	v2	raw.latency	prefix.p95_ns	375
+result	prose_heavy	v2	raw.latency	prefix.p99_ns	375
+sample	prose_heavy	v2	raw.latency	render	0	84
+sample	prose_heavy	v2	raw.latency	render	1	41
+sample	prose_heavy	v2	raw.latency	render	2	42
+sample	prose_heavy	v2	raw.latency	render	3	42
+result	prose_heavy	v2	raw.latency	render.p50_ns	42
+result	prose_heavy	v2	raw.latency	render.p95_ns	84
+result	prose_heavy	v2	raw.latency	render.p99_ns	84
+result	prose_heavy	v2	raw.latency	exact.hit.p50_ns	208
+result	prose_heavy	v2	raw.latency	exact.hit.p95_ns	208
+result	prose_heavy	v2	raw.latency	exact.hit.p99_ns	208
+result	prose_heavy	v2	raw.latency	exact.miss.p50_ns	167
+result	prose_heavy	v2	raw.latency	exact.miss.p95_ns	167
+result	prose_heavy	v2	raw.latency	exact.miss.p99_ns	167
+result	prose_heavy	v2	raw.latency	prefix.zero.p50_ns	125
+result	prose_heavy	v2	raw.latency	prefix.zero.p95_ns	125
+result	prose_heavy	v2	raw.latency	prefix.zero.p99_ns	125
+result	prose_heavy	v2	raw.latency	prefix.one.p50_ns	209
+result	prose_heavy	v2	raw.latency	prefix.one.p95_ns	209
+result	prose_heavy	v2	raw.latency	prefix.one.p99_ns	209
+result	prose_heavy	v2	raw.latency	prefix.many.p50_ns	375
+result	prose_heavy	v2	raw.latency	prefix.many.p95_ns	375
+result	prose_heavy	v2	raw.latency	prefix.many.p99_ns	375
+result	prose_heavy	v2	raw.latency	prefix.pathological.p50_ns	-
+result	prose_heavy	v2	raw.latency	prefix.pathological.p95_ns	-
+result	prose_heavy	v2	raw.latency	prefix.pathological.p99_ns	-
+result	prose_heavy	v2	bzip3.latency	artifact_bytes	10592
+result	prose_heavy	v2	bzip3.latency	build_ns	1389042
+sample	prose_heavy	v2	bzip3.latency	open	0	90833
+result	prose_heavy	v2	bzip3.latency	open.p50_ns	90833
+result	prose_heavy	v2	bzip3.latency	open.p95_ns	90833
+result	prose_heavy	v2	bzip3.latency	open.p99_ns	90833
+result	prose_heavy	v2	bzip3.latency	open_ns	90833
+result	prose_heavy	v2	bzip3.latency	semantic_digest	7281851064008506163
+result	prose_heavy	v2	bzip3.latency	query_checksum	15129643711833446718
+result	prose_heavy	v2	bzip3.latency	outputs	19
+result	prose_heavy	v2	bzip3.latency	logical_prose_bytes	40992
+sample	prose_heavy	v2	bzip3.latency	exact	0	666
+sample	prose_heavy	v2	bzip3.latency	exact	1	250
+sample	prose_heavy	v2	bzip3.latency	exact	2	375
+sample	prose_heavy	v2	bzip3.latency	exact	3	83
+result	prose_heavy	v2	bzip3.latency	exact.p50_ns	375
+result	prose_heavy	v2	bzip3.latency	exact.p95_ns	666
+result	prose_heavy	v2	bzip3.latency	exact.p99_ns	666
+sample	prose_heavy	v2	bzip3.latency	prefix	0	208
+sample	prose_heavy	v2	bzip3.latency	prefix	1	333
+sample	prose_heavy	v2	bzip3.latency	prefix	2	541
+sample	prose_heavy	v2	bzip3.latency	prefix	3	417
+result	prose_heavy	v2	bzip3.latency	prefix.p50_ns	417
+result	prose_heavy	v2	bzip3.latency	prefix.p95_ns	541
+result	prose_heavy	v2	bzip3.latency	prefix.p99_ns	541
+sample	prose_heavy	v2	bzip3.latency	render	0	264042
+sample	prose_heavy	v2	bzip3.latency	render	1	266625
+sample	prose_heavy	v2	bzip3.latency	render	2	265042
+sample	prose_heavy	v2	bzip3.latency	render	3	222667
+result	prose_heavy	v2	bzip3.latency	render.p50_ns	265042
+result	prose_heavy	v2	bzip3.latency	render.p95_ns	266625
+result	prose_heavy	v2	bzip3.latency	render.p99_ns	266625
+result	prose_heavy	v2	bzip3.latency	exact.hit.p50_ns	666
+result	prose_heavy	v2	bzip3.latency	exact.hit.p95_ns	666
+result	prose_heavy	v2	bzip3.latency	exact.hit.p99_ns	666
+result	prose_heavy	v2	bzip3.latency	exact.miss.p50_ns	250
+result	prose_heavy	v2	bzip3.latency	exact.miss.p95_ns	250
+result	prose_heavy	v2	bzip3.latency	exact.miss.p99_ns	250
+result	prose_heavy	v2	bzip3.latency	prefix.zero.p50_ns	208
+result	prose_heavy	v2	bzip3.latency	prefix.zero.p95_ns	208
+result	prose_heavy	v2	bzip3.latency	prefix.zero.p99_ns	208
+result	prose_heavy	v2	bzip3.latency	prefix.one.p50_ns	333
+result	prose_heavy	v2	bzip3.latency	prefix.one.p95_ns	333
+result	prose_heavy	v2	bzip3.latency	prefix.one.p99_ns	333
+result	prose_heavy	v2	bzip3.latency	prefix.many.p50_ns	541
+result	prose_heavy	v2	bzip3.latency	prefix.many.p95_ns	541
+result	prose_heavy	v2	bzip3.latency	prefix.many.p99_ns	541
+result	prose_heavy	v2	bzip3.latency	prefix.pathological.p50_ns	-
+result	prose_heavy	v2	bzip3.latency	prefix.pathological.p95_ns	-
+result	prose_heavy	v2	bzip3.latency	prefix.pathological.p99_ns	-

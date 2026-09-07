@@ -1,0 +1,6 @@
+records	16
+repetitions	4
+warmup	1
+external_repetitions	4
+external_warmup	1
+presets	latency

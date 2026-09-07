@@ -1,0 +1,434 @@
+meta	repeated	records	8
+meta	repeated	semantic_digest	7526048132029780665
+result	repeated	sqlite	raw	artifact_bytes	12288
+result	repeated	sqlite	raw	build_ns	1578333
+sample	repeated	sqlite	raw	open	0	234541
+sample	repeated	sqlite	raw	open	1	147416
+sample	repeated	sqlite	raw	open	2	96625
+sample	repeated	sqlite	raw	open	3	57500
+sample	repeated	sqlite	raw	open	4	93500
+sample	repeated	sqlite	raw	open	5	117250
+sample	repeated	sqlite	raw	open	6	200792
+sample	repeated	sqlite	raw	open	7	180083
+sample	repeated	sqlite	raw	open	8	676458
+sample	repeated	sqlite	raw	open	9	115584
+sample	repeated	sqlite	raw	open	10	61917
+sample	repeated	sqlite	raw	open	11	51916
+sample	repeated	sqlite	raw	open	12	49500
+sample	repeated	sqlite	raw	open	13	48958
+sample	repeated	sqlite	raw	open	14	66292
+sample	repeated	sqlite	raw	open	15	53542
+sample	repeated	sqlite	raw	open	16	55416
+sample	repeated	sqlite	raw	open	17	227334
+sample	repeated	sqlite	raw	open	18	239875
+sample	repeated	sqlite	raw	open	19	178125
+sample	repeated	sqlite	raw	open	20	126417
+sample	repeated	sqlite	raw	open	21	111167
+sample	repeated	sqlite	raw	open	22	102666
+sample	repeated	sqlite	raw	open	23	97542
+sample	repeated	sqlite	raw	open	24	96584
+result	repeated	sqlite	raw	open_ns	102666
+result	repeated	sqlite	raw	semantic_digest	7526048132029780665
+result	repeated	sqlite	raw	query_checksum	15315414728956134478
+result	repeated	sqlite	raw	outputs	13
+result	repeated	sqlite	raw	logical_prose_bytes	1672
+sample	repeated	sqlite	raw	exact	0	15042
+sample	repeated	sqlite	raw	exact	1	11625
+sample	repeated	sqlite	raw	exact	2	11375
+sample	repeated	sqlite	raw	exact	3	10459
+sample	repeated	sqlite	raw	prefix	0	14375
+sample	repeated	sqlite	raw	prefix	1	18958
+sample	repeated	sqlite	raw	prefix	2	22375
+sample	repeated	sqlite	raw	prefix	3	16292
+sample	repeated	sqlite	raw	render	0	12541
+sample	repeated	sqlite	raw	render	1	11333
+sample	repeated	sqlite	raw	render	2	11083
+sample	repeated	sqlite	raw	render	3	10250
+result	repeated	sqlite	raw	exact.p50_ns	11625
+result	repeated	sqlite	raw	exact.p95_ns	15042
+result	repeated	sqlite	raw	exact.p99_ns	15042
+result	repeated	sqlite	raw	prefix.p50_ns	18958
+result	repeated	sqlite	raw	prefix.p95_ns	22375
+result	repeated	sqlite	raw	prefix.p99_ns	22375
+result	repeated	sqlite	raw	render.p50_ns	11333
+result	repeated	sqlite	raw	render.p95_ns	12541
+result	repeated	sqlite	raw	render.p99_ns	12541
+result	repeated	sqlite	raw	exact.hit.p50_ns	15042
+result	repeated	sqlite	raw	exact.hit.p95_ns	15042
+result	repeated	sqlite	raw	exact.hit.p99_ns	15042
+result	repeated	sqlite	raw	exact.miss.p50_ns	11625
+result	repeated	sqlite	raw	exact.miss.p95_ns	11625
+result	repeated	sqlite	raw	exact.miss.p99_ns	11625
+result	repeated	sqlite	raw	prefix.zero.p50_ns	14375
+result	repeated	sqlite	raw	prefix.zero.p95_ns	14375
+result	repeated	sqlite	raw	prefix.zero.p99_ns	14375
+result	repeated	sqlite	raw	prefix.one.p50_ns	-
+result	repeated	sqlite	raw	prefix.one.p95_ns	-
+result	repeated	sqlite	raw	prefix.one.p99_ns	-
+result	repeated	sqlite	raw	prefix.many.p50_ns	18958
+result	repeated	sqlite	raw	prefix.many.p95_ns	22375
+result	repeated	sqlite	raw	prefix.many.p99_ns	22375
+result	repeated	sqlite	raw	prefix.pathological.p50_ns	-
+result	repeated	sqlite	raw	prefix.pathological.p95_ns	-
+result	repeated	sqlite	raw	prefix.pathological.p99_ns	-
+result	repeated	sqlite	zlib	artifact_bytes	716
+unavailable	repeated	sqlite	zlib	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	repeated	sqlite	zstd	artifact_bytes	664
+unavailable	repeated	sqlite	zstd	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	repeated	stardict	raw	artifact_bytes	1994
+result	repeated	stardict	raw	build_ns	1178000
+sample	repeated	stardict	raw	open	0	77917
+sample	repeated	stardict	raw	open	1	73375
+sample	repeated	stardict	raw	open	2	80750
+sample	repeated	stardict	raw	open	3	52250
+sample	repeated	stardict	raw	open	4	51083
+sample	repeated	stardict	raw	open	5	48875
+sample	repeated	stardict	raw	open	6	48708
+sample	repeated	stardict	raw	open	7	52083
+sample	repeated	stardict	raw	open	8	59333
+sample	repeated	stardict	raw	open	9	59666
+sample	repeated	stardict	raw	open	10	48875
+sample	repeated	stardict	raw	open	11	48458
+sample	repeated	stardict	raw	open	12	48583
+sample	repeated	stardict	raw	open	13	48750
+sample	repeated	stardict	raw	open	14	48375
+sample	repeated	stardict	raw	open	15	46208
+sample	repeated	stardict	raw	open	16	55125
+sample	repeated	stardict	raw	open	17	58083
+sample	repeated	stardict	raw	open	18	46750
+sample	repeated	stardict	raw	open	19	46500
+sample	repeated	stardict	raw	open	20	44250
+sample	repeated	stardict	raw	open	21	46500
+sample	repeated	stardict	raw	open	22	101000
+sample	repeated	stardict	raw	open	23	56292
+sample	repeated	stardict	raw	open	24	51000
+result	repeated	stardict	raw	open_ns	51000
+result	repeated	stardict	raw	semantic_digest	7526048132029780665
+result	repeated	stardict	raw	query_checksum	15315414728956134478
+result	repeated	stardict	raw	outputs	13
+result	repeated	stardict	raw	logical_prose_bytes	1672
+sample	repeated	stardict	raw	exact	0	1041
+sample	repeated	stardict	raw	exact	1	750
+sample	repeated	stardict	raw	exact	2	833
+sample	repeated	stardict	raw	exact	3	625
+sample	repeated	stardict	raw	prefix	0	500
+sample	repeated	stardict	raw	prefix	1	1083
+sample	repeated	stardict	raw	prefix	2	1875
+sample	repeated	stardict	raw	prefix	3	1458
+sample	repeated	stardict	raw	render	0	625
+sample	repeated	stardict	raw	render	1	500
+sample	repeated	stardict	raw	render	2	417
+sample	repeated	stardict	raw	render	3	417
+result	repeated	stardict	raw	exact.p50_ns	833
+result	repeated	stardict	raw	exact.p95_ns	1041
+result	repeated	stardict	raw	exact.p99_ns	1041
+result	repeated	stardict	raw	prefix.p50_ns	1458
+result	repeated	stardict	raw	prefix.p95_ns	1875
+result	repeated	stardict	raw	prefix.p99_ns	1875
+result	repeated	stardict	raw	render.p50_ns	500
+result	repeated	stardict	raw	render.p95_ns	625
+result	repeated	stardict	raw	render.p99_ns	625
+result	repeated	stardict	raw	exact.hit.p50_ns	1041
+result	repeated	stardict	raw	exact.hit.p95_ns	1041
+result	repeated	stardict	raw	exact.hit.p99_ns	1041
+result	repeated	stardict	raw	exact.miss.p50_ns	750
+result	repeated	stardict	raw	exact.miss.p95_ns	750
+result	repeated	stardict	raw	exact.miss.p99_ns	750
+result	repeated	stardict	raw	prefix.zero.p50_ns	500
+result	repeated	stardict	raw	prefix.zero.p95_ns	500
+result	repeated	stardict	raw	prefix.zero.p99_ns	500
+result	repeated	stardict	raw	prefix.one.p50_ns	-
+result	repeated	stardict	raw	prefix.one.p95_ns	-
+result	repeated	stardict	raw	prefix.one.p99_ns	-
+result	repeated	stardict	raw	prefix.many.p50_ns	1458
+result	repeated	stardict	raw	prefix.many.p95_ns	1875
+result	repeated	stardict	raw	prefix.many.p99_ns	1875
+result	repeated	stardict	raw	prefix.pathological.p50_ns	-
+result	repeated	stardict	raw	prefix.pathological.p95_ns	-
+result	repeated	stardict	raw	prefix.pathological.p99_ns	-
+result	repeated	stardict	gzip	artifact_bytes	609
+unavailable	repeated	stardict	gzip	reason	gzip is not StarDict dictzip random access; raw reader is the measured query baseline
+result	repeated	dict-index	raw	artifact_bytes	1893
+result	repeated	dict-index	raw	build_ns	207167
+sample	repeated	dict-index	raw	open	0	41958
+sample	repeated	dict-index	raw	open	1	31458
+sample	repeated	dict-index	raw	open	2	34667
+sample	repeated	dict-index	raw	open	3	27208
+sample	repeated	dict-index	raw	open	4	32209
+sample	repeated	dict-index	raw	open	5	25625
+sample	repeated	dict-index	raw	open	6	25750
+sample	repeated	dict-index	raw	open	7	25000
+sample	repeated	dict-index	raw	open	8	25083
+sample	repeated	dict-index	raw	open	9	24250
+sample	repeated	dict-index	raw	open	10	25917
+sample	repeated	dict-index	raw	open	11	27375
+sample	repeated	dict-index	raw	open	12	25250
+sample	repeated	dict-index	raw	open	13	24083
+sample	repeated	dict-index	raw	open	14	24125
+sample	repeated	dict-index	raw	open	15	24833
+sample	repeated	dict-index	raw	open	16	24666
+sample	repeated	dict-index	raw	open	17	24209
+sample	repeated	dict-index	raw	open	18	26292
+sample	repeated	dict-index	raw	open	19	25125
+sample	repeated	dict-index	raw	open	20	24584
+sample	repeated	dict-index	raw	open	21	24583
+sample	repeated	dict-index	raw	open	22	25000
+sample	repeated	dict-index	raw	open	23	30542
+sample	repeated	dict-index	raw	open	24	26958
+result	repeated	dict-index	raw	open_ns	25250
+result	repeated	dict-index	raw	semantic_digest	7526048132029780665
+result	repeated	dict-index	raw	query_checksum	15315414728956134478
+result	repeated	dict-index	raw	outputs	13
+result	repeated	dict-index	raw	logical_prose_bytes	1672
+sample	repeated	dict-index	raw	exact	0	458
+sample	repeated	dict-index	raw	exact	1	416
+sample	repeated	dict-index	raw	exact	2	375
+sample	repeated	dict-index	raw	exact	3	250
+sample	repeated	dict-index	raw	prefix	0	250
+sample	repeated	dict-index	raw	prefix	1	500
+sample	repeated	dict-index	raw	prefix	2	625
+sample	repeated	dict-index	raw	prefix	3	500
+sample	repeated	dict-index	raw	render	0	291
+sample	repeated	dict-index	raw	render	1	250
+sample	repeated	dict-index	raw	render	2	167
+sample	repeated	dict-index	raw	render	3	208
+result	repeated	dict-index	raw	exact.p50_ns	416
+result	repeated	dict-index	raw	exact.p95_ns	458
+result	repeated	dict-index	raw	exact.p99_ns	458
+result	repeated	dict-index	raw	prefix.p50_ns	500
+result	repeated	dict-index	raw	prefix.p95_ns	625
+result	repeated	dict-index	raw	prefix.p99_ns	625
+result	repeated	dict-index	raw	render.p50_ns	250
+result	repeated	dict-index	raw	render.p95_ns	291
+result	repeated	dict-index	raw	render.p99_ns	291
+result	repeated	dict-index	raw	exact.hit.p50_ns	458
+result	repeated	dict-index	raw	exact.hit.p95_ns	458
+result	repeated	dict-index	raw	exact.hit.p99_ns	458
+result	repeated	dict-index	raw	exact.miss.p50_ns	416
+result	repeated	dict-index	raw	exact.miss.p95_ns	416
+result	repeated	dict-index	raw	exact.miss.p99_ns	416
+result	repeated	dict-index	raw	prefix.zero.p50_ns	250
+result	repeated	dict-index	raw	prefix.zero.p95_ns	250
+result	repeated	dict-index	raw	prefix.zero.p99_ns	250
+result	repeated	dict-index	raw	prefix.one.p50_ns	-
+result	repeated	dict-index	raw	prefix.one.p95_ns	-
+result	repeated	dict-index	raw	prefix.one.p99_ns	-
+result	repeated	dict-index	raw	prefix.many.p50_ns	500
+result	repeated	dict-index	raw	prefix.many.p95_ns	625
+result	repeated	dict-index	raw	prefix.many.p99_ns	625
+result	repeated	dict-index	raw	prefix.pathological.p50_ns	-
+result	repeated	dict-index	raw	prefix.pathological.p95_ns	-
+result	repeated	dict-index	raw	prefix.pathological.p99_ns	-
+result	repeated	dict-index	dictzip	artifact_bytes	535
+result	repeated	dict-index	dictzip	build_ns	4924584
+sample	repeated	dict-index	dictzip	open	0	312167
+sample	repeated	dict-index	dictzip	open	1	111875
+sample	repeated	dict-index	dictzip	open	2	49625
+sample	repeated	dict-index	dictzip	open	3	45125
+sample	repeated	dict-index	dictzip	open	4	40958
+sample	repeated	dict-index	dictzip	open	5	1135125
+sample	repeated	dict-index	dictzip	open	6	234375
+sample	repeated	dict-index	dictzip	open	7	80084
+sample	repeated	dict-index	dictzip	open	8	69916
+sample	repeated	dict-index	dictzip	open	9	29500
+sample	repeated	dict-index	dictzip	open	10	20708
+sample	repeated	dict-index	dictzip	open	11	18917
+sample	repeated	dict-index	dictzip	open	12	17375
+sample	repeated	dict-index	dictzip	open	13	17333
+sample	repeated	dict-index	dictzip	open	14	17708
+sample	repeated	dict-index	dictzip	open	15	17459
+sample	repeated	dict-index	dictzip	open	16	16208
+sample	repeated	dict-index	dictzip	open	17	16500
+sample	repeated	dict-index	dictzip	open	18	18500
+sample	repeated	dict-index	dictzip	open	19	18125
+sample	repeated	dict-index	dictzip	open	20	15917
+sample	repeated	dict-index	dictzip	open	21	15292
+sample	repeated	dict-index	dictzip	open	22	15042
+sample	repeated	dict-index	dictzip	open	23	14584
+sample	repeated	dict-index	dictzip	open	24	17375
+result	repeated	dict-index	dictzip	open_ns	18500
+result	repeated	dict-index	dictzip	semantic_digest	7526048132029780665
+result	repeated	dict-index	dictzip	query_checksum	15315414728956134478
+result	repeated	dict-index	dictzip	outputs	13
+result	repeated	dict-index	dictzip	logical_prose_bytes	1672
+sample	repeated	dict-index	dictzip	exact	0	15625
+sample	repeated	dict-index	dictzip	exact	1	1250
+sample	repeated	dict-index	dictzip	exact	2	1000
+sample	repeated	dict-index	dictzip	exact	3	708
+sample	repeated	dict-index	dictzip	prefix	0	3208
+sample	repeated	dict-index	dictzip	prefix	1	1542
+sample	repeated	dict-index	dictzip	prefix	2	1709
+sample	repeated	dict-index	dictzip	prefix	3	1333
+sample	repeated	dict-index	dictzip	render	0	4391042
+sample	repeated	dict-index	dictzip	render	1	4386292
+sample	repeated	dict-index	dictzip	render	2	5039792
+sample	repeated	dict-index	dictzip	render	3	6531625
+result	repeated	dict-index	dictzip	exact.p50_ns	1250
+result	repeated	dict-index	dictzip	exact.p95_ns	15625
+result	repeated	dict-index	dictzip	exact.p99_ns	15625
+result	repeated	dict-index	dictzip	prefix.p50_ns	1709
+result	repeated	dict-index	dictzip	prefix.p95_ns	3208
+result	repeated	dict-index	dictzip	prefix.p99_ns	3208
+result	repeated	dict-index	dictzip	render.p50_ns	5039792
+result	repeated	dict-index	dictzip	render.p95_ns	6531625
+result	repeated	dict-index	dictzip	render.p99_ns	6531625
+result	repeated	dict-index	dictzip	exact.hit.p50_ns	15625
+result	repeated	dict-index	dictzip	exact.hit.p95_ns	15625
+result	repeated	dict-index	dictzip	exact.hit.p99_ns	15625
+result	repeated	dict-index	dictzip	exact.miss.p50_ns	1250
+result	repeated	dict-index	dictzip	exact.miss.p95_ns	1250
+result	repeated	dict-index	dictzip	exact.miss.p99_ns	1250
+result	repeated	dict-index	dictzip	prefix.zero.p50_ns	3208
+result	repeated	dict-index	dictzip	prefix.zero.p95_ns	3208
+result	repeated	dict-index	dictzip	prefix.zero.p99_ns	3208
+result	repeated	dict-index	dictzip	prefix.one.p50_ns	-
+result	repeated	dict-index	dictzip	prefix.one.p95_ns	-
+result	repeated	dict-index	dictzip	prefix.one.p99_ns	-
+result	repeated	dict-index	dictzip	prefix.many.p50_ns	1542
+result	repeated	dict-index	dictzip	prefix.many.p95_ns	1709
+result	repeated	dict-index	dictzip	prefix.many.p99_ns	1709
+result	repeated	dict-index	dictzip	prefix.pathological.p50_ns	-
+result	repeated	dict-index	dictzip	prefix.pathological.p95_ns	-
+result	repeated	dict-index	dictzip	prefix.pathological.p99_ns	-
+result	repeated	slob	raw	artifact_bytes	3193
+result	repeated	slob	raw	build_ns	7755458
+sample	repeated	slob	raw	open	0	227500
+sample	repeated	slob	raw	open	1	75458
+sample	repeated	slob	raw	open	2	65708
+sample	repeated	slob	raw	open	3	62375
+sample	repeated	slob	raw	open	4	59708
+sample	repeated	slob	raw	open	5	61291
+sample	repeated	slob	raw	open	6	57917
+sample	repeated	slob	raw	open	7	57208
+sample	repeated	slob	raw	open	8	58000
+sample	repeated	slob	raw	open	9	66375
+sample	repeated	slob	raw	open	10	56917
+sample	repeated	slob	raw	open	11	56042
+sample	repeated	slob	raw	open	12	61292
+sample	repeated	slob	raw	open	13	57375
+sample	repeated	slob	raw	open	14	58917
+sample	repeated	slob	raw	open	15	75458
+sample	repeated	slob	raw	open	16	57875
+sample	repeated	slob	raw	open	17	57416
+sample	repeated	slob	raw	open	18	57666
+sample	repeated	slob	raw	open	19	59250
+sample	repeated	slob	raw	open	20	56875
+sample	repeated	slob	raw	open	21	60125
+sample	repeated	slob	raw	open	22	62291
+sample	repeated	slob	raw	open	23	64500
+sample	repeated	slob	raw	open	24	239875
+result	repeated	slob	raw	open_ns	59708
+result	repeated	slob	raw	semantic_digest	7526048132029780665
+result	repeated	slob	raw	query_checksum	15315414728956134478
+result	repeated	slob	raw	outputs	13
+result	repeated	slob	raw	logical_prose_bytes	1672
+sample	repeated	slob	raw	exact	0	254417
+sample	repeated	slob	raw	exact	1	128750
+sample	repeated	slob	raw	exact	2	227459
+sample	repeated	slob	raw	exact	3	297459
+sample	repeated	slob	raw	prefix	0	200916
+sample	repeated	slob	raw	prefix	1	609583
+sample	repeated	slob	raw	prefix	2	588833
+sample	repeated	slob	raw	prefix	3	537791
+sample	repeated	slob	raw	render	0	79208
+sample	repeated	slob	raw	render	1	82500
+sample	repeated	slob	raw	render	2	64208
+sample	repeated	slob	raw	render	3	48917
+result	repeated	slob	raw	exact.p50_ns	254417
+result	repeated	slob	raw	exact.p95_ns	297459
+result	repeated	slob	raw	exact.p99_ns	297459
+result	repeated	slob	raw	prefix.p50_ns	588833
+result	repeated	slob	raw	prefix.p95_ns	609583
+result	repeated	slob	raw	prefix.p99_ns	609583
+result	repeated	slob	raw	render.p50_ns	79208
+result	repeated	slob	raw	render.p95_ns	82500
+result	repeated	slob	raw	render.p99_ns	82500
+result	repeated	slob	raw	exact.hit.p50_ns	254417
+result	repeated	slob	raw	exact.hit.p95_ns	254417
+result	repeated	slob	raw	exact.hit.p99_ns	254417
+result	repeated	slob	raw	exact.miss.p50_ns	297459
+result	repeated	slob	raw	exact.miss.p95_ns	297459
+result	repeated	slob	raw	exact.miss.p99_ns	297459
+result	repeated	slob	raw	prefix.zero.p50_ns	200916
+result	repeated	slob	raw	prefix.zero.p95_ns	200916
+result	repeated	slob	raw	prefix.zero.p99_ns	200916
+result	repeated	slob	raw	prefix.one.p50_ns	-
+result	repeated	slob	raw	prefix.one.p95_ns	-
+result	repeated	slob	raw	prefix.one.p99_ns	-
+result	repeated	slob	raw	prefix.many.p50_ns	588833
+result	repeated	slob	raw	prefix.many.p95_ns	609583
+result	repeated	slob	raw	prefix.many.p99_ns	609583
+result	repeated	slob	raw	prefix.pathological.p50_ns	-
+result	repeated	slob	raw	prefix.pathological.p95_ns	-
+result	repeated	slob	raw	prefix.pathological.p99_ns	-
+result	repeated	slob	lzma2	artifact_bytes	1777
+result	repeated	slob	lzma2	build_ns	12452666
+sample	repeated	slob	lzma2	open	0	151208
+sample	repeated	slob	lzma2	open	1	91167
+sample	repeated	slob	lzma2	open	2	62625
+sample	repeated	slob	lzma2	open	3	59500
+sample	repeated	slob	lzma2	open	4	58375
+sample	repeated	slob	lzma2	open	5	58375
+sample	repeated	slob	lzma2	open	6	65375
+sample	repeated	slob	lzma2	open	7	63042
+sample	repeated	slob	lzma2	open	8	59667
+sample	repeated	slob	lzma2	open	9	287791
+sample	repeated	slob	lzma2	open	10	179541
+sample	repeated	slob	lzma2	open	11	259542
+sample	repeated	slob	lzma2	open	12	199875
+sample	repeated	slob	lzma2	open	13	174792
+sample	repeated	slob	lzma2	open	14	177959
+sample	repeated	slob	lzma2	open	15	152417
+sample	repeated	slob	lzma2	open	16	150208
+sample	repeated	slob	lzma2	open	17	139792
+sample	repeated	slob	lzma2	open	18	138500
+sample	repeated	slob	lzma2	open	19	139625
+sample	repeated	slob	lzma2	open	20	224125
+sample	repeated	slob	lzma2	open	21	151959
+sample	repeated	slob	lzma2	open	22	154959
+sample	repeated	slob	lzma2	open	23	146959
+sample	repeated	slob	lzma2	open	24	139791
+result	repeated	slob	lzma2	open_ns	146959
+result	repeated	slob	lzma2	semantic_digest	7526048132029780665
+result	repeated	slob	lzma2	query_checksum	15315414728956134478
+result	repeated	slob	lzma2	outputs	13
+result	repeated	slob	lzma2	logical_prose_bytes	1672
+sample	repeated	slob	lzma2	exact	0	251417
+sample	repeated	slob	lzma2	exact	1	127417
+sample	repeated	slob	lzma2	exact	2	187375
+sample	repeated	slob	lzma2	exact	3	154833
+sample	repeated	slob	lzma2	prefix	0	308375
+sample	repeated	slob	lzma2	prefix	1	1095291
+sample	repeated	slob	lzma2	prefix	2	824541
+sample	repeated	slob	lzma2	prefix	3	782917
+sample	repeated	slob	lzma2	render	0	40500
+sample	repeated	slob	lzma2	render	1	20333
+sample	repeated	slob	lzma2	render	2	18584
+sample	repeated	slob	lzma2	render	3	17834
+result	repeated	slob	lzma2	exact.p50_ns	187375
+result	repeated	slob	lzma2	exact.p95_ns	251417
+result	repeated	slob	lzma2	exact.p99_ns	251417
+result	repeated	slob	lzma2	prefix.p50_ns	824541
+result	repeated	slob	lzma2	prefix.p95_ns	1095291
+result	repeated	slob	lzma2	prefix.p99_ns	1095291
+result	repeated	slob	lzma2	render.p50_ns	20333
+result	repeated	slob	lzma2	render.p95_ns	40500
+result	repeated	slob	lzma2	render.p99_ns	40500
+result	repeated	slob	lzma2	exact.hit.p50_ns	251417
+result	repeated	slob	lzma2	exact.hit.p95_ns	251417
+result	repeated	slob	lzma2	exact.hit.p99_ns	251417
+result	repeated	slob	lzma2	exact.miss.p50_ns	154833
+result	repeated	slob	lzma2	exact.miss.p95_ns	154833
+result	repeated	slob	lzma2	exact.miss.p99_ns	154833
+result	repeated	slob	lzma2	prefix.zero.p50_ns	308375
+result	repeated	slob	lzma2	prefix.zero.p95_ns	308375
+result	repeated	slob	lzma2	prefix.zero.p99_ns	308375
+result	repeated	slob	lzma2	prefix.one.p50_ns	-
+result	repeated	slob	lzma2	prefix.one.p95_ns	-
+result	repeated	slob	lzma2	prefix.one.p99_ns	-
+result	repeated	slob	lzma2	prefix.many.p50_ns	824541
+result	repeated	slob	lzma2	prefix.many.p95_ns	1095291
+result	repeated	slob	lzma2	prefix.many.p99_ns	1095291
+result	repeated	slob	lzma2	prefix.pathological.p50_ns	-
+result	repeated	slob	lzma2	prefix.pathological.p95_ns	-
+result	repeated	slob	lzma2	prefix.pathological.p99_ns	-

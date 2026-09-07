@@ -1,0 +1,8 @@
+meta	flat	zig	process_peak_rss_bytes	35128768
+meta	flat	external	process_peak_rss_bytes	48252800
+meta	prose_heavy	zig	process_peak_rss_bytes	79414848
+meta	prose_heavy	external	process_peak_rss_bytes	93914816
+meta	repeated	zig	process_peak_rss_bytes	39585280
+meta	repeated	external	process_peak_rss_bytes	48416512
+meta	rich	zig	process_peak_rss_bytes	31098432
+meta	rich	external	process_peak_rss_bytes	49317760

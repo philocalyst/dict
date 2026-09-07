@@ -1,0 +1,6 @@
+records	2048
+repetitions	1000
+warmup	200
+external_repetitions	1000
+external_warmup	200
+presets	latency,balanced,compact

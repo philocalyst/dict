@@ -1,0 +1,7654 @@
+{
+  "rows": [
+    {
+      "kind": "meta",
+      "name": "host",
+      "scope": "global",
+      "value": "Darwin mileswirht 24.6.0 Darwin Kernel Version 24.6.0: Mon Jan 19 21:59:23 PST 2026; root:xnu-11417.140.69.708.3~1/RELEASE_ARM64_T6030 arm64 arm Darwin"
+    },
+    {
+      "kind": "meta",
+      "name": "zig",
+      "scope": "global",
+      "value": "0.16.0"
+    },
+    {
+      "kind": "meta",
+      "name": "nix",
+      "scope": "global",
+      "value": "nix (Lix, like Nix) 2.95.2"
+    },
+    {
+      "kind": "meta",
+      "name": "python",
+      "scope": "global",
+      "value": "Python 3.14.7"
+    },
+    {
+      "kind": "meta",
+      "name": "sqlite",
+      "scope": "global",
+      "value": "3.53.3"
+    },
+    {
+      "kind": "meta",
+      "name": "dictzip",
+      "scope": "global",
+      "value": "dictzip 1.13.3"
+    },
+    {
+      "kind": "meta",
+      "name": "zstd",
+      "scope": "global",
+      "value": "*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***"
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "flat.zig",
+      "value": 35128768
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "flat.external",
+      "value": 48252800
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "prose_heavy.zig",
+      "value": 79414848
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "prose_heavy.external",
+      "value": 93914816
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "repeated.zig",
+      "value": 39585280
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "repeated.external",
+      "value": 48416512
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "rich.zig",
+      "value": 31098432
+    },
+    {
+      "kind": "meta",
+      "name": "process_peak_rss_bytes",
+      "scope": "rich.external",
+      "value": 49317760
+    },
+    {
+      "kind": "meta",
+      "name": "zig_version",
+      "scope": "global",
+      "value": "0.16.0"
+    },
+    {
+      "kind": "meta",
+      "name": "target",
+      "scope": "global",
+      "value": "macos-aarch64"
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "global",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "flat",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "repetitions",
+      "scope": "flat",
+      "value": 1000
+    },
+    {
+      "kind": "meta",
+      "name": "warmup",
+      "scope": "flat",
+      "value": 200
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "flat",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "flat",
+      "value": 16769177117638402855
+    },
+    {
+      "kind": "meta",
+      "name": "logical_prose_bytes",
+      "scope": "flat",
+      "value": 394154
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 520064,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 37024125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 20002488,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 60084,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 99708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 73292,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 109708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 132208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 130224,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 36091875,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 16298709,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 292,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 709,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1250,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41292,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 68708,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 100958,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 403083,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 637083,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 892333,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1652352,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 112377167,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 95717,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 667,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 792,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2725167,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3416417,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4230083,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 125,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 208,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1518976,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 190770875,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 98540,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 459,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1208,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1791,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2722333,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3348417,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 3994417,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 73167,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 143750,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 215875,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1652352,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 115780583,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 98206,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1042,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1666,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2726958,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3660417,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5025041,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 125,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 792,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1518976,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 248533875,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 143851,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 708,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 833,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2701333,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3059417,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 3811125,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 100875,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 368416,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 538792,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1652352,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 210097958,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 136559,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 792,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1459,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1833,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2860375,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 4494459,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 6977167,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 167,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 333,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1518976,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 943542750,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 126612,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 458,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1041,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1708,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2928167,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 4829458,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 9246083,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 420625,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 819542,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "flat",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1083375,
+      "variant": "bzip3.compact"
+    },
+    {
+      "kind": "meta",
+      "name": "zig_version",
+      "scope": "global",
+      "value": "0.16.0"
+    },
+    {
+      "kind": "meta",
+      "name": "target",
+      "scope": "global",
+      "value": "macos-aarch64"
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "global",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "prose_heavy",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "repetitions",
+      "scope": "prose_heavy",
+      "value": 1000
+    },
+    {
+      "kind": "meta",
+      "name": "warmup",
+      "scope": "prose_heavy",
+      "value": 200
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "prose_heavy",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "prose_heavy",
+      "value": 2609159946720600431
+    },
+    {
+      "kind": "meta",
+      "name": "logical_prose_bytes",
+      "scope": "prose_heavy",
+      "value": 10498986
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 10632768,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 454328166,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 52423708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 542,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41166,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 51167,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 92542,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 69084,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 96000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 131667,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 175728,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 422253417,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 15832473,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 250,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 417,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 500,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41041,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 46958,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 59959,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 259375,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 347375,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 497375,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 11757184,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 225390292,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 832142,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 750,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1000,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2714250,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3644541,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5778791,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 292,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 750,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1583,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1593920,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 380527541,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 94005,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1042,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1709,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2708166,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3243375,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 3901042,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 109000,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 181750,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 288792,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 11757184,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 210144250,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 724509,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 667,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 792,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2713875,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3164500,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 3580209,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 291,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 500,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 708,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1593920,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 400205500,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 91821,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 750,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 834,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2715833,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3085542,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 3380333,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 119625,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 217833,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 369917,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 11757184,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 180162292,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 811228,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 833,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1458,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2719333,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3394875,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5077875,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 292,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 667,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1166,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1593920,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 951791333,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 93944,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 708,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 833,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2763833,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3529000,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4390125,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 431792,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 764041,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 901958,
+      "variant": "bzip3.compact"
+    },
+    {
+      "kind": "meta",
+      "name": "zig_version",
+      "scope": "global",
+      "value": "0.16.0"
+    },
+    {
+      "kind": "meta",
+      "name": "target",
+      "scope": "global",
+      "value": "macos-aarch64"
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "global",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "repeated",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "repetitions",
+      "scope": "repeated",
+      "value": 1000
+    },
+    {
+      "kind": "meta",
+      "name": "warmup",
+      "scope": "repeated",
+      "value": 200
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "repeated",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "repeated",
+      "value": 1239717369033652253
+    },
+    {
+      "kind": "meta",
+      "name": "logical_prose_bytes",
+      "scope": "repeated",
+      "value": 428032
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 126456,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 18751834,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 18817031,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 75000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 106708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 958,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 1458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 125888,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 17734917,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 16885762,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 209,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 417,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 542,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41250,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 84084,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 105917,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 83333,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 225167,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 373875,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1686208,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 127842125,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 127244,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 708,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 833,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2842000,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3784542,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5023958,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 209,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 333,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1535680,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 270249041,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 102136,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 750,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 833,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2859542,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3850833,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4841625,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 77666,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 162083,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 263167,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1686208,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 117468458,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 109706,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 750,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 875,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2839041,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3676500,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5310791,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 125,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 208,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1535680,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 247992375,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 93357,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 709,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 834,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2850834,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3858750,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4880875,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 85125,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 248208,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 418541,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1686208,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 121175625,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 105807,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 667,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 792,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2996375,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 4425334,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 5453916,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 209,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 333,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 1535680,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 749948875,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 117679,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 875,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1625,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 3125750,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 5179208,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 8175458,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 637125,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 1109042,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "repeated",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1514417,
+      "variant": "bzip3.compact"
+    },
+    {
+      "kind": "meta",
+      "name": "zig_version",
+      "scope": "global",
+      "value": "0.16.0"
+    },
+    {
+      "kind": "meta",
+      "name": "target",
+      "scope": "global",
+      "value": "macos-aarch64"
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "global",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "rich",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "repetitions",
+      "scope": "rich",
+      "value": 1000
+    },
+    {
+      "kind": "meta",
+      "name": "warmup",
+      "scope": "rich",
+      "value": 200
+    },
+    {
+      "kind": "meta",
+      "name": "seed",
+      "scope": "rich",
+      "value": 5495895892047298561
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "rich",
+      "value": 16769177117638402855
+    },
+    {
+      "kind": "meta",
+      "name": "logical_prose_bytes",
+      "scope": "rich",
+      "value": 394154
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 520064,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 38638209,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 24333672,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 99000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 122625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 73541,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 117208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 144625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 130224,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 66799625,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 20491571,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 333,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 792,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1292,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 41250,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 97291,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 123167,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 485458,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 927417,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v1",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1070500,
+      "variant": "bzip3"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2471296,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 162991791,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 186438,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 833,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1583,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 4467375,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 7509208,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 12265125,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 125,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 209,
+      "variant": "raw.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2338048,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 246247791,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 232459,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 750,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 875,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 3814125,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 11884500,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 20819792,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 144083,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 567500,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 1630958,
+      "variant": "bzip3.latency"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2471296,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 209105458,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 180340,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 709,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 834,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 3176375,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 5519750,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 6864041,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 167,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 209,
+      "variant": "raw.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2338048,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 264457750,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 161355,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 417,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 917,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1750,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2831542,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3704791,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4291875,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 87125,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 310458,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 448542,
+      "variant": "bzip3.balanced"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2471296,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 133381083,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 181865,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 458,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 834,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1709,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2861583,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 4101125,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4881042,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 42,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 125,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 917,
+      "variant": "raw.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 2338048,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 739001708,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 147639,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 458,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 833,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1250,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 2841917,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3618333,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4247250,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 433833,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 810333,
+      "variant": "bzip3.compact"
+    },
+    {
+      "fixture": "rich",
+      "format": "v2",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 990083,
+      "variant": "bzip3.compact"
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "flat",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "flat",
+      "value": 16769177117638402855
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 532480,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 11856750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 45917,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 29208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 116750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 182125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 665333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 1486416,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 1783417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 5417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 38416,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 90250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 33850,
+      "variant": "zlib"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zlib"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 22942,
+      "variant": "zstd"
+    },
+    {
+      "fixture": "flat",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zstd"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 442075,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 3191500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 635458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 40500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 140459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 187625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 260000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 718375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 914458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 19125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 45166,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 105500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 54332,
+      "variant": "gzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "stardict",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "gzip is not StarDict dictzip random access; raw reader is the measured query baseline",
+      "variant": "gzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 447529,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 1428334,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 617458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 38500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 97042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 211500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 534292,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 690084,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 7459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 14459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 29209,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 60705,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 7272458,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 1417083,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23292,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 36542,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 86167,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 216458,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 492583,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 672709,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 4324250,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 6959625,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 13043708,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 478045,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 70940083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 69625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 706958,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1084834,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1673792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 33467291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 42661000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 50562375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 55125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 124584,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 214917,
+      "variant": "raw"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 73774,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 53989417,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 59959,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 711208,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1434084,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 2038500,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 33450834,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 38530208,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 44561416,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 43209,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 70458,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "flat",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 162791,
+      "variant": "lzma2"
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "prose_heavy",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "prose_heavy",
+      "value": 2609159946720600431
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 11259904,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 85414125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 45875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 28291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 38125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 87125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 1329416,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 3028750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 4112667,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 13583,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 48792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 118375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 96235,
+      "variant": "zlib"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zlib"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 43837,
+      "variant": "zstd"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zstd"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 10546907,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 52081291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 2134542,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 40750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 50417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 139083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 255833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 638250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 928333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 22916,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 79709,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 130625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 95077,
+      "variant": "gzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "stardict",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "gzip is not StarDict dictzip random access; raw reader is the measured query baseline",
+      "variant": "gzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 10556916,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 46975375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 2055833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23667,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 29291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 80541,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 218333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 399084,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 626625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 8792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 16417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 34000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 140490,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 26778375,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 1554709,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23333,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 29875,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 76583,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 209083,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 303250,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 379625,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 5313292,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 12773958,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 23011542,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 10585293,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 209293167,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 68750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 756625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1381833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1744500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 37386000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 51368625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 66775417,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 43833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 324459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 462042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 123118,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 287022625,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 69458,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 2609159946720600431,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 652287713134979664,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 10498986,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 791750,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1709791,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 2359250,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 37952542,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 60290875,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 76074333,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 22500,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 116625,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "prose_heavy",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 198417,
+      "variant": "lzma2"
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "repeated",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "repeated",
+      "value": 1239717369033652253
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 561152,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 9085500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 53250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 27208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 88708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 150917,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 602000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 1190958,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 1591167,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 5083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 28041,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 61459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 30997,
+      "variant": "zlib"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zlib"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 23139,
+      "variant": "zstd"
+    },
+    {
+      "fixture": "repeated",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zstd"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 475953,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 1811541,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 1561709,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 68916,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 632250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 12247458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 259750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 1027542,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 1885834,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 21125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 85000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 233167,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 50313,
+      "variant": "gzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "stardict",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "gzip is not StarDict dictzip random access; raw reader is the measured query baseline",
+      "variant": "gzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 481456,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 4899208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 639750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23292,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 87208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 687042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 221833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 727584,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 2285083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 7791,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 18042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 30791,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 57876,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 8668458,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 529667,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 22917,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 40625,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 93875,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 206333,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 331792,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 591792,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 3891625,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 5291875,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 7039708,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 511923,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 57219875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 79708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 788833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1545416,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 2106875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 36186084,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 45290500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 285828792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 54000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 111042,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 244291,
+      "variant": "raw"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 74028,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 61673083,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 60042,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 1239717369033652253,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 9914724521881717094,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 428032,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 746500,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1322667,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1716916,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 65417916,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 85405542,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 94498875,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 45916,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 171916,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "repeated",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 240458,
+      "variant": "lzma2"
+    },
+    {
+      "kind": "meta",
+      "name": "records",
+      "scope": "rich",
+      "value": 2048
+    },
+    {
+      "kind": "meta",
+      "name": "semantic_digest",
+      "scope": "rich",
+      "value": 16769177117638402855
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 532480,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 6276459,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 43750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 27333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 49917,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 119250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 599250,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 971667,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 1384208,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 4750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 13167,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 44625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 33850,
+      "variant": "zlib"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zlib"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 22942,
+      "variant": "zstd"
+    },
+    {
+      "fixture": "rich",
+      "format": "sqlite",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "SQLite cannot seek compressed pages without a decompression staging policy",
+      "variant": "zstd"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 442075,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 1324125,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 666666,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 40334,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 116000,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 181334,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 262959,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 633875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 819375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 19791,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 55083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 113500,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 54332,
+      "variant": "gzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "stardict",
+      "kind": "unavailable",
+      "metric": "reason",
+      "value": "gzip is not StarDict dictzip random access; raw reader is the measured query baseline",
+      "variant": "gzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 447529,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 1827458,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 686166,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23333,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 54041,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 95875,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 258792,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 647750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 752375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 7959,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 25375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 39625,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 60705,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 8136708,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 608209,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 23583,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 77584,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 114500,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 234667,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 610250,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 856917,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 4064709,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 5981125,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "dictd",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 7406792,
+      "variant": "dictzip"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 478045,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 49019083,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 88375,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 925542,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 2529834,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 3690750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 37112917,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 65397708,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 92871834,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 55750,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 155833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 250833,
+      "variant": "raw"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "artifact_bytes",
+      "value": 73774,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "build_ns",
+      "value": 55565167,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "open_ns",
+      "value": 63083,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "semantic_digest",
+      "value": 16769177117638402855,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "query_checksum",
+      "value": 16733059916616611384,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "outputs",
+      "value": 1638600,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "logical_prose_bytes",
+      "value": 394154,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p50_ns",
+      "value": 772292,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p95_ns",
+      "value": 1556333,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "exact.p99_ns",
+      "value": 1992875,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p50_ns",
+      "value": 38103875,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p95_ns",
+      "value": 57747167,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "prefix.p99_ns",
+      "value": 72494791,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p50_ns",
+      "value": 44458,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p95_ns",
+      "value": 150417,
+      "variant": "lzma2"
+    },
+    {
+      "fixture": "rich",
+      "format": "slob",
+      "kind": "result",
+      "metric": "render.p99_ns",
+      "value": 303209,
+      "variant": "lzma2"
+    }
+  ]
+}

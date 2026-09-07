@@ -1,0 +1,261 @@
+meta	global	zig_version	0.16.0
+meta	global	target	macos-aarch64
+meta	global	seed	5495895892047298561
+meta	rich	records	32
+meta	rich	repetitions	8
+meta	rich	warmup	2
+meta	rich	seed	5495895892047298561
+meta	rich	semantic_digest	6775974522125595869
+meta	rich	logical_prose_bytes	6102
+meta	rich	exact_hit_probes	5
+meta	rich	exact_miss_probes	3
+meta	rich	prefix_zero_probes	2
+meta	rich	prefix_one_probes	2
+meta	rich	prefix_many_probes	4
+meta	rich	prefix_pathological_probes	0
+result	rich	v1	raw	artifact_bytes	8384
+result	rich	v1	raw	build_ns	500167
+sample	rich	v1	raw	open	0	132833
+result	rich	v1	raw	open.p50_ns	132833
+result	rich	v1	raw	open.p95_ns	132833
+result	rich	v1	raw	open.p99_ns	132833
+result	rich	v1	raw	open_ns	132833
+result	rich	v1	raw	semantic_digest	6775974522125595869
+result	rich	v1	raw	query_checksum	374819840078316771
+result	rich	v1	raw	outputs	135
+sample	rich	v1	raw	exact	0	1167
+sample	rich	v1	raw	exact	1	375
+sample	rich	v1	raw	exact	2	542
+sample	rich	v1	raw	exact	3	208
+sample	rich	v1	raw	exact	4	417
+sample	rich	v1	raw	exact	5	250
+sample	rich	v1	raw	exact	6	208
+sample	rich	v1	raw	exact	7	292
+result	rich	v1	raw	exact.p50_ns	375
+result	rich	v1	raw	exact.p95_ns	1167
+result	rich	v1	raw	exact.p99_ns	1167
+sample	rich	v1	raw	prefix	0	625
+sample	rich	v1	raw	prefix	1	584
+sample	rich	v1	raw	prefix	2	1416
+sample	rich	v1	raw	prefix	3	1125
+sample	rich	v1	raw	prefix	4	375
+sample	rich	v1	raw	prefix	5	250
+sample	rich	v1	raw	prefix	6	1000
+sample	rich	v1	raw	prefix	7	1167
+result	rich	v1	raw	prefix.p50_ns	1000
+result	rich	v1	raw	prefix.p95_ns	1416
+result	rich	v1	raw	prefix.p99_ns	1416
+sample	rich	v1	raw	render	0	6958
+sample	rich	v1	raw	render	1	6875
+sample	rich	v1	raw	render	2	6875
+sample	rich	v1	raw	render	3	6833
+sample	rich	v1	raw	render	4	6833
+sample	rich	v1	raw	render	5	6833
+sample	rich	v1	raw	render	6	6791
+sample	rich	v1	raw	render	7	6834
+result	rich	v1	raw	render.p50_ns	6834
+result	rich	v1	raw	render.p95_ns	6958
+result	rich	v1	raw	render.p99_ns	6958
+result	rich	v1	raw	exact.hit.p50_ns	417
+result	rich	v1	raw	exact.hit.p95_ns	1167
+result	rich	v1	raw	exact.hit.p99_ns	1167
+result	rich	v1	raw	exact.miss.p50_ns	250
+result	rich	v1	raw	exact.miss.p95_ns	375
+result	rich	v1	raw	exact.miss.p99_ns	375
+result	rich	v1	raw	prefix.zero.p50_ns	625
+result	rich	v1	raw	prefix.zero.p95_ns	625
+result	rich	v1	raw	prefix.zero.p99_ns	625
+result	rich	v1	raw	prefix.one.p50_ns	584
+result	rich	v1	raw	prefix.one.p95_ns	584
+result	rich	v1	raw	prefix.one.p99_ns	584
+result	rich	v1	raw	prefix.many.p50_ns	1167
+result	rich	v1	raw	prefix.many.p95_ns	1416
+result	rich	v1	raw	prefix.many.p99_ns	1416
+result	rich	v1	raw	prefix.pathological.p50_ns	-
+result	rich	v1	raw	prefix.pathological.p95_ns	-
+result	rich	v1	raw	prefix.pathological.p99_ns	-
+result	rich	v1	bzip3	artifact_bytes	2560
+result	rich	v1	bzip3	build_ns	1672417
+sample	rich	v1	bzip3	open	0	23458
+result	rich	v1	bzip3	open.p50_ns	23458
+result	rich	v1	bzip3	open.p95_ns	23458
+result	rich	v1	bzip3	open.p99_ns	23458
+result	rich	v1	bzip3	open_ns	23458
+result	rich	v1	bzip3	semantic_digest	6775974522125595869
+result	rich	v1	bzip3	query_checksum	374819840078316771
+result	rich	v1	bzip3	outputs	135
+sample	rich	v1	bzip3	exact	0	1709
+sample	rich	v1	bzip3	exact	1	500
+sample	rich	v1	bzip3	exact	2	792
+sample	rich	v1	bzip3	exact	3	416
+sample	rich	v1	bzip3	exact	4	584
+sample	rich	v1	bzip3	exact	5	13125
+sample	rich	v1	bzip3	exact	6	708
+sample	rich	v1	bzip3	exact	7	542
+result	rich	v1	bzip3	exact.p50_ns	708
+result	rich	v1	bzip3	exact.p95_ns	13125
+result	rich	v1	bzip3	exact.p99_ns	13125
+sample	rich	v1	bzip3	prefix	0	875
+sample	rich	v1	bzip3	prefix	1	875
+sample	rich	v1	bzip3	prefix	2	2375
+sample	rich	v1	bzip3	prefix	3	2084
+sample	rich	v1	bzip3	prefix	4	625
+sample	rich	v1	bzip3	prefix	5	500
+sample	rich	v1	bzip3	prefix	6	1959
+sample	rich	v1	bzip3	prefix	7	11250
+result	rich	v1	bzip3	prefix.p50_ns	1959
+result	rich	v1	bzip3	prefix.p95_ns	11250
+result	rich	v1	bzip3	prefix.p99_ns	11250
+sample	rich	v1	bzip3	render	0	382166
+sample	rich	v1	bzip3	render	1	271167
+sample	rich	v1	bzip3	render	2	301167
+sample	rich	v1	bzip3	render	3	176458
+sample	rich	v1	bzip3	render	4	119125
+sample	rich	v1	bzip3	render	5	105334
+sample	rich	v1	bzip3	render	6	104917
+sample	rich	v1	bzip3	render	7	118958
+result	rich	v1	bzip3	render.p50_ns	176458
+result	rich	v1	bzip3	render.p95_ns	382166
+result	rich	v1	bzip3	render.p99_ns	382166
+result	rich	v1	bzip3	exact.hit.p50_ns	708
+result	rich	v1	bzip3	exact.hit.p95_ns	1709
+result	rich	v1	bzip3	exact.hit.p99_ns	1709
+result	rich	v1	bzip3	exact.miss.p50_ns	500
+result	rich	v1	bzip3	exact.miss.p95_ns	13125
+result	rich	v1	bzip3	exact.miss.p99_ns	13125
+result	rich	v1	bzip3	prefix.zero.p50_ns	875
+result	rich	v1	bzip3	prefix.zero.p95_ns	875
+result	rich	v1	bzip3	prefix.zero.p99_ns	875
+result	rich	v1	bzip3	prefix.one.p50_ns	875
+result	rich	v1	bzip3	prefix.one.p95_ns	875
+result	rich	v1	bzip3	prefix.one.p99_ns	875
+result	rich	v1	bzip3	prefix.many.p50_ns	2375
+result	rich	v1	bzip3	prefix.many.p95_ns	11250
+result	rich	v1	bzip3	prefix.many.p99_ns	11250
+result	rich	v1	bzip3	prefix.pathological.p50_ns	-
+result	rich	v1	bzip3	prefix.pathological.p95_ns	-
+result	rich	v1	bzip3	prefix.pathological.p99_ns	-
+result	rich	v2	raw.latency	artifact_bytes	19616
+result	rich	v2	raw.latency	build_ns	3184917
+sample	rich	v2	raw.latency	open	0	698209
+result	rich	v2	raw.latency	open.p50_ns	698209
+result	rich	v2	raw.latency	open.p95_ns	698209
+result	rich	v2	raw.latency	open.p99_ns	698209
+result	rich	v2	raw.latency	open_ns	698209
+result	rich	v2	raw.latency	semantic_digest	6775974522125595869
+result	rich	v2	raw.latency	query_checksum	374819840078316771
+result	rich	v2	raw.latency	outputs	135
+result	rich	v2	raw.latency	logical_prose_bytes	6102
+sample	rich	v2	raw.latency	exact	0	459
+sample	rich	v2	raw.latency	exact	1	292
+sample	rich	v2	raw.latency	exact	2	416
+sample	rich	v2	raw.latency	exact	3	125
+sample	rich	v2	raw.latency	exact	4	333
+sample	rich	v2	raw.latency	exact	5	125
+sample	rich	v2	raw.latency	exact	6	292
+sample	rich	v2	raw.latency	exact	7	167
+result	rich	v2	raw.latency	exact.p50_ns	292
+result	rich	v2	raw.latency	exact.p95_ns	459
+result	rich	v2	raw.latency	exact.p99_ns	459
+sample	rich	v2	raw.latency	prefix	0	208
+sample	rich	v2	raw.latency	prefix	1	167
+sample	rich	v2	raw.latency	prefix	2	1125
+sample	rich	v2	raw.latency	prefix	3	958
+sample	rich	v2	raw.latency	prefix	4	167
+sample	rich	v2	raw.latency	prefix	5	125
+sample	rich	v2	raw.latency	prefix	6	917
+sample	rich	v2	raw.latency	prefix	7	1000
+result	rich	v2	raw.latency	prefix.p50_ns	917
+result	rich	v2	raw.latency	prefix.p95_ns	1125
+result	rich	v2	raw.latency	prefix.p99_ns	1125
+sample	rich	v2	raw.latency	render	0	333
+sample	rich	v2	raw.latency	render	1	84
+sample	rich	v2	raw.latency	render	2	42
+sample	rich	v2	raw.latency	render	3	83
+sample	rich	v2	raw.latency	render	4	83
+sample	rich	v2	raw.latency	render	5	83
+sample	rich	v2	raw.latency	render	6	42
+sample	rich	v2	raw.latency	render	7	84
+result	rich	v2	raw.latency	render.p50_ns	83
+result	rich	v2	raw.latency	render.p95_ns	333
+result	rich	v2	raw.latency	render.p99_ns	333
+result	rich	v2	raw.latency	exact.hit.p50_ns	333
+result	rich	v2	raw.latency	exact.hit.p95_ns	459
+result	rich	v2	raw.latency	exact.hit.p99_ns	459
+result	rich	v2	raw.latency	exact.miss.p50_ns	125
+result	rich	v2	raw.latency	exact.miss.p95_ns	292
+result	rich	v2	raw.latency	exact.miss.p99_ns	292
+result	rich	v2	raw.latency	prefix.zero.p50_ns	208
+result	rich	v2	raw.latency	prefix.zero.p95_ns	208
+result	rich	v2	raw.latency	prefix.zero.p99_ns	208
+result	rich	v2	raw.latency	prefix.one.p50_ns	167
+result	rich	v2	raw.latency	prefix.one.p95_ns	167
+result	rich	v2	raw.latency	prefix.one.p99_ns	167
+result	rich	v2	raw.latency	prefix.many.p50_ns	1000
+result	rich	v2	raw.latency	prefix.many.p95_ns	1125
+result	rich	v2	raw.latency	prefix.many.p99_ns	1125
+result	rich	v2	raw.latency	prefix.pathological.p50_ns	-
+result	rich	v2	raw.latency	prefix.pathological.p95_ns	-
+result	rich	v2	raw.latency	prefix.pathological.p99_ns	-
+result	rich	v2	bzip3.latency	artifact_bytes	13664
+result	rich	v2	bzip3.latency	build_ns	5814375
+sample	rich	v2	bzip3.latency	open	0	2356291
+result	rich	v2	bzip3.latency	open.p50_ns	2356291
+result	rich	v2	bzip3.latency	open.p95_ns	2356291
+result	rich	v2	bzip3.latency	open.p99_ns	2356291
+result	rich	v2	bzip3.latency	open_ns	2356291
+result	rich	v2	bzip3.latency	semantic_digest	6775974522125595869
+result	rich	v2	bzip3.latency	query_checksum	374819840078316771
+result	rich	v2	bzip3.latency	outputs	135
+result	rich	v2	bzip3.latency	logical_prose_bytes	6102
+sample	rich	v2	bzip3.latency	exact	0	2042
+sample	rich	v2	bzip3.latency	exact	1	333
+sample	rich	v2	bzip3.latency	exact	2	458
+sample	rich	v2	bzip3.latency	exact	3	125
+sample	rich	v2	bzip3.latency	exact	4	333
+sample	rich	v2	bzip3.latency	exact	5	125
+sample	rich	v2	bzip3.latency	exact	6	250
+sample	rich	v2	bzip3.latency	exact	7	125
+result	rich	v2	bzip3.latency	exact.p50_ns	333
+result	rich	v2	bzip3.latency	exact.p95_ns	2042
+result	rich	v2	bzip3.latency	exact.p99_ns	2042
+sample	rich	v2	bzip3.latency	prefix	0	375
+sample	rich	v2	bzip3.latency	prefix	1	292
+sample	rich	v2	bzip3.latency	prefix	2	1791
+sample	rich	v2	bzip3.latency	prefix	3	958
+sample	rich	v2	bzip3.latency	prefix	4	208
+sample	rich	v2	bzip3.latency	prefix	5	84
+sample	rich	v2	bzip3.latency	prefix	6	1000
+sample	rich	v2	bzip3.latency	prefix	7	1000
+result	rich	v2	bzip3.latency	prefix.p50_ns	958
+result	rich	v2	bzip3.latency	prefix.p95_ns	1791
+result	rich	v2	bzip3.latency	prefix.p99_ns	1791
+sample	rich	v2	bzip3.latency	render	0	237875
+sample	rich	v2	bzip3.latency	render	1	139666
+sample	rich	v2	bzip3.latency	render	2	434333
+sample	rich	v2	bzip3.latency	render	3	463541
+sample	rich	v2	bzip3.latency	render	4	451250
+sample	rich	v2	bzip3.latency	render	5	376625
+sample	rich	v2	bzip3.latency	render	6	496500
+sample	rich	v2	bzip3.latency	render	7	378416
+result	rich	v2	bzip3.latency	render.p50_ns	434333
+result	rich	v2	bzip3.latency	render.p95_ns	496500
+result	rich	v2	bzip3.latency	render.p99_ns	496500
+result	rich	v2	bzip3.latency	exact.hit.p50_ns	333
+result	rich	v2	bzip3.latency	exact.hit.p95_ns	2042
+result	rich	v2	bzip3.latency	exact.hit.p99_ns	2042
+result	rich	v2	bzip3.latency	exact.miss.p50_ns	125
+result	rich	v2	bzip3.latency	exact.miss.p95_ns	333
+result	rich	v2	bzip3.latency	exact.miss.p99_ns	333
+result	rich	v2	bzip3.latency	prefix.zero.p50_ns	375
+result	rich	v2	bzip3.latency	prefix.zero.p95_ns	375
+result	rich	v2	bzip3.latency	prefix.zero.p99_ns	375
+result	rich	v2	bzip3.latency	prefix.one.p50_ns	292
+result	rich	v2	bzip3.latency	prefix.one.p95_ns	292
+result	rich	v2	bzip3.latency	prefix.one.p99_ns	292
+result	rich	v2	bzip3.latency	prefix.many.p50_ns	1000
+result	rich	v2	bzip3.latency	prefix.many.p95_ns	1791
+result	rich	v2	bzip3.latency	prefix.many.p99_ns	1791
+result	rich	v2	bzip3.latency	prefix.pathological.p50_ns	-
+result	rich	v2	bzip3.latency	prefix.pathological.p95_ns	-
+result	rich	v2	bzip3.latency	prefix.pathological.p99_ns	-

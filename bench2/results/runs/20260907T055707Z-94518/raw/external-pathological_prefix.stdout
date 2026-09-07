@@ -1,0 +1,434 @@
+meta	pathological_prefix	records	16
+meta	pathological_prefix	semantic_digest	16546272643597045831
+result	pathological_prefix	sqlite	raw	artifact_bytes	12288
+result	pathological_prefix	sqlite	raw	build_ns	585416
+sample	pathological_prefix	sqlite	raw	open	0	479625
+sample	pathological_prefix	sqlite	raw	open	1	210833
+sample	pathological_prefix	sqlite	raw	open	2	163542
+sample	pathological_prefix	sqlite	raw	open	3	282792
+sample	pathological_prefix	sqlite	raw	open	4	478625
+sample	pathological_prefix	sqlite	raw	open	5	231791
+sample	pathological_prefix	sqlite	raw	open	6	297708
+sample	pathological_prefix	sqlite	raw	open	7	1692125
+sample	pathological_prefix	sqlite	raw	open	8	187917
+sample	pathological_prefix	sqlite	raw	open	9	116292
+sample	pathological_prefix	sqlite	raw	open	10	106750
+sample	pathological_prefix	sqlite	raw	open	11	114334
+sample	pathological_prefix	sqlite	raw	open	12	120542
+sample	pathological_prefix	sqlite	raw	open	13	119792
+sample	pathological_prefix	sqlite	raw	open	14	254000
+sample	pathological_prefix	sqlite	raw	open	15	173625
+sample	pathological_prefix	sqlite	raw	open	16	136916
+sample	pathological_prefix	sqlite	raw	open	17	117709
+sample	pathological_prefix	sqlite	raw	open	18	232583
+sample	pathological_prefix	sqlite	raw	open	19	198167
+sample	pathological_prefix	sqlite	raw	open	20	303000
+sample	pathological_prefix	sqlite	raw	open	21	223792
+sample	pathological_prefix	sqlite	raw	open	22	162792
+sample	pathological_prefix	sqlite	raw	open	23	122208
+sample	pathological_prefix	sqlite	raw	open	24	103875
+result	pathological_prefix	sqlite	raw	open_ns	187917
+result	pathological_prefix	sqlite	raw	semantic_digest	16546272643597045831
+result	pathological_prefix	sqlite	raw	query_checksum	17872557059903891012
+result	pathological_prefix	sqlite	raw	outputs	19
+result	pathological_prefix	sqlite	raw	logical_prose_bytes	3046
+sample	pathological_prefix	sqlite	raw	exact	0	12250
+sample	pathological_prefix	sqlite	raw	exact	1	11916
+sample	pathological_prefix	sqlite	raw	exact	2	11667
+sample	pathological_prefix	sqlite	raw	exact	3	10875
+sample	pathological_prefix	sqlite	raw	prefix	0	13625
+sample	pathological_prefix	sqlite	raw	prefix	1	16750
+sample	pathological_prefix	sqlite	raw	prefix	2	13125
+sample	pathological_prefix	sqlite	raw	prefix	3	21625
+sample	pathological_prefix	sqlite	raw	render	0	15042
+sample	pathological_prefix	sqlite	raw	render	1	22917
+sample	pathological_prefix	sqlite	raw	render	2	11750
+sample	pathological_prefix	sqlite	raw	render	3	10875
+result	pathological_prefix	sqlite	raw	exact.p50_ns	11916
+result	pathological_prefix	sqlite	raw	exact.p95_ns	12250
+result	pathological_prefix	sqlite	raw	exact.p99_ns	12250
+result	pathological_prefix	sqlite	raw	prefix.p50_ns	16750
+result	pathological_prefix	sqlite	raw	prefix.p95_ns	21625
+result	pathological_prefix	sqlite	raw	prefix.p99_ns	21625
+result	pathological_prefix	sqlite	raw	render.p50_ns	15042
+result	pathological_prefix	sqlite	raw	render.p95_ns	22917
+result	pathological_prefix	sqlite	raw	render.p99_ns	22917
+result	pathological_prefix	sqlite	raw	exact.hit.p50_ns	12250
+result	pathological_prefix	sqlite	raw	exact.hit.p95_ns	12250
+result	pathological_prefix	sqlite	raw	exact.hit.p99_ns	12250
+result	pathological_prefix	sqlite	raw	exact.miss.p50_ns	11916
+result	pathological_prefix	sqlite	raw	exact.miss.p95_ns	11916
+result	pathological_prefix	sqlite	raw	exact.miss.p99_ns	11916
+result	pathological_prefix	sqlite	raw	prefix.zero.p50_ns	13625
+result	pathological_prefix	sqlite	raw	prefix.zero.p95_ns	13625
+result	pathological_prefix	sqlite	raw	prefix.zero.p99_ns	13625
+result	pathological_prefix	sqlite	raw	prefix.one.p50_ns	16750
+result	pathological_prefix	sqlite	raw	prefix.one.p95_ns	16750
+result	pathological_prefix	sqlite	raw	prefix.one.p99_ns	16750
+result	pathological_prefix	sqlite	raw	prefix.many.p50_ns	-
+result	pathological_prefix	sqlite	raw	prefix.many.p95_ns	-
+result	pathological_prefix	sqlite	raw	prefix.many.p99_ns	-
+result	pathological_prefix	sqlite	raw	prefix.pathological.p50_ns	21625
+result	pathological_prefix	sqlite	raw	prefix.pathological.p95_ns	21625
+result	pathological_prefix	sqlite	raw	prefix.pathological.p99_ns	21625
+result	pathological_prefix	sqlite	zlib	artifact_bytes	779
+unavailable	pathological_prefix	sqlite	zlib	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	pathological_prefix	sqlite	zstd	artifact_bytes	682
+unavailable	pathological_prefix	sqlite	zstd	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	pathological_prefix	stardict	raw	artifact_bytes	3853
+result	pathological_prefix	stardict	raw	build_ns	452042
+sample	pathological_prefix	stardict	raw	open	0	39000
+sample	pathological_prefix	stardict	raw	open	1	32084
+sample	pathological_prefix	stardict	raw	open	2	29375
+sample	pathological_prefix	stardict	raw	open	3	26167
+sample	pathological_prefix	stardict	raw	open	4	25958
+sample	pathological_prefix	stardict	raw	open	5	31916
+sample	pathological_prefix	stardict	raw	open	6	25291
+sample	pathological_prefix	stardict	raw	open	7	24250
+sample	pathological_prefix	stardict	raw	open	8	24083
+sample	pathological_prefix	stardict	raw	open	9	24459
+sample	pathological_prefix	stardict	raw	open	10	24208
+sample	pathological_prefix	stardict	raw	open	11	23708
+sample	pathological_prefix	stardict	raw	open	12	24041
+sample	pathological_prefix	stardict	raw	open	13	25375
+sample	pathological_prefix	stardict	raw	open	14	23959
+sample	pathological_prefix	stardict	raw	open	15	47708
+sample	pathological_prefix	stardict	raw	open	16	58875
+sample	pathological_prefix	stardict	raw	open	17	65541
+sample	pathological_prefix	stardict	raw	open	18	27084
+sample	pathological_prefix	stardict	raw	open	19	25791
+sample	pathological_prefix	stardict	raw	open	20	25708
+sample	pathological_prefix	stardict	raw	open	21	25334
+sample	pathological_prefix	stardict	raw	open	22	24750
+sample	pathological_prefix	stardict	raw	open	23	24042
+sample	pathological_prefix	stardict	raw	open	24	23959
+result	pathological_prefix	stardict	raw	open_ns	25375
+result	pathological_prefix	stardict	raw	semantic_digest	16546272643597045831
+result	pathological_prefix	stardict	raw	query_checksum	17872557059903891012
+result	pathological_prefix	stardict	raw	outputs	19
+result	pathological_prefix	stardict	raw	logical_prose_bytes	3046
+sample	pathological_prefix	stardict	raw	exact	0	625
+sample	pathological_prefix	stardict	raw	exact	1	1958
+sample	pathological_prefix	stardict	raw	exact	2	416
+sample	pathological_prefix	stardict	raw	exact	3	292
+sample	pathological_prefix	stardict	raw	prefix	0	292
+sample	pathological_prefix	stardict	raw	prefix	1	500
+sample	pathological_prefix	stardict	raw	prefix	2	375
+sample	pathological_prefix	stardict	raw	prefix	3	1417
+sample	pathological_prefix	stardict	raw	render	0	333
+sample	pathological_prefix	stardict	raw	render	1	334
+sample	pathological_prefix	stardict	raw	render	2	292
+sample	pathological_prefix	stardict	raw	render	3	250
+result	pathological_prefix	stardict	raw	exact.p50_ns	625
+result	pathological_prefix	stardict	raw	exact.p95_ns	1958
+result	pathological_prefix	stardict	raw	exact.p99_ns	1958
+result	pathological_prefix	stardict	raw	prefix.p50_ns	500
+result	pathological_prefix	stardict	raw	prefix.p95_ns	1417
+result	pathological_prefix	stardict	raw	prefix.p99_ns	1417
+result	pathological_prefix	stardict	raw	render.p50_ns	333
+result	pathological_prefix	stardict	raw	render.p95_ns	334
+result	pathological_prefix	stardict	raw	render.p99_ns	334
+result	pathological_prefix	stardict	raw	exact.hit.p50_ns	625
+result	pathological_prefix	stardict	raw	exact.hit.p95_ns	625
+result	pathological_prefix	stardict	raw	exact.hit.p99_ns	625
+result	pathological_prefix	stardict	raw	exact.miss.p50_ns	1958
+result	pathological_prefix	stardict	raw	exact.miss.p95_ns	1958
+result	pathological_prefix	stardict	raw	exact.miss.p99_ns	1958
+result	pathological_prefix	stardict	raw	prefix.zero.p50_ns	375
+result	pathological_prefix	stardict	raw	prefix.zero.p95_ns	375
+result	pathological_prefix	stardict	raw	prefix.zero.p99_ns	375
+result	pathological_prefix	stardict	raw	prefix.one.p50_ns	500
+result	pathological_prefix	stardict	raw	prefix.one.p95_ns	500
+result	pathological_prefix	stardict	raw	prefix.one.p99_ns	500
+result	pathological_prefix	stardict	raw	prefix.many.p50_ns	-
+result	pathological_prefix	stardict	raw	prefix.many.p95_ns	-
+result	pathological_prefix	stardict	raw	prefix.many.p99_ns	-
+result	pathological_prefix	stardict	raw	prefix.pathological.p50_ns	1417
+result	pathological_prefix	stardict	raw	prefix.pathological.p95_ns	1417
+result	pathological_prefix	stardict	raw	prefix.pathological.p99_ns	1417
+result	pathological_prefix	stardict	gzip	artifact_bytes	1048
+unavailable	pathological_prefix	stardict	gzip	reason	gzip is not StarDict dictzip random access; raw reader is the measured query baseline
+result	pathological_prefix	dict-index	raw	artifact_bytes	3758
+result	pathological_prefix	dict-index	raw	build_ns	187750
+sample	pathological_prefix	dict-index	raw	open	0	72375
+sample	pathological_prefix	dict-index	raw	open	1	32292
+sample	pathological_prefix	dict-index	raw	open	2	28917
+sample	pathological_prefix	dict-index	raw	open	3	28000
+sample	pathological_prefix	dict-index	raw	open	4	27667
+sample	pathological_prefix	dict-index	raw	open	5	27083
+sample	pathological_prefix	dict-index	raw	open	6	32291
+sample	pathological_prefix	dict-index	raw	open	7	27500
+sample	pathological_prefix	dict-index	raw	open	8	27542
+sample	pathological_prefix	dict-index	raw	open	9	26708
+sample	pathological_prefix	dict-index	raw	open	10	26625
+sample	pathological_prefix	dict-index	raw	open	11	27000
+sample	pathological_prefix	dict-index	raw	open	12	32708
+sample	pathological_prefix	dict-index	raw	open	13	26375
+sample	pathological_prefix	dict-index	raw	open	14	26584
+sample	pathological_prefix	dict-index	raw	open	15	26417
+sample	pathological_prefix	dict-index	raw	open	16	42375
+sample	pathological_prefix	dict-index	raw	open	17	26708
+sample	pathological_prefix	dict-index	raw	open	18	25958
+sample	pathological_prefix	dict-index	raw	open	19	26417
+sample	pathological_prefix	dict-index	raw	open	20	26250
+sample	pathological_prefix	dict-index	raw	open	21	26666
+sample	pathological_prefix	dict-index	raw	open	22	26958
+sample	pathological_prefix	dict-index	raw	open	23	26375
+sample	pathological_prefix	dict-index	raw	open	24	27667
+result	pathological_prefix	dict-index	raw	open_ns	27000
+result	pathological_prefix	dict-index	raw	semantic_digest	16546272643597045831
+result	pathological_prefix	dict-index	raw	query_checksum	17872557059903891012
+result	pathological_prefix	dict-index	raw	outputs	19
+result	pathological_prefix	dict-index	raw	logical_prose_bytes	3046
+sample	pathological_prefix	dict-index	raw	exact	0	375
+sample	pathological_prefix	dict-index	raw	exact	1	375
+sample	pathological_prefix	dict-index	raw	exact	2	375
+sample	pathological_prefix	dict-index	raw	exact	3	292
+sample	pathological_prefix	dict-index	raw	prefix	0	250
+sample	pathological_prefix	dict-index	raw	prefix	1	459
+sample	pathological_prefix	dict-index	raw	prefix	2	333
+sample	pathological_prefix	dict-index	raw	prefix	3	1375
+sample	pathological_prefix	dict-index	raw	render	0	292
+sample	pathological_prefix	dict-index	raw	render	1	250
+sample	pathological_prefix	dict-index	raw	render	2	250
+sample	pathological_prefix	dict-index	raw	render	3	208
+result	pathological_prefix	dict-index	raw	exact.p50_ns	375
+result	pathological_prefix	dict-index	raw	exact.p95_ns	375
+result	pathological_prefix	dict-index	raw	exact.p99_ns	375
+result	pathological_prefix	dict-index	raw	prefix.p50_ns	459
+result	pathological_prefix	dict-index	raw	prefix.p95_ns	1375
+result	pathological_prefix	dict-index	raw	prefix.p99_ns	1375
+result	pathological_prefix	dict-index	raw	render.p50_ns	250
+result	pathological_prefix	dict-index	raw	render.p95_ns	292
+result	pathological_prefix	dict-index	raw	render.p99_ns	292
+result	pathological_prefix	dict-index	raw	exact.hit.p50_ns	375
+result	pathological_prefix	dict-index	raw	exact.hit.p95_ns	375
+result	pathological_prefix	dict-index	raw	exact.hit.p99_ns	375
+result	pathological_prefix	dict-index	raw	exact.miss.p50_ns	375
+result	pathological_prefix	dict-index	raw	exact.miss.p95_ns	375
+result	pathological_prefix	dict-index	raw	exact.miss.p99_ns	375
+result	pathological_prefix	dict-index	raw	prefix.zero.p50_ns	333
+result	pathological_prefix	dict-index	raw	prefix.zero.p95_ns	333
+result	pathological_prefix	dict-index	raw	prefix.zero.p99_ns	333
+result	pathological_prefix	dict-index	raw	prefix.one.p50_ns	459
+result	pathological_prefix	dict-index	raw	prefix.one.p95_ns	459
+result	pathological_prefix	dict-index	raw	prefix.one.p99_ns	459
+result	pathological_prefix	dict-index	raw	prefix.many.p50_ns	-
+result	pathological_prefix	dict-index	raw	prefix.many.p95_ns	-
+result	pathological_prefix	dict-index	raw	prefix.many.p99_ns	-
+result	pathological_prefix	dict-index	raw	prefix.pathological.p50_ns	1375
+result	pathological_prefix	dict-index	raw	prefix.pathological.p95_ns	1375
+result	pathological_prefix	dict-index	raw	prefix.pathological.p99_ns	1375
+result	pathological_prefix	dict-index	dictzip	artifact_bytes	974
+result	pathological_prefix	dict-index	dictzip	build_ns	6743750
+sample	pathological_prefix	dict-index	dictzip	open	0	275375
+sample	pathological_prefix	dict-index	dictzip	open	1	66250
+sample	pathological_prefix	dict-index	dictzip	open	2	48916
+sample	pathological_prefix	dict-index	dictzip	open	3	49250
+sample	pathological_prefix	dict-index	dictzip	open	4	44125
+sample	pathological_prefix	dict-index	dictzip	open	5	42083
+sample	pathological_prefix	dict-index	dictzip	open	6	42292
+sample	pathological_prefix	dict-index	dictzip	open	7	41292
+sample	pathological_prefix	dict-index	dictzip	open	8	40167
+sample	pathological_prefix	dict-index	dictzip	open	9	39917
+sample	pathological_prefix	dict-index	dictzip	open	10	39709
+sample	pathological_prefix	dict-index	dictzip	open	11	39583
+sample	pathological_prefix	dict-index	dictzip	open	12	54458
+sample	pathological_prefix	dict-index	dictzip	open	13	43000
+sample	pathological_prefix	dict-index	dictzip	open	14	48584
+sample	pathological_prefix	dict-index	dictzip	open	15	40084
+sample	pathological_prefix	dict-index	dictzip	open	16	53083
+sample	pathological_prefix	dict-index	dictzip	open	17	40666
+sample	pathological_prefix	dict-index	dictzip	open	18	39375
+sample	pathological_prefix	dict-index	dictzip	open	19	39458
+sample	pathological_prefix	dict-index	dictzip	open	20	41167
+sample	pathological_prefix	dict-index	dictzip	open	21	39416
+sample	pathological_prefix	dict-index	dictzip	open	22	39208
+sample	pathological_prefix	dict-index	dictzip	open	23	39292
+sample	pathological_prefix	dict-index	dictzip	open	24	50542
+result	pathological_prefix	dict-index	dictzip	open_ns	41292
+result	pathological_prefix	dict-index	dictzip	semantic_digest	16546272643597045831
+result	pathological_prefix	dict-index	dictzip	query_checksum	17872557059903891012
+result	pathological_prefix	dict-index	dictzip	outputs	19
+result	pathological_prefix	dict-index	dictzip	logical_prose_bytes	3046
+sample	pathological_prefix	dict-index	dictzip	exact	0	12459
+sample	pathological_prefix	dict-index	dictzip	exact	1	1166
+sample	pathological_prefix	dict-index	dictzip	exact	2	1417
+sample	pathological_prefix	dict-index	dictzip	exact	3	708
+sample	pathological_prefix	dict-index	dictzip	prefix	0	2666
+sample	pathological_prefix	dict-index	dictzip	prefix	1	1250
+sample	pathological_prefix	dict-index	dictzip	prefix	2	792
+sample	pathological_prefix	dict-index	dictzip	prefix	3	3875
+sample	pathological_prefix	dict-index	dictzip	render	0	4617084
+sample	pathological_prefix	dict-index	dictzip	render	1	6126333
+sample	pathological_prefix	dict-index	dictzip	render	2	8671458
+sample	pathological_prefix	dict-index	dictzip	render	3	5425833
+result	pathological_prefix	dict-index	dictzip	exact.p50_ns	1417
+result	pathological_prefix	dict-index	dictzip	exact.p95_ns	12459
+result	pathological_prefix	dict-index	dictzip	exact.p99_ns	12459
+result	pathological_prefix	dict-index	dictzip	prefix.p50_ns	2666
+result	pathological_prefix	dict-index	dictzip	prefix.p95_ns	3875
+result	pathological_prefix	dict-index	dictzip	prefix.p99_ns	3875
+result	pathological_prefix	dict-index	dictzip	render.p50_ns	6126333
+result	pathological_prefix	dict-index	dictzip	render.p95_ns	8671458
+result	pathological_prefix	dict-index	dictzip	render.p99_ns	8671458
+result	pathological_prefix	dict-index	dictzip	exact.hit.p50_ns	12459
+result	pathological_prefix	dict-index	dictzip	exact.hit.p95_ns	12459
+result	pathological_prefix	dict-index	dictzip	exact.hit.p99_ns	12459
+result	pathological_prefix	dict-index	dictzip	exact.miss.p50_ns	1166
+result	pathological_prefix	dict-index	dictzip	exact.miss.p95_ns	1166
+result	pathological_prefix	dict-index	dictzip	exact.miss.p99_ns	1166
+result	pathological_prefix	dict-index	dictzip	prefix.zero.p50_ns	2666
+result	pathological_prefix	dict-index	dictzip	prefix.zero.p95_ns	2666
+result	pathological_prefix	dict-index	dictzip	prefix.zero.p99_ns	2666
+result	pathological_prefix	dict-index	dictzip	prefix.one.p50_ns	1250
+result	pathological_prefix	dict-index	dictzip	prefix.one.p95_ns	1250
+result	pathological_prefix	dict-index	dictzip	prefix.one.p99_ns	1250
+result	pathological_prefix	dict-index	dictzip	prefix.many.p50_ns	-
+result	pathological_prefix	dict-index	dictzip	prefix.many.p95_ns	-
+result	pathological_prefix	dict-index	dictzip	prefix.many.p99_ns	-
+result	pathological_prefix	dict-index	dictzip	prefix.pathological.p50_ns	3875
+result	pathological_prefix	dict-index	dictzip	prefix.pathological.p95_ns	3875
+result	pathological_prefix	dict-index	dictzip	prefix.pathological.p99_ns	3875
+result	pathological_prefix	slob	raw	artifact_bytes	5187
+result	pathological_prefix	slob	raw	build_ns	12102541
+sample	pathological_prefix	slob	raw	open	0	154166
+sample	pathological_prefix	slob	raw	open	1	83417
+sample	pathological_prefix	slob	raw	open	2	66958
+sample	pathological_prefix	slob	raw	open	3	64875
+sample	pathological_prefix	slob	raw	open	4	65417
+sample	pathological_prefix	slob	raw	open	5	58917
+sample	pathological_prefix	slob	raw	open	6	60583
+sample	pathological_prefix	slob	raw	open	7	59292
+sample	pathological_prefix	slob	raw	open	8	65375
+sample	pathological_prefix	slob	raw	open	9	57292
+sample	pathological_prefix	slob	raw	open	10	57125
+sample	pathological_prefix	slob	raw	open	11	57875
+sample	pathological_prefix	slob	raw	open	12	68917
+sample	pathological_prefix	slob	raw	open	13	59417
+sample	pathological_prefix	slob	raw	open	14	58333
+sample	pathological_prefix	slob	raw	open	15	63709
+sample	pathological_prefix	slob	raw	open	16	60042
+sample	pathological_prefix	slob	raw	open	17	57458
+sample	pathological_prefix	slob	raw	open	18	56541
+sample	pathological_prefix	slob	raw	open	19	56750
+sample	pathological_prefix	slob	raw	open	20	56041
+sample	pathological_prefix	slob	raw	open	21	57042
+sample	pathological_prefix	slob	raw	open	22	63167
+sample	pathological_prefix	slob	raw	open	23	247792
+sample	pathological_prefix	slob	raw	open	24	62708
+result	pathological_prefix	slob	raw	open_ns	60042
+result	pathological_prefix	slob	raw	semantic_digest	16546272643597045831
+result	pathological_prefix	slob	raw	query_checksum	17872557059903891012
+result	pathological_prefix	slob	raw	outputs	19
+result	pathological_prefix	slob	raw	logical_prose_bytes	3046
+sample	pathological_prefix	slob	raw	exact	0	252250
+sample	pathological_prefix	slob	raw	exact	1	188917
+sample	pathological_prefix	slob	raw	exact	2	189041
+sample	pathological_prefix	slob	raw	exact	3	188333
+sample	pathological_prefix	slob	raw	prefix	0	262625
+sample	pathological_prefix	slob	raw	prefix	1	1020750
+sample	pathological_prefix	slob	raw	prefix	2	388209
+sample	pathological_prefix	slob	raw	prefix	3	618041
+sample	pathological_prefix	slob	raw	render	0	48000
+sample	pathological_prefix	slob	raw	render	1	22250
+sample	pathological_prefix	slob	raw	render	2	19583
+sample	pathological_prefix	slob	raw	render	3	18916
+result	pathological_prefix	slob	raw	exact.p50_ns	189041
+result	pathological_prefix	slob	raw	exact.p95_ns	252250
+result	pathological_prefix	slob	raw	exact.p99_ns	252250
+result	pathological_prefix	slob	raw	prefix.p50_ns	618041
+result	pathological_prefix	slob	raw	prefix.p95_ns	1020750
+result	pathological_prefix	slob	raw	prefix.p99_ns	1020750
+result	pathological_prefix	slob	raw	render.p50_ns	22250
+result	pathological_prefix	slob	raw	render.p95_ns	48000
+result	pathological_prefix	slob	raw	render.p99_ns	48000
+result	pathological_prefix	slob	raw	exact.hit.p50_ns	252250
+result	pathological_prefix	slob	raw	exact.hit.p95_ns	252250
+result	pathological_prefix	slob	raw	exact.hit.p99_ns	252250
+result	pathological_prefix	slob	raw	exact.miss.p50_ns	188917
+result	pathological_prefix	slob	raw	exact.miss.p95_ns	188917
+result	pathological_prefix	slob	raw	exact.miss.p99_ns	188917
+result	pathological_prefix	slob	raw	prefix.zero.p50_ns	388209
+result	pathological_prefix	slob	raw	prefix.zero.p95_ns	388209
+result	pathological_prefix	slob	raw	prefix.zero.p99_ns	388209
+result	pathological_prefix	slob	raw	prefix.one.p50_ns	1020750
+result	pathological_prefix	slob	raw	prefix.one.p95_ns	1020750
+result	pathological_prefix	slob	raw	prefix.one.p99_ns	1020750
+result	pathological_prefix	slob	raw	prefix.many.p50_ns	-
+result	pathological_prefix	slob	raw	prefix.many.p95_ns	-
+result	pathological_prefix	slob	raw	prefix.many.p99_ns	-
+result	pathological_prefix	slob	raw	prefix.pathological.p50_ns	618041
+result	pathological_prefix	slob	raw	prefix.pathological.p95_ns	618041
+result	pathological_prefix	slob	raw	prefix.pathological.p99_ns	618041
+result	pathological_prefix	slob	lzma2	artifact_bytes	2276
+result	pathological_prefix	slob	lzma2	build_ns	13749084
+sample	pathological_prefix	slob	lzma2	open	0	152417
+sample	pathological_prefix	slob	lzma2	open	1	70625
+sample	pathological_prefix	slob	lzma2	open	2	62625
+sample	pathological_prefix	slob	lzma2	open	3	61625
+sample	pathological_prefix	slob	lzma2	open	4	57500
+sample	pathological_prefix	slob	lzma2	open	5	57459
+sample	pathological_prefix	slob	lzma2	open	6	58417
+sample	pathological_prefix	slob	lzma2	open	7	57667
+sample	pathological_prefix	slob	lzma2	open	8	59209
+sample	pathological_prefix	slob	lzma2	open	9	57542
+sample	pathological_prefix	slob	lzma2	open	10	57958
+sample	pathological_prefix	slob	lzma2	open	11	59041
+sample	pathological_prefix	slob	lzma2	open	12	61500
+sample	pathological_prefix	slob	lzma2	open	13	57625
+sample	pathological_prefix	slob	lzma2	open	14	57458
+sample	pathological_prefix	slob	lzma2	open	15	57250
+sample	pathological_prefix	slob	lzma2	open	16	57500
+sample	pathological_prefix	slob	lzma2	open	17	57792
+sample	pathological_prefix	slob	lzma2	open	18	60250
+sample	pathological_prefix	slob	lzma2	open	19	58125
+sample	pathological_prefix	slob	lzma2	open	20	56667
+sample	pathological_prefix	slob	lzma2	open	21	57334
+sample	pathological_prefix	slob	lzma2	open	22	55583
+sample	pathological_prefix	slob	lzma2	open	23	55750
+sample	pathological_prefix	slob	lzma2	open	24	57917
+result	pathological_prefix	slob	lzma2	open_ns	57792
+result	pathological_prefix	slob	lzma2	semantic_digest	16546272643597045831
+result	pathological_prefix	slob	lzma2	query_checksum	17872557059903891012
+result	pathological_prefix	slob	lzma2	outputs	19
+result	pathological_prefix	slob	lzma2	logical_prose_bytes	3046
+sample	pathological_prefix	slob	lzma2	exact	0	259084
+sample	pathological_prefix	slob	lzma2	exact	1	188583
+sample	pathological_prefix	slob	lzma2	exact	2	188125
+sample	pathological_prefix	slob	lzma2	exact	3	187792
+sample	pathological_prefix	slob	lzma2	prefix	0	672166
+sample	pathological_prefix	slob	lzma2	prefix	1	623833
+sample	pathological_prefix	slob	lzma2	prefix	2	384875
+sample	pathological_prefix	slob	lzma2	prefix	3	617041
+sample	pathological_prefix	slob	lzma2	render	0	32458
+sample	pathological_prefix	slob	lzma2	render	1	19000
+sample	pathological_prefix	slob	lzma2	render	2	18084
+sample	pathological_prefix	slob	lzma2	render	3	17958
+result	pathological_prefix	slob	lzma2	exact.p50_ns	188583
+result	pathological_prefix	slob	lzma2	exact.p95_ns	259084
+result	pathological_prefix	slob	lzma2	exact.p99_ns	259084
+result	pathological_prefix	slob	lzma2	prefix.p50_ns	623833
+result	pathological_prefix	slob	lzma2	prefix.p95_ns	672166
+result	pathological_prefix	slob	lzma2	prefix.p99_ns	672166
+result	pathological_prefix	slob	lzma2	render.p50_ns	19000
+result	pathological_prefix	slob	lzma2	render.p95_ns	32458
+result	pathological_prefix	slob	lzma2	render.p99_ns	32458
+result	pathological_prefix	slob	lzma2	exact.hit.p50_ns	259084
+result	pathological_prefix	slob	lzma2	exact.hit.p95_ns	259084
+result	pathological_prefix	slob	lzma2	exact.hit.p99_ns	259084
+result	pathological_prefix	slob	lzma2	exact.miss.p50_ns	188583
+result	pathological_prefix	slob	lzma2	exact.miss.p95_ns	188583
+result	pathological_prefix	slob	lzma2	exact.miss.p99_ns	188583
+result	pathological_prefix	slob	lzma2	prefix.zero.p50_ns	672166
+result	pathological_prefix	slob	lzma2	prefix.zero.p95_ns	672166
+result	pathological_prefix	slob	lzma2	prefix.zero.p99_ns	672166
+result	pathological_prefix	slob	lzma2	prefix.one.p50_ns	623833
+result	pathological_prefix	slob	lzma2	prefix.one.p95_ns	623833
+result	pathological_prefix	slob	lzma2	prefix.one.p99_ns	623833
+result	pathological_prefix	slob	lzma2	prefix.many.p50_ns	-
+result	pathological_prefix	slob	lzma2	prefix.many.p95_ns	-
+result	pathological_prefix	slob	lzma2	prefix.many.p99_ns	-
+result	pathological_prefix	slob	lzma2	prefix.pathological.p50_ns	617041
+result	pathological_prefix	slob	lzma2	prefix.pathological.p95_ns	617041
+result	pathological_prefix	slob	lzma2	prefix.pathological.p99_ns	617041

@@ -1,0 +1,213 @@
+meta	global	zig_version	0.16.0
+meta	global	target	macos-aarch64
+meta	global	seed	5495895892047298561
+meta	pathological_prefix	records	8
+meta	pathological_prefix	repetitions	4
+meta	pathological_prefix	warmup	1
+meta	pathological_prefix	seed	5495895892047298561
+meta	pathological_prefix	semantic_digest	3634334578162408469
+meta	pathological_prefix	logical_prose_bytes	1520
+meta	pathological_prefix	exact_hit_probes	2
+meta	pathological_prefix	exact_miss_probes	2
+meta	pathological_prefix	prefix_zero_probes	2
+meta	pathological_prefix	prefix_one_probes	1
+meta	pathological_prefix	prefix_many_probes	0
+meta	pathological_prefix	prefix_pathological_probes	1
+result	pathological_prefix	v1	raw	artifact_bytes	2344
+result	pathological_prefix	v1	raw	build_ns	79875
+sample	pathological_prefix	v1	raw	open	0	10375
+result	pathological_prefix	v1	raw	open.p50_ns	10375
+result	pathological_prefix	v1	raw	open.p95_ns	10375
+result	pathological_prefix	v1	raw	open.p99_ns	10375
+result	pathological_prefix	v1	raw	open_ns	10375
+result	pathological_prefix	v1	raw	semantic_digest	3634334578162408469
+result	pathological_prefix	v1	raw	query_checksum	2651549580420261282
+result	pathological_prefix	v1	raw	outputs	11
+sample	pathological_prefix	v1	raw	exact	0	417
+sample	pathological_prefix	v1	raw	exact	1	167
+sample	pathological_prefix	v1	raw	exact	2	667
+sample	pathological_prefix	v1	raw	exact	3	167
+result	pathological_prefix	v1	raw	exact.p50_ns	417
+result	pathological_prefix	v1	raw	exact.p95_ns	667
+result	pathological_prefix	v1	raw	exact.p99_ns	667
+sample	pathological_prefix	v1	raw	prefix	0	459
+sample	pathological_prefix	v1	raw	prefix	1	458
+sample	pathological_prefix	v1	raw	prefix	2	208
+sample	pathological_prefix	v1	raw	prefix	3	667
+result	pathological_prefix	v1	raw	prefix.p50_ns	459
+result	pathological_prefix	v1	raw	prefix.p95_ns	667
+result	pathological_prefix	v1	raw	prefix.p99_ns	667
+sample	pathological_prefix	v1	raw	render	0	2375
+sample	pathological_prefix	v1	raw	render	1	2333
+sample	pathological_prefix	v1	raw	render	2	2333
+sample	pathological_prefix	v1	raw	render	3	2375
+result	pathological_prefix	v1	raw	render.p50_ns	2375
+result	pathological_prefix	v1	raw	render.p95_ns	2375
+result	pathological_prefix	v1	raw	render.p99_ns	2375
+result	pathological_prefix	v1	raw	exact.hit.p50_ns	667
+result	pathological_prefix	v1	raw	exact.hit.p95_ns	667
+result	pathological_prefix	v1	raw	exact.hit.p99_ns	667
+result	pathological_prefix	v1	raw	exact.miss.p50_ns	167
+result	pathological_prefix	v1	raw	exact.miss.p95_ns	167
+result	pathological_prefix	v1	raw	exact.miss.p99_ns	167
+result	pathological_prefix	v1	raw	prefix.zero.p50_ns	459
+result	pathological_prefix	v1	raw	prefix.zero.p95_ns	459
+result	pathological_prefix	v1	raw	prefix.zero.p99_ns	459
+result	pathological_prefix	v1	raw	prefix.one.p50_ns	458
+result	pathological_prefix	v1	raw	prefix.one.p95_ns	458
+result	pathological_prefix	v1	raw	prefix.one.p99_ns	458
+result	pathological_prefix	v1	raw	prefix.many.p50_ns	-
+result	pathological_prefix	v1	raw	prefix.many.p95_ns	-
+result	pathological_prefix	v1	raw	prefix.many.p99_ns	-
+result	pathological_prefix	v1	raw	prefix.pathological.p50_ns	667
+result	pathological_prefix	v1	raw	prefix.pathological.p95_ns	667
+result	pathological_prefix	v1	raw	prefix.pathological.p99_ns	667
+result	pathological_prefix	v1	bzip3	artifact_bytes	1032
+result	pathological_prefix	v1	bzip3	build_ns	286250
+sample	pathological_prefix	v1	bzip3	open	0	4708
+result	pathological_prefix	v1	bzip3	open.p50_ns	4708
+result	pathological_prefix	v1	bzip3	open.p95_ns	4708
+result	pathological_prefix	v1	bzip3	open.p99_ns	4708
+result	pathological_prefix	v1	bzip3	open_ns	4708
+result	pathological_prefix	v1	bzip3	semantic_digest	3634334578162408469
+result	pathological_prefix	v1	bzip3	query_checksum	2651549580420261282
+result	pathological_prefix	v1	bzip3	outputs	11
+sample	pathological_prefix	v1	bzip3	exact	0	208
+sample	pathological_prefix	v1	bzip3	exact	1	125
+sample	pathological_prefix	v1	bzip3	exact	2	375
+sample	pathological_prefix	v1	bzip3	exact	3	83
+result	pathological_prefix	v1	bzip3	exact.p50_ns	208
+result	pathological_prefix	v1	bzip3	exact.p95_ns	375
+result	pathological_prefix	v1	bzip3	exact.p99_ns	375
+sample	pathological_prefix	v1	bzip3	prefix	0	250
+sample	pathological_prefix	v1	bzip3	prefix	1	291
+sample	pathological_prefix	v1	bzip3	prefix	2	125
+sample	pathological_prefix	v1	bzip3	prefix	3	375
+result	pathological_prefix	v1	bzip3	prefix.p50_ns	291
+result	pathological_prefix	v1	bzip3	prefix.p95_ns	375
+result	pathological_prefix	v1	bzip3	prefix.p99_ns	375
+sample	pathological_prefix	v1	bzip3	render	0	86834
+sample	pathological_prefix	v1	bzip3	render	1	78792
+sample	pathological_prefix	v1	bzip3	render	2	78333
+sample	pathological_prefix	v1	bzip3	render	3	78667
+result	pathological_prefix	v1	bzip3	render.p50_ns	78792
+result	pathological_prefix	v1	bzip3	render.p95_ns	86834
+result	pathological_prefix	v1	bzip3	render.p99_ns	86834
+result	pathological_prefix	v1	bzip3	exact.hit.p50_ns	375
+result	pathological_prefix	v1	bzip3	exact.hit.p95_ns	375
+result	pathological_prefix	v1	bzip3	exact.hit.p99_ns	375
+result	pathological_prefix	v1	bzip3	exact.miss.p50_ns	125
+result	pathological_prefix	v1	bzip3	exact.miss.p95_ns	125
+result	pathological_prefix	v1	bzip3	exact.miss.p99_ns	125
+result	pathological_prefix	v1	bzip3	prefix.zero.p50_ns	250
+result	pathological_prefix	v1	bzip3	prefix.zero.p95_ns	250
+result	pathological_prefix	v1	bzip3	prefix.zero.p99_ns	250
+result	pathological_prefix	v1	bzip3	prefix.one.p50_ns	291
+result	pathological_prefix	v1	bzip3	prefix.one.p95_ns	291
+result	pathological_prefix	v1	bzip3	prefix.one.p99_ns	291
+result	pathological_prefix	v1	bzip3	prefix.many.p50_ns	-
+result	pathological_prefix	v1	bzip3	prefix.many.p95_ns	-
+result	pathological_prefix	v1	bzip3	prefix.many.p99_ns	-
+result	pathological_prefix	v1	bzip3	prefix.pathological.p50_ns	375
+result	pathological_prefix	v1	bzip3	prefix.pathological.p95_ns	375
+result	pathological_prefix	v1	bzip3	prefix.pathological.p99_ns	375
+result	pathological_prefix	v2	raw.latency	artifact_bytes	12000
+result	pathological_prefix	v2	raw.latency	build_ns	272541
+sample	pathological_prefix	v2	raw.latency	open	0	41459
+result	pathological_prefix	v2	raw.latency	open.p50_ns	41459
+result	pathological_prefix	v2	raw.latency	open.p95_ns	41459
+result	pathological_prefix	v2	raw.latency	open.p99_ns	41459
+result	pathological_prefix	v2	raw.latency	open_ns	41459
+result	pathological_prefix	v2	raw.latency	semantic_digest	3634334578162408469
+result	pathological_prefix	v2	raw.latency	query_checksum	2651549580420261282
+result	pathological_prefix	v2	raw.latency	outputs	11
+result	pathological_prefix	v2	raw.latency	logical_prose_bytes	1520
+sample	pathological_prefix	v2	raw.latency	exact	0	208
+sample	pathological_prefix	v2	raw.latency	exact	1	84
+sample	pathological_prefix	v2	raw.latency	exact	2	334
+sample	pathological_prefix	v2	raw.latency	exact	3	84
+result	pathological_prefix	v2	raw.latency	exact.p50_ns	208
+result	pathological_prefix	v2	raw.latency	exact.p95_ns	334
+result	pathological_prefix	v2	raw.latency	exact.p99_ns	334
+sample	pathological_prefix	v2	raw.latency	prefix	0	167
+sample	pathological_prefix	v2	raw.latency	prefix	1	166
+sample	pathological_prefix	v2	raw.latency	prefix	2	42
+sample	pathological_prefix	v2	raw.latency	prefix	3	416
+result	pathological_prefix	v2	raw.latency	prefix.p50_ns	167
+result	pathological_prefix	v2	raw.latency	prefix.p95_ns	416
+result	pathological_prefix	v2	raw.latency	prefix.p99_ns	416
+sample	pathological_prefix	v2	raw.latency	render	0	83
+sample	pathological_prefix	v2	raw.latency	render	1	42
+sample	pathological_prefix	v2	raw.latency	render	2	83
+sample	pathological_prefix	v2	raw.latency	render	3	42
+result	pathological_prefix	v2	raw.latency	render.p50_ns	83
+result	pathological_prefix	v2	raw.latency	render.p95_ns	83
+result	pathological_prefix	v2	raw.latency	render.p99_ns	83
+result	pathological_prefix	v2	raw.latency	exact.hit.p50_ns	334
+result	pathological_prefix	v2	raw.latency	exact.hit.p95_ns	334
+result	pathological_prefix	v2	raw.latency	exact.hit.p99_ns	334
+result	pathological_prefix	v2	raw.latency	exact.miss.p50_ns	84
+result	pathological_prefix	v2	raw.latency	exact.miss.p95_ns	84
+result	pathological_prefix	v2	raw.latency	exact.miss.p99_ns	84
+result	pathological_prefix	v2	raw.latency	prefix.zero.p50_ns	167
+result	pathological_prefix	v2	raw.latency	prefix.zero.p95_ns	167
+result	pathological_prefix	v2	raw.latency	prefix.zero.p99_ns	167
+result	pathological_prefix	v2	raw.latency	prefix.one.p50_ns	166
+result	pathological_prefix	v2	raw.latency	prefix.one.p95_ns	166
+result	pathological_prefix	v2	raw.latency	prefix.one.p99_ns	166
+result	pathological_prefix	v2	raw.latency	prefix.many.p50_ns	-
+result	pathological_prefix	v2	raw.latency	prefix.many.p95_ns	-
+result	pathological_prefix	v2	raw.latency	prefix.many.p99_ns	-
+result	pathological_prefix	v2	raw.latency	prefix.pathological.p50_ns	416
+result	pathological_prefix	v2	raw.latency	prefix.pathological.p95_ns	416
+result	pathological_prefix	v2	raw.latency	prefix.pathological.p99_ns	416
+result	pathological_prefix	v2	bzip3.latency	artifact_bytes	10656
+result	pathological_prefix	v2	bzip3.latency	build_ns	2968625
+sample	pathological_prefix	v2	bzip3.latency	open	0	46666
+result	pathological_prefix	v2	bzip3.latency	open.p50_ns	46666
+result	pathological_prefix	v2	bzip3.latency	open.p95_ns	46666
+result	pathological_prefix	v2	bzip3.latency	open.p99_ns	46666
+result	pathological_prefix	v2	bzip3.latency	open_ns	46666
+result	pathological_prefix	v2	bzip3.latency	semantic_digest	3634334578162408469
+result	pathological_prefix	v2	bzip3.latency	query_checksum	2651549580420261282
+result	pathological_prefix	v2	bzip3.latency	outputs	11
+result	pathological_prefix	v2	bzip3.latency	logical_prose_bytes	1520
+sample	pathological_prefix	v2	bzip3.latency	exact	0	167
+sample	pathological_prefix	v2	bzip3.latency	exact	1	83
+sample	pathological_prefix	v2	bzip3.latency	exact	2	292
+sample	pathological_prefix	v2	bzip3.latency	exact	3	84
+result	pathological_prefix	v2	bzip3.latency	exact.p50_ns	167
+result	pathological_prefix	v2	bzip3.latency	exact.p95_ns	292
+result	pathological_prefix	v2	bzip3.latency	exact.p99_ns	292
+sample	pathological_prefix	v2	bzip3.latency	prefix	0	167
+sample	pathological_prefix	v2	bzip3.latency	prefix	1	250
+sample	pathological_prefix	v2	bzip3.latency	prefix	2	84
+sample	pathological_prefix	v2	bzip3.latency	prefix	3	375
+result	pathological_prefix	v2	bzip3.latency	prefix.p50_ns	250
+result	pathological_prefix	v2	bzip3.latency	prefix.p95_ns	375
+result	pathological_prefix	v2	bzip3.latency	prefix.p99_ns	375
+sample	pathological_prefix	v2	bzip3.latency	render	0	71292
+sample	pathological_prefix	v2	bzip3.latency	render	1	71875
+sample	pathological_prefix	v2	bzip3.latency	render	2	72041
+sample	pathological_prefix	v2	bzip3.latency	render	3	71583
+result	pathological_prefix	v2	bzip3.latency	render.p50_ns	71875
+result	pathological_prefix	v2	bzip3.latency	render.p95_ns	72041
+result	pathological_prefix	v2	bzip3.latency	render.p99_ns	72041
+result	pathological_prefix	v2	bzip3.latency	exact.hit.p50_ns	292
+result	pathological_prefix	v2	bzip3.latency	exact.hit.p95_ns	292
+result	pathological_prefix	v2	bzip3.latency	exact.hit.p99_ns	292
+result	pathological_prefix	v2	bzip3.latency	exact.miss.p50_ns	84
+result	pathological_prefix	v2	bzip3.latency	exact.miss.p95_ns	84
+result	pathological_prefix	v2	bzip3.latency	exact.miss.p99_ns	84
+result	pathological_prefix	v2	bzip3.latency	prefix.zero.p50_ns	167
+result	pathological_prefix	v2	bzip3.latency	prefix.zero.p95_ns	167
+result	pathological_prefix	v2	bzip3.latency	prefix.zero.p99_ns	167
+result	pathological_prefix	v2	bzip3.latency	prefix.one.p50_ns	250
+result	pathological_prefix	v2	bzip3.latency	prefix.one.p95_ns	250
+result	pathological_prefix	v2	bzip3.latency	prefix.one.p99_ns	250
+result	pathological_prefix	v2	bzip3.latency	prefix.many.p50_ns	-
+result	pathological_prefix	v2	bzip3.latency	prefix.many.p95_ns	-
+result	pathological_prefix	v2	bzip3.latency	prefix.many.p99_ns	-
+result	pathological_prefix	v2	bzip3.latency	prefix.pathological.p50_ns	375
+result	pathological_prefix	v2	bzip3.latency	prefix.pathological.p95_ns	375
+result	pathological_prefix	v2	bzip3.latency	prefix.pathological.p99_ns	375

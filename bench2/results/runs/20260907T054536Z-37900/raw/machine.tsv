@@ -1,0 +1,9 @@
+meta	global	host	Darwin mileswirht 24.6.0 Darwin Kernel Version 24.6.0: Mon Jan 19 21:59:23 PST 2026; root:xnu-11417.140.69.708.3~1/RELEASE_ARM64_T6030 arm64 Darwin
+meta	global	zig	0.16.0
+meta	global	nix	nix (Lix, like Nix) 2.95.2
+meta	global	python	Python 3.14.7
+meta	global	sqlite	Turso 0.7.1
+meta	global	dictfmt	unavailable
+meta	global	dictd	unavailable
+meta	global	dictzip	unavailable
+meta	global	zstd	*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***

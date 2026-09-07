@@ -1,0 +1,259 @@
+meta	flat	records	32
+meta	flat	semantic_digest	6775974522125595869
+result	flat	sqlite	raw	artifact_bytes	20480
+result	flat	sqlite	raw	build_ns	2656083
+sample	flat	sqlite	raw	open	0	283000
+sample	flat	sqlite	raw	open	1	232625
+sample	flat	sqlite	raw	open	2	72166
+sample	flat	sqlite	raw	open	3	57250
+sample	flat	sqlite	raw	open	4	220583
+sample	flat	sqlite	raw	open	5	67250
+sample	flat	sqlite	raw	open	6	53500
+sample	flat	sqlite	raw	open	7	57958
+sample	flat	sqlite	raw	open	8	104125
+sample	flat	sqlite	raw	open	9	49583
+sample	flat	sqlite	raw	open	10	47542
+sample	flat	sqlite	raw	open	11	46250
+sample	flat	sqlite	raw	open	12	47750
+sample	flat	sqlite	raw	open	13	45833
+sample	flat	sqlite	raw	open	14	47125
+sample	flat	sqlite	raw	open	15	48792
+sample	flat	sqlite	raw	open	16	46583
+sample	flat	sqlite	raw	open	17	44167
+sample	flat	sqlite	raw	open	18	45667
+sample	flat	sqlite	raw	open	19	45208
+sample	flat	sqlite	raw	open	20	44791
+sample	flat	sqlite	raw	open	21	43792
+sample	flat	sqlite	raw	open	22	43958
+sample	flat	sqlite	raw	open	23	44292
+sample	flat	sqlite	raw	open	24	43791
+result	flat	sqlite	raw	open_ns	47542
+result	flat	sqlite	raw	semantic_digest	6775974522125595869
+result	flat	sqlite	raw	query_checksum	374819840078316771
+result	flat	sqlite	raw	outputs	135
+result	flat	sqlite	raw	logical_prose_bytes	6102
+sample	flat	sqlite	raw	exact	0	5250
+sample	flat	sqlite	raw	exact	1	6041
+sample	flat	sqlite	raw	exact	2	5125
+sample	flat	sqlite	raw	exact	3	5042
+sample	flat	sqlite	raw	exact	4	5458
+sample	flat	sqlite	raw	exact	5	4750
+sample	flat	sqlite	raw	exact	6	4458
+sample	flat	sqlite	raw	exact	7	4583
+sample	flat	sqlite	raw	prefix	0	5791
+sample	flat	sqlite	raw	prefix	1	6875
+sample	flat	sqlite	raw	prefix	2	10959
+sample	flat	sqlite	raw	prefix	3	11625
+sample	flat	sqlite	raw	prefix	4	9459
+sample	flat	sqlite	raw	prefix	5	6125
+sample	flat	sqlite	raw	prefix	6	10750
+sample	flat	sqlite	raw	prefix	7	10500
+sample	flat	sqlite	raw	render	0	5750
+sample	flat	sqlite	raw	render	1	5250
+sample	flat	sqlite	raw	render	2	4666
+sample	flat	sqlite	raw	render	3	4708
+sample	flat	sqlite	raw	render	4	4875
+sample	flat	sqlite	raw	render	5	4583
+sample	flat	sqlite	raw	render	6	4375
+sample	flat	sqlite	raw	render	7	6292
+result	flat	sqlite	raw	exact.p50_ns	5125
+result	flat	sqlite	raw	exact.p95_ns	6041
+result	flat	sqlite	raw	exact.p99_ns	6041
+result	flat	sqlite	raw	prefix.p50_ns	10500
+result	flat	sqlite	raw	prefix.p95_ns	11625
+result	flat	sqlite	raw	prefix.p99_ns	11625
+result	flat	sqlite	raw	render.p50_ns	4875
+result	flat	sqlite	raw	render.p95_ns	6292
+result	flat	sqlite	raw	render.p99_ns	6292
+result	flat	sqlite	raw	exact.hit.p50_ns	5125
+result	flat	sqlite	raw	exact.hit.p95_ns	5458
+result	flat	sqlite	raw	exact.hit.p99_ns	5458
+result	flat	sqlite	raw	exact.miss.p50_ns	5042
+result	flat	sqlite	raw	exact.miss.p95_ns	6041
+result	flat	sqlite	raw	exact.miss.p99_ns	6041
+result	flat	sqlite	raw	prefix.zero.p50_ns	6125
+result	flat	sqlite	raw	prefix.zero.p95_ns	6125
+result	flat	sqlite	raw	prefix.zero.p99_ns	6125
+result	flat	sqlite	raw	prefix.one.p50_ns	9459
+result	flat	sqlite	raw	prefix.one.p95_ns	9459
+result	flat	sqlite	raw	prefix.one.p99_ns	9459
+result	flat	sqlite	raw	prefix.many.p50_ns	10959
+result	flat	sqlite	raw	prefix.many.p95_ns	11625
+result	flat	sqlite	raw	prefix.many.p99_ns	11625
+result	flat	sqlite	raw	prefix.pathological.p50_ns	-
+result	flat	sqlite	raw	prefix.pathological.p95_ns	-
+result	flat	sqlite	raw	prefix.pathological.p99_ns	-
+result	flat	sqlite	zlib	artifact_bytes	1160
+unavailable	flat	sqlite	zlib	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	flat	sqlite	zstd	artifact_bytes	981
+unavailable	flat	sqlite	zstd	reason	SQLite cannot seek compressed pages without a decompression staging policy
+result	flat	stardict	raw	artifact_bytes	6974
+result	flat	stardict	raw	build_ns	939542
+sample	flat	stardict	raw	open	0	56708
+sample	flat	stardict	raw	open	1	75917
+sample	flat	stardict	raw	open	2	46750
+sample	flat	stardict	raw	open	3	32875
+sample	flat	stardict	raw	open	4	31625
+sample	flat	stardict	raw	open	5	31459
+sample	flat	stardict	raw	open	6	31708
+sample	flat	stardict	raw	open	7	30083
+sample	flat	stardict	raw	open	8	28500
+sample	flat	stardict	raw	open	9	28917
+sample	flat	stardict	raw	open	10	29584
+sample	flat	stardict	raw	open	11	28375
+sample	flat	stardict	raw	open	12	28084
+sample	flat	stardict	raw	open	13	29042
+sample	flat	stardict	raw	open	14	28917
+sample	flat	stardict	raw	open	15	28250
+sample	flat	stardict	raw	open	16	28292
+sample	flat	stardict	raw	open	17	28292
+sample	flat	stardict	raw	open	18	28292
+sample	flat	stardict	raw	open	19	27875
+sample	flat	stardict	raw	open	20	27750
+sample	flat	stardict	raw	open	21	28334
+sample	flat	stardict	raw	open	22	28125
+sample	flat	stardict	raw	open	23	28250
+sample	flat	stardict	raw	open	24	27625
+result	flat	stardict	raw	open_ns	28500
+result	flat	stardict	raw	semantic_digest	6775974522125595869
+result	flat	stardict	raw	query_checksum	374819840078316771
+result	flat	stardict	raw	outputs	135
+result	flat	stardict	raw	logical_prose_bytes	6102
+sample	flat	stardict	raw	exact	0	541
+sample	flat	stardict	raw	exact	1	459
+sample	flat	stardict	raw	exact	2	459
+sample	flat	stardict	raw	exact	3	333
+sample	flat	stardict	raw	exact	4	458
+sample	flat	stardict	raw	exact	5	292
+sample	flat	stardict	raw	exact	6	416
+sample	flat	stardict	raw	exact	7	500
+sample	flat	stardict	raw	prefix	0	291
+sample	flat	stardict	raw	prefix	1	500
+sample	flat	stardict	raw	prefix	2	3833
+sample	flat	stardict	raw	prefix	3	3625
+sample	flat	stardict	raw	prefix	4	542
+sample	flat	stardict	raw	prefix	5	375
+sample	flat	stardict	raw	prefix	6	3667
+sample	flat	stardict	raw	prefix	7	3791
+sample	flat	stardict	raw	render	0	417
+sample	flat	stardict	raw	render	1	291
+sample	flat	stardict	raw	render	2	250
+sample	flat	stardict	raw	render	3	167
+sample	flat	stardict	raw	render	4	208
+sample	flat	stardict	raw	render	5	167
+sample	flat	stardict	raw	render	6	208
+sample	flat	stardict	raw	render	7	167
+result	flat	stardict	raw	exact.p50_ns	459
+result	flat	stardict	raw	exact.p95_ns	541
+result	flat	stardict	raw	exact.p99_ns	541
+result	flat	stardict	raw	prefix.p50_ns	3625
+result	flat	stardict	raw	prefix.p95_ns	3833
+result	flat	stardict	raw	prefix.p99_ns	3833
+result	flat	stardict	raw	render.p50_ns	208
+result	flat	stardict	raw	render.p95_ns	417
+result	flat	stardict	raw	render.p99_ns	417
+result	flat	stardict	raw	exact.hit.p50_ns	459
+result	flat	stardict	raw	exact.hit.p95_ns	541
+result	flat	stardict	raw	exact.hit.p99_ns	541
+result	flat	stardict	raw	exact.miss.p50_ns	333
+result	flat	stardict	raw	exact.miss.p95_ns	459
+result	flat	stardict	raw	exact.miss.p99_ns	459
+result	flat	stardict	raw	prefix.zero.p50_ns	375
+result	flat	stardict	raw	prefix.zero.p95_ns	375
+result	flat	stardict	raw	prefix.zero.p99_ns	375
+result	flat	stardict	raw	prefix.one.p50_ns	542
+result	flat	stardict	raw	prefix.one.p95_ns	542
+result	flat	stardict	raw	prefix.one.p99_ns	542
+result	flat	stardict	raw	prefix.many.p50_ns	3791
+result	flat	stardict	raw	prefix.many.p95_ns	3833
+result	flat	stardict	raw	prefix.many.p99_ns	3833
+result	flat	stardict	raw	prefix.pathological.p50_ns	-
+result	flat	stardict	raw	prefix.pathological.p95_ns	-
+result	flat	stardict	raw	prefix.pathological.p99_ns	-
+result	flat	stardict	gzip	artifact_bytes	1147
+unavailable	flat	stardict	gzip	reason	gzip is not StarDict dictzip random access; raw reader is the measured query baseline
+result	flat	dict-index	raw	artifact_bytes	6895
+result	flat	dict-index	raw	build_ns	614875
+sample	flat	dict-index	raw	open	0	330834
+sample	flat	dict-index	raw	open	1	82250
+sample	flat	dict-index	raw	open	2	37541
+sample	flat	dict-index	raw	open	3	42917
+sample	flat	dict-index	raw	open	4	31792
+sample	flat	dict-index	raw	open	5	31541
+sample	flat	dict-index	raw	open	6	30708
+sample	flat	dict-index	raw	open	7	29875
+sample	flat	dict-index	raw	open	8	31333
+sample	flat	dict-index	raw	open	9	30250
+sample	flat	dict-index	raw	open	10	29541
+sample	flat	dict-index	raw	open	11	40708
+sample	flat	dict-index	raw	open	12	29792
+sample	flat	dict-index	raw	open	13	28833
+sample	flat	dict-index	raw	open	14	34666
+sample	flat	dict-index	raw	open	15	29667
+sample	flat	dict-index	raw	open	16	29250
+sample	flat	dict-index	raw	open	17	29125
+sample	flat	dict-index	raw	open	18	29167
+sample	flat	dict-index	raw	open	19	28958
+sample	flat	dict-index	raw	open	20	29000
+sample	flat	dict-index	raw	open	21	28416
+sample	flat	dict-index	raw	open	22	34000
+sample	flat	dict-index	raw	open	23	28916
+sample	flat	dict-index	raw	open	24	29167
+result	flat	dict-index	raw	open_ns	29875
+result	flat	dict-index	raw	semantic_digest	6775974522125595869
+result	flat	dict-index	raw	query_checksum	374819840078316771
+result	flat	dict-index	raw	outputs	135
+result	flat	dict-index	raw	logical_prose_bytes	6102
+sample	flat	dict-index	raw	exact	0	1458
+sample	flat	dict-index	raw	exact	1	916
+sample	flat	dict-index	raw	exact	2	875
+sample	flat	dict-index	raw	exact	3	750
+sample	flat	dict-index	raw	exact	4	833
+sample	flat	dict-index	raw	exact	5	584
+sample	flat	dict-index	raw	exact	6	750
+sample	flat	dict-index	raw	exact	7	1000
+sample	flat	dict-index	raw	prefix	0	750
+sample	flat	dict-index	raw	prefix	1	1041
+sample	flat	dict-index	raw	prefix	2	6916
+sample	flat	dict-index	raw	prefix	3	6417
+sample	flat	dict-index	raw	prefix	4	1292
+sample	flat	dict-index	raw	prefix	5	709
+sample	flat	dict-index	raw	prefix	6	5875
+sample	flat	dict-index	raw	prefix	7	5833
+sample	flat	dict-index	raw	render	0	1375
+sample	flat	dict-index	raw	render	1	1041
+sample	flat	dict-index	raw	render	2	1000
+sample	flat	dict-index	raw	render	3	792
+sample	flat	dict-index	raw	render	4	666
+sample	flat	dict-index	raw	render	5	667
+sample	flat	dict-index	raw	render	6	542
+sample	flat	dict-index	raw	render	7	1041
+result	flat	dict-index	raw	exact.p50_ns	875
+result	flat	dict-index	raw	exact.p95_ns	1458
+result	flat	dict-index	raw	exact.p99_ns	1458
+result	flat	dict-index	raw	prefix.p50_ns	5833
+result	flat	dict-index	raw	prefix.p95_ns	6916
+result	flat	dict-index	raw	prefix.p99_ns	6916
+result	flat	dict-index	raw	render.p50_ns	1000
+result	flat	dict-index	raw	render.p95_ns	1375
+result	flat	dict-index	raw	render.p99_ns	1375
+result	flat	dict-index	raw	exact.hit.p50_ns	875
+result	flat	dict-index	raw	exact.hit.p95_ns	1458
+result	flat	dict-index	raw	exact.hit.p99_ns	1458
+result	flat	dict-index	raw	exact.miss.p50_ns	750
+result	flat	dict-index	raw	exact.miss.p95_ns	916
+result	flat	dict-index	raw	exact.miss.p99_ns	916
+result	flat	dict-index	raw	prefix.zero.p50_ns	750
+result	flat	dict-index	raw	prefix.zero.p95_ns	750
+result	flat	dict-index	raw	prefix.zero.p99_ns	750
+result	flat	dict-index	raw	prefix.one.p50_ns	1292
+result	flat	dict-index	raw	prefix.one.p95_ns	1292
+result	flat	dict-index	raw	prefix.one.p99_ns	1292
+result	flat	dict-index	raw	prefix.many.p50_ns	6417
+result	flat	dict-index	raw	prefix.many.p95_ns	6916
+result	flat	dict-index	raw	prefix.many.p99_ns	6916
+result	flat	dict-index	raw	prefix.pathological.p50_ns	-
+result	flat	dict-index	raw	prefix.pathological.p95_ns	-
+result	flat	dict-index	raw	prefix.pathological.p99_ns	-
+unavailable	flat	dict-index	dictzip	reason	dictzip executable absent; raw local index retained
+unavailable	flat	slob	lzma2	reason	Python SLOB import failed: No module named 'slob'
