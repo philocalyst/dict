@@ -535,174 +535,6 @@ pub const Builder = struct {
     }
 };
 
-pub const PostingList = struct {
-    view: *const View,
-    record: DirectoryRecord,
-    payload: []const u8,
-
-    pub fn len(self: PostingList) u32 {
-        return self.record.count;
-    }
-
-    pub fn codec(self: PostingList) PostingCodec {
-        return self.record.codec;
-    }
-
-    pub fn contains(self: PostingList, rank: EntryRank) !bool {
-        const wanted = @intFromEnum(rank);
-        if (wanted >= self.view.entry_count) return false;
-        switch (self.record.codec) {
-            .bitmap => {
-                if (wanted / 8 >= self.payload.len) return error.InvalidContainer;
-                return (self.payload[wanted / 8] & (@as(u8, 1) << @as(u3, @intCast(wanted % 8)))) != 0;
-            },
-            .gaps => {
-                var cursor: usize = 0;
-                var previous: u32 = 0;
-                for (0..self.record.count) |index| {
-                    const encoded = try readVar(self.payload, &cursor, self.payload.len);
-                    const value = if (index == 0) std.math.sub(u32, encoded, 1) catch return error.InvalidContainer else std.math.add(u32, previous, encoded) catch return error.InvalidContainer;
-                    if (value == wanted) return true;
-                    if (value > wanted) return false;
-                    previous = value;
-                }
-                return false;
-            },
-            .signed_single => {
-                if (self.record.count != 1) return error.InvalidContainer;
-                var cursor: usize = 0;
-                const encoded = try readVar64(self.payload, &cursor, self.payload.len);
-                if (cursor != self.payload.len) return error.InvalidContainer;
-                return try unzigzag(encoded, self.record.singleton_base) == wanted;
-            },
-            .ef => {
-                const low_width = efLowBits(self.view.entry_count, self.record.count);
-                const low_bits = std.math.mul(usize, self.record.count, low_width) catch return error.InvalidContainer;
-                const bit_limit = std.math.mul(usize, self.payload.len, 8) catch return error.InvalidContainer;
-                var high_cursor = low_bits;
-                var zeros: usize = 0;
-                for (0..self.record.count) |index| {
-                    while (high_cursor < bit_limit and bitAt(self.payload, high_cursor) == 0) : (high_cursor += 1) zeros += 1;
-                    if (high_cursor >= bit_limit) return error.InvalidContainer;
-                    const low = try efLowAt(self.payload, index, low_width);
-                    const value64 = (@as(u64, @intCast(zeros)) << @as(u6, @intCast(low_width))) | low;
-                    if (value64 >= self.view.entry_count) return error.InvalidContainer;
-                    const value: u32 = @intCast(value64);
-                    if (value == wanted) return true;
-                    if (value > wanted) return false;
-                    high_cursor += 1;
-                }
-                return false;
-            },
-            .runs => {
-                var cursor: usize = 0;
-                const run_count = try readVar(self.payload, &cursor, self.payload.len);
-                for (0..run_count) |_| {
-                    const start = std.math.sub(u32, try readVar(self.payload, &cursor, self.payload.len), 1) catch return error.InvalidContainer;
-                    const length = try readVar(self.payload, &cursor, self.payload.len);
-                    if (wanted < start) return false;
-                    if (wanted - start < length) return true;
-                }
-                return false;
-            },
-        }
-    }
-
-    pub const Iterator = struct {
-        list: PostingList,
-        index: u32 = 0,
-        cursor: usize = 0,
-        previous: u32 = 0,
-        run_remaining: u32 = 0,
-        run_value: u32 = 0,
-        run_count: u32 = 0,
-        ef_low_width: u6 = 0,
-        ef_low_bits: usize = 0,
-        ef_high_cursor: usize = 0,
-        ef_zeros: usize = 0,
-
-        pub fn next(self: *Iterator) !?EntryRank {
-            if (self.index >= self.list.record.count) return null;
-            const value: u32 = switch (self.list.record.codec) {
-                .bitmap => blk: {
-                    const total = self.list.view.entry_count;
-                    while (self.cursor < total) : (self.cursor += 1) {
-                        const candidate = self.cursor;
-                        if (candidate / 8 >= self.list.payload.len) return error.InvalidContainer;
-                        if ((self.list.payload[candidate / 8] & (@as(u8, 1) << @as(u3, @intCast(candidate % 8)))) != 0) {
-                            self.cursor += 1;
-                            break :blk @as(u32, @intCast(candidate));
-                        }
-                    }
-                    return error.InvalidContainer;
-                },
-                .gaps => blk: {
-                    const encoded = try readVar(self.list.payload, &self.cursor, self.list.payload.len);
-                    const decoded = if (self.index == 0) std.math.sub(u32, encoded, 1) catch return error.InvalidContainer else std.math.add(u32, self.previous, encoded) catch return error.InvalidContainer;
-                    self.previous = decoded;
-                    break :blk decoded;
-                },
-                .signed_single => blk: {
-                    if (self.index != 0) return error.InvalidContainer;
-                    const encoded = try readVar64(self.list.payload, &self.cursor, self.list.payload.len);
-                    const decoded = try unzigzag(encoded, self.previous);
-                    self.previous = decoded;
-                    break :blk decoded;
-                },
-                .ef => blk: {
-                    const bit_limit = std.math.mul(usize, self.list.payload.len, 8) catch return error.InvalidContainer;
-                    while (self.ef_high_cursor < bit_limit and bitAt(self.list.payload, self.ef_high_cursor) == 0) : (self.ef_high_cursor += 1) self.ef_zeros += 1;
-                    if (self.ef_high_cursor >= bit_limit) return error.InvalidContainer;
-                    const low = try efLowAt(self.list.payload, self.index, self.ef_low_width);
-                    const value64 = (@as(u64, @intCast(self.ef_zeros)) << @as(u6, @intCast(self.ef_low_width))) | low;
-                    if (value64 >= self.list.view.entry_count) return error.InvalidContainer;
-                    const decoded: u32 = @intCast(value64);
-                    if (self.index != 0 and decoded <= self.previous) return error.InvalidContainer;
-                    self.ef_high_cursor += 1;
-                    self.previous = decoded;
-                    if (self.index + 1 == self.list.record.count) {
-                        while (self.ef_high_cursor < bit_limit) : (self.ef_high_cursor += 1) {
-                            if (bitAt(self.list.payload, self.ef_high_cursor) != 0) return error.InvalidContainer;
-                        }
-                        // EF verification treats cursor as a bit offset so
-                        // the final byte's zero padding is checked exactly.
-                        self.cursor = self.ef_high_cursor;
-                    }
-                    break :blk decoded;
-                },
-                .runs => blk: {
-                    if (self.run_remaining == 0) {
-                        if (self.run_count == 0) self.run_count = try readVar(self.list.payload, &self.cursor, self.list.payload.len);
-                        if (self.run_count == 0) return error.InvalidContainer;
-                        self.run_value = std.math.sub(u32, try readVar(self.list.payload, &self.cursor, self.list.payload.len), 1) catch return error.InvalidContainer;
-                        self.run_remaining = try readVar(self.list.payload, &self.cursor, self.list.payload.len);
-                        if (self.run_remaining == 0) return error.InvalidContainer;
-                        self.run_count -= 1;
-                    }
-                    const result = self.run_value;
-                    if (self.run_remaining > 1) self.run_value += 1;
-                    self.run_remaining -= 1;
-                    break :blk result;
-                },
-            };
-            if (value >= self.list.view.entry_count) return error.InvalidContainer;
-            self.index += 1;
-            return @enumFromInt(value);
-        }
-    };
-
-    pub fn iterator(self: PostingList) Iterator {
-        const low_width = if (self.record.codec == .ef) efLowBits(self.view.entry_count, self.record.count) else 0;
-        const low_bits = if (self.record.codec == .ef) (std.math.mul(usize, self.record.count, low_width) catch 0) else 0;
-        return .{ .list = self, .previous = self.record.singleton_base, .ef_low_width = low_width, .ef_low_bits = low_bits, .ef_high_cursor = low_bits };
-    }
-};
-
-pub const TermHit = struct {
-    rank: TermRank,
-    postings: PostingList,
-};
-
 pub const Ledger = struct {
     header: usize,
     dictionary: usize,
@@ -712,192 +544,6 @@ pub const Ledger = struct {
     directory_padding: usize,
     payload: usize,
     total: usize,
-};
-
-pub const View = struct {
-    bytes: []const u8,
-    entry_count: u32,
-    term_count: u32,
-    requested_codec: Codec,
-    codec_state: CodecState,
-    dictionary: automaton.View,
-    directory_offset: usize,
-    directory_length: usize,
-    checkpoint_count: u32,
-    directory_stride: u32,
-    metadata_offset: usize,
-    payload_offset: usize,
-    payload_length: usize,
-
-    fn u32At(bytes: []const u8, offset: usize) Error!u32 {
-        if (offset > bytes.len or bytes.len - offset < 4) return error.InvalidHeader;
-        return std.mem.readInt(u32, bytes[offset..][0..4], .little);
-    }
-
-    pub fn open(bytes: []const u8) !View {
-        if (bytes.len < header_size) return error.Truncated;
-        if (!std.mem.eql(u8, bytes[0..4], magic)) return error.InvalidHeader;
-        if (std.mem.readInt(u16, bytes[4..6], .little) != version) return error.UnsupportedVersion;
-        const state_raw = std.mem.readInt(u16, bytes[6..8], .little);
-        if (state_raw > @intFromEnum(CodecState.encoded)) return error.InvalidHeader;
-        const state: CodecState = @enumFromInt(state_raw);
-        const entry_count = try u32At(bytes, 8);
-        const term_count = try u32At(bytes, 12);
-        const dictionary_offset = try u32At(bytes, 16);
-        const dictionary_length = try u32At(bytes, 20);
-        const directory_offset = try u32At(bytes, 24);
-        const directory_length = try u32At(bytes, 28);
-        const payload_offset = try u32At(bytes, 32);
-        const payload_length = try u32At(bytes, 36);
-        const total_length = try u32At(bytes, 40);
-        const stride = std.mem.readInt(u16, bytes[46..48], .little);
-        const checkpoint_count = try u32At(bytes, 48);
-        if (total_length != bytes.len or dictionary_offset != header_size) return error.InvalidHeader;
-        if (bytes[44] > @intFromEnum(Codec.bzip3) or bytes[45] != state_raw) return error.InvalidHeader;
-        if (stride == 0 or stride != directory_stride or term_count == 0) return error.InvalidDirectory;
-        const expected_checkpoints = (term_count - 1) / stride + 1;
-        if (checkpoint_count != expected_checkpoints) return error.InvalidDirectory;
-        const checkpoint_bytes = try mul(checkpoint_count, checkpoint_record_size);
-        if (directory_length < checkpoint_bytes) return error.InvalidDirectory;
-        const dictionary_end = try spanAdd(dictionary_offset, dictionary_length);
-        if (directory_offset != try align8(dictionary_end)) return error.InvalidDirectory;
-        if (payload_offset != try align8(try spanAdd(directory_offset, directory_length))) return error.InvalidDirectory;
-        if (dictionary_end > bytes.len or directory_offset > bytes.len or payload_offset > bytes.len) return error.Truncated;
-        if (try spanAdd(payload_offset, payload_length) != bytes.len) return error.InvalidDirectory;
-        const dictionary = try automaton.View.open(bytes[dictionary_offset..dictionary_end]);
-        if (dictionary.entry_count != term_count) return error.InvalidDirectory;
-        return .{ .bytes = bytes, .entry_count = entry_count, .term_count = term_count, .requested_codec = @enumFromInt(bytes[44]), .codec_state = state, .dictionary = dictionary, .directory_offset = directory_offset, .directory_length = directory_length, .checkpoint_count = checkpoint_count, .directory_stride = stride, .metadata_offset = try spanAdd(directory_offset, checkpoint_bytes), .payload_offset = payload_offset, .payload_length = payload_length };
-    }
-
-    pub fn verify(self: *const View, allocator: std.mem.Allocator) !void {
-        if ((self.requested_codec == .raw and self.codec_state != .raw) or
-            (self.requested_codec == .bzip3 and self.codec_state != .requested_unavailable)) return error.UnsupportedCodec;
-        try self.dictionary.verifyWithAllocator(allocator);
-        var payload_cursor: u32 = 0;
-        var metadata_cursor = self.metadata_offset;
-        var previous_single: u32 = 0;
-        const metadata_end = self.directory_offset + self.directory_length;
-        for (0..self.term_count) |index| {
-            if (index % self.directory_stride == 0) {
-                const checkpoint = index / self.directory_stride;
-                const at = self.directory_offset + checkpoint * checkpoint_record_size;
-                const expected_payload = std.mem.readInt(u32, self.bytes[at..][0..4], .little);
-                const expected_metadata = std.mem.readInt(u32, self.bytes[at + 4 ..][0..4], .little);
-                const expected_single = std.mem.readInt(u32, self.bytes[at + 8 ..][0..4], .little);
-                if (expected_payload != payload_cursor or expected_metadata != metadata_cursor - self.metadata_offset or expected_single != previous_single) return error.InvalidDirectory;
-            }
-            var record = try readDirectoryMeta(self.bytes, &metadata_cursor, metadata_end, payload_cursor);
-            record.singleton_base = previous_single;
-            if (record.codec == .signed_single and record.count != 1) return error.InvalidContainer;
-            const end = try spanAdd(record.offset, record.length);
-            if (end > self.payload_length or record.length == 0) return error.InvalidDirectory;
-            const payload = self.bytes[self.payload_offset + record.offset ..][0..record.length];
-            if (record.codec == .bitmap) {
-                const expected = (try spanAdd(self.entry_count, 7)) / 8;
-                if (record.length != expected) return error.InvalidContainer;
-            }
-            var iterator = (PostingList{ .view = self, .record = record, .payload = payload }).iterator();
-            var previous: ?u32 = null;
-            var seen: u32 = 0;
-            while (try iterator.next()) |rank| {
-                const value = @intFromEnum(rank);
-                if (previous) |prior| if (value <= prior) return error.InvalidContainer;
-                previous = value;
-                seen += 1;
-            }
-            if (seen != record.count) return error.InvalidContainer;
-            if (record.codec == .bitmap) {
-                var popcount: u32 = 0;
-                for (payload) |byte| popcount += @popCount(byte);
-                if (popcount != record.count) return error.InvalidContainer;
-                const unused = self.entry_count % 8;
-                if (unused != 0 and payload.len != 0 and payload[payload.len - 1] & (~((@as(u8, 1) << @as(u3, @intCast(unused))) - 1)) != 0) return error.InvalidContainer;
-            } else if (record.codec == .ef) {
-                const bit_limit = try mul(payload.len, 8);
-                if (iterator.ef_high_cursor > bit_limit) return error.InvalidContainer;
-                for (iterator.ef_high_cursor..bit_limit) |bit| if (bitAt(payload, bit) != 0) return error.InvalidContainer;
-            } else if (iterator.cursor != payload.len) {
-                return error.InvalidContainer;
-            }
-            if (record.codec == .signed_single) previous_single = iterator.previous;
-            payload_cursor = try asU32(end);
-        }
-        if (metadata_cursor != metadata_end or payload_cursor != self.payload_length) return error.InvalidDirectory;
-    }
-
-    fn directory(self: *const View, rank: TermRank) Error!DirectoryRecord {
-        const index = @intFromEnum(rank);
-        if (index >= self.term_count) return error.RankOutOfRange;
-        const checkpoint = index / self.directory_stride;
-        const checkpoint_at = self.directory_offset + @as(usize, @intCast(checkpoint)) * checkpoint_record_size;
-        var payload_cursor = std.mem.readInt(u32, self.bytes[checkpoint_at..][0..4], .little);
-        const metadata_relative = std.mem.readInt(u32, self.bytes[checkpoint_at + 4 ..][0..4], .little);
-        var previous_single = std.mem.readInt(u32, self.bytes[checkpoint_at + 8 ..][0..4], .little);
-        const checkpoint_bytes = try mul(self.checkpoint_count, checkpoint_record_size);
-        if (metadata_relative > self.directory_length - checkpoint_bytes) return error.InvalidDirectory;
-        var metadata_cursor = try spanAdd(self.metadata_offset, metadata_relative);
-        const metadata_end = self.directory_offset + self.directory_length;
-        if (metadata_cursor > metadata_end) return error.InvalidDirectory;
-        var current = checkpoint * self.directory_stride;
-        while (current <= index) : (current += 1) {
-            var record = try readDirectoryMeta(self.bytes, &metadata_cursor, metadata_end, payload_cursor);
-            record.singleton_base = previous_single;
-            if (record.codec == .signed_single) {
-                if (record.count != 1) return error.InvalidContainer;
-                const end = try spanAdd(record.offset, record.length);
-                if (end > self.payload_length) return error.InvalidDirectory;
-                var iterator = (PostingList{ .view = self, .record = record, .payload = self.bytes[self.payload_offset + record.offset ..][0..record.length] }).iterator();
-                _ = (try iterator.next()) orelse return error.InvalidContainer;
-                previous_single = iterator.previous;
-            }
-            if (current == index) return record;
-            payload_cursor = try asU32(try spanAdd(payload_cursor, record.length));
-        }
-        return error.InvalidDirectory;
-    }
-
-    pub fn term(self: *const View, rank: TermRank, scratch: []u8) !?[]const u8 {
-        if (@intFromEnum(rank) >= self.term_count) return null;
-        return (try self.dictionary.select(@intFromEnum(rank), scratch)).?.key;
-    }
-
-    pub fn exact(self: *const View, key: []const u8) !?TermHit {
-        const hit = (try self.dictionary.exact(key)) orelse return null;
-        const range = hit.entry_range orelse return null;
-        if (range.len() != 1) return error.InvalidDirectory;
-        const rank: TermRank = @enumFromInt(@intFromEnum(range.lo));
-        const record = try self.directory(rank);
-        const end = try spanAdd(record.offset, record.length);
-        if (end > self.payload_length) return error.InvalidDirectory;
-        return .{ .rank = rank, .postings = .{ .view = self, .record = record, .payload = self.bytes[self.payload_offset + record.offset ..][0..record.length] } };
-    }
-
-    pub fn prefix(self: *const View, key: []const u8) !?struct { lo: TermRank, hi: TermRank } {
-        const range = (try self.dictionary.prefixInterval(key)) orelse return null;
-        return .{ .lo = @enumFromInt(@intFromEnum(range.range.lo)), .hi = @enumFromInt(@intFromEnum(range.range.hi)) };
-    }
-
-    pub fn codecAvailability(self: *const View) struct { requested: Codec, state: CodecState } {
-        return .{ .requested = self.requested_codec, .state = self.codec_state };
-    }
-
-    pub fn ledger(self: *const View) Ledger {
-        const checkpoint = @as(usize, self.checkpoint_count) * checkpoint_record_size;
-        const dictionary_end = header_size + self.dictionary.len();
-        const dictionary_padding = self.directory_offset - dictionary_end;
-        const directory_end = self.directory_offset + self.directory_length;
-        const directory_padding = self.payload_offset - directory_end;
-        return .{
-            .header = header_size,
-            .dictionary = self.dictionary.len(),
-            .dictionary_padding = dictionary_padding,
-            .checkpoint = checkpoint,
-            .metadata = self.directory_length - checkpoint,
-            .directory_padding = directory_padding,
-            .payload = self.payload_length,
-            .total = self.bytes.len,
-        };
-    }
 };
 
 pub const SliceSource = struct {
@@ -913,22 +559,11 @@ pub const SliceSource = struct {
     }
 };
 
-fn sourceBytes(comptime Source: type, source: *const Source, offset: usize, length: usize) anyerror![]const u8 {
-    if (@hasDecl(Source, "bytes")) return source.bytes(offset, length);
-    if (@hasDecl(Source, "read")) return source.read(offset, length);
-    @compileError("LEX4 source must provide bytes(offset, length) or read(offset, length)");
-}
-
-fn sourceLength(comptime Source: type, source: *const Source) usize {
-    if (@hasDecl(Source, "len")) return source.len();
-    @compileError("LEX4 source must provide len()");
-}
-
 /// A posting list whose directory and payload remain on the caller's source.
 /// Iteration is deliberately a source operation: a mapped snapshot authenticates
 /// only the payload bytes touched by this list, and a paged source can keep its
 /// resident working set bounded by its own page cache.
-pub fn SourcePostingList(comptime Source: type) type {
+pub fn PostingListFor(comptime Source: type) type {
     return struct {
         const Self = @This();
         source: *const Source,
@@ -948,7 +583,7 @@ pub fn SourcePostingList(comptime Source: type) type {
 
         fn byte(self: Self, cursor: usize) anyerror!u8 {
             if (cursor >= self.payload_length) return error.InvalidContainer;
-            return (try sourceBytes(Source, self.source, self.payload_offset + cursor, 1))[0];
+            return (try wire.sourceBytes(Source, self.source, self.payload_offset + cursor, 1))[0];
         }
 
         fn readVar(self: Self, cursor: *usize) anyerror!u32 {
@@ -982,6 +617,7 @@ pub fn SourcePostingList(comptime Source: type) type {
             ef_low_bits: usize = 0,
             ef_high_cursor: usize = 0,
             ef_zeros: usize = 0,
+            last: ?u32 = null,
 
             fn efLow(self: *const @This(), index: u32) anyerror!u64 {
                 if (self.ef_low_width == 0) return 0;
@@ -1053,8 +689,43 @@ pub fn SourcePostingList(comptime Source: type) type {
                     },
                 };
                 if (value >= self.list.entry_count) return error.InvalidContainer;
+                if (self.last) |previous| {
+                    if (value <= previous) return error.InvalidContainer;
+                }
+                self.last = value;
                 self.index += 1;
                 return @enumFromInt(value);
+            }
+
+            pub fn finish(self: *@This()) anyerror!void {
+                if (self.index != self.list.count) return error.InvalidContainer;
+                switch (self.list.posting_codec) {
+                    .bitmap => {
+                        const expected = (try spanAdd(self.list.entry_count, 7)) / 8;
+                        if (self.list.payload_length != expected) return error.InvalidContainer;
+                        var population: u32 = 0;
+                        for (0..self.list.payload_length) |index| {
+                            population += @popCount(try self.list.byte(index));
+                        }
+                        if (population != self.list.count) return error.InvalidContainer;
+                        const tail = self.list.entry_count & 7;
+                        if (tail != 0 and self.list.payload_length != 0) {
+                            const last_byte = try self.list.byte(self.list.payload_length - 1);
+                            if (last_byte & ~((@as(u8, 1) << @intCast(tail)) - 1) != 0) return error.InvalidContainer;
+                        }
+                    },
+                    .ef => {
+                        const bit_limit = try mul(self.list.payload_length, 8);
+                        if (self.ef_high_cursor > bit_limit) return error.InvalidContainer;
+                        for (self.ef_high_cursor..bit_limit) |bit_index| {
+                            if (try self.list.bit(bit_index) != 0) return error.InvalidContainer;
+                        }
+                    },
+                    .runs => if (self.cursor != self.list.payload_length or self.run_count != 0 or self.run_remaining != 0)
+                        return error.InvalidContainer,
+                    .gaps, .signed_single => if (self.cursor != self.list.payload_length)
+                        return error.InvalidContainer,
+                }
             }
         };
 
@@ -1074,10 +745,10 @@ pub fn SourcePostingList(comptime Source: type) type {
     };
 }
 
-pub fn SourceView(comptime Source: type) type {
+pub fn ViewFor(comptime Source: type) type {
     return struct {
         const Self = @This();
-        pub const Posting = SourcePostingList(Source);
+        pub const Posting = PostingListFor(Source);
         pub const Hit = struct { rank: TermRank, postings: Posting };
         source: Source,
         entry_count: u32,
@@ -1093,7 +764,7 @@ pub fn SourceView(comptime Source: type) type {
         payload_length: usize,
 
         fn read(self: *const Self, offset: usize, length: usize) anyerror![]const u8 {
-            return sourceBytes(Source, &self.source, offset, length);
+            return wire.sourceBytes(Source, &self.source, offset, length);
         }
         fn u32At(self: *const Self, offset: usize) anyerror!u32 {
             const bytes = try self.read(offset, 4);
@@ -1103,13 +774,13 @@ pub fn SourceView(comptime Source: type) type {
             var result: u32 = 0;
             var shift: u5 = 0;
             while (true) {
-                if (cursor.* >= limit) return error.InvalidContainer;
+                if (cursor.* >= limit) return error.InvalidDirectory;
                 const value = (try self.read(cursor.*, 1))[0];
                 cursor.* += 1;
-                if (shift == 28 and value > 0x0f) return error.InvalidContainer;
+                if (shift == 28 and value > 0x0f) return error.InvalidDirectory;
                 result |= @as(u32, value & 0x7f) << shift;
                 if (value & 0x80 == 0) return result;
-                if (shift == 28) return error.InvalidContainer;
+                if (shift == 28) return error.InvalidDirectory;
                 shift += 7;
             }
         }
@@ -1167,8 +838,8 @@ pub fn SourceView(comptime Source: type) type {
         }
 
         pub fn open(source_value: Source) !Self {
-            if (sourceLength(Source, &source_value) < header_size) return error.Truncated;
-            const header = try sourceBytes(Source, &source_value, 0, header_size);
+            if (wire.sourceLen(Source, &source_value) < header_size) return error.Truncated;
+            const header = try wire.sourceBytes(Source, &source_value, 0, header_size);
             if (!std.mem.eql(u8, header[0..4], magic)) return error.InvalidHeader;
             if (std.mem.readInt(u16, header[4..6], .little) != version) return error.UnsupportedVersion;
             const state_raw = std.mem.readInt(u16, header[6..8], .little);
@@ -1185,7 +856,7 @@ pub fn SourceView(comptime Source: type) type {
             const stride = std.mem.readInt(u16, header[46..48], .little);
             const checkpoint_count = std.mem.readInt(u32, header[48..52], .little);
             if (header[44] > @intFromEnum(Codec.bzip3) or header[45] != state_raw) return error.InvalidHeader;
-            if (total != sourceLength(Source, &source_value) or dictionary_offset != header_size or term_count == 0 or stride != directory_stride or checkpoint_count != (term_count - 1) / stride + 1) return error.InvalidHeader;
+            if (total != wire.sourceLen(Source, &source_value) or dictionary_offset != header_size or term_count == 0 or stride != directory_stride or checkpoint_count != (term_count - 1) / stride + 1) return error.InvalidHeader;
             const checkpoint_bytes = std.math.mul(usize, checkpoint_count, checkpoint_record_size) catch return error.Overflow;
             const dictionary_end = std.math.add(usize, dictionary_offset, dictionary_length) catch return error.Overflow;
             const expected_directory = align8(dictionary_end) catch return error.InvalidDirectory;
@@ -1218,9 +889,13 @@ pub fn SourceView(comptime Source: type) type {
             return (try self.dictionary.select(@intFromEnum(rank), scratch)).?.key;
         }
 
-        pub fn verify(self: *const Self) !void {
+        pub fn codecAvailability(self: *const Self) struct { requested: Codec, state: CodecState } {
+            return .{ .requested = self.requested_codec, .state = self.codec_state };
+        }
+
+        pub fn verify(self: *const Self, allocator: std.mem.Allocator) !void {
             if ((self.requested_codec == .raw and self.codec_state != .raw) or (self.requested_codec == .bzip3 and self.codec_state != .requested_unavailable)) return error.UnsupportedCodec;
-            try self.dictionary.verify();
+            try self.dictionary.verifyWithAllocator(allocator);
             var scratch: [256]u8 = undefined;
             for (0..self.term_count) |index| {
                 const hit = try self.exact((try self.term(@enumFromInt(index), &scratch)).?);
@@ -1228,11 +903,36 @@ pub fn SourceView(comptime Source: type) type {
                 var seen: u32 = 0;
                 while (try iterator.next()) |_| seen += 1;
                 if (seen != hit.?.postings.count) return error.InvalidContainer;
+                try iterator.finish();
             }
+        }
+
+        pub fn ledger(self: *const Self) Ledger {
+            const checkpoints = @as(usize, self.checkpoint_count) * checkpoint_record_size;
+            const dictionary_end = header_size + self.dictionary.len();
+            const directory_end = self.directory_offset + self.directory_length;
+            return .{
+                .header = header_size,
+                .dictionary = self.dictionary.len(),
+                .dictionary_padding = self.directory_offset - dictionary_end,
+                .checkpoint = checkpoints,
+                .metadata = self.directory_length - checkpoints,
+                .directory_padding = self.payload_offset - directory_end,
+                .payload = self.payload_length,
+                .total = wire.sourceLen(Source, &self.source),
+            };
         }
     };
 }
 
-pub fn openSource(comptime Source: type, source: Source) !SourceView(Source) {
-    return SourceView(Source).open(source);
+pub const View = ViewFor([]const u8);
+pub const PostingList = PostingListFor([]const u8);
+pub const TermHit = View.Hit;
+
+pub fn SourceView(comptime Source: type) type {
+    return ViewFor(Source);
+}
+
+pub fn openSource(comptime Source: type, source: Source) !ViewFor(Source) {
+    return ViewFor(Source).open(source);
 }

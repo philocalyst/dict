@@ -712,6 +712,9 @@ fn validateItemRecords(reader: anytype, count: usize, sequence_count: usize, ali
 pub fn ViewFor(comptime Source: type) type {
     return struct {
         source: Source,
+        /// Kept only on the slice specialization for the native mapped API.
+        /// Source-backed specializations have no raw escape hatch.
+        bytes: if (Source == []const u8 or Source == []u8) []const u8 else void,
         limits: Limits,
         item_count: usize,
         rule_count: usize,
@@ -734,24 +737,12 @@ pub fn ViewFor(comptime Source: type) type {
 
         const Self = @This();
         const Raw = ItemRaw;
+        pub const ReadError = Error || wire.SourceError(Source);
 
-        fn sourceLen(source: Source) usize {
-            if (comptime Source == []const u8 or Source == []u8) return source.len;
-            return source.len();
-        }
-
-        fn sourceBytes(source: Source, offset: usize, length: usize) anyerror![]const u8 {
-            if (comptime Source == []const u8 or Source == []u8) {
-                if (offset > source.len or length > source.len - offset) return error.Truncated;
-                return source[offset..][0..length];
-            }
-            return source.bytes(offset, length);
-        }
-
-        pub fn open(source: Source, limits: Limits) anyerror!Self {
+        pub fn open(source: Source, limits: Limits) ReadError!Self {
             try limits.validate();
-            if (sourceLen(source) < header_size) return error.Truncated;
-            const header = try sourceBytes(source, 0, header_size);
+            if (wire.sourceLen(Source, &source) < header_size) return error.Truncated;
+            const header = try wire.sourceBytes(Source, &source, 0, header_size);
             if (!std.mem.eql(u8, header[0..4], magic)) return error.Malformed;
             if (try readLE(u16, header, 4) != version) return error.UnsupportedVersion;
             if (try readLE(u16, header, 6) != 0 or try readLE(u32, header, 8) != header_size) return error.Malformed;
@@ -789,49 +780,72 @@ pub fn ViewFor(comptime Source: type) type {
                 ends_offset != try checkedAddSize(sequence_offset, sequence_bytes) or alias_bits_offset != try checkedAddSize(ends_offset, ends_bytes) or
                 alias_rank_offset != try checkedAddSize(alias_bits_offset, alias_bits_bytes) or alias_targets_offset != try checkedAddSize(alias_rank_offset, alias_rank_bytes) or
                 total_size != try checkedAddSize(alias_targets_offset, alias_targets_bytes)) return error.Malformed;
-            const source_len = sourceLen(source);
+            const source_len = wire.sourceLen(Source, &source);
             if (total_size != source_len) return if (total_size > source_len) error.Truncated else error.Malformed;
-            return .{ .source = source, .limits = limits, .item_count = item_count, .rule_count = rule_count, .sequence_count = sequence_count, .alias_count = alias_count, .symbol_bits = symbol_bits, .seq_bits = seq_bits, .item_bits = item_bits, .length_bits = length_bits, .rules_offset = rules_offset, .rules_bytes = rules_bytes, .sequence_offset = sequence_offset, .sequence_bytes = sequence_bytes, .ends_offset = ends_offset, .ends_bytes = ends_bytes, .alias_bits_offset = alias_bits_offset, .alias_rank_offset = alias_rank_offset, .alias_targets_offset = alias_targets_offset, .alias_targets_bytes = alias_targets_bytes };
+            return .{ .source = source, .bytes = if (Source == []const u8 or Source == []u8) source else {}, .limits = limits, .item_count = item_count, .rule_count = rule_count, .sequence_count = sequence_count, .alias_count = alias_count, .symbol_bits = symbol_bits, .seq_bits = seq_bits, .item_bits = item_bits, .length_bits = length_bits, .rules_offset = rules_offset, .rules_bytes = rules_bytes, .sequence_offset = sequence_offset, .sequence_bytes = sequence_bytes, .ends_offset = ends_offset, .ends_bytes = ends_bytes, .alias_bits_offset = alias_bits_offset, .alias_rank_offset = alias_rank_offset, .alias_targets_offset = alias_targets_offset, .alias_targets_bytes = alias_targets_bytes };
         }
 
         pub const openEnvelope = open;
+
+        pub fn sectionRange(self: *const Self, kind: RangeKind) Error!ReadRange {
+            return switch (kind) {
+                .rules => .{ .offset = self.rules_offset, .length = self.rules_bytes },
+                .sequence => .{ .offset = self.sequence_offset, .length = self.sequence_bytes },
+                .item_ends => .{ .offset = self.ends_offset, .length = self.ends_bytes },
+                .alias_bits => .{ .offset = self.alias_bits_offset, .length = self.alias_rank_offset - self.alias_bits_offset },
+                .alias_ranks => .{ .offset = self.alias_rank_offset, .length = self.alias_targets_offset - self.alias_rank_offset },
+                .alias_targets => .{ .offset = self.alias_targets_offset, .length = self.alias_targets_bytes },
+            };
+        }
+
+        pub fn ruleRange(self: *const Self, index: usize) Error!ReadRange {
+            if (index >= self.rule_count) return error.IndexOutOfBounds;
+            const bit = checkedMulSize(index, self.ruleBitsValue()) catch return error.SizeOverflow;
+            return packedRange(self.rules_offset, bit, @intCast(self.ruleBitsValue()));
+        }
+
+        pub fn sequenceRange(self: *const Self, index: usize) Error!ReadRange {
+            if (index >= self.sequence_count) return error.InvalidItemRange;
+            const bit = checkedMulSize(index, self.symbol_bits) catch return error.SizeOverflow;
+            return packedRange(self.sequence_offset, bit, self.symbol_bits);
+        }
 
         fn ruleBitsValue(self: *const Self) usize {
             return @as(usize, self.symbol_bits) * 2 + self.length_bits;
         }
 
-        fn readRule(self: *const Self, index: usize) anyerror!Rule {
+        fn readRule(self: *const Self, index: usize) ReadError!Rule {
             if (index >= self.rule_count) return error.IndexOutOfBounds;
             const bit = checkedMulSize(index, self.ruleBitsValue()) catch return error.SizeOverflow;
             const range = try packedRange(self.rules_offset, bit, @intCast(self.ruleBitsValue()));
-            const bytes = try sourceBytes(self.source, range.offset, range.length);
+            const bytes = try wire.sourceBytes(Source, &self.source, range.offset, range.length);
             return decodeRule(bytes, bit % 8, self.symbol_bits, self.length_bits);
         }
 
-        fn readSequence(self: *const Self, index: usize, trace: ?*AccessTrace) anyerror!u32 {
+        fn readSequence(self: *const Self, index: usize, trace: ?*AccessTrace) ReadError!u32 {
             if (index >= self.sequence_count) return error.InvalidItemRange;
             if (trace) |t| t.sequence_symbols += 1;
             const bit = checkedMulSize(index, self.symbol_bits) catch return error.SizeOverflow;
             const range = try packedRange(self.sequence_offset, bit, self.symbol_bits);
-            const bytes = try sourceBytes(self.source, range.offset, range.length);
+            const bytes = try wire.sourceBytes(Source, &self.source, range.offset, range.length);
             return @intCast(try readBits(bytes, bit % 8, self.symbol_bits));
         }
 
-        fn aliasBit(self: *const Self, index: usize) anyerror!bool {
+        fn aliasBit(self: *const Self, index: usize) ReadError!bool {
             if (index >= self.item_count) return error.IndexOutOfBounds;
             if (self.alias_count == 0) return false;
             const offset = checkedAddSize(self.alias_bits_offset, index / 8) catch return error.SizeOverflow;
-            const bytes = try sourceBytes(self.source, offset, 1);
+            const bytes = try wire.sourceBytes(Source, &self.source, offset, 1);
             if (bytes.len < 1) return error.Truncated;
             return (bytes[0] & (@as(u8, 1) << @as(u3, @intCast(index % 8)))) != 0;
         }
 
-        fn aliasRankBefore(self: *const Self, index: usize) anyerror!usize {
+        fn aliasRankBefore(self: *const Self, index: usize) ReadError!usize {
             if (index > self.item_count) return error.IndexOutOfBounds;
             if (self.alias_count == 0) return 0;
             const block = index / alias_checkpoint_stride;
             const checkpoint_offset = checkedAddSize(self.alias_rank_offset, checkedMulSize(block, 4) catch return error.SizeOverflow) catch return error.SizeOverflow;
-            const checkpoint = try sourceBytes(self.source, checkpoint_offset, 4);
+            const checkpoint = try wire.sourceBytes(Source, &self.source, checkpoint_offset, 4);
             var count: usize = std.mem.readInt(u32, checkpoint[0..4], .little);
             var i = checkedMulSize(block, alias_checkpoint_stride) catch return error.SizeOverflow;
             while (i < index) : (i += 1) {
@@ -840,16 +854,16 @@ pub fn ViewFor(comptime Source: type) type {
             return count;
         }
 
-        fn aliasTarget(self: *const Self, index: usize) anyerror!usize {
+        fn aliasTarget(self: *const Self, index: usize) ReadError!usize {
             if (!(try self.aliasBit(index))) return error.InvalidAlias;
             const ordinal = try self.aliasRankBefore(index);
             const bit = checkedMulSize(ordinal, self.item_bits) catch return error.SizeOverflow;
             const range = try packedRange(self.alias_targets_offset, bit, self.item_bits);
-            const bytes = try sourceBytes(self.source, range.offset, range.length);
+            const bytes = try wire.sourceBytes(Source, &self.source, range.offset, range.length);
             return toUsize(try readBits(bytes, bit % 8, self.item_bits));
         }
 
-        fn itemRaw(self: *const Self, index: usize, trace: ?*AccessTrace) anyerror!Raw {
+        fn itemRaw(self: *const Self, index: usize, trace: ?*AccessTrace) ReadError!Raw {
             if (index >= self.item_count) return error.IndexOutOfBounds;
             if (trace) |t| t.item_records += 1;
             const end = try self.itemEnd(index);
@@ -859,34 +873,34 @@ pub fn ViewFor(comptime Source: type) type {
             return .{ .start = previous, .count = end - previous, .alias = null };
         }
 
-        fn itemEnd(self: *const Self, index: usize) anyerror!u64 {
+        fn itemEnd(self: *const Self, index: usize) ReadError!u64 {
             if (index >= self.item_count) return error.IndexOutOfBounds;
             const bit = checkedMulSize(index, self.seq_bits) catch return error.SizeOverflow;
             const range = try packedRange(self.ends_offset, bit, self.seq_bits);
-            const bytes = try sourceBytes(self.source, range.offset, range.length);
+            const bytes = try wire.sourceBytes(Source, &self.source, range.offset, range.length);
             return readBits(bytes, bit % 8, self.seq_bits);
         }
 
-        fn aliasRankSlot(self: *const Self, slot: usize) anyerror!usize {
+        fn aliasRankSlot(self: *const Self, slot: usize) ReadError!usize {
             if (self.alias_count == 0) return 0;
             const offset = try checkedAddSize(self.alias_rank_offset, try checkedMulSize(slot, 4));
-            const bytes = try sourceBytes(self.source, offset, 4);
+            const bytes = try wire.sourceBytes(Source, &self.source, offset, 4);
             return try readLE(u32, bytes, 0);
         }
 
-        fn validateRules(self: *const Self) anyerror!void {
+        fn validateRules(self: *const Self) ReadError!void {
             return validateRuleRecords(self, self.limits, self.rule_count, self.length_bits);
         }
 
-        fn validateMetadata(self: *const Self) anyerror!void {
+        fn validateMetadata(self: *const Self) ReadError!void {
             return validateItemRecords(self, self.item_count, self.sequence_count, self.alias_count);
         }
 
-        fn measureRange(self: *const Self, start: u64, count: u64) anyerror!u64 {
+        fn measureRange(self: *const Self, start: u64, count: u64) ReadError!u64 {
             return measureSymbols(self, self.limits, self.sequence_count, start, count);
         }
 
-        pub fn verify(self: *const Self) anyerror!void {
+        pub fn verify(self: *const Self) ReadError!void {
             try self.validateRules();
             try self.validateMetadata();
             for (0..self.sequence_count) |index| {
@@ -902,7 +916,7 @@ pub fn ViewFor(comptime Source: type) type {
             }
         }
 
-        fn primary(self: *const Self, index: usize, trace: ?*AccessTrace) anyerror!Raw {
+        fn primary(self: *const Self, index: usize, trace: ?*AccessTrace) ReadError!Raw {
             var current = index;
             var raw = try self.itemRaw(current, trace);
             while (raw.alias) |target| {
@@ -913,50 +927,50 @@ pub fn ViewFor(comptime Source: type) type {
             return raw;
         }
 
-        fn readRuleTraced(self: *const Self, index: usize, trace: ?*AccessTrace) anyerror!Rule {
+        fn readRuleTraced(self: *const Self, index: usize, trace: ?*AccessTrace) ReadError!Rule {
             if (trace) |t| t.rule_records += 1;
             return self.readRule(index);
         }
 
-        fn expand(self: *const Self, raw: Raw, out: []u8, wanted: usize, stack: []Frame, trace: ?*AccessTrace) anyerror!usize {
+        fn expand(self: *const Self, raw: Raw, out: []u8, wanted: usize, stack: []Frame, trace: ?*AccessTrace) ReadError!usize {
             return expandSymbols(self, self.limits, self.rule_count, raw, out, wanted, stack, trace);
         }
 
-        pub fn item(self: *const Self, index: usize) anyerror!Item {
+        pub fn item(self: *const Self, index: usize) ReadError!Item {
             const raw = try self.itemRaw(index, null);
             const primary_raw = try self.primary(index, null);
             return .{ .sequence_start = raw.start, .symbol_count = raw.count, .output_len = try self.measureRange(primary_raw.start, primary_raw.count), .alias = raw.alias };
         }
 
-        pub fn rule(self: *const Self, index: usize) anyerror!Rule {
+        pub fn rule(self: *const Self, index: usize) ReadError!Rule {
             return self.readRule(index);
         }
 
-        pub fn extract(self: *const Self, index: usize, out: []u8) anyerror!usize {
+        pub fn extract(self: *const Self, index: usize, out: []u8) ReadError!usize {
             var stack: [256]Frame = undefined;
             return self.extractWithStack(index, out, stack[0..]);
         }
 
-        pub fn extractWithStack(self: *const Self, index: usize, out: []u8, stack: []Frame) anyerror!usize {
+        pub fn extractWithStack(self: *const Self, index: usize, out: []u8, stack: []Frame) ReadError!usize {
             const item_info = try self.item(index);
             const length = try toUsize(item_info.output_len);
             if (out.len < length) return error.OutputTooSmall;
             return self.expand(try self.primary(index, null), out, length, stack, null);
         }
 
-        pub fn snippet(self: *const Self, index: usize, limit: usize, out: []u8) anyerror!usize {
+        pub fn snippet(self: *const Self, index: usize, limit: usize, out: []u8) ReadError!usize {
             var stack: [256]Frame = undefined;
             return self.snippetWithStack(index, limit, out, stack[0..]);
         }
 
-        pub fn snippetWithStack(self: *const Self, index: usize, limit: usize, out: []u8, stack: []Frame) anyerror!usize {
+        pub fn snippetWithStack(self: *const Self, index: usize, limit: usize, out: []u8, stack: []Frame) ReadError!usize {
             const raw = try self.primary(index, null);
             const wanted = @min(limit, out.len);
             if (wanted == 0) return 0;
             return self.expand(raw, out, wanted, stack, null);
         }
 
-        pub fn extractWithTrace(self: *const Self, index: usize, out: []u8, trace: *AccessTrace) anyerror!usize {
+        pub fn extractWithTrace(self: *const Self, index: usize, out: []u8, trace: *AccessTrace) ReadError!usize {
             var stack: [256]Frame = undefined;
             const raw = try self.primary(index, trace);
             const length = try self.measureRange(raw.start, raw.count);
@@ -964,7 +978,7 @@ pub fn ViewFor(comptime Source: type) type {
             return self.expand(raw, out, try toUsize(length), stack[0..], trace);
         }
 
-        pub fn snippetWithTrace(self: *const Self, index: usize, limit: usize, out: []u8, trace: *AccessTrace) anyerror!usize {
+        pub fn snippetWithTrace(self: *const Self, index: usize, limit: usize, out: []u8, trace: *AccessTrace) ReadError!usize {
             var stack: [256]Frame = undefined;
             const raw = try self.primary(index, trace);
             const wanted = @min(limit, out.len);
@@ -975,8 +989,56 @@ pub fn ViewFor(comptime Source: type) type {
         pub fn directBlockDecodeCount(_: *const Self) usize {
             return 0;
         }
+
+        // Compatibility entry points reopen the same source-specialized view;
+        // all parsing, validation, and rendering remains in the bodies above.
+        fn forSource(self: *const Self, source: anytype) !ViewFor(@TypeOf(source)) {
+            return ViewFor(@TypeOf(source)).open(source, self.limits);
+        }
+
+        pub fn verifyFrom(self: *const Self, source: anytype) !void {
+            const view = try self.forSource(source);
+            return view.verify();
+        }
+
+        pub fn readRuleFrom(self: *const Self, source: anytype, index: usize) !Rule {
+            const view = try self.forSource(source);
+            return view.readRule(index);
+        }
+
+        pub fn readSequenceFrom(self: *const Self, source: anytype, index: usize) !u32 {
+            const view = try self.forSource(source);
+            return view.readSequence(index, null);
+        }
+
+        pub fn readItemEndFrom(self: *const Self, source: anytype, index: usize) !u64 {
+            const view = try self.forSource(source);
+            return view.itemEnd(index);
+        }
+
+        pub fn itemFrom(self: *const Self, source: anytype, index: usize) !Item {
+            const view = try self.forSource(source);
+            return view.item(index);
+        }
+
+        pub fn ruleFrom(self: *const Self, source: anytype, index: usize) !Rule {
+            const view = try self.forSource(source);
+            return view.rule(index);
+        }
+
+        pub fn extractFrom(self: *const Self, source: anytype, index: usize, out: []u8) !usize {
+            const view = try self.forSource(source);
+            return view.extract(index, out);
+        }
+
+        pub fn snippetFrom(self: *const Self, source: anytype, index: usize, limit: usize, out: []u8) !usize {
+            const view = try self.forSource(source);
+            return view.snippet(index, limit, out);
+        }
     };
 }
+
+pub const View = ViewFor([]const u8);
 
 pub const ReferenceOracle = struct {
     items: []const ItemInput,

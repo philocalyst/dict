@@ -3,3 +3,9 @@
 /vendor/bzip3/build-aux
 /vendor/bzip3
 /zig-out/bin
+/bench4/.zig-cache
+/experiments/frontier/latency-20260908/canonical-inputs/artifacts
+/experiments/frontier/latency-20260908/canonical-inputs
+/experiments/frontier/latency-20260908/terra-grammar/.zig-cache
+/experiments/frontier/latency-20260908/terra-query/.zig-cache
+/experiments/frontier

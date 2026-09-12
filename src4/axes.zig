@@ -609,67 +609,9 @@ fn strategyVersionFor(comptime Transform: type) u8 {
 
 pub const Range = struct { lo: u32, hi: u32 };
 
-pub const TargetList = struct {
-    bytes: []const u8,
-    offset: usize,
-    count: u32,
-    entry_count: u32,
-    limit: usize = 0,
-    mode: u8 = 0,
-    checkpoint_off: usize = 0,
-    checkpoint_stride: u32 = 0,
-    key_rank: u32 = 0,
-    packed_width: u8 = 0,
-    packed_start: u32 = 0,
-
-    pub fn len(self: TargetList) u32 {
-        return self.count;
-    }
-    pub fn target(self: TargetList, index: u32) !EntryRank {
-        if (index >= self.count) return error.RankOutOfRange;
-        if (self.mode == single_target_mode) {
-            if (index != 0 or self.checkpoint_stride == 0) return error.RankOutOfRange;
-            const checkpoint = self.key_rank / self.checkpoint_stride;
-            const checkpoint_at = self.checkpoint_off + @as(usize, checkpoint) * 8;
-            const checkpoint_rank = try readLe(u32, self.bytes, checkpoint_at);
-            var value = checkpoint_rank;
-            if (checkpoint * self.checkpoint_stride != self.key_rank) {
-                const payload_offset = try readLe(u32, self.bytes, checkpoint_at + 4);
-                var cursor = self.offset + payload_offset;
-                var rank = checkpoint * self.checkpoint_stride + 1;
-                while (rank <= self.key_rank) : (rank += 1) {
-                    const delta = zigzagDecode(try readVar(self.bytes, &cursor));
-                    const next = @as(i64, value) + delta;
-                    if (next < 0 or next >= self.entry_count) return error.InvalidTarget;
-                    value = @intCast(next);
-                }
-            }
-            return @enumFromInt(value);
-        }
-        if (self.mode == packed_targets_mode) {
-            const value = try packedAt(self.bytes[self.offset..][0..self.limit], self.packed_width, self.packed_start + index);
-            if (value >= self.entry_count) return error.InvalidTarget;
-            return @enumFromInt(value);
-        }
-        var cursor = self.offset;
-        const encoded_count = try readVarLimited(self.bytes, &cursor, self.limit);
-        if (encoded_count != self.count) return error.InvalidOutput;
-        var previous: u32 = 0;
-        var i: u32 = 0;
-        while (i <= index) : (i += 1) {
-            const delta = try readVarLimited(self.bytes, &cursor, self.limit);
-            const target_rank = if (i == 0) std.math.sub(u32, delta, 1) catch return error.InvalidOutput else std.math.add(u32, previous, delta) catch return error.InvalidOutput;
-            if (target_rank >= self.entry_count) return error.InvalidTarget;
-            previous = target_rank;
-            if (i == index) return @enumFromInt(target_rank);
-        }
-        return error.InvalidOutput;
-    }
-};
-
-pub const Hit = struct { targets: TargetList };
-
-pub const Item = struct { key: []const u8, targets: TargetList };
+pub const TargetList = TargetListFor([]const u8);
+pub const Hit = ViewForSource(Reverse, []const u8).Hit;
+pub const Item = ViewForSource(Reverse, []const u8).Item;
 
 pub const Ledger = struct {
     header: usize,
@@ -679,275 +621,6 @@ pub const Ledger = struct {
     total: usize,
     mode: u8,
 };
-
-pub fn ViewFor(comptime Transform: type) type {
-    return struct {
-        const Self = @This();
-        bytes: []const u8,
-        entry_count: u32,
-        key_count: u32,
-        index_off: usize,
-        index_len: usize,
-        payload_off: usize,
-        payload_len: usize,
-        index_width: usize,
-        mode: u8,
-        checkpoint_stride: u32,
-        inner: automaton.View,
-
-        pub fn open(bytes: []const u8) !Self {
-            if (bytes.len < header_bytes) return error.Truncated;
-            if (!std.mem.eql(u8, bytes[0..4], magic)) return error.InvalidFormat;
-            if (try readLe(u16, bytes, 4) != version) return error.UnsupportedVersion;
-            if (bytes[6] != @intFromEnum(kindFor(Transform))) return error.BadAxis;
-            if ((bytes[7] >> 2) != strategyVersionFor(Transform)) return error.UnsupportedVersion;
-            const low_flags = bytes[7] & 3;
-            const index_width: usize = if (low_flags == 1) 2 else 4;
-            const mode: u8 = if (low_flags >= single_target_mode) low_flags else 0;
-            const entry_count = try readLe(u32, bytes, 8);
-            const key_count = try readLe(u32, bytes, 12);
-            const inner_off = try readLe(u32, bytes, 16);
-            const inner_len = try readLe(u32, bytes, 20);
-            const index_off = try readLe(u32, bytes, 24);
-            const index_len = try readLe(u32, bytes, 28);
-            const payload_off = try readLe(u32, bytes, 32);
-            const payload_len = try readLe(u32, bytes, 36);
-            const total = try readLe(u32, bytes, 40);
-            const checkpoint_stride = try readLe(u32, bytes, 44);
-            if (total != bytes.len or entry_count == 0 or key_count == 0) return error.InvalidFormat;
-            if (mode == single_target_mode and checkpoint_stride != single_target_stride) return error.InvalidFormat;
-            if (mode == packed_targets_mode and checkpoint_stride != packed_boundary_stride) return error.InvalidFormat;
-            if (mode == 0 and checkpoint_stride != 0) return error.InvalidFormat;
-            const expected_index_len = if (mode == packed_targets_mode) blk: {
-                if (key_count > std.math.maxInt(u16)) return error.InvalidFormat;
-                const bitmap = std.math.divCeil(usize, entry_count, 8) catch return error.Overflow;
-                const blocks = std.math.divCeil(usize, entry_count, packed_boundary_stride) catch return error.Overflow;
-                break :blk std.math.add(usize, bitmap, std.math.mul(usize, blocks + 1, 2) catch return error.Overflow) catch return error.Overflow;
-            } else blk: {
-                const count = if (mode == single_target_mode) (key_count - 1) / checkpoint_stride + 1 else key_count;
-                const width = if (mode == single_target_mode) @as(usize, 8) else index_width;
-                break :blk std.math.mul(usize, count, width) catch return error.Overflow;
-            };
-            if (mode == packed_targets_mode and payload_len != try bitsToBytes(entry_count, try bitWidth(entry_count))) return error.InvalidFormat;
-            if (index_off < header_bytes or index_len != expected_index_len) return error.InvalidFormat;
-            const index_end = std.math.add(usize, index_off, index_len) catch return error.Overflow;
-            const payload_end = std.math.add(usize, payload_off, payload_len) catch return error.Overflow;
-            const inner_end = std.math.add(usize, inner_off, inner_len) catch return error.Overflow;
-            if (index_end > bytes.len or payload_off != index_end or payload_end != inner_off or inner_end != bytes.len) return error.InvalidFormat;
-            const inner = try automaton.View.open(bytes[inner_off..inner_end]);
-            if (inner.entry_count != key_count or inner.accepted_count != key_count) return error.InvalidFormat;
-            return .{ .bytes = bytes, .entry_count = entry_count, .key_count = key_count, .index_off = index_off, .index_len = index_len, .payload_off = payload_off, .payload_len = payload_len, .index_width = index_width, .mode = mode, .checkpoint_stride = checkpoint_stride, .inner = inner };
-        }
-
-        fn keyOffset(self: *const Self, rank: u32) Error!usize {
-            if (rank >= self.key_count) return error.RankOutOfRange;
-            const at = self.index_off + @as(usize, rank) * self.index_width;
-            const relative: u32 = if (self.index_width == 2) try readLe(u16, self.bytes, at) else try readLe(u32, self.bytes, at);
-            if (relative >= self.payload_len) return error.InvalidOutput;
-            return self.payload_off + relative;
-        }
-
-        fn keyLimit(self: *const Self, rank: u32) Error!usize {
-            if (rank >= self.key_count) return error.RankOutOfRange;
-            const next = rank + 1;
-            if (next == self.key_count) return self.payload_off + self.payload_len;
-            const at = self.index_off + @as(usize, next) * self.index_width;
-            const relative: u32 = if (self.index_width == 2) try readLe(u16, self.bytes, at) else try readLe(u32, self.bytes, at);
-            if (relative > self.payload_len) return error.InvalidOutput;
-            return self.payload_off + relative;
-        }
-
-        fn packedDirectoryValue(self: *const Self, index: usize) Error!u32 {
-            const bitmap_len = std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow;
-            const directory_count = (std.math.divCeil(usize, self.entry_count, packed_boundary_stride) catch return error.Overflow) + 1;
-            if (index >= directory_count) return error.InvalidOutput;
-            return try readLe(u16, self.bytes, self.index_off + bitmap_len + index * 2);
-        }
-
-        fn packedStart(self: *const Self, group_rank: u32) Error!u32 {
-            if (group_rank >= self.key_count) return error.RankOutOfRange;
-            const bitmap_len = std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow;
-            const blocks = std.math.divCeil(usize, self.entry_count, packed_boundary_stride) catch return error.Overflow;
-            var lo: usize = 0;
-            var hi = blocks;
-            while (lo + 1 < hi) {
-                const mid = lo + (hi - lo) / 2;
-                if (try self.packedDirectoryValue(mid) <= group_rank) lo = mid else hi = mid;
-            }
-            const before = try self.packedDirectoryValue(lo);
-            if (before > group_rank) return error.InvalidOutput;
-            var needed = group_rank - before;
-            const first_byte = lo * (packed_boundary_stride / 8);
-            const last_byte = @min(first_byte + packed_boundary_stride / 8, bitmap_len);
-            var byte_index = first_byte;
-            while (byte_index < last_byte) : (byte_index += 1) {
-                var bits = self.bytes[self.index_off + byte_index];
-                const count: u32 = @popCount(bits);
-                if (needed >= count) {
-                    needed -= count;
-                    continue;
-                }
-                while (needed != 0) : (needed -= 1) bits &= bits - 1;
-                const position = byte_index * 8 + @as(usize, @intCast(@ctz(bits)));
-                if (position >= self.entry_count) return error.InvalidOutput;
-                return @intCast(position);
-            }
-            return error.InvalidOutput;
-        }
-
-        fn targetsAt(self: *const Self, rank: u32) Error!TargetList {
-            if (self.mode == packed_targets_mode) {
-                const start = try self.packedStart(rank);
-                const end = if (rank + 1 == self.key_count) self.entry_count else try self.packedStart(rank + 1);
-                if (end <= start) return error.InvalidOutput;
-                return .{
-                    .bytes = self.bytes,
-                    .offset = self.payload_off,
-                    .limit = self.payload_len,
-                    .count = end - start,
-                    .entry_count = self.entry_count,
-                    .mode = self.mode,
-                    .packed_width = try bitWidth(self.entry_count),
-                    .packed_start = start,
-                };
-            }
-            if (self.mode == single_target_mode) {
-                if (rank >= self.key_count) return error.RankOutOfRange;
-                return .{ .bytes = self.bytes, .offset = self.payload_off, .count = 1, .entry_count = self.entry_count, .mode = self.mode, .checkpoint_off = self.index_off, .checkpoint_stride = self.checkpoint_stride, .key_rank = rank };
-            }
-            const offset = try self.keyOffset(rank);
-            const limit = try self.keyLimit(rank);
-            if (limit <= offset) return error.InvalidOutput;
-            var cursor = offset;
-            const count = try readVarLimited(self.bytes, &cursor, limit);
-            return .{ .bytes = self.bytes, .offset = offset, .count = count, .entry_count = self.entry_count, .limit = limit };
-        }
-
-        pub fn exact(self: *const Self, derived: []const u8) !?Hit {
-            const hit = (try self.inner.exact(derived)) orelse return null;
-            const range = hit.entry_range orelse return error.InvalidOutput;
-            if (range.len() != 1) return error.InvalidOutput;
-            return .{ .targets = try self.targetsAt(@intFromEnum(range.lo)) };
-        }
-
-        pub fn ledger(self: *const Self) Ledger {
-            return .{ .header = header_bytes, .output_index = self.index_len, .output_payload = self.payload_len, .automaton = self.inner.len(), .total = self.bytes.len, .mode = self.mode };
-        }
-
-        pub fn prefix(self: *const Self, derived_prefix: []const u8, key_scratch: []u8, frames: []automaton.Frame) !Iterator(Transform) {
-            const inner_iterator = self.inner.prefix(derived_prefix, key_scratch, frames) catch |err| switch (err) {
-                error.InvalidState => return error.InvalidState,
-                else => return err,
-            };
-            return .{ .view = self, .inner = inner_iterator };
-        }
-
-        pub fn verify(self: *const Self, allocator: std.mem.Allocator) !void {
-            try self.inner.verifyWithAllocator(allocator);
-            if (self.mode == packed_targets_mode) {
-                const bitmap_len = std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow;
-                const bitmap = self.bytes[self.index_off..][0..bitmap_len];
-                const tail = self.entry_count & 7;
-                if (tail != 0 and bitmap[bitmap.len - 1] & ~((@as(u8, 1) << @intCast(tail)) - 1) != 0) return error.InvalidOutput;
-                if (!bitGet(bitmap, 0)) return error.InvalidOutput;
-                var starts: u32 = 0;
-                const blocks = std.math.divCeil(usize, self.entry_count, packed_boundary_stride) catch return error.Overflow;
-                for (0..blocks + 1) |block| {
-                    if (try self.packedDirectoryValue(block) != starts) return error.InvalidOutput;
-                    if (block == blocks) continue;
-                    const first = block * packed_boundary_stride;
-                    const last = @min(first + packed_boundary_stride, self.entry_count);
-                    for (first..last) |position| {
-                        if (bitGet(bitmap, position)) starts += 1;
-                    }
-                }
-                if (starts != self.key_count) return error.InvalidOutput;
-                const width = try bitWidth(self.entry_count);
-                const used_bits = std.math.mul(usize, self.entry_count, width) catch return error.Overflow;
-                if (used_bits & 7 != 0) {
-                    const mask: u8 = @as(u8, 0xff) << @intCast(used_bits & 7);
-                    if (self.bytes[self.payload_off + self.payload_len - 1] & mask != 0) return error.InvalidOutput;
-                }
-                const seen = try allocator.alloc(u8, std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow);
-                defer allocator.free(seen);
-                @memset(seen, 0);
-                var previous: u32 = 0;
-                var have_previous = false;
-                for (0..self.entry_count) |position| {
-                    if (bitGet(bitmap, position)) have_previous = false;
-                    const target = try packedAt(self.bytes[self.payload_off..][0..self.payload_len], width, position);
-                    if (target >= self.entry_count or bitGet(seen, target) or (have_previous and target <= previous)) return error.InvalidTarget;
-                    bitSet(seen, target);
-                    previous = target;
-                    have_previous = true;
-                }
-                return;
-            }
-            if (self.mode == single_target_mode) {
-                const checkpoint_count = (self.key_count - 1) / self.checkpoint_stride + 1;
-                var previous_value: u32 = 0;
-                var cursor = self.payload_off;
-                for (0..self.key_count) |rank| {
-                    const encoded = try readVar(self.bytes, &cursor);
-                    const delta = zigzagDecode(encoded);
-                    const next = @as(i64, previous_value) + delta;
-                    if (next < 0 or next >= self.entry_count) return error.InvalidTarget;
-                    previous_value = @intCast(next);
-                    if (rank % self.checkpoint_stride == 0) {
-                        const checkpoint = rank / self.checkpoint_stride;
-                        const at = self.index_off + checkpoint * 8;
-                        if (checkpoint >= checkpoint_count) return error.InvalidFormat;
-                        if (try readLe(u32, self.bytes, at) != previous_value) return error.InvalidOutput;
-                        if (try readLe(u32, self.bytes, at + 4) != cursor - self.payload_off) return error.InvalidOutput;
-                    }
-                }
-                if (cursor != self.payload_off + self.payload_len) return error.InvalidFormat;
-                return;
-            }
-            var previous_offset: u32 = 0;
-            for (0..self.key_count) |i| {
-                const at = self.index_off + i * self.index_width;
-                const offset: u32 = if (self.index_width == 2) try readLe(u16, self.bytes, at) else try readLe(u32, self.bytes, at);
-                if (i != 0 and offset <= previous_offset) return error.InvalidOutput;
-                if (offset >= self.payload_len) return error.InvalidOutput;
-                previous_offset = offset;
-                const next_offset: u32 = if (i + 1 == self.key_count) try u32Len(self.payload_len) else blk: {
-                    const next_at = self.index_off + (i + 1) * self.index_width;
-                    break :blk if (self.index_width == 2) try readLe(u16, self.bytes, next_at) else try readLe(u32, self.bytes, next_at);
-                };
-                if (next_offset <= offset or next_offset > self.payload_len) return error.InvalidOutput;
-                const group_limit = self.payload_off + next_offset;
-                var cursor = self.payload_off + offset;
-                const count = try readVarLimited(self.bytes, &cursor, group_limit);
-                if (count == 0) return error.InvalidOutput;
-                var previous: u32 = 0;
-                for (0..count) |j| {
-                    const delta = try readVarLimited(self.bytes, &cursor, group_limit);
-                    const target = if (j == 0) std.math.sub(u32, delta, 1) catch return error.InvalidOutput else std.math.add(u32, previous, delta) catch return error.InvalidOutput;
-                    if (target >= self.entry_count or (j != 0 and target <= previous)) return error.InvalidTarget;
-                    previous = target;
-                }
-                if (cursor != group_limit) return error.InvalidOutput;
-            }
-        }
-    };
-}
-
-pub fn Iterator(comptime Transform: type) type {
-    return struct {
-        const Self = @This();
-        view: *const ViewFor(Transform),
-        inner: automaton.View.Iterator,
-        unreverse_output: bool = false,
-
-        pub fn next(self: *Self) !?Item {
-            const item = (try self.inner.next()) orelse return null;
-            if (self.unreverse_output) try reverseScalarsInPlace(@constCast(item.key));
-            const rank = @intFromEnum(item.entry_range.lo);
-            return .{ .key = item.key, .targets = try self.view.targetsAt(rank) };
-        }
-    };
-}
 
 /// Flatten an axis prefix/suffix result into a deterministic set of primary
 /// identities. A form and its lemma may expose the same entry through
@@ -1009,7 +682,7 @@ pub fn Index(comptime Transform: type) type {
             return .{ .view = view };
         }
 
-        pub fn exact(self: *const Self, query: []const u8, transform_scratch: []u8) !?Hit {
+        pub fn exact(self: *const Self, query: []const u8, transform_scratch: []u8) !?ViewFor(Transform).Hit {
             const derived = try Transform.apply(query, transform_scratch);
             return self.view.exact(derived);
         }
@@ -1035,18 +708,7 @@ pub fn Index(comptime Transform: type) type {
 /// form targets are requested through `source.bytes` at the moment they are
 /// needed.  In particular, there is no `bytes(0, source.len())` escape hatch
 /// hidden in this type.
-fn sourceBytes(comptime Source: type, source: *const Source, offset: usize, length: usize) anyerror![]const u8 {
-    if (@hasDecl(Source, "bytes")) return source.bytes(offset, length);
-    if (@hasDecl(Source, "read")) return source.read(offset, length);
-    @compileError("LEX4 source must provide bytes(offset, length) or read(offset, length)");
-}
-
-fn sourceLength(comptime Source: type, source: *const Source) usize {
-    if (@hasDecl(Source, "len")) return source.len();
-    @compileError("LEX4 source must provide len()");
-}
-
-pub fn SourceTargetList(comptime Source: type) type {
+pub fn TargetListFor(comptime Source: type) type {
     return struct {
         source: *const Source,
         payload_base: usize,
@@ -1067,7 +729,7 @@ pub fn SourceTargetList(comptime Source: type) type {
             var shift: u5 = 0;
             while (true) {
                 if (cursor.* >= self.limit) return error.Truncated;
-                const bytes = try sourceBytes(Source, self.source, self.payload_base + cursor.*, 1);
+                const bytes = try wire.sourceBytes(Source, self.source, self.payload_base + cursor.*, 1);
                 const value = bytes[0];
                 cursor.* += 1;
                 if (shift == 28 and value > 0x0f) return error.InvalidFormat;
@@ -1093,7 +755,7 @@ pub fn SourceTargetList(comptime Source: type) type {
                 const available = self.limit - byte_offset;
                 const count_to_read = @min(@as(usize, 5), available);
                 if (count_to_read == 0) return error.Truncated;
-                const bytes = try sourceBytes(Source, self.source, self.payload_base + byte_offset, count_to_read);
+                const bytes = try wire.sourceBytes(Source, self.source, self.payload_base + byte_offset, count_to_read);
                 var word: u64 = 0;
                 for (bytes, 0..) |byte, i| word |= @as(u64, byte) << @intCast(i * 8);
                 const mask = (@as(u64, 1) << @intCast(self.packed_width)) - 1;
@@ -1117,15 +779,15 @@ pub fn SourceTargetList(comptime Source: type) type {
     };
 }
 
-pub fn openSource(comptime Transform: type, comptime Source: type, source: Source) !SourceView(Transform, Source) {
-    return SourceView(Transform, Source).open(source);
+pub fn openSource(comptime Transform: type, comptime Source: type, source: Source) !ViewForSource(Transform, Source) {
+    return ViewForSource(Transform, Source).open(source);
 }
 
-pub fn SourceView(comptime Transform: type, comptime Source: type) type {
+fn ViewForSource(comptime Transform: type, comptime Source: type) type {
     return struct {
         const Self = @This();
-        pub const Hit = struct { targets: SourceTargetList(Source) };
-        pub const Item = struct { key: []const u8, targets: SourceTargetList(Source) };
+        pub const Hit = struct { targets: TargetListFor(Source) };
+        pub const Item = struct { key: []const u8, targets: TargetListFor(Source) };
         source: Source,
         entry_count: u32,
         key_count: u32,
@@ -1139,7 +801,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
         inner: automaton.ViewFor(wire.Span(Source)),
 
         fn read(self: *const Self, offset: usize, length: usize) anyerror![]const u8 {
-            return sourceBytes(Source, &self.source, offset, length);
+            return wire.sourceBytes(Source, &self.source, offset, length);
         }
         fn le(self: *const Self, comptime T: type, offset: usize) anyerror!T {
             const bytes = try self.read(offset, @sizeOf(T));
@@ -1181,7 +843,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
             }
             return error.InvalidOutput;
         }
-        fn targetAt(self: *const Self, rank: u32) anyerror!SourceTargetList(Source) {
+        fn targetAt(self: *const Self, rank: u32) anyerror!TargetListFor(Source) {
             if (rank >= self.key_count) return error.RankOutOfRange;
             if (self.mode == packed_targets_mode) {
                 const start = try self.packedStart(rank);
@@ -1221,7 +883,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
             var shift: u5 = 0;
             while (true) {
                 if (cursor >= self.payload_off + next) return error.Truncated;
-                const byte = (try sourceBytes(Source, &self.source, cursor, 1))[0];
+                const byte = (try wire.sourceBytes(Source, &self.source, cursor, 1))[0];
                 cursor += 1;
                 if (shift == 28 and byte > 0x0f) return error.InvalidOutput;
                 count |= @as(u32, byte & 0x7f) << shift;
@@ -1243,7 +905,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
                 var encoded: u64 = 0;
                 var shift: u6 = 0;
                 while (true) {
-                    const byte = (try sourceBytes(Source, &self.source, cursor, 1))[0];
+                    const byte = (try wire.sourceBytes(Source, &self.source, cursor, 1))[0];
                     cursor += 1;
                     encoded |= @as(u64, byte & 0x7f) << shift;
                     if (byte & 0x80 == 0) break;
@@ -1260,8 +922,8 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
         }
 
         pub fn open(source_value: Source) !Self {
-            if (sourceLength(Source, &source_value) < header_bytes) return error.Truncated;
-            const header = try sourceBytes(Source, &source_value, 0, header_bytes);
+            if (wire.sourceLen(Source, &source_value) < header_bytes) return error.Truncated;
+            const header = try wire.sourceBytes(Source, &source_value, 0, header_bytes);
             if (!std.mem.eql(u8, header[0..4], magic)) return error.InvalidFormat;
             if (std.mem.readInt(u16, header[4..6], .little) != version) return error.UnsupportedVersion;
             if (header[6] != @intFromEnum(kindFor(Transform))) return error.BadAxis;
@@ -1278,7 +940,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
             const payload_len = std.mem.readInt(u32, header[36..40], .little);
             const total = std.mem.readInt(u32, header[40..44], .little);
             const stride = std.mem.readInt(u32, header[44..48], .little);
-            if (total != sourceLength(Source, &source_value) or entry_count == 0 or key_count == 0) return error.InvalidFormat;
+            if (total != wire.sourceLen(Source, &source_value) or entry_count == 0 or key_count == 0) return error.InvalidFormat;
             if (mode == single_target_mode and stride != single_target_stride) return error.InvalidFormat;
             if (mode == packed_targets_mode and stride != packed_boundary_stride) return error.InvalidFormat;
             if (mode == 0 and stride != 0) return error.InvalidFormat;
@@ -1316,21 +978,25 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
             return .{ .targets = try self.targetAt(base) };
         }
 
-        pub fn prefix(self: *const Self, derived_prefix: []const u8, key_scratch: []u8, frames: []automaton.Frame) !SourceIterator(Transform, Source) {
-            if (derived_prefix.len > key_scratch.len or frames.len == 0) return error.OutputTooSmall;
-            const interval = (try self.inner.prefixInterval(derived_prefix)) orelse return .{
-                .view = self,
-                .key = key_scratch,
-                .frames = frames,
-                .depth = 0,
+        pub fn ledger(self: *const Self) Ledger {
+            return .{
+                .header = header_bytes,
+                .output_index = self.index_len,
+                .output_payload = self.payload_len,
+                .automaton = self.inner.len(),
+                .total = wire.sourceLen(Source, &self.source),
+                .mode = self.mode,
             };
-            std.mem.copyForwards(u8, key_scratch[0..derived_prefix.len], derived_prefix);
-            const raw = try self.inner.decodeState(interval.state);
-            frames[0] = .{ .state = interval.state, .base = @intFromEnum(interval.range.lo), .key_len = derived_prefix.len, .arc_cursor = raw.arc_offset };
-            return .{ .view = self, .key = key_scratch, .frames = frames, .depth = 1 };
         }
 
-        pub fn verify(self: *const Self) !void {
+        pub fn prefix(self: *const Self, derived_prefix: []const u8, key_scratch: []u8, frames: []automaton.Frame) !IteratorFor(Transform, Source) {
+            return .{
+                .view = self,
+                .inner = try self.inner.prefix(derived_prefix, key_scratch, frames),
+            };
+        }
+
+        fn verifyLocal(self: *const Self) !void {
             try self.inner.verify();
             if (self.mode == packed_targets_mode) {
                 const bitmap_len = std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow;
@@ -1363,7 +1029,7 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
                 var have_previous = false;
                 for (0..self.entry_count) |position| {
                     if (bitGet(try self.read(self.index_off + position / 8, 1), position & 7)) have_previous = false;
-                    const list = SourceTargetList(Source){
+                    const list = TargetListFor(Source){
                         .source = &self.source,
                         .payload_base = self.payload_off,
                         .offset = 0,
@@ -1392,14 +1058,14 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
         /// every local range; callers performing a deep-open pass provide the
         /// one-bit-per-entry workspace through this explicit allocator seam.
         pub fn verifyWithAllocator(self: *const Self, allocator: std.mem.Allocator) !void {
-            try self.verify();
+            try self.verifyLocal();
             if (self.mode != packed_targets_mode) return;
             const seen = try allocator.alloc(u8, std.math.divCeil(usize, self.entry_count, 8) catch return error.Overflow);
             defer allocator.free(seen);
             @memset(seen, 0);
             const width = try bitWidth(self.entry_count);
             for (0..self.entry_count) |position| {
-                const list = SourceTargetList(Source){
+                const list = TargetListFor(Source){
                     .source = &self.source,
                     .payload_base = self.payload_off,
                     .offset = 0,
@@ -1414,44 +1080,41 @@ pub fn SourceView(comptime Transform: type, comptime Source: type) type {
                 bitSet(seen, value);
             }
         }
+
+        pub fn verify(self: *const Self, allocator: std.mem.Allocator) !void {
+            return self.verifyWithAllocator(allocator);
+        }
     };
 }
 
-pub fn SourceIterator(comptime Transform: type, comptime Source: type) type {
+pub fn IteratorFor(comptime Transform: type, comptime Source: type) type {
     return struct {
         const Self = @This();
-        view: *const SourceView(Transform, Source),
-        key: []u8,
-        frames: []automaton.Frame,
-        depth: usize,
+        view: *const ViewForSource(Transform, Source),
+        inner: automaton.ViewFor(wire.Span(Source)).Iterator,
         unreverse_output: bool = false,
 
-        pub fn next(self: *Self) !?SourceView(Transform, Source).Item {
-            while (self.depth != 0) {
-                var frame = &self.frames[self.depth - 1];
-                const raw = try self.view.inner.decodeState(frame.state);
-                if (!frame.entered) {
-                    frame.entered = true;
-                    if (raw.entry_mult != 0 or raw.form_count != 0) {
-                        const end = std.math.add(u32, frame.base, raw.entry_mult) catch return error.InvalidFormat;
-                        if (end > self.view.entry_count) return error.TargetOutOfRange;
-                        if (self.unreverse_output) try reverseScalarsInPlace(self.key[0..frame.key_len]);
-                        return .{ .key = self.key[0..frame.key_len], .targets = try self.view.targetAt(frame.base) };
-                    }
-                }
-                if (frame.next_arc < raw.degree) {
-                    const index = frame.next_arc;
-                    frame.next_arc += 1;
-                    const arc = try self.view.inner.arcAt(frame.state, raw, index);
-                    if (frame.key_len >= self.key.len or self.depth >= self.frames.len) return error.OutputTooSmall;
-                    self.key[frame.key_len] = arc.label;
-                    self.frames[self.depth] = .{ .state = arc.target, .base = std.math.add(u32, frame.base, arc.prefix) catch return error.Overflow, .key_len = frame.key_len + 1 };
-                    self.depth += 1;
-                } else self.depth -= 1;
-            }
-            return null;
+        pub fn next(self: *Self) !?ViewForSource(Transform, Source).Item {
+            const item = (try self.inner.next()) orelse return null;
+            if (self.unreverse_output) try reverseScalarsInPlace(@constCast(item.key));
+            return .{
+                .key = item.key,
+                .targets = try self.view.targetAt(@intFromEnum(item.entry_range.lo)),
+            };
         }
     };
+}
+
+pub fn ViewFor(comptime Transform: type) type {
+    return ViewForSource(Transform, []const u8);
+}
+
+pub fn SourceView(comptime Transform: type, comptime Source: type) type {
+    return ViewForSource(Transform, Source);
+}
+
+pub fn Iterator(comptime Transform: type) type {
+    return IteratorFor(Transform, []const u8);
 }
 
 test "transforms reverse complete UTF-8 scalars and normalize only ASCII" {

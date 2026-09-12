@@ -1,5 +1,5 @@
 {
-  description = "LEX2 reproducible benchmark environment";
+  description = "LEX4 reproducible benchmark environment";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -24,6 +24,8 @@
             (pkgs.python314.withPackages (ps: [ ps.pyicu ps.slob ]))
           ];
           shellHook = ''
+            export LEX4_BENCH_ROOT="$PWD"
+            # Keep the historical name for bench2 reproduction scripts.
             export LEX2_BENCH_ROOT="$PWD"
             export PATH="$PWD/zig-out/bin:$PATH"
           '';

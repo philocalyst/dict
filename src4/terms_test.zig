@@ -179,7 +179,7 @@ test "source adapter is the authenticated read boundary" {
     defer owned.deinit();
     const source = terms.SliceSource{ .data = owned.bytes };
     var checked = try terms.openSource(terms.SliceSource, source);
-    try checked.verify();
+    try checked.verify(std.testing.allocator);
     try std.testing.expect(try (try checked.exact("tiny")).?.postings.contains(rank(7)));
 
     const wrapped = try container.build(std.testing.allocator, [_]u8{0} ** container.digest_size, &.{.{ .tag = .cold, .bytes = owned.bytes }});
@@ -187,7 +187,7 @@ test "source adapter is the authenticated read boundary" {
     var trust = [_]u64{0};
     var snapshot = try container.Container.open(wrapped, &trust);
     var authenticated = try terms.openSource(container.SectionSource, .{ .section = try snapshot.find(.cold) });
-    try authenticated.verify();
+    try authenticated.verify(std.testing.allocator);
     try std.testing.expect((try authenticated.exact("tiny")) != null);
 
     var corrupted = try std.testing.allocator.dupe(u8, wrapped);

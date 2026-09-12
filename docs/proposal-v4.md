@@ -29,7 +29,7 @@ four things become possible that block-and-pointer designs cannot do:
 
 1. **The key index is a minimal acyclic automaton whose accepting paths are numbered.** Walking a key yields its rank; walking a prefix yields a rank *interval*. There are no postings, no key strings outside the automaton, no permutation for headwords. Fuzzy, regex, and phonetic search are products with other automata over the same structure.
 2. **Navigation is interval arithmetic in kind-rank space.** Because roots are in key order and nodes in preorder, the senses of the entries in a prefix interval are themselves an interval of sense ranks, and their definitions an interval of definition ranks. A query never materialises a node list until it hits a filter that is not interval-closed.
-3. **Prose is a grammar, not a block.** A global Re-Pair grammar factors corpus-wide phrase redundancy once; each definition is a short sequence of grammar symbols that expands in microseconds with no codec state, no cache, and no decode amplification. bzip3 is applied to the *symbol stream*, per preset, as residual compression only.
+3. **Prose is a grammar, not a block.** A global grammar built with a deterministic, bounded-sample Re-Pair heuristic factors corpus-wide phrase redundancy once; each definition is a short sequence of grammar symbols that expands in microseconds with no codec state, no cache, and no decode amplification. bzip3 is applied to the *symbol stream*, per preset, as residual compression only.
 4. **Structure is entropy-coded.** Entry skeletons, kinds, parts of speech, languages, and assertion states are low-entropy columns; a static rANS coder with checkpointed random access stores them at their entropy (often under one bit per entry) instead of their width.
 
 Around these, the lexical model gains a concept layer (synsets and interlingual
@@ -170,12 +170,15 @@ under 1 KB; on a million-entry dictionary about 500 KB, or 0.5 B per entry.
 ### 4.1 Representation
 
 All text items (definitions, examples, notes, mixed-content text) are
-concatenated in kind-rank order with a separator symbol and compressed once
-with **Re-Pair**: repeatedly replace the most frequent adjacent symbol pair
-with a new nonterminal until no pair repeats. The output is a rule table
-(`R` rules × 2 symbols) and a symbol sequence. Every item is a contiguous
-range of that sequence; its start is `select` on a bitvector marking item
-boundaries (one bit per symbol, RRR-compressed when sparse).
+compressed together with a **deterministic bounded-sample Re-Pair heuristic**.
+Each round counts a bounded prefix of adjacent symbol occurrences, replaces
+the most frequent pair in that sample, and stops at the configured rule or
+work budget. It therefore does not claim the exact globally most frequent
+pair; increasing the sample cap trades compiler memory and time for a chance
+at a better ratio. The output is a bit-packed rule table (`R` rules × 2
+symbols), a bit-packed symbol sequence, packed cumulative item ends, and
+sparse alias metadata for identical text. Every non-aliased item is a
+contiguous range of the symbol sequence.
 
 Item text is produced by expanding its symbols with an explicit stack; the
 cost is linear in the output bytes, with no codec state and no allocation
@@ -210,7 +213,7 @@ the balanced preset (against LEX2's 11.4 KB and v1's 4.3 KB).
 
 ### 4.3 What the grammar gives for free
 
-- **Aliasing.** Identical items produce identical symbol runs; the compiler replaces an exact duplicate item with a one-symbol reference to the earlier item (a rule), so the `repeated` fixture's four templates cost four rules.
+- **Aliasing.** The compiler removes an exact duplicate before grammar construction and records a backward item reference in packed alias bits, rank checkpoints, and targets. Repeated text therefore adds no duplicate symbol run or grammar rule.
 - **Snippets.** A preview of the first `n` bytes expands left-to-right and stops; DICT `MATCH` with previews never touches the rest of the item.
 - **Partial rendering by field.** Because items are kind-ranked, "all examples of this sense" is an interval of the example sequence, not a scan of the entry's text.
 - **Grammar-level full text.** A term's occurrences can be stored per *symbol* whose expansion contains the term (the set of such symbols is small), and per-entry postings derived from symbol positions at query time. This is the self-index direction of Claude and Navarro; it is an optional accelerator, not the baseline, because §7's containers are simpler and already small.
@@ -423,12 +426,14 @@ sorted-input incremental minimisation (the Daciuk et al. algorithm) with a
 `std.HashMapUnmanaged` of state signatures during build only; the reader has
 no hash tables.
 
-**Grammar.** Rule table as two FOR columns (`left`, `right`) plus an
-`expansion_length` column for snippets and bounds; expansion with a fixed
-`std.BoundedArray(Symbol, 256)` stack and an explicit output budget, so a
-malicious grammar cannot expand past the caller's buffer or budget (the
-decompression-bomb guard the plan requires). Symbol width is a comptime-known
-`u6` per snapshot section header.
+**Grammar.** Each rule's `left`, `right`, and `expansion_length` fields share a
+bit-packed rule lane at the minimum widths declared by the authenticated
+section header; the symbol stream and cumulative item ends are bit-packed too.
+Expansion uses an explicit caller-provided frame stack and output/step budgets,
+so a malicious grammar cannot expand past the caller's storage or work limit
+(the decompression-bomb guard the plan requires). The source type—not a
+snapshot-specific bit width—is known at comptime, allowing authenticated and
+raw-slice readers to share statically dispatched control flow.
 
 **rANS.** State `u32`, frequency table `std.BoundedArray(u16, 4096)`, checkpoint
 records through `wire.Layout`; encode at build in reverse, decode forward;

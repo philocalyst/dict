@@ -60,8 +60,11 @@ pub const Slice = struct {
 
 pub fn SourceError(comptime Source: type) type {
     if (Source == []const u8 or Source == []u8) return Error;
-    const access = if (@hasDecl(Source, "bytes")) Source.bytes else if (@hasDecl(Source, "read")) Source.read else
-        @compileError("source must provide bytes(offset,length) or read(offset,length)");
+    const DeclSource = switch (@typeInfo(Source)) {
+        .pointer => |pointer| pointer.child,
+        else => Source,
+    };
+    const access = if (@hasDecl(DeclSource, "bytes")) DeclSource.bytes else if (@hasDecl(DeclSource, "read")) DeclSource.read else @compileError("source must provide bytes(offset,length) or read(offset,length)");
     const info = @typeInfo(@TypeOf(access)).@"fn";
     const result = info.return_type orelse @compileError("source bytes must return an error union");
     return @typeInfo(result).error_union.error_set || Error;
@@ -69,11 +72,17 @@ pub fn SourceError(comptime Source: type) type {
 
 pub inline fn sourceLen(comptime Source: type, source: *const Source) usize {
     if (comptime Source == []const u8 or Source == []u8) return source.*.len;
+    if (comptime @typeInfo(Source) == .pointer) return source.*.len();
     return source.len();
 }
 
 pub inline fn sourceBytes(comptime Source: type, source: *const Source, offset: usize, length: usize) SourceError(Source)![]const u8 {
     if (comptime Source == []const u8 or Source == []u8) return bytesAt(source.*, offset, length);
+    if (comptime @typeInfo(Source) == .pointer) {
+        const DeclSource = @typeInfo(Source).pointer.child;
+        if (comptime @hasDecl(DeclSource, "bytes")) return source.*.bytes(offset, length);
+        return source.*.read(offset, length);
+    }
     if (comptime @hasDecl(Source, "bytes")) return source.bytes(offset, length);
     return source.read(offset, length);
 }

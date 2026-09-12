@@ -219,7 +219,7 @@ test "source adapter accepts authenticated-style read source" {
         }
     };
     const checked = try axes.openSource(axes.Reverse, ReadSource, .{ .data = owned.bytes });
-    try checked.verify();
+    try checked.verify(std.testing.allocator);
 }
 
 test "axis source open and exact stay range-lazy" {
@@ -287,7 +287,7 @@ test "source singleton checkpoint target is range checked" {
     const index_at = std.mem.readInt(u32, owned.bytes[24..28], .little);
     std.mem.writeInt(u32, owned.bytes[@as(usize, index_at) + 8 ..][0..4], 65, .little);
     const source = try axes.openSource(axes.Normalized, automaton.SliceSource, .{ .data = owned.bytes });
-    try std.testing.expectError(error.InvalidTarget, source.verify());
+    try std.testing.expectError(error.InvalidTarget, source.verify(std.testing.allocator));
 }
 
 test "section source authenticates an axis before open" {
@@ -300,7 +300,7 @@ test "section source authenticates an axis before open" {
     const section = try snapshot.find(.reversed);
     const source = container.SectionSource{ .section = section };
     const checked = try axes.openSource(axes.Reverse, container.SectionSource, source);
-    try checked.verify();
+    try checked.verify(std.testing.allocator);
 
     trust[0] = 0;
     wrapped[@intCast(section.descriptor.offset)] ^= 1;
