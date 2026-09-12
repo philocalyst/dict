@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "status": "preparation_and_smoke_only_until_root_gate",
+  "selected_corpora": [
+    {
+      "id": "freedict-eng-spa",
+      "name": "FreeDict eng-spa",
+      "version": "2025.11.23",
+      "source_url": "https://download.freedict.org/dictionaries/eng-spa/2025.11.23/freedict-eng-spa-2025.11.23.src.tar.xz",
+      "release_metadata_url": "https://freedict.org/freedict-database.json",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+      "license": "CC BY-SA 3.0",
+      "input": "complete source TEI archive; no subset"
+    },
+    {
+      "id": "gcide-054",
+      "name": "GNU Collaborative International Dictionary of English",
+      "version": "0.54",
+      "source_url": "https://ftp.gnu.org/gnu/gcide/gcide-0.54.tar.xz",
+      "release_metadata_url": "https://gcide.gnu.org.ua/download",
+      "license_url": "https://gcide.gnu.org.ua/license",
+      "license": "GPL-3.0-or-later",
+      "input": "complete CIDE.A through CIDE.Z; no subset"
+    },
+    {
+      "id": "omw-ja-20",
+      "name": "Open Multilingual Wordnet Japanese",
+      "version": "OMW data 2.0 / NICT Japanese WordNet",
+      "source_url": "https://github.com/omwn/omw-data/releases/download/v2.0/omw-2.0.tar.xz",
+      "license_url": "https://github.com/omwn/omw-data/blob/v2.0/omw-ja/LICENSE",
+      "license": "NICT Japanese WordNet license",
+      "input": "complete omw-ja/omw-ja.xml; no subset",
+      "projection": "LexicalEntry Sense references joined to each referenced Synset once, nonrecursive"
+    }
+  ],
+  "formats": [
+    "LEX6(raw/adaptive/bzip3)",
+    "LEX5(frozen; adapter status recorded)",
+    "src2(frozen API; adapter status recorded)",
+    "src4(frozen API; adapter status recorded)",
+    "StarDict(native files + sdcv validation)",
+    "DICT(native files + dictunformat/dict validation)",
+    "dictzip(random-access control; whole gzip is storage-only)",
+    "SLOB(real slob library)",
+    "SQLite(indexed control)"
+  ],
+  "schedule": {
+    "main_page_bytes": 65536,
+    "page_sweep_bytes": [16384, 65536, 262144],
+    "main_process_runs": 3,
+    "warmups": 1,
+    "batched_ops_per_sample": 256,
+    "prefix_correctness_passes": 1,
+    "prefix_measured_batches": 3,
+    "startup_process_runs": 3,
+    "gate": "ROOT-EXPLICIT-QUIET-GATE"
+  },
+  "timing_policy": "disabled until the root explicitly grants the quiet gate"
+}

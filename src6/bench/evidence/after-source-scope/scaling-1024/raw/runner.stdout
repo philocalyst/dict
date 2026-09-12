@@ -1,0 +1,43 @@
+LEX6-BENCH/1	status	measured_after_explicit_gate
+config	records	1024
+config	profile	rich
+config	distribution	mixed
+old_rendered_digest	sha256	6eb09908a70f5935eaf7024514f0a2ae0f42cb1df59f4569d3175df604173086
+new_resource_digest	sha256	ad99df7a99bc7db7ade80250721779d0d7dcb175de165abe1b306d3bdb7c658a
+new_rendered_digest	sha256	6eb09908a70f5935eaf7024514f0a2ae0f42cb1df59f4569d3175df604173086
+query	0	exact	count	1	old_count	1
+query	0	digest	bcb6d2526a942667a459e325576a60268cc29d9f690dcbe69eeacf4118c900b8
+query	1	exact	count	1	old_count	1
+query	1	digest	e0821c786ffd2c156c7d7d94da73beb157dedb6ac5e511d6472a6c323c59a472
+query	2	exact	count	0	old_count	0
+query	2	digest	840076b740c81691e8a7290726ab78e54465413f96511d4c3f2a984038759369
+query	3	prefix	count	1024	old_count	1024
+query	3	digest	6f21106a3bec306d093e40fd318c99f5c580be1e51e0c2232b8b34de584c2c55
+query	4	prefix	count	1024	old_count	1024
+query	4	digest	148bcc2ba551a9c49f19d0a344cd88f01ab6fb820bee7221d0534e5e7d474c51
+query	5	prefix	count	0	old_count	0
+query	5	digest	a552d54b785189d4f7f0b03ab7dc9e6ead8327cff3e64a98d40095fead87132c
+artifact	old_borrowed_core	native	bytes	67290
+artifact	old_borrowed_core	native	sha256	6cf4872aa9515e62dc9af45c00c1fa2e62a4105a75ce43275451c6458705765b
+timing	old_borrowed_core	native	build	samples	1	total_ns	5005042	count	0	bytes	67290	checksum	0
+timing	old_borrowed_core	native	open_metadata	samples	1	total_ns	32834	count	0	bytes	0	checksum	0
+timing	old_borrowed_core	native	verify_all	samples	1	total_ns	1815792	count	0	bytes	0	checksum	0
+timing	old_borrowed_core	native	lookup_exact[0]=term-0000000	samples	7	total_ns	7249	count	7	bytes	84	checksum	18052808847290295402
+timing	old_borrowed_core	native	lookup_prefix[1]=term-000	samples	7	total_ns	3859333	count	7168	bytes	86016	checksum	160528714064936
+timing	old_borrowed_core	native	lookup_prefix[2]=term-	samples	7	total_ns	3808500	count	7168	bytes	86016	checksum	160528714064936
+timing	old_borrowed_core	native	lookup_prefix[3]=absent-	samples	7	total_ns	1083	count	0	bytes	0	checksum	0
+timing	old_borrowed_core	native	warm_source_lookup_render	samples	7	total_ns	8167	count	0	bytes	1225	checksum	9136986543714031460
+timing	old_borrowed_core	native	source_lookup_snippet	samples	7	total_ns	6624	count	0	bytes	896	checksum	13642891142734876774
+timing	old_borrowed_core	native	source_read_render_control	samples	7	total_ns	7668	count	0	bytes	1225	checksum	9136986543714031460
+artifact	new	raw	bytes	448359
+artifact	new	raw	sha256	98770d1ac871641112c9687e245f0ffed5645bc3d4b2f5e3ef41cfa571e9df5d
+timing	new	raw	build	samples	1	total_ns	1785667	count	0	bytes	448359	checksum	0
+timing	new	raw	open	samples	1	total_ns	56958	count	0	bytes	0	checksum	0
+timing	new	raw	verify_all	samples	1	total_ns	1568834	count	0	bytes	0	checksum	0
+timing	new	raw	lookup_exact[0]=term-0000000	samples	7	total_ns	1916	count	7	bytes	84	checksum	18052808847290295402
+timing	new	raw	lookup_prefix[1]=term-000	samples	7	total_ns	453251	count	7168	bytes	86016	checksum	160528714064936
+timing	new	raw	lookup_prefix[2]=term-	samples	7	total_ns	456834	count	7168	bytes	86016	checksum	160528714064936
+timing	new	raw	lookup_prefix[3]=absent-	samples	7	total_ns	1374	count	0	bytes	0	checksum	0
+timing	new	raw	warm_typed_select_render	samples	7	total_ns	373	count	0	bytes	1225	checksum	9136986543714031460
+timing	new	raw	warm_typed_select_snippet	samples	7	total_ns	334	count	0	bytes	896	checksum	13642891142734876774
+timing	new	raw	cold_load_decode_validate	samples	7	total_ns	440167	count	0	bytes	91	checksum	0

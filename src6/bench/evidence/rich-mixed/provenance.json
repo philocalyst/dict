@@ -1,0 +1,767 @@
+{
+  "artifacts": [
+    {
+      "bytes": 107421,
+      "codec": "adaptive",
+      "lane": "new",
+      "path": "artifacts/new-adaptive.lex6",
+      "sha256": "8241263e4c27b8f5521caf09fb7dcffd3da3054a8bf644606c53c04e9adb8189"
+    },
+    {
+      "bytes": 107421,
+      "codec": "bzip3",
+      "lane": "new",
+      "path": "artifacts/new-bzip3.lex6",
+      "sha256": "8241263e4c27b8f5521caf09fb7dcffd3da3054a8bf644606c53c04e9adb8189"
+    },
+    {
+      "bytes": 897192,
+      "codec": "raw",
+      "lane": "new",
+      "path": "artifacts/new-raw.lex6",
+      "sha256": "77c7e91aba730e8920f963cd8adb18089e06862447833f12b2ae2fd5b3014966"
+    },
+    {
+      "bytes": 140089,
+      "codec": "native",
+      "lane": "old_borrowed_core",
+      "path": "artifacts/old-borrowed-core.lex5",
+      "sha256": "629726a79711303b9dd88d629395f63afded3c656285659218cd9718c5513ef5"
+    }
+  ],
+  "binary_after": {
+    "exists": true,
+    "path": "/private/tmp/src6-harness-measure-rich-mixed-barrier/src6-bench",
+    "sha256": "069c9b7f08c6db76023906f5dcbf11d2ee25a2d5f56e48d2e083fdde52036e88",
+    "size": 1597032
+  },
+  "binary_before": {
+    "exists": false,
+    "path": "/private/tmp/src6-harness-measure-rich-mixed-barrier/src6-bench"
+  },
+  "codec": "all",
+  "compile_command": [
+    "/etc/profiles/per-user/mileswirht/bin/zig",
+    "build-exe",
+    "--name",
+    "src6-bench",
+    "--cache-dir",
+    "/private/tmp/src6-harness-measure-rich-mixed-barrier/zig-cache",
+    "-femit-bin=/private/tmp/src6-harness-measure-rich-mixed-barrier/src6-bench",
+    "--dep",
+    "src6",
+    "--dep",
+    "src5",
+    "-O",
+    "ReleaseFast",
+    "-Mroot=/Users/mileswirht/Downloads/dictionary/src6/bench/runner.zig",
+    "-O",
+    "ReleaseFast",
+    "-I/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include",
+    "-cflags",
+    "-DVERSION=\"1.5.1\"",
+    "-fno-sanitize=undefined",
+    "--",
+    "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/src/libbz3.c",
+    "-O",
+    "ReleaseFast",
+    "-Msrc6=/Users/mileswirht/Downloads/dictionary/src6/root.zig",
+    "-O",
+    "ReleaseFast",
+    "-Msrc5=/Users/mileswirht/Downloads/dictionary/experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/root.zig",
+    "-lc"
+  ],
+  "distribution": "mixed",
+  "frozen_old_root": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/root.zig",
+  "mode": "measure",
+  "new_root": "src6/root.zig",
+  "optimize": "ReleaseFast",
+  "profile": "rich",
+  "protocol": "LEX6-BENCH/1",
+  "quiet_gate_supplied": true,
+  "raw_stderr": "raw/runner.stderr",
+  "raw_stdout": "raw/runner.stdout",
+  "records": 2048,
+  "repetitions": 7,
+  "retained_artifact_root": "src6/bench/evidence/rich-mixed/artifacts",
+  "retained_binary": "src6/bench/evidence/rich-mixed/src6-bench",
+  "retained_raw": "src6/bench/evidence/rich-mixed/raw/runner.stdout",
+  "retained_stage": "src6/bench/evidence/rich-mixed",
+  "runner_command": [
+    "/private/tmp/src6-harness-measure-rich-mixed-barrier/src6-bench",
+    "--mode",
+    "measure",
+    "--records",
+    "2048",
+    "--profile",
+    "rich",
+    "--distribution",
+    "mixed",
+    "--codec",
+    "all",
+    "--warmup",
+    "2",
+    "--repetitions",
+    "7",
+    "--output-dir",
+    "/private/tmp/src6-harness-measure-rich-mixed-barrier/artifacts",
+    "--quiet-gate",
+    "ROOT-EXPLICIT-QUIET-GATE"
+  ],
+  "source_manifest_after_compile": {
+    "algorithm": "sha256",
+    "file_count": 42,
+    "files": [
+      {
+        "path": "build6.zig",
+        "sha256": "a2532b0cbd336017255fac72620787dce22f848ef504c26339e2501378d0e130",
+        "size": 1622
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/book.zig",
+        "sha256": "1de19041a762a19698dd9f12576c1d544c7cc058fd060979a42301b3da81f9ba",
+        "size": 118663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/compiler.zig",
+        "sha256": "8340d230fff74f844db86d6fe7e93ce3a9439270467f6bd021a725b6f828b966",
+        "size": 38630
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/language.zig",
+        "sha256": "cb11054e0f2def0b5de8c7c22f2305b1d6271e8cb25d99416711089819869546",
+        "size": 41742
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/model.zig",
+        "sha256": "297cdfdad89c2bbe70d0105fd049b4f6ce78806a5ac211e34d93ba71c7e17214",
+        "size": 18955
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/population.zig",
+        "sha256": "c78af1f846f5f6b52e76ed47fbd9807c3128b642d8b154124d80a6460c6a2f70",
+        "size": 67367
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/root.zig",
+        "sha256": "9003e59217fb1460696cab5c2af9a33a9d0842ea9e39315ea3b3948a8fe1730f",
+        "size": 663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar.zig",
+        "sha256": "7c94cf02e4416d59e00b82d1b262a7afd861ab058d098d7786729e2b76c50c77",
+        "size": 15101
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar_product.zig",
+        "sha256": "0dbf0b20f5a6a0b7bdbce498e4683e5d5889aa49ada0046510c76e66a05ca491",
+        "size": 16943
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/schema.zig",
+        "sha256": "ee36741d8269adc34db61f995b224088044e1cf07609fcd6d6aee62656ea1057",
+        "size": 5929
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/selector.zig",
+        "sha256": "6e7dea364ed747aca447f6307013c872ee9bbea2f824999dd199220dea16aba8",
+        "size": 23123
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/stored.zig",
+        "sha256": "548c49bd0f2e20ab209538757a359f5f44a8a916f7a9ee3c5e5d761b0a37cc40",
+        "size": 6606
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/type_shape.zig",
+        "sha256": "cb7374e21b727c900249fa8b50965c233f78c492070da7c1d36d12208e987cdf",
+        "size": 10837
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/wire.zig",
+        "sha256": "a30df9a22b0dc063ad773107c93c5fa555f347ed3604e87bd91abf3369d6e826",
+        "size": 14554
+      },
+      {
+        "path": "flake.lock",
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "size": 567
+      },
+      {
+        "path": "flake.nix",
+        "sha256": "95f79f1475b85da70ed0e96f082e7b887cd17bfb4bf70a9f13a10e129e809fce",
+        "size": 1112
+      },
+      {
+        "path": "src6/archive.zig",
+        "sha256": "1ebd97dd9622e31da1cc570e1fb6f737a9218b279ab075ef8381520c8cff5266",
+        "size": 52707
+      },
+      {
+        "path": "src6/archive_test.zig",
+        "sha256": "b20f8278501641a98dbe13c13f354f61f5b151d038ab399f4cdc8ace5be37d40",
+        "size": 14839
+      },
+      {
+        "path": "src6/bench/run.py",
+        "sha256": "252b83300ee06be5e964ed279fef8f55ceda9b7d0e4324cec3c6c48e3f41d2b2",
+        "size": 14377
+      },
+      {
+        "path": "src6/bench/runner.zig",
+        "sha256": "712c2be1f4b9e4b4673fad7a7a95056d9c88f9b0749e0e75800317583dc43a61",
+        "size": 51107
+      },
+      {
+        "path": "src6/compression.zig",
+        "sha256": "f46c9d65a3e48f54515e487721643555ed611f1fb1b59bec37b9dd3ba92a414d",
+        "size": 10608
+      },
+      {
+        "path": "src6/compression_test.zig",
+        "sha256": "46a398c52f32d14b795dfdab87537a141c25942958121213a22a282669230b82",
+        "size": 7649
+      },
+      {
+        "path": "src6/example.zig",
+        "sha256": "3a53c4e1e142f176f88e97940b3ce27b7f5520a29fc503dff35a23855859c38d",
+        "size": 1887
+      },
+      {
+        "path": "src6/experiments/json_packet.zig",
+        "sha256": "295bbae923bd4cbb10c7ae95e5df8aaa0cd4f0aba97b6163d731f7002ca309fd",
+        "size": 17737
+      },
+      {
+        "path": "src6/fixtures.zig",
+        "sha256": "4790f6890b85a8d85abc508c6bca0f1a6379d440e02588584275cf62c5994393",
+        "size": 3951
+      },
+      {
+        "path": "src6/model.zig",
+        "sha256": "a0294bbe8520b05b26f059a6edf3c6d5f91b529340fd5a07db8e95c1b7694e31",
+        "size": 11601
+      },
+      {
+        "path": "src6/model_test.zig",
+        "sha256": "1651f8cca7dbefcbed52edee5c98e2226ada8f90f37e096f6fbc71de8a3630f5",
+        "size": 5574
+      },
+      {
+        "path": "src6/packet.zig",
+        "sha256": "793dd4875cf86f377232f86c343b16e22423d4982197d602f496742eb7ef3fa7",
+        "size": 13067
+      },
+      {
+        "path": "src6/packet_test.zig",
+        "sha256": "d958198bdd743bf9f7c03983823bef381c4baccabea98b38ea5524ad8f70eb0f",
+        "size": 8110
+      },
+      {
+        "path": "src6/query.zig",
+        "sha256": "e5633a3196d8b4d3f7224e7edd0e091d57d1614083bab80f4c685fe8b5a172ff",
+        "size": 4266
+      },
+      {
+        "path": "src6/render.zig",
+        "sha256": "d262e9b9f4795e3d7029d4871a67f83f39be6d2ab1b277d1e9216d2c7ebfe51c",
+        "size": 5837
+      },
+      {
+        "path": "src6/root.zig",
+        "sha256": "2bf15d0f85d84231c897372b6ccb6bab61f659fe5ee7ac58e61d4e0c59f01d5c",
+        "size": 572
+      },
+      {
+        "path": "src6/semantic_test.zig",
+        "sha256": "c5b82b60b44bf343535a05794d8af49826b4ff958dc54eb9f2a320bd2e0d6888",
+        "size": 24034
+      },
+      {
+        "path": "src6/validate.zig",
+        "sha256": "07b2c6e7abedb3f985fda8899a266115e39c6336648f9f40950e4c9351bc8126",
+        "size": 16552
+      },
+      {
+        "path": "src6/walk.zig",
+        "sha256": "5dfc47c9110a30c7e137adce940e2959a094cc438263ea3ea6c23b4aa6dfd99b",
+        "size": 3640
+      },
+      {
+        "path": "src6/walk_test.zig",
+        "sha256": "6198c20f376ce611fb856cdb50e20bdfc2314a5b3b16887c7765ed459b872672",
+        "size": 6652
+      },
+      {
+        "path": "vendor/bzip3/include/common.h",
+        "sha256": "f87f5b286e4b733e79c32c0cd5ee521a41c843a4e73a85fec161c3f0e79011da",
+        "size": 4968
+      },
+      {
+        "path": "vendor/bzip3/include/libbz3.h",
+        "sha256": "ccb20f66402f4ca42656471ec401ceaaeac7c729d590dd976856d48967a734df",
+        "size": 9525
+      },
+      {
+        "path": "vendor/bzip3/include/libsais.h",
+        "sha256": "65d065a8bbf37fb01a2e02817cd571d5853ccfc068195da30d0586bdeb86487c",
+        "size": 214460
+      },
+      {
+        "path": "vendor/bzip3/include/yarg.h",
+        "sha256": "3beeb9c9b2b5a0d6b0339c8019013abd186571117b0f682bc807dad39106e81d",
+        "size": 9205
+      },
+      {
+        "path": "vendor/bzip3/src/libbz3.c",
+        "sha256": "7f3c79053898c25bc8dd2c67c9fdafa86f3b94bf8e3a3e3fc1dd7e8c7e8872ad",
+        "size": 36230
+      },
+      {
+        "path": "vendor/bzip3/src/main.c",
+        "sha256": "1ceec6003d2b473f1ccd60dd25d9ebb1b9c83e3cb9f2801eea7d55307831e5f2",
+        "size": 29030
+      }
+    ],
+    "manifest_sha256": "5bee6e5ba1e27f4d25abb44159e39f971dfe3f38004e69b567494e76af62c576"
+  },
+  "source_manifest_after_run": {
+    "algorithm": "sha256",
+    "file_count": 42,
+    "files": [
+      {
+        "path": "build6.zig",
+        "sha256": "a2532b0cbd336017255fac72620787dce22f848ef504c26339e2501378d0e130",
+        "size": 1622
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/book.zig",
+        "sha256": "1de19041a762a19698dd9f12576c1d544c7cc058fd060979a42301b3da81f9ba",
+        "size": 118663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/compiler.zig",
+        "sha256": "8340d230fff74f844db86d6fe7e93ce3a9439270467f6bd021a725b6f828b966",
+        "size": 38630
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/language.zig",
+        "sha256": "cb11054e0f2def0b5de8c7c22f2305b1d6271e8cb25d99416711089819869546",
+        "size": 41742
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/model.zig",
+        "sha256": "297cdfdad89c2bbe70d0105fd049b4f6ce78806a5ac211e34d93ba71c7e17214",
+        "size": 18955
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/population.zig",
+        "sha256": "c78af1f846f5f6b52e76ed47fbd9807c3128b642d8b154124d80a6460c6a2f70",
+        "size": 67367
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/root.zig",
+        "sha256": "9003e59217fb1460696cab5c2af9a33a9d0842ea9e39315ea3b3948a8fe1730f",
+        "size": 663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar.zig",
+        "sha256": "7c94cf02e4416d59e00b82d1b262a7afd861ab058d098d7786729e2b76c50c77",
+        "size": 15101
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar_product.zig",
+        "sha256": "0dbf0b20f5a6a0b7bdbce498e4683e5d5889aa49ada0046510c76e66a05ca491",
+        "size": 16943
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/schema.zig",
+        "sha256": "ee36741d8269adc34db61f995b224088044e1cf07609fcd6d6aee62656ea1057",
+        "size": 5929
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/selector.zig",
+        "sha256": "6e7dea364ed747aca447f6307013c872ee9bbea2f824999dd199220dea16aba8",
+        "size": 23123
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/stored.zig",
+        "sha256": "548c49bd0f2e20ab209538757a359f5f44a8a916f7a9ee3c5e5d761b0a37cc40",
+        "size": 6606
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/type_shape.zig",
+        "sha256": "cb7374e21b727c900249fa8b50965c233f78c492070da7c1d36d12208e987cdf",
+        "size": 10837
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/wire.zig",
+        "sha256": "a30df9a22b0dc063ad773107c93c5fa555f347ed3604e87bd91abf3369d6e826",
+        "size": 14554
+      },
+      {
+        "path": "flake.lock",
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "size": 567
+      },
+      {
+        "path": "flake.nix",
+        "sha256": "95f79f1475b85da70ed0e96f082e7b887cd17bfb4bf70a9f13a10e129e809fce",
+        "size": 1112
+      },
+      {
+        "path": "src6/archive.zig",
+        "sha256": "1ebd97dd9622e31da1cc570e1fb6f737a9218b279ab075ef8381520c8cff5266",
+        "size": 52707
+      },
+      {
+        "path": "src6/archive_test.zig",
+        "sha256": "b20f8278501641a98dbe13c13f354f61f5b151d038ab399f4cdc8ace5be37d40",
+        "size": 14839
+      },
+      {
+        "path": "src6/bench/run.py",
+        "sha256": "252b83300ee06be5e964ed279fef8f55ceda9b7d0e4324cec3c6c48e3f41d2b2",
+        "size": 14377
+      },
+      {
+        "path": "src6/bench/runner.zig",
+        "sha256": "712c2be1f4b9e4b4673fad7a7a95056d9c88f9b0749e0e75800317583dc43a61",
+        "size": 51107
+      },
+      {
+        "path": "src6/compression.zig",
+        "sha256": "f46c9d65a3e48f54515e487721643555ed611f1fb1b59bec37b9dd3ba92a414d",
+        "size": 10608
+      },
+      {
+        "path": "src6/compression_test.zig",
+        "sha256": "46a398c52f32d14b795dfdab87537a141c25942958121213a22a282669230b82",
+        "size": 7649
+      },
+      {
+        "path": "src6/example.zig",
+        "sha256": "3a53c4e1e142f176f88e97940b3ce27b7f5520a29fc503dff35a23855859c38d",
+        "size": 1887
+      },
+      {
+        "path": "src6/experiments/json_packet.zig",
+        "sha256": "295bbae923bd4cbb10c7ae95e5df8aaa0cd4f0aba97b6163d731f7002ca309fd",
+        "size": 17737
+      },
+      {
+        "path": "src6/fixtures.zig",
+        "sha256": "4790f6890b85a8d85abc508c6bca0f1a6379d440e02588584275cf62c5994393",
+        "size": 3951
+      },
+      {
+        "path": "src6/model.zig",
+        "sha256": "a0294bbe8520b05b26f059a6edf3c6d5f91b529340fd5a07db8e95c1b7694e31",
+        "size": 11601
+      },
+      {
+        "path": "src6/model_test.zig",
+        "sha256": "1651f8cca7dbefcbed52edee5c98e2226ada8f90f37e096f6fbc71de8a3630f5",
+        "size": 5574
+      },
+      {
+        "path": "src6/packet.zig",
+        "sha256": "793dd4875cf86f377232f86c343b16e22423d4982197d602f496742eb7ef3fa7",
+        "size": 13067
+      },
+      {
+        "path": "src6/packet_test.zig",
+        "sha256": "d958198bdd743bf9f7c03983823bef381c4baccabea98b38ea5524ad8f70eb0f",
+        "size": 8110
+      },
+      {
+        "path": "src6/query.zig",
+        "sha256": "e5633a3196d8b4d3f7224e7edd0e091d57d1614083bab80f4c685fe8b5a172ff",
+        "size": 4266
+      },
+      {
+        "path": "src6/render.zig",
+        "sha256": "d262e9b9f4795e3d7029d4871a67f83f39be6d2ab1b277d1e9216d2c7ebfe51c",
+        "size": 5837
+      },
+      {
+        "path": "src6/root.zig",
+        "sha256": "2bf15d0f85d84231c897372b6ccb6bab61f659fe5ee7ac58e61d4e0c59f01d5c",
+        "size": 572
+      },
+      {
+        "path": "src6/semantic_test.zig",
+        "sha256": "c5b82b60b44bf343535a05794d8af49826b4ff958dc54eb9f2a320bd2e0d6888",
+        "size": 24034
+      },
+      {
+        "path": "src6/validate.zig",
+        "sha256": "07b2c6e7abedb3f985fda8899a266115e39c6336648f9f40950e4c9351bc8126",
+        "size": 16552
+      },
+      {
+        "path": "src6/walk.zig",
+        "sha256": "5dfc47c9110a30c7e137adce940e2959a094cc438263ea3ea6c23b4aa6dfd99b",
+        "size": 3640
+      },
+      {
+        "path": "src6/walk_test.zig",
+        "sha256": "6198c20f376ce611fb856cdb50e20bdfc2314a5b3b16887c7765ed459b872672",
+        "size": 6652
+      },
+      {
+        "path": "vendor/bzip3/include/common.h",
+        "sha256": "f87f5b286e4b733e79c32c0cd5ee521a41c843a4e73a85fec161c3f0e79011da",
+        "size": 4968
+      },
+      {
+        "path": "vendor/bzip3/include/libbz3.h",
+        "sha256": "ccb20f66402f4ca42656471ec401ceaaeac7c729d590dd976856d48967a734df",
+        "size": 9525
+      },
+      {
+        "path": "vendor/bzip3/include/libsais.h",
+        "sha256": "65d065a8bbf37fb01a2e02817cd571d5853ccfc068195da30d0586bdeb86487c",
+        "size": 214460
+      },
+      {
+        "path": "vendor/bzip3/include/yarg.h",
+        "sha256": "3beeb9c9b2b5a0d6b0339c8019013abd186571117b0f682bc807dad39106e81d",
+        "size": 9205
+      },
+      {
+        "path": "vendor/bzip3/src/libbz3.c",
+        "sha256": "7f3c79053898c25bc8dd2c67c9fdafa86f3b94bf8e3a3e3fc1dd7e8c7e8872ad",
+        "size": 36230
+      },
+      {
+        "path": "vendor/bzip3/src/main.c",
+        "sha256": "1ceec6003d2b473f1ccd60dd25d9ebb1b9c83e3cb9f2801eea7d55307831e5f2",
+        "size": 29030
+      }
+    ],
+    "manifest_sha256": "5bee6e5ba1e27f4d25abb44159e39f971dfe3f38004e69b567494e76af62c576"
+  },
+  "source_manifest_before": {
+    "algorithm": "sha256",
+    "file_count": 42,
+    "files": [
+      {
+        "path": "build6.zig",
+        "sha256": "a2532b0cbd336017255fac72620787dce22f848ef504c26339e2501378d0e130",
+        "size": 1622
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/book.zig",
+        "sha256": "1de19041a762a19698dd9f12576c1d544c7cc058fd060979a42301b3da81f9ba",
+        "size": 118663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/compiler.zig",
+        "sha256": "8340d230fff74f844db86d6fe7e93ce3a9439270467f6bd021a725b6f828b966",
+        "size": 38630
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/language.zig",
+        "sha256": "cb11054e0f2def0b5de8c7c22f2305b1d6271e8cb25d99416711089819869546",
+        "size": 41742
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/model.zig",
+        "sha256": "297cdfdad89c2bbe70d0105fd049b4f6ce78806a5ac211e34d93ba71c7e17214",
+        "size": 18955
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/population.zig",
+        "sha256": "c78af1f846f5f6b52e76ed47fbd9807c3128b642d8b154124d80a6460c6a2f70",
+        "size": 67367
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/root.zig",
+        "sha256": "9003e59217fb1460696cab5c2af9a33a9d0842ea9e39315ea3b3948a8fe1730f",
+        "size": 663
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar.zig",
+        "sha256": "7c94cf02e4416d59e00b82d1b262a7afd861ab058d098d7786729e2b76c50c77",
+        "size": 15101
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/scalar_product.zig",
+        "sha256": "0dbf0b20f5a6a0b7bdbce498e4683e5d5889aa49ada0046510c76e66a05ca491",
+        "size": 16943
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/schema.zig",
+        "sha256": "ee36741d8269adc34db61f995b224088044e1cf07609fcd6d6aee62656ea1057",
+        "size": 5929
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/selector.zig",
+        "sha256": "6e7dea364ed747aca447f6307013c872ee9bbea2f824999dd199220dea16aba8",
+        "size": 23123
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/stored.zig",
+        "sha256": "548c49bd0f2e20ab209538757a359f5f44a8a916f7a9ee3c5e5d761b0a37cc40",
+        "size": 6606
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/type_shape.zig",
+        "sha256": "cb7374e21b727c900249fa8b50965c233f78c492070da7c1d36d12208e987cdf",
+        "size": 10837
+      },
+      {
+        "path": "experiments/frontier/lex5-20260909/borrowed-core/freeze-20260912/source/wire.zig",
+        "sha256": "a30df9a22b0dc063ad773107c93c5fa555f347ed3604e87bd91abf3369d6e826",
+        "size": 14554
+      },
+      {
+        "path": "flake.lock",
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "size": 567
+      },
+      {
+        "path": "flake.nix",
+        "sha256": "95f79f1475b85da70ed0e96f082e7b887cd17bfb4bf70a9f13a10e129e809fce",
+        "size": 1112
+      },
+      {
+        "path": "src6/archive.zig",
+        "sha256": "1ebd97dd9622e31da1cc570e1fb6f737a9218b279ab075ef8381520c8cff5266",
+        "size": 52707
+      },
+      {
+        "path": "src6/archive_test.zig",
+        "sha256": "b20f8278501641a98dbe13c13f354f61f5b151d038ab399f4cdc8ace5be37d40",
+        "size": 14839
+      },
+      {
+        "path": "src6/bench/run.py",
+        "sha256": "252b83300ee06be5e964ed279fef8f55ceda9b7d0e4324cec3c6c48e3f41d2b2",
+        "size": 14377
+      },
+      {
+        "path": "src6/bench/runner.zig",
+        "sha256": "712c2be1f4b9e4b4673fad7a7a95056d9c88f9b0749e0e75800317583dc43a61",
+        "size": 51107
+      },
+      {
+        "path": "src6/compression.zig",
+        "sha256": "f46c9d65a3e48f54515e487721643555ed611f1fb1b59bec37b9dd3ba92a414d",
+        "size": 10608
+      },
+      {
+        "path": "src6/compression_test.zig",
+        "sha256": "46a398c52f32d14b795dfdab87537a141c25942958121213a22a282669230b82",
+        "size": 7649
+      },
+      {
+        "path": "src6/example.zig",
+        "sha256": "3a53c4e1e142f176f88e97940b3ce27b7f5520a29fc503dff35a23855859c38d",
+        "size": 1887
+      },
+      {
+        "path": "src6/experiments/json_packet.zig",
+        "sha256": "295bbae923bd4cbb10c7ae95e5df8aaa0cd4f0aba97b6163d731f7002ca309fd",
+        "size": 17737
+      },
+      {
+        "path": "src6/fixtures.zig",
+        "sha256": "4790f6890b85a8d85abc508c6bca0f1a6379d440e02588584275cf62c5994393",
+        "size": 3951
+      },
+      {
+        "path": "src6/model.zig",
+        "sha256": "a0294bbe8520b05b26f059a6edf3c6d5f91b529340fd5a07db8e95c1b7694e31",
+        "size": 11601
+      },
+      {
+        "path": "src6/model_test.zig",
+        "sha256": "1651f8cca7dbefcbed52edee5c98e2226ada8f90f37e096f6fbc71de8a3630f5",
+        "size": 5574
+      },
+      {
+        "path": "src6/packet.zig",
+        "sha256": "793dd4875cf86f377232f86c343b16e22423d4982197d602f496742eb7ef3fa7",
+        "size": 13067
+      },
+      {
+        "path": "src6/packet_test.zig",
+        "sha256": "d958198bdd743bf9f7c03983823bef381c4baccabea98b38ea5524ad8f70eb0f",
+        "size": 8110
+      },
+      {
+        "path": "src6/query.zig",
+        "sha256": "e5633a3196d8b4d3f7224e7edd0e091d57d1614083bab80f4c685fe8b5a172ff",
+        "size": 4266
+      },
+      {
+        "path": "src6/render.zig",
+        "sha256": "d262e9b9f4795e3d7029d4871a67f83f39be6d2ab1b277d1e9216d2c7ebfe51c",
+        "size": 5837
+      },
+      {
+        "path": "src6/root.zig",
+        "sha256": "2bf15d0f85d84231c897372b6ccb6bab61f659fe5ee7ac58e61d4e0c59f01d5c",
+        "size": 572
+      },
+      {
+        "path": "src6/semantic_test.zig",
+        "sha256": "c5b82b60b44bf343535a05794d8af49826b4ff958dc54eb9f2a320bd2e0d6888",
+        "size": 24034
+      },
+      {
+        "path": "src6/validate.zig",
+        "sha256": "07b2c6e7abedb3f985fda8899a266115e39c6336648f9f40950e4c9351bc8126",
+        "size": 16552
+      },
+      {
+        "path": "src6/walk.zig",
+        "sha256": "5dfc47c9110a30c7e137adce940e2959a094cc438263ea3ea6c23b4aa6dfd99b",
+        "size": 3640
+      },
+      {
+        "path": "src6/walk_test.zig",
+        "sha256": "6198c20f376ce611fb856cdb50e20bdfc2314a5b3b16887c7765ed459b872672",
+        "size": 6652
+      },
+      {
+        "path": "vendor/bzip3/include/common.h",
+        "sha256": "f87f5b286e4b733e79c32c0cd5ee521a41c843a4e73a85fec161c3f0e79011da",
+        "size": 4968
+      },
+      {
+        "path": "vendor/bzip3/include/libbz3.h",
+        "sha256": "ccb20f66402f4ca42656471ec401ceaaeac7c729d590dd976856d48967a734df",
+        "size": 9525
+      },
+      {
+        "path": "vendor/bzip3/include/libsais.h",
+        "sha256": "65d065a8bbf37fb01a2e02817cd571d5853ccfc068195da30d0586bdeb86487c",
+        "size": 214460
+      },
+      {
+        "path": "vendor/bzip3/include/yarg.h",
+        "sha256": "3beeb9c9b2b5a0d6b0339c8019013abd186571117b0f682bc807dad39106e81d",
+        "size": 9205
+      },
+      {
+        "path": "vendor/bzip3/src/libbz3.c",
+        "sha256": "7f3c79053898c25bc8dd2c67c9fdafa86f3b94bf8e3a3e3fc1dd7e8c7e8872ad",
+        "size": 36230
+      },
+      {
+        "path": "vendor/bzip3/src/main.c",
+        "sha256": "1ceec6003d2b473f1ccd60dd25d9ebb1b9c83e3cb9f2801eea7d55307831e5f2",
+        "size": 29030
+      }
+    ],
+    "manifest_sha256": "5bee6e5ba1e27f4d25abb44159e39f971dfe3f38004e69b567494e76af62c576"
+  },
+  "status": "pass",
+  "warmup": 2,
+  "zig": [
+    "/etc/profiles/per-user/mileswirht/bin/zig"
+  ]
+}
