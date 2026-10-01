@@ -275,7 +275,7 @@ fn packetBody(bytes: []const u8, limits: Limits) Error!PacketBody {
     if (bytes.len < 5) return error.Truncated;
     if (!std.mem.eql(u8, bytes[0..4], "LXP6")) return error.InvalidMagic;
     const version = bytes[4];
-    if (version != 2 and version != packet.schema_version) return error.UnsupportedVersion;
+    if (version < 2 or version > packet.schema_version) return error.UnsupportedVersion;
     return .{ .bytes = bytes[5..], .version = version };
 }
 

@@ -46,13 +46,41 @@ Its verification and remaining limits are recorded in
 unchecked union access, byte-string enumeration, and scalar collection misuse.
 These are implementation gates, not standards-conformance tests.
 
-**Format revision:** packet and archive versions are now 3. Version 2 remains
+**Format revision:** packets now write schema 4 inside the unchanged archive
+version 3 envelope. Packet schemas 2 and 3 and archive version 2 remain
 readable; version 1 is rejected because it has different lexical semantics.
-Version 3 uses schema-derived presence masks for allocation-free declared
-defaults and appends optional analysis/segment kinds. Empty optional text,
+Schema 3 introduced schema-derived presence masks for allocation-free declared
+defaults and analysis/segment kinds. Schema 4 appends construction program and
+occurrence Item kinds without changing Entry or any earlier Item layout. Empty optional text,
 explicit language reset, empty feature collections and absent values still
 remain distinct. Retained measurements below describe their stated historical
-revision, rather than silently becoming version 3 results.
+revision, rather than silently becoming schema 4 results.
+
+`ConstructionProgram` is a named, qualified sequence of literal, scalar-boundary
+copy, slot, call and zero steps. `Construction` records one evidenced occurrence,
+its binding surfaces, a program reference, optional Analysis reference and an
+authoritative local Representation. `validate.check`, archive build and archive
+readers admit an `exact_local` occurrence only after resolving every local
+program call, rejecting cycles, executing within the construction work/output
+limits and comparing exact UTF-8 bytes with that Representation's inline text.
+This comparison never normalizes Arabic marks, Turkish suffixes or decomposed
+Unicode. Repeated constructions remain independent Item occurrences. Programs
+and occurrences are available through typed Item selection, structural
+resolution and packet views. A program or call outside the Entry is preserved
+as lexical data only with the explicit `external_unverified` proof state; its
+authoritative Representation is still required locally, and locally known copy
+spans are checked. An external target on a literal or binding labels already
+supplied bytes and does not disable execution or exact comparison of a fully
+local program. A future library catalog can resolve external program
+dependencies. Opaque nontext source bytes belong in `Source`, outside this
+lexical surface contract.
+After admission, `lex.construction.realize(allocator, &entry, occurrence_id,
+scope)` returns owned exact surface bytes for an identified `exact_local`
+occurrence. It reports `UnverifiedConstruction` for unavailable external
+programs or calls.
+The default limits bound the complete call graph (including unused programs)
+to 64 call edges, 8 million charged work units and 1 MiB per surface; call
+argument frames and realization traces are reused within one admission.
 
 For repeated selective access, an explicit preparation step can verify the
 complete archive once and then project the wire directly:

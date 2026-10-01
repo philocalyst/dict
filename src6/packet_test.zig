@@ -181,7 +181,7 @@ test "sparse declared defaults shrink packets without changing lexical values" {
     const encoded = try packet.encode(allocator, entry, .{});
     defer allocator.free(encoded);
     try std.testing.expectEqual(@as(usize, 10), encoded.len);
-    try std.testing.expectEqual(@as(u8, 3), encoded[4]);
+    try std.testing.expectEqual(packet.schema_version, encoded[4]);
     var decoded = try packet.decode(model.Entry, allocator, encoded, .{});
     defer decoded.deinit();
     try std.testing.expectEqualDeep(entry, decoded.value);

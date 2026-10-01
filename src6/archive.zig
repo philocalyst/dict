@@ -9,6 +9,7 @@ const compression = @import("compression.zig");
 const validate = @import("validate.zig");
 const query = @import("query.zig");
 const packet_view = @import("packet_view.zig");
+const construction = @import("construction.zig");
 
 const Sha256 = std.crypto.hash.sha2.Sha256;
 const digest_length = Sha256.digest_length;
@@ -54,6 +55,7 @@ pub const Options = struct {
     packet_limits: packet.Limits = .{},
     compression_limits: compression.Limits = .{},
     validation_limits: validate.Limits = .{},
+    construction_limits: construction.Limits = .{},
 };
 
 pub const Limits = struct {
@@ -68,6 +70,7 @@ pub const Limits = struct {
     packet_limits: packet.Limits = .{},
     compression_limits: compression.Limits = .{},
     validation_limits: validate.Limits = .{},
+    construction_limits: construction.Limits = .{},
 };
 
 pub const Owned = struct {
@@ -230,7 +233,7 @@ pub fn build(allocator: std.mem.Allocator, library: model.Library, options: Opti
     defer resource_records.deinit(allocator);
 
     for (library.entries, 0..) |entry, entry_index| {
-        try validate.check(allocator, &entry, .{ .limits = options.validation_limits, .sources = &sources });
+        try validate.check(allocator, &entry, .{ .limits = options.validation_limits, .construction = options.construction_limits, .sources = &sources });
         const admission = try semantic_ids.getOrPut(allocator, entry.id);
         if (admission.found_existing) return error.DuplicateEntryId;
         if (entry.headword.len > options.max_key_bytes) return error.KeyTooLong;
@@ -254,7 +257,7 @@ pub fn build(allocator: std.mem.Allocator, library: model.Library, options: Opti
         try appendDocument(allocator, &pages, &raw, &first_document, &documents_in_page, entry_index, model.Document{ .entry = entry }, options);
     }
     for (library.resources, 0..) |resource, resource_index| {
-        try validate.check(allocator, &resource, .{ .limits = options.validation_limits, .sources = &sources });
+        try validate.check(allocator, &resource, .{ .limits = options.validation_limits, .construction = options.construction_limits, .sources = &sources });
         const identity = resource.identity();
         if (identity.len > options.max_key_bytes) return error.KeyTooLong;
         const admission = try semantic_ids.getOrPut(allocator, identity);
@@ -532,6 +535,7 @@ pub const Archive = struct {
             inline else => |*value| try validate.check(allocator, value, .{
                 .sources = sources,
                 .limits = self.limits.validation_limits,
+                .construction = self.limits.construction_limits,
             }),
         }
         if (document.* == .entry) {

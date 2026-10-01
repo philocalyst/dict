@@ -350,6 +350,77 @@ pub const Segment = struct {
     content: []const Item = &.{},
 };
 
+/// An exact byte span in a construction binding or realized surface. UTF-8
+/// constructions additionally require both offsets to be scalar boundaries.
+pub const ConstructionSpan = struct { start: u32, end: u32 };
+
+/// A surface supplied to a lexical construction. A local target names the
+/// authoritative Representation for these exact bytes; an external target
+/// preserves an outside identity without withholding the supplied bytes.
+/// Origins and spelling remain explicit; equal spellings do not merge identities.
+pub const ConstructionSurface = struct {
+    bytes: []const u8,
+    target: ?Reference = null,
+    origins: []const Origin = &.{},
+};
+
+pub const ConstructionParameter = struct {
+    name: Name,
+    role: ?Name = null,
+    meta: Metadata = .{},
+};
+
+pub const ConstructionArgument = union(enum) {
+    binding: u32,
+    literal: ConstructionSurface,
+};
+
+/// Ordered operations never normalize, case-fold, or infer a morpheme. A call
+/// names another program by its declared local identity; admission rejects
+/// cycles even when no instance currently invokes the cycle.
+pub const ConstructionStep = union(enum) {
+    literal: ConstructionSurface,
+    copy: struct { binding: u32, spans: []const ConstructionSpan, role: ?Name = null },
+    slot: struct { binding: u32, role: ?Name = null },
+    call: struct {
+        program: Reference,
+        arguments: []const ConstructionArgument,
+        role: ?Name = null,
+    },
+    zero: struct { meta: Metadata = .{}, role: ?Name = null },
+};
+
+/// `meta.id` is required. The same identity table used by lexical references
+/// resolves programs, including calls declared before their target program.
+pub const ConstructionProgram = struct {
+    meta: Metadata,
+    process: ?Name = null,
+    parameters: []const ConstructionParameter = &.{},
+    body: []const ConstructionStep,
+};
+
+pub const ConstructionRealization = struct {
+    step: u32,
+    spans: []const ConstructionSpan,
+    role: ?Name = null,
+    meta: Metadata = .{},
+};
+
+/// An evidenced construction occurrence. `authoritative` identifies a local
+/// Representation. `exact_local` proves byte-for-byte execution against it;
+/// `external_unverified` preserves an unavailable program or call outside this
+/// Entry until a library catalog can resolve and verify that execution. Multiple
+/// occurrences may cite the same program without losing ambiguity.
+pub const Construction = struct {
+    meta: Metadata = .{},
+    analysis: ?Reference = null,
+    program: Reference,
+    bindings: []const ConstructionSurface = &.{},
+    authoritative: Reference,
+    proof: enum { exact_local, external_unverified } = .exact_local,
+    realizations: []const ConstructionRealization = &.{},
+};
+
 /// This sum is the vocabulary. Its tag enum and typed selectors are derived
 /// from it, so adding a lexical kind does not require parallel declarations.
 pub const Item = union(enum) {
@@ -371,6 +442,8 @@ pub const Item = union(enum) {
     extension: Extension,
     analysis: Analysis,
     segment: Segment,
+    construction_program: ConstructionProgram,
+    construction: Construction,
 
     pub fn metadata(self: *const Item) *const Metadata {
         return switch (self.*) {

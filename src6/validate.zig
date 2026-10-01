@@ -5,6 +5,7 @@ const std = @import("std");
 const model = @import("model.zig");
 const nodes = @import("nodes.zig");
 const walk = @import("walk.zig");
+const construction = @import("construction.zig");
 
 pub const Limits = struct {
     max_depth: usize = 96,
@@ -12,7 +13,7 @@ pub const Limits = struct {
     max_bytes: usize = 16 * 1024 * 1024,
 };
 
-pub const Error = std.mem.Allocator.Error || error{
+pub const Error = std.mem.Allocator.Error || construction.Error || error{
     ResourceLimit,
     InvalidIdentity,
     DuplicateIdentity,
@@ -58,6 +59,7 @@ pub const SourceIndex = struct {
 pub const Scope = struct {
     sources: *const SourceIndex = &.{},
     limits: Limits = .{},
+    construction: construction.Limits = .{},
 };
 
 /// Both document kinds share identity collection, bounds and semantic rules.
@@ -70,11 +72,13 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
     try utf8(identity);
     if (T == model.Entry) try utf8(value.headword);
     if (scope.sources.count() > scope.limits.max_values) return error.ResourceLimit;
-    var context = Context{ .allocator = allocator, .limits = scope.limits, .shared_sources = scope.sources };
+    var context = Context{ .allocator = allocator, .limits = scope.limits, .construction_limits = scope.construction, .shared_sources = scope.sources };
     defer context.ids.deinit(allocator);
     defer context.local_sources.deinit(allocator);
     defer context.links.deinit(allocator);
     defer context.spans.deinit(allocator);
+    defer context.programs.deinit(allocator);
+    defer context.constructions.deinit(allocator);
     if (T == model.Entry) {
         for (value.sources) |source| try context.addSource(source.id, source.bytes.len);
     } else if (value.* == .source) {
@@ -94,6 +98,9 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
     };
     for (context.links.items) |link| try context.require(link.id, link.kind);
     for (context.spans.items) |span| try context.realization(span);
+    if (T == model.Resource and (context.programs.items.len != 0 or context.constructions.items.len != 0))
+        return error.ConstructionScope;
+    try construction.check(allocator, context.programs.items, context.constructions.items, &context.ids, scope.construction);
 }
 
 const Context = struct {
@@ -102,6 +109,7 @@ const Context = struct {
 
     allocator: std.mem.Allocator,
     limits: Limits,
+    construction_limits: construction.Limits,
     ids: std.StringHashMapUnmanaged(nodes.NodeRef) = .empty,
     shared_sources: *const SourceIndex,
     local_sources: SourceIndex = .{},
@@ -110,6 +118,8 @@ const Context = struct {
     // Borrowed identifiers only. No pending nodes or duplicate model objects.
     links: std.ArrayList(Link) = .empty,
     spans: std.ArrayList(*const model.RealizationSpan) = .empty,
+    programs: std.ArrayList(*const model.ConstructionProgram) = .empty,
+    constructions: std.ArrayList(*const model.Construction) = .empty,
 
     fn addSource(self: *Context, id: []const u8, length: usize) Error!void {
         if (self.shared_sources.length(id) != null) return error.DuplicateIdentity;
@@ -176,6 +186,27 @@ const Context = struct {
     }
 
     fn ruleNode(self: *Context, value: nodes.NodeRef) Error!void {
+        if (value.as(model.ConstructionProgram)) |program| {
+            if (self.programs.items.len >= self.construction_limits.max_programs or
+                program.parameters.len > self.construction_limits.max_parameters or
+                program.body.len > self.construction_limits.max_instructions)
+                return error.ConstructionWorkLimit;
+            try self.programs.append(self.allocator, program);
+        }
+        if (value.as(model.Construction)) |instance| {
+            if (self.constructions.items.len >= self.construction_limits.max_instances or
+                instance.bindings.len > self.construction_limits.max_parameters or
+                instance.realizations.len > self.construction_limits.max_instructions)
+                return error.ConstructionWorkLimit;
+            try self.constructions.append(self.allocator, instance);
+        }
+        if (value.as(model.ConstructionStep)) |step| switch (step.*) {
+            .copy => |copy| if (copy.spans.len > self.construction_limits.max_instructions)
+                return error.ConstructionWorkLimit,
+            .call => |call| if (call.arguments.len > self.construction_limits.max_parameters)
+                return error.ConstructionWorkLimit,
+            else => {},
+        };
         const semantic_types = .{
             model.Reference,       model.Anchor,     model.Name,        model.Language,
             model.Inline,          model.Metadata,   model.Value,       model.Relation,

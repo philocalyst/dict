@@ -8,6 +8,7 @@ pub const archive = @import("archive.zig");
 pub const compression = @import("compression.zig");
 pub const packet = @import("packet.zig");
 pub const packet_view = @import("packet_view.zig");
+pub const construction = @import("construction_api.zig");
 
 test {
     _ = @import("model_test.zig");
@@ -22,4 +23,5 @@ test {
     _ = @import("richness_test.zig");
     _ = @import("morphology_test.zig");
     _ = @import("packet_view_test.zig");
+    _ = @import("construction_test.zig");
 }

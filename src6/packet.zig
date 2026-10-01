@@ -45,13 +45,15 @@ const magic = "LXP6";
 // The model is the schema. Version 2 adds named values and disjoint relation
 // endpoints; version 3 elides declared defaults and appends analysis/segment
 // Item alternatives without changing the fields of earlier lexical types.
-// Version 2 remains readable. Version 1 has different lexical semantics.
-pub const schema_version: u8 = 3;
+// Version 4 appends construction programs and occurrences. Versions 2 and 3
+// remain readable; version 1 has different lexical semantics.
+pub const schema_version: u8 = 4;
 
 /// Shared by decoding and direct wire projections; a legacy marker cannot
 /// grant access to lexical alternatives added by the newer schema.
 pub fn unionTagAllowed(comptime T: type, version: u8, ordinal: u64) bool {
-    return !(T == model.Item and version == 2 and ordinal >= 16);
+    return !(T == model.Item and ((version == 2 and ordinal >= 16) or
+        (version == 3 and ordinal >= 18)));
 }
 
 pub fn Decoded(comptime T: type) type {
@@ -191,7 +193,7 @@ fn decodeImpl(comptime T: type, allocator: std.mem.Allocator, bytes: []const u8,
     if (bytes.len > limits.max_input_bytes) return error.InputTooLarge;
     if (bytes.len < magic.len + 1) return error.Truncated;
     if (!std.mem.eql(u8, bytes[0..magic.len], magic)) return error.InvalidMagic;
-    if (bytes[magic.len] != 2 and bytes[magic.len] != schema_version) return error.UnsupportedVersion;
+    if (bytes[magic.len] < 2 or bytes[magic.len] > schema_version) return error.UnsupportedVersion;
 
     var result = Decoded(T){
         .arena = std.heap.ArenaAllocator.init(allocator),
