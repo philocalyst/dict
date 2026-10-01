@@ -174,3 +174,112 @@ test "packet encode and decode are allocation-failure safe" {
         }
     }.run, .{});
 }
+
+test "sparse declared defaults shrink packets without changing lexical values" {
+    const allocator = std.testing.allocator;
+    const entry = model.Entry{ .id = "a", .headword = "a" };
+    const encoded = try packet.encode(allocator, entry, .{});
+    defer allocator.free(encoded);
+    try std.testing.expectEqual(@as(usize, 10), encoded.len);
+    try std.testing.expectEqual(@as(u8, 3), encoded[4]);
+    var decoded = try packet.decode(model.Entry, allocator, encoded, .{});
+    defer decoded.deinit();
+    try std.testing.expectEqualDeep(entry, decoded.value);
+
+    // The compatible v2 schema writes the complete metadata and all six
+    // default entry fields. Old archives remain readable after v3 promotion.
+    const legacy = "LXP6\x02\x01a\x01a" ++ "\x00" ** 13;
+    var old = try packet.decode(model.Entry, allocator, legacy, .{});
+    defer old.deinit();
+    try std.testing.expectEqualDeep(entry, old.value);
+}
+
+test "sparse masks are canonical and distinguish nondefault empty values" {
+    const allocator = std.testing.allocator;
+    const Box = struct {
+        marker: u8 = 5,
+        language: model.Language = .inherit,
+        optional: ?[]const u8 = null,
+        items: []const model.Value = &.{},
+    };
+    const value = Box{
+        .marker = 0,
+        .language = .reset,
+        .optional = "",
+        .items = &.{ .unknown, .unspecified, .default, .{ .bag = &.{} }, .{ .list = &.{} } },
+    };
+    const bytes = try packet.encode(allocator, value, .{});
+    defer allocator.free(bytes);
+    var decoded = try packet.decode(Box, allocator, bytes, .{});
+    defer decoded.deinit();
+    try std.testing.expectEqualDeep(value, decoded.value);
+
+    const Scalar = struct { value: u8 = 5 };
+    try std.testing.expectError(error.InvalidDefaultMask, packet.decode(Scalar, allocator, "LXP6\x03\x02", .{}));
+    try std.testing.expectError(error.NonCanonicalDefault, packet.decode(Scalar, allocator, "LXP6\x03\x01\x05", .{}));
+    try std.testing.expectError(error.NonCanonicalVarint, packet.decode(Scalar, allocator, "LXP6\x03\x80\x00", .{}));
+    try std.testing.expectError(error.Truncated, packet.decode(Scalar, allocator, "LXP6\x03\x01", .{}));
+}
+
+test "nonempty declared defaults remain encoded and independently owned" {
+    const allocator = std.testing.allocator;
+    const Box = struct { text: []const u8 = "static", values: []const u16 = &.{ 7, 9 } };
+    const bytes = try packet.encode(allocator, Box{}, .{});
+    defer allocator.free(bytes);
+    var decoded = try packet.decode(Box, allocator, bytes, .{});
+    defer decoded.deinit();
+    @memset(bytes, 0);
+    try std.testing.expectEqualStrings("static", decoded.value.text);
+    try std.testing.expectEqualSlices(u16, &.{ 7, 9 }, decoded.value.values);
+    try std.testing.expect(decoded.value.text.ptr != (Box{}).text.ptr);
+}
+
+test "borrowed packet strings avoid payload allocations without losing rich values" {
+    const allocator = std.testing.allocator;
+    const value = richEntry();
+    const bytes = try packet.encode(allocator, value, .{});
+    defer allocator.free(bytes);
+    var decoded = try packet.decodeBorrowed(model.Entry, allocator, bytes, .{});
+    defer decoded.deinit();
+    try std.testing.expectEqualDeep(value, decoded.value);
+    const pointer = @intFromPtr(decoded.value.headword.ptr);
+    try std.testing.expect(pointer >= @intFromPtr(bytes.ptr) and pointer + decoded.value.headword.len <= @intFromPtr(bytes.ptr) + bytes.len);
+
+    const scalar = try packet.encode(allocator, @as([]const u8, "lexical bytes"), .{});
+    defer allocator.free(scalar);
+    var refusing = std.testing.FailingAllocator.init(allocator, .{ .fail_index = 0 });
+    var borrowed = try packet.decodeBorrowed([]const u8, refusing.allocator(), scalar, .{ .max_allocation_bytes = 0 });
+    defer borrowed.deinit();
+    try std.testing.expectEqualStrings("lexical bytes", borrowed.value);
+    try std.testing.expectEqual(@as(usize, 0), refusing.alloc_index);
+    try std.testing.expectError(error.AllocationLimit, packet.decode([]const u8, allocator, scalar, .{ .max_allocation_bytes = 0 }));
+    try std.testing.expectError(error.WorkLimit, packet.decodeBorrowed([]const u8, allocator, scalar, .{ .max_work = 2 }));
+}
+
+test "borrowed decoding still copies mutable byte slices" {
+    const allocator = std.testing.allocator;
+    const bytes = try packet.encode(allocator, @as([]const u8, "mutable"), .{});
+    defer allocator.free(bytes);
+    var decoded = try packet.decodeBorrowed([]u8, allocator, bytes, .{});
+    defer decoded.deinit();
+    decoded.value[0] = 'M';
+    try std.testing.expectEqualStrings("Mutable", decoded.value);
+    try std.testing.expectEqualStrings("mutable", bytes[6..]);
+}
+
+test "declared ownership-pointer defaults are encoded and newly owned" {
+    const allocator = std.testing.allocator;
+    const constant: u16 = 77;
+    const Box = struct { value: *const u16 = &constant };
+    const bytes = try packet.encode(allocator, Box{}, .{});
+    defer allocator.free(bytes);
+    var decoded = try packet.decode(Box, allocator, bytes, .{});
+    defer decoded.deinit();
+    try std.testing.expectEqual(@as(u16, 77), decoded.value.value.*);
+    try std.testing.expect(decoded.value.value != &constant);
+}
+
+test "new analysis alternatives are excluded from legacy Item packets" {
+    try std.testing.expectError(error.InvalidUnionTag, packet.decode(model.Item, std.testing.allocator, "LXP6\x02\x10", .{}));
+    try std.testing.expectError(error.InvalidUnionTag, packet.decode(model.Item, std.testing.allocator, "LXP6\x02\x11", .{}));
+}

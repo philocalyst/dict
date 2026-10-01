@@ -3,10 +3,12 @@
 //! The wire format is deliberately small: a fixed schema marker followed by
 //! recursive values. Strings and slices are length-prefixed, integers are
 //! canonical varints (signed integers use zig-zag), enums and union tags use
-//! their declaration ordinal, and structs encode fields in declaration order.
+//! their declaration ordinal. Structs carry a presence mask for allocation-free
+//! declared defaults and encode their remaining fields in declaration order.
 //! Decoded strings never borrow the packet bytes; `Decoded(T)` owns every
 //! dynamic value in its arena and therefore survives the input buffer.
 const std = @import("std");
+const model = @import("model.zig");
 
 pub const Limits = struct {
     max_input_bytes: usize = 16 * 1024 * 1024,
@@ -34,15 +36,40 @@ pub const Error = error{
     InvalidBoolean,
     InvalidEnum,
     InvalidUnionTag,
+    InvalidDefaultMask,
+    NonCanonicalDefault,
     UnsupportedType,
 };
 
 const magic = "LXP6";
 // The model is the schema. Version 2 adds named values and disjoint relation
-// endpoints; version 1 packets must not be interpreted using these types.
-pub const schema_version: u8 = 2;
+// endpoints; version 3 elides declared defaults and appends analysis/segment
+// Item alternatives without changing the fields of earlier lexical types.
+// Version 2 remains readable. Version 1 has different lexical semantics.
+pub const schema_version: u8 = 3;
+
+/// Shared by decoding and direct wire projections; a legacy marker cannot
+/// grant access to lexical alternatives added by the newer schema.
+pub fn unionTagAllowed(comptime T: type, version: u8, ordinal: u64) bool {
+    return !(T == model.Item and version == 2 and ordinal >= 16);
+}
 
 pub fn Decoded(comptime T: type) type {
+    return struct {
+        arena: std.heap.ArenaAllocator,
+        value: T,
+
+        pub fn deinit(self: *@This()) void {
+            self.arena.deinit();
+            self.* = undefined;
+        }
+    };
+}
+
+/// Structural allocations are owned, while const byte slices borrow the
+/// immutable packet. The input must outlive this value; use decode for an
+/// independently owned document. Non-const byte slices still receive copies.
+pub fn Borrowed(comptime T: type) type {
     return struct {
         arena: std.heap.ArenaAllocator,
         value: T,
@@ -94,6 +121,8 @@ const Decoder = struct {
     limits: Limits,
     work: usize = 0,
     allocated: usize = 0,
+    version: u8,
+    borrow_strings: bool = false,
 
     fn step(self: *Decoder, depth: usize) Error!void {
         if (depth > self.limits.max_depth) return error.DepthLimit;
@@ -150,10 +179,19 @@ pub fn encode(allocator: std.mem.Allocator, value: anytype, limits: Limits) Erro
 }
 
 pub fn decode(comptime T: type, allocator: std.mem.Allocator, bytes: []const u8, limits: Limits) Error!Decoded(T) {
+    return decodeImpl(T, allocator, bytes, limits, false);
+}
+
+pub fn decodeBorrowed(comptime T: type, allocator: std.mem.Allocator, bytes: []const u8, limits: Limits) Error!Borrowed(T) {
+    const result = try decodeImpl(T, allocator, bytes, limits, true);
+    return .{ .arena = result.arena, .value = result.value };
+}
+
+fn decodeImpl(comptime T: type, allocator: std.mem.Allocator, bytes: []const u8, limits: Limits, borrow_strings: bool) Error!Decoded(T) {
     if (bytes.len > limits.max_input_bytes) return error.InputTooLarge;
     if (bytes.len < magic.len + 1) return error.Truncated;
     if (!std.mem.eql(u8, bytes[0..magic.len], magic)) return error.InvalidMagic;
-    if (bytes[magic.len] != schema_version) return error.UnsupportedVersion;
+    if (bytes[magic.len] != 2 and bytes[magic.len] != schema_version) return error.UnsupportedVersion;
 
     var result = Decoded(T){
         .arena = std.heap.ArenaAllocator.init(allocator),
@@ -165,6 +203,8 @@ pub fn decode(comptime T: type, allocator: std.mem.Allocator, bytes: []const u8,
         .bytes = bytes,
         .at = magic.len + 1,
         .limits = limits,
+        .version = bytes[magic.len],
+        .borrow_strings = borrow_strings,
     };
     result.value = try decodeValue(T, &decoder, 0);
     if (decoder.at != bytes.len) return error.TrailingBytes;
@@ -175,6 +215,79 @@ fn isByteSlice(comptime T: type) bool {
     return switch (@typeInfo(T)) {
         .pointer => |pointer| pointer.size == .slice and pointer.child == u8,
         else => false,
+    };
+}
+
+/// Omitted values must be independently owned without copying hidden static
+/// data. Empty slices and null optionals meet that rule; nonempty defaults and
+/// ownership pointers use the ordinary wire path. This is derived from the
+/// actual declared defaults, with no parallel lexical schema.
+fn allocationFreeDefault(comptime T: type, comptime value: T) bool {
+    return switch (@typeInfo(T)) {
+        .void, .bool, .int, .@"enum" => true,
+        .optional => value == null,
+        .pointer => |pointer| pointer.size == .slice and value.len == 0,
+        .array => |array| result: {
+            for (value) |item| if (!allocationFreeDefault(array.child, item)) break :result false;
+            break :result true;
+        },
+        .@"struct" => |structure| result: {
+            inline for (structure.fields) |field| {
+                if (!allocationFreeDefault(field.type, @field(value, field.name))) break :result false;
+            }
+            break :result true;
+        },
+        .@"union" => |union_info| result: {
+            if (union_info.tag_type == null) break :result false;
+            switch (value) {
+                inline else => |payload| break :result allocationFreeDefault(@TypeOf(payload), payload),
+            }
+        },
+        else => false,
+    };
+}
+
+pub fn elidable(comptime field: std.builtin.Type.StructField) bool {
+    const default = field.default_value_ptr orelse return false;
+    return allocationFreeDefault(field.type, @as(*const field.type, @ptrCast(@alignCast(default))).*);
+}
+
+pub fn defaultValue(comptime field: std.builtin.Type.StructField) field.type {
+    return @as(*const field.type, @ptrCast(@alignCast(field.default_value_ptr.?))).*;
+}
+
+pub fn defaultCount(comptime T: type) usize {
+    var count: usize = 0;
+    for (@typeInfo(T).@"struct".fields) |field| if (elidable(field)) {
+        count += 1;
+    };
+    // An unusually broad user schema still has the ordinary representation.
+    return if (count <= 64) count else 0;
+}
+
+pub fn equalsDefault(comptime T: type, value: T, comptime default: T) bool {
+    return switch (@typeInfo(T)) {
+        .void => true,
+        .bool, .int, .@"enum" => value == default,
+        .optional => value == null,
+        .pointer => value.len == 0,
+        .array => |array| result: {
+            inline for (default, 0..) |item, index| if (!equalsDefault(array.child, value[index], item)) break :result false;
+            break :result true;
+        },
+        .@"struct" => |structure| result: {
+            inline for (structure.fields) |field| {
+                if (!equalsDefault(field.type, @field(value, field.name), @field(default, field.name))) break :result false;
+            }
+            break :result true;
+        },
+        .@"union" => result: {
+            if (std.meta.activeTag(value) != std.meta.activeTag(default)) break :result false;
+            switch (default) {
+                inline else => |payload, tag| break :result equalsDefault(@TypeOf(payload), @field(value, @tagName(tag)), payload),
+            }
+        },
+        else => unreachable,
     };
 }
 
@@ -230,8 +343,25 @@ fn encodeValue(comptime T: type, encoder: *Encoder, value: T, depth: usize) Erro
         },
         .array => |array| for (value) |item| try encodeValue(array.child, encoder, item, depth + 1),
         .@"struct" => |structure| {
+            const defaults = comptime defaultCount(T);
+            var mask: u64 = 0;
+            comptime var bit = 0;
+            if (defaults != 0) {
+                inline for (structure.fields) |field| {
+                    if (comptime elidable(field)) {
+                        if (!equalsDefault(field.type, @field(value, field.name), defaultValue(field))) mask |= @as(u64, 1) << bit;
+                        bit += 1;
+                    }
+                }
+                try encoder.varint(mask);
+            }
+            bit = 0;
             inline for (structure.fields) |field| {
-                try encodeValue(field.type, encoder, @field(value, field.name), depth + 1);
+                if (comptime defaults != 0 and elidable(field)) {
+                    const present = mask & (@as(u64, 1) << bit) != 0;
+                    bit += 1;
+                    if (present) try encodeValue(field.type, encoder, @field(value, field.name), depth + 1);
+                } else try encodeValue(field.type, encoder, @field(value, field.name), depth + 1);
             }
         },
         .@"union" => |union_info| {
@@ -259,8 +389,11 @@ fn decodeValue(comptime T: type, decoder: *Decoder, depth: usize) Error!T {
         const length = try decodeLength(decoder);
         if (length > decoder.limits.max_work - decoder.work) return error.WorkLimit;
         decoder.work += length;
-        try decoder.reserveAllocation(length);
         const source = try decoder.take(length);
+        if (comptime @typeInfo(T).pointer.is_const) {
+            if (decoder.borrow_strings) return source;
+        }
+        try decoder.reserveAllocation(length);
         const owned = decoder.arena.alloc(u8, length) catch return error.OutOfMemory;
         @memcpy(owned, source);
         return owned;
@@ -321,14 +454,31 @@ fn decodeValue(comptime T: type, decoder: *Decoder, depth: usize) Error!T {
         },
         .@"struct" => |structure| structure_value: {
             var result: T = undefined;
+            const defaults = comptime defaultCount(T);
+            const sparse = defaults != 0 and decoder.version >= 3;
+            const mask = if (sparse) try decoder.varint() else 0;
+            if (defaults < 64 and mask >> @as(u6, @intCast(defaults)) != 0) return error.InvalidDefaultMask;
+            comptime var bit = 0;
             inline for (structure.fields) |field| {
-                @field(result, field.name) = try decodeValue(field.type, decoder, depth + 1);
+                if (comptime defaults != 0 and elidable(field)) {
+                    const present = mask & (@as(u64, 1) << bit) != 0;
+                    bit += 1;
+                    if (sparse and !present) {
+                        @field(result, field.name) = defaultValue(field);
+                    } else {
+                        @field(result, field.name) = try decodeValue(field.type, decoder, depth + 1);
+                        if (sparse and equalsDefault(field.type, @field(result, field.name), defaultValue(field))) return error.NonCanonicalDefault;
+                    }
+                } else @field(result, field.name) = try decodeValue(field.type, decoder, depth + 1);
             }
             break :structure_value result;
         },
         .@"union" => |union_info| union_value: {
             if (union_info.tag_type == null) return error.UnsupportedType;
             const encoded = try decoder.varint();
+            // A repaired legacy marker must not grant a v2 packet the new
+            // lexical alternatives. All previous declaration ordinals remain.
+            if (!unionTagAllowed(T, decoder.version, encoded)) return error.InvalidUnionTag;
             inline for (union_info.fields, 0..) |field, ordinal| {
                 if (encoded == ordinal) {
                     const payload = try decodeValue(field.type, decoder, depth + 1);

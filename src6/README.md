@@ -35,8 +35,8 @@ zig build --build-file build6.zig test test-example -Doptimize=ReleaseFast
 ```
 
 `build6` links the real vendored bzip3 implementation. It does not need a host
-codec hook or modify any prior build. The compiler used here comes from the
-existing Nix environment. If Zig reports a stale C-import cache entry, a fresh
+codec hook or modify any prior build. Use Zig 0.16.0. If Zig reports a stale
+C-import cache entry, a fresh
 `--cache-dir` can isolate it without deleting another task's cache.
 
 The review-resolution work adds all-node resolution, composable predicates,
@@ -46,9 +46,38 @@ Its verification and remaining limits are recorded in
 unchecked union access, byte-string enumeration, and scalar collection misuse.
 These are implementation gates, not standards-conformance tests.
 
-**Format revision:** packet and archive versions are now 2. Version 1 artifacts
-must be rebuilt; they are rejected rather than interpreted as the changed model.
-Retained version 1 measurements below remain historical baseline evidence.
+**Format revision:** packet and archive versions are now 3. Version 2 remains
+readable; version 1 is rejected because it has different lexical semantics.
+Version 3 uses schema-derived presence masks for allocation-free declared
+defaults and appends optional analysis/segment kinds. Empty optional text,
+explicit language reset, empty feature collections and absent values still
+remain distinct. Retained measurements below describe their stated historical
+revision, rather than silently becoming version 3 results.
+
+For repeated selective access, an explicit preparation step can verify the
+complete archive once and then project the wire directly:
+
+```zig
+const verified = try dictionary.verify(gpa); // complete semantic + wire checks
+var projected = try verified.view(gpa, hit.entry);
+defer projected.deinit();
+const spelling = try (try projected.value.field(.headword)).text();
+var items = try (try projected.value.field(.content)).values();
+while (try items.next()) |item| {
+    if (try item.tag() == .sense) {
+        const sense = try item.payload(.sense);
+        const label = try (try sense.field(.label)).optional();
+        if (label) |value| useLabel(try value.text());
+    }
+}
+```
+
+This API borrows exact packet strings and reconstructs no native entry.
+`packet_view.open` separately provides bounded, allocation-free *structural*
+validation for standalone packets; it does not grant lexical semantic admission.
+Full verification is a separately charged preparation cost, not a hidden first
+query. A `VerifiedArchive` is a documented precondition over the exact immutable
+archive and limits, not an unforgeable security token or publisher signature.
 
 ## Measured result, with boundaries
 
@@ -80,6 +109,18 @@ artifact hashes, matched-subset definitions and limitations are in the
   stay in the model; external and unresolved links are not physical ordinals.
 - A loaded value owns its allocations independently of archive bytes. All
   typed selections and inline events borrow that loaded value.
+- `Archive.inspect` returns the same admitted native document with strings
+  borrowing its retained wire buffer. Raw inspection owns only a copy of the
+  selected packet; compressed inspection owns a decoded page. `Reader.inspect`
+  copies one contiguous packet. Their native structural arenas and backing
+  buffers survive reader eviction and archive destruction.
+- `VerifiedArchive.view` reconstructs no native document and owns no arena.
+  A raw result borrows the archive mapping and allocates nothing; a compressed
+  result owns a decoded block. Child views expire with those backing bytes.
+- `VerifiedReader.view` retains one compressed page and uses an allocation-free
+  mapped raw-page cursor. **Borrowed compressed projections expire on page
+  eviction or session destruction.** Consume them before changing pages, or use
+  the independently owned `VerifiedArchive.view` for compressed projections.
 - `.children` means immediate lexical children. `.descendants` means ordered
   depth-first lexical traversal. Repeated items and independent claims remain
   repeated. Rich inline elements are not mistaken for lexical children.
@@ -105,8 +146,12 @@ artifact hashes, matched-subset definitions and limitations are in the
 - `Reader` retains at most one decoded page and reuses source bounds. Returned
   documents still own independent arenas. Use `Archive.load` for an explicitly
   uncached operation. Reader statistics expose actual decodes and cache hits.
-- `Reader.prepareLinks()` explicitly scans entry documents once to build a
-  derived logical-ID catalog. `follow` distinguishes found, unavailable and
+- `Options.index_entry_ids` optionally stores a common-prefix logical-ID index
+  and inverse ordinal table. Its complete bytes and open validation are charged
+  to the archive. It defaults to false because graph setup and storage have
+  different costs. When present, `Reader.prepareLinks()` allocates and decodes
+  nothing; otherwise it explicitly scans entries once to build a derived catalog.
+  `follow` distinguishes found, unavailable and
   unresolved links, with a caller-selected hop limit. Missing external targets
   are not silently relabelled as malformed archives. Resource links use the
   existing hot catalog; local links resolve against an already loaded document.
@@ -128,6 +173,20 @@ values. Shared concepts, LIFT-style ranges and source documents are independentl
 addressable resources. Source spans, many-to-many realization mappings,
 residual material and scoped certainty are explicit data.
 
+`Analysis` and ordered `Segment` trees preserve alternative morphological,
+multiword, phonological and orthographic analyses. Qualified roles describe
+language-specific roots, affixes, patterns and slots. Realization spans address
+the exact concatenation of a named representation's inline text in UTF-8 bytes;
+markup occupies no surface bytes. Multiple, overlapping, discontinuous and zero
+realizations remain ordered occurrences. Local extents and scalar boundaries
+are admitted; external/unresolved representation addresses retain their status
+and require target resolution before extent checking. `Match(Representation)
+.surface(start, end)` streams exact fragments and inline language contexts.
+Tests cover Turkish suffix sequences, Arabic root/pattern interleaving, Japanese
+text without spaces and German discontinuous multiword realizations. These are
+native representation tests, not automatic linguistic analysis or interchange
+conformance claims.
+
 These are representation and validation capabilities, **not a claim of complete
 TEI/LIFT XML or OntoLex RDF import/export conformance**. No such importer is
 silently substituted with an opaque source blob. Unknown namespaced markup and
@@ -144,6 +203,13 @@ Loading verifies and decodes the relevant page, then admits the selected typed
 document. `verifyAll` additionally reconciles every packet with the hot index
 and resource catalog. SHA-256 detects corruption; it does not authenticate an
 archive's publisher.
+
+Prepared projections reuse the complete canonical and semantic checks already
+performed by `verify`. Raw views reuse the already-checked mapped bytes rather
+than hashing or decoding them again. Compressed cache misses still check their
+encoded block and perform a bounded decode. Mutating the mapping or configured
+limits invalidates the preparation precondition; ordinary loads and standalone
+packet opening retain their complete admission paths.
 
 Shared source bounds are indexed once for a build or full verification and
 borrowed by document admission. A standalone load currently constructs its own
@@ -169,7 +235,9 @@ allowance for its internal C allocations; Zig allocation-failure tests do not
 pretend to inject failures into C `malloc`.
 
 The format is still experimental: the schema version must change before
-shipping a changed declaration order or incompatible model. Existing `src5`
+shipping a changed declaration order, changed elidable declared default or
+incompatible model. Omitted defaults are part of the wire schema, even when
+field order stays the same. Existing `src5`
 and older formats remain untouched. [Benchmark evidence](reviews/benchmark.md)
 must be read with its explicit semantic projection and cold/warm boundaries;
 there is no universal old-format or SLOB victory claim.

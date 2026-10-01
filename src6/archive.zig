@@ -8,11 +8,12 @@ const packet = @import("packet.zig");
 const compression = @import("compression.zig");
 const validate = @import("validate.zig");
 const query = @import("query.zig");
+const packet_view = @import("packet_view.zig");
 
 const Sha256 = std.crypto.hash.sha2.Sha256;
 const digest_length = Sha256.digest_length;
 const magic = "LEX6AR01";
-const version: u16 = 2;
+const version: u16 = 3;
 const header_size: usize = 112;
 const directory_record_size: usize = 64;
 
@@ -40,6 +41,9 @@ pub const ResourceHit = struct {
 };
 
 pub const Options = struct {
+    /// An optional hot logical-identity projection. It trades fully charged
+    /// metadata bytes for link preparation without decoding any entry pages.
+    index_entry_ids: bool = false,
     target_page_bytes: usize = 64 * 1024,
     max_page_bytes: usize = 1024 * 1024,
     max_document_bytes: usize = 1024 * 1024,
@@ -75,6 +79,37 @@ pub const Owned = struct {
         self.* = undefined;
     }
 };
+
+const InspectionStorage = union(enum) {
+    page: compression.Block,
+    packet: struct { allocator: std.mem.Allocator, bytes: []u8 },
+
+    fn deinit(self: *InspectionStorage) void {
+        switch (self.*) {
+            .page => |*page| page.deinit(),
+            .packet => |owned| owned.allocator.free(owned.bytes),
+        }
+        self.* = undefined;
+    }
+};
+
+/// Native rich document access with strings borrowed from one owned wire
+/// buffer. This result survives archive destruction and cache eviction. Its
+/// structural arena and wire buffer have one explicit, independent lifetime.
+pub fn Inspected(comptime T: type) type {
+    return struct {
+        arena: std.heap.ArenaAllocator,
+        value: T,
+        packet_bytes: []const u8,
+        storage: InspectionStorage,
+
+        pub fn deinit(self: *@This()) void {
+            self.arena.deinit();
+            self.storage.deinit();
+            self.* = undefined;
+        }
+    };
+}
 
 pub const KeyView = struct {
     prefix: []const u8,
@@ -243,6 +278,9 @@ pub fn build(allocator: std.mem.Allocator, library: model.Library, options: Opti
     var lexical_index: std.ArrayList(u8) = .empty;
     defer lexical_index.deinit(allocator);
     try buildIndex(allocator, index_records.items, &lexical_index);
+    var identities: std.ArrayList(u8) = .empty;
+    defer identities.deinit(allocator);
+    if (options.index_entry_ids) try buildIdentityIndex(allocator, library.entries, &identities);
     var catalog: std.ArrayList(u8) = .empty;
     defer catalog.deinit(allocator);
     try buildResourceCatalog(allocator, resource_records.items, &catalog);
@@ -250,8 +288,11 @@ pub fn build(allocator: std.mem.Allocator, library: model.Library, options: Opti
     defer index.deinit(allocator);
     if (lexical_index.items.len > std.math.maxInt(u32)) return error.ArchiveTooLarge;
     try appendU32(&index, allocator, @intCast(lexical_index.items.len));
+    if (identities.items.len > std.math.maxInt(u32)) return error.ArchiveTooLarge;
+    try appendU32(&index, allocator, @intCast(identities.items.len));
     try appendU32(&index, allocator, @intCast(resource_records.items.len));
     try index.appendSlice(allocator, lexical_index.items);
+    try index.appendSlice(allocator, identities.items);
     try index.appendSlice(allocator, catalog.items);
 
     const directory_length = std.math.mul(usize, pages.items.len, directory_record_size) catch return error.ArchiveTooLarge;
@@ -308,6 +349,9 @@ pub const Archive = struct {
     hit_count: usize,
     index: []const u8,
     catalog: []const u8,
+    /// Null for legacy archives and archives built without the projection.
+    identity_index: ?[]const u8,
+    identity_order: []const u8,
     directory: []const u8,
     pages: []const u8,
 
@@ -317,7 +361,8 @@ pub const Archive = struct {
         if (bytes.len > limits.max_archive_bytes) return error.ArchiveTooLarge;
         if (bytes.len < header_size) return error.Truncated;
         if (!std.mem.eql(u8, bytes[0..8], magic)) return error.InvalidMagic;
-        if (readU16(bytes, 8) != version) return error.UnsupportedVersion;
+        const archive_version = readU16(bytes, 8);
+        if (archive_version != 2 and archive_version != version) return error.UnsupportedVersion;
         if (readU16(bytes, 10) != header_size) return error.InvalidHeader;
         const resource_count: usize = readU32(bytes, 12);
         const entry_count: usize = readU32(bytes, 16);
@@ -344,11 +389,18 @@ pub const Archive = struct {
         const pages = bytes[pages_offset..];
         const expected_root = metadataDigest(bytes[0..80], complete_index, directory);
         if (!std.crypto.timing_safe.eql([digest_length]u8, expected_root, bytes[80..112].*)) return error.MetadataDigestMismatch;
-        if (complete_index.len < 8) return error.InvalidIndex;
+        const index_header: usize = if (archive_version >= 3) 12 else 8;
+        if (complete_index.len < index_header) return error.InvalidIndex;
         const lexical_length: usize = readU32(complete_index, 0);
-        if (readU32(complete_index, 4) != resource_count or lexical_length > complete_index.len - 8) return error.InvalidIndex;
-        const index = complete_index[8..][0..lexical_length];
-        const catalog = complete_index[8 + lexical_length ..];
+        const identity_length: usize = if (archive_version >= 3) readU32(complete_index, 4) else 0;
+        if (readU32(complete_index, index_header - 4) != resource_count or lexical_length > complete_index.len - index_header) return error.InvalidIndex;
+        const index = complete_index[index_header..][0..lexical_length];
+        const identity_at = index_header + lexical_length;
+        if (identity_length > complete_index.len - identity_at) return error.InvalidIndex;
+        const identities = complete_index[identity_at..][0..identity_length];
+        const identity_order_length = std.math.mul(usize, entry_count, 4) catch return error.InvalidIndex;
+        if (identity_length != 0 and identities.len < identity_order_length) return error.InvalidIndex;
+        const catalog = complete_index[identity_at + identity_length ..];
 
         var archive = Archive{
             .bytes = bytes,
@@ -359,10 +411,13 @@ pub const Archive = struct {
             .hit_count = hit_count,
             .index = index,
             .catalog = catalog,
+            .identity_index = if (identity_length != 0) identities[identity_order_length..] else null,
+            .identity_order = if (identity_length != 0) identities[0..identity_order_length] else &.{},
             .directory = directory,
             .pages = pages,
         };
         try archive.validateIndex();
+        try archive.validateIdentities();
         try archive.validateCatalog();
         try archive.validateDirectory();
         return archive;
@@ -376,6 +431,19 @@ pub const Archive = struct {
     pub fn prefix(self: *const Archive, wanted: []const u8) !Hits {
         if (wanted.len > self.limits.max_key_bytes) return error.KeyTooLong;
         return .{ .archive = self, .cursor = try self.lowerBound(wanted), .wanted = wanted, .prefix_mode = true };
+    }
+
+    /// Logical entry addresses are distinct from spellings and physical ids.
+    /// This query touches only digest-checked metadata, never an entry page.
+    pub fn entryIdentity(self: *const Archive, wanted: []const u8) !?EntryId {
+        if (wanted.len > self.limits.max_key_bytes) return error.KeyTooLong;
+        const index = self.identity_index orelse return error.DocumentCatalogRequired;
+        var projection = self.*;
+        projection.index = index;
+        const cursor = (try projection.lowerBound(wanted)) orelse return null;
+        if (!cursor.key.spelling.eql(wanted)) return null;
+        var at = cursor.key.hits_at;
+        return (try parseHit(index, &at, cursor.key.hits_end, self.entry_count, self.limits.max_key_bytes)).entry;
     }
 
     pub fn resource(self: *const Archive, wanted: []const u8) !?ResourceHit {
@@ -411,6 +479,50 @@ pub const Archive = struct {
         };
     }
 
+    /// The same semantic admission as load, with byte slices borrowing a
+    /// retained decode buffer rather than being separately copied. Raw pages
+    /// retain only the requested packet; compressed pages retain their block.
+    pub fn inspect(self: *const Archive, allocator: std.mem.Allocator, id: anytype) !Inspected(@TypeOf(id).Payload) {
+        const Address = @TypeOf(id);
+        try self.checkAddress(id);
+        const record = try self.directoryRecord(try self.pageForDocument(id.value));
+        var storage: InspectionStorage = undefined;
+        const bytes = if (record.codec == .raw) raw: {
+            try self.verifyPageDigest(record);
+            if (record.raw_length != record.encoded_length) return error.InvalidPage;
+            const borrowed = try packetAt(self.pages[record.offset..][0..record.raw_length], record, id.value);
+            if (borrowed.len > self.limits.compression_limits.max_memory_bytes) return error.ResourceLimit;
+            const owned = try allocator.dupe(u8, borrowed);
+            storage = .{ .packet = .{ .allocator = allocator, .bytes = owned } };
+            break :raw owned;
+        } else compressed: {
+            var block = try self.decodePage(allocator, record);
+            errdefer block.deinit();
+            const selected = try packetAt(block.bytes, record, id.value);
+            storage = .{ .page = block };
+            break :compressed selected;
+        };
+        errdefer storage.deinit();
+        var document = try packet.decodeBorrowed(model.Document, allocator, bytes, self.limits.packet_limits);
+        errdefer document.deinit();
+        var sources = try self.sourceIndex(allocator);
+        defer sources.deinit(allocator);
+        try self.admitDocument(allocator, &document.value, id.value, &sources);
+        return .{
+            .arena = document.arena,
+            .value = @field(document.value, @tagName(Address.document_kind)),
+            .packet_bytes = bytes,
+            .storage = storage,
+        };
+    }
+
+    /// Full semantic verification is explicit preparation for direct typed
+    /// wire projections. Immutable archive bytes must outlive the proof.
+    pub fn verify(self: *const Archive, allocator: std.mem.Allocator) !VerifiedArchive {
+        try self.verifyAll(allocator);
+        return .{ .archive = self };
+    }
+
     /// Cached reads, uncached reads and full verification admit exactly the
     /// same document. Caching changes storage lifetime, never trust semantics.
     fn admitDocument(self: *const Archive, allocator: std.mem.Allocator, document: *const model.Document, ordinal: u32, sources: *const validate.SourceIndex) !void {
@@ -422,7 +534,13 @@ pub const Archive = struct {
                 .limits = self.limits.validation_limits,
             }),
         }
-        if (document.* != .resource) return;
+        if (document.* == .entry) {
+            if (self.identity_index != null) {
+                const physical = (try self.entryIdentity(document.entry.id)) orelse return error.CatalogMismatch;
+                if (physical.value != ordinal) return error.CatalogMismatch;
+            }
+            return;
+        }
         const actual = &document.resource;
         const catalog = (try self.resource(actual.identity())) orelse return error.CatalogMismatch;
         if (catalog.resource.value != ordinal or catalog.kind != std.meta.activeTag(actual.*)) return error.CatalogMismatch;
@@ -479,7 +597,7 @@ pub const Archive = struct {
                 entry_offset += 4;
                 const end = std.math.add(usize, entry_offset, length) catch return error.InvalidPage;
                 if (end > block.bytes.len) return error.InvalidPage;
-                var decoded = try packet.decode(model.Document, allocator, block.bytes[entry_offset..end], self.limits.packet_limits);
+                var decoded = try packet.decodeBorrowed(model.Document, allocator, block.bytes[entry_offset..end], self.limits.packet_limits);
                 defer decoded.deinit();
                 const document_id: u32 = @intCast(directory.first_document + document_in_page);
                 try self.admitDocument(allocator, &decoded.value, document_id, &sources);
@@ -550,6 +668,24 @@ pub const Archive = struct {
         }
         if (block_count == 0 and self.index.len != 4) return error.InvalidIndex;
         if (counted_hits != self.hit_count) return error.InvalidIndex;
+    }
+
+    fn validateIdentities(self: *const Archive) !void {
+        const index = self.identity_index orelse return;
+        var projection = self.*;
+        projection.index = index;
+        projection.hit_count = self.entry_count;
+        try projection.validateIndex();
+        var hits = try projection.allIndexHits();
+        var sorted_ordinal: usize = 0;
+        while (try hits.next()) |hit| : (sorted_ordinal += 1) {
+            if (hits.cursor.?.key.hit_count != 1) return error.InvalidIndex;
+            if (hit.form != null or hit.spelling.prefix.len + hit.spelling.suffix.len == 0) return error.InvalidIndex;
+            // An inverse ordinal proves one-to-one document membership without
+            // allocating a visited bitmap during Archive.open.
+            if (readU32(self.identity_order, @as(usize, hit.entry.value) * 4) != sorted_ordinal) return error.InvalidIndex;
+        }
+        if (sorted_ordinal != self.entry_count) return error.InvalidIndex;
     }
 
     fn validateCatalog(self: *const Archive) !void {
@@ -731,19 +867,137 @@ pub const Archive = struct {
     }
 };
 
+/// Direct typed projections require complete prior semantic verification via
+/// Archive.verify. This is a documented immutable-byte precondition, not an
+/// unforgeable token or proof of publisher identity. Verification includes all
+/// packet canonical checks and page digests. Reusing that result assumes the
+/// exact archive mapping and configured limits remain immutable.
+pub const VerifiedArchive = struct {
+    archive: *const Archive,
+
+    /// Raw projections borrow the archive mapping and allocate nothing.
+    /// Compressed projections own one decoded page, without native document
+    /// reconstruction or an arena. All child Views share this result's lifetime.
+    pub fn view(self: VerifiedArchive, allocator: std.mem.Allocator, id: anytype) !Projected(@TypeOf(id).Payload) {
+        try self.archive.checkAddress(id);
+        const record = try self.archive.directoryRecord(try self.archive.pageForDocument(id.value));
+        if (record.codec == .raw) {
+            // Full verification already checked this mapped page. The exact
+            // mapping and limits are immutable for the proof's lifetime.
+            const bytes = try packetAt(self.archive.pages[record.offset..][0..record.raw_length], record, id.value);
+            const document = try packet_view.fromVerifiedDocument(model.Document, bytes, self.archive.limits.packet_limits);
+            return .{ .value = try document.payload(@TypeOf(id).document_kind), .page = null };
+        }
+        var block = try self.archive.decodePage(allocator, record);
+        errdefer block.deinit();
+        const bytes = try packetAt(block.bytes, record, id.value);
+        const document = try packet_view.fromVerifiedDocument(model.Document, bytes, self.archive.limits.packet_limits);
+        return .{ .value = try document.payload(@TypeOf(id).document_kind), .page = block };
+    }
+};
+
+pub fn Projected(comptime T: type) type {
+    return struct {
+        value: packet_view.View(T),
+        page: ?compression.Block,
+
+        pub fn deinit(self: *@This()) void {
+            if (self.page) |*page| page.deinit();
+            self.* = undefined;
+        }
+    };
+}
+
+/// A direct-projection session over an explicitly verified immutable archive.
+/// Raw values borrow mapped bytes; compressed values borrow one retained page.
+/// Consume projections before requesting a different compressed page or closing
+/// this session. Use VerifiedArchive.view to own a separate compressed page.
+pub const VerifiedReader = struct {
+    allocator: std.mem.Allocator,
+    verified: VerifiedArchive,
+    page: ?CachedPage = null,
+    raw_number: ?usize = null,
+    raw_next_document: usize = 0,
+    raw_next_at: usize = 0,
+    stats: Reader.Stats = .{},
+
+    pub fn init(allocator: std.mem.Allocator, verified: VerifiedArchive) !VerifiedReader {
+        return .{ .allocator = allocator, .verified = verified };
+    }
+
+    pub fn deinit(self: *VerifiedReader) void {
+        self.evict();
+        self.* = undefined;
+    }
+
+    pub fn view(self: *VerifiedReader, id: anytype) !packet_view.View(@TypeOf(id).Payload) {
+        const archive = self.verified.archive;
+        try archive.checkAddress(id);
+        const number = try archive.pageForDocument(id.value);
+        const record = try archive.directoryRecord(number);
+        const bytes = if (record.codec == .raw) raw: {
+            if (self.raw_number == null or self.raw_number.? != number) {
+                self.evict();
+                self.raw_number = number;
+                self.raw_next_document = record.first_document;
+            } else self.stats.cache_hits +|= 1;
+            break :raw try self.rawPacketAt(record, id.value);
+        } else compressed: {
+            if (self.page == null or self.page.?.number != number) {
+                self.evict();
+                self.page = try CachedPage.open(self.allocator, archive, number);
+                self.stats.page_loads +|= 1;
+                self.stats.bzip3_decodes +|= @intFromBool(self.page.?.block.codec == .bzip3);
+                self.stats.decoded_bytes +|= self.page.?.block.raw_len;
+            } else self.stats.cache_hits +|= 1;
+            break :compressed self.page.?.packetAt(id.value);
+        };
+        const document = try packet_view.fromVerifiedDocument(model.Document, bytes, archive.limits.packet_limits);
+        return document.payload(@TypeOf(id).document_kind);
+    }
+
+    fn evict(self: *VerifiedReader) void {
+        if (self.page) |*page| page.deinit(self.allocator);
+        self.page = null;
+        self.raw_number = null;
+        self.raw_next_at = 0;
+    }
+
+    fn rawPacketAt(self: *VerifiedReader, record: DirectoryRecord, ordinal: usize) ![]const u8 {
+        const bytes = self.verified.archive.pages[record.offset..][0..record.raw_length];
+        var document = if (self.raw_next_document <= ordinal) self.raw_next_document else record.first_document;
+        var at = if (self.raw_next_document <= ordinal) self.raw_next_at else 0;
+        while (document <= ordinal) : (document += 1) {
+            if (at > bytes.len or bytes.len - at < 4) return error.InvalidPage;
+            const length: usize = readU32(bytes, at);
+            const first = at + 4;
+            const end = std.math.add(usize, first, length) catch return error.InvalidPage;
+            if (end > bytes.len) return error.InvalidPage;
+            if (document == ordinal) {
+                self.raw_next_document = ordinal + 1;
+                self.raw_next_at = end;
+                return bytes[first..end];
+            }
+            at = end;
+        }
+        return error.InvalidDocumentId;
+    }
+};
+
 /// A query session owns one decoded page and its packet boundaries. The archive
 /// remains immutable and borrowed; returned documents own their own arenas and
 /// survive eviction, reader destruction, and archive destruction.
 ///
-/// The hot spelling index is unchanged. Logical entry links need prepareLinks:
-/// an explicit, one-time document scan building a derived in-memory catalog.
-/// Its cost is never hidden inside metadata-only Archive.open or the first hit.
+/// Logical links need explicit prepareLinks. With the optional identity index
+/// preparation allocates and decodes nothing; legacy/unindexed archives retain
+/// the transactional document scan and derived in-memory catalog.
 pub const Reader = struct {
     allocator: std.mem.Allocator,
     archive: *const Archive,
     sources: validate.SourceIndex,
     page: ?CachedPage = null,
     links: ?std.StringHashMapUnmanaged(EntryId) = null,
+    links_ready: bool = false,
     remaining_hops: usize,
     stats: Stats = .{},
 
@@ -778,10 +1032,32 @@ pub const Reader = struct {
         return .{ .arena = document.arena, .value = @field(document.value, @tagName(@TypeOf(id).document_kind)) };
     }
 
+    /// Retain one contiguous packet rather than separately copying every
+    /// string. Results remain independent of the Reader's one-page cache.
+    pub fn inspect(self: *Reader, id: anytype) !Inspected(@TypeOf(id).Payload) {
+        const Address = @TypeOf(id);
+        try self.archive.checkAddress(id);
+        const bytes = try self.allocator.dupe(u8, try self.documentBytes(id.value));
+        errdefer self.allocator.free(bytes);
+        var document = try packet.decodeBorrowed(model.Document, self.allocator, bytes, self.archive.limits.packet_limits);
+        errdefer document.deinit();
+        try self.archive.admitDocument(self.allocator, &document.value, id.value, &self.sources);
+        return .{
+            .arena = document.arena,
+            .value = @field(document.value, @tagName(Address.document_kind)),
+            .packet_bytes = bytes,
+            .storage = .{ .packet = .{ .allocator = self.allocator, .bytes = bytes } },
+        };
+    }
+
     /// Build once, transactionally. Failure leaves no partially usable index;
     /// success is idempotent. No packet/node pointer is retained in the catalog.
     pub fn prepareLinks(self: *Reader) !void {
-        if (self.links != null) return;
+        if (self.links_ready) return;
+        if (self.archive.identity_index != null) {
+            self.links_ready = true;
+            return;
+        }
         var links: std.StringHashMapUnmanaged(EntryId) = .empty;
         errdefer deinitLinks(self.allocator, &links);
         try links.ensureTotalCapacity(self.allocator, @intCast(self.archive.entry_count));
@@ -802,6 +1078,7 @@ pub const Reader = struct {
             slot.value_ptr.* = .{ .value = @intCast(ordinal) };
         }
         self.links = links;
+        self.links_ready = true;
     }
 
     /// External logical addresses are looked up locally, not declared invalid
@@ -812,8 +1089,11 @@ pub const Reader = struct {
         self.remaining_hops -= 1;
         const ordinal: u32, const fragment: ?[]const u8 = switch (reference) {
             .entry => |address| found: {
-                const links = self.links orelse return error.DocumentCatalogRequired;
-                const target = links.get(address.id) orelse return .{ .unavailable = reference };
+                if (!self.links_ready) return error.DocumentCatalogRequired;
+                const target = (if (self.archive.identity_index != null)
+                    try self.archive.entryIdentity(address.id)
+                else
+                    self.links.?.get(address.id)) orelse return .{ .unavailable = reference };
                 break :found .{ target.value, address.fragment };
             },
             .resource => |address| found: {
@@ -840,6 +1120,14 @@ pub const Reader = struct {
     }
 
     fn loadDocument(self: *Reader, ordinal: u32) !packet.Decoded(model.Document) {
+        const bytes = try self.documentBytes(ordinal);
+        var document = try packet.decode(model.Document, self.allocator, bytes, self.archive.limits.packet_limits);
+        errdefer document.deinit();
+        try self.archive.admitDocument(self.allocator, &document.value, ordinal, &self.sources);
+        return document;
+    }
+
+    fn documentBytes(self: *Reader, ordinal: u32) ![]const u8 {
         if (ordinal >= self.archive.entry_count + self.archive.resource_count) return error.InvalidDocumentId;
         const number = try self.archive.pageForDocument(ordinal);
         if (self.page == null or self.page.?.number != number) {
@@ -852,11 +1140,7 @@ pub const Reader = struct {
             self.stats.bzip3_decodes +|= @intFromBool(page.block.codec == .bzip3);
             self.stats.decoded_bytes +|= page.block.raw_len;
         } else self.stats.cache_hits +|= 1;
-        const bytes = self.page.?.packetAt(ordinal);
-        var document = try packet.decode(model.Document, self.allocator, bytes, self.archive.limits.packet_limits);
-        errdefer document.deinit();
-        try self.archive.admitDocument(self.allocator, &document.value, ordinal, &self.sources);
-        return document;
+        return self.page.?.packetAt(ordinal);
     }
 
     fn evict(self: *Reader) void {
@@ -1032,6 +1316,25 @@ fn indexLessThan(_: void, left: IndexRecord, right: IndexRecord) bool {
 
 fn resourceLessThan(_: void, left: ResourceRecord, right: ResourceRecord) bool {
     return std.mem.lessThan(u8, left.identity, right.identity);
+}
+
+fn buildIdentityIndex(allocator: std.mem.Allocator, entries: []const model.Entry, out: *std.ArrayList(u8)) !void {
+    const records = try allocator.alloc(IndexRecord, entries.len);
+    defer allocator.free(records);
+    for (entries, records, 0..) |entry, *record, ordinal| record.* = .{
+        .spelling = entry.id,
+        .form = null,
+        .entry = .{ .value = @intCast(ordinal) },
+    };
+    std.sort.block(IndexRecord, records, {}, indexLessThan);
+    const table_length = std.math.mul(usize, entries.len, 4) catch return error.ArchiveTooLarge;
+    try out.appendNTimes(allocator, 0, table_length);
+    for (records, 0..) |record, sorted_ordinal|
+        writeU32(out.items, @as(usize, record.entry.value) * 4, @intCast(sorted_ordinal));
+    var index: std.ArrayList(u8) = .empty;
+    defer index.deinit(allocator);
+    try buildIndex(allocator, records, &index);
+    try out.appendSlice(allocator, index.items);
 }
 
 fn buildResourceCatalog(allocator: std.mem.Allocator, records: []const ResourceRecord, out: *std.ArrayList(u8)) !void {

@@ -6,6 +6,8 @@ pub const render = @import("render.zig");
 pub const validate = @import("validate.zig");
 pub const archive = @import("archive.zig");
 pub const compression = @import("compression.zig");
+pub const packet = @import("packet.zig");
+pub const packet_view = @import("packet_view.zig");
 
 test {
     _ = @import("model_test.zig");
@@ -18,4 +20,6 @@ test {
     _ = @import("node_test.zig");
     _ = @import("language_test.zig");
     _ = @import("richness_test.zig");
+    _ = @import("morphology_test.zig");
+    _ = @import("packet_view_test.zig");
 }

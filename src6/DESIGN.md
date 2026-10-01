@@ -16,6 +16,12 @@ the ownership boundary, not the spelling of those joins.
   encoded and decoded by a schema-specialized codec. There is no mirrored
   stored model, global string-ID graph or runtime population plan. A loaded
   entry owns its decoded allocations; normal field access is normal Zig.
+  Version 3 presence masks omit allocation-free declared defaults, keeping the
+  full rich model while reducing zero-field bytes and default decode work.
+  Nonempty slice and ownership-pointer defaults still use the ordinary owned
+  path. Version 2 remains readable; incompatible version 1 is rejected.
+  Elidable default values are themselves wire-schema declarations: changing
+  one requires a new schema version even if every field keeps its position.
 * **An index is a projection, not the semantic authority.** Sorted key hits
   point directly to entry packets. Lookup and prefix enumeration do not
   decompress prose. Entry pages use real vendored bzip3, chosen against raw
@@ -59,15 +65,47 @@ Relations select binary or n-ary endpoints with a tagged union. Value identity
 is expressed by a named `SharedValue`, independent of equality; define it once
 and use Reference to reuse it. Pointer edges are ownership edges encoded by
 value, never persisted process addresses or implicit graph aliases. Packet
-version 2 makes these changed semantics explicit.
+version 2 made these changed semantics explicit; version 3 preserves them.
 
 The optional Reader session owns a single decoded page, derived packet offsets,
 and shared source bounds. It does not own returned documents. Logical entry
-links use an explicitly prepared in-memory catalog, leaving the on-disk hot
-spelling index unchanged. This chooses transparent preparation cost over hidden
-first-follow scans or another always-stored identity table; it is not a claim
-that link readiness is cheap. A workload needing instant link readiness may
-justify a separately measured persisted catalog later.
+links use either an explicitly prepared in-memory catalog or an optional stored
+common-prefix identity projection. The latter includes an inverse ordinal table
+so opening can prove one-to-one entry membership without a visited allocation.
+It costs metadata bytes and open work, but prepares links with zero allocations
+or page decodes. It is opt-in; the hot spelling projection is unchanged.
+
+`inspect` preserves native field access but borrows strings from an owned wire
+buffer. Raw inspection copies only the selected packet; compressed inspection
+retains its decoded page. Independent structural arenas and backing buffers
+preserve the owned result's lifetime without per-string copies.
+
+`packet_view.View(T)` supplies schema-derived typed wire projections. One
+reflection scanner checks canonical scalars, unions, masks, slices and work
+bounds before standalone `open` lends a view. It supplies structural validation,
+not lexical admission. `Archive.verify` performs complete ordinary admission
+and index reconciliation before returning an explicit prepared archive. Its
+subsequent projections can reuse those checks over the exact immutable mapping
+and limits: raw views borrow mapped bytes without allocation or another hash;
+compressed views own one bounded decoded block. This is a documented
+precondition, not an unforgeable token or a claim of publisher authentication.
+
+`VerifiedReader` holds one compressed page or a raw mapped-page cursor and
+removes entry reconstruction from repeated selective access. An ascending raw
+cursor skips prior frames once; arbitrary backwards addresses restart safely.
+Returned compressed views expire on page eviction or session destruction;
+`VerifiedArchive.view` is the independent block owner when that lifetime is
+required. Preparation, first decode, cached projection and retained field reads
+are different costs and are measured separately.
+
+Optional `Analysis`/`Segment` alternatives append to the Item sum without
+altering earlier payload fields. Ordered analysis trees retain ambiguity and
+qualified linguistic roles. UTF-8 byte spans over exact representation text
+support agglutination, interleaved roots/patterns, clitics, discontinuous
+multiwords and zero realization without whitespace or English affix assumptions.
+Local representation type, extent and scalar boundaries are checked after all
+identities are collected; external and unresolved addresses remain data.
+Surface queries stream original fragments and inline language context.
 
 This is deliberately not a promise that entry-local data always beats columns.
 Batch analytics may prefer columns; cold decompression has a real first-read

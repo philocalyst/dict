@@ -38,6 +38,29 @@ timed region without saying so.
 6. **One context operation for every query surface.** Tagged field projections
    and cursor traversal now resolve language through `Language.at`. This closes
    a correctness gap in the general field API without adding per-kind façades.
+7. **Schema defaults as a physical optimization.** Version 3 derives presence
+   masks from the public type's declared defaults. It preserves null versus
+   present-empty values, language inheritance/reset and feature algebra rather
+   than dropping optional semantics. Version 2 compatibility is exercised by
+   legacy packet/envelope fixtures. Noncanonical masks/default encodings,
+   nonempty defaults and ownership-pointer defaults have explicit tests.
+8. **Prepared typed wire access.** Native borrowed-string decoding and admitted
+   inspection reduce copies without a second semantic model. A separate
+   allocation-free reflected wire scanner supplies typed field/payload/collection
+   views. Full archive verification is an explicit prerequisite for prepared
+   projections, with its time and allocations separately charged. Raw prepared
+   views borrow the exact verified immutable mapping; compressed views retain a
+   bounded page. This trades preparation for repeated selective work, rather
+   than claiming cheap first-time semantic verification.
+9. **Optional logical identity projection.** A common-prefix index plus an
+   inverse ordinal table removes full-document graph setup. It is opt-in and
+   its complete metadata size/open cost are measured. Unindexed and legacy
+   archives retain explicit transactional link preparation.
+10. **Exact multilingual realization analysis.** Qualified ordered analysis
+    trees support Turkish agglutination, Arabic interleaved roots/patterns,
+    Japanese nonspaced graphemes, German discontinuous multiwords, competing
+    analyses and zero realization. Surface text remains authoritative; local
+    UTF-8 byte extents are checked and streamed without flattening markup.
 
 ## Experiments still worth doing
 
@@ -89,8 +112,23 @@ separate from preserving native semantic richness.
 
 ### Repeated-fragment factoring before entropy coding
 
-Explore schema-default elision and shared typed subtrees only on the *same*
-model. Bzip3 already captures much repetition; another dictionary may simply
+Schema-default elision is implemented in packet version 3. Explore shared typed
+subtrees only on the *same* complete model. Bzip3 already captures much repetition; another dictionary may simply
 add indirection. Preserve occurrence identity and evidence even when physical
 payloads are shared. Count the full dictionary, tags, pointers and verification
 work, and compare against the simple packet control before promotion.
+
+### Rich prepared-access comparisons
+
+The [native-rich control](experiments/dictionary_frontier/links.zig) compiles
+against both frozen and candidate public cores. It checks complete native
+equality outside timers and consumes identical headword/sense observations.
+It reports packet bytes and decoding allocations, complete plain/indexed archive
+bytes, build/open/source setup/link preparation, uncached admitted loads,
+admitted inspection, cached loads, full verification, prepared uncached/cached
+wire projections and retained field projection separately. Its repeated rich
+fixture is a semantic/performance control, not evidence of natural compression;
+the independent real-dictionary suite is required for that claim. Allocation
+counters cover Zig allocations and explicitly exclude bzip3's C state. Archive
+bytes are already RAM-resident; these phases do not claim cold disk/OS-cache
+latency. No prepared result omits the verification setup charge from its report.

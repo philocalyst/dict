@@ -15,3 +15,26 @@
 /src6/experiments/bzip4/frontier_python/bwt_context
 /src6/experiments/bzip4/frontier_python/symbol_bwt/results
 /src6/experiments/bzip4/language_frontier/grammar_source/results
+
+# Frontier work: retain source and captured textual evidence, not build products.
+__pycache__/
+**/.zig-cache/
+/src6/bench/native_controls/native-controls
+/src6/experiments/wordzip/wordzip
+/src6/experiments/wordzip/sbwt
+/src6/experiments/wordzip/sbwt-lab
+/src6/experiments/wordzip/sbwt-auto
+/src6/experiments/wordzip/sbwt-select
+/src6/experiments/wordzip/sbwt-utf8
+/src6/experiments/wordzip/sbwt-unicode-auto
+/src6/experiments/wordzip/sbwt-session
+/src6/experiments/wordzip/development/
+/src6/experiments/wordzip/*.raw
+/src6/experiments/wordzip/*.out
+/src6/experiments/wordzip/*.wz
+/src6/experiments/wordzip/*.wsb
+/src6/experiments/wordgrammar/wordgrammar
+/src6/experiments/wordgrammar/*.bin
+/src6/experiments/wordgrammar/*.wgr
+/src6/experiments/dictionary_frontier/zig-out/
+/src6/bench/real-world/zig-out/

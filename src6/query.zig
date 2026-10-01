@@ -43,8 +43,61 @@ pub fn Match(comptime T: type) type {
         pub fn descendants(self: @This(), comptime Node: type, limits: StructuralLimits) StructuralSelection(T, Node) {
             return .init(self.value, self.language, limits);
         }
+
+        /// Stream exact surface bytes while retaining each inline language
+        /// context. Coordinates follow RealizationSpan's UTF-8 byte contract.
+        pub fn surface(self: @This(), start: u32, end: u32) SurfaceError!Surface {
+            if (T != model.Representation) @compileError("surface ranges require Representation");
+            if (start > end) return error.InvalidRealization;
+            return .{
+                .cursor = .init(self.value.text.content, self.language.at(&self.value.text), .{}),
+                .start = start,
+                .end = end,
+            };
+        }
     };
 }
+
+pub const SurfaceError = walk.Error || error{InvalidRealization};
+pub const SurfaceFragment = struct { bytes: []const u8, language: walk.Language };
+
+/// A bounded-stack surface range over rich inline structure. Fragments borrow
+/// the representation, never flatten or normalize it, and omit markup bytes.
+pub const Surface = struct {
+    cursor: walk.Cursor(model.Inline),
+    start: usize,
+    end: usize,
+    offset: usize = 0,
+    finished: bool = false,
+    failed: bool = false,
+
+    pub fn next(self: *Surface) SurfaceError!?SurfaceFragment {
+        if (self.failed) return error.InvalidRealization;
+        if (self.finished) return null;
+        while (try self.cursor.next()) |event| {
+            if (event.node.* != .text) continue;
+            const text = event.node.text;
+            const prior = self.offset;
+            self.offset = std.math.add(usize, prior, text.len) catch return self.fail();
+            if (self.start > self.offset or self.end < prior) continue;
+            const first = @max(self.start, prior) - prior;
+            const last = @min(self.end, self.offset) - prior;
+            if ((first < text.len and text[first] & 0xc0 == 0x80) or
+                (last < text.len and text[last] & 0xc0 == 0x80)) return self.fail();
+            if (self.end <= self.offset) self.finished = true;
+            if (first == last and self.start != self.end) continue;
+            return .{ .bytes = text[first..last], .language = event.language };
+        }
+        self.finished = true;
+        if (self.end > self.offset) return self.fail();
+        return null;
+    }
+
+    fn fail(self: *Surface) SurfaceError {
+        self.failed = true;
+        return error.InvalidRealization;
+    }
+};
 
 fn sliceElement(comptime T: type, comptime field: std.meta.FieldEnum(T)) type {
     if (@typeInfo(T) != .@"struct") @compileError("field projection requires a struct; switch on tagged values first");

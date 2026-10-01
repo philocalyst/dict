@@ -63,6 +63,64 @@ test "empty archive opens verifies and has no hits" {
     try view.verifyAll(std.testing.allocator);
 }
 
+test "legacy version2 metadata envelope remains readable" {
+    var owned = try archive.build(std.testing.allocator, .{ .entries = &.{} }, .{ .compression = .raw });
+    defer owned.deinit();
+    const legacy = try std.testing.allocator.alloc(u8, owned.bytes.len - 4);
+    defer std.testing.allocator.free(legacy);
+    @memcpy(legacy[0..116], owned.bytes[0..116]);
+    @memcpy(legacy[116..], owned.bytes[120..]);
+    std.mem.writeInt(u16, legacy[8..10], 2, .little);
+    std.mem.writeInt(u64, legacy[40..48], 12, .little);
+    std.mem.writeInt(u64, legacy[48..56], legacy.len, .little);
+    std.mem.writeInt(u64, legacy[64..72], legacy.len, .little);
+    refreshRoot(legacy);
+    const view = try archive.Archive.open(legacy, .{});
+    try std.testing.expect(view.identity_index == null);
+    try view.verifyAll(std.testing.allocator);
+}
+
+test "identity projection rejects repaired duplicate inverse ordinals" {
+    const entries = [_]model.Entry{ entry("alpha-id", "alpha", &.{}), entry("beta-id", "beta", &.{}) };
+    var owned = try archive.build(std.testing.allocator, .{ .entries = &entries }, .{ .compression = .raw, .index_entry_ids = true });
+    defer owned.deinit();
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const at = @intFromPtr(view.identity_order.ptr) - @intFromPtr(owned.bytes.ptr);
+    std.mem.writeInt(u32, owned.bytes[at..][0..4], 1, .little);
+    refreshRoot(owned.bytes);
+    try std.testing.expectError(error.InvalidIndex, archive.Archive.open(owned.bytes, .{}));
+}
+
+test "every admitted entry reader checks a persisted identity projection" {
+    const source = entry("identity-a", "alpha", &.{});
+    var owned = try archive.build(std.testing.allocator, .{ .entries = &.{source} }, .{ .compression = .raw, .index_entry_ids = true });
+    defer owned.deinit();
+    const pages: usize = @intCast(std.mem.readInt(u64, owned.bytes[64..72], .little));
+    const at = std.mem.indexOfPos(u8, owned.bytes, pages, "identity-a").?;
+    @memcpy(owned.bytes[at..][0..10], "identity-b");
+    refreshFirstPageAndRoot(owned.bytes);
+    const view = try archive.Archive.open(owned.bytes, .{});
+    try std.testing.expectError(error.CatalogMismatch, view.load(std.testing.allocator, archive.EntryId{ .value = 0 }));
+    try std.testing.expectError(error.CatalogMismatch, view.inspect(std.testing.allocator, archive.EntryId{ .value = 0 }));
+    try std.testing.expectError(error.CatalogMismatch, view.verify(std.testing.allocator));
+    var reader = try archive.Reader.init(std.testing.allocator, &view, .{});
+    defer reader.deinit();
+    try std.testing.expectError(error.CatalogMismatch, reader.inspect(archive.EntryId{ .value = 0 }));
+}
+
+test "preparing typed projections still requires complete lexical semantic admission" {
+    const source = entry("identity", "alpha", &.{});
+    var owned = try archive.build(std.testing.allocator, .{ .entries = &.{source} }, .{ .compression = .raw });
+    defer owned.deinit();
+    const pages: usize = @intCast(std.mem.readInt(u64, owned.bytes[64..72], .little));
+    const at = std.mem.indexOfPos(u8, owned.bytes, pages, "identity").?;
+    owned.bytes[at] = 0xff; // Structurally legal bytes, semantically invalid id.
+    refreshFirstPageAndRoot(owned.bytes);
+    const view = try archive.Archive.open(owned.bytes, .{});
+    try std.testing.expectError(error.InvalidUtf8, view.verify(std.testing.allocator));
+    try std.testing.expectError(error.InvalidUtf8, view.inspect(std.testing.allocator, archive.EntryId{ .value = 0 }));
+}
+
 test "hot lookup preserves duplicate claims form identity and physical order" {
     const entries = [_]model.Entry{
         entry("z-id", "zebra", &.{.{ .spelling = "shared", .form = "form-1" }}),
@@ -143,7 +201,7 @@ test "recomputed metadata root cannot hide gaps or nonzero reserved bytes" {
     const index_gap = try std.testing.allocator.dupe(u8, owned.bytes);
     defer std.testing.allocator.free(index_gap);
     const index_offset: usize = @intCast(std.mem.readInt(u64, index_gap[32..40], .little));
-    const first_block_offset_at = index_offset + 8 + 4;
+    const first_block_offset_at = index_offset + 12 + 4;
     const first_block_offset = std.mem.readInt(u32, index_gap[first_block_offset_at..][0..4], .little);
     std.mem.writeInt(u32, index_gap[first_block_offset_at..][0..4], first_block_offset + 1, .little);
     refreshRoot(index_gap);
@@ -162,7 +220,7 @@ test "recomputed metadata root cannot hide gaps or nonzero reserved bytes" {
     const catalog_gap = resource_owned.bytes;
     const resource_index_offset: usize = @intCast(std.mem.readInt(u64, catalog_gap[32..40], .little));
     const lexical_length: usize = std.mem.readInt(u32, catalog_gap[resource_index_offset..][0..4], .little);
-    const catalog_offset = resource_index_offset + 8 + lexical_length;
+    const catalog_offset = resource_index_offset + 12 + lexical_length;
     const first_record = std.mem.readInt(u32, catalog_gap[catalog_offset..][0..4], .little);
     std.mem.writeInt(u32, catalog_gap[catalog_offset..][0..4], first_record + 1, .little);
     refreshRoot(catalog_gap);

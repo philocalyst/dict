@@ -42,6 +42,130 @@ test "reader decodes one page once and loaded documents survive eviction" {
     try testing.expectEqualStrings("large", last.value.id);
 }
 
+test "native inspected documents retain their wire lifetime across archive destruction" {
+    inline for (.{ .raw, .bzip3 }) |mode| {
+        var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = mode, .target_page_bytes = 4096 });
+        const view = try archive.Archive.open(owned.bytes, .{});
+        var inspected = try view.inspect(testing.allocator, archive.EntryId{ .value = 0 });
+        defer inspected.deinit();
+        const pointer = @intFromPtr(inspected.value.headword.ptr);
+        const packet_start = @intFromPtr(inspected.packet_bytes.ptr);
+        try testing.expect(pointer >= packet_start and pointer + inspected.value.headword.len <= packet_start + inspected.packet_bytes.len);
+        owned.deinit();
+        try testing.expectEqualDeep(entries[0], inspected.value);
+    }
+}
+
+test "Reader inspections survive cache eviction and reader destruction" {
+    var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .target_page_bytes = 4096 });
+    const view = try archive.Archive.open(owned.bytes, .{});
+    var reader = try archive.Reader.init(testing.allocator, &view, .{});
+    var inspected = try reader.inspect(archive.EntryId{ .value = 0 });
+    defer inspected.deinit();
+    var last = try reader.load(archive.EntryId{ .value = 2 });
+    defer last.deinit();
+    reader.deinit();
+    owned.deinit();
+    try testing.expectEqualDeep(entries[0], inspected.value);
+}
+
+test "native inspection wire and arena ownership clean up every allocation failure" {
+    inline for (.{ .raw, .bzip3 }) |mode| {
+        var owned = try archive.build(testing.allocator, .{ .entries = entries[0..2] }, .{ .compression = mode });
+        defer owned.deinit();
+        try testing.checkAllAllocationFailures(testing.allocator, struct {
+            fn run(allocator: std.mem.Allocator, bytes: []const u8) !void {
+                const view = try archive.Archive.open(bytes, .{});
+                var inspected = try view.inspect(allocator, archive.EntryId{ .value = 0 });
+                defer inspected.deinit();
+                var reader = try archive.Reader.init(allocator, &view, .{});
+                defer reader.deinit();
+                var cached = try reader.inspect(archive.EntryId{ .value = 1 });
+                defer cached.deinit();
+            }
+        }.run, .{owned.bytes});
+    }
+}
+
+test "verified raw typed projections allocate nothing and borrow immutable archive bytes" {
+    var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = .raw });
+    defer owned.deinit();
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const verified = try view.verify(testing.allocator);
+    var refusing = testing.FailingAllocator.init(testing.allocator, .{ .fail_index = 0 });
+    var projected = try verified.view(refusing.allocator(), archive.EntryId{ .value = 0 });
+    defer projected.deinit();
+    const spelling = try (try projected.value.field(.headword)).text();
+    try testing.expectEqualStrings("bank", spelling);
+    try testing.expect(@intFromPtr(spelling.ptr) >= @intFromPtr(owned.bytes.ptr));
+    try testing.expect(@intFromPtr(spelling.ptr) + spelling.len <= @intFromPtr(owned.bytes.ptr) + owned.bytes.len);
+    var children = try (try projected.value.field(.content)).values();
+    const sense = try (try children.next()).?.payload(.sense);
+    try testing.expectEqualStrings("finance", try ((try (try sense.field(.meta)).field(.id)).optional() catch unreachable).?.text());
+    try testing.expectEqual(@as(usize, 0), refusing.alloc_index);
+    var session = try archive.VerifiedReader.init(refusing.allocator(), verified);
+    defer session.deinit();
+    const next = try session.view(archive.EntryId{ .value = 1 });
+    try testing.expectEqualStrings("banque", try (try next.field(.headword)).text());
+    try testing.expectEqual(@as(usize, 0), session.stats.page_loads);
+    try testing.expectEqual(@as(usize, 0), refusing.alloc_index);
+}
+
+test "verified compressed projections own their block and survive archive destruction" {
+    var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = .bzip3 });
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const verified = try view.verify(testing.allocator);
+    var projected = try verified.view(testing.allocator, archive.EntryId{ .value = 0 });
+    defer projected.deinit();
+    owned.deinit();
+    try testing.expectEqualStrings("bank", try (try projected.value.field(.headword)).text());
+}
+
+test "verified projection sessions share one decoded page and check replacement corruption" {
+    var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = .bzip3, .target_page_bytes = 4096 });
+    defer owned.deinit();
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const verified = try view.verify(testing.allocator);
+    var reader = try archive.VerifiedReader.init(testing.allocator, verified);
+    defer reader.deinit();
+    const first = try reader.view(archive.EntryId{ .value = 0 });
+    try testing.expectEqualStrings("bank", try (try first.field(.headword)).text());
+    const second = try reader.view(archive.EntryId{ .value = 1 });
+    try testing.expectEqualStrings("banque", try (try second.field(.headword)).text());
+    try testing.expectEqual(@as(usize, 1), reader.stats.page_loads);
+    try testing.expectEqual(@as(usize, 1), reader.stats.cache_hits);
+    const directory: usize = @intCast(std.mem.readInt(u64, owned.bytes[48..56], .little));
+    const pages: usize = @intCast(std.mem.readInt(u64, owned.bytes[64..72], .little));
+    const next_offset: usize = @intCast(std.mem.readInt(u64, owned.bytes[directory + 64 ..][0..8], .little));
+    owned.bytes[pages + next_offset] ^= 1;
+    try testing.expectError(error.PageDigestMismatch, reader.view(archive.EntryId{ .value = 2 }));
+    try testing.expectEqual(@as(usize, 1), reader.stats.page_loads);
+}
+
+test "prepared raw frame cursors support arbitrary forward backward and repeated addresses" {
+    var identities: [35][20]u8 = undefined;
+    var originals: [35]model.Entry = undefined;
+    for (&originals, &identities, 0..) |*entry, *identity, ordinal| {
+        entry.* = entries[ordinal % entries.len];
+        entry.id = try std.fmt.bufPrint(identity, "cursor-{d:0>3}", .{ordinal});
+    }
+    var owned = try archive.build(testing.allocator, .{ .entries = &originals }, .{ .compression = .raw, .target_page_bytes = 512 });
+    defer owned.deinit();
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const verified = try view.verify(testing.allocator);
+    var refusing = testing.FailingAllocator.init(testing.allocator, .{ .fail_index = 0 });
+    var reader = try archive.VerifiedReader.init(refusing.allocator(), verified);
+    defer reader.deinit();
+    const schedule = [_]u32{ 34, 0, 16, 16, 1, 33, 9, 10, 11, 10, 2, 3, 4, 0, 34 };
+    for (schedule) |ordinal| {
+        const projected = try reader.view(archive.EntryId{ .value = ordinal });
+        try testing.expectEqualStrings(originals[ordinal].id, try (try projected.field(.id)).text());
+        try testing.expectEqualStrings(originals[ordinal].headword, try (try projected.field(.headword)).text());
+    }
+    try testing.expectEqual(@as(usize, 0), refusing.alloc_index);
+    try testing.expectEqual(@as(usize, 0), reader.stats.page_loads);
+}
+
 test "logical link preparation is explicit and targets resolve in owned documents" {
     var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = .raw });
     defer owned.deinit();
@@ -68,6 +192,28 @@ test "logical link preparation is explicit and targets resolve in owned document
     try testing.expect((try reader.follow(.{ .iri = "urn:external" })) == .unavailable);
     try testing.expect((try reader.follow(.{ .unresolved = .{ .identifier = "printed-link" } })) == .unresolved);
     try testing.expectError(error.LocalReferenceRequiresDocument, reader.follow(.{ .local = "finance" }));
+}
+
+test "persisted logical identities prepare without allocations or page reads" {
+    var owned = try archive.build(testing.allocator, .{ .entries = &entries }, .{ .compression = .raw, .index_entry_ids = true });
+    defer owned.deinit();
+    const view = try archive.Archive.open(owned.bytes, .{});
+    try testing.expectEqual(@as(u32, 1), (try view.entryIdentity("french")).?.value);
+    try testing.expect((try view.entryIdentity("banque")) == null);
+    try testing.expect((try view.entryIdentity("missing")) == null);
+    var refusing = testing.FailingAllocator.init(testing.allocator, .{ .fail_index = 0 });
+    var reader = try archive.Reader.init(refusing.allocator(), &view, .{});
+    defer reader.deinit();
+    try reader.prepareLinks();
+    try reader.prepareLinks();
+    try testing.expectEqual(@as(usize, 0), reader.stats.page_loads);
+    try testing.expectEqual(@as(usize, 0), refusing.alloc_index);
+
+    // Preparation authenticates the metadata projection; actual target reads
+    // still check their page, so a cold malformed page cannot escape admission.
+    const pages: usize = @intCast(std.mem.readInt(u64, owned.bytes[64..72], .little));
+    owned.bytes[pages] ^= 1;
+    try testing.expectError(error.PageDigestMismatch, reader.follow(.{ .entry = .{ .id = "french" } }));
 }
 
 test "shared atomic values and independent value libraries roundtrip through real pages" {

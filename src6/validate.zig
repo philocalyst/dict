@@ -4,6 +4,7 @@
 const std = @import("std");
 const model = @import("model.zig");
 const nodes = @import("nodes.zig");
+const walk = @import("walk.zig");
 
 pub const Limits = struct {
     max_depth: usize = 96,
@@ -23,6 +24,7 @@ pub const Error = std.mem.Allocator.Error || error{
     InvalidMarkup,
     InvalidValue,
     InvalidReferenceKind,
+    InvalidRealization,
 };
 
 /// Build once for the library, then borrow during document admission. Keys are
@@ -72,6 +74,7 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
     defer context.ids.deinit(allocator);
     defer context.local_sources.deinit(allocator);
     defer context.links.deinit(allocator);
+    defer context.spans.deinit(allocator);
     if (T == model.Entry) {
         for (value.sources) |source| try context.addSource(source.id, source.bytes.len);
     } else if (value.* == .source) {
@@ -90,10 +93,11 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
         }
     };
     for (context.links.items) |link| try context.require(link.id, link.kind);
+    for (context.spans.items) |span| try context.realization(span);
 }
 
 const Context = struct {
-    const Target = enum { any, form, concept, sense };
+    const Target = enum { any, form, concept, sense, representation };
     const Link = struct { id: []const u8, kind: Target };
 
     allocator: std.mem.Allocator,
@@ -105,6 +109,7 @@ const Context = struct {
     comparisons: usize = 0,
     // Borrowed identifiers only. No pending nodes or duplicate model objects.
     links: std.ArrayList(Link) = .empty,
+    spans: std.ArrayList(*const model.RealizationSpan) = .empty,
 
     fn addSource(self: *Context, id: []const u8, length: usize) Error!void {
         if (self.shared_sources.length(id) != null) return error.DuplicateIdentity;
@@ -143,6 +148,7 @@ const Context = struct {
             .form => target.as(model.Form) != null,
             .concept => target.as(model.Concept) != null,
             .sense => target.as(model.Sense) != null,
+            .representation => target.as(model.Representation) != null,
         };
         if (!matches) return error.InvalidReferenceKind;
     }
@@ -171,9 +177,10 @@ const Context = struct {
 
     fn ruleNode(self: *Context, value: nodes.NodeRef) Error!void {
         const semantic_types = .{
-            model.Reference, model.Anchor,     model.Name,        model.Language,
-            model.Inline,    model.Metadata,   model.Value,       model.Relation,
-            model.Certainty, model.Denotation, model.SharedValue,
+            model.Reference,       model.Anchor,     model.Name,        model.Language,
+            model.Inline,          model.Metadata,   model.Value,       model.Relation,
+            model.Certainty,       model.Denotation, model.SharedValue, model.Analysis,
+            model.RealizationSpan,
         };
         inline for (semantic_types) |T| {
             if (value.as(T)) |pointer| return self.rule(pointer);
@@ -272,6 +279,46 @@ const Context = struct {
         if (T == model.Denotation and pointer.iri.len == 0) return error.InvalidIdentity;
         if (T == model.SharedValue and (pointer.meta.id == null or pointer.meta.id.?.len == 0))
             return error.InvalidIdentity;
+        if (T == model.Analysis) {
+            if (pointer.form) |reference_value| {
+                if (reference_value == .local) try self.deferLink(reference_value.local, .form);
+            }
+        }
+        if (T == model.RealizationSpan) {
+            if (pointer.start > pointer.end) return error.InvalidRealization;
+            switch (pointer.representation) {
+                .local => |id| {
+                    try self.deferLink(id, .representation);
+                    try self.chargeComparison();
+                    try self.spans.append(self.allocator, pointer);
+                },
+                .entry, .resource => |address| if (address.fragment == null) return error.InvalidReferenceKind,
+                // External and source-unresolved representation addresses are
+                // preserved. Their extents require resolving the other owner.
+                .iri, .unresolved => {},
+            }
+        }
+    }
+
+    fn realization(self: *Context, span: *const model.RealizationSpan) Error!void {
+        const owner = self.ids.get(span.representation.local) orelse return error.UnresolvedLocal;
+        const representation = owner.as(model.Representation) orelse return error.InvalidReferenceKind;
+        var cursor = walk.Cursor(model.Inline).init(representation.text.content, .{}, .{});
+        var length: usize = 0;
+        var start_boundary = span.start == 0;
+        var end_boundary = span.end == 0;
+        while (cursor.next() catch return error.ResourceLimit) |event| {
+            try self.chargeComparison();
+            if (event.node.* != .text) continue;
+            const text = event.node.text;
+            const end = std.math.add(usize, length, text.len) catch return error.ResourceLimit;
+            if (span.start >= length and span.start <= end)
+                start_boundary = scalarBoundary(text, span.start - length);
+            if (span.end >= length and span.end <= end)
+                end_boundary = scalarBoundary(text, span.end - length);
+            length = end;
+        }
+        if (span.end > length or !start_boundary or !end_boundary) return error.InvalidRealization;
     }
 
     fn attributes(self: *Context, values: []const model.Attribute) Error!void {
@@ -338,6 +385,10 @@ const Context = struct {
         };
     }
 };
+
+fn scalarBoundary(text: []const u8, offset: usize) bool {
+    return offset == text.len or (text[offset] & 0xc0) != 0x80;
+}
 
 /// RFC 5646 structural grammar only. This deliberately does not claim IANA
 /// registry membership or canonicalization, and preserves the original case.

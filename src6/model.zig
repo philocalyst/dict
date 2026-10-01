@@ -314,6 +314,42 @@ pub const Extension = struct {
     content: []const Item = &.{},
 };
 
+/// Coordinates address the concatenation of a Representation's inline text
+/// leaves, in exact UTF-8 bytes. Markup, comments and instructions occupy no
+/// surface bytes. Both ends are scalar boundaries; a zero-length span denotes
+/// a zero realization. Repeated/overlapping/discontinuous spans are permitted
+/// and retain their declared order, rather than implying concatenation.
+pub const RealizationSpan = struct {
+    representation: Reference,
+    start: u32,
+    end: u32,
+};
+
+/// A qualified analysis occurrence, independent of the authoritative Form and
+/// surface Representation. Multiple analyses preserve ambiguity and competing
+/// evidence; no segmentation, language, or normalization is inferred.
+pub const Analysis = struct {
+    meta: Metadata = .{},
+    kind: enum { morphology, multiword, phonology, orthography } = .morphology,
+    form: ?Reference = null,
+    process: ?Name = null,
+    content: []const Item = &.{},
+};
+
+/// Ordered constituents form a real analysis tree through `content`. Qualified
+/// roles name roots, prefixes, infixes, patterns, agreement slots, and other
+/// language-specific distinctions without a closed English morphology list.
+/// A root/pattern can realize discontinuous bytes; a clitic or MWE slot can
+/// reference another lexical entry; allomorphs retain their exact surface.
+pub const Segment = struct {
+    meta: Metadata = .{},
+    kind: enum { morpheme, word, slot, literal, syllable, phoneme, grapheme } = .morpheme,
+    role: ?Name = null,
+    target: ?Reference = null,
+    realizations: []const RealizationSpan = &.{},
+    content: []const Item = &.{},
+};
+
 /// This sum is the vocabulary. Its tag enum and typed selectors are derived
 /// from it, so adding a lexical kind does not require parallel declarations.
 pub const Item = union(enum) {
@@ -333,6 +369,8 @@ pub const Item = union(enum) {
     frame: Frame,
     component: Component,
     extension: Extension,
+    analysis: Analysis,
+    segment: Segment,
 
     pub fn metadata(self: *const Item) *const Metadata {
         return switch (self.*) {
