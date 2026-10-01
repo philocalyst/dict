@@ -1,0 +1,407 @@
+[
+  {
+    "binary": {
+      "bytes": 626880,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "sha256": "5bb319377286e8e898926256c23ed0ea5970ced5e22f8d4945bc6946180292cd"
+    },
+    "class_policy": "fixed",
+    "codec": "bzip4-v4-lab",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_freedict.eval8.65536.b4sd",
+      "--workers",
+      "1",
+      "--stats",
+      "--classes",
+      "64"
+    ],
+    "dump": {
+      "bytes": 1785008,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_freedict.eval8.65536.b4sd",
+      "sha256": "962736ea1bdccc899b841f52e33c8bf512051e21c58b094f736bd7b7199e548f"
+    },
+    "input": {
+      "bytes": 8388608,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+      "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+    },
+    "name": "freedict",
+    "ok": true,
+    "returncode": 0,
+    "stats": [
+      {
+        "bytes": 40640.0,
+        "coded_bits_per_event": 4.11,
+        "events": 42949,
+        "kind": "use",
+        "raw_bits_per_event": 3.46,
+        "stream": "delta"
+      },
+      {
+        "bytes": 4077.0,
+        "coded_bits_per_event": 5.33,
+        "events": 3999,
+        "kind": "past",
+        "raw_bits_per_event": 2.83,
+        "stream": "delta"
+      },
+      {
+        "bytes": 2341.0,
+        "coded_bits_per_event": 3.67,
+        "events": 5097,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 3629.0,
+        "coded_bits_per_event": 1.43,
+        "events": 20361,
+        "kind": "arity",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 7019.0,
+        "coded_bits_per_event": 2.76,
+        "events": 20361,
+        "kind": "name",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 24379.0,
+        "coded_bits_per_event": 4.65,
+        "events": 41900,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 294811.0,
+        "coded_bits_per_event": 3.98,
+        "events": 296627,
+        "kind": "use",
+        "raw_bits_per_event": 3.97,
+        "stream": "payload"
+      },
+      {
+        "bytes": 59530.0,
+        "coded_bits_per_event": 4.59,
+        "events": 62063,
+        "kind": "past",
+        "raw_bits_per_event": 3.08,
+        "stream": "payload"
+      },
+      {
+        "bytes": 8148.0,
+        "coded_bits_per_event": 4.27,
+        "events": 15264,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      },
+      {
+        "bytes": 105130.0,
+        "coded_bits_per_event": 5.37,
+        "events": 156641,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      }
+    ],
+    "stderr": {
+      "bytes": 1195,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/freedict.stderr",
+      "sha256": "b33411a82d0cf16b61f96a9f924d51ec8b404441400b99a615faf3680638b198"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/freedict.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "blocks": 128,
+      "buckets": 714,
+      "classes": 64,
+      "delta": 82331,
+      "framing": 1696,
+      "header": 12467,
+      "payload": 467922,
+      "total": 564416
+    },
+    "storage_line": "m_freedict.eval8.65536.b4sd\tclasses=64\ttotal=564416\theader=12467\tdelta=82331\tpayload=467922\tframing=1696\tbuckets=714\tblocks=128\tencode_ms=3447\tdecode_MBps=440\tx1=418"
+  },
+  {
+    "binary": {
+      "bytes": 626880,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "sha256": "5bb319377286e8e898926256c23ed0ea5970ced5e22f8d4945bc6946180292cd"
+    },
+    "class_policy": "fixed",
+    "codec": "bzip4-v4-lab",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_gcide.eval8.65536.b4sd",
+      "--workers",
+      "1",
+      "--stats",
+      "--classes",
+      "64"
+    ],
+    "dump": {
+      "bytes": 3812244,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_gcide.eval8.65536.b4sd",
+      "sha256": "5bea089cda4e0c3a2b7ab49c565210f751739674a7fc4107255de9a70677a2ff"
+    },
+    "input": {
+      "bytes": 8388608,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+      "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+    },
+    "name": "gcide",
+    "ok": true,
+    "returncode": 0,
+    "stats": [
+      {
+        "bytes": 69435.0,
+        "coded_bits_per_event": 3.95,
+        "events": 73031,
+        "kind": "use",
+        "raw_bits_per_event": 3.66,
+        "stream": "delta"
+      },
+      {
+        "bytes": 7803.0,
+        "coded_bits_per_event": 5.65,
+        "events": 6841,
+        "kind": "past",
+        "raw_bits_per_event": 3.48,
+        "stream": "delta"
+      },
+      {
+        "bytes": 3910.0,
+        "coded_bits_per_event": 3.73,
+        "events": 8380,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 4788.0,
+        "coded_bits_per_event": 0.99,
+        "events": 38762,
+        "kind": "arity",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 13566.0,
+        "coded_bits_per_event": 2.8,
+        "events": 38762,
+        "kind": "name",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 49998.0,
+        "coded_bits_per_event": 4.54,
+        "events": 88032,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 723505.0,
+        "coded_bits_per_event": 4.08,
+        "events": 664684,
+        "kind": "use",
+        "raw_bits_per_event": 4.63,
+        "stream": "payload"
+      },
+      {
+        "bytes": 137856.0,
+        "coded_bits_per_event": 4.8,
+        "events": 131021,
+        "kind": "past",
+        "raw_bits_per_event": 3.62,
+        "stream": "payload"
+      },
+      {
+        "bytes": 17044.0,
+        "coded_bits_per_event": 4.49,
+        "events": 30382,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      },
+      {
+        "bytes": 239582.0,
+        "coded_bits_per_event": 5.04,
+        "events": 380472,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      }
+    ],
+    "stderr": {
+      "bytes": 1197,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/gcide.stderr",
+      "sha256": "02d82dff5f4ecef111dafa10df6716a75346a53f657bb9dcb666c3cd752aac77"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/gcide.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "blocks": 128,
+      "buckets": 791,
+      "classes": 64,
+      "delta": 149760,
+      "framing": 1735,
+      "header": 12675,
+      "payload": 1118339,
+      "total": 1282509
+    },
+    "storage_line": "m_gcide.eval8.65536.b4sd\tclasses=64\ttotal=1282509\theader=12675\tdelta=149760\tpayload=1118339\tframing=1735\tbuckets=791\tblocks=128\tencode_ms=5920\tdecode_MBps=297\tx1=296"
+  },
+  {
+    "binary": {
+      "bytes": 626880,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "sha256": "5bb319377286e8e898926256c23ed0ea5970ced5e22f8d4945bc6946180292cd"
+    },
+    "class_policy": "fixed",
+    "codec": "bzip4-v4-lab",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_omw.eval8.65536.b4sd",
+      "--workers",
+      "1",
+      "--stats",
+      "--classes",
+      "64"
+    ],
+    "dump": {
+      "bytes": 1215476,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_omw.eval8.65536.b4sd",
+      "sha256": "6415885fb460e255a1ca0902753b92d258f234c5dcd1b5fbefd6e9825825fc92"
+    },
+    "input": {
+      "bytes": 8388608,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+      "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+    },
+    "name": "omw",
+    "ok": true,
+    "returncode": 0,
+    "stats": [
+      {
+        "bytes": 69454.0,
+        "coded_bits_per_event": 3.69,
+        "events": 73095,
+        "kind": "use",
+        "raw_bits_per_event": 3.92,
+        "stream": "delta"
+      },
+      {
+        "bytes": 28475.0,
+        "coded_bits_per_event": 4.04,
+        "events": 33627,
+        "kind": "past",
+        "raw_bits_per_event": 2.73,
+        "stream": "delta"
+      },
+      {
+        "bytes": 4802.0,
+        "coded_bits_per_event": 3.49,
+        "events": 10997,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 7017.0,
+        "coded_bits_per_event": 2.5,
+        "events": 22466,
+        "kind": "arity",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 6750.0,
+        "coded_bits_per_event": 2.4,
+        "events": 22466,
+        "kind": "name",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 31458.0,
+        "coded_bits_per_event": 4.34,
+        "events": 57930,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "delta"
+      },
+      {
+        "bytes": 90742.0,
+        "coded_bits_per_event": 3.8,
+        "events": 98875,
+        "kind": "use",
+        "raw_bits_per_event": 3.55,
+        "stream": "payload"
+      },
+      {
+        "bytes": 40079.0,
+        "coded_bits_per_event": 3.44,
+        "events": 53398,
+        "kind": "past",
+        "raw_bits_per_event": 2.56,
+        "stream": "payload"
+      },
+      {
+        "bytes": 4879.0,
+        "coded_bits_per_event": 3.4,
+        "events": 11469,
+        "kind": "def",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      },
+      {
+        "bytes": 33739.0,
+        "coded_bits_per_event": 5.62,
+        "events": 48046,
+        "kind": "silent",
+        "raw_bits_per_event": 0.0,
+        "stream": "payload"
+      }
+    ],
+    "stderr": {
+      "bytes": 1189,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/omw.stderr",
+      "sha256": "26751de993dcec4171228e341aec6f80de73686864ac9f27fccea17c52dc8fab"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/lab-stats-fixed-c64-20260926/omw.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "blocks": 128,
+      "buckets": 665,
+      "classes": 64,
+      "delta": 148211,
+      "framing": 1724,
+      "header": 10512,
+      "payload": 169701,
+      "total": 330148
+    },
+    "storage_line": "m_omw.eval8.65536.b4sd\tclasses=64\ttotal=330148\theader=10512\tdelta=148211\tpayload=169701\tframing=1724\tbuckets=665\tblocks=128\tencode_ms=1631\tdecode_MBps=771\tx1=787"
+  }
+]

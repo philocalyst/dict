@@ -1,0 +1,7 @@
+protocol/vendor/libbz3.dylib
+protocol/vendor/libbz3.so
+protocol/vendor/bz3.dll
+protocol/vendor/build-manifest.json
+*.stdout.bin
+*.stderr.bin
+*.status.json

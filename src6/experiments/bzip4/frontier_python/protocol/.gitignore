@@ -1,0 +1,8 @@
+vendor/libbz3.dylib
+vendor/libbz3.so
+vendor/bz3.dll
+vendor/build-manifest.json
+vendor/build.stdout.bin
+vendor/build.stderr.bin
+vendor/build.status.json
+vendor/.build.lock

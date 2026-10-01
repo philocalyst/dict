@@ -1,0 +1,7 @@
+command: python3 src6/experiments/bzip4/language_frontier/prediction/test_fragment_ans_probe.py
+output:
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

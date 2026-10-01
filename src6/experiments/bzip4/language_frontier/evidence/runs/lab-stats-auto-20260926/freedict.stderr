@@ -1,0 +1,13 @@
+  rows=323 cells=1580 KiB, rows by log 5..13: { 7, 16, 51, 76, 96, 31, 46, 0, 0 }
+  init_ms=2.22 deltas_ms=2.65 payloads_ms=9.36 (25.0 ns/token, 373954 tokens)
+m_freedict.eval8.65536.b4sd	classes=64	total=564416	header=12467	delta=82331	payload=467922	framing=1696	buckets=714	blocks=128	encode_ms=7728	decode_MBps=605	x1=604
+     delta        use events=    42949 coded=  4.11 raw=  3.46 bits/event  bytes=40640
+     delta       past events=     3999 coded=  5.33 raw=  2.83 bits/event  bytes=4077
+     delta        def events=     5097 coded=  3.67 raw=  0.00 bits/event  bytes=2341
+     delta      arity events=    20361 coded=  1.43 raw=  0.00 bits/event  bytes=3629
+     delta       name events=    20361 coded=  2.76 raw=  0.00 bits/event  bytes=7019
+     delta     silent events=    41900 coded=  4.65 raw=  0.00 bits/event  bytes=24379
+   payload        use events=   296627 coded=  3.98 raw=  3.97 bits/event  bytes=294811
+   payload       past events=    62063 coded=  4.59 raw=  3.08 bits/event  bytes=59530
+   payload        def events=    15264 coded=  4.27 raw=  0.00 bits/event  bytes=8148
+   payload     silent events=   156641 coded=  5.37 raw=  0.00 bits/event  bytes=105130

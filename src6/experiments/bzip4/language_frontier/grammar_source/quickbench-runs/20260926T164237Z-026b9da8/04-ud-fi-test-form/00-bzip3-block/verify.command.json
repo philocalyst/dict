@@ -1,0 +1,8 @@
+[
+  "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/quickbench/worker.py",
+  "decode",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs/20260926T164237Z-026b9da8/04-ud-fi-test-form/00-bzip3-block/decoder.json",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs/20260926T164237Z-026b9da8/04-ud-fi-test-form/00-bzip3-block/frame.bin",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs/20260926T164237Z-026b9da8/04-ud-fi-test-form/00-bzip3-block/decoded.bin"
+]

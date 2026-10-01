@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "corpus": "omw-ja-20",
+  "rows": 94002,
+  "unique_keys": 91964,
+  "key_hits": 94002,
+  "empty_key_hits": 0,
+  "duplicate_key_hits": 2038,
+  "projection_tsv": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection.tsv",
+    "bytes": 229392768,
+    "sha256": "ff9b2f1e56912bf3874cb77377a6f97949206a3efdff7739a10f61e1f0c43c75",
+    "sha512": "3584d0d5d923eaada18feee74e410be62a7e46c286d69522db6b742cf4f2a3ff497b540dcadaa4cbbfa5cd05246892113e20a884d137e157c51d27e84d35dc27"
+  },
+  "rows_jsonl": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/rows.jsonl",
+    "bytes": 64453164,
+    "sha256": "6443f99eb96136567673f0ea449e9d6e8c1b1a8818ea483012d56358be8eeec0",
+    "sha512": "001b9d6662b4246c671ead5e5ee0819430929c32c4d1a88f232083daf7167afbba66e64aee04cde48811ee5bd72eb73e2cb1a3979b004a3f1fce4c521aacbc08"
+  },
+  "stats": {
+    "source_bytes": 55596427,
+    "records": 94002,
+    "parse_failures": 0,
+    "front_matter_excluded": true,
+    "source_format": "OMW LMF XML",
+    "synsets": 117659,
+    "definitions": 135692,
+    "examples": 48276,
+    "synset_references": 158069,
+    "unique_synsets_referenced": 57184,
+    "unique_synset_serialized_bytes": 31470675,
+    "expanded_synset_serialized_bytes": 86241878,
+    "expansion_duplication_bytes": 54771203
+  },
+  "source_manifest": {
+    "id": "omw-ja-20",
+    "url": "https://github.com/omwn/omw-data/releases/download/v2.0/omw-2.0.tar.xz",
+    "archive": {
+      "path": "/private/tmp/dictionary-real-world-cache/sources/omw-2.0.tar.xz",
+      "bytes": 55846636,
+      "sha256": "c369a2ad773a31e182ac4cc753132fa7c31ad423586d6783bacce08090cb8d7d",
+      "sha512": "5d9d5e3b086a9355b0bc9ea10d593ab843fb6d3b451cf3a91fee11c74700f86daa4966ee78f82ddd64f120bac8c2776558e3859fc0fb848ba6c681580c123325",
+      "url": "https://github.com/omwn/omw-data/releases/download/v2.0/omw-2.0.tar.xz"
+    },
+    "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/omw-2.0/omw-2.0/omw-ja",
+    "license": {
+      "path": "/private/tmp/dictionary-real-world-cache/extracted/omw-2.0/omw-2.0/omw-ja/LICENSE",
+      "bytes": 1762,
+      "sha256": "a4be32a83ad0a1cff9a31c23aaa107be20eb843d97c68a2ff72e10ff5ac17cee",
+      "sha512": "0bbf527f1d78fc5cfcd0c6d4cd930d7bec4ac30a520f4ecd2adf2175ad37ef6f926edac9c716d8be70eb8a156e6177cf2c7251a2e7556b7900eee25c272ba843"
+    }
+  }
+}

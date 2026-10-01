@@ -1,0 +1,17 @@
+test_bounds_and_empty_inputs (test_codec.CodecTests.test_bounds_and_empty_inputs) ... ok
+test_c_near_full_expanding_factor_stream_falls_back_safely (test_codec.CodecTests.test_c_near_full_expanding_factor_stream_falls_back_safely) ... ok
+test_coded_block_index_length_and_entropy_rejection (test_codec.CodecTests.test_coded_block_index_length_and_entropy_rejection) ... ok
+test_coded_mask_must_equal_reconstructed_bwt_alphabet (test_codec.CodecTests.test_coded_mask_must_equal_reconstructed_bwt_alphabet) ... ok
+test_each_block_is_independently_decodable (test_codec.CodecTests.test_each_block_is_independently_decodable) ... ok
+test_f_reachable_tables_cover_every_alphabet_cardinality (test_codec.CodecTests.test_f_reachable_tables_cover_every_alphabet_cardinality) ... ok
+test_f_unseen_holdout_and_mask_model_rejection (test_codec.CodecTests.test_f_unseen_holdout_and_mask_model_rejection) ... ok
+test_header_model_directory_and_tail_rejection (test_codec.CodecTests.test_header_model_directory_and_tail_rejection) ... ok
+test_roundtrips_and_retained_prepare (test_codec.CodecTests.test_roundtrips_and_retained_prepare) ... ok
+test_run_length_and_factor_length_rejection (test_codec.CodecTests.test_run_length_and_factor_length_rejection) ... ok
+test_unused_wire_parameters_are_canonical (test_codec.CodecTests.test_unused_wire_parameters_are_canonical) ... ok
+test_wire_widths_and_c_factor_fields_are_strict (test_codec.CodecTests.test_wire_widths_and_c_factor_fields_are_strict) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.454s
+
+OK

@@ -1,0 +1,307 @@
+"""SCM4: direct cumulative queries with bounded integer arithmetic.
+
+The decoder source is fully regenerated from its decoded prefix. Posterior
+projection is deterministic state, not exact Bayes under the rounded CDF.
+"""
+from bisect import bisect_left
+import hashlib
+import zlib
+from codec import Q, HEAD, SPAN, TOP, HALF, QUARTER, Arithmetic, normalize
+
+
+class Row:
+    """Sparse byte counts and cumulative sufficient state; dense Fenwick at order0."""
+    __slots__ = ('counts','keys','prefix','tree','total')
+
+    def __init__(self, dense=False):
+        self.counts = {}
+        self.keys = bytearray()
+        self.prefix = [0]
+        self.tree = [0]*257 if dense else None
+        self.total = 0
+
+    def count_prefix(self,k):
+        if self.tree is None:
+            return self.prefix[bisect_left(self.keys,k)]
+        result = 0
+        while k:
+            result += self.tree[k]
+            k -= k & -k
+        return result
+
+    def _tree_add(self,b,delta):
+        i = b+1
+        while i <= 256:
+            self.tree[i] += delta
+            i += i & -i
+
+    def add(self,b):
+        old = self.counts.get(b,0)
+        self.counts[b] = old+1
+        self.total += 1
+        if self.tree is not None:
+            self._tree_add(b,1)
+        else:
+            at = bisect_left(self.keys,b)
+            if not old:
+                self.keys.insert(at,b)
+                self.prefix.insert(at+1,self.prefix[at])
+            for i in range(at+1,len(self.prefix)):
+                self.prefix[i] += 1
+        if self.total >= 4096:
+            # Rescale leaf counts, then rebuild all cumulative aggregates.
+            self.counts = {b:(w+1)//2 for b,w in self.counts.items()}
+            self.total = sum(self.counts.values())
+            if self.tree is not None:
+                self.tree = [0]*257
+                for b,w in self.counts.items(): self._tree_add(b,w)
+            else:
+                self.prefix = [0]
+                for b in self.keys: self.prefix.append(self.prefix[-1]+self.counts[b])
+        assert self.total <= 4095
+
+
+class LiteralCDF:
+    __slots__ = ('rows',)
+
+    def __init__(self,rows): self.rows = rows
+
+    def __call__(self,k):
+        row = self.rows[0]
+        numerator = (Q-256)*(row.count_prefix(k)+k)
+        value = k+numerator//(row.total+256)
+        for row in self.rows[1:]:
+            if row is None: continue
+            numerator = 255*(4096*row.count_prefix(k)+value)
+            assert numerator < 1 << 32
+            value = k+numerator//(16*(row.total+16))
+        return value
+
+    def probability(self,b): return self(b+1)-self(b)
+
+
+class EmissionCDF:
+    __slots__ = ('literal','escape','keys','prefix')
+
+    def __init__(self,literal,escape,groups):
+        self.literal, self.escape = literal,escape
+        self.keys = sorted(groups)
+        self.prefix = [0]
+        for b in self.keys: self.prefix.append(self.prefix[-1]+groups[b])
+        assert escape >= 1 and escape+self.prefix[-1] == Q
+
+    def __call__(self,k):
+        copy = self.prefix[bisect_left(self.keys,k)]
+        inner = self.escape*self.literal(k)+Q*copy
+        numerator = 255*inner
+        assert numerator < 1 << 40
+        return k+(numerator >> 24)
+
+
+def dense_reference(literal,escape,mass,history):
+    """Independent dense materialization from leaves, never sparse prefix queries."""
+    row = literal.rows[0]
+    leaves = [row.counts.get(b,0) for b in range(256)]
+    cumulative = [0]
+    for w in leaves: cumulative.append(cumulative[-1]+w)
+    values = [k+(Q-256)*(cumulative[k]+k)//(sum(leaves)+256) for k in range(257)]
+    for row in literal.rows[1:]:
+        if row is None: continue
+        leaves = [row.counts.get(b,0) for b in range(256)]
+        cumulative = [0]
+        for w in leaves: cumulative.append(cumulative[-1]+w)
+        total = sum(leaves)
+        values = [k+(Q-256)*(Q*cumulative[k]+16*values[k])//(Q*(total+16))
+                  for k in range(257)]
+    copies = [0]*256
+    for j,w in mass.items(): copies[history[j]] += w
+    prefix = [0]
+    for w in copies: prefix.append(prefix[-1]+w)
+    return [k+(Q-256)*(escape*values[k]+Q*prefix[k])//(Q*Q) for k in range(257)]
+
+
+class Source:
+    def __init__(self,policy=1,frontier=8,survival=1,start=1):
+        self.policy,self.k,self.survival,self.start = policy,frontier,survival,start
+        self.history = bytearray()
+        self.index = {n:{} for n in (2,4,8)}
+        self.literal = {n:{} for n in (0,1,2,4)}
+        self.literal[0][b''] = Row(dense=True)
+        self.escape,self.active = Q,{}
+        self.max_frontier = self.copy_steps = 0
+        self.cdf_queries = 0
+
+    def prediction(self):
+        h = self.history
+        rows = [self.literal[0][b'']]
+        for n in (1,2,4):
+            rows.append(self.literal[n].get(bytes(h[-n:])) if len(h)>=n else None)
+        literal = LiteralCDF(rows)
+        mass,ages = {},{}
+        escape = self.escape
+        for j,(w,age) in self.active.items():
+            assert 0 <= j < len(h)
+            d = 16 if not self.survival else 4+min(age,60)
+            keep = w*(d-1)//d
+            escape += w-keep
+            mass[j],ages[j] = keep,age
+        starts = {}
+        for n in (8,4,2):
+            if len(h)<n: continue
+            positions = self.index[n].get(bytes(h[-n:]),())
+            if positions:
+                factor = {2:1,4:2,8:4}[n] if self.policy else 1
+                for j in positions:
+                    assert j < len(h)
+                    starts[j] = starts.get(j,0)+factor
+                if not self.policy: break
+        budget = escape*self.start//4 if starts else 0
+        if budget:
+            js = sorted(starts)
+            for j,w in zip(js,normalize([starts[j] for j in js],budget)):
+                mass[j] = mass.get(j,0)+w
+                ages.setdefault(j,0)
+        escape -= budget
+        assert escape >= 1 and escape+sum(mass.values()) == Q
+        groups = {}
+        for j,w in mass.items(): groups[h[j]] = groups.get(h[j],0)+w
+        self.pending = mass,ages,escape,literal
+        return EmissionCDF(literal,escape,groups)
+
+    def reference(self):
+        mass,ages,escape,literal = self.pending
+        return dense_reference(literal,escape,mass,self.history)
+
+    def observe(self,b):
+        h = self.history
+        mass,ages,escape,literal = self.pending
+        weights,age_next = {},{}
+        for j,w in mass.items():
+            assert j < len(h)
+            if h[j] == b and w:
+                weights[j+1] = weights.get(j+1,0)+w*Q
+                age_next[j+1] = max(age_next.get(j+1,0),ages[j]+1)
+        js = sorted(weights,key=lambda j:(-weights[j],-j))
+        dropped = sum(weights[j] for j in js[self.k:])
+        js = js[:self.k]
+        literal_weight = escape*literal.probability(b)
+        assert literal_weight >= 1
+        raw = [literal_weight+dropped]+[weights[j] for j in js]
+        assert 1 <= sum(raw) <= Q*Q and max(raw)*Q <= 1 << 48
+        normalized = normalize(raw)
+        self.escape = normalized[0]
+        self.active = {j:(w,age_next[j]) for j,w in zip(js,normalized[1:]) if w}
+        self.max_frontier = max(self.max_frontier,len(self.active))
+        self.copy_steps += bool(self.active)
+        for n in (0,1,2,4):
+            if len(h)<n: continue
+            key = bytes(h[-n:]) if n else b''
+            row = self.literal[n].get(key)
+            if row is None:
+                row = self.literal[n][key] = Row()
+            row.add(b)
+        for n in (2,4,8):
+            if len(h)<n: continue
+            positions = self.index[n].setdefault(bytes(h[-n:]),[])
+            positions.append(len(h))
+            if len(positions)>self.k: del positions[0]
+        h.append(b)
+        assert self.escape+sum(w for w,age in self.active.values()) == Q
+
+
+class QueryArithmetic(Arithmetic):
+    @staticmethod
+    def select(cdf,value):
+        if not 0 <= value < Q: raise ValueError('invalid scaled code')
+        lo,hi,low_count,high_count = 0,256,0,Q
+        while hi-lo>1:
+            mid = (lo+hi)//2
+            boundary = cdf(mid)
+            if value >= boundary: lo,low_count = mid,boundary
+            else: hi,high_count = mid,boundary
+        return lo,low_count,high_count
+
+    def step_cdf(self,cdf,symbol=None):
+        decoding = self.payload is not None
+        old_low = self.low
+        span = self.high-old_low+1
+        if decoding:
+            if not old_low <= self.code <= self.high: raise ValueError('invalid code interval')
+            value = ((self.code-old_low+1)*Q-1)//span
+            symbol,low_count,high_count = self.select(cdf,value)
+        else:
+            low_count,high_count = cdf(symbol),cdf(symbol+1)
+        if not 0 <= low_count < high_count <= Q: raise ValueError('invalid source CDF')
+        assert span*high_count <= 1 << 48
+        self.high = old_low+span*high_count//Q-1
+        self.low = old_low+span*low_count//Q
+        if self.low>self.high: raise ValueError('empty arithmetic interval')
+        while True:
+            if self.high < HALF:
+                if not decoding: self.emit(0)
+                shift = 0
+            elif self.low >= HALF:
+                if not decoding: self.emit(1)
+                shift = HALF
+            elif self.low >= QUARTER and self.high < 3*QUARTER:
+                if not decoding: self.pending += 1
+                shift = QUARTER
+            else: break
+            self.low = (self.low-shift)*2
+            self.high = (self.high-shift)*2+1
+            if decoding: self.code = (self.code-shift)*2+self.read()
+        return symbol
+
+
+def _encode(raw,block_bytes,policy,frontier,survival,start,reference):
+    if policy not in (0,1) or frontier not in (8,32) or survival not in (0,1) or start not in (0,1,2,3):
+        raise ValueError('unsupported policy')
+    if not 1 <= block_bytes <= 65536 or len(raw)>8*1024*1024: raise ValueError('input/block budget')
+    out = bytearray(HEAD.pack(b'SCM4',policy,frontier,survival,start,block_bytes,len(raw),hashlib.sha256(raw).digest()))
+    for at in range(0,len(raw),block_bytes):
+        block = raw[at:at+block_bytes]
+        source,coder = Source(policy,frontier,survival,start),QueryArithmetic()
+        for b in block:
+            cdf = source.prediction()
+            if reference:
+                dense = source.reference()
+                coder.step_cdf(dense.__getitem__,b)
+            else: coder.step_cdf(cdf,b)
+            source.observe(b)
+        payload = coder.finish()
+        out.extend(SPAN.pack(len(block),len(payload),zlib.crc32(payload)))
+        out.extend(payload)
+    return bytes(out)
+
+
+def encode(raw, *, block_bytes=65536, policy=1, frontier=8, survival=1, start=1):
+    return _encode(raw,block_bytes,policy,frontier,survival,start,False)
+
+
+def encode_reference(raw, *, block_bytes=65536, policy=1, frontier=8, survival=1, start=1):
+    """Testing oracle for the same wire, not a second decoder format mode."""
+    return _encode(raw,block_bytes,policy,frontier,survival,start,True)
+
+
+def decode(frame, *, output_budget=8*1024*1024):
+    if len(frame)<HEAD.size: raise ValueError('truncated header')
+    magic,policy,k,survival,start,block_size,length,digest = HEAD.unpack_from(frame)
+    if magic != b'SCM4' or policy not in (0,1) or k not in (8,32) or survival not in (0,1) or start not in (0,1,2,3):
+        raise ValueError('invalid header')
+    if not 1 <= block_size <= 65536 or length>min(output_budget,8*1024*1024): raise ValueError('output/block budget')
+    at,out = HEAD.size,bytearray()
+    while len(out)<length:
+        if at+SPAN.size>len(frame): raise ValueError('truncated span')
+        n,p,crc = SPAN.unpack_from(frame,at)
+        at += SPAN.size
+        if n != min(block_size,length-len(out)) or p<4 or p>n*2+16 or at+p>len(frame): raise ValueError('invalid span')
+        payload = frame[at:at+p]
+        if zlib.crc32(payload)!=crc: raise ValueError('payload checksum')
+        at += p
+        coder,source = QueryArithmetic(payload),Source(policy,k,survival,start)
+        for _ in range(n):
+            b = coder.step_cdf(source.prediction())
+            source.observe(b)
+            out.append(b)
+    if at != len(frame) or hashlib.sha256(out).digest()!=digest: raise ValueError('trailing bytes or raw checksum')
+    return bytes(out)

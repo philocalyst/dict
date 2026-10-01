@@ -1,0 +1,28 @@
+{
+  "binaries": {
+    "bz3base": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "bz4": {
+      "bytes": 549696,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+      "sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc"
+    },
+    "capture_frame": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    }
+  },
+  "block_bytes": 65536,
+  "classes_policy": "saved parses use plan.fit auto-search when classes=0; fixed classes are explicit separate runs.",
+  "decoder_policy": "one in-process serial decode plus one external bz4 d process, exact input hash comparison.",
+  "purpose": "Storage-only Bzip4 v4 baseline screen; no timing claims.",
+  "run_id": "storage-screen-auto-20260926-forms-fixed",
+  "sample_count": 24,
+  "schema": 1,
+  "successful_samples": 24,
+  "timing_policy": "no clocks read by this harness; bzip3 raw output timing fields retained but ignored."
+}

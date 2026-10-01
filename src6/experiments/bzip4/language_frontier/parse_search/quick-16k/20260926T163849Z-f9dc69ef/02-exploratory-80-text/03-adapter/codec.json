@@ -1,0 +1,11 @@
+{
+  "block_bytes": 65536,
+  "dependencies": [
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4"
+  ],
+  "kind": "module",
+  "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/adapter.py",
+  "name": "adapter",
+  "options": {}
+}

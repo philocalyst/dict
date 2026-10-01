@@ -1,0 +1,30 @@
+{
+  "capture_code_hash_order": ["screen.py", "phrases.py"],
+  "capture_code_sha256": "6b9c27f4918f8ff4904f1be98be62718b7e8555bac27d5a988cebe14d771aefb",
+  "source_files": {
+    "screen.py": {
+      "sha256": "480d00b90e41229a6f191d6056d26d0aa4cc74ff5507742472ed54406967b522",
+      "bytes": 8761
+    },
+    "phrases.py": {
+      "sha256": "c9fba46cb0e5c4e09e927bdfc33486b2a5074513701ad2843f87dd10067689fa",
+      "bytes": 53783
+    },
+    "test_phrases.py": {
+      "sha256": "d99840993757745b7ccc41e7c188c94f15398566ee8c54db4fa2e269aaa2d8c9",
+      "bytes": 7107
+    },
+    "__init__.py": {
+      "sha256": "e44187a1c84b5987c126c43152dd1269b901878c85e1356b61a6a2bac5ca7800",
+      "bytes": 446
+    }
+  },
+  "raw_runs": [
+    "screen-dp16.raw.stdout",
+    "screen-dp16.raw.stderr",
+    "screen-dp16.status",
+    "screen-dp64.raw.stdout",
+    "screen-dp64.raw.stderr",
+    "screen-dp64.status"
+  ]
+}

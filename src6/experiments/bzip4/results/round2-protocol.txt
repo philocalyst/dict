@@ -1,0 +1,45 @@
+Round 2 BWT experiment protocol
+
+Repository HEAD: a3eae58f61196715f13c92ab50baa05812f10ec3
+Host: Darwin 24.6.0 arm64 T6030
+Zig: 0.16.0
+Runner: frozen ReleaseFast binary listed in round2-hashes.tsv
+Partition: first 1048576 decoded normalized-content bytes train; next 8388608 bytes evaluate
+Candidates: independent BWT blocks of 16384 and 65536 bytes
+Samples: three serial processes for each corpus/boundary pair, fixed order
+Controls: production bzip3 matched boundary, retained-state bzip3 matched boundary, production bzip3 65536 boundary
+Timing gate: BZIP4-EXPERIMENT-QUIET-GATE
+
+Per-process command template (expanded in the order below):
+/tmp/bzip4-install/bin/bzip4-experiment --input src6/bench/real-world/evidence/corpora/<corpus>/projection.tsv --input-format projection_content --candidate bwt --training-bytes 1048576 --max-eval-bytes 8388608 --block-bytes <block> --measure --quiet-gate BZIP4-EXPERIMENT-QUIET-GATE
+
+Expansion order:
+freedict-eng-spa 16384 samples 1,2,3
+freedict-eng-spa 65536 samples 1,2,3
+gcide-054 16384 samples 1,2,3
+gcide-054 65536 samples 1,2,3
+omw-ja-20 16384 samples 1,2,3
+omw-ja-20 65536 samples 1,2,3
+
+No process was selected, discarded, or rerun for its measured values.
+
+Harness incident: the first process (freedict-eng-spa, 16384, sample 1)
+printed its complete output through `roundtrip ok`. The wrapper then attempted
+to assign the process status to zsh's read-only `status` parameter and exited.
+Consequently that one runner exit status is unavailable; it is not represented
+as zero. The completed process was not rerun. A corrected wrapper continued
+only samples 2 through 18, all of which returned status zero. The failed
+bookkeeping command emitted: `zsh:1: read-only variable: status`.
+
+No original stdout/stderr artifact was written directly by the measurement
+wrapper. This is a provenance failure. `round2-transcription.tsv` is a manual
+machine-readable transcription from the tool-visible output chunks. It has
+not been independently byte-compared to an original capture and must not be
+described as raw or lossless evidence. The table retains every displayed
+runner field used for the provisional analysis. Fixed fields omitted from
+repetition are:
+schema=bzip4-experiment-1, timing=gated-provisional, candidate=bwt,
+input_format=projection_content, training_partition_bytes=1048576,
+held_out_evaluated_bytes=8388608, dictionary_bytes=0,
+stored_model_bytes=512, arithmetic_predictor=not-applicable,
+bzip3_controls=run, roundtrip=ok.

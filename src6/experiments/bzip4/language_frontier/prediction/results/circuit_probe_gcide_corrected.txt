@@ -1,0 +1,10 @@
+status: CORRECTED_CAUSAL_DIAGNOSTIC_REJECTED
+command: python3 src6/experiments/bzip4/language_frontier/prediction/circuit_probe.py src6/experiments/bzip4/bz4/data/gcide.train.bin src6/experiments/bzip4/bz4/data/gcide.eval8.bin
+python: 3.14.7 (Darwin arm64)
+model: two decoder-visible rows (start/interior), each 256 bytes plus END; u32 counts; K=8; EM rounds=3
+output:
+train=src6/experiments/bzip4/bz4/data/gcide.train.bin input=src6/experiments/bzip4/bz4/data/gcide.eval8.bin train_bytes=1048576 input_bytes=8388608 train_sha256=09a3908c45195a1cabfd0b9ab9def77d43277c543ff1544a60a46cb348faf0a0 input_sha256=8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b components=8 rounds=3 types=73319 model_bytes_lower_bound=16488 hard_type_bits=2712262.0 marginal_type_bits=2702718.5 hard_type_bytes_plus_model=355520.7 marginal_type_bytes_plus_model=354327.8 diagnostic_only=1
+
+The corrected marginal type-only lower bound is 354,327.8 bytes, above the
+321,833-byte H1 spelling stream before its complete occurrence frame.  The
+mixture is rejected on this independent English held-out slice as well.

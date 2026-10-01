@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "status": "baseline-preserved-before-simplifying-rebuild",
+  "purpose": "Matched simplifying post-review latency comparison baseline. This copy was made before the production simplifying rebuild and before any new measurements.",
+  "runner": {
+    "original_path": "src6/bench/real-world/zig-out/bin/real-lex6",
+    "preserved_path": "src6/bench/real-world/evidence/baselines/real-lex6-post-review-original",
+    "bytes": 951768,
+    "sha256": "b3287fda7127a58fe8b8f24cb0623f0b6c8875a1777f3ac892de36582680fe88"
+  },
+  "retained_evidence": {
+    "timing_path": "src6/bench/real-world/evidence/runs/timing-results-post-review-final.json",
+    "timing_sha256": "4e515f1ec2a6c395ae0653960c176c2d9d149c7f0b1a04678d89f9c44c58faff",
+    "smoke_path": "src6/bench/real-world/evidence/runs/main-smoke-post-review.json",
+    "smoke_sha256": "d8ecff5ec2b94576b5b67af6c3b5aad0d9272d6d03e4415908b904664742ace7",
+    "report_path": "src6/bench/real-world/evidence/reports/real-world-report-post-review.md",
+    "report_sha256": "c704566eef94ca1e7e3d58ff150281db0d77545794d04657f473e1f90e4e09e2"
+  },
+  "schedule_to_match": {
+    "corpora": ["freedict-eng-spa", "gcide-054", "omw-ja-20"],
+    "codecs": ["raw", "adaptive"],
+    "process_runs": 3,
+    "warmups": 1,
+    "batch_ops": 256,
+    "prefix_batches": 3,
+    "page_bytes": 65536,
+    "os_cache": "not forcibly evicted; fresh process is not cold disk"
+  },
+  "provenance": {
+    "artifact_root": "/private/tmp/dictionary-real-world-current",
+    "projection_root": "src6/bench/real-world/evidence/corpora",
+    "plan_root": "/private/tmp/dictionary-real-world-measure-plans-post-review-final",
+    "artifact_hashes_verified": true,
+    "projection_hashes_verified": true,
+    "plan_hashes_verified": true
+  },
+  "lex6_artifacts": [
+    {"corpus": "freedict-eng-spa", "codec": "raw", "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-raw-64k.lex6", "bytes": 48271065, "sha256": "755bd42c6ddf807ff4b8c21e0d085a11101dfff0bf00a6282084fa266e925104"},
+    {"corpus": "freedict-eng-spa", "codec": "adaptive", "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-adaptive-64k.lex6", "bytes": 6406243, "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976"},
+    {"corpus": "gcide-054", "codec": "raw", "path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-raw-64k.lex6", "bytes": 67821905, "sha256": "6472b07554981d0ec099db4a4e04edce7089721aad39e8afd36a463ad60124aa"},
+    {"corpus": "gcide-054", "codec": "adaptive", "path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-adaptive-64k.lex6", "bytes": 16274792, "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356"},
+    {"corpus": "omw-ja-20", "codec": "raw", "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-raw-64k.lex6", "bytes": 119585081, "sha256": "2ad5b1f7017bc38f791c30ca2ae152f0dda2836e10a88b204d69dfdcbcb223ad"},
+    {"corpus": "omw-ja-20", "codec": "adaptive", "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-adaptive-64k.lex6", "bytes": 12223578, "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87"}
+  ]
+}

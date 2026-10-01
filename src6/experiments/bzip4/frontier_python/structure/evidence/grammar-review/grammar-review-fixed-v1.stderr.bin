@@ -1,0 +1,11 @@
+test_decoder_accepts_a_non_longest_but_expansion_equivalent_token_stream (test_grammar_review.GrammarReviewTests.test_decoder_accepts_a_non_longest_but_expansion_equivalent_token_stream) ... ok
+test_noncanonical_uleb_references_are_rejected_after_reseal (test_grammar_review.GrammarReviewTests.test_noncanonical_uleb_references_are_rejected_after_reseal) ... ok
+test_resealed_forward_reference_and_capacity_limits (test_grammar_review.GrammarReviewTests.test_resealed_forward_reference_and_capacity_limits) ... ok
+test_resealed_header_and_directory_bounds (test_grammar_review.GrammarReviewTests.test_resealed_header_and_directory_bounds) ... ok
+test_uncoded_internal_rule_is_not_a_frozen_trie_terminal (test_grammar_review.GrammarReviewTests.test_uncoded_internal_rule_is_not_a_frozen_trie_terminal) ... ok
+test_zero_literal_huffman_state_is_rejected_at_model_boundary (test_grammar_review.GrammarReviewTests.test_zero_literal_huffman_state_is_rejected_at_model_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

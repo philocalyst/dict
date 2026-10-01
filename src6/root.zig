@@ -1,6 +1,7 @@
 //! LEX6: typed lexical documents with independently compressed entry pages.
 pub const model = @import("model.zig");
 pub const query = @import("query.zig");
+pub const nodes = @import("nodes.zig");
 pub const render = @import("render.zig");
 pub const validate = @import("validate.zig");
 pub const archive = @import("archive.zig");
@@ -13,4 +14,8 @@ test {
     _ = @import("packet_test.zig");
     _ = @import("compression_test.zig");
     _ = @import("archive_test.zig");
+    _ = @import("reader_test.zig");
+    _ = @import("node_test.zig");
+    _ = @import("language_test.zig");
+    _ = @import("richness_test.zig");
 }

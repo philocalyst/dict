@@ -1,0 +1,13 @@
+  rows=323 cells=1876 KiB, rows by log 5..13: { 11, 1, 27, 83, 90, 57, 54, 0, 0 }
+  init_ms=2.87 deltas_ms=4.65 payloads_ms=21.35 (25.8 ns/token, 826087 tokens)
+m_gcide.eval8.65536.b4sd	classes=64	total=1282509	header=12675	delta=149760	payload=1118339	framing=1735	buckets=791	blocks=128	encode_ms=5920	decode_MBps=297	x1=296
+     delta        use events=    73031 coded=  3.95 raw=  3.66 bits/event  bytes=69435
+     delta       past events=     6841 coded=  5.65 raw=  3.48 bits/event  bytes=7803
+     delta        def events=     8380 coded=  3.73 raw=  0.00 bits/event  bytes=3910
+     delta      arity events=    38762 coded=  0.99 raw=  0.00 bits/event  bytes=4788
+     delta       name events=    38762 coded=  2.80 raw=  0.00 bits/event  bytes=13566
+     delta     silent events=    88032 coded=  4.54 raw=  0.00 bits/event  bytes=49998
+   payload        use events=   664684 coded=  4.08 raw=  4.63 bits/event  bytes=723505
+   payload       past events=   131021 coded=  4.80 raw=  3.62 bits/event  bytes=137856
+   payload        def events=    30382 coded=  4.49 raw=  0.00 bits/event  bytes=17044
+   payload     silent events=   380472 coded=  5.04 raw=  0.00 bits/event  bytes=239582

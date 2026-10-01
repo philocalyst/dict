@@ -1,0 +1,6 @@
+command: python3 inline roundtrip smoke (train=b"alpha beta gamma 日本語\\n"; three fixtures: invalid bytes, combining/mixed scripts, casing/NUL)
+python: 3.14.7 (Darwin arm64)
+output:
+0 8 562ae4b755c464e81bd7197a2d15617b8a6565605a96041750acd5d44e13a0ea 1181 54d1b21c93807eb064a81dc9714ecc946432a53991bb7c9394b515ef6cb86e62 True {'header': 64, 'model': 1104, 'spelling': 9, 'events': 4, 'total': 1181}
+1 26 6f5a41e0695c5c1d10a3a5bd8076f92939c9cae803e179cc4fc894c103774728 1196 98c2ffb2e0a6d6b76d930904a4b46c9f346b7c29241994a73545b17e8b5d2d4e True {'header': 64, 'model': 1104, 'spelling': 27, 'events': 1, 'total': 1196}
+2 17 222776df1f71458dd94386377a5a874239e86c1b9831da7d487780e0bb0a8364 1193 6c4a393525f88b6f711157b1c7cfc2794b976a73b54584907076c17219e94f9b True {'header': 64, 'model': 1104, 'spelling': 21, 'events': 4, 'total': 1193}

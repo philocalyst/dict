@@ -1,0 +1,8 @@
+test_corrupt_truncated_and_padding_rejected (symbol_bwt.test_codec.SymbolBwtCodecTests.test_corrupt_truncated_and_padding_rejected) ... ok
+test_empty_small_unicode_random_and_pathological (symbol_bwt.test_codec.SymbolBwtCodecTests.test_empty_small_unicode_random_and_pathological) ... ok
+test_index_bounds_and_block_decode (symbol_bwt.test_codec.SymbolBwtCodecTests.test_index_bounds_and_block_decode) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.124s
+
+OK

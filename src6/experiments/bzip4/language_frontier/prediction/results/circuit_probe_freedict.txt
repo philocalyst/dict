@@ -1,0 +1,10 @@
+status: SUPERSEDED_INVALID_ORACLE_END_ROW
+
+The following raw output is preserved from the first probe.  It used an
+oracle-selected final-position/END row and a u16 parameter estimate, so it is
+not a valid unknown-length generator and must not be used as evidence.
+
+command: python3 src6/experiments/bzip4/language_frontier/prediction/circuit_probe.py src6/experiments/bzip4/bz4/data/freedict.train.bin src6/experiments/bzip4/bz4/data/freedict.eval8.bin
+python: 3.14.7 (Darwin arm64)
+output:
+train=src6/experiments/bzip4/bz4/data/freedict.train.bin input=src6/experiments/bzip4/bz4/data/freedict.eval8.bin train_bytes=1048576 input_bytes=8388608 train_sha256=a6a230f7da64e81091f6cca4f504e49004815e688c8300f3a28937fab825b9a0 input_sha256=6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8 components=8 rounds=3 types=56468 model_bytes_lower_bound=12376 hard_type_bits=2201738.7 marginal_type_bits=2200655.9 hard_type_bytes_plus_model=287593.3 marginal_type_bytes_plus_model=287458.0 diagnostic_only=1

@@ -1,0 +1,101 @@
+{
+  "baseline_setup": {
+    "bzip3": "reused preflight control only when the exact prefix hash matches; no control rerun",
+    "v4": "current capture_frame raw mode with block_bytes=65536, internal serial round-trip plus external bz4 d exact hash"
+  },
+  "candidate_policy_frozen": {
+    "em_rounds": 2,
+    "max_piece": 8,
+    "max_vocab": 256,
+    "min_occ": 2,
+    "modes": [
+      "map",
+      "marginal"
+    ]
+  },
+  "codec_artifacts": {
+    "bzip3_binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "bzip3_source": {
+      "bytes": 8946,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bz3base.zig",
+      "sha256": "e0da9514aac4bbe6e3d2f722b682d0df94c27105df050bfb7faf96fbacd3564e"
+    },
+    "python": {
+      "bytes": 34640,
+      "path": "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "d8f1d508de5acfd500f20d1949528375ff4a1f470efb267f00d1770941cdeee3"
+    },
+    "v4_binary": {
+      "bytes": 549696,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+      "sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc"
+    },
+    "v4_capture_binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "v4_capture_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "v4_source_tree": {
+      "bytes": 118896,
+      "files": 14,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/src",
+      "sha256": "b6cdcbd03ffeedb1cd911b89dd11dd861aeae2231e79f9d9b56913eacb7e365a"
+    },
+    "wam_decoder_helper": {
+      "bytes": 1589,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+      "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+    },
+    "weighted_emission_source_end": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "weighted_emission_source_stable": true,
+    "weighted_emission_source_start": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    }
+  },
+  "confirmation_policy": "TRAIN confirmation-20 resources are not listed, read, or benchmarked",
+  "decode_policy": "each WAM frame is persisted then decoded by fresh wam_decode_subprocess.py receiving only the frame",
+  "fit_policy": "model fit uses only each charged input itself; no external model/training bytes; complete fitted model is charged in WAM header",
+  "input_policy": "seven exact first-65536-byte prefixes; identical bytes feed current v4, bzip3 reference, WAM MAP, and WAM marginal",
+  "negative_result_counts": {
+    "wam_map_vs_bzip3": 7,
+    "wam_map_vs_v4": 7,
+    "wam_marginal_vs_bzip3": 7,
+    "wam_marginal_vs_v4": 7
+  },
+  "prefix_bytes": 65536,
+  "preflight": {
+    "manifest": {
+      "bytes": 912,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/manifest.json",
+      "sha256": "d891fa691d9478b3cdc98c0027fc8a74dc8d27fa05b77656195641af15b7f317"
+    },
+    "manifest_schema": 1,
+    "run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "samples": {
+      "bytes": 14021,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/samples.json",
+      "sha256": "8e5805cb7b9737a3cd31ba1073af4ca877f863d6fd29c0551b41b33d72efde9b"
+    }
+  },
+  "purpose": "Storage-only independent WAM MAP/marginal screen against current v4 and matched bzip3 on exact 64 KiB development prefixes.",
+  "run_id": "wam-screen-final-20260926",
+  "sample_count": 28,
+  "schema": 1,
+  "successful_samples": 28,
+  "timing_policy": "no harness clocks; bzip3 and decoder raw timing text is retained only as provenance and ignored"
+}

@@ -1,0 +1,526 @@
+{
+  "schema": 1,
+  "status": "probe-complete",
+  "timing": "not run",
+  "platform": {
+    "system": "macOS-15.7.4-arm64-64bit-Mach-O",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "zig": {
+      "argv": [
+        "/etc/profiles/per-user/mileswirht/bin/zig",
+        "version"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary",
+      "returncode": 0,
+      "stdout": "0.16.0\n",
+      "stderr": ""
+    }
+  },
+  "isolation_root": "/private/tmp/dictionary-real-world-legacy-probe",
+  "source_inventory": [
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/bindings.zig",
+      "bytes": 13476,
+      "sha256": "4ea4bcda86a3b6a1c3cd065ef01105d58fadcc96cc310e928eebe0200453a319"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/book.zig",
+      "bytes": 20923,
+      "sha256": "5ae7927ad7753084f17a441242dd69c74ac8f5b6719851895b664d801511ae03"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/bytes.zig",
+      "bytes": 18781,
+      "sha256": "0e0383cfb2ef126411e31c2042746b9f4097385ace1be82a17f585fe962db59b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/catalog.zig",
+      "bytes": 13780,
+      "sha256": "0eba53cca1b9e5ef50b6370f4cc79d199109b0f432230d0d5f863e1b55bf1c11"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/columns.zig",
+      "bytes": 36208,
+      "sha256": "c29e13b56b163e798d3ddc7b7729c2c6230f7b1fa4b44d98de9c786a94faa198"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/entities.zig",
+      "bytes": 13683,
+      "sha256": "4db7c717f513684b03990b98336c1ef1fa4b47b0722b1795ce013656f453d6dc"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/facts.zig",
+      "bytes": 10944,
+      "sha256": "b6057175894b08760e3f214280c5a22604356e4ec86f9e51f580bb03caee606d"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/keys.zig",
+      "bytes": 34352,
+      "sha256": "2b43bf268a09ad8f7fd7d75feb14a56068e9a885e4e4abedb784c37d34304f5b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/model.zig",
+      "bytes": 16149,
+      "sha256": "542fdc58a24cd0974869d0633c359472f2595a27a01d23d0b883cb67ac147c68"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/query.zig",
+      "bytes": 20594,
+      "sha256": "ac492255191d8d31b513eb7aaa655de521cf68657f92385b3ff02025eec05e0e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/root.zig",
+      "bytes": 938,
+      "sha256": "c2f857f86b37395ff25d15c7c217b1f0d371615db07a26e72cd8ad53d51e896f"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/sets.zig",
+      "bytes": 12072,
+      "sha256": "f26e40042fb0fa66aa918d7a6143087444e6b251caee8e25fabcbf96d689920e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/stored.zig",
+      "bytes": 4247,
+      "sha256": "366cbdc5c30c28c6fa5d8d3ab43d660cf255d3b8f43da35b7fb95f671033f494"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/strings.zig",
+      "bytes": 29389,
+      "sha256": "28440a21209e871669816d368eaf5425411853be0e9ce6fcd63b63ffbed5f576"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/targets.zig",
+      "bytes": 1519,
+      "sha256": "8e32a81136cc29d4f49e2abc83b9533dfb78277eebbda378294cdf81e1666d0e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/topology.zig",
+      "bytes": 41668,
+      "sha256": "60f351cc82f677fb0025f1ab06a83f15d9eaa27194de0a1f997f431681b38f4f"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src5/values.zig",
+      "bytes": 18729,
+      "sha256": "6e9de4e01857c6087887b4bc9127f72f561540e541c8d29d6081f66d4639602b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/automaton.zig",
+      "bytes": 56782,
+      "sha256": "7d5289ba1f3e9aa4c20ba31ea01063a6a8676688ba703f59b658802e1c8c632f"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/automaton_test.zig",
+      "bytes": 26060,
+      "sha256": "23f000017d51abb3b36396cc734ee307de7c01b1b1de980c7009cf2500816e01"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/axes.zig",
+      "bytes": 54213,
+      "sha256": "b9db6d08879427e9a488b40981ede0b29d529c6de349b70bf79fea325dd8bf17"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/axes_test.zig",
+      "bytes": 18021,
+      "sha256": "87bd2bfed27262bb831c71a42e92e14773184c08b73421005ecfa4d0595a6ffa"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/bitvector.zig",
+      "bytes": 55034,
+      "sha256": "9a7ba5ef68df27eb867e5d856af939284d2f33458fd6c82d89f4853b2df11f06"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/bitvector_test.zig",
+      "bytes": 15873,
+      "sha256": "a3e1fa3f5a5579df491925460516454807e1e2c6a144045badf4cb9b79fe0c88"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/cold.zig",
+      "bytes": 16899,
+      "sha256": "0cf79c94a6cc4f8d8e235e76007b5a5e9999afc28b3cb1c50d57e4a7364db0f5"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/compiler.zig",
+      "bytes": 57010,
+      "sha256": "42317198428a78c0f62347adc0cefa427eec87c6f06f591df515dc53dce13066"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/compiler_test.zig",
+      "bytes": 70,
+      "sha256": "262b1d12d1c0a925faa04289ed7fc8b357c363e8009af12b58bdf8e0564a2883"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/concepts.zig",
+      "bytes": 52793,
+      "sha256": "46eef07f4d03d16c637c3a1aef6672c6d595979b3c0939a989cb78c12855ea81"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/concepts_test.zig",
+      "bytes": 10887,
+      "sha256": "3f95db143ccd9455246f98c253536ba1898ef71a8ee0391220e02016d33e69f0"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/container.zig",
+      "bytes": 16843,
+      "sha256": "818e6cd0973c17fed098accbe44cbdf6fec7697dd2623777897091c659eaa188"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/entropy.zig",
+      "bytes": 44891,
+      "sha256": "e712bb25f48b5e711e1cb21eca3d7e634946f6829c195b7c95932fbae38d42a2"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/entropy_test.zig",
+      "bytes": 27049,
+      "sha256": "f53fdf4988beab06b3e83dddee426ae0db284f143a400fb4d8a13893db6f063b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/forest.zig",
+      "bytes": 66834,
+      "sha256": "8b81fa8db961e1c184e08f33816e6305a4914c390ebc01165aec798693894a8b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/forest_test.zig",
+      "bytes": 29144,
+      "sha256": "0916eeed963ebb1cfac338fe5dd8d70d0b3566c41cab841d8ab6a50d4a872d16"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/foundation_test.zig",
+      "bytes": 2490,
+      "sha256": "6f282f625c46500f36c5bb4d7ab519e406e73c2eb6bace9987690b2cf4db1b30"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/grammar.zig",
+      "bytes": 51631,
+      "sha256": "c2247e8baa0dae264c086df275c099780073b49d26bbd06d1074291c46faba5b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/grammar_adversarial_test.zig",
+      "bytes": 25797,
+      "sha256": "7a4c5cd4402cd9b17516151b10a105fe14c2eaf3dc98156b671ab9dbc0b4271a"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/grammar_test.zig",
+      "bytes": 881,
+      "sha256": "851a374a10ad31b4165e8497f7d1ea77c3ada96e377a76e82491adf036230e89"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/rank.zig",
+      "bytes": 19035,
+      "sha256": "ecaba13526260f330b268875a1ab81facc2121d588e1ce08b9d57dda38c2bea1"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/rank_test.zig",
+      "bytes": 7761,
+      "sha256": "2bc95789faa4e89352ada26ad71de5e21321c1461d4d0fda54c87181a153b2c6"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/relations.zig",
+      "bytes": 80401,
+      "sha256": "16d43bfa757e141f5a687ef369724782f466368af6426ad90be77ccc727c3096"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/relations_test.zig",
+      "bytes": 10591,
+      "sha256": "588bdd8a35618f7413b68ed061ee987b7c23f29a4a9743ef363ff54fc3f45fb1"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/rich_content.zig",
+      "bytes": 31815,
+      "sha256": "f2fe4bbc88ab6115548f792d7d1bcf71ef339a3ad434df26ac3b52977a97488b"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/root.zig",
+      "bytes": 1700,
+      "sha256": "0225cef2c246899c021eaae71553f373fb2580c00cb6a96c0fcb66a80578a168"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/schema.zig",
+      "bytes": 19928,
+      "sha256": "c042f296579dadd0c72a7ac92545561cf48455d020ace5dca2f137fcd13825e0"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/search_product.zig",
+      "bytes": 20086,
+      "sha256": "4ed0ec8a071577c4ee798609cdd4f5fbf34c6d8fe006987f4c6fa34ef00338ec"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/snapshot.zig",
+      "bytes": 40107,
+      "sha256": "37faae0c20d38d04593b8cd89eb8b53956acadb670084948c4bb6dfdfbce7654"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/snapshot_compiler_test.zig",
+      "bytes": 4660,
+      "sha256": "cd6150f5881a6dbfed7595b7dcc051758a0d0cf24bd8272064e5be090e2cb60e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/snapshot_optional_test.zig",
+      "bytes": 4582,
+      "sha256": "c7db2a0d2678600e62a63b604a91c45778839df110dfd7704b1f47e8d28fc5cd"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/snapshot_test.zig",
+      "bytes": 21835,
+      "sha256": "a9eb73bc2803fb20ace6572c90002b4156a419a11d053ee66d8f8d54c311ddab"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/table.zig",
+      "bytes": 37085,
+      "sha256": "aa1d41638a59be549034996df11ff4922fd604bac1f850526826b54a800b2125"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/terms.zig",
+      "bytes": 46004,
+      "sha256": "eccf2702e140f0e78904dae78bcde8d5ae88af8e64e78f1eb8e544b5f6af53c1"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/terms_test.zig",
+      "bytes": 14401,
+      "sha256": "9b059967e0a93d2d6a07e6be8bbdc22a1f800a4473522168c280dd01ce1f02af"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/text_index.zig",
+      "bytes": 17703,
+      "sha256": "2e341a67437afedbc5c33d51bfb76884fea30f9a9752aebc845f2127f74235de"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src4/wire.zig",
+      "bytes": 18236,
+      "sha256": "0bfe7f32479be07bb8356f4ee14fe769c5699a86d4b3ba242b3be5d2f8b65518"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/adversarial_test.zig",
+      "bytes": 23924,
+      "sha256": "60548e12c468aa4305343b4b6f9756c9f890b7f8ea3aece12ea07d5aa9fa95ea"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/bits.zig",
+      "bytes": 19998,
+      "sha256": "3cfd6682a499018d91fb52b90e730be0b90b79ba55bd70193a79cce1c5f4a005"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/bits_test.zig",
+      "bytes": 5381,
+      "sha256": "5468c7991376a5abdf9a7ac59b3d8f96296845a3f15c0fe2416450c00e8011ec"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/cold.zig",
+      "bytes": 16323,
+      "sha256": "3a5405ea9de07dbe8a785edb6adb8ff2e4504d9428d898a3be05f40eca6db664"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/columns.zig",
+      "bytes": 20270,
+      "sha256": "11d076384c96ba99da887f189827128b9c5b42e9fea473690befc1eaeea997ee"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/compile.zig",
+      "bytes": 46862,
+      "sha256": "fb0179bac5d3362b85df57d5ba517269f9ec9153aff7dae871a1942cef52fae4"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/compile_test.zig",
+      "bytes": 7181,
+      "sha256": "3cebd9c62418139832e01ac879af32052088a52b92dc2447daf6aab0420638bd"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/edges.zig",
+      "bytes": 21391,
+      "sha256": "8fb51544ceeb3cd52f179153312c35531b30fe04cfc5826b35015441b78bf116"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/forest.zig",
+      "bytes": 23086,
+      "sha256": "5f6de6a8365bebea68d4a53089478803466bd933c7460d75a57a59fd806dd5f4"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/forest_test.zig",
+      "bytes": 6590,
+      "sha256": "684afbb853d92fb709a2be02abce265ea8283b1140cb4e0885fef3bf574a014d"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/integration_test.zig",
+      "bytes": 158,
+      "sha256": "75cc208bf27eb9b2140797314c62ec35d600c12f640a27b0a427fea63a852966"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/keys.zig",
+      "bytes": 22433,
+      "sha256": "54ab89b0f07e141dcb76e3b8aa4cc1c5c011d27bcf867f7aaa91f33f0146ad77"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/keys_test.zig",
+      "bytes": 5000,
+      "sha256": "1ce8c64c2b5fadac8194df98afa11deb014b6bbdd83d6124773eb5631c50c212"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/prose.zig",
+      "bytes": 29102,
+      "sha256": "c5e2674360dff9e795cc916b229887c44d30e7046d5bc89131779dac77aa988e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/prose_test.zig",
+      "bytes": 9571,
+      "sha256": "11be0c095517c76c280f02e829fba0a0ac36e8df6a394466b4c12c27d2111b74"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/query.zig",
+      "bytes": 42089,
+      "sha256": "b88d75365f102802b0364974b7d205df1b56185ca4f8d664dd2428af0d05ae01"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/query_test.zig",
+      "bytes": 11800,
+      "sha256": "7f63ee56d92d30d514103b09e65bde9d34bc0e2710cc3c29c5d1413d1a0ebdf0"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/root.zig",
+      "bytes": 1739,
+      "sha256": "5875bfd1c5bc56a6ace9876d4fcf2b3828ee3d6c8351018cb6df4211e056157e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/schema.zig",
+      "bytes": 18342,
+      "sha256": "bba4ea18f02db869e9b9539cc12f778120d094b5cbc9cec11ac412bfd8a42172"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/snapshot.zig",
+      "bytes": 33237,
+      "sha256": "c52b283582950441c379b30399719e418614395b9102593794e2f7c4c7d95a5f"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/snapshot_test.zig",
+      "bytes": 5647,
+      "sha256": "500455891a7757185669d0ce23cbc8124e7ad9867c94cbb6de2ecd4cd4da4f49"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/text.zig",
+      "bytes": 3163,
+      "sha256": "53e0919122a73850a39b9d4bceb5d901b7a50441de15b884a81bf5b6e810e953"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src2/wire.zig",
+      "bytes": 6437,
+      "sha256": "8314d04539b61489242fa5b473367d925f7e450d72ca2b601be68e1cef39a4ba"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/build5.zig",
+      "bytes": 781,
+      "sha256": "0bbe4c675b82aeb2fad1742150771892db0635c23f8c7b8b678c85d43ecba11e"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/build4.zig",
+      "bytes": 3348,
+      "sha256": "93465e1ff3e2c54b77dc4b91af4ef27d497c40f4aa4c72ae81e7d8bd865fb2e8"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/etc/profiles/per-user/mileswirht/bin/zig",
+        "build",
+        "--build-file",
+        "build5.zig",
+        "test",
+        "-Doptimize=ReleaseSafe",
+        "--prefix",
+        "/tmp/dictionary-real-world-legacy-probe/lex5-prefix",
+        "--cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/lex5-cache",
+        "--global-cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/global-cache"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "lane": "lex5-tests",
+      "interpretation": "LEX5 source tests only; no current real-corpus reader/build frontend is exposed by src5/root.zig or build5.zig",
+      "status": "compiled-artifact-path-not-found"
+    },
+    {
+      "argv": [
+        "/etc/profiles/per-user/mileswirht/bin/zig",
+        "build",
+        "--build-file",
+        "build4.zig",
+        "bench4",
+        "-Doptimize=ReleaseSafe",
+        "--prefix",
+        "/tmp/dictionary-real-world-legacy-probe/src4-prefix",
+        "--cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/src4-cache",
+        "--global-cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/global-cache"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "lane": "src4-bench-frontend",
+      "interpretation": "src4 executable build probe; its bench4 protocol requires a semantic fixture adapter, not the real projection TSV",
+      "artifact": {
+        "path": "/private/tmp/dictionary-real-world-legacy-probe/src4-prefix/bin/lex4-bench",
+        "bytes": 1495800,
+        "sha256": "412cabd14ef6c50181f929d265d8a8f438f08b333ecb9aa459e53fe92fc366ec"
+      },
+      "status": "compiled-but-no-real-corpus-adapter"
+    },
+    {
+      "argv": [
+        "/etc/profiles/per-user/mileswirht/bin/zig",
+        "build",
+        "--build-file",
+        "build_src2.zig",
+        "-Doptimize=ReleaseSafe",
+        "--prefix",
+        "/tmp/dictionary-real-world-legacy-probe/src2-prefix",
+        "--cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/src2-cache",
+        "--global-cache-dir",
+        "/tmp/dictionary-real-world-legacy-probe/global-cache"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary/bench4",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "lane": "src2-bench-frontend",
+      "interpretation": "src2 executable build probe; its bench4 protocol requires a semantic fixture adapter, not the real projection TSV",
+      "artifact": {
+        "path": "/private/tmp/dictionary-real-world-legacy-probe/src2-prefix/bin/src2-bench",
+        "bytes": 1378584,
+        "sha256": "b588e63c769a915e8fc0193e0b5905cf1de0c9d264e0576e3e4d9e44a4cc82f8"
+      },
+      "status": "compiled-but-no-real-corpus-adapter"
+    }
+  ],
+  "executable_usage": [
+    {
+      "lane": "src4-bench-frontend",
+      "help_or_usage": {
+        "argv": [
+          "/private/tmp/dictionary-real-world-legacy-probe/src4-prefix/bin/lex4-bench",
+          "--help"
+        ],
+        "cwd": "/private/tmp/dictionary-real-world-legacy-probe/src4-prefix/bin",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "error: InvalidArgument\n"
+      }
+    },
+    {
+      "lane": "src2-bench-frontend",
+      "help_or_usage": {
+        "argv": [
+          "/private/tmp/dictionary-real-world-legacy-probe/src2-prefix/bin/src2-bench",
+          "--help"
+        ],
+        "cwd": "/private/tmp/dictionary-real-world-legacy-probe/src2-prefix/bin",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "error: InvalidArgument\n"
+      }
+    }
+  ],
+  "lane_policy": "Successful frozen src2/src4 compilation is retained as availability evidence only. No adapter is claimed until the real projection's full identities, aliases, payloads, query semantics, and content are represented without loss; LEX5 has no benchmark frontend in this repository."
+}

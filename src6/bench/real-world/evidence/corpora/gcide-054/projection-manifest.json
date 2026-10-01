@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "corpus": "gcide-054",
+  "rows": 124187,
+  "unique_keys": 115327,
+  "key_hits": 131563,
+  "empty_key_hits": 0,
+  "duplicate_key_hits": 16236,
+  "projection_tsv": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection.tsv",
+    "bytes": 123479075,
+    "sha256": "4cddd7f0d23d7ef5dd923ef97b1894f7fff86cc26dbda1a9621653c1338c635b",
+    "sha512": "ff50b60c6c706fd34dfb1a1f7811cd3979ea4f25ac1b97f1201c37c463bebce2984808240b05fca9288da8753f798b5dc04f8324f57ab6785f718123fcdeb1c4"
+  },
+  "rows_jsonl": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/rows.jsonl",
+    "bytes": 53072691,
+    "sha256": "f3280dbbf9a32bc84c47310b36b491c762a12b3db1dcf7430991a4e808f762db",
+    "sha512": "d7e3c187cef92a9e2bcf4df41826da288d17bdf08124e4ca1c50d3c88d5651b1f6f675862e76996f49cb86e3fcfce72594c76764fb1e0e7e234c4144d4ac1442"
+  },
+  "stats": {
+    "source_bytes": 58834998,
+    "records": 124187,
+    "parse_failures": 0,
+    "front_matter_excluded_bytes": 26564,
+    "files": [
+      {
+        "file": "CIDE.A",
+        "bytes": 3905361,
+        "records": 8945
+      },
+      {
+        "file": "CIDE.B",
+        "bytes": 3298367,
+        "records": 6967
+      },
+      {
+        "file": "CIDE.C",
+        "bytes": 5780786,
+        "records": 11919
+      },
+      {
+        "file": "CIDE.D",
+        "bytes": 3527752,
+        "records": 7408
+      },
+      {
+        "file": "CIDE.E",
+        "bytes": 2415183,
+        "records": 5354
+      },
+      {
+        "file": "CIDE.F",
+        "bytes": 2557662,
+        "records": 4985
+      },
+      {
+        "file": "CIDE.G",
+        "bytes": 1880114,
+        "records": 3944
+      },
+      {
+        "file": "CIDE.H",
+        "bytes": 2191912,
+        "records": 4766
+      },
+      {
+        "file": "CIDE.I",
+        "bytes": 2512328,
+        "records": 5554
+      },
+      {
+        "file": "CIDE.J",
+        "bytes": 515029,
+        "records": 1023
+      },
+      {
+        "file": "CIDE.K",
+        "bytes": 490157,
+        "records": 1090
+      },
+      {
+        "file": "CIDE.L",
+        "bytes": 2085196,
+        "records": 4240
+      },
+      {
+        "file": "CIDE.M",
+        "bytes": 3137803,
+        "records": 7294
+      },
+      {
+        "file": "CIDE.N",
+        "bytes": 1110890,
+        "records": 2568
+      },
+      {
+        "file": "CIDE.O",
+        "bytes": 1479384,
+        "records": 3510
+      },
+      {
+        "file": "CIDE.P",
+        "bytes": 4942898,
+        "records": 10706
+      },
+      {
+        "file": "CIDE.Q",
+        "bytes": 328055,
+        "records": 692
+      },
+      {
+        "file": "CIDE.R",
+        "bytes": 2799804,
+        "records": 5388
+      },
+      {
+        "file": "CIDE.S",
+        "bytes": 6598473,
+        "records": 13318
+      },
+      {
+        "file": "CIDE.T",
+        "bytes": 3114588,
+        "records": 6229
+      },
+      {
+        "file": "CIDE.U",
+        "bytes": 1141012,
+        "records": 2593
+      },
+      {
+        "file": "CIDE.V",
+        "bytes": 998054,
+        "records": 1933
+      },
+      {
+        "file": "CIDE.W",
+        "bytes": 1619973,
+        "records": 2787
+      },
+      {
+        "file": "CIDE.X",
+        "bytes": 59701,
+        "records": 173
+      },
+      {
+        "file": "CIDE.Y",
+        "bytes": 196952,
+        "records": 412
+      },
+      {
+        "file": "CIDE.Z",
+        "bytes": 147564,
+        "records": 389
+      }
+    ],
+    "source_format": "GCIDE SGML-like CIDE files",
+    "source_encoding": [
+      "ISO-8859-1 (legacy bytes present)",
+      "UTF-8"
+    ]
+  },
+  "source_manifest": {
+    "id": "gcide-054",
+    "url": "https://ftp.gnu.org/gnu/gcide/gcide-0.54.tar.xz",
+    "archive": {
+      "path": "/private/tmp/dictionary-real-world-cache/sources/gcide-0.54.tar.xz",
+      "bytes": 14803080,
+      "sha256": "22416f6f36175b160dc388b7547512514d464473cf7d7c898d738efb26c51d42",
+      "sha512": "9bda8bc2e30a529bafeb3fcdd2f315025209fa2e609da707caf7b4a273221a7617a10b58d2b635e1ae980e01a790a4e09bb74ec54d6e09c9014e72b30d33b1e6",
+      "url": "https://ftp.gnu.org/gnu/gcide/gcide-0.54.tar.xz"
+    },
+    "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/gcide-0.54/gcide-0.54",
+    "license": {
+      "path": "/private/tmp/dictionary-real-world-cache/extracted/gcide-0.54/gcide-0.54/COPYING",
+      "bytes": 35068,
+      "sha256": "fc82ca8b6fdb18d4e3e85cfd8ab58d1bcd3f1b29abe782895abd91d64763f8e7",
+      "sha512": "9225acdfee37d53f45669eac0abd4f4e8eba5e9dbf39f49e9f182530a038a159934f8645e2bdc00783b4af40743643c1b3256653b5d3a4dea375ace1613b72fc"
+    }
+  }
+}

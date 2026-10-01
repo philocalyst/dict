@@ -1,0 +1,10 @@
+{
+  "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+  "prefix_limit": 16384,
+  "sample": {
+    "bytes": 16384,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs/20260926T164237Z-026b9da8/04-ud-fi-test-form/input.bin",
+    "sha256": "82c373164c80b941da1ff682006117ccd1759ba6ec9494c2983adce1d900b6a8"
+  },
+  "source_bytes": 161246
+}

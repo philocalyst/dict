@@ -1,0 +1,10 @@
+{
+  "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+  "prefix_limit": 2048,
+  "sample": {
+    "bytes": 2048,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/native-screen/20260926T164159Z-5d3c8eab/03-inputs-ud-fi-test-form.prefix65536/input.bin",
+    "sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae"
+  },
+  "source_bytes": 65536
+}

@@ -1,0 +1,10 @@
+command: inline Python mutation/truncation smoke over a mixed invalid-byte frame
+python: 3.14.7 (Darwin arm64)
+output:
+mutations=64 rejected= 64 frame_bytes= 1198
+truncate 0 rejected=1
+truncate 1 rejected=1
+truncate 32 rejected=1
+truncate 63 rejected=1
+truncate 64 rejected=1
+truncate 1197 rejected=1

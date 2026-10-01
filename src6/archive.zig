@@ -7,11 +7,12 @@ const model = @import("model.zig");
 const packet = @import("packet.zig");
 const compression = @import("compression.zig");
 const validate = @import("validate.zig");
+const query = @import("query.zig");
 
 const Sha256 = std.crypto.hash.sha2.Sha256;
 const digest_length = Sha256.digest_length;
 const magic = "LEX6AR01";
-const version: u16 = 1;
+const version: u16 = 2;
 const header_size: usize = 112;
 const directory_record_size: usize = 64;
 
@@ -397,33 +398,52 @@ pub const Archive = struct {
     /// Its result is statically Entry or Resource, selected by the address.
     pub fn load(self: *const Archive, allocator: std.mem.Allocator, id: anytype) !packet.Decoded(@TypeOf(id).Payload) {
         const Address = @TypeOf(id);
-        comptime {
-            if (Address != EntryId and Address != ResourceId) @compileError("load requires EntryId or ResourceId");
-        }
+        try self.checkAddress(id);
         const kind = Address.document_kind;
-        switch (kind) {
-            .entry => if (id.value >= self.entry_count) return error.InvalidEntryId,
-            .resource => if (id.value < self.entry_count or id.value >= self.entry_count + self.resource_count) return error.InvalidResourceId,
-        }
         var document = try self.loadDocument(allocator, id.value);
         errdefer document.deinit();
-        if (document.value != kind) return error.InvalidDocumentKind;
-        const loaded = packet.Decoded(Address.Payload){
+        var sources = try self.sourceIndex(allocator);
+        defer sources.deinit(allocator);
+        try self.admitDocument(allocator, &document.value, id.value, &sources);
+        return packet.Decoded(Address.Payload){
             .arena = document.arena,
             .value = @field(document.value, @tagName(kind)),
         };
-        var sources = try self.sourceIndex(allocator);
-        defer sources.deinit(allocator);
-        try validate.check(allocator, &loaded.value, .{ .limits = self.limits.validation_limits, .sources = &sources });
-        return loaded;
+    }
+
+    /// Cached reads, uncached reads and full verification admit exactly the
+    /// same document. Caching changes storage lifetime, never trust semantics.
+    fn admitDocument(self: *const Archive, allocator: std.mem.Allocator, document: *const model.Document, ordinal: u32, sources: *const validate.SourceIndex) !void {
+        const expected: std.meta.Tag(model.Document) = if (ordinal < self.entry_count) .entry else .resource;
+        if (document.* != expected) return error.InvalidDocumentKind;
+        switch (document.*) {
+            inline else => |*value| try validate.check(allocator, value, .{
+                .sources = sources,
+                .limits = self.limits.validation_limits,
+            }),
+        }
+        if (document.* != .resource) return;
+        const actual = &document.resource;
+        const catalog = (try self.resource(actual.identity())) orelse return error.CatalogMismatch;
+        if (catalog.resource.value != ordinal or catalog.kind != std.meta.activeTag(actual.*)) return error.CatalogMismatch;
+        const source_length: ?usize = if (actual.* == .source) actual.source.bytes.len else null;
+        if (source_length != catalog.source_length) return error.CatalogMismatch;
+    }
+
+    fn checkAddress(self: *const Archive, id: anytype) !void {
+        const Address = @TypeOf(id);
+        if (Address != EntryId and Address != ResourceId) @compileError("load requires EntryId or ResourceId");
+        switch (Address.document_kind) {
+            .entry => if (id.value >= self.entry_count) return error.InvalidEntryId,
+            .resource => if (id.value < self.entry_count or id.value >= self.entry_count + self.resource_count) return error.InvalidResourceId,
+        }
     }
 
     fn loadDocument(self: *const Archive, allocator: std.mem.Allocator, document_id: u32) !packet.Decoded(model.Document) {
         if (document_id >= self.entry_count + self.resource_count) return error.InvalidDocumentId;
         const page_index = try self.pageForDocument(document_id);
         const directory = try self.directoryRecord(page_index);
-        try self.verifyPageDigest(directory);
-        var block = try compression.decode(allocator, directory.codec, self.pages[directory.offset..][0..directory.encoded_length], directory.raw_length, self.limits.compression_limits);
+        var block = try self.decodePage(allocator, directory);
         defer block.deinit();
         const packet_bytes = try packetAt(block.bytes, directory, document_id);
         return packet.decode(model.Document, allocator, packet_bytes, self.limits.packet_limits);
@@ -450,8 +470,7 @@ pub const Archive = struct {
 
         for (0..self.page_count) |page_index| {
             const directory = try self.directoryRecord(page_index);
-            try self.verifyPageDigest(directory);
-            var block = try compression.decode(allocator, directory.codec, self.pages[directory.offset..][0..directory.encoded_length], directory.raw_length, self.limits.compression_limits);
+            var block = try self.decodePage(allocator, directory);
             defer block.deinit();
             var entry_offset: usize = 0;
             for (0..directory.document_count) |document_in_page| {
@@ -463,27 +482,15 @@ pub const Archive = struct {
                 var decoded = try packet.decode(model.Document, allocator, block.bytes[entry_offset..end], self.limits.packet_limits);
                 defer decoded.deinit();
                 const document_id: u32 = @intCast(directory.first_document + document_in_page);
+                try self.admitDocument(allocator, &decoded.value, document_id, &sources);
                 const identity = switch (decoded.value) {
                     .entry => |*entry_value| identity: {
-                        if (document_id >= self.entry_count) return error.InvalidDocumentKind;
-                        try validate.check(allocator, entry_value, .{ .limits = self.limits.validation_limits, .sources = &sources });
                         const physical_id = EntryId{ .value = document_id };
                         try appendExpectedRecord(allocator, &expected_index, entry_value.headword, null, physical_id);
                         for (entry_value.keys) |key| try appendExpectedRecord(allocator, &expected_index, key.spelling, key.form, physical_id);
                         break :identity entry_value.id;
                     },
-                    .resource => |*resource_value| identity: {
-                        if (document_id < self.entry_count) return error.InvalidDocumentKind;
-                        try validate.check(allocator, resource_value, .{ .limits = self.limits.validation_limits, .sources = &sources });
-                        const catalog_record = (try self.resource(resource_value.identity())) orelse return error.CatalogMismatch;
-                        if (catalog_record.resource.value != document_id or catalog_record.kind != std.meta.activeTag(resource_value.*)) return error.CatalogMismatch;
-                        const actual_source_length: ?usize = switch (resource_value.*) {
-                            .source => |source| source.bytes.len,
-                            else => null,
-                        };
-                        if (actual_source_length != catalog_record.source_length) return error.CatalogMismatch;
-                        break :identity resource_value.identity();
-                    },
+                    .resource => |*resource_value| resource_value.identity(),
                 };
                 const id_copy = try allocator.dupe(u8, identity);
                 owned_ids.append(allocator, id_copy) catch |err| {
@@ -569,12 +576,7 @@ pub const Archive = struct {
         const end: usize = if (ordinal + 1 == self.resource_count) self.catalog.len else readU32(self.catalog, (ordinal + 1) * 4);
         if (start < tables_length or start >= end or end > self.catalog.len) return error.InvalidCatalog;
         var at = start;
-        const kind: ResourceKind = switch (self.catalog[at]) {
-            0 => .source,
-            1 => .range,
-            2 => .concept,
-            else => return error.InvalidCatalog,
-        };
+        const kind = std.enums.fromInt(ResourceKind, self.catalog[at]) orelse return error.InvalidCatalog;
         at += 1;
         const document_id = try readVarintUsize(self.catalog, &at, end);
         if (document_id < self.entry_count or document_id >= self.entry_count + self.resource_count) return error.InvalidCatalog;
@@ -687,11 +689,7 @@ pub const Archive = struct {
     fn directoryRecord(self: *const Archive, page_index: usize) !DirectoryRecord {
         if (page_index >= self.page_count) return error.InvalidDirectory;
         const at = page_index * directory_record_size;
-        const codec: compression.Codec = switch (self.directory[at + 24]) {
-            @intFromEnum(compression.Codec.raw) => .raw,
-            @intFromEnum(compression.Codec.bzip3) => .bzip3,
-            else => return error.InvalidCodec,
-        };
+        const codec = std.enums.fromInt(compression.Codec, self.directory[at + 24]) orelse return error.InvalidCodec;
         var digest: [digest_length]u8 = undefined;
         @memcpy(&digest, self.directory[at + 32 .. at + 64]);
         return .{
@@ -726,7 +724,219 @@ pub const Archive = struct {
         Sha256.hash(self.pages[record.offset..end], &actual, .{});
         if (!std.crypto.timing_safe.eql([digest_length]u8, actual, record.digest)) return error.PageDigestMismatch;
     }
+
+    fn decodePage(self: *const Archive, allocator: std.mem.Allocator, record: DirectoryRecord) !compression.Block {
+        try self.verifyPageDigest(record);
+        return compression.decode(allocator, record.codec, self.pages[record.offset..][0..record.encoded_length], record.raw_length, self.limits.compression_limits);
+    }
 };
+
+/// A query session owns one decoded page and its packet boundaries. The archive
+/// remains immutable and borrowed; returned documents own their own arenas and
+/// survive eviction, reader destruction, and archive destruction.
+///
+/// The hot spelling index is unchanged. Logical entry links need prepareLinks:
+/// an explicit, one-time document scan building a derived in-memory catalog.
+/// Its cost is never hidden inside metadata-only Archive.open or the first hit.
+pub const Reader = struct {
+    allocator: std.mem.Allocator,
+    archive: *const Archive,
+    sources: validate.SourceIndex,
+    page: ?CachedPage = null,
+    links: ?std.StringHashMapUnmanaged(EntryId) = null,
+    remaining_hops: usize,
+    stats: Stats = .{},
+
+    pub const Options = struct { max_link_hops: usize = 64 };
+    pub const Stats = struct {
+        page_loads: usize = 0,
+        bzip3_decodes: usize = 0,
+        decoded_bytes: usize = 0,
+        cache_hits: usize = 0,
+    };
+
+    pub fn init(allocator: std.mem.Allocator, archive: *const Archive, options: Reader.Options) !Reader {
+        return .{
+            .allocator = allocator,
+            .archive = archive,
+            .sources = try archive.sourceIndex(allocator),
+            .remaining_hops = options.max_link_hops,
+        };
+    }
+
+    pub fn deinit(self: *Reader) void {
+        self.evict();
+        if (self.links) |*links| deinitLinks(self.allocator, links);
+        self.sources.deinit(self.allocator);
+        self.* = undefined;
+    }
+
+    pub fn load(self: *Reader, id: anytype) !packet.Decoded(@TypeOf(id).Payload) {
+        try self.archive.checkAddress(id);
+        var document = try self.loadDocument(id.value);
+        errdefer document.deinit();
+        return .{ .arena = document.arena, .value = @field(document.value, @tagName(@TypeOf(id).document_kind)) };
+    }
+
+    /// Build once, transactionally. Failure leaves no partially usable index;
+    /// success is idempotent. No packet/node pointer is retained in the catalog.
+    pub fn prepareLinks(self: *Reader) !void {
+        if (self.links != null) return;
+        var links: std.StringHashMapUnmanaged(EntryId) = .empty;
+        errdefer deinitLinks(self.allocator, &links);
+        try links.ensureTotalCapacity(self.allocator, @intCast(self.archive.entry_count));
+        for (0..self.archive.entry_count) |ordinal| {
+            var document = try self.loadDocument(@intCast(ordinal));
+            defer document.deinit();
+            const identity = document.value.entry.id;
+            if ((try self.archive.resource(identity)) != null) return error.DuplicateEntryId;
+            const owned = try self.allocator.dupe(u8, identity);
+            const slot = links.getOrPut(self.allocator, owned) catch |err| {
+                self.allocator.free(owned);
+                return err;
+            };
+            if (slot.found_existing) {
+                self.allocator.free(owned);
+                return error.DuplicateEntryId;
+            }
+            slot.value_ptr.* = .{ .value = @intCast(ordinal) };
+        }
+        self.links = links;
+    }
+
+    /// External logical addresses are looked up locally, not declared invalid
+    /// merely because their targets are absent. Following never recurses. A hop
+    /// budget bounds even caller-driven cycles; local nodes use query.resolve.
+    pub fn follow(self: *Reader, reference: model.Reference) !Follow {
+        if (self.remaining_hops == 0) return error.HopLimit;
+        self.remaining_hops -= 1;
+        const ordinal: u32, const fragment: ?[]const u8 = switch (reference) {
+            .entry => |address| found: {
+                const links = self.links orelse return error.DocumentCatalogRequired;
+                const target = links.get(address.id) orelse return .{ .unavailable = reference };
+                break :found .{ target.value, address.fragment };
+            },
+            .resource => |address| found: {
+                const target = (try self.archive.resource(address.id)) orelse return .{ .unavailable = reference };
+                break :found .{ target.resource.value, address.fragment };
+            },
+            .iri => return .{ .unavailable = reference },
+            .unresolved => |value| return .{ .unresolved = value },
+            .local => return error.LocalReferenceRequiresDocument,
+        };
+        var document = try self.loadDocument(ordinal);
+        errdefer document.deinit();
+        if (fragment) |id| {
+            const located = switch (document.value) {
+                inline else => |*value| try query.resolve(value, id),
+            };
+            if (located == null) {
+                document.deinit();
+                return .{ .unavailable = reference };
+            }
+        }
+        const owned_fragment = if (fragment) |id| try document.arena.allocator().dupe(u8, id) else null;
+        return .{ .found = .{ .document = document, .fragment = owned_fragment } };
+    }
+
+    fn loadDocument(self: *Reader, ordinal: u32) !packet.Decoded(model.Document) {
+        if (ordinal >= self.archive.entry_count + self.archive.resource_count) return error.InvalidDocumentId;
+        const number = try self.archive.pageForDocument(ordinal);
+        if (self.page == null or self.page.?.number != number) {
+            // Evict first, keeping peak cache occupancy to one page even when
+            // decoding or allocating the replacement fails.
+            self.evict();
+            self.page = try CachedPage.open(self.allocator, self.archive, number);
+            const page = &self.page.?;
+            self.stats.page_loads +|= 1;
+            self.stats.bzip3_decodes +|= @intFromBool(page.block.codec == .bzip3);
+            self.stats.decoded_bytes +|= page.block.raw_len;
+        } else self.stats.cache_hits +|= 1;
+        const bytes = self.page.?.packetAt(ordinal);
+        var document = try packet.decode(model.Document, self.allocator, bytes, self.archive.limits.packet_limits);
+        errdefer document.deinit();
+        try self.archive.admitDocument(self.allocator, &document.value, ordinal, &self.sources);
+        return document;
+    }
+
+    fn evict(self: *Reader) void {
+        if (self.page) |*page| page.deinit(self.allocator);
+        self.page = null;
+    }
+};
+
+/// Unavailable/unresolved results borrow the input Reference; a found result
+/// owns everything, including its requested fragment. Only found needs deinit.
+pub const Follow = union(enum) {
+    found: Followed,
+    unavailable: model.Reference,
+    unresolved: @FieldType(model.Reference, "unresolved"),
+};
+
+pub const Followed = struct {
+    document: packet.Decoded(model.Document),
+    fragment: ?[]const u8,
+
+    pub fn deinit(self: *Followed) void {
+        self.document.deinit();
+        self.* = undefined;
+    }
+
+    /// Call only after placing the owned result at its final address. Never
+    /// retain a pointer to a local return-value temporary inside an owned value.
+    pub fn locate(self: *const Followed) !?query.Located {
+        return switch (self.document.value) {
+            inline else => |*value| if (self.fragment) |id| try query.resolve(value, id) else query.located(value),
+        };
+    }
+};
+
+const CachedPage = struct {
+    number: usize,
+    first_document: usize,
+    block: compression.Block,
+    starts: []u32,
+
+    fn open(allocator: std.mem.Allocator, archive: *const Archive, number: usize) !CachedPage {
+        const record = try archive.directoryRecord(number);
+        var block = try archive.decodePage(allocator, record);
+        errdefer block.deinit();
+        // At least a four-byte length belongs to every document. Validate the
+        // count before allocating the directory derived from hostile bytes.
+        if (record.document_count > block.bytes.len / 4) return error.InvalidPage;
+        const starts = try allocator.alloc(u32, record.document_count + 1);
+        errdefer allocator.free(starts);
+        var at: usize = 0;
+        for (starts[0..record.document_count]) |*start| {
+            if (block.bytes.len - at < 4) return error.InvalidPage;
+            start.* = std.math.cast(u32, at) orelse return error.InvalidPage;
+            const length: usize = readU32(block.bytes, at);
+            at += 4;
+            if (length > block.bytes.len - at) return error.InvalidPage;
+            at += length;
+        }
+        if (at != block.bytes.len) return error.InvalidPage;
+        starts[record.document_count] = std.math.cast(u32, at) orelse return error.InvalidPage;
+        return .{ .number = number, .first_document = record.first_document, .block = block, .starts = starts };
+    }
+
+    fn packetAt(self: CachedPage, ordinal: u32) []const u8 {
+        const relative = ordinal - self.first_document;
+        return self.block.bytes[self.starts[relative] + 4 .. self.starts[relative + 1]];
+    }
+
+    fn deinit(self: *CachedPage, allocator: std.mem.Allocator) void {
+        self.block.deinit();
+        allocator.free(self.starts);
+        self.* = undefined;
+    }
+};
+
+fn deinitLinks(allocator: std.mem.Allocator, links: *std.StringHashMapUnmanaged(EntryId)) void {
+    var keys = links.keyIterator();
+    while (keys.next()) |key| allocator.free(key.*);
+    links.deinit(allocator);
+}
 
 pub const Hits = struct {
     archive: *const Archive,

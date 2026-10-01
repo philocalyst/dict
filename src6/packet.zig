@@ -38,7 +38,9 @@ pub const Error = error{
 };
 
 const magic = "LXP6";
-pub const schema_version: u8 = 1;
+// The model is the schema. Version 2 adds named values and disjoint relation
+// endpoints; version 1 packets must not be interpreted using these types.
+pub const schema_version: u8 = 2;
 
 pub fn Decoded(comptime T: type) type {
     return struct {
@@ -216,6 +218,11 @@ fn encodeValue(comptime T: type, encoder: *Encoder, value: T, depth: usize) Erro
             } else try encoder.byte(0);
         },
         .pointer => |pointer| {
+            if (pointer.size == .one) {
+                // A pointer is an ownership edge, not a stored machine address.
+                // References between lexical identities remain Reference values.
+                return encodeValue(pointer.child, encoder, value.*, depth + 1);
+            }
             if (pointer.size != .slice) return error.UnsupportedType;
             if (value.len > encoder.limits.max_slice_length) return error.SliceTooLong;
             try encoder.varint(@intCast(value.len));
@@ -292,6 +299,12 @@ fn decodeValue(comptime T: type, decoder: *Decoder, depth: usize) Error!T {
             break :optional_value try decodeValue(optional.child, decoder, depth + 1);
         },
         .pointer => |pointer| slice: {
+            if (pointer.size == .one) {
+                try decoder.reserveAllocation(@sizeOf(pointer.child));
+                const owned = decoder.arena.create(pointer.child) catch return error.OutOfMemory;
+                owned.* = try decodeValue(pointer.child, decoder, depth + 1);
+                break :slice owned;
+            }
             if (pointer.size != .slice) return error.UnsupportedType;
             const length = try decodeLength(decoder);
             if (length > decoder.limits.max_work - decoder.work) return error.WorkLimit;

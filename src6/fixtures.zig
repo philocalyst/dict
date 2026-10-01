@@ -49,10 +49,10 @@ pub const rich: model.Entry = .{
                 .{ .relation = .{
                     .meta = .{ .id = "claim1", .annotations = &.{.{ .name = .{ .local = "review" }, .value = "checked" }} },
                     .predicate = .evokes,
-                    .target = .{ .local = "concept1" },
+                    .endpoints = .{ .binary = .{ .local = "concept1" } },
                     .confidence = "0.95",
                 } },
-                .{ .relation = .{ .predicate = .denotes, .target = .{ .iri = "https://example.org/ontology/FinancialInstitution" } } },
+                .{ .relation = .{ .predicate = .denotes, .endpoints = .{ .binary = .{ .iri = "https://example.org/ontology/FinancialInstitution" } } } },
                 .{ .sense = .{
                     .meta = .{ .id = "building", .language = .reset },
                     .label = "1a",

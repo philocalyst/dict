@@ -1,0 +1,7 @@
+command: src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4 c src6/experiments/bzip4/bz4/data/omw.eval8.bin /tmp/v4-omw.bin 65536
+timing: /usr/bin/time -p; real=10.45 user=9.63 sys=0.33 (single serial run; descriptive only)
+output:
+bytes=374217
+sha256=2dce17df84d12b76fa3c89923db5b56a66e089771ee85bf5c67a54ffe0a967e7
+decoded_sha256=d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261
+roundtrip=ok

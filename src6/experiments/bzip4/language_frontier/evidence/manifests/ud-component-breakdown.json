@@ -1,0 +1,143 @@
+{
+  "interpretation": {
+    "bzip3_non_payload": "bzip3 total - bzip3 payload; an arithmetic control grouping, not a semantic equivalent of v4 header/delta",
+    "comparability_caveat": "bzip3 payload includes comparable spelling information, so the payload/non-payload split cannot establish an intrinsic sequence-model advantage; information can move between v4 delta and payload.",
+    "gap_identity": "payload_gap + non_payload_gap = v4_total - bzip3_total",
+    "v4_non_payload": "header + lexical-definition delta + framing; delta contains first-use lexical spelling/text definitions, while header is actual model/frame header bytes",
+    "warning": "A positive total gap can coexist with a negative payload gap; this isolates charged v4 non-payload bytes but does not attribute all lexical/model quality to payload."
+  },
+  "purpose": "Component decomposition of the six frozen UD storage rows; no timing.",
+  "rows": [
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 80,
+        "payload": 53428,
+        "total": 53508
+      },
+      "gap_v4_minus_bzip3": 6010,
+      "input_bytes": 161246,
+      "non_payload_gap_v4_minus_bzip3": 22223,
+      "payload_gap_v4_minus_bzip3": -16213,
+      "v4": {
+        "delta": 21301,
+        "framing": 50,
+        "header": 952,
+        "non_payload_header_delta_framing": 22303,
+        "payload": 37215,
+        "payload_fraction": 0.6252730266474008,
+        "total": 59518
+      },
+      "workload": "ud-fi-test-form"
+    },
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 80,
+        "payload": 53479,
+        "total": 53559
+      },
+      "gap_v4_minus_bzip3": 5735,
+      "input_bytes": 158155,
+      "non_payload_gap_v4_minus_bzip3": 22040,
+      "payload_gap_v4_minus_bzip3": -16305,
+      "v4": {
+        "delta": 21176,
+        "framing": 50,
+        "header": 894,
+        "non_payload_header_delta_framing": 22120,
+        "payload": 37174,
+        "payload_fraction": 0.6269437042533814,
+        "total": 59294
+      },
+      "workload": "ud-fi-test-text"
+    },
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 64,
+        "payload": 22049,
+        "total": 22113
+      },
+      "gap_v4_minus_bzip3": 4044,
+      "input_bytes": 67770,
+      "non_payload_gap_v4_minus_bzip3": 9919,
+      "payload_gap_v4_minus_bzip3": -5875,
+      "v4": {
+        "delta": 9155,
+        "framing": 33,
+        "header": 795,
+        "non_payload_header_delta_framing": 9983,
+        "payload": 16174,
+        "payload_fraction": 0.6183430821577398,
+        "total": 26157
+      },
+      "workload": "ud-tr-test-form"
+    },
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 64,
+        "payload": 21517,
+        "total": 21581
+      },
+      "gap_v4_minus_bzip3": 4455,
+      "input_bytes": 65596,
+      "non_payload_gap_v4_minus_bzip3": 9936,
+      "payload_gap_v4_minus_bzip3": -5481,
+      "v4": {
+        "delta": 9184,
+        "framing": 26,
+        "header": 790,
+        "non_payload_header_delta_framing": 10000,
+        "payload": 16036,
+        "payload_fraction": 0.6159164234137349,
+        "total": 26036
+      },
+      "workload": "ud-tr-test-text"
+    },
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 96,
+        "payload": 51258,
+        "total": 51354
+      },
+      "gap_v4_minus_bzip3": 4890,
+      "input_bytes": 245812,
+      "non_payload_gap_v4_minus_bzip3": 25183,
+      "payload_gap_v4_minus_bzip3": -20293,
+      "v4": {
+        "delta": 23473,
+        "framing": 64,
+        "header": 1742,
+        "non_payload_header_delta_framing": 25279,
+        "payload": 30965,
+        "payload_fraction": 0.5505476139677121,
+        "total": 56244
+      },
+      "workload": "ud-ar-test-form"
+    },
+    {
+      "bzip3": {
+        "non_payload_total_minus_payload": 96,
+        "payload": 51420,
+        "total": 51516
+      },
+      "gap_v4_minus_bzip3": 8367,
+      "input_bytes": 239109,
+      "non_payload_gap_v4_minus_bzip3": 29781,
+      "payload_gap_v4_minus_bzip3": -21414,
+      "v4": {
+        "delta": 28107,
+        "framing": 65,
+        "header": 1705,
+        "non_payload_header_delta_framing": 29877,
+        "payload": 30006,
+        "payload_fraction": 0.5010771003456741,
+        "total": 59883
+      },
+      "workload": "ud-ar-test-text"
+    }
+  ],
+  "schema": 1,
+  "source_summary": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/summary.json",
+    "sha256": "3172a9e5d9d0022b2de889b9a92c05839bd7aecf1b1b2c0f90b9790c4eb24b14"
+  }
+}

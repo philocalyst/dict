@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "src6/experiments/bzip4/frontier_python/structure",
+    "-p",
+    "test_grammar_review.py",
+    "-v"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 59023166,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 1078,
+    "sha256": "31f62c876437436fb2159b5908709f803de92e7463556a04780ffa23140cc24d"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/structure/evidence/grammar-review/grammar-review-fixed-v1.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/structure/evidence/grammar-review/grammar-review-fixed-v1.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/structure/evidence/grammar-review/grammar-review-fixed-v1.status.json"
+}

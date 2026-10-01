@@ -1,0 +1,1978 @@
+<ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>&amp;</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>conjunction</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>&amp;</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Abbreviation of and.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>'s-Hertogenbosch</ns0:orth>
+        <ns0:pron>/-toʊx-/</ns0:pron>
+        <ns0:pron>/-tɑx-/</ns0:pron>
+        <ns0:pron>/-tɑɡ-/</ns0:pron>
+        <ns0:pron>/-tɒx-/</ns0:pron>
+        <ns0:pron>/-tɒɡ-/</ns0:pron>
+        <ns0:pron>/-təʊx-/</ns0:pron>
+        <ns0:pron>/-əˈ-/</ns0:pron>
+        <ns0:pron>/ˌsɛə-/</ns0:pron>
+        <ns0:pron>/ˌsɛəɹ-/</ns0:pron>
+        <ns0:pron>/ˌsɜɹtoʊɡənˈbɔs/</ns0:pron>
+        <ns0:pron>/ˌsɜːtəʊɡənˈbɒs/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>pn</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>Bolduque</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A city, capital, and municipality of North Brabant, Netherlands.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>'umra</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>n</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>'umra</ns0:quote>
+          <ns0:quote>umrah</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(Islam) A minor hajj, a lesser pilgrimage to Mecca, other than at the time of the hajj.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>*69</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>pn</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>\*69</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(US, Canada, telephony) The telephone number used for last-call return services.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>'s</ns0:orth>
+        <ns0:pron>/s/</ns0:pron>
+        <ns0:pron>/z/</ns0:pron>
+        <ns0:pron>/əz/</ns0:pron>
+        <ns0:pron>/ɪz/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>e</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A possessive marker, indicating that an object belongs to the noun or noun phrase bearing the marker.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>able</ns0:orth>
+        <ns0:pron>/əbl̩/</ns0:pron>
+        <ns0:pron>/ˈebl̩/</ns0:pron>
+        <ns0:pron>[eːbɐl]</ns0:pron>
+        <ns0:pron>[ɐbɨɭ]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>able</ns0:quote>
+          <ns0:quote>ible</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Able to be done; fit to be done.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ac</ns0:orth>
+        <ns0:pron>/æk/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>aca</ns0:quote>
+          <ns0:quote>aco</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>One affected with.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>aceous</ns0:orth>
+        <ns0:pron>/ˈeɪ.ʃəs/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>áceo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Of, relating to, resembling or containing the thing suffixed</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>Belonging to a taxonomic family or other group</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>acious</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>az</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adjectives from nouns and verb stems.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>aemia</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>emia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(British spelling, medicine) Blood; presence in blood (of a substance denoted by an affixed combining form); state or condition of the blood.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>an</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ano</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Of or pertaining to; an adjectival suffix appended to various words, often nouns, to make an adjective form. (Often added to words of Latin origin, but also used with words of other origins. When a word ends in a, -n is used instead.)</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ance</ns0:orth>
+        <ns0:pron>/-əns/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ancia</ns0:quote>
+          <ns0:quote>anza</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Added to a verb to form a noun indicating a process or action.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ane</ns0:orth>
+        <ns0:pron>/eɪn/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ano</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Variant of -an, usually with differentiation (germane, humane, urbane), but sometimes alone (mundane).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>anthropy</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>antropía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>humanity; mankind</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>arch</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>arca</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>leading, leader</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>archy</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>arquía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>form of government or rule</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ard</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ardo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Someone who is in a specified condition (“pejorative agent suffix”).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ase</ns0:orth>
+        <ns0:pron>/-ˌes/</ns0:pron>
+        <ns0:pron>/-ˌez/</ns0:pron>
+        <ns0:pron>/-ˌeɪs/</ns0:pron>
+        <ns0:pron>/-ˌeɪz/</ns0:pron>
+        <ns0:pron>/-ˌeːs/</ns0:pron>
+        <ns0:pron>/-ˌeːz/</ns0:pron>
+        <ns0:pron>/-ˌæɪs/</ns0:pron>
+        <ns0:pron>/-ˌæɪz/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>asa</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form the names of enzymes.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>aster</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>astra</ns0:quote>
+          <ns0:quote>astre</ns0:quote>
+          <ns0:quote>astro</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form diminutive and pejorative nouns, labeling someone pretending to be what they are not.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ate</ns0:orth>
+        <ns0:pron>/eɪt/</ns0:pron>
+        <ns0:pron>/ət/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ada</ns0:quote>
+          <ns0:quote>ado</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(obsolete) formed, up until Early Modern English (later seldom used but archaically, in poetry, or in religious writings), regular past participles of verbs ending in -ate, alternatively used alongside -ated from as early as Middle English</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ato</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(chemistry) forms derivatives of specified elements or compounds; especially salts or esters of an acid whose name ends in -ic</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ado</ns0:quote>
+          <ns0:quote>ato</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>forms nouns denoting a social or political system ruled by people or someone of a certain rank or office</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ation</ns0:orth>
+        <ns0:pron>/ˈe.ʃən/</ns0:pron>
+        <ns0:pron>/ˈeɪ̯.ʃən/</ns0:pron>
+        <ns0:pron>/ˈeː.ʃon/</ns0:pron>
+        <ns0:pron>/ˈæɪ̯.ʃən/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ación</ns0:quote>
+          <ns0:quote>ción</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>An action or process.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>The result of an action or process.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>bility</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>bilidad</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(in certain restricted contexts of word formation)</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>(in certain restricted contexts of word formation)</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>biosis</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>biosis</ns0:quote>
+        </ns0:cit>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>caine</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>caína</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(organic chemistry, pharmacology) A synthetic alkaloid used as a local anesthetic.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cene</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ceno</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(geology) Related to the geologic era called the Cenozoic, the current one.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>centric</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>céntrico</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Having a specified object at the centre, or as the focus of attention.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>centrism</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>centrismo</ns0:quote>
+        </ns0:cit>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cephaly</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cefalia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(medicine, pathology) head</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cide</ns0:orth>
+        <ns0:pron>/-saɪd/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cidio</ns0:quote>
+          <ns0:quote>cida</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>killing</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cida</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>killer</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cracy</ns0:orth>
+        <ns0:pron>/-kɹəsi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cracia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>rule (in the sense of governing).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>crat</ns0:orth>
+        <ns0:pron>/-kɹæt/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>crata</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A participant in a specified form of government.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>An advocate of a specified form of government.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cratic</ns0:orth>
+        <ns0:pron>/ˈkɹætɪk/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>crático</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>used to form adjectives, of or befitting -cracy</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>used to form adjectives, of or befitting -crat</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cy</ns0:orth>
+        <ns0:pron>/-si/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cia</ns0:quote>
+          <ns0:quote>ez</ns0:quote>
+          <ns0:quote>eza</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(non-productive) Used to form nouns of state, condition or quality.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>cyte</ns0:orth>
+        <ns0:pron>/-ˌsajʈ/</ns0:pron>
+        <ns0:pron>/-ˌsaɪt/</ns0:pron>
+        <ns0:pron>/-ˌsɑɪt/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>cito</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form cell names and classifications for mature cells.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>drome</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>dromo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(literary) Forms placenames related to racetracks (now especially large covered racetracks) or similar structures.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ectomy</ns0:orth>
+        <ns0:pron>/-ˈɛktəmi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ectomía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(surgery) Surgical removal of.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ed</ns0:orth>
+        <ns0:pron>/d/</ns0:pron>
+        <ns0:pron>/dəd/</ns0:pron>
+        <ns0:pron>/t/</ns0:pron>
+        <ns0:pron>/əd/</ns0:pron>
+        <ns0:pron>/ɪd/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ado</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form past tenses of (regular) verbs. In linguistics, it is used for the base form of any past form. See -t for a variant.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ee</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ada</ns0:quote>
+          <ns0:quote>ado</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Added to transitive verbs to form words meaning a person or thing that is the object of that verb (i.e., to whom or to which an action is done).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>eme</ns0:orth>
+        <ns0:pron>/-iːm/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ema</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Indicating a fundamental unit in some kind of structure, chiefly linguistic structure.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>en</ns0:orth>
+        <ns0:pron>/-ɪŋ/</ns0:pron>
+        <ns0:pron>/ən/</ns0:pron>
+        <ns0:pron>/ɛnˈlaɪt.nɪŋ/</ns0:pron>
+        <ns0:pron>/ɛnˈlaɪt.ən.ɪŋ/</ns0:pron>
+        <ns0:pron>/ɡɑː(ɹ)d.nə(ɹ)/</ns0:pron>
+        <ns0:pron>/ˈfæt.nɪŋ/</ns0:pron>
+        <ns0:pron>/ˈfæt.ən.ɪŋ/</ns0:pron>
+        <ns0:pron>/ˈfæt.ən/</ns0:pron>
+        <ns0:pron>/ˈlaɪt.nɪŋ/</ns0:pron>
+        <ns0:pron>/ˈlaɪt.ən.ɪŋ/</ns0:pron>
+        <ns0:pron>[n̩]</ns0:pron>
+        <ns0:pron>[ən]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ecer</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>When attached to certain adjectives, it forms a transitive verb whose meaning is, to make (adjective). Usually, the verb is ergative, sometimes not. The same construction could also be done to certain (fewer) nouns, as, strengthen, in which case the verb means roughly, "to give (noun) to", or "to become like (noun)".</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ence</ns0:orth>
+        <ns0:pron>/əns/</ns0:pron>
+        <ns0:pron>[ən(t)s]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>encia</ns0:quote>
+          <ns0:quote>enza</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(chiefly, non-productive) Same as -ance; having the state or condition of.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ene</ns0:orth>
+        <ns0:pron>/-iːn/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>eno</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A polymer derived from an alkene.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>er</ns0:orth>
+        <ns0:pron>/ə/</ns0:pron>
+        <ns0:pron>/ɚ/</ns0:pron>
+        <ns0:pron>[ɹ̩]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>dor</ns0:quote>
+          <ns0:quote>dora</ns0:quote>
+          <ns0:quote>era</ns0:quote>
+          <ns0:quote>ero</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(added to verbs) A person or thing that does an action indicated by the root verb; used to form an agent noun.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ás</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(added to certain adjectives and adverbs, now especially short ones) More; used to form the comparative.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>(added to certain adverbs) More; used to form the comparative.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>dor</ns0:quote>
+          <ns0:quote>dora</ns0:quote>
+          <ns0:quote>era</ns0:quote>
+          <ns0:quote>ero</ns0:quote>
+          <ns0:quote>ista</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(added to nouns, chiefly denoting occupations) A person whose occupation is the root noun; (more broadly, occasionally with adjectives) a person characterized by the root.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ery</ns0:orth>
+        <ns0:pron>/əɹi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ería</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Added to verbs to form nouns meaning "place of" (an art, craft, or practice).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ese</ns0:orth>
+        <ns0:pron>/is/</ns0:pron>
+        <ns0:pron>/ˈiz/</ns0:pron>
+        <ns0:pron>/ˈiːz/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ana</ns0:quote>
+          <ns0:quote>ano</ns0:quote>
+          <ns0:quote>ense</ns0:quote>
+          <ns0:quote>esa</ns0:quote>
+          <ns0:quote>és</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form nouns meaning the jargon or language used by a particular profession or being or in a particular context.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>esque</ns0:orth>
+        <ns0:pron>/ɛsk/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>esco</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>In the style or manner of; appended to nouns, especially proper nouns, and forming adjectives.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>Resembling; appended to nouns, especially proper nouns, and forming adjectives.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>est</ns0:orth>
+        <ns0:pron>/əst/</ns0:pron>
+        <ns0:pron>/ɪst/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ás</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form the superlative of adjectives and adverbs.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>as</ns0:quote>
+          <ns0:quote>es</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(archaic, dialectal) Used to form the second-person singular present tense and past tense of verbs. (if thou is the subject; not used with you)</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>etic</ns0:orth>
+        <ns0:pron>/ˈet.ɪk/</ns0:pron>
+        <ns0:pron>/ˈɛt.ɪk/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ético</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adjectives, meaning "pertaining to", derived from nouns, most of which end in -esis</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>free</ns0:orth>
+        <ns0:pron>/fɹiː/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ibre de</ns0:quote>
+          <ns0:quote>in</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Free from; devoid of; without.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ful</ns0:orth>
+        <ns0:pron>/fəl/</ns0:pron>
+        <ns0:pron>/fʊl/</ns0:pron>
+        <ns0:pron>[fl̩]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ada</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form nouns from nouns meaning “as much as can be held by what is denoted by the noun”</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>gamous</ns0:orth>
+        <ns0:pron>/-ɡəməs/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>gamo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Having the specified number or form of marriage.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>gamy</ns0:orth>
+        <ns0:pron>/-ɡəmi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>gamia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form nouns describing forms of marriage.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>gen</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>geno</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A producer of something, or an agent in the production of something.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>gon</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>gona</ns0:quote>
+          <ns0:quote>gono</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(geometry) Forms the names of plane figures containing a given number of internal angles, and thus bounded by that number of line segments (polygons).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>gram</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>grama</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Something written, drawn or otherwise recorded.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>graph</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>grafo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>that writes</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>(metonymic) that is written</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>grapher</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>grafo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>someone who writes about a specified subject, or in a specified manner</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>graphic</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>gráfico</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forming adjectives pertaining to writing (of a type specified by the first element).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>graphy</ns0:orth>
+        <ns0:pron>/-ɡræfi/</ns0:pron>
+        <ns0:pron>/-ɡɹəfi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>grafía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Something written or otherwise represented in the specified manner, or about a specified subject.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>hedron</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>edro</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(geometry) Forms the names of solid figures bounded by a certain number of planes (polyhedra).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>hood</ns0:orth>
+        <ns0:pron>/hʊd/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>dad</ns0:quote>
+          <ns0:quote>idad</ns0:quote>
+          <ns0:quote>edad</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A substantive suffix denoting a condition or state of being.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>dad</ns0:quote>
+          <ns0:quote>edad</ns0:quote>
+          <ns0:quote>idad</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A substantive suffix denoting a group sharing a specified condition or state.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>i</ns0:orth>
+        <ns0:pron>/iː/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>í</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adjectives and nouns describing people of a particular city, region, or country, and the language spoken by these people.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ian</ns0:orth>
+        <ns0:pron>/i.ən/</ns0:pron>
+        <ns0:pron>/jən/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>iana</ns0:quote>
+          <ns0:quote>iano</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(as a noun) One from, belonging to, relating to, or like.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>iatry</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>iatría</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forms names of specialized fields of medical practice.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ible</ns0:orth>
+        <ns0:pron>/əbəl/</ns0:pron>
+        <ns0:pron>/ɪbəl/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>able</ns0:quote>
+          <ns0:quote>ible</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>An adjective suffix, now usually in a passive sense; forms adjectives meaning "able to be", "relevant or suitable to, in accordance with", or expressing capacity or worthiness in a passive sense.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ic</ns0:orth>
+        <ns0:pron>/ək/</ns0:pron>
+        <ns0:pron>/ɪk/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ico</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(chemistry) Used to denote certain chemical compounds in which a specified chemical element has a higher oxidation number than in the equivalent compound whose name ends in the suffix -ous. For example sulphuric acid (H₂SO₄) has more oxygen atoms per molecule than sulphurous acid (H₂SO₃).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>id</ns0:orth>
+        <ns0:pron>/ɪd/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ida</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(history) Forming the names of dynasts, being suffixed to the name of their progenitors and meaning “descendant of”.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ido</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(taxonomy) Forming the common names of members of a taxon which has a name ending in -idae.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ide</ns0:orth>
+        <ns0:pron>/aɪd/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ido</ns0:quote>
+          <ns0:quote>uro</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Any of a group of related compounds - azide, polysaccharide, glycoside.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ido</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Any of a group of several elements - lanthanide.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ie</ns0:orth>
+        <ns0:pron>/-i/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ta</ns0:quote>
+          <ns0:quote>to</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forming diminutive or affectionate forms of nouns or names.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ification</ns0:orth>
+        <ns0:pron>/ɪfɪˈkeɪʃən/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ficación</ns0:quote>
+          <ns0:quote>ificación</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forms nouns denoting the act or process whereby a subject becomes something else.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ify</ns0:orth>
+        <ns0:pron>/ɪfaɪ/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ificar</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forms transitive verbs meaning "to make" from adjectives and nouns.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>in-law</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>finidad</ns0:quote>
+          <ns0:quote>olítico</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Related through marriage.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ine</ns0:orth>
+        <ns0:pron>/-aɪn/</ns0:pron>
+        <ns0:pron>/-iːn/</ns0:pron>
+        <ns0:pron>/-ɪn~-ən/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ina</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(chemistry) Used to form names of chemical substances, especially basic (alkaline) substances, alkaloidal substances, or halogen elements.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ing</ns0:orth>
+        <ns0:pron>/in/</ns0:pron>
+        <ns0:pron>/iŋ/</ns0:pron>
+        <ns0:pron>/ən/</ns0:pron>
+        <ns0:pron>/ɪn/</ns0:pron>
+        <ns0:pron>/ɪŋ/</ns0:pron>
+        <ns0:pron>/ɪŋk/</ns0:pron>
+        <ns0:pron>/ɪŋɡ/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ando</ns0:quote>
+          <ns0:quote>iendo</ns0:quote>
+          <ns0:quote>yendo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form present participles of verbs.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ando</ns0:quote>
+          <ns0:quote>iendo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form nouns denoting materials or systems of objects which are used or employed in an action, or considered collectively.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ish</ns0:orth>
+        <ns0:pron>/iʃ/</ns0:pron>
+        <ns0:pron>/əʃ/</ns0:pron>
+        <ns0:pron>/ɪʃ/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ico</ns0:quote>
+          <ns0:quote>iento</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(of adjectives from common nouns) Typical of, similar to, being like.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ento</ns0:quote>
+          <ns0:quote>oso</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(of adjectives from adjectives, with a diminutive force) Somewhat, rather.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>esa</ns0:quote>
+          <ns0:quote>és</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(of adjectives from roots of proper nouns denoting names of nations or regions) Of, belonging, or relating to (a nationality, place, language or similar association with something).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ism</ns0:orth>
+        <ns0:pron>/-ɪzəm/</ns0:pron>
+        <ns0:pron>[ɪzm̩]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ismo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form names of a tendency of action, behaviour, condition, opinion, or state belonging to a class or group of persons, or the result of a doctrine, ideology, or principle or lack thereof.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ist</ns0:orth>
+        <ns0:pron>/-əst/</ns0:pron>
+        <ns0:pron>/-ɪst/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ista</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>one who subscribes to a particular theological doctrine or religious denomination;</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>a person who holds bigoted, partial views with respect to a particular matter.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ista</ns0:quote>
+          <ns0:quote>isto</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>a person who uses a device of some kind;</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ite</ns0:orth>
+        <ns0:pron>/-aɪt/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ita</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(sometimes, pejorative) Used to form nouns denoting followers or adherents of a specified person, idea, doctrine, movement, etc.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>Used to form nouns denoting descendants of a specified historical person, especially a biblical figure.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>(biology) Used to form nouns denoting segments or components of the body or an organ of the body.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>Used to form nouns denoting the product of a specified process or a commercially manufactured product.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ito</ns0:quote>
+          <ns0:quote>ita</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(chemistry) Used to form names of certain chemical compounds, especially salts or esters of acids whose name ends in -ous.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>itis</ns0:orth>
+        <ns0:pron>/-ˈaɪtɪs/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>itis</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(pathology) Denoting diseases characterized by inflammation, itself often caused by an infection.</ns0:def>
+        </ns0:sense>
+        <ns0:sense>
+          <ns0:def>(humorous) Used to form the names of various fictitious afflictions or diseases.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>itude</ns0:orth>
+        <ns0:pron>[ˌtjuːd]</ns0:pron>
+        <ns0:pron>[ˌtu̟d]</ns0:pron>
+        <ns0:pron>[ˌt͡ʃʉu̯d]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>itud</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to forms nouns of state, condition or quality.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ity</ns0:orth>
+        <ns0:pron>/əti/</ns0:pron>
+        <ns0:pron>/ɪti/</ns0:pron>
+        <ns0:pron>[əɾi]</ns0:pron>
+        <ns0:pron>[ɪɾi]</ns0:pron>
+        <ns0:pron>[ɾi]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>idad</ns0:quote>
+          <ns0:quote>dad</ns0:quote>
+          <ns0:quote>edad</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form an uncountable noun from an adjective; especially, to form the noun referring to the state, property, or quality of conforming to the adjective's description.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ive</ns0:orth>
+        <ns0:pron>/ɪv/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>iva</ns0:quote>
+          <ns0:quote>ivo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>An adjective suffix signifying relating or belonging to, of the nature of, tending to, or serving to; as: affirmative, active, conclusive, corrective, diminutive.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ization</ns0:orth>
+        <ns0:pron>/-əˈzeɪ.ʃən/</ns0:pron>
+        <ns0:pron>/-ˌaɪˈzeɪ.ʃən/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ización</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Forms nouns denoting the act, process, or result of doing/making what is denoted by the noun/adjective.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ize</ns0:orth>
+        <ns0:pron>/-aɪz/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>izar</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form verbs from nouns or adjectives, especially similative verbs</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>land</ns0:orth>
+        <ns0:pron>/lænd/</ns0:pron>
+        <ns0:pron>/lənd/</ns0:pron>
+        <ns0:pron>/lɪnd/</ns0:pron>
+        <ns0:pron>[lænd]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>landia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form the name of a territory, country, or region.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>latry</ns0:orth>
+        <ns0:pron>/-lətɹi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>latría</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>worship of</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>le</ns0:orth>
+        <ns0:pron>/l̩/</ns0:pron>
+        <ns0:pron>/əl/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>ear</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A frequentative suffix of verbs, indicating repetition or continuousness:</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>less</ns0:orth>
+        <ns0:pron>/ləs/</ns0:pron>
+        <ns0:pron>/lɪs/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>in</ns0:quote>
+          <ns0:quote>es-</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Lacking (something); without (something). Added usually to a noun to form an adjective signifying a lack of that noun.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>like</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>lgo</ns0:quote>
+          <ns0:quote>uasi-</ns0:quote>
+          <ns0:quote>ropio de</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Resembling, having some of the characteristics of (used to form adjectives from nouns).</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ling</ns0:orth>
+        <ns0:pron>/lɪŋ/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>illa</ns0:quote>
+          <ns0:quote>illo</ns0:quote>
+          <ns0:quote>ita</ns0:quote>
+          <ns0:quote>ito</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>small, immature, miniature</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>lite</ns0:orth>
+        <ns0:pron>/-ˌlaɪt/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>lita</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form the names of rocks and minerals.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>logical</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>lógico</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adjectival forms of nouns ending in -logy.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>logist</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>loga</ns0:quote>
+          <ns0:quote>logo</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A person who studies or is an expert in the related -logy.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>logy</ns0:orth>
+        <ns0:pron>/ləd͡ʒi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>logía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A branch of learning; a study of a particular subject.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>loquy</ns0:orth>
+        <ns0:pron>/ləkwi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>loquio</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(forming nouns) speaking, speech</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ly</ns0:orth>
+        <ns0:pron>/li/</ns0:pron>
+        <ns0:pron>[li]</ns0:pron>
+        <ns0:pron>[liː]</ns0:pron>
+        <ns0:pron>[lɪ]</ns0:pron>
+        <ns0:pron>[ɫiː]</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>oso</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adjectives from nouns, the adjectives having the sense of "behaving like, or having a nature typical of what is denoted by the noun" Similar in meaning to -like but most often paired with animate nouns.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>mente</ns0:quote>
+          <ns0:quote> lo</ns0:quote>
+          <ns0:quote>e manera</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Used to form adverbs from adjectives and nouns.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>lysis</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>lisis</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>decomposition or breakdown</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>mancy</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>mancía</ns0:quote>
+          <ns0:quote>mancia</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(fantasy) Variety of magic, especially that controlling or related to a specific element, substance, or theme.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>mania</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>manía</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>compulsion or obsession.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>maniac</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>mano</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>Indicating a person who experiences a type of compulsion or obsession.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>ment</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>suffix</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>miento</ns0:quote>
+          <ns0:quote>mento</ns0:quote>
+        </ns0:cit>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>meter</ns0:ort

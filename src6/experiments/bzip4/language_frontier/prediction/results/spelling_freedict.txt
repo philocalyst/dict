@@ -1,0 +1,4 @@
+command: python3 src6/experiments/bzip4/language_frontier/prediction/spelling_model.py src6/experiments/bzip4/bz4/data/freedict.train.bin src6/experiments/bzip4/bz4/data/freedict.eval8.bin /tmp/lpred-freedict.frame
+timing: /usr/bin/time -p; real=21.05 user=20.29 sys=0.12 (single serial run; descriptive only)
+output:
+input=src6/experiments/bzip4/bz4/data/freedict.eval8.bin train=src6/experiments/bzip4/bz4/data/freedict.train.bin input_bytes=8388608 input_sha256=6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8 frame_sha256=e7e3569c018af34c6fa220679f94a148cd0579171815da271929f80389dc3780 types=56468 pieces=256 header=64 model=3327 spelling=285230 events=3487070 total=3775691 roundtrip=ok

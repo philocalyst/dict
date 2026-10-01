@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_audit.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/final_audit.py",
+      "bytes": 5375,
+      "sha256": "63e65232fcfbba57c4ebf3bee808543cb87a92e3099a081e25fd7ee375a057be"
+    },
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/memory_profile.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/memory_profile.py",
+      "bytes": 3256,
+      "sha256": "42f088f289f26c1af7e7afd20370cf6e1008eeaf707b8a81db6acad515e2cf53"
+    },
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/work_profile.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/work_profile.py",
+      "bytes": 3355,
+      "sha256": "5c57b6060f59daeafd5906cb7cbf2ec7e9ada88de9a9b4f3bc5f19c2ca2a51ac"
+    },
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/model_budget_profile.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/model_budget_profile.py",
+      "bytes": 3438,
+      "sha256": "c39e8708c2782bf61109623c6e6ed1ee0b094b4a0022db6ee426e29fc31b9efd"
+    },
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_tables.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/final_tables.py",
+      "bytes": 4251,
+      "sha256": "24f646c3a70e04354bdec3b2dc566a4d9e94694936aec7759bf4e044deb2c508"
+    },
+    {
+      "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/post_analysis.py",
+      "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/post_analysis.py",
+      "bytes": 3055,
+      "sha256": "8bca217335914ac120808c6aab45ba21ff3ebb91080b2f5ec2ac42b82eee8c38"
+    }
+  ]
+}

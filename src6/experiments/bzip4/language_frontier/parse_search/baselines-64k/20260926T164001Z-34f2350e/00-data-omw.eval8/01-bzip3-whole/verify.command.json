@@ -1,0 +1,8 @@
+[
+  "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/quickbench/worker.py",
+  "decode",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/baselines-64k/20260926T164001Z-34f2350e/00-data-omw.eval8/01-bzip3-whole/decoder.json",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/baselines-64k/20260926T164001Z-34f2350e/00-data-omw.eval8/01-bzip3-whole/frame.bin",
+  "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/baselines-64k/20260926T164001Z-34f2350e/00-data-omw.eval8/01-bzip3-whole/decoded.bin"
+]

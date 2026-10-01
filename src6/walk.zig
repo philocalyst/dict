@@ -27,8 +27,12 @@ pub const Language = struct {
         const T = @TypeOf(value.*);
         const declaration = if (comptime std.meta.hasFn(T, "declaredLanguage"))
             value.declaredLanguage()
-        else if (comptime @typeInfo(T) == .@"struct" and @hasField(T, "meta"))
+        else if (comptime @typeInfo(T) == .@"struct" and @hasField(T, "meta") and
+            @FieldType(T, "meta") == model.Metadata)
             &value.meta.language
+        else if (comptime @typeInfo(T) == .@"struct" and @hasField(T, "language") and
+            @FieldType(T, "language") == model.Language)
+            &value.language
         else
             return parent;
         return resolve(parent, declaration);

@@ -1,0 +1,9 @@
+status: NATIVE_V4_BASELINE
+commands (serial, no timing run):
+  src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4 c src6/experiments/bzip4/bz4/data/freedict.untouched.bin /tmp/v4-freedict-untouched.bin 65536
+  src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4 c src6/experiments/bzip4/bz4/data/gcide.untouched.bin /tmp/v4-gcide-untouched.bin 65536
+  src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4 c src6/experiments/bzip4/bz4/data/omw.untouched.bin /tmp/v4-omw-untouched.bin 65536
+outputs:
+freedict.untouched input_bytes=1048576 compressed_bytes=92964 compressed_sha256=8aad93fb134b59c176d9eacdaf58354ad01c1799480ad09d7b2367846dee2a9d
+gcide.untouched input_bytes=1048576 compressed_bytes=196491 compressed_sha256=ee6475f9fa544845e062e9065310f890bec1d846fff9a0d4ec0e91331f431639
+omw.untouched input_bytes=1048576 compressed_bytes=67241 compressed_sha256=88e52d2fc22c19609b11dce2b57df7d30802517ca011ba6c4886e16fb40596fc

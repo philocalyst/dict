@@ -44,7 +44,7 @@ const semantic_entry: model.Entry = .{
         .{ .relation = .{
             .meta = .{ .id = "translation-claim" },
             .predicate = .translation,
-            .participants = &.{
+            .endpoints = .{ .participants = &.{
                 .{ .role = .{ .local = "source" }, .target = .{ .local = "sense-en" } },
                 .{ .role = .{ .local = "target" }, .target = .{ .local = "sense-fr" } },
                 .{ .role = .{ .local = "evidence" }, .target = .{ .unresolved = .{
@@ -53,7 +53,7 @@ const semantic_entry: model.Entry = .{
                     .expected = .{ .local = "claim" },
                     .display = "printed evidence",
                 } } },
-            },
+            } },
             .category = .{ .namespace = "urn:vartrans", .local = "near-equivalent" },
             .state = .disputed,
             .confidence = "0.500000000000000000000000000000000000",
@@ -61,7 +61,7 @@ const semantic_entry: model.Entry = .{
         .{ .relation = .{
             .meta = .{ .id = "support-claim" },
             .predicate = .evokes,
-            .target = .{ .local = "lexical-concept" },
+            .endpoints = .{ .binary = .{ .local = "lexical-concept" } },
         } },
         .{ .form = .{
             .meta = .{ .id = "lemma" },
@@ -186,8 +186,8 @@ test "typed semantic values roundtrip with origins, claims, structures and media
     try testing.expectEqual(@as(usize, 2), decoded.value.meta.origins.len);
     try testing.expect(decoded.value.meta.origins[0].operation == .split);
     try testing.expect(decoded.value.meta.origins[1].operation == .merged);
-    try testing.expectEqual(@as(usize, 3), decoded.value.content[0].relation.participants.len);
-    try testing.expect(decoded.value.content[0].relation.target == null);
+    try testing.expectEqual(@as(usize, 3), decoded.value.content[0].relation.endpoints.participants.len);
+    try testing.expect(decoded.value.content[0].relation.endpoints == .participants);
     try testing.expectEqualStrings("feature-structure", decoded.value.content[2].form.representations[0].features[0].value.structure.meta.id.?);
     try testing.expectEqualStrings("standard", decoded.value.content[2].form.representations[0].features[0].value.structure.fields[0].value.symbol.local);
     try testing.expectEqualStrings("01.2300", decoded.value.meta.certainty[0].asserted.?.decimal);
@@ -231,7 +231,7 @@ test "certainty uses scoped targets and exact probability boundaries" {
             .{ .target = .{ .local = "claim" }, .locus = .value, .degree = "1.000000000000000000000000000000000000", .given = &.{.{ .unresolved = .{ .identifier = "#prior" } }}, .evidence = &.{.{ .target = .{ .anchor = .{ .source = "doc", .start = 0, .end = 16 } } }} },
             .{ .target = .{ .local = "claim" }, .locus = .{ .source = .{ .source = "doc", .start = 0, .end = 16 } }, .degree = "0.999999999999999999999999999999999999" },
         } },
-        .content = &.{.{ .relation = .{ .meta = .{ .id = "claim" }, .predicate = .synonym, .target = .{ .unresolved = .{ .identifier = "target" } } } }},
+        .content = &.{.{ .relation = .{ .meta = .{ .id = "claim" }, .predicate = .synonym, .endpoints = .{ .binary = .{ .unresolved = .{ .identifier = "target" } } } } }},
     };
     try validate.check(testing.allocator, &good, .{ .sources = &extents });
 
@@ -256,11 +256,11 @@ test "n-ary role-labelled relations allow a targetless claim and preserve order"
             .{ .relation = .{
                 .meta = .{ .id = "claim" },
                 .predicate = .{ .custom = .{ .namespace = "urn:test", .local = "attestedBy" } },
-                .participants = &.{
+                .endpoints = .{ .participants = &.{
                     .{ .role = .{ .local = "source" }, .target = .{ .local = "sense" } },
                     .{ .role = .{ .local = "target" }, .target = .{ .unresolved = .{ .identifier = "urn:target" } } },
                     .{ .role = .{ .local = "witness" }, .target = .{ .iri = "https://example.test/witness" } },
-                },
+                } },
                 .category = .{ .local = "historical" },
                 .state = .disputed,
                 .confidence = "0.000000000000000000000000000000000001",
@@ -270,10 +270,10 @@ test "n-ary role-labelled relations allow a targetless claim and preserve order"
     };
     try validate.check(testing.allocator, &value, .{});
     const relation = value.content[0].relation;
-    try testing.expect(relation.target == null);
-    try testing.expectEqual(@as(usize, 3), relation.participants.len);
+    try testing.expect(relation.endpoints == .participants);
+    try testing.expectEqual(@as(usize, 3), relation.endpoints.participants.len);
     try testing.expectEqual(model.ClaimState.disputed, relation.state);
-    try testing.expectEqualStrings("witness", relation.participants[2].role.local);
+    try testing.expectEqualStrings("witness", relation.endpoints.participants[2].role.local);
 }
 
 test "forward IDs resolve, wrong relation target kind and missing locals fail" {
@@ -281,7 +281,7 @@ test "forward IDs resolve, wrong relation target kind and missing locals fail" {
         .id = "forward",
         .headword = "forward",
         .content = &.{
-            .{ .relation = .{ .predicate = .evokes, .target = .{ .local = "concept-later" } } },
+            .{ .relation = .{ .predicate = .evokes, .endpoints = .{ .binary = .{ .local = "concept-later" } } } },
             .{ .concept = .{ .meta = .{ .id = "concept-later" }, .reference = .{ .iri = "urn:concept" } } },
         },
     };
@@ -291,7 +291,7 @@ test "forward IDs resolve, wrong relation target kind and missing locals fail" {
         .id = "wrong-kind",
         .headword = "wrong-kind",
         .content = &.{
-            .{ .relation = .{ .predicate = .evokes, .target = .{ .local = "form" } } },
+            .{ .relation = .{ .predicate = .evokes, .endpoints = .{ .binary = .{ .local = "form" } } } },
             .{ .form = .{ .meta = .{ .id = "form" } } },
         },
     };
@@ -300,14 +300,14 @@ test "forward IDs resolve, wrong relation target kind and missing locals fail" {
     const missing: model.Entry = .{
         .id = "missing",
         .headword = "missing",
-        .content = &.{.{ .relation = .{ .predicate = .synonym, .target = .{ .local = "not-here" } } }},
+        .content = &.{.{ .relation = .{ .predicate = .synonym, .endpoints = .{ .binary = .{ .local = "not-here" } } } }},
     };
     try testing.expectError(error.UnresolvedLocal, validate.check(testing.allocator, &missing, .{}));
 
     const bad_unresolved: model.Entry = .{
         .id = "bad-unresolved",
         .headword = "bad-unresolved",
-        .content = &.{.{ .relation = .{ .predicate = .synonym, .target = .{ .unresolved = .{ .identifier = "" } } } }},
+        .content = &.{.{ .relation = .{ .predicate = .synonym, .endpoints = .{ .binary = .{ .unresolved = .{ .identifier = "" } } } } }},
     };
     try testing.expectError(error.InvalidIdentity, validate.check(testing.allocator, &bad_unresolved, .{}));
 }

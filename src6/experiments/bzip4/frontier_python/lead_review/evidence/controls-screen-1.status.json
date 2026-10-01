@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/controls_screen.py"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 1305090667,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 2612,
+    "sha256": "7541caf27aae4d31a513778bbce408ea5ecc72a2f996ea765aa835e10a767c7b"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/evidence/controls-screen-1.stdout.bin",
+  "stderr_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/evidence/controls-screen-1.stderr.bin",
+  "status_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/evidence/controls-screen-1.status.json"
+}

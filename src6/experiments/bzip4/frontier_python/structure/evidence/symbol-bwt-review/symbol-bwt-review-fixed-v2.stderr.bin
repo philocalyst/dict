@@ -1,0 +1,12 @@
+test_empty_and_raw_fallback_roundtrip_and_access_bounds (test_symbol_bwt_review.SymbolBwtReviewTests.test_empty_and_raw_fallback_roundtrip_and_access_bounds) ... ok
+test_encoder_rejects_block_count_before_record_work (test_symbol_bwt_review.SymbolBwtReviewTests.test_encoder_rejects_block_count_before_record_work) ... ok
+test_exact_huffman_tail_and_resealed_bit_counts (test_symbol_bwt_review.SymbolBwtReviewTests.test_exact_huffman_tail_and_resealed_bit_counts) ... ok
+test_integer_bwt_matches_independent_rotation_oracle (test_symbol_bwt_review.SymbolBwtReviewTests.test_integer_bwt_matches_independent_rotation_oracle) ... ok
+test_model_contains_complete_grammar_and_event_state (test_symbol_bwt_review.SymbolBwtReviewTests.test_model_contains_complete_grammar_and_event_state) ... ok
+test_resealed_event_model_and_root_directory_ids_reject (test_symbol_bwt_review.SymbolBwtReviewTests.test_resealed_event_model_and_root_directory_ids_reject) ... ok
+test_resealed_grammar_forward_reference_and_dag_capacity_bombs_reject (test_symbol_bwt_review.SymbolBwtReviewTests.test_resealed_grammar_forward_reference_and_dag_capacity_bombs_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.191s
+
+OK

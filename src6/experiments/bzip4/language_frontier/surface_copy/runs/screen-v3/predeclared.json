@@ -1,0 +1,146 @@
+[
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 0,
+    "start": 1
+  },
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 0,
+    "start": 2
+  },
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 0,
+    "start": 3
+  },
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 1,
+    "start": 1
+  },
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 1,
+    "start": 2
+  },
+  {
+    "policy": 0,
+    "frontier": 8,
+    "survival": 1,
+    "start": 3
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 0,
+    "start": 1
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 0,
+    "start": 2
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 0,
+    "start": 3
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 1,
+    "start": 1
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 1,
+    "start": 2
+  },
+  {
+    "policy": 0,
+    "frontier": 32,
+    "survival": 1,
+    "start": 3
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 0,
+    "start": 1
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 0,
+    "start": 2
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 0,
+    "start": 3
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 1,
+    "start": 1
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 1,
+    "start": 2
+  },
+  {
+    "policy": 1,
+    "frontier": 8,
+    "survival": 1,
+    "start": 3
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 0,
+    "start": 1
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 0,
+    "start": 2
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 0,
+    "start": 3
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 1,
+    "start": 1
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 1,
+    "start": 2
+  },
+  {
+    "policy": 1,
+    "frontier": 32,
+    "survival": 1,
+    "start": 3
+  }
+]

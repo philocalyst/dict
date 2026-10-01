@@ -52,11 +52,11 @@ test "plain rendering and UTF-8 snippets do not discard mixed content" {
 }
 
 test "local semantic links cannot point to missing or wrongly typed nodes" {
-    var value: model.Entry = .{ .id = "x", .headword = "x", .content = &.{.{ .relation = .{ .predicate = .evokes, .target = .{ .local = "missing" } } }} };
+    var value: model.Entry = .{ .id = "x", .headword = "x", .content = &.{.{ .relation = .{ .predicate = .evokes, .endpoints = .{ .binary = .{ .local = "missing" } } } }} };
     try testing.expectError(error.UnresolvedLocal, validate.check(testing.allocator, &value, .{}));
     value.content = &.{
         .{ .form = .{ .meta = .{ .id = "form" } } },
-        .{ .relation = .{ .predicate = .evokes, .target = .{ .local = "form" } } },
+        .{ .relation = .{ .predicate = .evokes, .endpoints = .{ .binary = .{ .local = "form" } } } },
     };
     try testing.expectError(error.InvalidReferenceKind, validate.check(testing.allocator, &value, .{}));
     value.content = &.{ .{ .sense = .{ .meta = .{ .id = "same" } } }, .{ .sense = .{ .meta = .{ .id = "same" } } } };

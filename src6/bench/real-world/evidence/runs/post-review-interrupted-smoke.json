@@ -1,0 +1,29 @@
+{
+  "schema": "real-world-run-attempt-v1",
+  "status": "interrupted-before-result",
+  "phase": "fresh-post-review-correctness-smoke",
+  "started_at_utc": "2026-09-19T15:59:00Z",
+  "interrupted_at_utc": "2026-09-19T15:59:22Z",
+  "command": [
+    "nix",
+    "develop",
+    ".#",
+    "--command",
+    "python3",
+    "src6/bench/real-world/smoke.py",
+    "--corpora-root",
+    "src6/bench/real-world/evidence/corpora",
+    "--artifact-root",
+    "/private/tmp/dictionary-real-world-current",
+    "--runner",
+    "src6/bench/real-world/zig-out/bin/real-lex6",
+    "--output",
+    "src6/bench/real-world/evidence/runs/main-smoke-post-review.json",
+    "--all-exact-queries"
+  ],
+  "reason": "turn execution was aborted while the pinned environment launch was still resolving; no timing phase ran",
+  "partial_artifact_root": "/private/tmp/dictionary-real-world-current",
+  "partial_corpora": ["freedict-eng-spa"],
+  "result_file_written": false,
+  "timing_collected": false
+}

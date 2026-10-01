@@ -1,0 +1,25 @@
+{
+  "bzip3_binary": {
+    "bytes": 484328,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+    "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+  },
+  "candidate_policy_frozen": {
+    "em_rounds": 2,
+    "max_piece": 8,
+    "max_vocab": 256,
+    "min_occ": 2,
+    "modes": [
+      "map",
+      "marginal"
+    ]
+  },
+  "confirmation_policy": "TRAIN confirmation-20 resources are not listed, read, or benchmarked by this run.",
+  "input_policy": "seven exact first-65536-byte prefixes; same bytes must feed MAP, marginal, and bzip3 controls",
+  "purpose": "Exact 64 KiB development-prefix preflight for weighted-emission candidate screen.",
+  "run_id": "wam-screen-preflight-20260926",
+  "sample_count": 7,
+  "schema": 1,
+  "successful_samples": 7,
+  "timing_policy": "No harness clocks; bzip3 raw timing fields are retained but ignored."
+}

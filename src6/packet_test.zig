@@ -51,7 +51,7 @@ fn richEntry() model.Entry {
                     } },
                     .{ .relation = .{
                         .predicate = .synonym,
-                        .target = .{ .entry = .{ .id = "hue", .fragment = "sense-1" } },
+                        .endpoints = .{ .binary = .{ .entry = .{ .id = "hue", .fragment = "sense-1" } } },
                         .state = .inferred,
                         .confidence = "0.875",
                     } },
@@ -103,10 +103,10 @@ test "canonical scalar codec rejects malformed values" {
     union_bytes[5] = 9;
     try std.testing.expectError(error.InvalidUnionTag, packet.decode(UnionBox, allocator, union_bytes, .{}));
 
-    const noncanonical = "LXP6\x01\x80\x00";
+    const noncanonical = "LXP6\x02\x80\x00";
     try std.testing.expectError(error.NonCanonicalVarint, packet.decode(u64, allocator, noncanonical, .{}));
-    try std.testing.expectError(error.Truncated, packet.decode(u64, allocator, "LXP6\x01\x80", .{}));
-    try std.testing.expectError(error.TrailingBytes, packet.decode(u8, allocator, "LXP6\x01\x00\x00", .{}));
+    try std.testing.expectError(error.Truncated, packet.decode(u64, allocator, "LXP6\x02\x80", .{}));
+    try std.testing.expectError(error.TrailingBytes, packet.decode(u8, allocator, "LXP6\x02\x00\x00", .{}));
 }
 
 test "enum and union tags use declaration ordinal rather than numeric tag value" {
@@ -155,7 +155,7 @@ test "string work accounting is symmetric at the exact boundary" {
 test "large zero-sized slice is rejected by work before arena allocation" {
     // Canonical varint for 1,048,576, with no elements following because the
     // element type is void. The logical work bound rejects it immediately.
-    const bytes = "LXP6\x01\x80\x80\x40";
+    const bytes = "LXP6\x02\x80\x80\x40";
     try std.testing.expectError(error.WorkLimit, packet.decode([]const void, std.testing.allocator, bytes, .{
         .max_slice_length = 2_000_000,
         .max_work = 32,

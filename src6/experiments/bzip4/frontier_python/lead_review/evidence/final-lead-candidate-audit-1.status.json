@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "src6/experiments/bzip4/frontier_python/lead_review",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 2333839584,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 1301,
+    "sha256": "156b4dee253b6c270ed26c3bf3e34eefa510a97b8b44542536ce81157f671676"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/final-lead-candidate-audit-1.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/final-lead-candidate-audit-1.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/final-lead-candidate-audit-1.status.json"
+}

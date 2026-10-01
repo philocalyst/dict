@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "src6/experiments/bzip4/language_frontier/quickbench/bench.py",
+    "src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "--limit",
+    "16384",
+    "--candidate",
+    "src6/experiments/bzip4/language_frontier/parse_search/adapter.py",
+    "--cache",
+    "src6/experiments/bzip4/language_frontier/parse_search/cache",
+    "--output",
+    "src6/experiments/bzip4/language_frontier/parse_search/quick-16k",
+    "--dependency",
+    "src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+    "--dependency",
+    "src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4"
+  ],
+  "bzip3": "vendored 1.5.1 native blocks, B3PY envelope = 32 + 16*blocks; not upstream .bz3 framing",
+  "cache": "encode only; each hit rehashed and decoded in a new process",
+  "timing": "fresh Python worker + imports + codec startup + file I/O + full decode; verification hash outside timer"
+}

@@ -1,0 +1,9 @@
+# Build/interpreter products are reproducible and not benchmark evidence.
+.zig-cache/
+zig-out/
+__pycache__/
+*.pyc
+
+# Corpora bulk data is regenerable via prepare.py; manifests are retained.
+evidence/corpora/*/projection.tsv
+evidence/corpora/*/rows.jsonl

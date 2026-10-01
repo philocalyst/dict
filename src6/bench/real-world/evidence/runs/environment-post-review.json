@@ -1,0 +1,2404 @@
+{
+  "schema": 1,
+  "status": "environment-inventory",
+  "timing": "not run",
+  "recorded_at_utc": "2026-09-19T16:45:10Z",
+  "platform": {
+    "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.1.8 ]",
+    "python_executable": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/bin/python3",
+    "python_prefix": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env",
+    "sysconfig_purelib": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/lib/python3.14/site-packages"
+  },
+  "commands": [
+    {
+      "name": "zig",
+      "path": "/nix/store/j3fyiv1i1hb713k2p5q0pxmnv4bral9w-zig-0.16.0/bin/zig",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/j3fyiv1i1hb713k2p5q0pxmnv4bral9w-zig-0.16.0/bin/zig",
+        "resolved_path": "/nix/store/j3fyiv1i1hb713k2p5q0pxmnv4bral9w-zig-0.16.0/bin/zig",
+        "exists": true,
+        "bytes": 210671776,
+        "sha256": "34390b3bf92055a4a648753cb7666d423782433b476b55c8b77c2de87ce0383a",
+        "sha512": "23c87a0b5cab492b693a4137066d3e2965c79fe9d448d8e8eda94dd4bb06b947577bd39de7b4962e6341120afb82a1ca17cc5ec1891f48864e6ba45557b973b1"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/j3fyiv1i1hb713k2p5q0pxmnv4bral9w-zig-0.16.0/bin/zig",
+          "version"
+        ],
+        "returncode": 0,
+        "stdout": "0.16.0\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "nix",
+      "path": "/run/current-system/sw/bin/nix",
+      "available": true,
+      "binary": {
+        "path": "/run/current-system/sw/bin/nix",
+        "resolved_path": "/nix/store/5nxlrg7snzpbxsv5b6whzfsrfya59lip-lix-2.95.2/bin/nix",
+        "exists": true,
+        "bytes": 4132208,
+        "sha256": "79ef7623fb2e47fe9059f75329eebde958a734ff6a42e461c2e048629ee5d352",
+        "sha512": "636180d688bf8c3ed632ea5b268bb99ae3fb73d0693af92bab3deaa86ca5bd24c970776044721d875770e6f5478fa25c604aa40e3f19b1678551b7aab05c29d9"
+      },
+      "version": {
+        "argv": [
+          "/run/current-system/sw/bin/nix",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "nix (Lix, like Nix) 2.95.2\nSystem type: aarch64-darwin\nAdditional system types: aarch64-linux, x86_64-linux\nFeatures: gc, signed-caches\nSystem configuration file: /etc/nix/nix.conf\nUser configuration files: /Users/mileswirht/.config/nix/nix.conf:/Users/mileswirht/.nix-profile/etc/xdg/nix/nix.conf:/etc/profiles/per-user/mileswirht/etc/xdg/nix/nix.conf:/run/current-system/sw/etc/xdg/nix/nix.conf:/nix/var/nix/profiles/default/etc/xdg/nix/nix.conf\nStore directory: /nix/store\nState directory: /nix/var/nix\nData directory: /nix/store/5nxlrg7snzpbxsv5b6whzfsrfya59lip-lix-2.95.2/share\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "sdcv",
+      "path": "/nix/store/28608gb56nba90n06x84rxp8lv574z3h-sdcv-0.5.5/bin/sdcv",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/28608gb56nba90n06x84rxp8lv574z3h-sdcv-0.5.5/bin/sdcv",
+        "resolved_path": "/nix/store/28608gb56nba90n06x84rxp8lv574z3h-sdcv-0.5.5/bin/sdcv",
+        "exists": true,
+        "bytes": 154208,
+        "sha256": "187b453522b5aad8a97166ca30cf5f1df92bd5be7ce04e80f76dde37b5bf8129",
+        "sha512": "caf424200fe4354081bb3b46922aa22447cd9d4a1eae6b77d208abd01469aaa0cec1b4c5529450bab9f1d445f60ee0417d9c10000197723f7f63088d3ade23e8"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/28608gb56nba90n06x84rxp8lv574z3h-sdcv-0.5.5/bin/sdcv",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "Console version of Stardict, version 0.5.5\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "dict",
+      "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dict",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dict",
+        "resolved_path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dict",
+        "exists": true,
+        "bytes": 110128,
+        "sha256": "b0691e1ed2f73b38f5b101b62a65d7286b65ce92b48a3fc862b7bb7bf9609ff6",
+        "sha512": "f6a7f172644239c194390b9491e461b781464b98d17f596e85f7d06136b868300717ab1dcdaf7d490220e0700b911073b9521943d7824b50f9a7a45b68c2ee91"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dict",
+          "--version"
+        ],
+        "returncode": 1,
+        "stdout": "dict 1.13.3/rf on Darwin 24.6.0\nCopyright 1997-2002 Rickard E. Faith (faith@dict.org)\nCopyright 2002-2007 Aleksey Cheusov (vle@gmx.net)\n\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "dictunformat",
+      "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictunformat",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictunformat",
+        "resolved_path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictunformat",
+        "exists": true,
+        "bytes": 4862,
+        "sha256": "bf26be73de0fb6e89b2d2058dd5d2710a8376fb4e7beeb43ee8d25824a0bf896",
+        "sha512": "d73e72cc5329d9d8880ca026d56a18062e8e094ca161d0cb5bbc934ce5078089863599db866e377c23905c7eba51027550580971530bba6874dc47309e24813e"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictunformat",
+          "--version"
+        ],
+        "returncode": 127,
+        "stdout": "",
+        "stderr": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictunformat: line 11: exec: gawk: not found\n"
+      }
+    },
+    {
+      "name": "dictzip",
+      "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictzip",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictzip",
+        "resolved_path": "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictzip",
+        "exists": true,
+        "bytes": 54192,
+        "sha256": "df879cde4e533f9c163b6f2faeaad9ab4ad212782b1a00284450d689c1681083",
+        "sha512": "5c4d8ead96b64f0aae24416da7409322755dc80e195c9330e60cb2d68ce8571d502ffe64bcddacfb2d90287a7fea512345564eac25b1480c94cbacbc52b4cd10"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/krj4b2qzq617m6yc30c1gmz06avsj19p-dictd-1.13.3/bin/dictzip",
+          "--version"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "dictzip 1.13.3\nCopyright 1996-2002 Rickard E. Faith (faith@dict.org)\nCopyright 2002-2007 Aleksey Cheusov (vle@gmx.net)\n\n"
+      }
+    },
+    {
+      "name": "sqlite3",
+      "path": "/usr/bin/sqlite3",
+      "available": true,
+      "binary": {
+        "path": "/usr/bin/sqlite3",
+        "resolved_path": "/usr/bin/sqlite3",
+        "exists": true,
+        "bytes": 4311872,
+        "sha256": "49b7101c03d178374be95d703f422de2c5fb40fdbcb6f4cb4b35369d0cc696a5",
+        "sha512": "bd79af4f6c4656ad813441272fd81fbb6559d82975ee82987371b8fc1338520c220209fb7ec21c73daeb22dd412b02069272098a65fcb9a16c815f5926cf2dc2"
+      },
+      "version": {
+        "argv": [
+          "/usr/bin/sqlite3",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "3.43.2 2023-10-10 13:08:14 1b37c146ee9ebb7acd0160c0ab1fd11017a419fa8a3187386ed8cb32b709aapl (64-bit)\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "python3",
+      "path": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/bin/python3",
+      "available": true,
+      "binary": {
+        "path": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/bin/python3",
+        "resolved_path": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/bin/python3.14",
+        "exists": true,
+        "bytes": 50488,
+        "sha256": "97d59e59965e3d1389ca756cbdbbf6115a10a0b2994dccf17be27dcab049ff89",
+        "sha512": "f3b369f5a18578cb9d53443901fdc09bc0b2f7e8b359a9f3a7a0304efe1e0e1b516b04b747380b632e94aff67edb3dd388384e7742882390b6bcd536611733ad"
+      },
+      "version": {
+        "argv": [
+          "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/bin/python3",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "Python 3.14.7\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "python_modules": [
+    {
+      "name": "slob",
+      "available": true,
+      "origin": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/lib/python3.14/site-packages/slob.py",
+      "file": "/nix/store/hg64hv3b3w5s54rlv03pka7187c5bpaa-python3.14-slob-0-unstable-2024-04-19/lib/python3.14/site-packages/slob.py"
+    },
+    {
+      "name": "icu",
+      "available": true,
+      "origin": "/nix/store/2hws21m1nhasfb5306fwn4iflhalw5rw-python3-3.14.7-env/lib/python3.14/site-packages/icu/__init__.py",
+      "file": "/nix/store/4xldmvqrknj6v89v0m1b778k7yhq8ld2-python3.14-pyicu-2.16.2/lib/python3.14/site-packages/icu/__init__.py",
+      "__version__": "2.16.2",
+      "VERSION": "2.16.2",
+      "ICU_VERSION": "78.3"
+    }
+  ],
+  "runtime_versions": {
+    "sqlite3_python": "3.53.3",
+    "python_zlib": "1.3.2"
+  },
+  "source_inputs": {
+    "source_manifest": {
+      "path": "/private/tmp/dictionary-real-world-cache/source-manifest.json",
+      "resolved_path": "/private/tmp/dictionary-real-world-cache/source-manifest.json",
+      "exists": false
+    },
+    "sources": [],
+    "status": "unavailable-source-manifest"
+  },
+  "harness_sources": {
+    "owned_harness": [
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/.gitignore",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/.gitignore",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 114,
+        "sha256": "341279a746cb0e96aebd5aa637b94cd9077a5d8899e6fcbd587d4a818290dc6e",
+        "sha512": "d44f77b6e4ec3dd9464507ad837fb0d7a6dff4fca0dc6155b60dd93324cc31b1eb8ef5b0c3d14682a4e0b36bf7c99a3c8abafeaff2ffd9ed235bcdd1b7e4fe7a"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/README.md",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/README.md",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 8934,
+        "sha256": "b6a9f1766f0333e0abcbd971343fac7976adc1a7bc2ccdbcb652f27635406a15",
+        "sha512": "fda82bc63af5c41d4e93463e550db36d3e26798fc4ef9d3f508dcb5069650cb123b4d1b1aaaf6b2b863ad4f2a78d4827d97fc9900797fd4d48115ed0a36ef8c3"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/manifest.json",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/manifest.json",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 3705,
+        "sha256": "c745628453f2809e5de3a83b0f849211abe3c7daf1228cb4ea110ec3bf213935",
+        "sha512": "60a6014953c28912a0db0feb36032d59a28d00d7035b22c3d501503a5f37c02d7403d6ed83ec918d98c4a194389ee3f34fb7288e8626e14ca941c8a615c1ccb0"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/prepare.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/prepare.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 26612,
+        "sha256": "c3460dbf8717be09806e5e5416dc163e8fcd6a04d6fd165f4ab8aec630a5dfc2",
+        "sha512": "59acf99c25482c838f9123dbe9a109443721aba58ab375d4d28cc104b79591cc205f125d075b26d6906ac6656cffd8d0cd5ae848d74938c04971086503338524"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/formats.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/formats.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 47900,
+        "sha256": "1b6a1c9a74d3f5da5aa7af7cd47e2ba9e29a5fcd231ff2f105a6ad8d55f7eade",
+        "sha512": "e06bb3b5d5c13249e4e59f3e4ff4c9a83e5e747a26e6e843374ebe78fc674a400c40b5eea4d1a9c40cf5b4e1b3f567f646257f3f7ec6dad5318c3a6a4e0fe5f7"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/smoke.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/smoke.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 12846,
+        "sha256": "c3bc955bfc90813e8474759113fe7dffbc9fcf10a3db1b65c09f4165b3806be7",
+        "sha512": "bdee6ff20848a6dc89c0a66659b4ef3a9d3cdc35421a0b058a56b1a4ec0dc5c7bbb6d4b8a826a27166a99a82ab734d26641e7edc767400608b050e988aca18a5"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/sweep.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/sweep.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 7709,
+        "sha256": "656c49842d909c14eb33e9c1f58b73a8eaa735d09b79014e95508dcd620b6469",
+        "sha512": "de1fddcecc89abd604e438360443e8f8fd6ee136cd0d381eea36b8d85d2fe552a004521359534b889423506fb8f72f31f0c77fcb498ab35cf72ab3d6c06b1fd6"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/runner.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/runner.zig",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 52168,
+        "sha256": "6cfc25d87e8c16a1f25fa92f1c7eeab779062ea529c79c2bd5369cc263c5c3e8",
+        "sha512": "bca5a00b6560df0db86656bcc8e9b003c057edd505785427eb649c4e75f3768c1cc0ce0edcf7003d8478720d897690213b096492d2074bc2edf8cafc8cea3656"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/build.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/build.zig",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 914,
+        "sha256": "d9b9c43e7e47d265773408b43a6351842974fc91c58971569321479172e91de2",
+        "sha512": "458a134429e9bda1e370c3f4cb8568a01af3865c32deeedb21f919e4060926e293c4ad8f924a7c015bf3ccb54fb6813136dca94074e81f43cbf0684da9c2e008"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/test_prepare.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/test_prepare.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 4643,
+        "sha256": "e178b51f6f8a58f5e1171e57e7499bc6289611d553353bd750fa6b80eaf4c085",
+        "sha512": "d509adb148977762d3b83439b7f87ddcaea26490266e086aa5713767fdf84651d8d69165d0ee939294b71c2c736e080b3e4f3fa18653dba2d4e3972e305376f9"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/legacy_probe.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/legacy_probe.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 6505,
+        "sha256": "3469e4cf5b4f5b827dd26cb9c340b8ce5f37c661e780619c5d548e34d6864678",
+        "sha512": "12c1d95945b15fb36f4aad368a83c586a4daa1c9c9c023141a52b134340d3bbf657e900959c6b0d08b331f2a31d1f116bd2c182771f9dec38158adda0d9968d1"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/inventory.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/inventory.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 12321,
+        "sha256": "8a6007daeb5697f7ccd36e792b6dbfc9f3f1ab0767c06845e381b5c7fa7ce55f",
+        "sha512": "a91ea4305c2cac83b335b16687380e5f5078fb6796f9870aa79aaa7135a8b87138394fa0eb4c12c516a85905b8a4d23b6b1be54d536e9dd3d25bb380df0e0428"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/measure.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/measure.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 48212,
+        "sha256": "4f5dd6f68d813c0fec0cdd473a59a6c9d3cf82d8fa374f467885a1541382ccb4",
+        "sha512": "bdddad0b233f43dbceb688ee826d3f77e0abdf20a6f612b191b10dc4b4fe222aac17d61d4369ee1ea6186312cf1c0e1a6f95f3338337e3e3fd892b5ab624d0b5"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/report.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/report.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 50110,
+        "sha256": "a65f7cdbebba8c71920463a116bbad856232c4febad75a48f74d8c53583462ae",
+        "sha512": "5f9a6dc32675a84454754551705b8ad3309bb6cb1a19567c2daaf853bebbe2c697e6a92ac4146e9150a850fc070e14ced9b324cf42761efbda95960bba4c7efa"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/verification.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/verification.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 2343,
+        "sha256": "81bf7a9eb693903cf16f6dd79545c428aa36ed15221381cb2573c3541c3feb12",
+        "sha512": "880fd203e34a307373e5836fcee13bf47de3e2a7dc641f51d62d0c551568fddab8ba1dbd620e68edb1d2f49efaf7548f58e899f00a4b792cf13a6f56155a8051"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/fairness_audit.py",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/fairness_audit.py",
+        "exists": true,
+        "label": "owned-harness-source",
+        "bytes": 11375,
+        "sha256": "90b40a09619ceb5e729062e37d64de5617d5b44ebaf2fc7a66a98532000083a1",
+        "sha512": "b015f670e33121f4621662c1ede68faa70da2e41c92c3c26515e99aed1c7c73b682b21f89a6fd98af83466f8e5dda4fd2f7a89662cbf159761289444228f9ac2"
+      }
+    ],
+    "production_and_build_inputs": [
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/root.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/root.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 758,
+        "sha256": "d9fab813982de05e44c044af4ce1783aa9ed4781fbc1347d573d18ce5444d3ac",
+        "sha512": "1ea15e1a7d0bc70175287db62552117999f2ab0621cef6af4f26b580d70fe1e8337dfe4a1291e8b3786c7dafb247cb64ff8f0b65a221e63ccfae6b1ff436607b"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/archive.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/archive.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 62410,
+        "sha256": "f95dc397a9122dd6ad4b3f36c5f7be09227734288ca6053dd5f41229940159ed",
+        "sha512": "4af06755dc18681d3daed8afad07afd87f11596adb8f03e2077515a647e90515040ed0cdb7f132a1e9b1f6f2ff8551bb6957e490cf7c7cb1ca67dc84b49fd723"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/compression.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/compression.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 10608,
+        "sha256": "f46c9d65a3e48f54515e487721643555ed611f1fb1b59bec37b9dd3ba92a414d",
+        "sha512": "2de24da7b6edb461ba47f87b5e4f72999562d4a33c00fbe1947e5340dbe229da42e6ae81c580fae6ebd7bebf1af0d4531bccc689800b6e34ba1070a26d91968e"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/model.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/model.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 12512,
+        "sha256": "c7dbba98b517022e8ed35d9246a3f07232475317890215004d6fce15c38e805f",
+        "sha512": "3be5164332353bf4a66cda938fd5d5b304834f919e33fda349b0e40d0693253afe30ce630d389e454eec301b9029054949a3cf1801cc2ef566a5085b56672ec4"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/packet.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/packet.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 13854,
+        "sha256": "624a40b0bcdbe0e70694919b5850e9688d87f1fde0e7cdb7894047ffab4d2c7d",
+        "sha512": "e7c8114b5f58d4be8832162639dbe004884a1c80766e42ad65a655a825c70d5e87947e0db2b6e138499eed853e788bd384a2854db6c179f0fbfa3bdfc5a0141a"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/query.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/query.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 13185,
+        "sha256": "39a4aae8889b93754b668d1c18711f3279634c0c4c94943e1ebb6afa815a5d87",
+        "sha512": "13c4b09ea4c67a2f855259670baeede3d98ba72b8914ff6575a8a15210ed5f114227ccc07a9995c5fc884af936843460cd07ca775e11a02942376ad61f7fc366"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/render.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/render.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 5837,
+        "sha256": "d262e9b9f4795e3d7029d4871a67f83f39be6d2ab1b277d1e9216d2c7ebfe51c",
+        "sha512": "3dcada0d893d71076e04056553165df603c8cabac4dda87fe491fe8b1af323d31b57d5cbf74a3adfff7158aef5b6042d5975cdbe7d074e1419614412e1eca072"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/validate.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/validate.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 23571,
+        "sha256": "7d1054cc612c91d2f2eb3321365984a1a149cfebb7ad4587186d1d40cd73b315",
+        "sha512": "98692dd68c26cf0adc15e4bb18fcbc6e2fcc7c287eef849920bf2735efc9d76ff9941db0176143380e286ae402fb3a1ecc07995c8e6ce94d6ed6d2e79f335b5d"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/walk.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/walk.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 4206,
+        "sha256": "2f916b4957c920169549124adb7856dfe7285648403ac4314098738aaa02ba7c",
+        "sha512": "9860f2d0a3bcb7a6124c5455f35780cb7c4c07a340891f13636f5243716352ae0a2e6e373134426f40ab44743e5f304d947aadda05a14521ddb4d8b274058973"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/build6.zig",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/build6.zig",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 2483,
+        "sha256": "9758a79ebc1955a14d10e4175572bdd87a1782c291363d39ec691c2f4c939f2d",
+        "sha512": "5d7b83a42dc584ca398ac5c67640dbc134e5e83d5bf100b1cbde3eaaa838f7a29c34b5c1c727d55106bbb367bc42c733afa8ad6a36d5bbf6a9486f82df574b51"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/flake.nix",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/flake.nix",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 1112,
+        "sha256": "95f79f1475b85da70ed0e96f082e7b887cd17bfb4bf70a9f13a10e129e809fce",
+        "sha512": "22fe3da6991f8e7b34df63f2991217049860eec21259e439e62ad57a8df6b292b2a146567a7267cfcb11b0d09f53f277bc24dab79e826be6f0b0a495903f91a5"
+      },
+      {
+        "path": "/Users/mileswirht/Downloads/dictionary/flake.lock",
+        "resolved_path": "/Users/mileswirht/Downloads/dictionary/flake.lock",
+        "exists": true,
+        "label": "production-or-build-input",
+        "bytes": 567,
+        "sha256": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d",
+        "sha512": "fab909fc4d8b8377d68e1915138e658639500782040ff641df7e9ad1f17201eb654610024e90da6457301d2f870147d29cc85aff3294fbb50e62dbc497693718"
+      }
+    ],
+    "bzip3_vendor_tree": {
+      "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3",
+      "exists": true,
+      "files": 55,
+      "bytes": 7500421,
+      "file_records": [
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.clang-format",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.clang-format",
+          "exists": true,
+          "bytes": 209,
+          "sha256": "ee7c76a31ec8cadcfe6c11a715bf0c1a72c0f82b3b106f4b31170f5ec82f6796",
+          "sha512": "bed5104323f0014877541230efe1fe1062bc19e8916110770c365b4e39f22d8ef8c23719dc49f04c906a8d91d7d43631fda34352f539fbf6f31f9a1690017792"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.gitattributes",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.gitattributes",
+          "exists": true,
+          "bytes": 30,
+          "sha256": "8ea76fcd8ca3c8c42260336339d60e6e626434764b72c25279e6dae7f401dc37",
+          "sha512": "373fff004beeb72906695168786f141ea9a0745f5ce8e6d5bc7d670c613db6ca6f80eacb83675f9de6c6ba943d335b902f4c01b17eea6865b7198e0c3cd5586f"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.github/workflows/build.yml",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.github/workflows/build.yml",
+          "exists": true,
+          "bytes": 4684,
+          "sha256": "9cd206861efae8338f58ff67431bd6c632c4cae092f083bcf5fa7e8778aee75c",
+          "sha512": "0c91ee2129eb924c2c4fcfaf36fe991153c5ce091a72c522373f5f66d6806804f974e36beb9af5f39df76e2ed4aed6f29ef46c0d04683bbe44538485dba527f0"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.github/workflows/release.yml",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.github/workflows/release.yml",
+          "exists": true,
+          "bytes": 2778,
+          "sha256": "b898c293ff79397041b02350569fecdbbbcbe8ef35b62f9179e8b28a07177462",
+          "sha512": "303cd6ea7337f62e1c726736c9f9b26968cd360a30a6a2b3d6697014cb3bc9637babc21e78b171b1b36994faa0127f564ca230268aae8c14f11121cadadc63e4"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.gitignore",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/.gitignore",
+          "exists": true,
+          "bytes": 715,
+          "sha256": "5bfad5778fae534b2ffe9e8c5602e4878c43e8499ecbcf9fbd9ff485ff1f42c3",
+          "sha512": "77f6572c0c7e3cc3845766f7927bab9674d7b7ce1b00a9a8196c5fe01c191968847bca7b1d3e6bff86ba6dbf341e95c7c5dbe8313f046e986895f5624f97c415"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/3rdparty/libsais-LICENSE",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/3rdparty/libsais-LICENSE",
+          "exists": true,
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "sha512": "98f6b79b778f7b0a15415bd750c3a8a097d650511cb4ec8115188e115c47053fe700f578895c097051c9bc3dfb6197c2b13a15de203273e1a3218884f86e90e8"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/CMakeLists.txt",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/CMakeLists.txt",
+          "exists": true,
+          "bytes": 4542,
+          "sha256": "31c956f1b9606a11ace1ba8769a03c530cdd48f8d7e18ec71b93707f4e7dd475",
+          "sha512": "754ab9dd81ef6101d2b51710dd5bab7e0466621ec94cc320f970b16430d3f2128533537f04aa9751db826060e673620ab49bd5850e62f06746ab52684b5cdd4b"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/LICENSE",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/LICENSE",
+          "exists": true,
+          "bytes": 7652,
+          "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "sha512": "6a21e9f6706dacb99162dd4c70ec704e3fdf283b93ca2cc1521e08e55e0727db4c7384d027d54739f100cd26c8d3d5be717715c6b21086a9bb22efb893c34fcf"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/Makefile.am",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/Makefile.am",
+          "exists": true,
+          "bytes": 2241,
+          "sha256": "4d8633243ffe47e67de15badae9a85bca7b9b270a2bc6237e3eb410ed8ca12b7",
+          "sha512": "147ab3d5bbdf6af4ad687e176cb7ec58c7e2fedf83574f035a7b3466306bced3734496a6d736acb834fec24352f0b0f10792d440eb6b62866bade3760948945c"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/NEWS",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/NEWS",
+          "exists": true,
+          "bytes": 5272,
+          "sha256": "ab6b9bad31279420b1958357f4e2f80365876fad18e6a4a91eed7a51acdd7f95",
+          "sha512": "8299ac4e5f6c2f75b462542630c375736d4e24fa8b05487bf2976f458b96ea7e0dd5bc333cf0a97904f5986b71575898a85995b483192923fdb8388e6dc17817"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/PORTING.md",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/PORTING.md",
+          "exists": true,
+          "bytes": 1152,
+          "sha256": "17a6fba8099b6bd22859b961499556b575d508f6d9a3ab90ece1ea6bc220381a",
+          "sha512": "e1d14f90044d74a6a5ff972d25728d008f91231db732cd7db197b8d956de7bd1fcebd7994ad6317998f4fc68c4d367f5f6199736dd3164ab6b88c428eaa5ff77"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/README.md",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/README.md",
+          "exists": true,
+          "bytes": 5958,
+          "sha256": "9f6f299778d0169cc8ee6275b4a806192ce4b1cf3843e0d390a2193474cd6148",
+          "sha512": "7a4863e43c9fdf9539a8c2adacfe853ec2fc5875e229f8e40404c8d61907e7c39d5e7c9b50c5b19efec82197ed3bb1df816db1e177b0c9b03987b3f06bb0e256"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bootstrap.sh",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bootstrap.sh",
+          "exists": true,
+          "bytes": 653,
+          "sha256": "85193538b83e64eee577ea79b583a65a46c767cd9f0b30c1ed14724a5aaaeccd",
+          "sha512": "bf95505910fef6e19ad9273850f359a12d03405629f197fc1e7b5d026ebe88fb7cfa4022b74f987c503cf2b2cc592e41106473b0740b69db5803490f7c0222bb"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_build_date_epoch.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_build_date_epoch.m4",
+          "exists": true,
+          "bytes": 3039,
+          "sha256": "eb76350e7845beebe86c8fccdbde383099f3c103d5543d2bace0cf2e4135c45f",
+          "sha512": "5c595b5d3a4a494904e4bacb69cbfe3bc6223afbb1b6b973846f8f6d99e5f67b129ba227e4f22f67596ae8141c607fed510c75819c939094db304fa01efdc178"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_check_compile_flag.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_check_compile_flag.m4",
+          "exists": true,
+          "bytes": 2104,
+          "sha256": "629dc6835eb1e2bd586fd842a4db66541bc442bcc2b13d6f24907631c5a688b0",
+          "sha512": "31d695b3ea3022229c5c8e6091155936c629f3ed267260612b15ef846903f3cf6b20080960b9bc333479f4542551f88ec1dec293001c9c89fc9015351a5c114e"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_progvar.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_progvar.m4",
+          "exists": true,
+          "bytes": 214,
+          "sha256": "a9572c5f818b832555528bbef592391ff8685ab953396feba17d533a3967c01b",
+          "sha512": "f16e9b8d7d14d08dd1484f851fca94245e4a954eeeab8c025737e42624330ec515560df48ad4bda97bb8c1fb28fa13a455cecd6c94d432365ba35f28c26dbd2b"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_pthread.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_pthread.m4",
+          "exists": true,
+          "bytes": 22556,
+          "sha256": "4fa6c352f1fb33147947ead61f9b12537f3d146ce068c003552d3b9582a7a406",
+          "sha512": "69aafe740cf460e76d4b006e0995caddc41357de27f605f586a6704dae7d6bda414126b0bf6cc478f2a175f1723a7884609154206da58f5e8cbde83faf5f0557"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_subst_man_date.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_subst_man_date.m4",
+          "exists": true,
+          "bytes": 528,
+          "sha256": "9eadf947ced0c7ec1124df1e2dd8bb3a06c5454d7cc7097af27fd939f8c9369b",
+          "sha512": "40f46b45c8ac86db5a061f5bff4828ba4b3a38098a3a60988ccdfe5de4ae18db55a1ff245b0373608ee8dfcca645d4a0a5a554f2ffed51bbe9685b50d0d7886d"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_subst_transformed_package_name.m4",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/ax_subst_transformed_package_name.m4",
+          "exists": true,
+          "bytes": 254,
+          "sha256": "41712d8443e5cd83778aa891a9dcaf51aa358c4c1e67bda891499142362359bd",
+          "sha512": "f32f57e47de573442d9bebd5c770254db3d0804fce3ef173315402cb2f99351f953f704990c868b81e404c73d7a89e135341f73e88d033b23dfe5c65a560579c"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/git-version-gen",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/build-aux/git-version-gen",
+          "exists": true,
+          "bytes": 7712,
+          "sha256": "7ed50eb57c4337ae2a5728d398471b1d54d033d0056e6db4e3709a36031f1ddb",
+          "sha512": "9da58ce6bf7ffb77b1760d2205261f9a89cc56b33d95fcbecc39e3ae1a611c0e6564136fabbd56394291067c878ad56394fa68ee6b00fc420d023b4e6b9cd37a"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bunzip3",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bunzip3",
+          "exists": true,
+          "bytes": 30,
+          "sha256": "d7c732c6810423bec5358fc3e4ccca262e41b63e8eea633bb28cea56e5476582",
+          "sha512": "6731c5191d73115580f5fc6a53f36d6392ecb7f91cf9a51a41c08e38b5863b37bfa7beb9f5b6b92bcdd8761e00281cf56fb2c0a9c5ddcb3aad04e1f001e885a5"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bunzip3.1",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bunzip3.1",
+          "exists": true,
+          "bytes": 16,
+          "sha256": "7b0a89532c20e4ff5d627ab6bccdccd13e2a293b23d42cc6db74068cece546d3",
+          "sha512": "00ed5afc30f623d5892190e8b3dff24fbcd1fc8fc9488e378deae453435296568b98ce52399ceb98a80fa1ebdc6889de7914ba212ee085dde81eb522e86c40bd"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3cat",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3cat",
+          "exists": true,
+          "bytes": 40,
+          "sha256": "48dfd5feddc21090508964bd141ee57c810e5ed156fcf2ed7b566a63cc8f2ac5",
+          "sha512": "03b2f87bbf6c1be8213a88f8d88d4ddd91e9e349fd74334b3b3c001d81a6ff596728c6d5dac343c4dfe23387b55780b9db47d63c3d77c2220e1344fc29d7f78f"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3cat.1",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3cat.1",
+          "exists": true,
+          "bytes": 16,
+          "sha256": "7b0a89532c20e4ff5d627ab6bccdccd13e2a293b23d42cc6db74068cece546d3",
+          "sha512": "00ed5afc30f623d5892190e8b3dff24fbcd1fc8fc9488e378deae453435296568b98ce52399ceb98a80fa1ebdc6889de7914ba212ee085dde81eb522e86c40bd"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3grep",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3grep",
+          "exists": true,
+          "bytes": 3721,
+          "sha256": "a2cc909843dfaeff1867132a932c73e274f8bfbcfc3c6269f46cf492d31d6324",
+          "sha512": "540b01a7c3f0a881d86d1dbbd3f1d64b4a217ab4b62a8805960355ed7f2c9c5af2f21fa54707cb1f17127ad1ee5c62febb7955cfc3089a904a73cd8fd24939e2"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3grep.1.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3grep.1.in",
+          "exists": true,
+          "bytes": 760,
+          "sha256": "7eb27209d1dc42ea82703bad0abe6b54fd7b82c3952f82e7089c976a7b82fb64",
+          "sha512": "0fab63cbdc9619b3abbb3bbf058487e9344ca208cc509edf9c130ae743189f1b406b96a6b630e1ee9ea3d6f5f3bf25ed39d8ededfb9a0fa55863f11d414c4db2"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3less",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3less",
+          "exists": true,
+          "bytes": 37,
+          "sha256": "1e72b6087ddbda969d6784ea199b1d0a53aae42f5bf6f30655f61823675ebf73",
+          "sha512": "fedfa695ac37f43c156919f2518c06088b3f902fc1e3103a6e25e4a218cfd6b01f390f88804261c9ee6f93b4379ab8a3589aee4a159b5fe1dd16a1287dbb8dd2"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3less.1.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3less.1.in",
+          "exists": true,
+          "bytes": 367,
+          "sha256": "989e29269e3300286e234c4b4be96bb3ab7461cc643001d3cca111bad6d97616",
+          "sha512": "e14e9cb116828366d86bdbe3a78e42477ea12159843c956b2761ab95f8101e907b72de8c9b4b2ca98990b73fba2ae234005cc4c33701369f176786967f45ee35"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3more",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3more",
+          "exists": true,
+          "bytes": 168,
+          "sha256": "3ee631590a23860da1ce7eb1d8dc02c4d902df94c3498ccf0821a835580ea0c9",
+          "sha512": "b013fb202fb3c6f1e895bb1285f68343d0ee3803e069da1a3b87265a42b6c61f69f942edc5844736c5e76927130ee0b24304f45a5c2f66e8382f5f8b59882d87"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3more.1.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3more.1.in",
+          "exists": true,
+          "bytes": 367,
+          "sha256": "e9152e43cef3e2a3bdb8b28121d540c3012cda1ef4b1898672f208d04dfb60d8",
+          "sha512": "43056495d6c35ac4012557440b3d7c95d0f5b6db0788a4e2c4414bb60ff0ec25f518c7d3ce0f38e029f194d365d3c1fcdfba9d14ac0fbd5f9c1106ef7262d1a7"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3most",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3most",
+          "exists": true,
+          "bytes": 37,
+          "sha256": "907189eaf215e2b93a161aeab595ab8f33a3b8eb2fb6b94b5bf7e4a00ddc4b33",
+          "sha512": "c061ee7be63299c16c8fbd3f148469e9ba8d0bc4aff91a9052bfcd925be88599ee8cae3254609883e3daa5865a5bcd658faf18670c6e1044a7702909f8f6e943"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3most.1.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bz3most.1.in",
+          "exists": true,
+          "bytes": 367,
+          "sha256": "7c8695322f11fc5f95239fff90f491470853b15526711b37baef9e7f51042a0d",
+          "sha512": "f42050237a9d0bbb5586a3c66741ad08a0f7c5c884a858b904dafb38311d07293f94ef55c9e5de3972830713baa08a6fde3223e5c8a85f78101002ca5ec121a3"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bzip3.1.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bzip3.1.in",
+          "exists": true,
+          "bytes": 5038,
+          "sha256": "20d82795e3b50d50c6ac71505c4a890801ebf9f9e0db74e1406479e736a2baa2",
+          "sha512": "71c04541512aface52385c4f5bcfd5c9a62f54c5b82cc65ea25e5f96dcf2ca918c22537f4e308613652e87a6c801a2935707f3683192af725adc99b694dc2b8f"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bzip3.pc.in",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/bzip3.pc.in",
+          "exists": true,
+          "bytes": 256,
+          "sha256": "77a5a25c83e4d691dcbe7f2ba766df1ad6a23f72d386703bf75d2c09022bb68f",
+          "sha512": "a5c7e6da5ac1e7050a439ce19f16daa07d685c22e26db1edece167c83a8e9bc6c80f373234bb47550632d76e0e1bd27c186a7ab2c2f935e51626a92bccbd5da1"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/configure.ac",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/configure.ac",
+          "exists": true,
+          "bytes": 2486,
+          "sha256": "869caa3de2fbc5ece0a3c3c87d6cfa21633f4c4f34136b220f44f5a838321e76",
+          "sha512": "d4e126c8107fd3ff71bc9ea332f40606cf4ca6bbc315e3253a0e25aef1d0be0d88a557c62d2d4e0f4fae0e7b7af86acac9050866b15929a82dcb7100ecaf27d9"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/doc/bzip3_format.md",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/doc/bzip3_format.md",
+          "exists": true,
+          "bytes": 5106,
+          "sha256": "9f1e8ead2d69b0be21948bd1d3e3d12d5f46d7a64789c8d7d5e247911335ba41",
+          "sha512": "402361d84b30a76180a0f5fa01303dda0e2075c18c4e10f5bbef4cc7c13880c803ae609a66b6a876814e82361c1c2e2586307603c3a3b10b11aa3b4d716bbf53"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/doc/overview.md",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/doc/overview.md",
+          "exists": true,
+          "bytes": 1229,
+          "sha256": "0bf47243b01a39068690735e4d01c90703c51ade5a75ed600c12935fd6fa286c",
+          "sha512": "2b9250d27f6a7c25404b91759aea2841c12881e05db51ec7d3011644d25819ff2e0de1ca360b1711e3da200b79cccfaac4c7a43000e8c5eb6aca03213ae1097d"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/BENCHMARKS.md",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/BENCHMARKS.md",
+          "exists": true,
+          "bytes": 3587,
+          "sha256": "ac0412fdd61c6366f5d31cf939d83906606750c7f54f05ef962cc783601b8c8e",
+          "sha512": "18ddf2c318c5b7dbaf2b7c7dc9939a60dac86961dab8b79c7bd609a1859ff5dc26654c6867ef224cf45c8866530dc417bbbd5dcefa3867bc63958532cce2f478"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/benchmark.png",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/benchmark.png",
+          "exists": true,
+          "bytes": 274565,
+          "sha256": "200b730592c3abdbd60772aa434163f9c82cdca80374ec60a1f7b736c3e04582",
+          "sha512": "3ff4cb0609e5c938504cdb93f98a7c67a321d3f3cbdee91141194a3fe021bfb9100d0f0614e9bbfa54c9280e31caf3fa35ed1f04cb2b35b2a68cf3355d1e0803"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/benchmark.svg",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/etc/benchmark.svg",
+          "exists": true,
+          "bytes": 69776,
+          "sha256": "043c0da6ba224e5018de047c1ae7b6e0179be3b19613de5db29298aad67191f6",
+          "sha512": "a2451ae5b231889d0a1cc7779b18fa82330625c11a8fee30aef528a54a8eef71192ff2a667c33bef97b8ec9213d0bb0d27aa7c73c55d361efb28c4015eebe5d8"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-decode-block.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-decode-block.c",
+          "exists": true,
+          "bytes": 9706,
+          "sha256": "82400ab7223b5638981bdd9c17dc1221df18697b1f5fd24f78199266688638f7",
+          "sha512": "d93ba849f356c40dfe51162d0d40ea5eaa2242b13b9922bee82b1fd016da620c1d1deb81955587fccd86da286814971ae22fd0ad897424e6afcefe7244da8687"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-decompress.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-decompress.c",
+          "exists": true,
+          "bytes": 8910,
+          "sha256": "40e19b3ae613c612250a05d1d8802d9d371b4dc527e50558ea4f2fe65e313bb2",
+          "sha512": "16ff103805d243124c80d2e1b60e4fb7c142cfa1312e6ea9ce541764aaae6f00e8487f8080c1893b0cbd4e2d00c159ef2b9c308387e31ffde570ecf5d043f471"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-round-trip.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/fuzz-round-trip.c",
+          "exists": true,
+          "bytes": 4516,
+          "sha256": "334975168ad5993400c1926ae932e0ad374bc55dc3268d40aa462ca7210d683d",
+          "sha512": "c2444cff8f76a55f3517ab5dfab2aef1f10e4e695a3c5d6f79228abe7e3e4690ff09a884898d29943f2482b9fdd9e43d0af7410d68ed9b1c12469a0654491d20"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/hl-api.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/hl-api.c",
+          "exists": true,
+          "bytes": 1090,
+          "sha256": "7d5824f934a9892a64aa281c5dfa8d2f34185fc2aad75c8ab4897d44cdf4144f",
+          "sha512": "e28fa6cf0b9123ef065111ba1ca665e395040001e721f857f3b99e9687b13d7c0cc3ea6bbee5f953a7eb91d925c1117fe8753812ca79a6f1d446125de29486ae"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/shakespeare.txt",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/shakespeare.txt",
+          "exists": true,
+          "bytes": 5458199,
+          "sha256": "c5601d266987ac885ca96522b1b4e439feb7eca39f0fe1111f7342b63b6468f3",
+          "sha512": "7f0a288bba86ab24697e0ece940cae320d816226bbe2e348471a999ff98ea7ba0f104969ceb3d75bf807b18385418d6c06d858d47e22c41a6bd1ab7d71539ea3"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/shakespeare.txt.bz3",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/shakespeare.txt.bz3",
+          "exists": true,
+          "bytes": 1262682,
+          "sha256": "fafdc329831779cf5d0a8f595ce0f3028b14ec218899e9c7ba1253f2037761ba",
+          "sha512": "478eb1cc93287e8483ee2d4ba5d47fcef928cd37504dee85c1b11793e1c42786b6d47163bc7a431a7bf4e5ec38c32e29dda6f43787c5fac87b5eb44bd5c37be0"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/63_byte_file.bin",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/63_byte_file.bin",
+          "exists": true,
+          "bytes": 63,
+          "sha256": "69ed838be2013d125f176cf6808a95ab0c320fb73079109b4bb938b0d098b22c",
+          "sha512": "36a81a2c984d1cd346a7c84c4676f939a342ccef638f00614437d6e702da1454960170270cb76260d3b4948f71973870049de5ffcb4917a54288bdefee35a505"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/65_byte_file.bin",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/65_byte_file.bin",
+          "exists": true,
+          "bytes": 65,
+          "sha256": "ee66ff1ce470d33482b8de7fff2f8b8e95cd95b8ba81f4ec9c2e7a8866e8d30c",
+          "sha512": "9319c3baf8bd024a5eef2d4a66893d787bd53c5058a45e0d2008801c739b3dea37d492078c4646dabd1f2dfc71cf17c954f10040f0a3d2736e56b062a080a5bc"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/readme.txt",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/examples/standard_test_files/readme.txt",
+          "exists": true,
+          "bytes": 152,
+          "sha256": "384e42c734dd90875013527acb0e560450de415913fc1496572020adf1e1c49f",
+          "sha512": "273e5c15bba6a258e76c198c9055a6dbd90a25b1926f0def3a82a8ed1ad5e47b870ec95d9a1793f7207680770e4f917dc3b2eeaa55893d82d8d55b9e1863fb95"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/common.h",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/common.h",
+          "exists": true,
+          "bytes": 4968,
+          "sha256": "f87f5b286e4b733e79c32c0cd5ee521a41c843a4e73a85fec161c3f0e79011da",
+          "sha512": "1fbb04549a2cf6445f6eb1fc71926bed462ffeaf27bea742255577e9bfa35d966f804c22ce88ece4388cd4068fcf1eb0175fff7050f44e52e7e7ce75cafbf740"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/libbz3.h",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/libbz3.h",
+          "exists": true,
+          "bytes": 9525,
+          "sha256": "ccb20f66402f4ca42656471ec401ceaaeac7c729d590dd976856d48967a734df",
+          "sha512": "1f3dfdae328a6a1c3c05606a8544e36ce8a99ad8f61862b9295d6d1da29c0b5c246e0a11577e7d9abb9e78c5eab3a206d5cffaeeb5c883e3de3b8154d4e76507"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/libsais.h",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/libsais.h",
+          "exists": true,
+          "bytes": 214460,
+          "sha256": "65d065a8bbf37fb01a2e02817cd571d5853ccfc068195da30d0586bdeb86487c",
+          "sha512": "7fc9d6476d97772e1fdc4ecad75d9271078ce7c4bf4682b4f3d618c07012fb10bf955d18bd31a3a3f9d27f61094f5c73359599da34e875abafc45ed2026349cc"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/yarg.h",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/include/yarg.h",
+          "exists": true,
+          "bytes": 9205,
+          "sha256": "3beeb9c9b2b5a0d6b0339c8019013abd186571117b0f682bc807dad39106e81d",
+          "sha512": "1fa6d2b092403438fc2cbf287524df18d20ccee540b3f70d423f536ebb5f8c93609663ea16143f5ab7bfe3bb8a38a82029a02f6e5509d10491bc7b5498bf29b7"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/src/libbz3.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/src/libbz3.c",
+          "exists": true,
+          "bytes": 36230,
+          "sha256": "7f3c79053898c25bc8dd2c67c9fdafa86f3b94bf8e3a3e3fc1dd7e8c7e8872ad",
+          "sha512": "11df853feff1fab7acee72f3ba2197a7173d4b47bea864dabcf6c8d6cac5fc2bfe68296fabf7565856bbc981d8039e29023b2c5354e77da5588432d23d0f9da3"
+        },
+        {
+          "path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/src/main.c",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/vendor/bzip3/src/main.c",
+          "exists": true,
+          "bytes": 29030,
+          "sha256": "1ceec6003d2b473f1ccd60dd25d9ebb1b9c83e3cb9f2801eea7d55307831e5f2",
+          "sha512": "cb0e58c20cda6fb511f5c4358a91b840485bc56affc4638724ba7b6472af2e88827c5f88bd9b94f3238d1cfb9a771bd20d856652e2bc72a1d1e4bdbb79619e0f"
+        }
+      ]
+    }
+  },
+  "compiled_binaries": [
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/zig-out/bin/real-lex6",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/zig-out/bin/real-lex6",
+      "exists": true,
+      "label": "compiled-independent-runner",
+      "bytes": 951768,
+      "sha256": "b3287fda7127a58fe8b8f24cb0623f0b6c8875a1777f3ac892de36582680fe88",
+      "sha512": "c750a172174fa86f961536c470f4bb7cfffbfdd50c49064666506264da2659530823bb977fcf813b701c52a4cf6e73c083ae57b7ba6abd37377fec6d066a4b14"
+    }
+  ],
+  "projections": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora",
+    "entries": [
+      {
+        "corpus": "freedict-eng-spa",
+        "manifest": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection-manifest.json",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection-manifest.json",
+          "exists": true,
+          "bytes": 2299,
+          "sha256": "61c4b40d76f47cad78669a728bb9423c44cc117b27bb23f695ef8653a5cecbea",
+          "sha512": "3b91e139b1b2a6ceb5119f0739e16132c3f4f9e64658e0a1873526eb89b174276870e4258e606bd27077cb31c8207a9d706eba17110331ad9f600ed666ef8767"
+        },
+        "projection": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection.tsv",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection.tsv",
+          "exists": true,
+          "bytes": 90123314,
+          "sha256": "687008296b727878d26472bca5315beca8136a64365f2ac819e9e1f7f22f3865",
+          "sha512": "f1d64f3ddd703efef2d5e4fb45d5a88ab0956cc0ca4217f56da08dccad2e51328aaaa7b7cf86b115cc7f63d83bf5931200ac818397f4df3daa55d1fe39c18e22"
+        },
+        "rows": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/rows.jsonl",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/rows.jsonl",
+          "exists": true,
+          "bytes": 28575499,
+          "sha256": "dce3de7e57a1d00be176214e6dbbb1a5a8dd530a8baeb0a430e1a23c4adc95c2",
+          "sha512": "f688825c5f57982189fd2c8bf0de8879d075611de91d1decd9fb30d8e3893cd120afeee2622cd72cb089a15027ee2a0c9f405951a3d9c6987f01c26eb115976a"
+        },
+        "counts": {
+          "rows": 64258,
+          "unique_keys": 59253,
+          "key_hits": 64258,
+          "duplicate_key_hits": 5005
+        }
+      },
+      {
+        "corpus": "gcide-054",
+        "manifest": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection-manifest.json",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection-manifest.json",
+          "exists": true,
+          "bytes": 4665,
+          "sha256": "acc514ad6f0171d1acb6a3d1a799663aba6dc67284b91a45a374809ad2412b94",
+          "sha512": "17c4ab6c748afcd827116b3ca2e649a5bd7c94906b511fc067750ad13f0df0ced01e06e4dcadca271566ca897e0177fad54d7d95deb857878d160dcd7819e232"
+        },
+        "projection": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection.tsv",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection.tsv",
+          "exists": true,
+          "bytes": 123479075,
+          "sha256": "4cddd7f0d23d7ef5dd923ef97b1894f7fff86cc26dbda1a9621653c1338c635b",
+          "sha512": "ff50b60c6c706fd34dfb1a1f7811cd3979ea4f25ac1b97f1201c37c463bebce2984808240b05fca9288da8753f798b5dc04f8324f57ab6785f718123fcdeb1c4"
+        },
+        "rows": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/rows.jsonl",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/rows.jsonl",
+          "exists": true,
+          "bytes": 53072691,
+          "sha256": "f3280dbbf9a32bc84c47310b36b491c762a12b3db1dcf7430991a4e808f762db",
+          "sha512": "d7e3c187cef92a9e2bcf4df41826da288d17bdf08124e4ca1c50d3c88d5651b1f6f675862e76996f49cb86e3fcfce72594c76764fb1e0e7e234c4144d4ac1442"
+        },
+        "counts": {
+          "rows": 124187,
+          "unique_keys": 115327,
+          "key_hits": 131563,
+          "duplicate_key_hits": 16236
+        }
+      },
+      {
+        "corpus": "omw-ja-20",
+        "manifest": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection-manifest.json",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection-manifest.json",
+          "exists": true,
+          "bytes": 2452,
+          "sha256": "05453a1a5a39948921383848a19f675eb6b981c5dbaf6cb3eb22e00eae7d66d3",
+          "sha512": "4678841a68a2f9a07e0d0a577780642b6d221625ebe53d10e1e46a5af219ffb70140c00a6b9746154327756828b8bd01cb4b7e7a46f7224d4025590c3d9d0aca"
+        },
+        "projection": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection.tsv",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection.tsv",
+          "exists": true,
+          "bytes": 229392768,
+          "sha256": "ff9b2f1e56912bf3874cb77377a6f97949206a3efdff7739a10f61e1f0c43c75",
+          "sha512": "3584d0d5d923eaada18feee74e410be62a7e46c286d69522db6b742cf4f2a3ff497b540dcadaa4cbbfa5cd05246892113e20a884d137e157c51d27e84d35dc27"
+        },
+        "rows": {
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/rows.jsonl",
+          "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/rows.jsonl",
+          "exists": true,
+          "bytes": 64453164,
+          "sha256": "6443f99eb96136567673f0ea449e9d6e8c1b1a8818ea483012d56358be8eeec0",
+          "sha512": "001b9d6662b4246c671ead5e5ee0819430929c32c4d1a88f232083daf7167afbba66e64aee04cde48811ee5bd72eb73e2cb1a3979b004a3f1fce4c521aacbc08"
+        },
+        "counts": {
+          "rows": 94002,
+          "unique_keys": 91964,
+          "key_hits": 94002,
+          "duplicate_key_hits": 2038
+        }
+      }
+    ]
+  },
+  "retained_ledgers": [
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/main-smoke.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/main-smoke.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 5269289,
+      "sha256": "4bb6fa9324ddff242f8cfa610146a72f20605311834a625219a0201e625645a6",
+      "sha512": "9a6ecf64904b613765da06fcc7ac2bfea5f30929bf343fb78f9854a3084fb959d852ecc8bf1dbe1339f4cd62c40ff11fd5e9aceb2667a8164179efd55d18be59"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/all-exact-smoke.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/all-exact-smoke.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 5268179,
+      "sha256": "bb0bf4705809ab6bfc4a6f3d6c510715fc68ea339e903e88298c8c88c2627c0e",
+      "sha512": "ea1860cc53b806d46e73ddeabdf1e15345bae3fc87edfa4dc5edbad62ff8063392e68a906cb669333e05b800b2c11f1a65a0001426ae27fe7339975ea1330985"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/gcide-smoke.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/gcide-smoke.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 1510323,
+      "sha256": "f9845091af1e9969f3f2d57efd6bb42fd8b48b6cf3b094e0ce84c56cdc597b90",
+      "sha512": "9987a3044893752a0dc3db7c6b3b85c3b080d8d45ecc615b64836665f7c8a6d4e417fb5e4324eeed93328dc3e23f2dc280dd80a2e1aa37b225ba75e7afb5e76c"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/omw-ja-smoke.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/omw-ja-smoke.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 2680383,
+      "sha256": "956da132a4c51f4ce4f513818c1a75d7fd95ef29da881019bd51ed1567666e7e",
+      "sha512": "ca33bf10d668d445a1a958485fad97c885bce0f15473a48182b385907e70a9ff6808925014721564386c1f156ef84554b2011cce71faa7877b7c42c66fc4d3f9"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/page-sweep.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/page-sweep.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 41340082,
+      "sha256": "38d0cebef91f47e647817ce93a096d7619958e82fb072a93999ded9e5195c8c3",
+      "sha512": "ee45fdce090883d5d7b14f0d6ca0198497eaaa7f8dd64c83b3bd51f01817f788fd5460da13a459a91a631854b806908377e509819b4928297158c6b4d2c5d926"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/legacy-availability.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/legacy-availability.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 19764,
+      "sha256": "bced69275e2b171e026625b4711788b500e0bfd5c5be6e7d309594b01682172f",
+      "sha512": "19e65a0aaaf01687d1baebe8ae9d8c261d1f33f2d71f621b32000735e13953d2ba755e1ecbf9a9c84dfdaac2673ba2fc48a39b18aed560a72875f5db7a4b05b0"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/verification.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/verification.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 2115,
+      "sha256": "fe1633cbdcc45cb00c6245cb5ca6e33f16dd352c733bafa045ef741166ae4886",
+      "sha512": "37f7f1631811228263fc9f7e0667cf46b93ea24a8db8b14fa106625fada38c067c338fe9246de9ce8ca111f805ff89900ccfa84e5ae26b2f634851a6c4ee64e7"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/baseline-pre-refactor.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/baseline-pre-refactor.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 3267,
+      "sha256": "cd2f9af347d153591e473aa012c5294b2a17eb419d34d80af4d15db0eb01205b",
+      "sha512": "2d96e86d3c8315d137404a69f364284c7a7f30cf993a681bc762eecc201bede316bb1b2c6a3db82ecea09b7fda140b31f7079338ea395db207be074dde859d1d"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/main-smoke-post-review.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/main-smoke-post-review.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 5276254,
+      "sha256": "d8ecff5ec2b94576b5b67af6c3b5aad0d9272d6d03e4415908b904664742ace7",
+      "sha512": "5a519a6980f652dbee343cd25d8103211b9e09abb5645fb7710ee9412d889716feb801718f203ce982a5ce7ce79298e4c7121e447c774aff521d14f1bbdb6183"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/post-review-interrupted-smoke.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/post-review-interrupted-smoke.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 970,
+      "sha256": "292a60d9a4236a39ceb5db5d93dd90cc6508b891b6006c972f01a80a20105057",
+      "sha512": "97cb6a3a667b755f76f1f16322321d6a72048963bc90847bf8fd3a577b609724579e71a48367a04cc0c32e4e936569d7614a6ad20d5b19b2f1e452b98cb45dc7"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/fairness-audit-post-review.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/fairness-audit-post-review.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 27003,
+      "sha256": "4cc9250448c329e3ce156def9fe90ceea9a49a3ffc21c4620589ff2437daa6f8",
+      "sha512": "43cbd68b43094520ae8dd1e4f1408b61ec22a455d493d9ad92fca54eb9274204d89e9c0350788458f798f9cd010f834526b12697f37c3f6432962fb80341622f"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 501697,
+      "sha256": "6601be730a1be3422ecf2d21378c7d2a54162466100c00194e134deb9b61bdad",
+      "sha512": "7928dc25c79469fabf09dff415a5bf8351b25c58f23fe5cee884492fece4d8622fc67daa95f3832a59a6ca9952c1598c8aa2ace9b5c71953e11e51654ead1d55"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review-final.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review-final.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 1176825,
+      "sha256": "4e515f1ec2a6c395ae0653960c176c2d9d149c7f0b1a04678d89f9c44c58faff",
+      "sha512": "851456740337cf066031e1ec00575ff738c30fa2d3fc75ed567fed2e05e2e1f7785e7eee3f85dd75ff8fb26526585368ce17d777cea73ffaf39f438aaadd7899"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review-failed-label-collision.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/timing-results-post-review-failed-label-collision.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 501697,
+      "sha256": "6601be730a1be3422ecf2d21378c7d2a54162466100c00194e134deb9b61bdad",
+      "sha512": "7928dc25c79469fabf09dff415a5bf8351b25c58f23fe5cee884492fece4d8622fc67daa95f3832a59a6ca9952c1598c8aa2ace9b5c71953e11e51654ead1d55"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/page-sweep-post-review.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/page-sweep-post-review.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 41338947,
+      "sha256": "2cd78cac6d8753da110936e0bdcbb3b213aebd7c80dc7b1c274dba1bae406a40",
+      "sha512": "42e2660594f0653576d4e6d8ead75b946cec4c2966b1213d5effa84f8157431812dad044722cd19d43b9e46e89c39b8e21a8b2ca014cf38d483c02d834b0538a"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/reports/real-world-report.md",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/reports/real-world-report.md",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 20086,
+      "sha256": "60784f4cdf24a2b5555ba4f50d84b06a7031800e1e3a3767a3005b0d82fe0107",
+      "sha512": "4b09c3fed75cf9d0bf2f54dca7b6d9b9068b81023de3b1fa8e067196f3d15c0a538dde0b45a6305c6e6db536a59d7ae0b8e55b91184ecbc1f5530074ac01ed5a"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/reports/real-world-report-post-review.md",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/reports/real-world-report-post-review.md",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 47143,
+      "sha256": "c704566eef94ca1e7e3d58ff150281db0d77545794d04657f473e1f90e4e09e2",
+      "sha512": "03658addc2e29cebf481acdcbc26629893c6415015f7711c7966e3aeaaa9be3d54400ddd744cab03b612a47e0ab305aa61a955fdc1e9f1a57c50eed7c5feec62"
+    },
+    {
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/manifest.json",
+      "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/manifest.json",
+      "exists": true,
+      "label": "retained-ledger",
+      "bytes": 10677,
+      "sha256": "ee89b4ade0518d57dc98e4ecbf5027a11edd344404846dbf998d969d2e609454",
+      "sha512": "4f859406ff2e61843c94f423f65cecd14dc3bf45e349eb202055bd4f7387dd7918ec5938fb3925a53e2e7fe1ab544505945a9e55b144cede3fbbe61aad70411a"
+    }
+  ],
+  "legacy_probe": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/legacy-availability.json",
+    "resolved_path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/legacy-availability.json",
+    "exists": true,
+    "bytes": 19764,
+    "sha256": "bced69275e2b171e026625b4711788b500e0bfd5c5be6e7d309594b01682172f",
+    "sha512": "19e65a0aaaf01687d1baebe8ae9d8c261d1f33f2d71f621b32000735e13953d2ba755e1ecbf9a9c84dfdaac2673ba2fc48a39b18aed560a72875f5db7a4b05b0"
+  },
+  "retained_evidence": {
+    "path": "/private/tmp/dictionary-real-world-current",
+    "resolved_path": "/private/tmp/dictionary-real-world-current",
+    "exists": true,
+    "files": 60,
+    "bytes": 1423667027,
+    "file_records": [
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.dict",
+        "exists": true,
+        "bytes": 43700255,
+        "sha256": "6e36329d204b027aea0cff19982964eba36df2445bda96bc6e250ba372a61649",
+        "sha512": "30b6e2ae216f841daa303e50f3002269f7f019c0fd3ee3c02c53dfe1d86c5bbe96d6c29de0a96c69255e739640a62567c9219dce8f47a839c64dcd55535c7ca4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.dict.dz",
+        "exists": true,
+        "bytes": 5408846,
+        "sha256": "1cd808119409cd48343e219a1e11ad9b283f1621210d153068d7dfda6f5d6dd1",
+        "sha512": "d5ab851dc0365f5e03571939605aa56ff54bebca206b5b6f64002d62000cdcaf46aa24d3c876273f23a2614992e73e4c93587f7bfbfe7d0cbcbedd129150d33c"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dict.index",
+        "exists": true,
+        "bytes": 1264640,
+        "sha256": "fb05bb92b10dacbfce2bdaa939e28a26d1a87ced82e7e0f11335b4e3f53c47bf",
+        "sha512": "fe6dcdd4c3bc763a51c69eb2cdf0e529823949d77fb50b4cdfd3f99cfe3d0e583f3f6b4d13ea36716bd6712bdb1962929738b991abc94c7a2e8299b97acfa317"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 7315317,
+        "sha256": "f3c23c5533cfe4b40a83598a624783f41386d3e4afe78d51a393220e575fdde8",
+        "sha512": "38f616332725405913e19fedd55c4e4a8c2bef657304853b8fb68d9997ac2bf66c7540cd07ff365676433b762cdb11f98fa9ebd7dbb9cf11769903b441b37c57"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 9365521,
+        "sha256": "fae1af3aea7058c69dbe2b070eeb3c95cf3bb925794ba10f8bc64d3ec647295b",
+        "sha512": "8129be504a14c32891cd5580ad56a613cd9bb8dfe5af8bdaa612a46d92d4e84a65f61b79771dfe6d1da86de775e78943c968aa1cd02e19b15fddc5d9a84953c8"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 46005219,
+        "sha256": "f48764e0810b6e339867f60d711f1e98e9f21df677857d67d1e495179f5d4023",
+        "sha512": "dd0de7c1e7de7f8264243d9c88ec5d59d92098edd2d96b0cb1b1b8f7f6bea83c3070c5eed0a7b66c3cbdacfcb0fd2380ddfb573391fdda3ea1437a2122fb6ed1"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 9365519,
+        "sha256": "243dc62170041009f7949fbd46ceb2c20d9a1bd0bb347a06cbdb784691085f5c",
+        "sha512": "6018bc8c69281451fee5b1b2546d4b43915efac8c2f90329337d642bb9147cd6033f48091db62762b347702a2aff2bd0ed625cb61ad8bff976647218629c0c65"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.rows.json",
+        "exists": true,
+        "bytes": 105,
+        "sha256": "b55121454740ffe43d0dd5953d8600d1fc479485f9bb2b9422e0258f8384ba05",
+        "sha512": "3b7f1c568c4dd4b99965875b402775d0e1e773ca8f9f725ccd2f3b1c0377d10df41d71d2efb9c39a07029e40bd6e6110aa37fe761e23baf60a14dde019e367e5"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/dictionary.sqlite",
+        "exists": true,
+        "bytes": 56295424,
+        "sha256": "c4ec136a30f7d09f8b0f4b7ecee915cc55e14786a83aa4581e57e8cce0e1df7c",
+        "sha512": "8de203cec77a98311399d1e80d575af4883724695e73586e08f81b06894988820761f8b1171d1c346cbc2b0c6051317c690d504d09f16d74007638884fbdecee"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/format-manifest.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/format-manifest.json",
+        "exists": true,
+        "bytes": 19299,
+        "sha256": "9bb19a75fc92c570ee50248737e5001371b541e1dd1afee031cfd636b6d05bc7",
+        "sha512": "dd4c892bf520d4df25e032b66e74f6120d8b2fb396aa69089a26e0f8e6725b0fd7ce29ffe1944aa30db9812b40541206206adbaff558a1735557e5e861c7368e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.dict",
+        "exists": true,
+        "bytes": 43700255,
+        "sha256": "b019477ee178336f466c12fca3d28aa6f3097a50af1474392b21f15a5d05fa61",
+        "sha512": "a921a361923728a9a242096f7926344af954eabd489b3fd5bd5a093229c13b269e9acaa7ae3103cdbca0f7b7b79c41f3aa8c5a9c1893e920f8deaf4210109c07"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.idx",
+        "exists": true,
+        "bytes": 1200757,
+        "sha256": "f31f9925f2bb231ecdc6379528a068086f70ef91224f0e66e65e1413cb2a2ef8",
+        "sha512": "23d9401aaf3a17f232c782ae9204aef4509f3a297fab83a294f54a011b11441b831f5178734abfbd217a9c86055dcadc0dd5cc219a9a15faea21968e06f1389e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.idx.oft",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.idx.oft",
+        "exists": true,
+        "bytes": 8074,
+        "sha256": "9eb06993992f5e0e74d44c51aeba86bd7a5d1f6d0ff3ab63ddbf3444603a6e74",
+        "sha512": "8800095b4017525b42a32d110bfdf16cd60b4f73c675494c2ae492ae0b8d0c128fadbfc1fc6d30f99598b0faa2d4f4edc3def68a543e014fc2694d22092b5a1a"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.ifo",
+        "exists": true,
+        "bytes": 196,
+        "sha256": "cf32e82753646fa3a8565280e20d59b7e0a394b19bf9bed2018e0dd7d5830a1b",
+        "sha512": "a0c921c6790b690afbf19acee1cbc439fd477428f6a637dcf9868c28aac2f6bd0e6b80e083a1dd08e3f4ddee8f6d98527c32e87ad12b968062f56926c748f8a0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.rows.json",
+        "exists": true,
+        "bytes": 695909,
+        "sha256": "56c76026ae748441a2a81e673b03c08b4da96b6674044c9b689ceabcc4f57798",
+        "sha512": "6ebfbbeb9fe731ce0638d9de52ef6aeb580dbcc19dbc06c6dba4f62c3cf005c3f177a4960f0a0eb3dab2ce53cd43e1ea7d0c6c54638ddc2030762ffbf4c00353"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/external/stardict.syn",
+        "exists": true,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-adaptive-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-adaptive-64k.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-bzip3-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-bzip3-64k.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-raw-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/lex6-raw-64k.lex6",
+        "exists": true,
+        "bytes": 48271065,
+        "sha256": "755bd42c6ddf807ff4b8c21e0d085a11101dfff0bf00a6282084fa266e925104",
+        "sha512": "3db995aa46f627348b417a5268093518d56a029563ab60626abc029b7bba7bb9ee9badf33d0777896090b1db5646ad25510badbfecef1569f7b32c4b6f54a3dc"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/freedict-eng-spa/queries.tsv",
+        "exists": true,
+        "bytes": 1593966,
+        "sha256": "2b51b4f9b0ac98d8c42ce017a017f70f1bb787a7eb96dd2ff4be282a23978ad3",
+        "sha512": "e8d40b3948307d540771bb62ab0df78b095841ca3ed1b43c993e7a9818e2f8452e3ab43429e6112323368d828952d758081be57a47fa5edb4d344e41e467dbe9"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.dict",
+        "exists": true,
+        "bytes": 58808436,
+        "sha256": "f41f0505f35686d1463bf05a5e988a7cea3de8ae5c7c52020f5a3e0b19fdfc74",
+        "sha512": "70a9aa79d9d5ce7e9ff18cc0b396771c8ba8ca4f9dd3c624bd01842de7d42d09c7b5886eeb876409ce0cb3a2467cdc4baf34223780e8d97e8526ea61c457a403"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.dict.dz",
+        "exists": true,
+        "bytes": 15561433,
+        "sha256": "141aba7e14430ed54e3ae248ef0fc849442812a6e6d1da3d3b7eccb328aea86e",
+        "sha512": "0b40cb00b82eb1b58380603b89a67a329eb8005fc76ab5404aabe38f00e11f5b275482f563818273927257ea4b0d72b5235882cb8cd1e2e5d1f5e6d3ae6ac66a"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dict.index",
+        "exists": true,
+        "bytes": 2448371,
+        "sha256": "c64eee64aa4221316ae39f4c12edd30b8a54850ff9b6758da865d2476cc83f04",
+        "sha512": "007bb72cf16f4b2601d4498dca17de1f3fc005a406014f27ecf06e4cf26bfdcd082cd0cbd0962fd2739711c3bb11f093e45b4d3503cd6437ea9b57b329f68290"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 18530020,
+        "sha256": "72bf49f90d1697de8feed4e76aded116d78ef330ccf28bca3a4ba22edfd561c1",
+        "sha512": "b9388e3afaa876a74b5c317cf1283835b5c535c5268db486bc9b2995d0b21a321a0c31c4877a9a02a60e9b035f5162caeb7a9de2763159921469869d9ea1e007"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 18975032,
+        "sha256": "975657945df5ee4f0ffa81a8c68d63c789a86d95fe7ed6d921f1b4847b33d601",
+        "sha512": "20d799c4a32696e78d0c51486c2280975722837cab949e681e516172dda6784e9aa0e3609dc8c413db8576d867d61967fb58752cdee1a52d428f3d6135d3be8e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 63304877,
+        "sha256": "49b6d06ec8eebfd8b670b2528268851485af1211645466a1e4e587fd7d35f474",
+        "sha512": "4ad79211ed19fb7020bf6526d598f7a059c2f09a6cefa92e5393de155b8f5f72a6bcc7ea571752aa916946159930a1890ec5195218c2e68f78721f477f708532"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 18975030,
+        "sha256": "5720a77584ddb0610d137b9da577feffb8ce4c370672ed2adb856bf97186f638",
+        "sha512": "2c94478f518e27a35e724a25cd3fa53ae51357b938c2a6cd00b34cfb6bee8aae9b5d7ae1fb33f1e31ad21371074eb74d52e2c1bb68676798583a7cdd41c9d663"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.rows.json",
+        "exists": true,
+        "bytes": 106,
+        "sha256": "01fbc9b4cf7a53617f564cb0cc7865fcb188d58d344d7e6144d5bf845d55d278",
+        "sha512": "478d5f1886f05e9e7859e26a21e55d114b156cb3cfc06fd855f83c81c8fa5118485f7940285e73a46437b6a26eaf6638635b82445699a78551ff429ad59bc009"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/dictionary.sqlite",
+        "exists": true,
+        "bytes": 81633280,
+        "sha256": "01822b7e789285ddfe4cf0bf7225f417dd275c3c61951b01b930cc2cc46853d4",
+        "sha512": "a2e5eb55e3f5cbe24c38c3c6542dd1c6bc0bb3415dec257a83e7bad1020bb7ab2b9849fa0e9f4ef83852b0e95fdb5029504aa2e0ad471e67110390061083de62"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/format-manifest.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/format-manifest.json",
+        "exists": true,
+        "bytes": 19111,
+        "sha256": "1df8a986b3dc9555f86553385d507825c710ff28932d77c2cbcfb664a294b127",
+        "sha512": "479387969182912e3c93d8e035ba403038cb2b49eb5b058ab46b87316a9b989eb1dee0ef5e049f673a43462e51c424a029bd14b92b912a116c22836abb819b88"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.dict",
+        "exists": true,
+        "bytes": 58808436,
+        "sha256": "484bba2c00c0602571265cfb3cae581ff3ca62d1500bc3b6caf87276e012c9ec",
+        "sha512": "340da6ef75ac8ccd1ce05c15cb3b0549f7d9b8edeec7dedc98dbccb8dd523fed3b7030a0dca7c2bb81e9579cb54346cf8368b226943eb39358670108c2df9634"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.idx",
+        "exists": true,
+        "bytes": 2176575,
+        "sha256": "d8bb02a646c728efe532ab4256191689654f8ec4c95c6b67eb3fc14f1191baaa",
+        "sha512": "7a1c51d5ebd949b17677cc7c5dcd8aa4bdb3b956a2850cab8d2d9af09faed21366561145fb0f3f301ee8996e97c0781c6c796f1785028bcf29f1c9e30c962aa4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.idx.oft",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.idx.oft",
+        "exists": true,
+        "bytes": 15562,
+        "sha256": "01644b629d8268d7c4672e25034f43475cdfeec582f3cda074e0893cdc713a55",
+        "sha512": "2c357e6ccac1c6fc0e60843c8d29cfb979482b6937ca2c0c4b02684de750290067f5e9669441a1493276860cb0fc86970be3a0d4caadd071f9e7615ef34f8151"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.ifo",
+        "exists": true,
+        "bytes": 200,
+        "sha256": "13571d88224947d476382a6772604d366c6b18f244e0a5e14e49a4088e6c71ad",
+        "sha512": "51f83a3e91298742882198c384f45f4c3930c43ae5af0c712f057e9bdb1105abfdca003181c1074195cb060d62f43ca875910293a718342fb09e0c111e9f45c0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.rows.json",
+        "exists": true,
+        "bytes": 1783533,
+        "sha256": "ba70b461ca22702191112c556c28a2861e0674cf66872d6f9d45be9fadabadac",
+        "sha512": "5879c9c5d5324b81b0b13c626482292d54a9df1bf1d6d5d7cce9ed478a964905a14b54d5d30bb6e74bc5ae45e77de9c5e2b9e2c791ec4cd80f61b92aa0317e3f"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/external/stardict.syn",
+        "exists": true,
+        "bytes": 104690,
+        "sha256": "9be203e322d7e57c2699e4ca939b87c70e97d14f7700018a707f2e5dbfa0b3c7",
+        "sha512": "cf59c9a11e186c467dde8bbd07799dba0a1c8fc159be2b917a633f3876d12247838440206c70d18d0945e5b296979dd57e3877e6df9358440ae42f951ca611b4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-adaptive-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-adaptive-64k.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-bzip3-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-bzip3-64k.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-raw-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/lex6-raw-64k.lex6",
+        "exists": true,
+        "bytes": 67821905,
+        "sha256": "6472b07554981d0ec099db4a4e04edce7089721aad39e8afd36a463ad60124aa",
+        "sha512": "426df8a56690de799647f06698110699a1f6d16fe631afd83508283b01bb1e792d3851389c5ae68986360eecde93f2de89c755420e5983bdb6c3426811ef7e5b"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/gcide-054/queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/gcide-054/queries.tsv",
+        "exists": true,
+        "bytes": 2860214,
+        "sha256": "c2237008888ec05d8cd4878ac7892bce9c8843182ddb01d9e68f311c3d201b8c",
+        "sha512": "b8caadaa9ea8e38995da57cf28cca03a6f3db336a409d4217facc19cfe2e6a597963d5ccb20e9b176a27c99a284728d480f968f46024d1ce071a92e12afef473"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.dict",
+        "exists": true,
+        "bytes": 112147272,
+        "sha256": "d3be8f96361e91ad1b48f640d0c92a1041cd6e9a6ab134b1d2412f7d2a5d7242",
+        "sha512": "e25971e8ace4b7ba614e9ee29da6d2b8551ee6a94ef037eed40807855d091040486e4e9b6a1f874882a29589f68546cf05d4b4f4501f487f195b102396b7e435"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.dict.dz",
+        "exists": true,
+        "bytes": 11736855,
+        "sha256": "43ad6ae357dd198bd03e53d6656b986684ab3d5e29389536843f68ebb1681c70",
+        "sha512": "1310fe82285bdb0d3a3618397aa2d2fefc26f39b5ccdb92eccdc166f2a99e811cbfddfa37966deb8abea520e707ca2fdd7d27731db04fd53e9bec68747251894"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dict.index",
+        "exists": true,
+        "bytes": 2114970,
+        "sha256": "78260190f7f5697a96f8ff373b64ae4cbce686d5ddc24e9a8969d8327d9455d9",
+        "sha512": "418b02a5a28db5e3afbcc1d379d31bdd82b6326122f615b54986e33fea35305bb91a077528e68dc62212de01f4b19c69a636009ef70e10de536166ed962aa0f6"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 13172996,
+        "sha256": "d35532a76fe9b02817234c2adbceb91dbe4aa0153a3232ae10aad912404b658c",
+        "sha512": "c37a1db0bbc9aaa4cca11e327e6ed291f0fc648f01d887076bb155f1ab82f36de296b4bb31300c99820ccbc7ca55604927cff843e9f1944905860f44a7cea649"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 14110635,
+        "sha256": "3eb57c4a6ca81ac4ac636138112ad4602ed37cea39bb7bac17f92fcb7ad0af40",
+        "sha512": "454760bfa5a84fef6278dc153b8dca11af1d6034c8e1f7eb5691c90cc3ff06b45e20922c1857d148eac81b768e3dd5fd23799d3c625b4b72b86ae6b49019d845"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 115711514,
+        "sha256": "409f3d98d36a8c4f064f8ab46c3393c7ba286ddfb4073ed5716774ab699aa4fa",
+        "sha512": "cedfb91a197991dd6cae6b00d5cb51769955b23b3df5402176d809c1f2db6d5b0ef011bde6523ea6944d336e6760b62c8950d8e4198a408fc85a954666a7de18"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 14110633,
+        "sha256": "a5fbbb00d0012715949a8b4f4e4c7a16707f39e1c13bcfe523b1cead1cd37161",
+        "sha512": "16f0403bd694c17196493d6cc51b647c464ae55cf688210eb17743319570e1ae792a97de59dda13a3c36711a3945141aa47758fdd2b08475e66af63e80a41b49"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.rows.json",
+        "exists": true,
+        "bytes": 105,
+        "sha256": "a9763d6f1ff51f4230f35f173d473b574fa68cf337fe38ef9e81c35bfe77c616",
+        "sha512": "1e7a491d1f0998cd6a44f68738e519943111caf940e171fa92d767086f1591483795917151658b7f6e5daee668172b89938ef1b65cb590560ca4dc930f3d79a6"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/dictionary.sqlite",
+        "exists": true,
+        "bytes": 147197952,
+        "sha256": "9ef999a4379244bf38e138d9f90bf5fd1bf5bc7acb9fde26a3a0892028151009",
+        "sha512": "f972a9148a01a1252531af993c13a2720bc4212a07511e0a5ee96bae24db821e7ff7fb421e310c2df4fca036d7b03e2072d7e7a6455855ee8a565887c9d8aeda"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/format-manifest.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/format-manifest.json",
+        "exists": true,
+        "bytes": 17789,
+        "sha256": "9c53a0721314a98bb9af8302f88df28b2f2530c4cf183696c5d8648859f074af",
+        "sha512": "b857928bb89b2662b1041a048e985630598351c63119b12d1fa12316d8a4d56d4b76fc1c28f083c1e80465986c7d2b53539dee69a25f218d6b2ec2b7c660aae0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.dict",
+        "exists": true,
+        "bytes": 112147272,
+        "sha256": "23986ec55b67b9169f621ed97572aeb7b7a2536df4ef57ab776e7127e94a0719",
+        "sha512": "d237498dc4c4f3e3562eb93b7c8b583f4c94e9d915d3ab746483e7f0af999d2ae2012d7957fa4d4791431c188a9e065e5966f668b13eaa01c54705fd3b3e3bd7"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.idx",
+        "exists": true,
+        "bytes": 1938099,
+        "sha256": "212673011c5dbe66502a9a1d4471df634ce621a4a2c51ba308ee867f5bfd9924",
+        "sha512": "76730886a407086ae8da24336edc8c9d1ed711e956aa7014f9562cfeffbc53fc086f878f94e34172400ef8a1a3a8689339730427f8fb16dc4043a2842f98369e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.idx.oft",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.idx.oft",
+        "exists": true,
+        "bytes": 11790,
+        "sha256": "e4724902410e8e63a2c9b5a356a34186438354f8c20b73952bd313fb25691902",
+        "sha512": "4982873f208333ba9f72e58538e84897bc2faafccb1a881c1c511a109977599102193c0b9a8974a1cfacde691c6298eb35b29e08cf8d15bdbc424cf6c4655fbd"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.ifo",
+        "exists": true,
+        "bytes": 196,
+        "sha256": "84a2868060ea0241e53c13a6bfa57bc8c64211af11585f8c801412b01c5e698c",
+        "sha512": "6a8b2df9b930c9b46d02567d05a46d888b251d68c32b7d63b60fc2cba47b43529b9084e97808c20c0ff873fd83c67c5d5936174c74e6cc451bbd7dbb53609ae0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.rows.json",
+        "exists": true,
+        "bytes": 1023093,
+        "sha256": "93551e4b720030fb8de91d1e36b833c9ab2a8edb678bfe3a7f2af2ea97307b18",
+        "sha512": "73c3d4b27745fb21adaee495dbf8f7281e68687984c60bb558cae971bb698669caec1929bc5ed3f9b5d6fc981e4e01fe01d62814995880395892e37be39b14d8"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/external/stardict.syn",
+        "exists": true,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-adaptive-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-adaptive-64k.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-bzip3-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-bzip3-64k.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-raw-64k.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/lex6-raw-64k.lex6",
+        "exists": true,
+        "bytes": 119585081,
+        "sha256": "2ad5b1f7017bc38f791c30ca2ae152f0dda2836e10a88b204d69dfdcbcb223ad",
+        "sha512": "9b3bf51adaf1b62c6b29362ed6f9f09511a291fb70b2f362be903b3d29c48157365fb6bc64f86acfec53a4270297410c3cabed4738b99c9a10c54972aa925534"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-current/omw-ja-20/queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-current/omw-ja-20/queries.tsv",
+        "exists": true,
+        "bytes": 2794371,
+        "sha256": "258302a346577d98574b46b51f1bd2df9c3e55e1e050d2b49c0aa1a48e8b6d72",
+        "sha512": "340e8884555652fa84b9a80b09554d56411ae3162a869bad3412cf246625d7d608a9e1005380e4068abd462f0ad494368fdd82c9dc0b177e8365b6dffab4017b"
+      }
+    ]
+  },
+  "retained_page_sweep": {
+    "path": "/private/tmp/dictionary-real-world-sweep-post-review",
+    "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review",
+    "exists": true,
+    "files": 27,
+    "bytes": 931318473,
+    "file_records": [
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 8402555,
+        "sha256": "de0407fac117999780e2b631cb1abe4d9f609da1e88577bdf0866f2ef6e55e31",
+        "sha512": "a545689a4018bc2043a17b95e0665dfddde418f82735cbf44db7437b146b9ccd8e82d134e8ff575e45959d12e51451e182d0154807daca26846d16e4d2236b45"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 8402555,
+        "sha256": "de0407fac117999780e2b631cb1abe4d9f609da1e88577bdf0866f2ef6e55e31",
+        "sha512": "a545689a4018bc2043a17b95e0665dfddde418f82735cbf44db7437b146b9ccd8e82d134e8ff575e45959d12e51451e182d0154807daca26846d16e4d2236b45"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-16384/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 48414361,
+        "sha256": "0a9ed735057047fdf61432b3ce882fbc6259e9c3ae31133bc1f441633fe0d793",
+        "sha512": "cb82c46b2a186a875ce31ff2116b207e4a1b9fbe085f13780bd686feeb837749f5f02230c3eed13c3b1219d230e6ec350fa5787aa457ac1ac559e8a94c8d3e8a"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 5448237,
+        "sha256": "db30242b97d099a06ccd5f4317d6edddb72e0630bc0f62f3d0adbdaff87e1275",
+        "sha512": "5a09a5722e47fcd6f603e727f489bce026ee506e369f68498a90f5c0ee1c775b5452f9165badbd16e23a471f7c91dccb209a734eaaed9da8e64ba7668ce5fc0e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 5448237,
+        "sha256": "db30242b97d099a06ccd5f4317d6edddb72e0630bc0f62f3d0adbdaff87e1275",
+        "sha512": "5a09a5722e47fcd6f603e727f489bce026ee506e369f68498a90f5c0ee1c775b5452f9165badbd16e23a471f7c91dccb209a734eaaed9da8e64ba7668ce5fc0e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-262144/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 48236057,
+        "sha256": "1b68a171326e4bbf0d817bd4e0243dca1ef035be44c6e6ca851ffd2f1a6bcd97",
+        "sha512": "ae14820dd3018f127b3098776399b60139a2b9786a2e67183d8f6f91f16acf756f0c8c6570abe0a94302034ac92ba1d7e94e3b4880f288de84b19fff6ebbc697"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/freedict-eng-spa/page-65536/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 48271065,
+        "sha256": "755bd42c6ddf807ff4b8c21e0d085a11101dfff0bf00a6282084fa266e925104",
+        "sha512": "3db995aa46f627348b417a5268093518d56a029563ab60626abc029b7bba7bb9ee9badf33d0777896090b1db5646ad25510badbfecef1569f7b32c4b6f54a3dc"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 20341174,
+        "sha256": "6a11a086112b6c3e12b50f487da0cbcf5fb33d446b5d7d8fa55508b1d083f1c5",
+        "sha512": "c5149a14a9383e39cf3da075f2a6147f9337a650eb632a99b6ef4d3b17c80100dd90697464c8da038f485990ed36b3da351f9ad75b088a5204a162ed76a127bb"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 20341174,
+        "sha256": "6a11a086112b6c3e12b50f487da0cbcf5fb33d446b5d7d8fa55508b1d083f1c5",
+        "sha512": "c5149a14a9383e39cf3da075f2a6147f9337a650eb632a99b6ef4d3b17c80100dd90697464c8da038f485990ed36b3da351f9ad75b088a5204a162ed76a127bb"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-16384/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 68024913,
+        "sha256": "982579df90d272ae3b32229f62fc01a43b4c0ab79c3276ed2f47e149d0b87cb7",
+        "sha512": "5ce78b7e81a0a4aa737930a6de49b84802c9e1a079ad7c049811f6b8160ef7de17aff723d428a16b20c90bf887c75b48760d6d77ecfac51789fb9666d4472149"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 13958381,
+        "sha256": "8ef377701804c01541574b8d1a3a4b37e0681bf6d69e44c5b9c7a40c5780ab85",
+        "sha512": "84f7ea55496b6e713769d9e1cbb498bf3a869bba56964f1038b3e7da8269aa06d8861c98b11ab285349e3ca7dcbf98a5400fa34f85303339137f31b646dde3ea"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 13958381,
+        "sha256": "8ef377701804c01541574b8d1a3a4b37e0681bf6d69e44c5b9c7a40c5780ab85",
+        "sha512": "84f7ea55496b6e713769d9e1cbb498bf3a869bba56964f1038b3e7da8269aa06d8861c98b11ab285349e3ca7dcbf98a5400fa34f85303339137f31b646dde3ea"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-262144/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 67772881,
+        "sha256": "de7c6c439bfbce886c1b602aa557c1c7c5c7ce37d6c03d364699d2de8f2f462a",
+        "sha512": "01b6471680233421dbdfb69b88475ad60f21cd2400c43bc01eea5097e886786389dc745853d8aaca946a9ba939723b37628b1193fe9e2c71b7a1e90546810872"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/gcide-054/page-65536/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 67821905,
+        "sha256": "6472b07554981d0ec099db4a4e04edce7089721aad39e8afd36a463ad60124aa",
+        "sha512": "426df8a56690de799647f06698110699a1f6d16fe631afd83508283b01bb1e792d3851389c5ae68986360eecde93f2de89c755420e5983bdb6c3426811ef7e5b"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 19017985,
+        "sha256": "126fcf648c5e951a34bedcb3a197a8ee9e51946a6ed6bae5dd0088e4879c6d64",
+        "sha512": "7e46620fa42cffbde3ab6620856bf64cdc37f07865d79e313051e2a01a175796a30acb940aad30c0e67840a662c7d69892874197e02675db42d53eb26169fa3d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 19017985,
+        "sha256": "126fcf648c5e951a34bedcb3a197a8ee9e51946a6ed6bae5dd0088e4879c6d64",
+        "sha512": "7e46620fa42cffbde3ab6620856bf64cdc37f07865d79e313051e2a01a175796a30acb940aad30c0e67840a662c7d69892874197e02675db42d53eb26169fa3d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-16384/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 119969273,
+        "sha256": "e7597487ac8168ef256abcdaa92f2dbf3b28830a110dad00c7c11d7ff34295d8",
+        "sha512": "0b42cb392c16ea003732b5217332edd509cda546bed4aef91cb6d503fe2fa7c0622276ee1c2290684526095c9f0269ed21b6e2a7a872f3442e285b2101195ef3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 9790271,
+        "sha256": "a7fa9a37d163adfd58ef2a92e6bf8b564263b9597fdfaa7ef90952453a6b446e",
+        "sha512": "b7a64f8f45d1a59baa67a98b7785629b57fb8656f7e8f62c303420530e702bebe01cd851ad2ffd06dbae36c9177e4027bb3f32ab89376b1409e9ffd36dae5548"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 9790271,
+        "sha256": "a7fa9a37d163adfd58ef2a92e6bf8b564263b9597fdfaa7ef90952453a6b446e",
+        "sha512": "b7a64f8f45d1a59baa67a98b7785629b57fb8656f7e8f62c303420530e702bebe01cd851ad2ffd06dbae36c9177e4027bb3f32ab89376b1409e9ffd36dae5548"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-262144/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 119496505,
+        "sha256": "fba5148832c0ef3842af75ae59e28059d8f53aaa6a4281f48da1b7f84de3637f",
+        "sha512": "3253b503f11642be51bcdeb6dc55195c483b8d0dda337b33272c2c69fa6231fccf032be119942aba1ccd242cbf57775ff6a1a2f35af355ab5a081d4f6ebacc88"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-adaptive.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-adaptive.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-bzip3.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-bzip3.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-raw.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-sweep-post-review/omw-ja-20/page-65536/lex6-raw.lex6",
+        "exists": true,
+        "bytes": 119585081,
+        "sha256": "2ad5b1f7017bc38f791c30ca2ae152f0dda2836e10a88b204d69dfdcbcb223ad",
+        "sha512": "9b3bf51adaf1b62c6b29362ed6f9f09511a291fb70b2f362be903b3d29c48157365fb6bc64f86acfec53a4270297410c3cabed4738b99c9a10c54972aa925534"
+      }
+    ]
+  },
+  "retained_timed_builds": {
+    "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final",
+    "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final",
+    "exists": true,
+    "files": 51,
+    "bytes": 1416326851,
+    "file_records": [
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.dict",
+        "exists": true,
+        "bytes": 43700255,
+        "sha256": "6e36329d204b027aea0cff19982964eba36df2445bda96bc6e250ba372a61649",
+        "sha512": "30b6e2ae216f841daa303e50f3002269f7f019c0fd3ee3c02c53dfe1d86c5bbe96d6c29de0a96c69255e739640a62567c9219dce8f47a839c64dcd55535c7ca4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.dict.dz",
+        "exists": true,
+        "bytes": 5408846,
+        "sha256": "917dce3d2effc829d64d5bb5b6b46bb0d557c8b072578068961e93bb54bb83ad",
+        "sha512": "bdaf858e97f3b9cd531c463a8c130d13dba2c162d1cd958534ecfa1e2e11301cc83dbac1ba7cc5756de8671ff02032525f88562d0010fcffd3744026fb3b36cc"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dict.index",
+        "exists": true,
+        "bytes": 1264640,
+        "sha256": "fb05bb92b10dacbfce2bdaa939e28a26d1a87ced82e7e0f11335b4e3f53c47bf",
+        "sha512": "fe6dcdd4c3bc763a51c69eb2cdf0e529823949d77fb50b4cdfd3f99cfe3d0e583f3f6b4d13ea36716bd6712bdb1962929738b991abc94c7a2e8299b97acfa317"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 7315317,
+        "sha256": "adbfa19270645e8d7b4d4cc7e64a0135a7134aaf85e0f130471e8abf234da7bf",
+        "sha512": "fb63ecc04f8a48fa5ea0d225aad3d07e2535da1eb2e00a19eb19e6f7cb308caff61f32506790c351b90c2db1095d562028e22f908bd0e1fb229a94cfc26fb052"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 9365521,
+        "sha256": "fae1af3aea7058c69dbe2b070eeb3c95cf3bb925794ba10f8bc64d3ec647295b",
+        "sha512": "8129be504a14c32891cd5580ad56a613cd9bb8dfe5af8bdaa612a46d92d4e84a65f61b79771dfe6d1da86de775e78943c968aa1cd02e19b15fddc5d9a84953c8"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 46005219,
+        "sha256": "597f2740fd9ec8f4131368de7177413c2a3bc5c5b3ba34dcf93a328b45201bf3",
+        "sha512": "11b2d3443ab2f9f37b936f332428c5463b7d8dc207aa6d4dcc63979ab94ba70a73adce54043ceceede59aaaffa9095dd1dfe28b0fc665c5429d31163ef377059"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 9365519,
+        "sha256": "243dc62170041009f7949fbd46ceb2c20d9a1bd0bb347a06cbdb784691085f5c",
+        "sha512": "6018bc8c69281451fee5b1b2546d4b43915efac8c2f90329337d642bb9147cd6033f48091db62762b347702a2aff2bd0ed625cb61ad8bff976647218629c0c65"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.rows.json",
+        "exists": true,
+        "bytes": 105,
+        "sha256": "b55121454740ffe43d0dd5953d8600d1fc479485f9bb2b9422e0258f8384ba05",
+        "sha512": "3b7f1c568c4dd4b99965875b402775d0e1e773ca8f9f725ccd2f3b1c0377d10df41d71d2efb9c39a07029e40bd6e6110aa37fe761e23baf60a14dde019e367e5"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/dictionary.sqlite",
+        "exists": true,
+        "bytes": 56295424,
+        "sha256": "c4ec136a30f7d09f8b0f4b7ecee915cc55e14786a83aa4581e57e8cce0e1df7c",
+        "sha512": "8de203cec77a98311399d1e80d575af4883724695e73586e08f81b06894988820761f8b1171d1c346cbc2b0c6051317c690d504d09f16d74007638884fbdecee"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-adaptive-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-adaptive-64k-timed.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-bzip3-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-bzip3-64k-timed.lex6",
+        "exists": true,
+        "bytes": 6406243,
+        "sha256": "2d1ef42083dde1ad23e37cdd4fb4b5b89c89b6d222d519fcda0c0b79eea29976",
+        "sha512": "b7f1a74d29c73e0f96c95ea3f6d4fe99e1b60c123e55bb70d61afb405ae2381b25feeb7d72baad2519572e3bb74454b9faf05882352162b12dff73b5f7b3e7b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-raw-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/lex6-raw-64k-timed.lex6",
+        "exists": true,
+        "bytes": 48271065,
+        "sha256": "755bd42c6ddf807ff4b8c21e0d085a11101dfff0bf00a6282084fa266e925104",
+        "sha512": "3db995aa46f627348b417a5268093518d56a029563ab60626abc029b7bba7bb9ee9badf33d0777896090b1db5646ad25510badbfecef1569f7b32c4b6f54a3dc"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.dict",
+        "exists": true,
+        "bytes": 43700255,
+        "sha256": "b019477ee178336f466c12fca3d28aa6f3097a50af1474392b21f15a5d05fa61",
+        "sha512": "a921a361923728a9a242096f7926344af954eabd489b3fd5bd5a093229c13b269e9acaa7ae3103cdbca0f7b7b79c41f3aa8c5a9c1893e920f8deaf4210109c07"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.idx",
+        "exists": true,
+        "bytes": 1200757,
+        "sha256": "f31f9925f2bb231ecdc6379528a068086f70ef91224f0e66e65e1413cb2a2ef8",
+        "sha512": "23d9401aaf3a17f232c782ae9204aef4509f3a297fab83a294f54a011b11441b831f5178734abfbd217a9c86055dcadc0dd5cc219a9a15faea21968e06f1389e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.ifo",
+        "exists": true,
+        "bytes": 196,
+        "sha256": "cf32e82753646fa3a8565280e20d59b7e0a394b19bf9bed2018e0dd7d5830a1b",
+        "sha512": "a0c921c6790b690afbf19acee1cbc439fd477428f6a637dcf9868c28aac2f6bd0e6b80e083a1dd08e3f4ddee8f6d98527c32e87ad12b968062f56926c748f8a0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.rows.json",
+        "exists": true,
+        "bytes": 695909,
+        "sha256": "56c76026ae748441a2a81e673b03c08b4da96b6674044c9b689ceabcc4f57798",
+        "sha512": "6ebfbbeb9fe731ce0638d9de52ef6aeb580dbcc19dbc06c6dba4f62c3cf005c3f177a4960f0a0eb3dab2ce53cd43e1ea7d0c6c54638ddc2030762ffbf4c00353"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/freedict-eng-spa/stardict.syn",
+        "exists": true,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.dict",
+        "exists": true,
+        "bytes": 58808436,
+        "sha256": "f41f0505f35686d1463bf05a5e988a7cea3de8ae5c7c52020f5a3e0b19fdfc74",
+        "sha512": "70a9aa79d9d5ce7e9ff18cc0b396771c8ba8ca4f9dd3c624bd01842de7d42d09c7b5886eeb876409ce0cb3a2467cdc4baf34223780e8d97e8526ea61c457a403"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.dict.dz",
+        "exists": true,
+        "bytes": 15561433,
+        "sha256": "36820ad76679370ed5f74f090fca366b8ac7ac0a22e9fc8bf495ba743a18f9fb",
+        "sha512": "f3761a4e060bc6e5c8f26e227b55671ecebd8e7846ae16a3b8692e492efd2c3955ae2db6f80a542aa4088932f6253ef98a4b56385e78f697122ae888ed672650"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dict.index",
+        "exists": true,
+        "bytes": 2448371,
+        "sha256": "c64eee64aa4221316ae39f4c12edd30b8a54850ff9b6758da865d2476cc83f04",
+        "sha512": "007bb72cf16f4b2601d4498dca17de1f3fc005a406014f27ecf06e4cf26bfdcd082cd0cbd0962fd2739711c3bb11f093e45b4d3503cd6437ea9b57b329f68290"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 18530020,
+        "sha256": "d47c08d29a8bdb145a7926ea4f8fa3d1005258551ca1b3d7dd02233fa213da8a",
+        "sha512": "a15b98fc48b2dfd50105d10c2424fb6d1c2737058d6cc32987885525ef5d542ee6c821fb6e468dd0cf179f9c5da61b663d53637ba33a92deabbd246729631cc2"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 18975032,
+        "sha256": "975657945df5ee4f0ffa81a8c68d63c789a86d95fe7ed6d921f1b4847b33d601",
+        "sha512": "20d799c4a32696e78d0c51486c2280975722837cab949e681e516172dda6784e9aa0e3609dc8c413db8576d867d61967fb58752cdee1a52d428f3d6135d3be8e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 63304877,
+        "sha256": "6da31c0c938b7b3970c58056338da2400c19e6d6ef0cca910b8cef691f5c8179",
+        "sha512": "8000fea4510e5e14301bee9f0602a1da058fb49a5cc614dac010bd1ecf9925eb802b8bb76119be18e56e86c9fd630b11da0247ca91a250eddedc8db4ad1de0f2"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 18975030,
+        "sha256": "5720a77584ddb0610d137b9da577feffb8ce4c370672ed2adb856bf97186f638",
+        "sha512": "2c94478f518e27a35e724a25cd3fa53ae51357b938c2a6cd00b34cfb6bee8aae9b5d7ae1fb33f1e31ad21371074eb74d52e2c1bb68676798583a7cdd41c9d663"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.rows.json",
+        "exists": true,
+        "bytes": 106,
+        "sha256": "01fbc9b4cf7a53617f564cb0cc7865fcb188d58d344d7e6144d5bf845d55d278",
+        "sha512": "478d5f1886f05e9e7859e26a21e55d114b156cb3cfc06fd855f83c81c8fa5118485f7940285e73a46437b6a26eaf6638635b82445699a78551ff429ad59bc009"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/dictionary.sqlite",
+        "exists": true,
+        "bytes": 81633280,
+        "sha256": "01822b7e789285ddfe4cf0bf7225f417dd275c3c61951b01b930cc2cc46853d4",
+        "sha512": "a2e5eb55e3f5cbe24c38c3c6542dd1c6bc0bb3415dec257a83e7bad1020bb7ab2b9849fa0e9f4ef83852b0e95fdb5029504aa2e0ad471e67110390061083de62"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-adaptive-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-adaptive-64k-timed.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-bzip3-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-bzip3-64k-timed.lex6",
+        "exists": true,
+        "bytes": 16274792,
+        "sha256": "a5e528964de6ba331bf33f86b13edd208db557af7959b3ac48c05dfef34c3356",
+        "sha512": "214d192c00f75afa332920ef612d20b5db01efb551d124865f4d8e114fdb2403fc5577f89f982caccacdaa1f1ab120a8d9b09a9aa908926c1230468de4ec6abf"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-raw-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/lex6-raw-64k-timed.lex6",
+        "exists": true,
+        "bytes": 67821905,
+        "sha256": "6472b07554981d0ec099db4a4e04edce7089721aad39e8afd36a463ad60124aa",
+        "sha512": "426df8a56690de799647f06698110699a1f6d16fe631afd83508283b01bb1e792d3851389c5ae68986360eecde93f2de89c755420e5983bdb6c3426811ef7e5b"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.dict",
+        "exists": true,
+        "bytes": 58808436,
+        "sha256": "484bba2c00c0602571265cfb3cae581ff3ca62d1500bc3b6caf87276e012c9ec",
+        "sha512": "340da6ef75ac8ccd1ce05c15cb3b0549f7d9b8edeec7dedc98dbccb8dd523fed3b7030a0dca7c2bb81e9579cb54346cf8368b226943eb39358670108c2df9634"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.idx",
+        "exists": true,
+        "bytes": 2176575,
+        "sha256": "d8bb02a646c728efe532ab4256191689654f8ec4c95c6b67eb3fc14f1191baaa",
+        "sha512": "7a1c51d5ebd949b17677cc7c5dcd8aa4bdb3b956a2850cab8d2d9af09faed21366561145fb0f3f301ee8996e97c0781c6c796f1785028bcf29f1c9e30c962aa4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.ifo",
+        "exists": true,
+        "bytes": 200,
+        "sha256": "13571d88224947d476382a6772604d366c6b18f244e0a5e14e49a4088e6c71ad",
+        "sha512": "51f83a3e91298742882198c384f45f4c3930c43ae5af0c712f057e9bdb1105abfdca003181c1074195cb060d62f43ca875910293a718342fb09e0c111e9f45c0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.rows.json",
+        "exists": true,
+        "bytes": 1783533,
+        "sha256": "ba70b461ca22702191112c556c28a2861e0674cf66872d6f9d45be9fadabadac",
+        "sha512": "5879c9c5d5324b81b0b13c626482292d54a9df1bf1d6d5d7cce9ed478a964905a14b54d5d30bb6e74bc5ae45e77de9c5e2b9e2c791ec4cd80f61b92aa0317e3f"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/gcide-054/stardict.syn",
+        "exists": true,
+        "bytes": 104690,
+        "sha256": "9be203e322d7e57c2699e4ca939b87c70e97d14f7700018a707f2e5dbfa0b3c7",
+        "sha512": "cf59c9a11e186c467dde8bbd07799dba0a1c8fc159be2b917a633f3876d12247838440206c70d18d0945e5b296979dd57e3877e6df9358440ae42f951ca611b4"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.dict",
+        "exists": true,
+        "bytes": 112147272,
+        "sha256": "d3be8f96361e91ad1b48f640d0c92a1041cd6e9a6ab134b1d2412f7d2a5d7242",
+        "sha512": "e25971e8ace4b7ba614e9ee29da6d2b8551ee6a94ef037eed40807855d091040486e4e9b6a1f874882a29589f68546cf05d4b4f4501f487f195b102396b7e435"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.dict.dz",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.dict.dz",
+        "exists": true,
+        "bytes": 11736855,
+        "sha256": "001738ee5ca7f9d226587ede6617ce0ac3f696b350751c0ffa53dc63cca9cbc6",
+        "sha512": "ea2d755bcfa42f438447618783c4151163f90f910e414e0545ca1dcab0d3981b479ae55ed7505ab023df64bc2b32e7300732efdfa8551346b80e7a088fc6b567"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.index",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dict.index",
+        "exists": true,
+        "bytes": 2114970,
+        "sha256": "78260190f7f5697a96f8ff373b64ae4cbce686d5ddc24e9a8969d8327d9455d9",
+        "sha512": "418b02a5a28db5e3afbcc1d379d31bdd82b6326122f615b54986e33fea35305bb91a077528e68dc62212de01f4b19c69a636009ef70e10de536166ed962aa0f6"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.lzma2.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.lzma2.slob",
+        "exists": true,
+        "bytes": 13172996,
+        "sha256": "2f051faac3a0f33da83a98097232b943b880b0bbc8974385990d8de71215208c",
+        "sha512": "276539e9f4bea3d1c8cde553c07db538ddb7a45d95cdd0377c4b2561ef0acaaca55a0e3ce070ce72807015d2f124a32cabb5348a1d382b2e9ae6d3a9dc060502"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.lzma2.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.lzma2.slob.refs.json",
+        "exists": true,
+        "bytes": 14110635,
+        "sha256": "3eb57c4a6ca81ac4ac636138112ad4602ed37cea39bb7bac17f92fcb7ad0af40",
+        "sha512": "454760bfa5a84fef6278dc153b8dca11af1d6034c8e1f7eb5691c90cc3ff06b45e20922c1857d148eac81b768e3dd5fd23799d3c625b4b72b86ae6b49019d845"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.raw.slob",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.raw.slob",
+        "exists": true,
+        "bytes": 115711514,
+        "sha256": "e464ce78fa0051038c46b44b894163b4a987ef466dc8a3b46a0e38d5c14b4769",
+        "sha512": "7421ac68cc1711de47f4f5e3e97780b779e2010daa4f0b4dcb3c2ca5ac40722d2e26f2fdbc2c0713058ea272c121d99755ed3a0fc25477d9504c8a97eefd55b0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.raw.slob.refs.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.raw.slob.refs.json",
+        "exists": true,
+        "bytes": 14110633,
+        "sha256": "a5fbbb00d0012715949a8b4f4e4c7a16707f39e1c13bcfe523b1cead1cd37161",
+        "sha512": "16f0403bd694c17196493d6cc51b647c464ae55cf688210eb17743319570e1ae792a97de59dda13a3c36711a3945141aa47758fdd2b08475e66af63e80a41b49"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.rows.json",
+        "exists": true,
+        "bytes": 105,
+        "sha256": "a9763d6f1ff51f4230f35f173d473b574fa68cf337fe38ef9e81c35bfe77c616",
+        "sha512": "1e7a491d1f0998cd6a44f68738e519943111caf940e171fa92d767086f1591483795917151658b7f6e5daee668172b89938ef1b65cb590560ca4dc930f3d79a6"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.sqlite",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/dictionary.sqlite",
+        "exists": true,
+        "bytes": 147197952,
+        "sha256": "9ef999a4379244bf38e138d9f90bf5fd1bf5bc7acb9fde26a3a0892028151009",
+        "sha512": "f972a9148a01a1252531af993c13a2720bc4212a07511e0a5ee96bae24db821e7ff7fb421e310c2df4fca036d7b03e2072d7e7a6455855ee8a565887c9d8aeda"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-adaptive-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-adaptive-64k-timed.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-bzip3-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-bzip3-64k-timed.lex6",
+        "exists": true,
+        "bytes": 12223578,
+        "sha256": "fe9774441c2d5b8e7c756194d9752920d046e622193b80a464fec1c3c3b8cb87",
+        "sha512": "a3c3a82d4a75bc09928a41e3820360127f8846d53ad1fb74473bc2a1a8a2df08d07ab27f5f6ffdea9f769c7907e641e8911b780b7d0d8499a380bae1b971505d"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-raw-64k-timed.lex6",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/lex6-raw-64k-timed.lex6",
+        "exists": true,
+        "bytes": 119585081,
+        "sha256": "2ad5b1f7017bc38f791c30ca2ae152f0dda2836e10a88b204d69dfdcbcb223ad",
+        "sha512": "9b3bf51adaf1b62c6b29362ed6f9f09511a291fb70b2f362be903b3d29c48157365fb6bc64f86acfec53a4270297410c3cabed4738b99c9a10c54972aa925534"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.dict",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.dict",
+        "exists": true,
+        "bytes": 112147272,
+        "sha256": "23986ec55b67b9169f621ed97572aeb7b7a2536df4ef57ab776e7127e94a0719",
+        "sha512": "d237498dc4c4f3e3562eb93b7c8b583f4c94e9d915d3ab746483e7f0af999d2ae2012d7957fa4d4791431c188a9e065e5966f668b13eaa01c54705fd3b3e3bd7"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.idx",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.idx",
+        "exists": true,
+        "bytes": 1938099,
+        "sha256": "212673011c5dbe66502a9a1d4471df634ce621a4a2c51ba308ee867f5bfd9924",
+        "sha512": "76730886a407086ae8da24336edc8c9d1ed711e956aa7014f9562cfeffbc53fc086f878f94e34172400ef8a1a3a8689339730427f8fb16dc4043a2842f98369e"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.ifo",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.ifo",
+        "exists": true,
+        "bytes": 196,
+        "sha256": "84a2868060ea0241e53c13a6bfa57bc8c64211af11585f8c801412b01c5e698c",
+        "sha512": "6a8b2df9b930c9b46d02567d05a46d888b251d68c32b7d63b60fc2cba47b43529b9084e97808c20c0ff873fd83c67c5d5936174c74e6cc451bbd7dbb53609ae0"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.rows.json",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.rows.json",
+        "exists": true,
+        "bytes": 1023093,
+        "sha256": "93551e4b720030fb8de91d1e36b833c9ab2a8edb678bfe3a7f2af2ea97307b18",
+        "sha512": "73c3d4b27745fb21adaee495dbf8f7281e68687984c60bb558cae971bb698669caec1929bc5ed3f9b5d6fc981e4e01fe01d62814995880395892e37be39b14d8"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.syn",
+        "resolved_path": "/private/tmp/dictionary-real-world-timed-builds-post-review-final/omw-ja-20/stardict.syn",
+        "exists": true,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      }
+    ]
+  },
+  "retained_measurement_plans": {
+    "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final",
+    "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final",
+    "exists": true,
+    "files": 6,
+    "bytes": 1729,
+    "file_records": [
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/freedict-eng-spa/timed-queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/freedict-eng-spa/timed-queries.tsv",
+        "exists": true,
+        "bytes": 408,
+        "sha256": "e8514f11f5828b9659f1db59fe81f5b235975fcfad185d65b8a50b86f64f0149",
+        "sha512": "2bc4895b0b707611a204c1097ab8651f6171409c5e92dadfae4a40376f5b4b3eb450c8c0ef57b6baddb8c050fd1b132a12dd3c4e57717212f30e05d01b9663af"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/freedict-eng-spa/timed-rows.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/freedict-eng-spa/timed-rows.tsv",
+        "exists": true,
+        "bytes": 140,
+        "sha256": "a58aa94d3734cb7c3bce9894aada29be94d76671115339be1a2848894603562c",
+        "sha512": "cd0c26eb1610e70356b00c6c619a0e847e2749cced5bc307bb4a0f3d97472342ec3e948dea46b609ca4bbacf7d9c8730feb1e6e2341a9e4899cfddd5ac969114"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/gcide-054/timed-queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/gcide-054/timed-queries.tsv",
+        "exists": true,
+        "bytes": 393,
+        "sha256": "8ab00b8b0a3d490bf6e255daa7fd43b6eddc64b38778de98f72e995f766878fa",
+        "sha512": "db647cf7825b3ed779ce70a0628141f5efda55d530fbac0eb9a496be339f74e62c7d896945e65b2871a5d7fd4786a877ef83485a084ff38df5ff85da2c4e7249"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/gcide-054/timed-rows.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/gcide-054/timed-rows.tsv",
+        "exists": true,
+        "bytes": 148,
+        "sha256": "d5de2354567b36b4a54d1e46ba7dd8e0608e7dd1542b94e654e332527c032ff7",
+        "sha512": "e272fa8676f28b45c7118621a77869e0750f2bc020a23cde24ccd063bccabcf794b2cfd742fcc3eb560f04543f4198435335270d4e6792127ae3f648134aaea3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/omw-ja-20/timed-queries.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/omw-ja-20/timed-queries.tsv",
+        "exists": true,
+        "bytes": 504,
+        "sha256": "2b99d72a088a772db44fe7703dbd8673a1e7471490e333a9596372b61e68dac0",
+        "sha512": "64afa2c2337ddc0af75f04a5f2fb6827c77a3a91d7157d417a417b76341dd986c9e0431c73b2963ac27f943df215631f6f2abcf57ee6ee7bed952a8978ce19b3"
+      },
+      {
+        "path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/omw-ja-20/timed-rows.tsv",
+        "resolved_path": "/private/tmp/dictionary-real-world-measure-plans-post-review-final/omw-ja-20/timed-rows.tsv",
+        "exists": true,
+        "bytes": 136,
+        "sha256": "1026f93cffee347cf9e23b486bfbeff1a57b9807d37b5e71ffdc6854b700bd60",
+        "sha512": "6034407c8496cca2ff80849c72689100402c3482b82afb94f0e1ab5d028578f08efad7e143c8807aa5daf8b4941a4d50d1174cc17147e7690980e4ee9c44675f"
+      }
+    ]
+  }
+}

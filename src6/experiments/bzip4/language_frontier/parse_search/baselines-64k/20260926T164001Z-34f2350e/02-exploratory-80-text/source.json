@@ -1,0 +1,10 @@
+{
+  "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+  "prefix_limit": 65536,
+  "sample": {
+    "bytes": 65536,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/baselines-64k/20260926T164001Z-34f2350e/02-exploratory-80-text/input.bin",
+    "sha256": "4aa238537e5ae1dcc4b12b228416cb62b317946310ae221e51fec85c091db872"
+  },
+  "source_bytes": 178864
+}

@@ -1,0 +1,16 @@
+.E.
+======================================================================
+ERROR: test_internal_definition_is_not_a_stream_symbol (__main__.GrammarAudit.test_internal_definition_is_not_a_stream_symbol)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/test_grammar.py", line 22, in test_internal_definition_is_not_a_stream_symbol
+    for restored_model in (model, grammar.Model.from_bytes(model.serialize())):
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/grammar/grammar.py", line 731, in from_bytes
+    raise FrameError("grammar Huffman table omitted a symbol")
+grammar.grammar.FrameError: grammar Huffman table omitted a symbol
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.770s
+
+FAILED (errors=1)

@@ -1,0 +1,549 @@
+{
+  "baseline_bzip3": {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "codec": "bzip3-control",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/dev.target.bin",
+      "65536",
+      "1"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/bzip3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 57,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/bzip3.stdout",
+      "sha256": "1f29a5e76988e5b7decdb4c2f8f7c8134480bef07901ebe0936503090a28d270"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input": "dev.target.bin",
+      "payload": 6626,
+      "total": 6674
+    }
+  },
+  "baseline_v4": {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "codec": "bz4-v4-end-to-end",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/dev.target.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.external-decoded.bin",
+        "1"
+      ],
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.external-decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 7588,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.b4",
+      "sha256": "3329efb32467396e558d4619b8059acf50b23c3be3ce31f92ba10273f9d58727"
+    },
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 120,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.encode.stderr",
+      "sha256": "1e5215a00a80fa1714d7083c5c1d98323fcde124a9b04198f0ac872dadac2aef"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/v4.encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 3246,
+      "framing": 20,
+      "header": 121,
+      "payload": 4201,
+      "raw_len": 65536,
+      "total": 7588
+    }
+  },
+  "candidates": [
+    {
+      "bzip3_frame_ratio": 5.66047347917291,
+      "case": "freedict-eval8-64k",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 284161.19331580086,
+      "compiled_cross_entropy_bps": 4.33595570855409,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 37778,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-observed.lbel",
+        "sha256": "ce20fdb698f62c67e9878a648da2ee64ff35aaa0c28864b7ba22c32208df6a12"
+      },
+      "frame_bits_per_input_byte": 4.611572265625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 2246,
+        "output": 65536,
+        "payload": 35528,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 2060
+      },
+      "frame_bytes": 37778,
+      "frame_sha256": "ce20fdb698f62c67e9878a648da2ee64ff35aaa0c28864b7ba22c32208df6a12",
+      "k_compiled": 2,
+      "k_teacher": 2,
+      "model_table_sha256": "56499306858a94490a63cf37f9d0b26c438eff275a59e5419e17afce4c041981",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 11558,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k2.json",
+        "sha256": "dbb8ece266a3c040c9a4242de9b199b60e6b23c78708ccd156a5ab518043ab23"
+      },
+      "teacher_cross_entropy_bits": 274295.8847176972,
+      "teacher_cross_entropy_bps": 4.185423045619159,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 4.978650500790722
+    },
+    {
+      "bzip3_frame_ratio": 5.892268504644891,
+      "case": "freedict-eval8-64k",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 296528.0285124571,
+      "compiled_cross_entropy_bps": 4.5246586381905685,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 39325,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k2-balanced.lbel",
+        "sha256": "e1c871a98ffc9dbaaa44afb6c8efcb0512a7c8ee3909cbc00a1b04400e5cb49b"
+      },
+      "frame_bits_per_input_byte": 4.8004150390625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 2246,
+        "output": 65536,
+        "payload": 37075,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 2060
+      },
+      "frame_bytes": 39325,
+      "frame_sha256": "e1c871a98ffc9dbaaa44afb6c8efcb0512a7c8ee3909cbc00a1b04400e5cb49b",
+      "k_compiled": 2,
+      "k_teacher": 2,
+      "model_table_sha256": "8c5a9dfdd3b0eae65e5fcacda778d74c5bcec1fa73e6e5e9f90a08fc91f0968f",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 11558,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k2.json",
+        "sha256": "dbb8ece266a3c040c9a4242de9b199b60e6b23c78708ccd156a5ab518043ab23"
+      },
+      "teacher_cross_entropy_bits": 274295.8847176972,
+      "teacher_cross_entropy_bps": 4.185423045619159,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 5.1825250395361095
+    },
+    {
+      "bzip3_frame_ratio": 7.071471381480372,
+      "case": "freedict-eval8-64k",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 343013.59578397486,
+      "compiled_cross_entropy_bps": 5.233972103637312,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 47195,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-observed.lbel",
+        "sha256": "8cfd48a3f558258b8e9c740ea78e642bfcb4164ad33f1af6198f3a4e387b525f"
+      },
+      "frame_bits_per_input_byte": 5.7611083984375,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 4306,
+        "output": 65536,
+        "payload": 42885,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 4120
+      },
+      "frame_bytes": 47195,
+      "frame_sha256": "8cfd48a3f558258b8e9c740ea78e642bfcb4164ad33f1af6198f3a4e387b525f",
+      "k_compiled": 4,
+      "k_teacher": 4,
+      "model_table_sha256": "677379632ac80da0de077db6cbbafb547f511a8fb6d87701e67d0d37ccf40d97",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 23468,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k4.json",
+        "sha256": "37011661a9205cbf307781a4e9817b1adb8f912b65cbb66da7ed8c7a855e234d"
+      },
+      "teacher_cross_entropy_bits": 247576.6150710711,
+      "teacher_cross_entropy_bps": 3.7777193461772325,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 6.2196889826041115
+    },
+    {
+      "bzip3_frame_ratio": 7.29472580161822,
+      "case": "freedict-eval8-64k",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 354906.15644749877,
+      "compiled_cross_entropy_bps": 5.415438178215008,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 48685,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k4-balanced.lbel",
+        "sha256": "0aca098c47ee3ae44c86b47416a8dc6b1eaf4f012fb17b546fad2f822a0d037e"
+      },
+      "frame_bits_per_input_byte": 5.9429931640625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 4306,
+        "output": 65536,
+        "payload": 44375,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 4120
+      },
+      "frame_bytes": 48685,
+      "frame_sha256": "0aca098c47ee3ae44c86b47416a8dc6b1eaf4f012fb17b546fad2f822a0d037e",
+      "k_compiled": 4,
+      "k_teacher": 4,
+      "model_table_sha256": "8cfa35bdca987a20dc8d0f6e60ad28d883bd05638b76de542bccf23072fc7a44",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 23468,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k4.json",
+        "sha256": "37011661a9205cbf307781a4e9817b1adb8f912b65cbb66da7ed8c7a855e234d"
+      },
+      "teacher_cross_entropy_bits": 247576.6150710711,
+      "teacher_cross_entropy_bps": 3.7777193461772325,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 6.416051660516605
+    },
+    {
+      "bzip3_frame_ratio": 6.538207971231645,
+      "case": "freedict-eval8-64k",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 281567.8023701656,
+      "compiled_cross_entropy_bps": 4.296383703158044,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 43636,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-observed.lbel",
+        "sha256": "755d564b01bfee8c023bb189971205fc31da6c4b775aea335db54e62f3a6cced"
+      },
+      "frame_bits_per_input_byte": 5.32666015625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 8426,
+        "output": 65536,
+        "payload": 35206,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 8240
+      },
+      "frame_bytes": 43636,
+      "frame_sha256": "755d564b01bfee8c023bb189971205fc31da6c4b775aea335db54e62f3a6cced",
+      "k_compiled": 8,
+      "k_teacher": 8,
+      "model_table_sha256": "1f04116048ad425109bc53f38a324f94ec658ed7dae68549a13f892a41652446",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 47168,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k8.json",
+        "sha256": "b8e84fafd625b96eb07fc673264427a8db154f742f0a30d80e9a7b4054217e25"
+      },
+      "teacher_cross_entropy_bits": 236886.28812297402,
+      "teacher_cross_entropy_bps": 3.6145979022670596,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 5.75065893516078
+    },
+    {
+      "bzip3_frame_ratio": 6.645040455498951,
+      "case": "freedict-eval8-64k",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 287275.547213563,
+      "compiled_cross_entropy_bps": 4.383476977746017,
+      "decoded": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 44349,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/lbel-k8-balanced.lbel",
+        "sha256": "bfe50fb6e8b5947ecefff5dfc2b92984fae65225042625479567184162ff5dec"
+      },
+      "frame_bits_per_input_byte": 5.4136962890625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 8426,
+        "output": 65536,
+        "payload": 35919,
+        "restart_records": 160,
+        "segments": 16,
+        "tables": 8240
+      },
+      "frame_bytes": 44349,
+      "frame_sha256": "bfe50fb6e8b5947ecefff5dfc2b92984fae65225042625479567184162ff5dec",
+      "k_compiled": 8,
+      "k_teacher": 8,
+      "model_table_sha256": "005f5024a5ddecd7a4109f4676c84614293a23728953d2e69311bb9940f3e203",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher_artifact": {
+        "bytes": 47168,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k8.json",
+        "sha256": "b8e84fafd625b96eb07fc673264427a8db154f742f0a30d80e9a7b4054217e25"
+      },
+      "teacher_cross_entropy_bits": 236886.28812297402,
+      "teacher_cross_entropy_bps": 3.6145979022670596,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      },
+      "v4_frame_ratio": 5.844623089088033
+    }
+  ],
+  "case": "freedict-eval8-64k",
+  "phase": "dev",
+  "target": {
+    "bytes": 65536,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+    "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+  },
+  "train": {
+    "bytes": 65536,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.train.bin",
+    "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+  }
+}

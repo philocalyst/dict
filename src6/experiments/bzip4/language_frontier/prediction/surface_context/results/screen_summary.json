@@ -1,0 +1,84 @@
+{
+  "command": "python3 screen.py --json",
+  "python": "3.14.7",
+  "policy": {
+    "train_limit": 65536,
+    "eval_limit": 65536,
+    "max_tokens": 384,
+    "max_token_len": 32,
+    "min_pair_count": 4,
+    "class_counts": [1, 4],
+    "source": "token t ~ P(t|boundary_class), emit bytes(t), class <- g(t)",
+    "class_fit": "six-step deterministic Lloyd clustering of next-token signatures",
+    "web2_split": "train bytes [0,65536), eval bytes [65536,131072)",
+    "dictionary_split": "train bytes [0,65536), eval8 bytes [0,65536)"
+  },
+  "rows": [
+    {
+      "name": "web2-next64k", "class_count": 1, "tokens": 384,
+      "train_sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e",
+      "eval_sha256": "40b2b375a6cbf9eba33f586cf30e6a903b7822ab999b6874fb59964af5800821",
+      "header_bytes": 1941, "map_frame_bytes": 35302, "marginal_frame_bytes": 34966,
+      "map_exact_bits": 266831.4548876804, "marginal_exact_bits": 264165.0900482594,
+      "map_payload_bits": 266840, "marginal_payload_bits": 264176,
+      "map_frame_sha256": "2a1b25185e6665ea2fed6e0fea1ba2549d9ddf8e04969be182cad74d61abe660",
+      "marginal_frame_sha256": "665e8a99204054374f4037e6fb251402621ecb953dad67048f0cffb48720e437",
+      "round_trip": true
+    },
+    {
+      "name": "web2-next64k", "class_count": 4, "tokens": 384,
+      "train_sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e",
+      "eval_sha256": "40b2b375a6cbf9eba33f586cf30e6a903b7822ab999b6874fb59964af5800821",
+      "header_bytes": 3094, "map_frame_bytes": 36358, "marginal_frame_bytes": 36034,
+      "map_exact_bits": 266058.3707790347, "marginal_exact_bits": 263489.90512184263,
+      "map_payload_bits": 266064, "marginal_payload_bits": 263496,
+      "map_frame_sha256": "aa37957030e0030d8513b44b9d93cc477e526672e75fcd2a1546aa4ab2c9cbd3",
+      "marginal_frame_sha256": "0d9e44632e59bd49cf7bc0056fad79cd610ac8df7ec8b4d104c961dae5708c90",
+      "round_trip": true
+    },
+    {
+      "name": "freedict-eval8", "class_count": 1, "tokens": 384,
+      "train_sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932",
+      "eval_sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63",
+      "header_bytes": 4036, "map_frame_bytes": 24300, "marginal_frame_bytes": 23933,
+      "map_exact_bits": 162062.11872706263, "marginal_exact_bits": 162060.15899258511,
+      "map_payload_bits": 162064, "marginal_payload_bits": 159152,
+      "map_frame_sha256": "520d754ea5f397057b871acef89bccc1d4c683a5e2b187e87fb08285649bd5f5",
+      "marginal_frame_sha256": "b0b6be1bee91248441f315e6c8134e4225bd29eef3db8ec88bf0fe5108656b04",
+      "round_trip": true
+    },
+    {
+      "name": "freedict-eval8", "class_count": 4, "tokens": 384,
+      "train_sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932",
+      "eval_sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63",
+      "header_bytes": 5186, "map_frame_bytes": 25305, "marginal_frame_bytes": 24938,
+      "map_exact_bits": 160897.27461852756, "marginal_exact_bits": 160892.85911403716,
+      "map_payload_bits": 160904, "marginal_payload_bits": 157992,
+      "map_frame_sha256": "364898da114a6a297ed314e9b5e584e71386e4113587e9c287452267ad26dafc",
+      "marginal_frame_sha256": "65bf2568fa965e1bd3f0bbb15c7f8e75c44b9f96b1ebe189a1d526cf9c58d37a",
+      "round_trip": true
+    },
+    {
+      "name": "omw-eval8", "class_count": 1, "tokens": 384,
+      "train_sha256": "d95b6d8339f1fe12652afc461624423278dba2b35271b66c32893a23b186f219",
+      "eval_sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283",
+      "header_bytes": 3564, "map_frame_bytes": 33016, "marginal_frame_bytes": 32897,
+      "map_exact_bits": 235563.41628398758, "marginal_exact_bits": 235439.1681563372,
+      "map_payload_bits": 235568, "marginal_payload_bits": 234640,
+      "map_frame_sha256": "2b6f30ffcce4de541b89cbdeec11e09cd9e3a24a0ec8a03539c7a4d42e16daf5",
+      "marginal_frame_sha256": "f6a85ef7ad11c28056d9e7e551956f8c08f07c78eec0019a99d8e66c6371ee1d",
+      "round_trip": true
+    },
+    {
+      "name": "omw-eval8", "class_count": 4, "tokens": 384,
+      "train_sha256": "d95b6d8339f1fe12652afc461624423278dba2b35271b66c32893a23b186f219",
+      "eval_sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283",
+      "header_bytes": 4721, "map_frame_bytes": 33780, "marginal_frame_bytes": 33664,
+      "map_exact_bits": 232420.9293168267, "marginal_exact_bits": 232302.69406861183,
+      "map_payload_bits": 232424, "marginal_payload_bits": 231520,
+      "map_frame_sha256": "2b982a9196b347de9efe1e42b270f82425d48c21746e74945cf65ce510024923",
+      "marginal_frame_sha256": "e0047566cba42b8aab53ef95184f4dc0a7b84b1023f3b312e7592e56f35f5d27",
+      "round_trip": true
+    }
+  ]
+}

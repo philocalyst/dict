@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "corpus": "freedict-eng-spa",
+  "rows": 64258,
+  "unique_keys": 59253,
+  "key_hits": 64258,
+  "empty_key_hits": 0,
+  "duplicate_key_hits": 5005,
+  "projection_tsv": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection.tsv",
+    "bytes": 90123314,
+    "sha256": "687008296b727878d26472bca5315beca8136a64365f2ac819e9e1f7f22f3865",
+    "sha512": "f1d64f3ddd703efef2d5e4fb45d5a88ab0956cc0ca4217f56da08dccad2e51328aaaa7b7cf86b115cc7f63d83bf5931200ac818397f4df3daa55d1fe39c18e22"
+  },
+  "rows_jsonl": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/rows.jsonl",
+    "bytes": 28575499,
+    "sha256": "dce3de7e57a1d00be176214e6dbbb1a5a8dd530a8baeb0a430e1a23c4adc95c2",
+    "sha512": "f688825c5f57982189fd2c8bf0de8879d075611de91d1decd9fb30d8e3893cd120afeee2622cd72cb089a15027ee2a0c9f405951a3d9c6987f01c26eb115976a"
+  },
+  "stats": {
+    "source_bytes": 34358251,
+    "records": 64258,
+    "parse_failures": 0,
+    "front_matter_excluded": true,
+    "source_format": "TEI P5 XML"
+  },
+  "source_manifest": {
+    "id": "freedict-eng-spa",
+    "url": "https://download.freedict.org/dictionaries/eng-spa/2025.11.23/freedict-eng-spa-2025.11.23.src.tar.xz",
+    "archive": {
+      "path": "/private/tmp/dictionary-real-world-cache/sources/freedict-eng-spa-2025.11.23.src.tar.xz",
+      "bytes": 3715012,
+      "sha256": "dd724fb48c5701395c15d7d648a9e6f6b75d6ff4269e465dce6d3a292700198d",
+      "sha512": "622e8fec6c4178cb4c21e4577701c5325670f825331b07a185b4c6b810603c337e80429738a97581f68f668667910e7ad36f27332eaee2828f1f906537852fe3",
+      "url": "https://download.freedict.org/dictionaries/eng-spa/2025.11.23/freedict-eng-spa-2025.11.23.src.tar.xz"
+    },
+    "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/freedict-eng-spa-2025.11.23/eng-spa",
+    "license": {
+      "path": "/private/tmp/dictionary-real-world-cache/extracted/freedict-eng-spa-2025.11.23/eng-spa/COPYING",
+      "bytes": 22459,
+      "sha256": "41a8f57655bae359bea4a7e99c7a2aed171687d3dfb49614214538ba6dcbe75b",
+      "sha512": "80bb3b85971a84fa6397c5aa36e2f4fed7a48bb6452ba2c72866a794037abd3cea27ffc5213ec471a0098c7e6907d0aab261b7e800dfa847495e9c6be85b4441"
+    }
+  }
+}

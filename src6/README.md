@@ -8,10 +8,12 @@ application can ask for a sense or render a definition.
 var file = try lex.archive.build(gpa, .{ .entries = entries, .resources = resources }, .{});
 defer file.deinit();
 const dictionary = try lex.archive.Archive.open(file.bytes, .{});
+var reader = try lex.archive.Reader.init(gpa, &dictionary, .{});
+defer reader.deinit();
 
 var matches = try dictionary.lookup("bank");
 while (try matches.next()) |hit| {
-    var loaded = try dictionary.load(gpa, hit.entry);
+    var loaded = try reader.load(hit.entry);
     defer loaded.deinit();
     var senses = lex.query.entry(&loaded.value).select(.sense, .children);
     while (try senses.next()) |sense| {
@@ -37,12 +39,16 @@ codec hook or modify any prior build. The compiler used here comes from the
 existing Nix environment. If Zig reports a stale C-import cache entry, a fresh
 `--cache-dir` can isolate it without deleting another task's cache.
 
-Current verification: 51 runtime tests pass in each of Debug, ReleaseSafe and
-ReleaseFast, including the independently compiled example. Two additional
-compile-failure contracts reject unchecked union projection in every mode.
-The checks include malformed archives with recomputed digests, allocation
-failures, source scope, mixed-content rendering and query context. Formatting
-also passes. These are implementation gates, not standards-conformance tests.
+The review-resolution work adds all-node resolution, composable predicates,
+typed shared values, language-tag syntax admission, and bounded reader sessions.
+Its verification and remaining limits are recorded in
+[review resolution](reviews/resolution.md). Compile-failure contracts reject
+unchecked union access, byte-string enumeration, and scalar collection misuse.
+These are implementation gates, not standards-conformance tests.
+
+**Format revision:** packet and archive versions are now 2. Version 1 artifacts
+must be rebuilt; they are rejected rather than interpreted as the changed model.
+Retained version 1 measurements below remain historical baseline evidence.
 
 ## Measured result, with boundaries
 
@@ -88,6 +94,22 @@ artifact hashes, matched-subset definitions and limitations are in the
   negative compilation tests enforce this boundary.
 - `hit.spelling` is a borrowed two-slice `KeyView`. Use `eql`, `startsWith`, or
   `writeTo`; recovering a contiguous temporary string is not required.
+- `descendants(T, limits)` traverses all structural model nodes, including
+  feature structures and form representations. `.filter(context, predicate)`
+  composes over structural selections, fast lexical selections, and field
+  collections. The callback receives the typed match and caller context.
+- Structural matches expose typed ancestors. That ancestry view expires when
+  its iterator advances; the node pointer itself borrows the document.
+  `query.resolve` returns a stable typed node and language, never a pointer
+  into a destroyed traversal stack.
+- `Reader` retains at most one decoded page and reuses source bounds. Returned
+  documents still own independent arenas. Use `Archive.load` for an explicitly
+  uncached operation. Reader statistics expose actual decodes and cache hits.
+- `Reader.prepareLinks()` explicitly scans entry documents once to build a
+  derived logical-ID catalog. `follow` distinguishes found, unavailable and
+  unresolved links, with a caller-selected hop limit. Missing external targets
+  are not silently relabelled as malformed archives. Resource links use the
+  existing hot catalog; local links resolve against an already loaded document.
 
 ## What is represented
 
@@ -98,7 +120,10 @@ content. Feature structures preserve exact decimals, alternatives, negation,
 ordered lists, bags, sets, unknown and unspecified values.
 
 Relations carry their own identity, state, evidence, annotations and role-labelled
-participants. Lexical concepts and ontology denotations remain different
+participants. Their `endpoints` union selects binary or n-ary form; both cannot
+coexist. A named `SharedValue` defines an atomic or structured value once, with
+reuse through references. Independent value libraries use resource packets.
+Lexical concepts and ontology denotations remain different
 values. Shared concepts, LIFT-style ranges and source documents are independently
 addressable resources. Source spans, many-to-many realization mappings,
 residual material and scoped certainty are explicit data.
@@ -122,13 +147,13 @@ archive's publisher.
 
 Shared source bounds are indexed once for a build or full verification and
 borrowed by document admission. A standalone load currently constructs its own
-source index; it does not silently rely on a warmed reader session.
+source index; the explicit `Reader` session reuses that index across loads.
 
 Default pages target 64 KiB. Raw and real bzip3 share the same directory
 framing. Adaptive mode compares complete encoded block bytes with raw bytes;
 ties choose raw. Cold decode costs are real and reported separately from warm
-typed query/render costs. The current reader does not promise cross-call page
-caching. Very large source documents require raised explicit document/page
+typed query/render costs. Reader caching is explicit, bounded and observable;
+it does not change metadata-only opening. Very large source documents require raised explicit document/page
 limits; streaming source fragmentation is not yet implemented.
 
 In the benchmark, “cold load” means a fresh decoded entry/codec state over
@@ -148,3 +173,9 @@ shipping a changed declaration order or incompatible model. Existing `src5`
 and older formats remain untouched. [Benchmark evidence](reviews/benchmark.md)
 must be read with its explicit semantic projection and cold/warm boundaries;
 there is no universal old-format or SLOB victory claim.
+
+The [post-review structural follow-up](reviews/frontier-followup.md) records
+single-pass admission, shared language-context rules and the unified archive
+admission contract, together with the matched real-corpus results and regressions.
+The isolated [`bzip4` experiments](experiments/bzip4/README.md) are research
+candidates, not additional production codecs or promises of improved compression.

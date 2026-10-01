@@ -1,0 +1,10 @@
+{
+  "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+  "prefix_limit": 16384,
+  "sample": {
+    "bytes": 16384,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/native-anchor-v3/20260926T165458Z-a4f460b8/00-inputs-web2.prefix65536/input.bin",
+    "sha256": "0323637837f83b02770ecf216fda5094e06ad63c4e5f69f3a07f5d0c0ab4d679"
+  },
+  "source_bytes": 65536
+}

@@ -1,0 +1,1934 @@
+[
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/external-decoded.bin",
+        "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/web2.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/web2.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 18168,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/frame.b4",
+      "sha256": "b668f4ca3fd3406cf72ecfa4a80d317013bb499e54ccd2642a73d338d740596c"
+    },
+    "id": "web2-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 120,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/encode.stderr",
+      "sha256": "642993c2313c591b0384455803c3f6836db0852e93a2bd108e2df692b55f6411"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/web2/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 17483,
+      "framing": 22,
+      "header": 599,
+      "payload": 64,
+      "raw_len": 65536,
+      "total": 18168
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "web2-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/web2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 65,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/web2.stdout",
+      "sha256": "fe84e200d6eb320ddddf540e1dc9ef5755503cfabb8b5d3a76b7596b8d515d49"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "web2.prefix65536.bin",
+      "payload": 21045,
+      "total": 21093
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 31403,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/frame.wam",
+      "sha256": "185cce3b617eefb9346b09fa304b0aaa4df3d1db63c40ca815287d46a164ab1e"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/fresh-decoded.bin",
+        "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/map/decode.stdout",
+        "sha256": "4dbe26faa2c5041d782849b7353780b8b804fbdfd7f0ab3796d86c46236d31c6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "web2-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 38054,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2107,
+      "path_count": 35476,
+      "payload": 29293,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 31403
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 228583.4633384532,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 30681,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/frame.wam",
+      "sha256": "f2c6bf8e9d38c05a5035ce6de6aeb01f69675fa4239a71dffb4dacc53fdc77c9"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/fresh-decoded.bin",
+        "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/web2/marginal/decode.stdout",
+        "sha256": "4dbe26faa2c5041d782849b7353780b8b804fbdfd7f0ab3796d86c46236d31c6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "web2-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "sha256": "328d13eb19288331b00baea9463133153b0383a9486fcf5ab8fb31ea3e177f5e"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 38054,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 228592,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2104,
+      "path_count": -1,
+      "payload": 28574,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 30681
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/external-decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/freedict-eval8.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/freedict-eval8.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 7588,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/frame.b4",
+      "sha256": "3329efb32467396e558d4619b8059acf50b23c3be3ce31f92ba10273f9d58727"
+    },
+    "id": "freedict-eval8-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 120,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/encode.stderr",
+      "sha256": "1e5215a00a80fa1714d7083c5c1d98323fcde124a9b04198f0ac872dadac2aef"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/freedict-eval8/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 3246,
+      "framing": 20,
+      "header": 121,
+      "payload": 4201,
+      "raw_len": 65536,
+      "total": 7588
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "freedict-eval8-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/freedict-eval8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 73,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/freedict-eval8.stdout",
+      "sha256": "28e97ffc25264f1c6d86ae2d6b2eaccef4b855174581edd42b321941067bc230"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "freedict-eval8.prefix65536.bin",
+      "payload": 6626,
+      "total": 6674
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 28657,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/frame.wam",
+      "sha256": "7d26f990b7a83232d882e5c563d2ffe24f22c0940b23517e59f98dc070a3ef0f"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/fresh-decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/map/decode.stdout",
+        "sha256": "b08fcca8a22066d6071e0d9ead3a149b09c7dd16e9510bf01289ed390f8aef41"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "freedict-eval8-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 46623,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2266,
+      "path_count": 46254,
+      "payload": 26388,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 28657
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 210715.71656572487,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 28606,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/frame.wam",
+      "sha256": "2f373e4953b96fb66c5c07e9da6725975365e6200b146d5ee295643d1023c267"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/fresh-decoded.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/freedict-eval8/marginal/decode.stdout",
+        "sha256": "b08fcca8a22066d6071e0d9ead3a149b09c7dd16e9510bf01289ed390f8aef41"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "freedict-eval8-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 46623,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 210720,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2263,
+      "path_count": -1,
+      "payload": 26340,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 28606
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/gcide-eval8.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/external-decoded.bin",
+        "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/gcide-eval8.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/gcide-eval8.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 17417,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/frame.b4",
+      "sha256": "65fb5cecb10166db9016999cd255cfef43cf02a432ebaf17570b6ecb736f66fd"
+    },
+    "id": "gcide-eval8-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/gcide-eval8.prefix65536.bin",
+      "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 122,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/encode.stderr",
+      "sha256": "a76297578ff9f3afebb7fefffe0468edc5c1e10a63cf7470f860bc9f72449116"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/gcide-eval8/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 5509,
+      "framing": 21,
+      "header": 129,
+      "payload": 11758,
+      "raw_len": 65536,
+      "total": 17417
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "gcide-eval8-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/gcide-eval8.prefix65536.bin",
+      "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/gcide-eval8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 72,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/gcide-eval8.stdout",
+      "sha256": "c9cebf7ac64f0ad1c8900b6fe2e2518facf9eab83d9fe09c947fd23d0d873835"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "gcide-eval8.prefix65536.bin",
+      "payload": 14565,
+      "total": 14613
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 34166,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/frame.wam",
+      "sha256": "d4cac2678e531e0687d7c463000e23c63cc8040439cc851652509f5cdc9d50aa"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/fresh-decoded.bin",
+        "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/map/decode.stdout",
+        "sha256": "3e66dbfc3c6d879d3c156693d52d665ffce4dd8aaa33104aad9054171e0322e6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "gcide-eval8-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/gcide-eval8.prefix65536.bin",
+      "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 44642,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2217,
+      "path_count": 43869,
+      "payload": 31946,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 34166
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 254150.45651501926,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 33986,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/frame.wam",
+      "sha256": "a984e274086d4a69402d4fd82cf3f5f48955d7d0e72739ce77a3b2189ffac4a5"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/fresh-decoded.bin",
+        "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/gcide-eval8/marginal/decode.stdout",
+        "sha256": "3e66dbfc3c6d879d3c156693d52d665ffce4dd8aaa33104aad9054171e0322e6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "gcide-eval8-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/gcide-eval8.prefix65536.bin",
+      "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 44642,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 254152,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2214,
+      "path_count": -1,
+      "payload": 31769,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 33986
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/external-decoded.bin",
+        "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/omw-eval8.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/omw-eval8.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 6493,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/frame.b4",
+      "sha256": "9521efbb9742a83173f58cce461f44c914f203e314179f690a436bfb8d61fe08"
+    },
+    "id": "omw-eval8-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 120,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/encode.stderr",
+      "sha256": "c58f87ef2cfa9201ad8d4aae3b2751c80234267aa824c35eea8db184b23637ec"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/omw-eval8/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 3796,
+      "framing": 21,
+      "header": 140,
+      "payload": 2536,
+      "raw_len": 65536,
+      "total": 6493
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "omw-eval8-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/omw-eval8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 68,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/omw-eval8.stdout",
+      "sha256": "666f3018184296803367c65a15dec9e409edd394c1b0399f774584df28f1fbfb"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "omw-eval8.prefix65536.bin",
+      "payload": 4984,
+      "total": 5032
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 29449,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/frame.wam",
+      "sha256": "2aa3dc21a2adc6286daf4b4bfaba504b3bc3de92e4cf138f3136e56014216a60"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/fresh-decoded.bin",
+        "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/map/decode.stdout",
+        "sha256": "390ae5589e078dda2fa7ac5f1243ceec2b35c2f3cf6451f5d01c996501641bdc"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "omw-eval8-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 37333,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2616,
+      "path_count": 36969,
+      "payload": 26830,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 29449
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 214104.06962545964,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 29380,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/frame.wam",
+      "sha256": "2792fb025f020086827cd5e63d8400f8e9d98575e90d8786376b972c8a67ce33"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/fresh-decoded.bin",
+        "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/omw-eval8/marginal/decode.stdout",
+        "sha256": "390ae5589e078dda2fa7ac5f1243ceec2b35c2f3cf6451f5d01c996501641bdc"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "omw-eval8-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 37333,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 214112,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2613,
+      "path_count": -1,
+      "payload": 26764,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 29380
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/external-decoded.bin",
+        "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/ud-fi-test-form.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/ud-fi-test-form.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 26526,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/frame.b4",
+      "sha256": "e8acff7d2487d879e3ce5ee257d0715a4bac63bde8a3acecf9ce00eb4a3b8462"
+    },
+    "id": "ud-fi-test-form-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 122,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/encode.stderr",
+      "sha256": "607d04c834800e0919e10286d805c0f6129e92ea9f7e256f232ca2b452d8878b"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-fi-test-form/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 8735,
+      "framing": 23,
+      "header": 814,
+      "payload": 16954,
+      "raw_len": 65536,
+      "total": 26526
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "ud-fi-test-form-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-fi-test-form.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 76,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-fi-test-form.stdout",
+      "sha256": "d5ce3d7921efdf1e47a562d775eb1f95d1853c28eb7df458c44ac76cd21e23a1"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "ud-fi-test-form.prefix65536.bin",
+      "payload": 21932,
+      "total": 21980
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 32915,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/frame.wam",
+      "sha256": "3081ef04f64f70d86cbd5c08738d47de77cb9c297d7357c1a94bc65b5d79a406"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/fresh-decoded.bin",
+        "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/map/decode.stdout",
+        "sha256": "8418878ab796f25cafb03835b5ab1b623b9589cf6835996ef1dca28be09a4bc6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-fi-test-form-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 40733,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2106,
+      "path_count": 38436,
+      "payload": 30806,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 32915
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 240769.4326487718,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 32202,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/frame.wam",
+      "sha256": "fd4cc6f199dfeb7c18a33421c33e34e7c630265395b7d005f00bc83b85e97801"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/fresh-decoded.bin",
+        "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-fi-test-form/marginal/decode.stdout",
+        "sha256": "8418878ab796f25cafb03835b5ab1b623b9589cf6835996ef1dca28be09a4bc6"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-fi-test-form-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "sha256": "2479918a7715db55131f6a68a30cbf86c75f9fbd7771a769bebdb11dd1931fa6"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 40733,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 240768,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2103,
+      "path_count": -1,
+      "payload": 30096,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 32202
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/external-decoded.bin",
+        "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/ud-tr-test-form.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/ud-tr-test-form.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 25346,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/frame.b4",
+      "sha256": "522868d2c5f3d3a99050a983e78ecc49061fc5b1d1b96523a30cbd599f4ce6a5"
+    },
+    "id": "ud-tr-test-form-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 122,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/encode.stderr",
+      "sha256": "1c7203bdfcc731c5b895caeb9fac8ba16317817367e626a92844222b7e220ced"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-tr-test-form/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 8800,
+      "framing": 22,
+      "header": 819,
+      "payload": 15705,
+      "raw_len": 65536,
+      "total": 25346
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "ud-tr-test-form-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-tr-test-form.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 76,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-tr-test-form.stdout",
+      "sha256": "4cf762b211b6f09a5fc260b6885a47a17a1094a144779c5b565cbdc359243efe"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "ud-tr-test-form.prefix65536.bin",
+      "payload": 20891,
+      "total": 20939
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 33749,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/frame.wam",
+      "sha256": "e49aa5bea7a9c51f0b04072954b27979377eb3a6727804bb6b712cfa2d565135"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/fresh-decoded.bin",
+        "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/map/decode.stdout",
+        "sha256": "cb9e9cd9825eaf61a6450e2455ca0fcde3b6295fcf52d1f28500ad93f17367e0"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-tr-test-form-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 41560,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2201,
+      "path_count": 40060,
+      "payload": 31545,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 33749
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 248053.49466061848,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 33208,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/frame.wam",
+      "sha256": "5e5e2e9725849a08f9b9238c679a16f1d8e127ba8d91db54620c13de9ef095df"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/fresh-decoded.bin",
+        "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-tr-test-form/marginal/decode.stdout",
+        "sha256": "cb9e9cd9825eaf61a6450e2455ca0fcde3b6295fcf52d1f28500ad93f17367e0"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-tr-test-form-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "sha256": "e5cbcefc94397c83b5cb6344e4513c109c4756430721894ce61de23b48e9751d"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 41560,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 248056,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2198,
+      "path_count": -1,
+      "payload": 31007,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 33208
+    }
+  },
+  {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip4-v4",
+    "codec_source": {
+      "bytes": 5709,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/capture_frame.zig",
+      "sha256": "3c63d5cb3760120d1422ccc19b942d08bb7143719eb1a29ff971d0edd3b8ce19"
+    },
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/frame.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/frame.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/external-decoded.bin",
+        "1"
+      ],
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/external-decoded.bin",
+        "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/ud-ar-test-form.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/ud-ar-test-form.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 17425,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/frame.b4",
+      "sha256": "627a6169db9c0d9a8e11c94f85795e3648fd1bca950735480ed106d0f077b6a2"
+    },
+    "id": "ud-ar-test-form-v4",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+      "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+    },
+    "kind": "current_v4_raw_prefix65536",
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 121,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/encode.stderr",
+      "sha256": "c9560d93eee9f650e0ebe889fb25125847980f2f4f7aca20f32577496536cdc7"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/v4/ud-ar-test-form/encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 8465,
+      "framing": 22,
+      "header": 703,
+      "payload": 8235,
+      "raw_len": 65536,
+      "total": 17425
+    }
+  },
+  {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "block_bytes": 65536,
+    "codec": "bzip3-control",
+    "id": "ud-ar-test-form-bzip3",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+      "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+    },
+    "kind": "matched_block_control_reused_exact_prefix_hash",
+    "ok": true,
+    "reference_run": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926",
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-ar-test-form.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 77,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/bzip3/ud-ar-test-form.stdout",
+      "sha256": "8b338beff95c9156a7df5ede1c9a98ef7546282c5f8fbba181477569512b1798"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input_name": "ud-ar-test-form.prefix65536.bin",
+      "payload": 13519,
+      "total": 13567
+    },
+    "timing_policy": "raw control timing fields are retained in referenced stdout but ignored"
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": null,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 23125,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/frame.wam",
+      "sha256": "affc1abd96c2d60db69c46aa9aae8eb705657c8b1b9bcf2b0b23dcc93a355da7"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/fresh-decoded.bin",
+        "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/map/decode.stdout",
+        "sha256": "2d6eb2f3e38acb15b382458b15aaf91fdc947ff9d693db69da09d853c727a893"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-ar-test-form-wam-map",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+      "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "map",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 30520,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": null,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2405,
+      "path_count": 29473,
+      "payload": 20717,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 23125
+    }
+  },
+  {
+    "block_bytes": 65536,
+    "candidate_source": {
+      "bytes": 37651,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation/weighted_emission_coder.py",
+      "sha256": "cd6b043d0d1d0cbf406649cb97e6a3a3b865686e6d4037f9e4b971426a2af95d"
+    },
+    "codec": "weighted-emission-wam1",
+    "encoder_api": "make_tokens -> em_fit_freqs -> Model -> encode_map/encode_marginal_with_stats",
+    "encoder_api_round_trip": true,
+    "exact_bits": 163768.090465478,
+    "fit_policy": "input bytes only; all fitted model tokens/frequencies are serialized in the frame header",
+    "frame": {
+      "bytes": 22876,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/frame.wam",
+      "sha256": "8f251f5c9247e3e54b4970f72dd78b031a02ed2dc2c1910363ceac0b87b85850"
+    },
+    "fresh_decode": {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/frame.wam",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/fresh-decoded.bin"
+      ],
+      "decoder": {
+        "bytes": 1589,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/wam_decode_subprocess.py",
+        "sha256": "5f36670f6d9f15f5efc9f4e2d8b25c56593d53cfeb62f50893ea62a603f61bb9"
+      },
+      "exact_hash": true,
+      "output": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/fresh-decoded.bin",
+        "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 89,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-final-20260926/wam/ud-ar-test-form/marginal/decode.stdout",
+        "sha256": "2d6eb2f3e38acb15b382458b15aaf91fdc947ff9d693db69da09d853c727a893"
+      }
+    },
+    "header_semantics": "WAM header includes token strings and fitted frequencies; no separate delta section",
+    "id": "ud-ar-test-form-wam-marginal",
+    "input": {
+      "bytes": 65536,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+      "sha256": "7df95b714d61f46db0d802032901a118fb5ca8a02ed6183741a00174b372d993"
+    },
+    "kind": "candidate_input_self_fit",
+    "mode": "marginal",
+    "model": {
+      "em_rounds": 2,
+      "fitted_frequency_sum": 30520,
+      "max_piece": 8,
+      "max_vocab": 256,
+      "min_occ": 2,
+      "piece_tokens": 256,
+      "tokens": 512
+    },
+    "ok": true,
+    "payload_bits": 163768,
+    "storage": {
+      "blocks": 1,
+      "delta": 0,
+      "framing": 3,
+      "header": 2402,
+      "path_count": -1,
+      "payload": 20471,
+      "raw_len": 65536,
+      "tokens": 512,
+      "total": 22876
+    }
+  }
+]

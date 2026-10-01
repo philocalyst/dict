@@ -1,0 +1,12 @@
+test_bwt_matches_independent_rotation_oracle (test_bwt_review.BWTReviewTests.test_bwt_matches_independent_rotation_oracle) ... ok
+test_e_wire_charges_two_tables_and_representation_flags (test_bwt_review.BWTReviewTests.test_e_wire_charges_two_tables_and_representation_flags) ... ok
+test_malformed_factor_stream_is_rejected_by_factor_parser (test_bwt_review.BWTReviewTests.test_malformed_factor_stream_is_rejected_by_factor_parser) ... ok
+test_model_constructor_accepts_values_that_wire_cannot_pack (test_bwt_review.BWTReviewTests.test_model_constructor_accepts_values_that_wire_cannot_pack) ... ok
+test_resealed_block_bounds_reject_before_crc (test_bwt_review.BWTReviewTests.test_resealed_block_bounds_reject_before_crc) ... ok
+test_resealed_c_zero_factor_fields_are_noncanonical_but_accepted (test_bwt_review.BWTReviewTests.test_resealed_c_zero_factor_fields_are_noncanonical_but_accepted) ... ok
+test_resealed_mask_with_unused_symbol_is_accepted (test_bwt_review.BWTReviewTests.test_resealed_mask_with_unused_symbol_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.198s
+
+OK

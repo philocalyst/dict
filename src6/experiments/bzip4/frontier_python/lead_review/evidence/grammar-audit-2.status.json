@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "src6/experiments/bzip4/frontier_python/lead_review/test_grammar.py"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 854742500,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 101,
+    "sha256": "a0778e011fd5079e91e5ac95bea1bd9d65a4b6b8db406150be446c39fe229f0a"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/grammar-audit-2.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/grammar-audit-2.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/grammar-audit-2.status.json"
+}

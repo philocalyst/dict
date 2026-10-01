@@ -1,0 +1,78 @@
+{
+  "argv": [
+    "src6/experiments/bzip4/language_frontier/quickbench/bench.py",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin",
+    "--limit",
+    "2048",
+    "--candidate",
+    "src6/experiments/bzip4/language_frontier/surface_copy/codec.py",
+    "--options",
+    "{\"start\":0}",
+    "--cache",
+    "src6/experiments/bzip4/language_frontier/surface_copy/cache",
+    "--output",
+    "src6/experiments/bzip4/language_frontier/surface_copy/runs/native-screen",
+    "--timeout",
+    "120"
+  ],
+  "bzip3": "vendored 1.5.1 native blocks, B3PY envelope = 32 + 16*blocks; not upstream .bz3 framing",
+  "cache": "encode only; each hit rehashed and decoded in a new process",
+  "matrix": {
+    "block_bytes": 65536,
+    "candidates": [
+      {
+        "block_bytes": 65536,
+        "dependencies": [],
+        "kind": "module",
+        "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/codec.py",
+        "name": "codec",
+        "options": {
+          "start": 0
+        }
+      }
+    ],
+    "controls": [
+      {
+        "block_bytes": 65536,
+        "kind": "bzip3",
+        "name": "bzip3-block"
+      },
+      {
+        "block_bytes": "max(1, input bytes)",
+        "kind": "bzip3",
+        "name": "bzip3-whole"
+      },
+      {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "block_bytes": 65536,
+        "kind": "v4",
+        "name": "bzip4-v4"
+      }
+    ],
+    "defaults": {
+      "start": 0
+    },
+    "grid": {},
+    "inputs": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/web2.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/freedict-eval8.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/omw-eval8.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-fi-test-form.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-tr-test-form.prefix65536.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/wam-screen-preflight-20260926/inputs/ud-ar-test-form.prefix65536.bin"
+    ],
+    "policies": [
+      {
+        "start": 0
+      }
+    ],
+    "prefix_limit": 2048,
+    "whole_block_rule": "max(1, input bytes)"
+  },
+  "timing": "fresh Python worker + imports + codec startup + file I/O + full decode; verification hash outside timer"
+}

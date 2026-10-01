@@ -1,0 +1,10 @@
+{
+  "block_bytes": 16384,
+  "dependencies": [
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation"
+  ],
+  "kind": "module",
+  "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/adapter_root.py",
+  "name": "adapter_root",
+  "options": {}
+}

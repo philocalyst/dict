@@ -1,0 +1,4 @@
+machdep.cpu.brand_string: Apple M3 Pro
+hw.model: Mac15,6
+hw.ncpu: 11
+hw.memsize: 38654705664

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/usr/sbin/sysctl",
+    "machdep.cpu.brand_string",
+    "hw.model",
+    "hw.ncpu",
+    "hw.memsize"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 2474000,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 93,
+    "sha256": "95c2ba2617a490b495a1bbff9d4b25bb9bd305de0a917bc4c7ed9818b740abbd"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/hardware-environment-2.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/hardware-environment-2.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/hardware-environment-2.status.json"
+}

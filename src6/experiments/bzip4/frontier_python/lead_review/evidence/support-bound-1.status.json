@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "src6/experiments/bzip4/frontier_python/lead_review/support_bound.py"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 26166736334,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 7288,
+    "sha256": "7baa921c4ca6d71a2694bf7a4d08668a840b71cd8ee6ba39ebda9028caf8ac07"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/support-bound-1.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/support-bound-1.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/support-bound-1.status.json"
+}

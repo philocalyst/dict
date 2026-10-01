@@ -1,0 +1,857 @@
+{
+  "cases": [
+    {
+      "baseline_reference": {
+        "bzip3_bytes": 6674,
+        "bzip3_payload_bytes": 6626,
+        "v4_bytes": 7588,
+        "v4_sha256": "3329efb32467396e558d4619b8059acf50b23c3be3ce31f92ba10273f9d58727"
+      },
+      "case": "freedict-eval8-64k",
+      "inventories": {
+        "complete_prefix": {
+          "candidate_count": 8,
+          "cdf": {
+            "binary_checks": 31,
+            "binary_mismatches": 0,
+            "direct_row_sum": 0.9999999999999835,
+            "max_cdf_error": 1.6431300764452317e-14,
+            "ok": true,
+            "optimized_binary_mismatches": 0,
+            "row_sum": 0.9999999999999984
+          },
+          "cdf_cached_boundaries": 12801,
+          "complete_codebook_max_row_mass_error": 2.220446049250313e-16,
+          "direct_teacher_bits": 236886.28812297405,
+          "exact_phrase_vs_direct_abs_bits": 3.2014213502407074e-09,
+          "final_partial_phrase_rule": "internal prefix + EOS terminal leaf; exact candidate leaf then root EOS",
+          "inventory": "complete_prefix",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9999993345591907,
+              "mean": 0.20050138612577534,
+              "min": 3.296172224054317e-10,
+              "p50": 0.005422142540547869,
+              "p95": 0.983093517525044
+            },
+            "count": 12801,
+            "cross_ratio_log_diameter": {
+              "max": 29.831925985067347,
+              "mean": 1.9178178996448603,
+              "min": 1.3184688896217267e-09,
+              "p50": 0.02168878271125152,
+              "p95": 9.529432320491402
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.8516349973759941,
+              "mean": 0.08788429238710353,
+              "min": 1.1351759595755121e-13,
+              "p50": 9.71679340351526e-05,
+              "p95": 0.6666238773638276
+            },
+            "rank_estimate_counts": {
+              "1": 4,
+              "2": 15,
+              "3": 39,
+              "4": 1789,
+              "5": 2210,
+              "6": 3448,
+              "7": 3415,
+              "8": 1881
+            },
+            "row_dispersion_tv": {
+              "max": 0.9927251813464989,
+              "mean": 0.1526166816240869,
+              "min": 4.0161169745714376e-12,
+              "p50": 0.001234459090419182,
+              "p95": 0.9064063729367948
+            }
+          },
+          "model_costs": {
+            "0": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 6554112,
+              "exact_phrases": 12801,
+              "phrase_symbol_bytes_uncompressed": 193636,
+              "reset_phrases": 0,
+              "serialized_model_bytes": 6786171
+            },
+            "1e-02": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3134592,
+              "exact_phrases": 3896,
+              "phrase_symbol_bytes_uncompressed": 193636,
+              "reset_phrases": 8905,
+              "serialized_model_bytes": 3366651
+            },
+            "1e-03": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 4212096,
+              "exact_phrases": 6702,
+              "phrase_symbol_bytes_uncompressed": 193636,
+              "reset_phrases": 6099,
+              "serialized_model_bytes": 4444155
+            },
+            "1e-04": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 5489280,
+              "exact_phrases": 10028,
+              "phrase_symbol_bytes_uncompressed": 193636,
+              "reset_phrases": 2773,
+              "serialized_model_bytes": 5721339
+            }
+          },
+          "normalized_codebook": true,
+          "parsed_phrase_count": 44547,
+          "phrase_count": 12801,
+          "phrase_kind_counts": {
+            "candidate": 8,
+            "eos": 1,
+            "fallback": 12743,
+            "terminal": 49
+          },
+          "prefix_parse_surface_bytes": 65536,
+          "prefix_parse_surface_matches_target": true,
+          "rollout": {
+            "0": {
+              "closed_approx_bits": 236886.28812297084,
+              "closed_bits_per_input_symbol": 3.614597902267011,
+              "exact_bits_per_input_symbol": 3.614597902267011,
+              "exact_teacher_bits": 236886.28812297084,
+              "excess_bits": 0.0,
+              "max_probability_error": 2.220446049250313e-16,
+              "phrases": 44547,
+              "reset_fraction": 0.0,
+              "resets": 0,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-02": {
+              "closed_approx_bits": 236886.43778646947,
+              "closed_bits_per_input_symbol": 3.614600185950767,
+              "exact_bits_per_input_symbol": 3.614597902267011,
+              "exact_teacher_bits": 236886.28812297084,
+              "excess_bits": 0.14966349862515926,
+              "max_probability_error": 6.226009856856451e-05,
+              "phrases": 44547,
+              "reset_fraction": 0.054391990481962874,
+              "resets": 2423,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-03": {
+              "closed_approx_bits": 236886.25954413877,
+              "closed_bits_per_input_symbol": 3.614597466188641,
+              "exact_bits_per_input_symbol": 3.614597902267011,
+              "exact_teacher_bits": 236886.28812297084,
+              "excess_bits": -0.028578832076163962,
+              "max_probability_error": 2.0408777229460884e-05,
+              "phrases": 44547,
+              "reset_fraction": 0.03614160325049947,
+              "resets": 1610,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-04": {
+              "closed_approx_bits": 236886.300705024,
+              "closed_bits_per_input_symbol": 3.6145980942539064,
+              "exact_bits_per_input_symbol": 3.614597902267011,
+              "exact_teacher_bits": 236886.28812297084,
+              "excess_bits": 0.012582053168443963,
+              "max_probability_error": 1.4854605284650435e-06,
+              "phrases": 44547,
+              "reset_fraction": 0.015758636945248837,
+              "resets": 702,
+              "roundtrip_path_is_deterministic": true
+            }
+          },
+          "surface_bytes": 96768
+        },
+        "morpheme_proxy": {
+          "candidate_count": 0,
+          "inventory": "morpheme_proxy",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9993411903187436,
+              "mean": 0.8775723000845483,
+              "min": 0.3947632886701521,
+              "p50": 0.9318212668276227,
+              "p95": 0.9986707304085137
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 16.035787171866595,
+              "mean": 9.180077993771626,
+              "min": 1.6697207088209183,
+              "p50": 6.6881716251915915,
+              "p95": 14.631215983465799
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.5202721315315556,
+              "mean": 0.11458023765299855,
+              "min": 0.00026759084019522297,
+              "p50": 0.006929488366278209,
+              "p95": 0.21221874595625992
+            },
+            "rank_estimate_counts": {
+              "7": 3,
+              "8": 5
+            },
+            "row_dispersion_tv": {
+              "max": 0.9210337985719644,
+              "mean": 0.6454365797258043,
+              "min": 0.05027325087826443,
+              "p50": 0.7887704530475222,
+              "p95": 0.9054683575261853
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 21
+        },
+        "word": {
+          "candidate_count": 0,
+          "inventory": "word",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.0701921693524897,
+              "mean": 0.010634460824534963,
+              "min": 7.976216252644934e-06,
+              "p50": 0.00017483991554113974,
+              "p95": 0.012384895400907339
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 0.28123115554535616,
+              "mean": 0.04259597014622418,
+              "min": 3.1904865011256334e-05,
+              "p50": 0.0006993596692908,
+              "p95": 0.04954211472347225
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.0016185416780442013,
+              "mean": 0.0003797037947968167,
+              "min": 4.426630933536637e-08,
+              "p50": 1.745687145024705e-06,
+              "p95": 0.001395769655736893
+            },
+            "rank_estimate_counts": {
+              "4": 1,
+              "5": 4,
+              "6": 3
+            },
+            "row_dispersion_tv": {
+              "max": 0.015355935671964725,
+              "mean": 0.0022747398325005884,
+              "min": 3.053556431083758e-06,
+              "p50": 7.355875994023893e-05,
+              "p95": 0.0018887426611218887
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 85
+        }
+      },
+      "limit_bytes": 65536,
+      "policy": {
+        "morpheme_proxy_limit": 8,
+        "morpheme_proxy_max_bytes": 6,
+        "reset_thresholds": [
+          0.0,
+          0.0001,
+          0.001,
+          0.01
+        ],
+        "shared_posterior": "r-weighted row average per fragment",
+        "word_candidate_limit": 8,
+        "word_candidate_max_bytes": 12
+      },
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/dev.target.bin",
+        "sha256": "d3bae0c328de1d07a3fde062f4cd68a6b72b828d6098f37aea4c73effae55b63"
+      },
+      "teacher": {
+        "bytes": 47168,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/teacher-k8.json",
+        "requested": "k8",
+        "sha256": "b8e84fafd625b96eb07fc673264427a8db154f742f0a30d80e9a7b4054217e25",
+        "states": 8
+      },
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/freedict-eval8-64k/train.bin",
+        "sha256": "378a174c295bf7084c98832aedfe5bbc1f5e31a9ab7fa174800eb25e5372d932"
+      }
+    },
+    {
+      "baseline_reference": {
+        "bzip3_bytes": 14613,
+        "bzip3_payload_bytes": 14565,
+        "v4_bytes": 17417,
+        "v4_sha256": "65fb5cecb10166db9016999cd255cfef43cf02a432ebaf17570b6ecb736f66fd"
+      },
+      "case": "gcide-eval8-64k",
+      "inventories": {
+        "complete_prefix": {
+          "candidate_count": 8,
+          "cdf": {
+            "binary_checks": 31,
+            "binary_mismatches": 0,
+            "direct_row_sum": 0.999999999999985,
+            "max_cdf_error": 9.769962616701378e-15,
+            "ok": true,
+            "optimized_binary_mismatches": 0,
+            "row_sum": 0.9999999999999937
+          },
+          "cdf_cached_boundaries": 7425,
+          "complete_codebook_max_row_mass_error": 2.220446049250313e-16,
+          "direct_teacher_bits": 308598.38777256536,
+          "exact_phrase_vs_direct_abs_bits": 2.0954757928848267e-09,
+          "final_partial_phrase_rule": "internal prefix + EOS terminal leaf; exact candidate leaf then root EOS",
+          "inventory": "complete_prefix",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9871061243127792,
+              "mean": 0.4885774362459799,
+              "min": 1.495783935822054e-06,
+              "p50": 0.5353614526969888,
+              "p95": 0.9587218110258547
+            },
+            "count": 7425,
+            "cross_ratio_log_diameter": {
+              "max": 10.07536440946878,
+              "mean": 3.234077970231734,
+              "min": 5.983135743292678e-06,
+              "p50": 2.390522641359805,
+              "p95": 7.719426307596645
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.8812639991887278,
+              "mean": 0.22960903203883334,
+              "min": 1.0409724181703478e-08,
+              "p50": 0.03507907819118296,
+              "p95": 0.7698536277957946
+            },
+            "rank_estimate_counts": {
+              "4": 2,
+              "5": 7,
+              "6": 56,
+              "7": 117,
+              "8": 7243
+            },
+            "row_dispersion_tv": {
+              "max": 0.933338647400671,
+              "mean": 0.37485893011755245,
+              "min": 2.1015668879090232e-07,
+              "p50": 0.27698428200876646,
+              "p95": 0.851481055708526
+            }
+          },
+          "model_costs": {
+            "0": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3801600,
+              "exact_phrases": 7425,
+              "phrase_symbol_bytes_uncompressed": 85562,
+              "reset_phrases": 0,
+              "serialized_model_bytes": 3909457
+            },
+            "1e-02": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3246336,
+              "exact_phrases": 5979,
+              "phrase_symbol_bytes_uncompressed": 85562,
+              "reset_phrases": 1446,
+              "serialized_model_bytes": 3354193
+            },
+            "1e-03": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3579264,
+              "exact_phrases": 6846,
+              "phrase_symbol_bytes_uncompressed": 85562,
+              "reset_phrases": 579,
+              "serialized_model_bytes": 3687121
+            },
+            "1e-04": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3700224,
+              "exact_phrases": 7161,
+              "phrase_symbol_bytes_uncompressed": 85562,
+              "reset_phrases": 264,
+              "serialized_model_bytes": 3808081
+            }
+          },
+          "normalized_codebook": true,
+          "parsed_phrase_count": 52169,
+          "phrase_count": 7425,
+          "phrase_kind_counts": {
+            "candidate": 8,
+            "eos": 1,
+            "fallback": 7388,
+            "terminal": 28
+          },
+          "prefix_parse_surface_bytes": 65536,
+          "prefix_parse_surface_matches_target": true,
+          "rollout": {
+            "0": {
+              "closed_approx_bits": 308598.38777256326,
+              "closed_bits_per_input_symbol": 4.708837704049122,
+              "exact_bits_per_input_symbol": 4.708837704049122,
+              "exact_teacher_bits": 308598.38777256326,
+              "excess_bits": 0.0,
+              "max_probability_error": 2.7755575615628914e-17,
+              "phrases": 52169,
+              "reset_fraction": 0.0,
+              "resets": 0,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-02": {
+              "closed_approx_bits": 308598.3841763786,
+              "closed_bits_per_input_symbol": 4.708837649175699,
+              "exact_bits_per_input_symbol": 4.708837704049122,
+              "exact_teacher_bits": 308598.38777256326,
+              "excess_bits": -0.003596184658817947,
+              "max_probability_error": 1.7756857402795312e-06,
+              "phrases": 52169,
+              "reset_fraction": 0.0013801299622381107,
+              "resets": 72,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-03": {
+              "closed_approx_bits": 308598.38777261943,
+              "closed_bits_per_input_symbol": 4.708837704049979,
+              "exact_bits_per_input_symbol": 4.708837704049122,
+              "exact_teacher_bits": 308598.38777256326,
+              "excess_bits": 5.617039278149605e-08,
+              "max_probability_error": 3.4540340032584993e-10,
+              "phrases": 52169,
+              "reset_fraction": 0.0005558856792347946,
+              "resets": 29,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-04": {
+              "closed_approx_bits": 308598.38777261943,
+              "closed_bits_per_input_symbol": 4.708837704049979,
+              "exact_bits_per_input_symbol": 4.708837704049122,
+              "exact_teacher_bits": 308598.38777256326,
+              "excess_bits": 5.617039278149605e-08,
+              "max_probability_error": 3.4540340032584993e-10,
+              "phrases": 52169,
+              "reset_fraction": 0.0005558856792347946,
+              "resets": 29,
+              "roundtrip_path_is_deterministic": true
+            }
+          },
+          "surface_bytes": 42752
+        },
+        "morpheme_proxy": {
+          "candidate_count": 0,
+          "inventory": "morpheme_proxy",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9618157246772355,
+              "mean": 0.9547040127301636,
+              "min": 0.9423248784511428,
+              "p50": 0.953811103298955,
+              "p95": 0.9607528690675459
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 7.878403846863209,
+              "mean": 7.546259663840872,
+              "min": 7.033630027955206,
+              "p50": 7.489595436140838,
+              "p95": 7.822410902094785
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.7546835144921722,
+              "mean": 0.5800757499454594,
+              "min": 0.3205579728943801,
+              "p50": 0.6404322585398396,
+              "p95": 0.7412900652865134
+            },
+            "rank_estimate_counts": {
+              "8": 8
+            },
+            "row_dispersion_tv": {
+              "max": 0.8924544059334123,
+              "mean": 0.8243934335461179,
+              "min": 0.746819569165134,
+              "p50": 0.8302249750984012,
+              "p95": 0.8639053950586553
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 16
+        },
+        "word": {
+          "candidate_count": 0,
+          "inventory": "word",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9618157246772355,
+              "mean": 0.6051814176026004,
+              "min": 2.1538649584096327e-05,
+              "p50": 0.8535237129621696,
+              "p95": 0.9600496155227156
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 7.878403846863209,
+              "mean": 4.461062150134576,
+              "min": 8.615459834970807e-05,
+              "p50": 5.0759605279786975,
+              "p95": 7.786173539636668
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.749394483926991,
+              "mean": 0.3381417915954406,
+              "min": 2.362783188673789e-07,
+              "p50": 0.2942178081977433,
+              "p95": 0.66896669222519
+            },
+            "rank_estimate_counts": {
+              "7": 1,
+              "8": 7
+            },
+            "row_dispersion_tv": {
+              "max": 0.8924544059334123,
+              "mean": 0.5166679101191223,
+              "min": 6.370301874343565e-06,
+              "p50": 0.6026254430182403,
+              "p95": 0.8639053950586553
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 40
+        }
+      },
+      "limit_bytes": 65536,
+      "policy": {
+        "morpheme_proxy_limit": 8,
+        "morpheme_proxy_max_bytes": 6,
+        "reset_thresholds": [
+          0.0,
+          0.0001,
+          0.001,
+          0.01
+        ],
+        "shared_posterior": "r-weighted row average per fragment",
+        "word_candidate_limit": 8,
+        "word_candidate_max_bytes": 12
+      },
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/gcide-eval8-64k/dev.target.bin",
+        "sha256": "8719c720994d16f2276bbccf0fc315e7c950a77fc426814924ed9b4f1d1e223b"
+      },
+      "teacher": {
+        "bytes": 47358,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/gcide-eval8-64k/teacher-k8.json",
+        "requested": "k8",
+        "sha256": "504ec0e8fe6f90dd1c03409e3973eb3be47738879b24c00c861265e3f685db82",
+        "states": 8
+      },
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/gcide-eval8-64k/train.bin",
+        "sha256": "042b063b4352b821de0c64b4b1e3ffe25513dfbbf7d176f9b3e1ebc05ba65008"
+      }
+    },
+    {
+      "baseline_reference": {
+        "bzip3_bytes": 5032,
+        "bzip3_payload_bytes": 4984,
+        "v4_bytes": 6493,
+        "v4_sha256": "9521efbb9742a83173f58cce461f44c914f203e314179f690a436bfb8d61fe08"
+      },
+      "case": "omw-eval8-64k",
+      "inventories": {
+        "complete_prefix": {
+          "candidate_count": 8,
+          "cdf": {
+            "binary_checks": 31,
+            "binary_mismatches": 0,
+            "direct_row_sum": 0.9999999999999817,
+            "max_cdf_error": 1.4432899320127035e-15,
+            "ok": true,
+            "optimized_binary_mismatches": 0,
+            "row_sum": 0.9999999999999826
+          },
+          "cdf_cached_boundaries": 10241,
+          "complete_codebook_max_row_mass_error": 2.220446049250313e-16,
+          "direct_teacher_bits": 299575.01877958025,
+          "exact_phrase_vs_direct_abs_bits": 3.4924596548080444e-10,
+          "final_partial_phrase_rule": "internal prefix + EOS terminal leaf; exact candidate leaf then root EOS",
+          "inventory": "complete_prefix",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.999994408993451,
+              "mean": 0.23386373367823357,
+              "min": 1.4210854715202004e-14,
+              "p50": 0.0012521818105840142,
+              "p95": 0.9949819128844979
+            },
+            "count": 10241,
+            "cross_ratio_log_diameter": {
+              "max": 25.574991219274555,
+              "mean": 2.1850509103854736,
+              "min": 5.684341886080802e-14,
+              "p50": 0.005008729860165317,
+              "p95": 11.970682909327515
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.8655613414731472,
+              "mean": 0.036723937746258074,
+              "min": 1.9933479706523162e-17,
+              "p50": 9.473750400923323e-07,
+              "p95": 0.21631244939824965
+            },
+            "rank_estimate_counts": {
+              "1": 87,
+              "2": 3902,
+              "3": 2828,
+              "4": 1041,
+              "5": 661,
+              "6": 746,
+              "7": 86,
+              "8": 890
+            },
+            "row_dispersion_tv": {
+              "max": 0.9753580923804194,
+              "mean": 0.1609558441107531,
+              "min": 5.597193715456417e-16,
+              "p50": 0.00011332741145299047,
+              "p95": 0.941474537404269
+            }
+          },
+          "model_costs": {
+            "0": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 5242624,
+              "exact_phrases": 10239,
+              "phrase_symbol_bytes_uncompressed": 130640,
+              "reset_phrases": 2,
+              "serialized_model_bytes": 5404007
+            },
+            "1e-02": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 2733184,
+              "exact_phrases": 3704,
+              "phrase_symbol_bytes_uncompressed": 130640,
+              "reset_phrases": 6537,
+              "serialized_model_bytes": 2894567
+            },
+            "1e-03": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 2914432,
+              "exact_phrases": 4176,
+              "phrase_symbol_bytes_uncompressed": 130640,
+              "reset_phrases": 6065,
+              "serialized_model_bytes": 3075815
+            },
+            "1e-04": {
+              "accounting_note": "diagnostic model blob only; no payload/archive/decode claim",
+              "derived_coefficient_bytes": 3293440,
+              "exact_phrases": 5163,
+              "phrase_symbol_bytes_uncompressed": 130640,
+              "reset_phrases": 5078,
+              "serialized_model_bytes": 3454823
+            }
+          },
+          "normalized_codebook": true,
+          "parsed_phrase_count": 62900,
+          "phrase_count": 10241,
+          "phrase_kind_counts": {
+            "candidate": 8,
+            "eos": 1,
+            "fallback": 10193,
+            "terminal": 39
+          },
+          "prefix_parse_surface_bytes": 65536,
+          "prefix_parse_surface_matches_target": true,
+          "rollout": {
+            "0": {
+              "closed_approx_bits": 299575.0187795799,
+              "closed_bits_per_input_symbol": 4.571152019952086,
+              "exact_bits_per_input_symbol": 4.571152019952086,
+              "exact_teacher_bits": 299575.0187795799,
+              "excess_bits": 0.0,
+              "max_probability_error": 8.326672684688674e-17,
+              "phrases": 62900,
+              "reset_fraction": 0.0,
+              "resets": 0,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-02": {
+              "closed_approx_bits": 299575.0181758795,
+              "closed_bits_per_input_symbol": 4.571152010740349,
+              "exact_bits_per_input_symbol": 4.571152019952086,
+              "exact_teacher_bits": 299575.0187795799,
+              "excess_bits": -0.0006037004059180617,
+              "max_probability_error": 3.6963739609430224e-07,
+              "phrases": 62900,
+              "reset_fraction": 0.005421303656597774,
+              "resets": 341,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-03": {
+              "closed_approx_bits": 299575.0181758795,
+              "closed_bits_per_input_symbol": 4.571152010740349,
+              "exact_bits_per_input_symbol": 4.571152019952086,
+              "exact_teacher_bits": 299575.0187795799,
+              "excess_bits": -0.0006037004059180617,
+              "max_probability_error": 3.6963739609430224e-07,
+              "phrases": 62900,
+              "reset_fraction": 0.005421303656597774,
+              "resets": 341,
+              "roundtrip_path_is_deterministic": true
+            },
+            "1e-04": {
+              "closed_approx_bits": 299575.01877845504,
+              "closed_bits_per_input_symbol": 4.571152019934922,
+              "exact_bits_per_input_symbol": 4.571152019952086,
+              "exact_teacher_bits": 299575.0187795799,
+              "excess_bits": -1.1248630471527576e-06,
+              "max_probability_error": 4.211692793132382e-09,
+              "phrases": 62900,
+              "reset_fraction": 0.002845786963434022,
+              "resets": 179,
+              "roundtrip_path_is_deterministic": true
+            }
+          },
+          "surface_bytes": 65280
+        },
+        "morpheme_proxy": {
+          "candidate_count": 0,
+          "inventory": "morpheme_proxy",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9628624851869878,
+              "mean": 0.6986093653932868,
+              "min": 0.5651880582424268,
+              "p50": 0.6226476546948445,
+              "p95": 0.9427410614229443
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 7.935062997540527,
+              "mean": 4.026227864930366,
+              "min": 2.561695281904864,
+              "p50": 2.9172701899238884,
+              "p95": 7.048542820979133
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.47725461128095986,
+              "mean": 0.30418029559756354,
+              "min": 6.406546861785783e-06,
+              "p50": 0.38259645271650256,
+              "p95": 0.4255622156750741
+            },
+            "rank_estimate_counts": {
+              "2": 2,
+              "3": 3,
+              "5": 3
+            },
+            "row_dispersion_tv": {
+              "max": 0.49239365463820906,
+              "mean": 0.3684809497610494,
+              "min": 0.012590351903408367,
+              "p50": 0.3954460998767816,
+              "p95": 0.476993685789383
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 35
+        },
+        "word": {
+          "candidate_count": 0,
+          "inventory": "word",
+          "metrics": {
+            "birkhoff_tau": {
+              "max": 0.9555688783382997,
+              "mean": 0.17043555003324465,
+              "min": 6.421892351227143e-09,
+              "p50": 3.144574662883211e-07,
+              "p95": 0.40653699261575527
+            },
+            "count": 8,
+            "cross_ratio_log_diameter": {
+              "max": 7.568992508462443,
+              "mean": 1.1625410902092703,
+              "min": 2.5687569404908572e-08,
+              "p50": 1.257829865153326e-06,
+              "p95": 1.7258220925162142
+            },
+            "rank1_relative_frobenius": {
+              "max": 0.24644764975382025,
+              "mean": 0.030808617125484945,
+              "min": 9.846579897268924e-11,
+              "p50": 4.6486178692694973e-10,
+              "p95": 1.8860746953252945e-05
+            },
+            "rank_estimate_counts": {
+              "2": 5,
+              "3": 2,
+              "8": 1
+            },
+            "row_dispersion_tv": {
+              "max": 0.8479540570259313,
+              "mean": 0.15560261925505,
+              "min": 3.1190308378051777e-09,
+              "p50": 1.4720447555729207e-08,
+              "p95": 0.3967621626714673
+            }
+          },
+          "normalization_note": "overlapping diagnostic inventory; do not treat phrase masses as a source",
+          "normalized_codebook": false,
+          "phrase_count": 8,
+          "surface_bytes": 66
+        }
+      },
+      "limit_bytes": 65536,
+      "policy": {
+        "morpheme_proxy_limit": 8,
+        "morpheme_proxy_max_bytes": 6,
+        "reset_thresholds": [
+          0.0,
+          0.0001,
+          0.001,
+          0.01
+        ],
+        "shared_posterior": "r-weighted row average per fragment",
+        "word_candidate_limit": 8,
+        "word_candidate_max_bytes": 12
+      },
+      "target": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/omw-eval8-64k/dev.target.bin",
+        "sha256": "7b8124b6cde70665409887bdb03f88af9873d0490272cdbe97cc2af752007283"
+      },
+      "teacher": {
+        "bytes": 47609,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/omw-eval8-64k/teacher-k8.json",
+        "requested": "k8",
+        "sha256": "e237006598b2d361c810c7b15470f85cb93a354bcc5065972f9eb03f1a1dcf53",
+        "states": 8
+      },
+      "train": {
+        "bytes": 65536,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/omw-eval8-64k/train.bin",
+        "sha256": "d95b6d8339f1fe12652afc461624423278dba2b35271b66c32893a23b186f219"
+      }
+    }
+  ],
+  "command": "src6/experiments/bzip4/language_frontier/operators/operator_probe.py --out src6/experiments/bzip4/language_frontier/operators/results.json",
+  "experiment": "forgetful_phrase_operators",
+  "read_policy": "stored teachers only; train.bin/dev.target.bin only; no untouched inputs",
+  "runs_root": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926",
+  "schema": 1
+}

@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "kind": "pre-refactor-baseline",
+  "git_head": "a3eae58f61196715f13c92ab50baa05812f10ec3",
+  "note": "Captured before the src6 production schema/archive rewrite. Do not use this binary or these artifacts for post-refactor timing.",
+  "compiled_binary": {
+    "path": "src6/bench/real-world/zig-out/bin/real-lex6",
+    "bytes": 859976,
+    "sha256": "8c246dbf3ed71ec831ccc05d44ea7d4445f36adbfd4c4f9f6cdd2360518e9ef5",
+    "sha512": "b786be5872bf00e2f36bedf87bb13c015af02aa8ec5f6acfe73d9d3f82c15aeca9a9e69bdcc420ca46c039d924bba7b759640139bf7f9c1cedbc839dc8df3bdc"
+  },
+  "harness_sources": {
+    "runner.zig": "29ab4ab27055552020be690ab134ce432ddbf8be6718af64e067bc5bb8e4059c",
+    "build.zig": "d9b9c43e7e47d265773408b43a6351842974fc91c58971569321479172e91de2",
+    "formats.py": "254f581a8669a2631046dda8722cb6fc0e7b9c955d00b931d4969c585332c7a7",
+    "measure.py": "480da3ea1099ed04198f5fd08c241a4155ea0c5067a154ae95a5aed925d31c61",
+    "smoke.py": "c3bc955bfc90813e8474759113fe7dffbc9fcf10a3db1b65c09f4165b3806be7",
+    "sweep.py": "656c49842d909c14eb33e9c1f58b73a8eaa735d09b79014e95508dcd620b6469",
+    "report.py": "8d8b1bb0419faffb05d6c2daa6186a62d01595613e577dcb3420729efce53fa1",
+    "manifest.json": "c5e84b6fe19fd8670c98af707344fa7a9f321eba550714da6177875819cd7023",
+    "README.md": "80e4bb8b21a68aa4dde3ea693ae19f19dc0f2fbfd1898e1b3cdbbdb9c48af119"
+  },
+  "production_inputs": {
+    "src6/root.zig": "2bf15d0f85d84231c897372b6ccb6bab61f659fe5ee7ac58e61d4e0c59f01d5c",
+    "src6/archive.zig": "01ce1c867298e90834b4c90082aded89e034c0fbc5197b6d8261b973e6c91c56",
+    "src6/compression.zig": "f46c9d65a3e48f54515e487721643555ed611f1fb1b59bec37b9dd3ba92a414d",
+    "src6/model.zig": "99bad591f723c841f185863c6636dce4f48cf941b5b7ae7ac299f39f6173625b",
+    "src6/packet.zig": "793dd4875cf86f377232f86c343b16e22423d4982197d602f496742eb7ef3fa7",
+    "src6/query.zig": "9f70bcf3f83ed2976bd2e7eda8d90d6ea2e2eed450a1e86adbd3f3235932e6ad",
+    "src6/render.zig": "d262e9b9f4795e3d7029d4871a67f83f39be6d2ab1b277d1e9216d2c7ebfe51c",
+    "src6/validate.zig": "cb8dd6e0665fd5edcde94f90df8d52ad6d15e2b44afaea7f4cc933037f1b9fd2",
+    "src6/walk.zig": "2f916b4957c920169549124adb7856dfe7285648403ac4314098738aaa02ba7c",
+    "build6.zig": "f96cec3ea508bf85d9d8154ab43426c26be799a936aaa15a1cfb76f157a3e471",
+    "flake.nix": "95f79f1475b85da70ed0e96f082e7b887cd17bfb4bf70a9f13a10e129e809fce",
+    "flake.lock": "5ea4edb99a50185aa228d080b9cee397fee28ebdc0463c46b774a807bebe880d"
+  },
+  "retained_ledgers": {
+    "all-exact-smoke.json": "bb0bf4705809ab6bfc4a6f3d6c510715fc68ea339e903e88298c8c88c2627c0e",
+    "environment.json": "ef42f7cd66ab05fb7ccf1bbd8876de6806508900bfa2151838e00557e75292db",
+    "gcide-smoke.json": "f9845091af1e9969f3f2d57efd6bb42fd8b48b6cf3b094e0ce84c56cdc597b90",
+    "legacy-availability.json": "bced69275e2b171e026625b4711788b500e0bfd5c5be6e7d309594b01682172f",
+    "main-smoke.json": "4bb6fa9324ddff242f8cfa610146a72f20605311834a625219a0201e625645a6",
+    "omw-ja-smoke.json": "956da132a4c51f4ce4f513818c1a75d7fd95ef29da881019bd51ed1567666e7e",
+    "page-sweep.json": "38d0cebef91f47e647817ce93a096d7619958e82fb072a93999ded9e5195c8c3",
+    "verification.json": "fe1633cbdcc45cb00c6245cb5ca6e33f16dd352c733bafa045ef741166ae4886"
+  }
+}

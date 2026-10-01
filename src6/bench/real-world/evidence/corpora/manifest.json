@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "corpora": [
+    {
+      "schema": 1,
+      "corpus": "freedict-eng-spa",
+      "rows": 64258,
+      "unique_keys": 59253,
+      "key_hits": 64258,
+      "empty_key_hits": 0,
+      "duplicate_key_hits": 5005,
+      "projection_tsv": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/projection.tsv",
+        "bytes": 90123314,
+        "sha256": "687008296b727878d26472bca5315beca8136a64365f2ac819e9e1f7f22f3865",
+        "sha512": "f1d64f3ddd703efef2d5e4fb45d5a88ab0956cc0ca4217f56da08dccad2e51328aaaa7b7cf86b115cc7f63d83bf5931200ac818397f4df3daa55d1fe39c18e22"
+      },
+      "rows_jsonl": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/freedict-eng-spa/rows.jsonl",
+        "bytes": 28575499,
+        "sha256": "dce3de7e57a1d00be176214e6dbbb1a5a8dd530a8baeb0a430e1a23c4adc95c2",
+        "sha512": "f688825c5f57982189fd2c8bf0de8879d075611de91d1decd9fb30d8e3893cd120afeee2622cd72cb089a15027ee2a0c9f405951a3d9c6987f01c26eb115976a"
+      },
+      "stats": {
+        "source_bytes": 34358251,
+        "records": 64258,
+        "parse_failures": 0,
+        "front_matter_excluded": true,
+        "source_format": "TEI P5 XML"
+      },
+      "source_manifest": {
+        "id": "freedict-eng-spa",
+        "url": "https://download.freedict.org/dictionaries/eng-spa/2025.11.23/freedict-eng-spa-2025.11.23.src.tar.xz",
+        "archive": {
+          "path": "/private/tmp/dictionary-real-world-cache/sources/freedict-eng-spa-2025.11.23.src.tar.xz",
+          "bytes": 3715012,
+          "sha256": "dd724fb48c5701395c15d7d648a9e6f6b75d6ff4269e465dce6d3a292700198d",
+          "sha512": "622e8fec6c4178cb4c21e4577701c5325670f825331b07a185b4c6b810603c337e80429738a97581f68f668667910e7ad36f27332eaee2828f1f906537852fe3",
+          "url": "https://download.freedict.org/dictionaries/eng-spa/2025.11.23/freedict-eng-spa-2025.11.23.src.tar.xz"
+        },
+        "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/freedict-eng-spa-2025.11.23/eng-spa",
+        "license": {
+          "path": "/private/tmp/dictionary-real-world-cache/extracted/freedict-eng-spa-2025.11.23/eng-spa/COPYING",
+          "bytes": 22459,
+          "sha256": "41a8f57655bae359bea4a7e99c7a2aed171687d3dfb49614214538ba6dcbe75b",
+          "sha512": "80bb3b85971a84fa6397c5aa36e2f4fed7a48bb6452ba2c72866a794037abd3cea27ffc5213ec471a0098c7e6907d0aab261b7e800dfa847495e9c6be85b4441"
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "corpus": "gcide-054",
+      "rows": 124187,
+      "unique_keys": 115327,
+      "key_hits": 131563,
+      "empty_key_hits": 0,
+      "duplicate_key_hits": 16236,
+      "projection_tsv": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/projection.tsv",
+        "bytes": 123479075,
+        "sha256": "4cddd7f0d23d7ef5dd923ef97b1894f7fff86cc26dbda1a9621653c1338c635b",
+        "sha512": "ff50b60c6c706fd34dfb1a1f7811cd3979ea4f25ac1b97f1201c37c463bebce2984808240b05fca9288da8753f798b5dc04f8324f57ab6785f718123fcdeb1c4"
+      },
+      "rows_jsonl": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/gcide-054/rows.jsonl",
+        "bytes": 53072691,
+        "sha256": "f3280dbbf9a32bc84c47310b36b491c762a12b3db1dcf7430991a4e808f762db",
+        "sha512": "d7e3c187cef92a9e2bcf4df41826da288d17bdf08124e4ca1c50d3c88d5651b1f6f675862e76996f49cb86e3fcfce72594c76764fb1e0e7e234c4144d4ac1442"
+      },
+      "stats": {
+        "source_bytes": 58834998,
+        "records": 124187,
+        "parse_failures": 0,
+        "front_matter_excluded_bytes": 26564,
+        "files": [
+          {
+            "file": "CIDE.A",
+            "bytes": 3905361,
+            "records": 8945
+          },
+          {
+            "file": "CIDE.B",
+            "bytes": 3298367,
+            "records": 6967
+          },
+          {
+            "file": "CIDE.C",
+            "bytes": 5780786,
+            "records": 11919
+          },
+          {
+            "file": "CIDE.D",
+            "bytes": 3527752,
+            "records": 7408
+          },
+          {
+            "file": "CIDE.E",
+            "bytes": 2415183,
+            "records": 5354
+          },
+          {
+            "file": "CIDE.F",
+            "bytes": 2557662,
+            "records": 4985
+          },
+          {
+            "file": "CIDE.G",
+            "bytes": 1880114,
+            "records": 3944
+          },
+          {
+            "file": "CIDE.H",
+            "bytes": 2191912,
+            "records": 4766
+          },
+          {
+            "file": "CIDE.I",
+            "bytes": 2512328,
+            "records": 5554
+          },
+          {
+            "file": "CIDE.J",
+            "bytes": 515029,
+            "records": 1023
+          },
+          {
+            "file": "CIDE.K",
+            "bytes": 490157,
+            "records": 1090
+          },
+          {
+            "file": "CIDE.L",
+            "bytes": 2085196,
+            "records": 4240
+          },
+          {
+            "file": "CIDE.M",
+            "bytes": 3137803,
+            "records": 7294
+          },
+          {
+            "file": "CIDE.N",
+            "bytes": 1110890,
+            "records": 2568
+          },
+          {
+            "file": "CIDE.O",
+            "bytes": 1479384,
+            "records": 3510
+          },
+          {
+            "file": "CIDE.P",
+            "bytes": 4942898,
+            "records": 10706
+          },
+          {
+            "file": "CIDE.Q",
+            "bytes": 328055,
+            "records": 692
+          },
+          {
+            "file": "CIDE.R",
+            "bytes": 2799804,
+            "records": 5388
+          },
+          {
+            "file": "CIDE.S",
+            "bytes": 6598473,
+            "records": 13318
+          },
+          {
+            "file": "CIDE.T",
+            "bytes": 3114588,
+            "records": 6229
+          },
+          {
+            "file": "CIDE.U",
+            "bytes": 1141012,
+            "records": 2593
+          },
+          {
+            "file": "CIDE.V",
+            "bytes": 998054,
+            "records": 1933
+          },
+          {
+            "file": "CIDE.W",
+            "bytes": 1619973,
+            "records": 2787
+          },
+          {
+            "file": "CIDE.X",
+            "bytes": 59701,
+            "records": 173
+          },
+          {
+            "file": "CIDE.Y",
+            "bytes": 196952,
+            "records": 412
+          },
+          {
+            "file": "CIDE.Z",
+            "bytes": 147564,
+            "records": 389
+          }
+        ],
+        "source_format": "GCIDE SGML-like CIDE files",
+        "source_encoding": [
+          "ISO-8859-1 (legacy bytes present)",
+          "UTF-8"
+        ]
+      },
+      "source_manifest": {
+        "id": "gcide-054",
+        "url": "https://ftp.gnu.org/gnu/gcide/gcide-0.54.tar.xz",
+        "archive": {
+          "path": "/private/tmp/dictionary-real-world-cache/sources/gcide-0.54.tar.xz",
+          "bytes": 14803080,
+          "sha256": "22416f6f36175b160dc388b7547512514d464473cf7d7c898d738efb26c51d42",
+          "sha512": "9bda8bc2e30a529bafeb3fcdd2f315025209fa2e609da707caf7b4a273221a7617a10b58d2b635e1ae980e01a790a4e09bb74ec54d6e09c9014e72b30d33b1e6",
+          "url": "https://ftp.gnu.org/gnu/gcide/gcide-0.54.tar.xz"
+        },
+        "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/gcide-0.54/gcide-0.54",
+        "license": {
+          "path": "/private/tmp/dictionary-real-world-cache/extracted/gcide-0.54/gcide-0.54/COPYING",
+          "bytes": 35068,
+          "sha256": "fc82ca8b6fdb18d4e3e85cfd8ab58d1bcd3f1b29abe782895abd91d64763f8e7",
+          "sha512": "9225acdfee37d53f45669eac0abd4f4e8eba5e9dbf39f49e9f182530a038a159934f8645e2bdc00783b4af40743643c1b3256653b5d3a4dea375ace1613b72fc"
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "corpus": "omw-ja-20",
+      "rows": 94002,
+      "unique_keys": 91964,
+      "key_hits": 94002,
+      "empty_key_hits": 0,
+      "duplicate_key_hits": 2038,
+      "projection_tsv": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/projection.tsv",
+        "bytes": 229392768,
+        "sha256": "ff9b2f1e56912bf3874cb77377a6f97949206a3efdff7739a10f61e1f0c43c75",
+        "sha512": "3584d0d5d923eaada18feee74e410be62a7e46c286d69522db6b742cf4f2a3ff497b540dcadaa4cbbfa5cd05246892113e20a884d137e157c51d27e84d35dc27"
+      },
+      "rows_jsonl": {
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora/omw-ja-20/rows.jsonl",
+        "bytes": 64453164,
+        "sha256": "6443f99eb96136567673f0ea449e9d6e8c1b1a8818ea483012d56358be8eeec0",
+        "sha512": "001b9d6662b4246c671ead5e5ee0819430929c32c4d1a88f232083daf7167afbba66e64aee04cde48811ee5bd72eb73e2cb1a3979b004a3f1fce4c521aacbc08"
+      },
+      "stats": {
+        "source_bytes": 55596427,
+        "records": 94002,
+        "parse_failures": 0,
+        "front_matter_excluded": true,
+        "source_format": "OMW LMF XML",
+        "synsets": 117659,
+        "definitions": 135692,
+        "examples": 48276,
+        "synset_references": 158069,
+        "unique_synsets_referenced": 57184,
+        "unique_synset_serialized_bytes": 31470675,
+        "expanded_synset_serialized_bytes": 86241878,
+        "expansion_duplication_bytes": 54771203
+      },
+      "source_manifest": {
+        "id": "omw-ja-20",
+        "url": "https://github.com/omwn/omw-data/releases/download/v2.0/omw-2.0.tar.xz",
+        "archive": {
+          "path": "/private/tmp/dictionary-real-world-cache/sources/omw-2.0.tar.xz",
+          "bytes": 55846636,
+          "sha256": "c369a2ad773a31e182ac4cc753132fa7c31ad423586d6783bacce08090cb8d7d",
+          "sha512": "5d9d5e3b086a9355b0bc9ea10d593ab843fb6d3b451cf3a91fee11c74700f86daa4966ee78f82ddd64f120bac8c2776558e3859fc0fb848ba6c681580c123325",
+          "url": "https://github.com/omwn/omw-data/releases/download/v2.0/omw-2.0.tar.xz"
+        },
+        "extracted_root": "/private/tmp/dictionary-real-world-cache/extracted/omw-2.0/omw-2.0/omw-ja",
+        "license": {
+          "path": "/private/tmp/dictionary-real-world-cache/extracted/omw-2.0/omw-2.0/omw-ja/LICENSE",
+          "bytes": 1762,
+          "sha256": "a4be32a83ad0a1cff9a31c23aaa107be20eb843d97c68a2ff72e10ff5ac17cee",
+          "sha512": "0bbf527f1d78fc5cfcd0c6d4cd930d7bec4ac30a520f4ecd2adf2175ad37ef6f926edac9c716d8be70eb8a156e6177cf2c7251a2e7556b7900eee25c272ba843"
+        }
+      }
+    }
+  ],
+  "output": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/corpora"
+}

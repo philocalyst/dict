@@ -1,0 +1,7 @@
+command: src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4 c src6/experiments/bzip4/bz4/data/freedict.eval8.bin /tmp/v4-freedict.bin 65536
+timing: /usr/bin/time -p; real=9.44 user=8.95 sys=0.27 (single serial run; descriptive only)
+output:
+bytes=579202
+sha256=df17015a00344879503f45f7c9b9b3816ffab00a5ed0191ef2bf53d2b7a76ccd
+decoded_sha256=6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8
+roundtrip=ok

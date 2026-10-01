@@ -1,0 +1,179 @@
+{
+  "rows": [
+    {
+      "binding": {
+        "backend": "zlib-diagnostic",
+        "bindings": 512,
+        "blocks": 5,
+        "directory_bytes": 120,
+        "frame_bytes": 41514,
+        "model_bytes": 8356,
+        "payload_bytes": 32986,
+        "raw_blocks": 1,
+        "raw_bytes": 262144,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "binding_sha256": "f731f7c02ba7ad2e927ba4c39ed9e9eea22394bd617a25b471e28f2abb26e1e9",
+      "commands": {
+        "backend": "zlib-diagnostic(level=9); v4 control serial subprocess",
+        "binding": "max_templates=96,max_bindings=512,min_uses=2,max_context=1024",
+        "screen": "training=[0,1048576), evaluation=[1048576,1310720), block=65536"
+      },
+      "corpus": "freedict-eng-spa",
+      "input_bytes": 262144,
+      "input_sha256": "22623614177c5c87549b13b944a123894da3a37919854cbfdeb999a386b8575f",
+      "model": {
+        "bindings": 512,
+        "model_bytes": 8356,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "raw_zlib_bytes": 28720,
+      "status": "ok",
+      "v4": {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "bytes": 24463,
+        "command_c": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "c",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-t2b4m1ct/input.bin",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-t2b4m1ct/v4.bz4",
+          "65536"
+        ],
+        "command_d": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-t2b4m1ct/v4.bz4",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-t2b4m1ct/v4.restored",
+          "1"
+        ],
+        "decoded_sha256": "22623614177c5c87549b13b944a123894da3a37919854cbfdeb999a386b8575f",
+        "sha256": "e6b8da6f13a442972d8d9bc2cb7ca64cb47e9e7577a7a4fe6d3aafd1134a4aa7",
+        "status": "ok"
+      },
+      "versions": {
+        "python": "3.14.7",
+        "v4_binary_sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc",
+        "zlib": "1.2.12"
+      }
+    },
+    {
+      "binding": {
+        "backend": "zlib-diagnostic",
+        "bindings": 512,
+        "blocks": 5,
+        "directory_bytes": 120,
+        "frame_bytes": 82828,
+        "model_bytes": 7381,
+        "payload_bytes": 75275,
+        "raw_blocks": 0,
+        "raw_bytes": 262144,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "binding_sha256": "64c449d47f73ed6e011a0c777e7eda9065b046fcbd913bdfec78dafc88ebab8c",
+      "commands": {
+        "backend": "zlib-diagnostic(level=9); v4 control serial subprocess",
+        "binding": "max_templates=96,max_bindings=512,min_uses=2,max_context=1024",
+        "screen": "training=[0,1048576), evaluation=[1048576,1310720), block=65536"
+      },
+      "corpus": "gcide-054",
+      "input_bytes": 262144,
+      "input_sha256": "08ba09649a3778422c48bcea1f25097ebf64c9a2b5cc3894823e3841c2f2cbe3",
+      "model": {
+        "bindings": 512,
+        "model_bytes": 7381,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "raw_zlib_bytes": 65877,
+      "status": "ok",
+      "v4": {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "bytes": 57838,
+        "command_c": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "c",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-omtq2hef/input.bin",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-omtq2hef/v4.bz4",
+          "65536"
+        ],
+        "command_d": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-omtq2hef/v4.bz4",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-omtq2hef/v4.restored",
+          "1"
+        ],
+        "decoded_sha256": "08ba09649a3778422c48bcea1f25097ebf64c9a2b5cc3894823e3841c2f2cbe3",
+        "sha256": "4b931bdaa6f7f9e0452c49dc6c25e7550a84b60a383c38bc4a8aa174c2b70ae5",
+        "status": "ok"
+      },
+      "versions": {
+        "python": "3.14.7",
+        "v4_binary_sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc",
+        "zlib": "1.2.12"
+      }
+    },
+    {
+      "binding": {
+        "backend": "zlib-diagnostic",
+        "bindings": 512,
+        "blocks": 5,
+        "directory_bytes": 120,
+        "frame_bytes": 49736,
+        "model_bytes": 23972,
+        "payload_bytes": 25592,
+        "raw_blocks": 0,
+        "raw_bytes": 262144,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "binding_sha256": "4a2fec2ebc98edb9177df84ba582dff1e287e6b48e9772c7c4b38f9e3c9aae60",
+      "commands": {
+        "backend": "zlib-diagnostic(level=9); v4 control serial subprocess",
+        "binding": "max_templates=96,max_bindings=512,min_uses=2,max_context=1024",
+        "screen": "training=[0,1048576), evaluation=[1048576,1310720), block=65536"
+      },
+      "corpus": "omw-ja-20",
+      "input_bytes": 262144,
+      "input_sha256": "4e7e778b1915c6d2f2878802a68bb96d1b7b7b08b46acd782ee993fe390be276",
+      "model": {
+        "bindings": 512,
+        "model_bytes": 23972,
+        "templates": 96,
+        "training_bytes": 1048576
+      },
+      "raw_zlib_bytes": 21654,
+      "status": "ok",
+      "v4": {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "bytes": 19227,
+        "command_c": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "c",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-o95yt1kv/input.bin",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-o95yt1kv/v4.bz4",
+          "65536"
+        ],
+        "command_d": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-o95yt1kv/v4.bz4",
+          "/var/folders/vf/qpw72bpn65g0y01bnbwf90n80000gn/T/binding-screen-o95yt1kv/v4.restored",
+          "1"
+        ],
+        "decoded_sha256": "4e7e778b1915c6d2f2878802a68bb96d1b7b7b08b46acd782ee993fe390be276",
+        "sha256": "b0d8750e28506dcc744dafe1189865b68f798935c750508d8b275a277bcd5341",
+        "status": "ok"
+      },
+      "versions": {
+        "python": "3.14.7",
+        "v4_binary_sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc",
+        "zlib": "1.2.12"
+      }
+    }
+  ],
+  "version": 1
+}

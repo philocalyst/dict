@@ -1,0 +1,1202 @@
+[
+  {
+    "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+    "raw_bytes": 8192,
+    "sha256": "fb258a06ef1f336f9ed1d50e08af88028d628c6e3ea12b957e15c4cca89b2ff0",
+    "frame_sha256": "354f3c1b319482391c217c706c4b46a92c625adaa505a3038db564e0fa75bb35",
+    "complete_bytes": 1449,
+    "encode_seconds": 1.6086851669824682,
+    "external_decode_exact": true,
+    "trials": [
+      {
+        "config": "native",
+        "bytes": 1449,
+        "seconds": 0.06699087499873713,
+        "log": "ok\tmode=raw\tclasses=0\tblock_bytes=65536\ttotal=1449\theader=111\tdelta=846\tpayload=474\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          2
+        ],
+        "bytes": 1776,
+        "seconds": 0.021635832963511348,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1776\theader=108\tdelta=936\tpayload=714\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          6
+        ],
+        "bytes": 1629,
+        "seconds": 0.03372662502806634,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1629\theader=110\tdelta=933\tpayload=568\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          2
+        ],
+        "bytes": 1830,
+        "seconds": 0.016510499990545213,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1830\theader=113\tdelta=1219\tpayload=479\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          6
+        ],
+        "bytes": 1668,
+        "seconds": 0.0499996249563992,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1668\theader=115\tdelta=1187\tpayload=348\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          2
+        ],
+        "bytes": 1863,
+        "seconds": 0.03228362504160032,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1863\theader=107\tdelta=1056\tpayload=681\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          6
+        ],
+        "bytes": 1770,
+        "seconds": 0.050831291009671986,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1770\theader=113\tdelta=1121\tpayload=518\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          2
+        ],
+        "bytes": 1915,
+        "seconds": 0.055337583005893975,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1915\theader=119\tdelta=1287\tpayload=490\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          6
+        ],
+        "bytes": 1794,
+        "seconds": 0.06717820803169161,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1794\theader=114\tdelta=1317\tpayload=344\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          2
+        ],
+        "bytes": 1797,
+        "seconds": 0.015430625004228204,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1797\theader=112\tdelta=943\tpayload=724\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          6
+        ],
+        "bytes": 1631,
+        "seconds": 0.023895166988950223,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1631\theader=104\tdelta=931\tpayload=578\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          2
+        ],
+        "bytes": 1826,
+        "seconds": 0.02035612502368167,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1826\theader=101\tdelta=1214\tpayload=492\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          6
+        ],
+        "bytes": 1672,
+        "seconds": 0.02623195800697431,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1672\theader=109\tdelta=1180\tpayload=364\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          2
+        ],
+        "bytes": 1900,
+        "seconds": 0.030890249996446073,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1900\theader=108\tdelta=1082\tpayload=691\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          6
+        ],
+        "bytes": 1761,
+        "seconds": 0.036693166999612004,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1761\theader=102\tdelta=1112\tpayload=529\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          2
+        ],
+        "bytes": 1908,
+        "seconds": 0.029359792009927332,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1908\theader=100\tdelta=1283\tpayload=506\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          6
+        ],
+        "bytes": 1784,
+        "seconds": 0.036402624973561615,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1784\theader=101\tdelta=1306\tpayload=358\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          2
+        ],
+        "bytes": 2749,
+        "seconds": 0.09797887498280033,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=2749\theader=136\tdelta=1393\tpayload=1201\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "bytes": 2558,
+        "seconds": 0.05994687497150153,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=2558\theader=134\tdelta=1364\tpayload=1041\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          2
+        ],
+        "bytes": 2980,
+        "seconds": 0.05887879099464044,
+        "log": "ok\tmode=saved\tclasses=16\tblock_bytes=0\ttotal=2980\theader=729\tdelta=2210\tpayload=24\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          6
+        ],
+        "bytes": 2980,
+        "seconds": 0.05608612502692267,
+        "log": "ok\tmode=saved\tclasses=16\tblock_bytes=0\ttotal=2980\theader=729\tdelta=2210\tpayload=24\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          2
+        ],
+        "bytes": 2809,
+        "seconds": 0.038090583053417504,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=2809\theader=132\tdelta=1607\tpayload=1050\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          6
+        ],
+        "bytes": 2621,
+        "seconds": 0.07305791700491682,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=2621\theader=136\tdelta=1771\tpayload=694\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          2
+        ],
+        "bytes": 3178,
+        "seconds": 0.17963320901617408,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=3178\theader=257\tdelta=2876\tpayload=28\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          6
+        ],
+        "bytes": 3178,
+        "seconds": 0.07321441703243181,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=3178\theader=257\tdelta=2876\tpayload=28\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          32,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 1613,
+        "seconds": 0.024252000031992793,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1613\theader=102\tdelta=805\tpayload=688\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          128,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 1645,
+        "seconds": 0.06485429097665474,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1645\theader=105\tdelta=988\tpayload=534\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          512,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 1791,
+        "seconds": 0.03712687501683831,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1791\theader=115\tdelta=1144\tpayload=514\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          4
+        ],
+        "phase": "coordinate",
+        "bytes": 1611,
+        "seconds": 0.023787584039382637,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1611\theader=111\tdelta=928\tpayload=554\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          8
+        ],
+        "phase": "coordinate",
+        "bytes": 1621,
+        "seconds": 0.050949124968610704,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1621\theader=108\tdelta=921\tpayload=574\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          12
+        ],
+        "phase": "coordinate",
+        "bytes": 1612,
+        "seconds": 0.04615766694769263,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1612\theader=100\tdelta=909\tpayload=585\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          4
+        ],
+        "phase": "native-prices",
+        "seconds": 0.00744708301499486,
+        "priced_symbols": 166
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          4
+        ],
+        "phase": "priced-graph",
+        "bytes": 1672,
+        "seconds": 0.015626957989297807,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1672\theader=114\tdelta=971\tpayload=569\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          4
+        ],
+        "phase": "priced-graph",
+        "bytes": 1708,
+        "seconds": 0.026165124960243702,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1708\theader=115\tdelta=1228\tpayload=346\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          128,
+          false,
+          4
+        ],
+        "phase": "priced-graph",
+        "bytes": 1753,
+        "seconds": 0.03480820800177753,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=1753\theader=110\tdelta=1053\tpayload=572\tframing=18\tblocks=1\traw_len=8192\n"
+      }
+    ]
+  },
+  {
+    "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "raw_bytes": 8192,
+    "sha256": "5309662c18f94c8ac6d791d4c9425bd4626c4c79b8a7584cf0bcb951220071d3",
+    "frame_sha256": "587b2aa554c2f6344a88fb40c342187ff12488342d89cbf247cf8d40e6471ce9",
+    "complete_bytes": 4187,
+    "encode_seconds": 2.98039704101393,
+    "external_decode_exact": true,
+    "trials": [
+      {
+        "config": "native",
+        "bytes": 4241,
+        "seconds": 0.031680290994700044,
+        "log": "ok\tmode=raw\tclasses=0\tblock_bytes=65536\ttotal=4241\theader=117\tdelta=1257\tpayload=2848\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4326,
+        "seconds": 0.053153416025452316,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4326\theader=109\tdelta=873\tpayload=3325\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4301,
+        "seconds": 0.06929679197492078,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4301\theader=105\tdelta=950\tpayload=3227\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4633,
+        "seconds": 0.11326291703153402,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4633\theader=544\tdelta=3552\tpayload=517\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4610,
+        "seconds": 0.07577195798512548,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4610\theader=528\tdelta=3563\tpayload=499\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4494,
+        "seconds": 0.09959091700147837,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4494\theader=109\tdelta=1217\tpayload=3149\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4479,
+        "seconds": 0.07433987502008677,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4479\theader=108\tdelta=1298\tpayload=3054\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4804,
+        "seconds": 0.08767691702814773,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=4804\theader=259\tdelta=3847\tpayload=678\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4818,
+        "seconds": 0.07712625002022833,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4818\theader=549\tdelta=3756\tpayload=493\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4326,
+        "seconds": 0.15250650001689792,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4326\theader=109\tdelta=873\tpayload=3325\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4301,
+        "seconds": 0.08119508303934708,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4301\theader=105\tdelta=950\tpayload=3227\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4633,
+        "seconds": 0.15059516701148823,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4633\theader=544\tdelta=3552\tpayload=517\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4610,
+        "seconds": 0.05540533398743719,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4610\theader=528\tdelta=3563\tpayload=499\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4494,
+        "seconds": 0.04649450001306832,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4494\theader=109\tdelta=1217\tpayload=3149\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4479,
+        "seconds": 0.12639250000938773,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4479\theader=108\tdelta=1298\tpayload=3054\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4804,
+        "seconds": 0.055929332971572876,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=4804\theader=259\tdelta=3847\tpayload=678\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4818,
+        "seconds": 0.10098887502681464,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4818\theader=549\tdelta=3756\tpayload=493\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4255,
+        "seconds": 0.05459462502039969,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4255\theader=93\tdelta=563\tpayload=3580\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4244,
+        "seconds": 0.08822287496877834,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4244\theader=99\tdelta=585\tpayload=3541\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4544,
+        "seconds": 0.04330154199851677,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4544\theader=155\tdelta=4369\tpayload=3\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4544,
+        "seconds": 0.04105258296476677,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4544\theader=155\tdelta=4369\tpayload=3\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4472,
+        "seconds": 0.05413395800860599,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4472\theader=99\tdelta=808\tpayload=3546\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4461,
+        "seconds": 0.07353195798350498,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4461\theader=101\tdelta=1010\tpayload=3331\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4732,
+        "seconds": 0.12166004203027114,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4732\theader=154\tdelta=4557\tpayload=4\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4732,
+        "seconds": 0.07153691700659692,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4732\theader=154\tdelta=4557\tpayload=4\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          32,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4187,
+        "seconds": 0.08349958300823346,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4187\theader=89\tdelta=326\tpayload=3754\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          128,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4321,
+        "seconds": 0.09499370795674622,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4321\theader=99\tdelta=775\tpayload=3428\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          512,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4515,
+        "seconds": 0.13936054200166836,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=4515\theader=221\tdelta=990\tpayload=3284\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          4
+        ],
+        "phase": "coordinate",
+        "bytes": 4265,
+        "seconds": 0.08905050001339987,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4265\theader=95\tdelta=602\tpayload=3549\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          8
+        ],
+        "phase": "coordinate",
+        "bytes": 4229,
+        "seconds": 0.08864920795895159,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4229\theader=93\tdelta=580\tpayload=3537\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          12
+        ],
+        "phase": "coordinate",
+        "bytes": 4237,
+        "seconds": 0.11701258295215666,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4237\theader=94\tdelta=595\tpayload=3529\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          32,
+          false,
+          6
+        ],
+        "phase": "native-prices",
+        "seconds": 0.008001791953574866,
+        "priced_symbols": 143
+      },
+      {
+        "config": [
+          "records",
+          32,
+          false,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4312,
+        "seconds": 0.0906735000316985,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4312\theader=91\tdelta=336\tpayload=3867\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          32,
+          true,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4589,
+        "seconds": 0.07081591698806733,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4589\theader=159\tdelta=4408\tpayload=5\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4335,
+        "seconds": 0.09689941699616611,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4335\theader=97\tdelta=623\tpayload=3596\tframing=19\tblocks=1\traw_len=8192\n"
+      }
+    ]
+  },
+  {
+    "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "raw_bytes": 8192,
+    "sha256": "cb0d0f87ea3c2cf1bf8e33b132863a1a6bbafaf86db6d91fb068e0647725b39b",
+    "frame_sha256": "d9bd06adba38949ad5738e380b77c03bee40ab4d973c1da20753180bf0ac2e7e",
+    "complete_bytes": 4131,
+    "encode_seconds": 4.021375707990956,
+    "external_decode_exact": true,
+    "trials": [
+      {
+        "config": "native",
+        "bytes": 4146,
+        "seconds": 0.01944491598987952,
+        "log": "ok\tmode=raw\tclasses=0\tblock_bytes=65536\ttotal=4146\theader=121\tdelta=1421\tpayload=2585\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4319,
+        "seconds": 0.0502787500154227,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4319\theader=105\tdelta=1033\tpayload=3162\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4300,
+        "seconds": 0.0573122079949826,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4300\theader=106\tdelta=1111\tpayload=3064\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4523,
+        "seconds": 0.035712750046513975,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4523\theader=516\tdelta=3420\tpayload=567\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4798,
+        "seconds": 0.04081549996044487,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4798\theader=111\tdelta=3818\tpayload=850\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4569,
+        "seconds": 0.03648104198509827,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4569\theader=113\tdelta=1374\tpayload=3063\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4548,
+        "seconds": 0.04988166701514274,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4548\theader=109\tdelta=1435\tpayload=2985\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4801,
+        "seconds": 0.04449108400149271,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=4801\theader=237\tdelta=3816\tpayload=728\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "runs",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4859,
+        "seconds": 0.11417395801981911,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4859\theader=115\tdelta=3920\tpayload=805\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4319,
+        "seconds": 0.05826920800609514,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4319\theader=105\tdelta=1033\tpayload=3162\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4300,
+        "seconds": 0.09302137495251372,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4300\theader=106\tdelta=1111\tpayload=3064\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4523,
+        "seconds": 0.06156808295054361,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4523\theader=516\tdelta=3420\tpayload=567\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4798,
+        "seconds": 0.04181166703347117,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4798\theader=111\tdelta=3818\tpayload=850\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4569,
+        "seconds": 0.06179837498348206,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4569\theader=113\tdelta=1374\tpayload=3063\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4548,
+        "seconds": 0.08839037496363744,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4548\theader=109\tdelta=1435\tpayload=2985\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4801,
+        "seconds": 0.14188333303900436,
+        "log": "ok\tmode=saved\tclasses=4\tblock_bytes=0\ttotal=4801\theader=237\tdelta=3816\tpayload=728\tframing=20\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "unicode",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4859,
+        "seconds": 0.05024029198102653,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4859\theader=115\tdelta=3920\tpayload=805\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          2
+        ],
+        "bytes": 4185,
+        "seconds": 0.0705992910079658,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4185\theader=96\tdelta=604\tpayload=3466\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "bytes": 4131,
+        "seconds": 0.18376004201127216,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4131\theader=95\tdelta=618\tpayload=3399\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          2
+        ],
+        "bytes": 4499,
+        "seconds": 0.062209291965700686,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4499\theader=475\tdelta=4000\tpayload=7\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          6
+        ],
+        "bytes": 4499,
+        "seconds": 0.058025166974402964,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4499\theader=475\tdelta=4000\tpayload=7\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          2
+        ],
+        "bytes": 4455,
+        "seconds": 0.06089924997650087,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4455\theader=103\tdelta=918\tpayload=3415\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          false,
+          6
+        ],
+        "bytes": 4405,
+        "seconds": 0.09840891702333465,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4405\theader=96\tdelta=1068\tpayload=3222\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          2
+        ],
+        "bytes": 4715,
+        "seconds": 0.06520429201191291,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4715\theader=148\tdelta=4542\tpayload=8\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          256,
+          true,
+          6
+        ],
+        "bytes": 4715,
+        "seconds": 0.07023183401906863,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4715\theader=148\tdelta=4542\tpayload=8\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          32,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4203,
+        "seconds": 0.09192995802732185,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4203\theader=89\tdelta=347\tpayload=3749\tframing=18\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          128,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4241,
+        "seconds": 0.11957849998725578,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4241\theader=93\tdelta=897\tpayload=3232\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          512,
+          false,
+          6
+        ],
+        "phase": "coordinate",
+        "bytes": 4627,
+        "seconds": 0.16014383296715096,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4627\theader=112\tdelta=1311\tpayload=3185\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          4
+        ],
+        "phase": "coordinate",
+        "bytes": 4147,
+        "seconds": 0.06311020796420053,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4147\theader=97\tdelta=622\tpayload=3409\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          8
+        ],
+        "phase": "coordinate",
+        "bytes": 4135,
+        "seconds": 0.31588100001681596,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4135\theader=99\tdelta=625\tpayload=3392\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          12
+        ],
+        "phase": "coordinate",
+        "bytes": 4135,
+        "seconds": 0.3894702079705894,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4135\theader=96\tdelta=636\tpayload=3384\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "phase": "native-prices",
+        "seconds": 0.019077208009548485,
+        "priced_symbols": 237
+      },
+      {
+        "config": [
+          "records",
+          64,
+          false,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4280,
+        "seconds": 0.28275162499630824,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4280\theader=101\tdelta=688\tpayload=3472\tframing=19\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          64,
+          true,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4701,
+        "seconds": 0.3646558750187978,
+        "log": "ok\tmode=saved\tclasses=8\tblock_bytes=0\ttotal=4701\theader=531\tdelta=4146\tpayload=7\tframing=17\tblocks=1\traw_len=8192\n"
+      },
+      {
+        "config": [
+          "records",
+          128,
+          false,
+          6
+        ],
+        "phase": "priced-graph",
+        "bytes": 4424,
+        "seconds": 0.2425883330288343,
+        "log": "ok\tmode=saved\tclasses=1\tblock_bytes=0\ttotal=4424\theader=100\tdelta=1025\tpayload=3280\tframing=19\tblocks=1\traw_len=8192\n"
+      }
+    ]
+  }
+]

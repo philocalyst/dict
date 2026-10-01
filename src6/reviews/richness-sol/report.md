@@ -351,11 +351,11 @@ bag or mirrored records:
    expose `follow` as found/unavailable/unresolved accordingly. Build one derived
    document/node catalog from the typed model for lookup and, only for
    same-library links, validation.
-2. **One claim shape.** Use one authoritative participant sequence for
-   relation, denotation, translation, correspondence, and custom predicates.
-   Keep typed well-known predicate tags and convenience binary/translation
-   views; remove independently stored `target` and unqualified denotation
-   arrays.
+2. **One endpoint mode per relation, explicit bridges between distinct views.**
+   Make a `Relation` choose binary target or ordered participants, preserving
+   typed predicates and qualifiers. Keep sense-owned denotations and translation
+   citations as useful typed occurrence data; add links/adapters only when they
+   intentionally realize the same relation.
 3. **Typed value sharing.** Add a feature-value sharing node/reference with
    owning-structure/library scope. Let the same typed node resolver cover all
    metadata-bearing model values through derived paths.

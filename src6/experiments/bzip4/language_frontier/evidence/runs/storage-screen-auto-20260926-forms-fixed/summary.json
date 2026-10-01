@@ -1,0 +1,1505 @@
+[
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "freedict-eval8-saved-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 73,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved-bzip3/control.stdout",
+        "sha256": "5db182abe6a84decd7429ec5b4e600291b26129c2869e65ca433d7866141871d"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "freedict.eval8.bin",
+        "payload": 897328,
+        "total": 899408
+      }
+    },
+    "ok": true,
+    "source": "freedict-eval8-saved",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": 0,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "saved",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_freedict.eval8.65536.b4sd",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/frame.b4",
+        "0"
+      ],
+      "dump": {
+        "bytes": 1785008,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_freedict.eval8.65536.b4sd",
+        "sha256": "962736ea1bdccc899b841f52e33c8bf512051e21c58b094f736bd7b7199e548f"
+      },
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/external-decoded.bin",
+          "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/freedict-eval8-saved.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/freedict-eval8-saved.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 564416,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/frame.b4",
+        "sha256": "cac3fbb0c159988e0db8b11856611125cf1f90252a2bf8ff454912f8f14a4580"
+      },
+      "id": "freedict-eval8-saved",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+      },
+      "kind": "saved_parse",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 132,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/encode.stderr",
+        "sha256": "d46f3d92abd0e7379eef79bb593e639b555afb0db617fff9f5022d3f70fa1c74"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-saved/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 0,
+        "blocks": 128,
+        "classes": 64,
+        "delta": 82331,
+        "framing": 1696,
+        "header": 12467,
+        "payload": 467922,
+        "raw_len": 8388608,
+        "total": 564416
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "freedict-eval8-end-to-end-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 73,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end-bzip3/control.stdout",
+        "sha256": "19121bd76d403d0cebf5a0a17c56a6717e2313c1d6dcd0fe4b8d4d4a9c59d90e"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "freedict.eval8.bin",
+        "payload": 897328,
+        "total": 899408
+      }
+    },
+    "ok": true,
+    "source": "freedict-eval8-end-to-end",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/external-decoded.bin",
+          "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/freedict-eval8-end-to-end.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/freedict-eval8-end-to-end.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 579202,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/frame.b4",
+        "sha256": "df17015a00344879503f45f7c9b9b3816ffab00a5ed0191ef2bf53d2b7a76ccd"
+      },
+      "id": "freedict-eval8-end-to-end",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+        "sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 133,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/encode.stderr",
+        "sha256": "35e7ddb6eb2c0345d3922dd34cec1c878a427775a1e6c0ee7bd73550070c96bc"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/freedict-eval8-end-to-end/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "classes": 0,
+        "delta": 202762,
+        "framing": 1802,
+        "header": 5563,
+        "payload": 369075,
+        "raw_len": 8388608,
+        "total": 579202
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "gcide-eval8-saved-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 72,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved-bzip3/control.stdout",
+        "sha256": "29028f5a3f64cc031ae20168ab04b92ff2ac093cbb38fb8ce9cadc27e7c88c8f"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "gcide.eval8.bin",
+        "payload": 1903480,
+        "total": 1905560
+      }
+    },
+    "ok": true,
+    "source": "gcide-eval8-saved",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": 0,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "saved",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_gcide.eval8.65536.b4sd",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/frame.b4",
+        "0"
+      ],
+      "dump": {
+        "bytes": 3812244,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_gcide.eval8.65536.b4sd",
+        "sha256": "5bea089cda4e0c3a2b7ab49c565210f751739674a7fc4107255de9a70677a2ff"
+      },
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/external-decoded.bin",
+          "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/gcide-eval8-saved.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/gcide-eval8-saved.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 1276838,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/frame.b4",
+        "sha256": "ccddcd432d7d1ac8cc77b1752c45c137dc870d53d4af5b446ea65acf099e5ad5"
+      },
+      "id": "gcide-eval8-saved",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+      },
+      "kind": "saved_parse",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 136,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/encode.stderr",
+        "sha256": "f21553c757d41e06ea7e5d951cdc884e9556909f94f4dcea4296e616e10f60ca"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-saved/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 0,
+        "blocks": 128,
+        "classes": 128,
+        "delta": 149040,
+        "framing": 1736,
+        "header": 29489,
+        "payload": 1096573,
+        "raw_len": 8388608,
+        "total": 1276838
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "gcide-eval8-end-to-end-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 72,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end-bzip3/control.stdout",
+        "sha256": "3392ce6e60add091aa0904c4b1ded4ea7b5b9db780f31ecff5f63885eb855162"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "gcide.eval8.bin",
+        "payload": 1903480,
+        "total": 1905560
+      }
+    },
+    "ok": true,
+    "source": "gcide-eval8-end-to-end",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/external-decoded.bin",
+          "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/gcide-eval8-end-to-end.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/gcide-eval8-end-to-end.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 1324034,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/frame.b4",
+        "sha256": "9b0bc6f25a44cb01c9e0e1f3439a33e52803513659d36cb0f38f62421131e2e9"
+      },
+      "id": "gcide-eval8-end-to-end",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+        "sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 135,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/encode.stderr",
+        "sha256": "1145312cfe8c13bdb996ba61ea0561e524162240b7bda3f4e39f2fce32ea62d8"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/gcide-eval8-end-to-end/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "classes": 0,
+        "delta": 309348,
+        "framing": 1808,
+        "header": 27816,
+        "payload": 985062,
+        "raw_len": 8388608,
+        "total": 1324034
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "omw-eval8-saved-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 68,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved-bzip3/control.stdout",
+        "sha256": "a6935393e3596f341de34a57a4364fff43cc520a1c4aa4a219059527beab6ad4"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "omw.eval8.bin",
+        "payload": 672304,
+        "total": 674384
+      }
+    },
+    "ok": true,
+    "source": "omw-eval8-saved",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": 0,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "saved",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_omw.eval8.65536.b4sd",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/frame.b4",
+        "0"
+      ],
+      "dump": {
+        "bytes": 1215476,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/dumps/m_omw.eval8.65536.b4sd",
+        "sha256": "6415885fb460e255a1ca0902753b92d258f234c5dcd1b5fbefd6e9825825fc92"
+      },
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/external-decoded.bin",
+          "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/omw-eval8-saved.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/omw-eval8-saved.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 330148,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/frame.b4",
+        "sha256": "36be3115de81cbfc2e85de1c5d2c05785db30636302b6eb83c1b2e1caff096ad"
+      },
+      "id": "omw-eval8-saved",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+      },
+      "kind": "saved_parse",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 133,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/encode.stderr",
+        "sha256": "47fbaacf435013f764d5ac6184c1a191a7781a56533dea09a5604bfa9f2563b0"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-saved/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 0,
+        "blocks": 128,
+        "classes": 64,
+        "delta": 148211,
+        "framing": 1724,
+        "header": 10512,
+        "payload": 169701,
+        "raw_len": 8388608,
+        "total": 330148
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "65536",
+        "1"
+      ],
+      "id": "omw-eval8-end-to-end-bzip3",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 68,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end-bzip3/control.stdout",
+        "sha256": "a94c50da17c46022a6fb5707eaacc38d2c9eb0198e9deff3d573ee1219c48265"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "input_name": "omw.eval8.bin",
+        "payload": 672304,
+        "total": 674384
+      }
+    },
+    "ok": true,
+    "source": "omw-eval8-end-to-end",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 8388608,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/external-decoded.bin",
+          "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/omw-eval8-end-to-end.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/omw-eval8-end-to-end.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 374217,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/frame.b4",
+        "sha256": "2dce17df84d12b76fa3c89923db5b56a66e089771ee85bf5c67a54ffe0a967e7"
+      },
+      "id": "omw-eval8-end-to-end",
+      "input": {
+        "bytes": 8388608,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+        "sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 133,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/encode.stderr",
+        "sha256": "4033c5acb267717134feebd4cf72391796ee9a04e650d5bb76099ff22d63ad2b"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/omw-eval8-end-to-end/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 128,
+        "classes": 0,
+        "delta": 205542,
+        "framing": 1756,
+        "header": 5369,
+        "payload": 161550,
+        "raw_len": 8388608,
+        "total": 374217
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-fi-test-form-bzip3",
+      "input": {
+        "bytes": 161246,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+        "sha256": "dd86135ffd6a2ba7ee50347efe08641a9ab8fe932e017a62a396d96d640c7d80"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 54,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form-bzip3/control.stdout",
+        "sha256": "4ea1040fbd6a8a1d8b2c8d05f835aaf87f6c45e763de516610247be24b928ec5"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 3,
+        "input_name": "form.txt",
+        "payload": 53428,
+        "total": 53508
+      }
+    },
+    "ok": true,
+    "source": "ud-fi-test-form",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 161246,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/external-decoded.bin",
+          "sha256": "dd86135ffd6a2ba7ee50347efe08641a9ab8fe932e017a62a396d96d640c7d80"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/ud-fi-test-form.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/ud-fi-test-form.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 59518,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/frame.b4",
+        "sha256": "b5d21257c1e9608c14dca28632ab9e80c19369c2e65c096e182cb8f5dd895f6a"
+      },
+      "id": "ud-fi-test-form",
+      "input": {
+        "bytes": 161246,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+        "sha256": "dd86135ffd6a2ba7ee50347efe08641a9ab8fe932e017a62a396d96d640c7d80"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 124,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/encode.stderr",
+        "sha256": "e93329d17200b378f23893b36e3d5f234c4262d4991fe74eaca4ebb4a89ef6ae"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-form/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 3,
+        "classes": 0,
+        "delta": 21301,
+        "framing": 50,
+        "header": 952,
+        "payload": 37215,
+        "raw_len": 161246,
+        "total": 59518
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/text.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-fi-test-text-bzip3",
+      "input": {
+        "bytes": 158155,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/text.txt",
+        "sha256": "4fd5ccdf8ac9709af6b5b259f93e60332c45a9f0f6d3c7c7f012958627802205"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 54,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text-bzip3/control.stdout",
+        "sha256": "963c42fd528f4fe1b258dda3fe791388e1e8d0f912dd43b53ba1a80f872fa4bc"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 3,
+        "input_name": "text.txt",
+        "payload": 53479,
+        "total": 53559
+      }
+    },
+    "ok": true,
+    "source": "ud-fi-test-text",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/text.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 158155,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/external-decoded.bin",
+          "sha256": "4fd5ccdf8ac9709af6b5b259f93e60332c45a9f0f6d3c7c7f012958627802205"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/ud-fi-test-text.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/ud-fi-test-text.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 59294,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/frame.b4",
+        "sha256": "5c2e2459b941e5a42b2f52721347a8668f09f66ef52eb5b9339377965bcbcbc8"
+      },
+      "id": "ud-fi-test-text",
+      "input": {
+        "bytes": 158155,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/text.txt",
+        "sha256": "4fd5ccdf8ac9709af6b5b259f93e60332c45a9f0f6d3c7c7f012958627802205"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 124,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/encode.stderr",
+        "sha256": "92b3ee5abd92d0dc2137c5a308e8286a023468500968fc4e2103393df5473b72"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-fi-test-text/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 3,
+        "classes": 0,
+        "delta": 21176,
+        "framing": 50,
+        "header": 894,
+        "payload": 37174,
+        "raw_len": 158155,
+        "total": 59294
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-tr-test-form-bzip3",
+      "input": {
+        "bytes": 67770,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "5c451a7d665bb59195cc2497fe2386f232992b1cc3287721bcf55232d9417647"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 53,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form-bzip3/control.stdout",
+        "sha256": "702913f6488893f273ca86575d2ca35960242f047daf56d08732521df30cc236"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 2,
+        "input_name": "form.txt",
+        "payload": 22049,
+        "total": 22113
+      }
+    },
+    "ok": true,
+    "source": "ud-tr-test-form",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 67770,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/external-decoded.bin",
+          "sha256": "5c451a7d665bb59195cc2497fe2386f232992b1cc3287721bcf55232d9417647"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/ud-tr-test-form.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/ud-tr-test-form.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 26157,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/frame.b4",
+        "sha256": "9c77f6a860d4c7736de682a96bc0d5c1efd565f99e002e67a9ba17b649265097"
+      },
+      "id": "ud-tr-test-form",
+      "input": {
+        "bytes": 67770,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "5c451a7d665bb59195cc2497fe2386f232992b1cc3287721bcf55232d9417647"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 122,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/encode.stderr",
+        "sha256": "3f9dd3eaae73a60d22525b947c2d1a11d2fda4a3569325262d9fc1fd1f023e25"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-form/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 2,
+        "classes": 0,
+        "delta": 9155,
+        "framing": 33,
+        "header": 795,
+        "payload": 16174,
+        "raw_len": 67770,
+        "total": 26157
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/text.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-tr-test-text-bzip3",
+      "input": {
+        "bytes": 65596,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/text.txt",
+        "sha256": "8b1960983fdf9a4343ab67a19f4bd44fca0d90e985f4529458927cd8ef654014"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 53,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text-bzip3/control.stdout",
+        "sha256": "495b958ed3342f181b6214e6d44b803052e373a020e2462696e1da8c307a20e4"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 2,
+        "input_name": "text.txt",
+        "payload": 21517,
+        "total": 21581
+      }
+    },
+    "ok": true,
+    "source": "ud-tr-test-text",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/text.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 65596,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/external-decoded.bin",
+          "sha256": "8b1960983fdf9a4343ab67a19f4bd44fca0d90e985f4529458927cd8ef654014"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/ud-tr-test-text.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/ud-tr-test-text.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 26036,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/frame.b4",
+        "sha256": "a050903e82a8c414ca6bd5f877c47b2e455a88aebd63cb50b57ebb653dba9141"
+      },
+      "id": "ud-tr-test-text",
+      "input": {
+        "bytes": 65596,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/text.txt",
+        "sha256": "8b1960983fdf9a4343ab67a19f4bd44fca0d90e985f4529458927cd8ef654014"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 122,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/encode.stderr",
+        "sha256": "8cd22a3713b2bf970c1f693780fa21a7cc3a82d8aa8dbf8c5cf31e2e949a04f4"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-tr-test-text/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 2,
+        "classes": 0,
+        "delta": 9184,
+        "framing": 26,
+        "header": 790,
+        "payload": 16036,
+        "raw_len": 65596,
+        "total": 26036
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-ar-test-form-bzip3",
+      "input": {
+        "bytes": 245812,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt",
+        "sha256": "f50874d99df107c63571f3cdd0864d0ca51b17f2460aa464de7ab9b4c6826930"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 56,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form-bzip3/control.stdout",
+        "sha256": "4c5f31af4453822887030718d2684c024f3dbb3636d7a009657cd368b3b96607"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 4,
+        "input_name": "form.txt",
+        "payload": 51258,
+        "total": 51354
+      }
+    },
+    "ok": true,
+    "source": "ud-ar-test-form",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 245812,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/external-decoded.bin",
+          "sha256": "f50874d99df107c63571f3cdd0864d0ca51b17f2460aa464de7ab9b4c6826930"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/ud-ar-test-form.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/ud-ar-test-form.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 56244,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/frame.b4",
+        "sha256": "253384484fa715c8da0a5835d6a34ad3ad9396adc9efc1b05ededa21d2f198d9"
+      },
+      "id": "ud-ar-test-form",
+      "input": {
+        "bytes": 245812,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt",
+        "sha256": "f50874d99df107c63571f3cdd0864d0ca51b17f2460aa464de7ab9b4c6826930"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 125,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/encode.stderr",
+        "sha256": "23e5d4013a05465cf79a6e7701bd4c7ef6f4b47821df148e16f459238d5b9653"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-form/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 4,
+        "classes": 0,
+        "delta": 23473,
+        "framing": 64,
+        "header": 1742,
+        "payload": 30965,
+        "raw_len": 245812,
+        "total": 56244
+      }
+    }
+  },
+  {
+    "bzip3": {
+      "binary": {
+        "bytes": 484328,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+      },
+      "block_bytes": 65536,
+      "codec": "bzip3-control",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/text.txt",
+        "65536",
+        "1"
+      ],
+      "id": "ud-ar-test-text-bzip3",
+      "input": {
+        "bytes": 239109,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/text.txt",
+        "sha256": "0fe7d5b4998640ca321d02c9b4a9da2d736ed749df43669baaf57b6b5320a160"
+      },
+      "kind": "matched_block_control",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text-bzip3/control.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 56,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text-bzip3/control.stdout",
+        "sha256": "8c00449335d9b166a35f3a55eb186392e69b8240f339281454e2758cc18db9b0"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 4,
+        "input_name": "text.txt",
+        "payload": 51420,
+        "total": 51516
+      }
+    },
+    "ok": true,
+    "source": "ud-ar-test-text",
+    "v4": {
+      "binary": {
+        "bytes": 550240,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+      },
+      "block_bytes": 65536,
+      "classes_requested": null,
+      "codec": "bzip4-v4",
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+        "raw",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/text.txt",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/frame.b4",
+        "65536"
+      ],
+      "dump": null,
+      "external_decode": {
+        "command": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "d",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/frame.b4",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/external-decoded.bin",
+          "1"
+        ],
+        "exact_hash": true,
+        "output": {
+          "bytes": 239109,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/external-decoded.bin",
+          "sha256": "0fe7d5b4998640ca321d02c9b4a9da2d736ed749df43669baaf57b6b5320a160"
+        },
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/ud-ar-test-text.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/ud-ar-test-text.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 59883,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/frame.b4",
+        "sha256": "8f2623e7a2d87346c658902093db580117a67e484d84c2456bc011379db01627"
+      },
+      "id": "ud-ar-test-text",
+      "input": {
+        "bytes": 239109,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/text.txt",
+        "sha256": "0fe7d5b4998640ca321d02c9b4a9da2d736ed749df43669baaf57b6b5320a160"
+      },
+      "kind": "end_to_end",
+      "ok": true,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 125,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/encode.stderr",
+        "sha256": "a67cf7d5a2b3cf3cafec8c9afd212af3c4e210193ffb6dd59b32f424d6d4a081"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-forms-fixed/samples/ud-ar-test-text/encode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "storage": {
+        "block_bytes": 65536,
+        "blocks": 4,
+        "classes": 0,
+        "delta": 28107,
+        "framing": 65,
+        "header": 1705,
+        "payload": 30006,
+        "raw_len": 239109,
+        "total": 59883
+      }
+    }
+  }
+]

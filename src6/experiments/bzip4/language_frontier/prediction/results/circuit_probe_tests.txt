@@ -1,0 +1,4 @@
+command: python3 src6/experiments/bzip4/language_frontier/prediction/test_circuit_probe.py
+output:
+tests=causal_rows,variable_length_normalization,empty_word
+status=ok

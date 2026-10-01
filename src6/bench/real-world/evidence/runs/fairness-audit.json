@@ -1,0 +1,697 @@
+{
+  "schema": 1,
+  "status": "fairness-audit-ok",
+  "timing": "not run",
+  "source_generation": "pre-refactor smoke artifacts; post-refactor timing must use a fresh archive/artifact generation",
+  "smoke_ledger": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/main-smoke.json",
+    "sha256": "4bb6fa9324ddff242f8cfa610146a72f20605311834a625219a0201e625645a6"
+  },
+  "baseline_manifest": {
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world/evidence/runs/baseline-pre-refactor.json",
+    "sha256": "cd2f9af347d153591e473aa012c5294b2a17eb419d34d80af4d15db0eb01205b"
+  },
+  "corpora": [
+    {
+      "corpus": "freedict-eng-spa",
+      "source_archive_sha256": "dd724fb48c5701395c15d7d648a9e6f6b75d6ff4269e465dce6d3a292700198d",
+      "projection_sha256": "687008296b727878d26472bca5315beca8136a64365f2ac819e9e1f7f22f3865",
+      "rows": {
+        "rows": 64258,
+        "key_hits": 64258,
+        "unique_keys": 59253,
+        "duplicate_key_hits": 5005,
+        "multi_key_rows": 0,
+        "duplicate_keys_in_row": 0,
+        "max_keys_in_row": 1,
+        "content_bytes": 43700255,
+        "native_record_bytes": 43700255
+      },
+      "payload_checks": [
+        {
+          "lane": "stardict:raw",
+          "payload_bytes": 43700255,
+          "normalized_content_bytes": 43700255,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "dict:raw",
+          "payload_bytes": 43700255,
+          "normalized_content_bytes": 43700255,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "sqlite:raw",
+          "payload_bytes": 43700255,
+          "normalized_content_bytes": 43700255,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:raw",
+          "payload_bytes": 43700255,
+          "normalized_content_bytes": 43700255,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:lzma2",
+          "payload_bytes": 43700255,
+          "normalized_content_bytes": 43700255,
+          "payload_once_per_record": true
+        }
+      ],
+      "occurrence_checks": {
+        "stardict_primary_words": {
+          "actual": 64258,
+          "expected": 64258
+        },
+        "stardict_synonym_words": {
+          "actual": 0,
+          "expected": 0
+        },
+        "dict_postings": {
+          "actual": 64258,
+          "expected": 64258
+        },
+        "sqlite_postings": {
+          "actual": 64258,
+          "expected": 64258
+        },
+        "slob_key_hits": {
+          "actual": 64258,
+          "expected": 64258
+        },
+        "all_match": true
+      },
+      "validation_status": {
+        "stardict:raw": "ok",
+        "dict:dictzip": "ok",
+        "slob:raw": "ok",
+        "slob:lzma2": "ok"
+      },
+      "artifact_storage": {
+        "stardict:raw": {
+          "native_bytes": 44901208,
+          "sidecar_bytes": 695909,
+          "total_bytes": 45597117,
+          "files": [
+            {
+              "name": "stardict.ifo",
+              "bytes": 196,
+              "sha256": "cf32e82753646fa3a8565280e20d59b7e0a394b19bf9bed2018e0dd7d5830a1b",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.idx",
+              "bytes": 1200757,
+              "sha256": "f31f9925f2bb231ecdc6379528a068086f70ef91224f0e66e65e1413cb2a2ef8",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.syn",
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.dict",
+              "bytes": 43700255,
+              "sha256": "b019477ee178336f466c12fca3d28aa6f3097a50af1474392b21f15a5d05fa61",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.rows.json",
+              "bytes": 695909,
+              "sha256": "56c76026ae748441a2a81e673b03c08b4da96b6674044c9b689ceabcc4f57798",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:raw": {
+          "native_bytes": 44964895,
+          "sidecar_bytes": 105,
+          "total_bytes": 44965000,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 1264640,
+              "sha256": "fb05bb92b10dacbfce2bdaa939e28a26d1a87ced82e7e0f11335b4e3f53c47bf",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict",
+              "bytes": 43700255,
+              "sha256": "6e36329d204b027aea0cff19982964eba36df2445bda96bc6e250ba372a61649",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.rows.json",
+              "bytes": 105,
+              "sha256": "b55121454740ffe43d0dd5953d8600d1fc479485f9bb2b9422e0258f8384ba05",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:dictzip": {
+          "native_bytes": 6673486,
+          "sidecar_bytes": 0,
+          "total_bytes": 6673486,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 1264640,
+              "sha256": "fb05bb92b10dacbfce2bdaa939e28a26d1a87ced82e7e0f11335b4e3f53c47bf",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict.dz",
+              "bytes": 5408846,
+              "sha256": "06099a263885350d453c60b1e54351a08cd1fd598f8f0f7dc35208188d4d6db2",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "sqlite:raw": {
+          "native_bytes": 56295424,
+          "sidecar_bytes": 0,
+          "total_bytes": 56295424,
+          "files": [
+            {
+              "name": "dictionary.sqlite",
+              "bytes": 56295424,
+              "sha256": "c4ec136a30f7d09f8b0f4b7ecee915cc55e14786a83aa4581e57e8cce0e1df7c",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:raw": {
+          "native_bytes": 46005219,
+          "sidecar_bytes": 9365519,
+          "total_bytes": 55370738,
+          "files": [
+            {
+              "name": "dictionary.raw.slob",
+              "bytes": 46005219,
+              "sha256": "1d548b5b1495c3e2b5cf471881d8b7484f428f98d405483340de891daaf56944",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.raw.slob.refs.json",
+              "bytes": 9365519,
+              "sha256": "243dc62170041009f7949fbd46ceb2c20d9a1bd0bb347a06cbdb784691085f5c",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:lzma2": {
+          "native_bytes": 7315317,
+          "sidecar_bytes": 9365521,
+          "total_bytes": 16680838,
+          "files": [
+            {
+              "name": "dictionary.lzma2.slob",
+              "bytes": 7315317,
+              "sha256": "fec978d40ab2287ac950bd5d68c7861ad78b3cd6e4a7c445776a642f66eeb402",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.lzma2.slob.refs.json",
+              "bytes": 9365521,
+              "sha256": "fae1af3aea7058c69dbe2b070eeb3c95cf3bb925794ba10f8bc64d3ec647295b",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        }
+      },
+      "status": "ok"
+    },
+    {
+      "corpus": "gcide-054",
+      "source_archive_sha256": "22416f6f36175b160dc388b7547512514d464473cf7d7c898d738efb26c51d42",
+      "projection_sha256": "4cddd7f0d23d7ef5dd923ef97b1894f7fff86cc26dbda1a9621653c1338c635b",
+      "rows": {
+        "rows": 124187,
+        "key_hits": 131563,
+        "unique_keys": 115327,
+        "duplicate_key_hits": 16236,
+        "multi_key_rows": 5089,
+        "duplicate_keys_in_row": 35,
+        "max_keys_in_row": 1179,
+        "content_bytes": 58808436,
+        "native_record_bytes": 58808434
+      },
+      "payload_checks": [
+        {
+          "lane": "stardict:raw",
+          "payload_bytes": 58808436,
+          "normalized_content_bytes": 58808436,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "dict:raw",
+          "payload_bytes": 58808436,
+          "normalized_content_bytes": 58808436,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "sqlite:raw",
+          "payload_bytes": 58808436,
+          "normalized_content_bytes": 58808436,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:raw",
+          "payload_bytes": 58808436,
+          "normalized_content_bytes": 58808436,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:lzma2",
+          "payload_bytes": 58808436,
+          "normalized_content_bytes": 58808436,
+          "payload_once_per_record": true
+        }
+      ],
+      "occurrence_checks": {
+        "stardict_primary_words": {
+          "actual": 124187,
+          "expected": 124187
+        },
+        "stardict_synonym_words": {
+          "actual": 7376,
+          "expected": 7376
+        },
+        "dict_postings": {
+          "actual": 131563,
+          "expected": 131563
+        },
+        "sqlite_postings": {
+          "actual": 131563,
+          "expected": 131563
+        },
+        "slob_key_hits": {
+          "actual": 131563,
+          "expected": 131563
+        },
+        "all_match": true
+      },
+      "validation_status": {
+        "stardict:raw": "ok",
+        "dict:dictzip": "ok",
+        "slob:raw": "ok",
+        "slob:lzma2": "ok"
+      },
+      "artifact_storage": {
+        "stardict:raw": {
+          "native_bytes": 61089901,
+          "sidecar_bytes": 1783533,
+          "total_bytes": 62873434,
+          "files": [
+            {
+              "name": "stardict.ifo",
+              "bytes": 200,
+              "sha256": "13571d88224947d476382a6772604d366c6b18f244e0a5e14e49a4088e6c71ad",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.idx",
+              "bytes": 2176575,
+              "sha256": "d8bb02a646c728efe532ab4256191689654f8ec4c95c6b67eb3fc14f1191baaa",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.syn",
+              "bytes": 104690,
+              "sha256": "9be203e322d7e57c2699e4ca939b87c70e97d14f7700018a707f2e5dbfa0b3c7",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.dict",
+              "bytes": 58808436,
+              "sha256": "484bba2c00c0602571265cfb3cae581ff3ca62d1500bc3b6caf87276e012c9ec",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.rows.json",
+              "bytes": 1783533,
+              "sha256": "ba70b461ca22702191112c556c28a2861e0674cf66872d6f9d45be9fadabadac",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:raw": {
+          "native_bytes": 61256807,
+          "sidecar_bytes": 106,
+          "total_bytes": 61256913,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 2448371,
+              "sha256": "c64eee64aa4221316ae39f4c12edd30b8a54850ff9b6758da865d2476cc83f04",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict",
+              "bytes": 58808436,
+              "sha256": "f41f0505f35686d1463bf05a5e988a7cea3de8ae5c7c52020f5a3e0b19fdfc74",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.rows.json",
+              "bytes": 106,
+              "sha256": "01fbc9b4cf7a53617f564cb0cc7865fcb188d58d344d7e6144d5bf845d55d278",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:dictzip": {
+          "native_bytes": 18009804,
+          "sidecar_bytes": 0,
+          "total_bytes": 18009804,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 2448371,
+              "sha256": "c64eee64aa4221316ae39f4c12edd30b8a54850ff9b6758da865d2476cc83f04",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict.dz",
+              "bytes": 15561433,
+              "sha256": "599e7f264d94892146f9cd973d346eba359e57c502a1f4f2fc40c8d37d9c4230",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "sqlite:raw": {
+          "native_bytes": 81633280,
+          "sidecar_bytes": 0,
+          "total_bytes": 81633280,
+          "files": [
+            {
+              "name": "dictionary.sqlite",
+              "bytes": 81633280,
+              "sha256": "01822b7e789285ddfe4cf0bf7225f417dd275c3c61951b01b930cc2cc46853d4",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:raw": {
+          "native_bytes": 63304877,
+          "sidecar_bytes": 18975030,
+          "total_bytes": 82279907,
+          "files": [
+            {
+              "name": "dictionary.raw.slob",
+              "bytes": 63304877,
+              "sha256": "c6bd37cb788927c1ed26a39f7f494f95e46a012648f05b7a06d92fca62a222a6",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.raw.slob.refs.json",
+              "bytes": 18975030,
+              "sha256": "5720a77584ddb0610d137b9da577feffb8ce4c370672ed2adb856bf97186f638",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:lzma2": {
+          "native_bytes": 18530020,
+          "sidecar_bytes": 18975032,
+          "total_bytes": 37505052,
+          "files": [
+            {
+              "name": "dictionary.lzma2.slob",
+              "bytes": 18530020,
+              "sha256": "a3373f176290b2d660275981868199ce45d33799765a2b0581688e8b5cda82b9",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.lzma2.slob.refs.json",
+              "bytes": 18975032,
+              "sha256": "975657945df5ee4f0ffa81a8c68d63c789a86d95fe7ed6d921f1b4847b33d601",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        }
+      },
+      "status": "ok"
+    },
+    {
+      "corpus": "omw-ja-20",
+      "source_archive_sha256": "c369a2ad773a31e182ac4cc753132fa7c31ad423586d6783bacce08090cb8d7d",
+      "projection_sha256": "ff9b2f1e56912bf3874cb77377a6f97949206a3efdff7739a10f61e1f0c43c75",
+      "rows": {
+        "rows": 94002,
+        "key_hits": 94002,
+        "unique_keys": 91964,
+        "duplicate_key_hits": 2038,
+        "multi_key_rows": 0,
+        "duplicate_keys_in_row": 0,
+        "max_keys_in_row": 1,
+        "content_bytes": 112147272,
+        "native_record_bytes": 24119356
+      },
+      "payload_checks": [
+        {
+          "lane": "stardict:raw",
+          "payload_bytes": 112147272,
+          "normalized_content_bytes": 112147272,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "dict:raw",
+          "payload_bytes": 112147272,
+          "normalized_content_bytes": 112147272,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "sqlite:raw",
+          "payload_bytes": 112147272,
+          "normalized_content_bytes": 112147272,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:raw",
+          "payload_bytes": 112147272,
+          "normalized_content_bytes": 112147272,
+          "payload_once_per_record": true
+        },
+        {
+          "lane": "slob:lzma2",
+          "payload_bytes": 112147272,
+          "normalized_content_bytes": 112147272,
+          "payload_once_per_record": true
+        }
+      ],
+      "occurrence_checks": {
+        "stardict_primary_words": {
+          "actual": 94002,
+          "expected": 94002
+        },
+        "stardict_synonym_words": {
+          "actual": 0,
+          "expected": 0
+        },
+        "dict_postings": {
+          "actual": 94002,
+          "expected": 94002
+        },
+        "sqlite_postings": {
+          "actual": 94002,
+          "expected": 94002
+        },
+        "slob_key_hits": {
+          "actual": 94002,
+          "expected": 94002
+        },
+        "all_match": true
+      },
+      "validation_status": {
+        "stardict:raw": "ok",
+        "dict:dictzip": "ok",
+        "slob:raw": "ok",
+        "slob:lzma2": "ok"
+      },
+      "artifact_storage": {
+        "stardict:raw": {
+          "native_bytes": 114085567,
+          "sidecar_bytes": 1023093,
+          "total_bytes": 115108660,
+          "files": [
+            {
+              "name": "stardict.ifo",
+              "bytes": 196,
+              "sha256": "84a2868060ea0241e53c13a6bfa57bc8c64211af11585f8c801412b01c5e698c",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.idx",
+              "bytes": 1938099,
+              "sha256": "212673011c5dbe66502a9a1d4471df634ce621a4a2c51ba308ee867f5bfd9924",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.syn",
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.dict",
+              "bytes": 112147272,
+              "sha256": "23986ec55b67b9169f621ed97572aeb7b7a2536df4ef57ab776e7127e94a0719",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "stardict.rows.json",
+              "bytes": 1023093,
+              "sha256": "93551e4b720030fb8de91d1e36b833c9ab2a8edb678bfe3a7f2af2ea97307b18",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:raw": {
+          "native_bytes": 114262242,
+          "sidecar_bytes": 105,
+          "total_bytes": 114262347,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 2114970,
+              "sha256": "78260190f7f5697a96f8ff373b64ae4cbce686d5ddc24e9a8969d8327d9455d9",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict",
+              "bytes": 112147272,
+              "sha256": "d3be8f96361e91ad1b48f640d0c92a1041cd6e9a6ab134b1d2412f7d2a5d7242",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.rows.json",
+              "bytes": 105,
+              "sha256": "a9763d6f1ff51f4230f35f173d473b574fa68cf337fe38ef9e81c35bfe77c616",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "dict:dictzip": {
+          "native_bytes": 13851825,
+          "sidecar_bytes": 0,
+          "total_bytes": 13851825,
+          "files": [
+            {
+              "name": "dict.index",
+              "bytes": 2114970,
+              "sha256": "78260190f7f5697a96f8ff373b64ae4cbce686d5ddc24e9a8969d8327d9455d9",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dict.dict.dz",
+              "bytes": 11736855,
+              "sha256": "39c2c76b869542cda711617548f9deba2461958be7bf1196f8c928b56d8b8cfb",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "sqlite:raw": {
+          "native_bytes": 147197952,
+          "sidecar_bytes": 0,
+          "total_bytes": 147197952,
+          "files": [
+            {
+              "name": "dictionary.sqlite",
+              "bytes": 147197952,
+              "sha256": "9ef999a4379244bf38e138d9f90bf5fd1bf5bc7acb9fde26a3a0892028151009",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:raw": {
+          "native_bytes": 115711514,
+          "sidecar_bytes": 14110633,
+          "total_bytes": 129822147,
+          "files": [
+            {
+              "name": "dictionary.raw.slob",
+              "bytes": 115711514,
+              "sha256": "1c169ad37474d869c3b1242de492b572abe56be5028467d29436909a4dfbeafe",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.raw.slob.refs.json",
+              "bytes": 14110633,
+              "sha256": "a5fbbb00d0012715949a8b4f4e4c7a16707f39e1c13bcfe523b1cead1cd37161",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        },
+        "slob:lzma2": {
+          "native_bytes": 13172996,
+          "sidecar_bytes": 14110635,
+          "total_bytes": 27283631,
+          "files": [
+            {
+              "name": "dictionary.lzma2.slob",
+              "bytes": 13172996,
+              "sha256": "8418da643d972097dca64ea8307610d8947590986f3165194ec12841930bae63",
+              "retained_path_exists": false,
+              "current_sha256": null
+            },
+            {
+              "name": "dictionary.lzma2.slob.refs.json",
+              "bytes": 14110635,
+              "sha256": "3eb57c4a6ca81ac4ac636138112ad4602ed37cea39bb7bac17f92fcb7ad0af40",
+              "retained_path_exists": false,
+              "current_sha256": null
+            }
+          ]
+        }
+      },
+      "status": "ok"
+    }
+  ]
+}

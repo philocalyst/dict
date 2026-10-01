@@ -1,0 +1,10 @@
+{
+  "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+  "prefix_limit": 16384,
+  "sample": {
+    "bytes": 16384,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs/20260926T164237Z-026b9da8/03-data-omw.eval8/input.bin",
+    "sha256": "7ea87dcec6af5f9eaa0303a4178945426286080244351c3a2aa012d4c0aaf871"
+  },
+  "source_bytes": 8388608
+}

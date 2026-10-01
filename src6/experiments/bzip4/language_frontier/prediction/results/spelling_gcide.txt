@@ -1,0 +1,5 @@
+status: COMPLETE_LOSSLESS_CONTROL
+command: python3 src6/experiments/bzip4/language_frontier/prediction/spelling_model.py src6/experiments/bzip4/bz4/data/gcide.train.bin src6/experiments/bzip4/bz4/data/gcide.eval8.bin /tmp/lpred-gcide.frame
+timing: /usr/bin/time -p; real=26.91 user=25.07 sys=0.51 (single serial run; descriptive only)
+output:
+input=src6/experiments/bzip4/bz4/data/gcide.eval8.bin train=src6/experiments/bzip4/bz4/data/gcide.train.bin input_bytes=8388608 input_sha256=8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b frame_sha256=e245d4277534492042ee88cfbd1a44525185ab43ccfdac831446edcfff963f1d types=73319 pieces=256 header=64 model=3327 spelling=321833 events=4088182 total=4413406 roundtrip=ok

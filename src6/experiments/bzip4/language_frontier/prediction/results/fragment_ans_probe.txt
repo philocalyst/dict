@@ -1,0 +1,42 @@
+status: EXACT_PROOF_AND_OPERATION_SCREEN
+command: python3 src6/experiments/bzip4/language_frontier/prediction/fragment_ans_probe.py
+python: 3.14.7 (Darwin arm64)
+output:
+probe=fragment_ans_bitsback length=32 total=16384
+uncertainty_proof=same_last_byte_different_belief
+history=b'aaaaa' belief=(121251/133420,12169/133420) p_next_a=187961/266840 p_next_a_bits=0.505541598
+history=b'bbbba' belief=(21099/56380,35281/56380) p_next_a=49289/112760 p_next_a_bits=1.193917767
+next_a_total_variation=0.267281668
+ans_freq_a_total=16384 history1=11541 history2=7162
+conclusion=one_context_free_ans_cdf_cannot_be_exact_for_both_histories
+phrase_codebook=complete_prefix_free words=a,ba,bba,bbb
+phrase_belief=uniform probabilities=1/2,3/16,1/10,17/80 sum=1 expected_len=1.812500000 fixed_id_bpb=1.103448276 entropy_id_bpb=0.970944114
+phrase_cdf_uniform=1/2,11/16,63/80,1
+phrase_belief=biased probabilities=13/20,69/400,527/8000,893/8000 sum=1 expected_len=1.527500000 fixed_id_bpb=1.309328969 entropy_id_bpb=0.951170994
+phrase_cdf_biased=13/20,329/400,7107/8000,1
+phrase_id_total_variation=0.150000000
+phrase_runtime_tradeoff=cache_r_w=M_w1_and_cumulative_R_k; exact_phrase_cdf_needs_P_H_dot_products (or_H_logP_inverse_search)_plus_one_selected_H2_posterior_matvec unless_belief_context_rows_are_precompiled
+uniform_phrase_lookup_rate_per_byte=0.551724138 cached_selected_H2_matvec_per_byte=0.551724138 exact_phrase_cdf_H_dot_products_per_byte=2.206896552
+bits_back_one_symbol=latent_destination_state
+observed_entropy=1.000000000 latent_entropy=1.000000000 posterior_seed_entropy=0.811278124 joint_entropy=1.811278124 mutual_information=0.188721876
+bits_back_tradeoff=exact_posterior_seed_subtracts_H(Z|B); zero_seed_first_item_pays_joint=1.811278124_bits_vs_marginal_1.000000000_bits; initial_overhead=0.811278124_bits
+hmm_inference_ops=vanilla_predictive_ans_needs_forward_filter_n_H2_products; full_path_posterior_needs_forward_backward, but_IconoCLaSM_interleaves_state_posterior_and_needs_Q_conditional_CDFs
+factor_source=H4_Mb=diag(emission_b)(alpha_I+beta_ones/H)
+byte=a full_rank=4 residual_rank_after_exact_diagonal_plus_rank1=1
+byte=b full_rank=4 residual_rank_after_exact_diagonal_plus_rank1=1
+word=b'a' length=1 operator_rank=4 residual_rank=1 full_coefficients=16 diag_lowrank_coefficients=12
+word=b'ba' length=2 operator_rank=4 residual_rank=2 full_coefficients=16 diag_lowrank_coefficients=20
+word=b'bba' length=3 operator_rank=4 residual_rank=3 full_coefficients=16 diag_lowrank_coefficients=28
+word=b'bbb' length=3 operator_rank=4 residual_rank=3 full_coefficients=16 diag_lowrank_coefficients=28
+factor_totals=full_coefficients=64 diag_lowrank_coefficients=88 full_matvec_ops=64 diag_lowrank_ops=88
+factor_conclusion=rank1_byte_factor_is_exact_but_phrase_products_grow_to_rank3; no_model_and_runtime_win_for_cached_lengths_1,2,3,3
+operation_accounting=H2_current_exact_filter_muladds=128 H4_current_exact_filter_muladds=512 H4_full_path_forward_backward_muladds=1008
+validation=oracle_algebra_exact_not_compressed_frame
+
+Interpretation: an ANS integer may carry ordinary stack bits, but exact latent
+uncertainty still needs a boundary-belief context, an explicitly sampled latent
+path, or a finite compiled belief table.  Prefix-free macro operators reduce
+context updates only by the mean phrase length (1.8125 here).  Their cached
+phrase CDF is explicitly materialized from cumulative H-lane vectors and
+normalizes exactly, but posterior/context state still needs one selected H2
+matvec unless rows are precompiled.

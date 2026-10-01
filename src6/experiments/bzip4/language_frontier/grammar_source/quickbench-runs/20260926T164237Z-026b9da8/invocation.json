@@ -1,0 +1,97 @@
+{
+  "argv": [
+    "src6/experiments/bzip4/language_frontier/quickbench/bench.py",
+    "--suite",
+    "multilingual",
+    "--limit",
+    "16384",
+    "--block",
+    "16384",
+    "--candidate",
+    "src6/experiments/bzip4/language_frontier/grammar_source/adapter_small.py",
+    "--candidate",
+    "src6/experiments/bzip4/language_frontier/grammar_source/adapter_large.py",
+    "--candidate",
+    "src6/experiments/bzip4/language_frontier/grammar_source/adapter_root.py",
+    "--dependency",
+    "src6/experiments/bzip4/language_frontier/segmentation",
+    "--output",
+    "src6/experiments/bzip4/language_frontier/grammar_source/quickbench-runs",
+    "--cache",
+    "src6/experiments/bzip4/language_frontier/grammar_source/baseline-cache",
+    "--timeout",
+    "180"
+  ],
+  "bzip3": "vendored 1.5.1 native blocks, B3PY envelope = 32 + 16*blocks; not upstream .bz3 framing",
+  "cache": "encode only; each hit rehashed and decoded in a new process",
+  "matrix": {
+    "block_bytes": 16384,
+    "candidates": [
+      {
+        "block_bytes": 16384,
+        "dependencies": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation"
+        ],
+        "kind": "module",
+        "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/adapter_small.py",
+        "name": "adapter_small",
+        "options": {}
+      },
+      {
+        "block_bytes": 16384,
+        "dependencies": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation"
+        ],
+        "kind": "module",
+        "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/adapter_large.py",
+        "name": "adapter_large",
+        "options": {}
+      },
+      {
+        "block_bytes": 16384,
+        "dependencies": [
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/segmentation"
+        ],
+        "kind": "module",
+        "module": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/grammar_source/adapter_root.py",
+        "name": "adapter_root",
+        "options": {}
+      }
+    ],
+    "controls": [
+      {
+        "block_bytes": 16384,
+        "kind": "bzip3",
+        "name": "bzip3-block"
+      },
+      {
+        "block_bytes": "max(1, input bytes)",
+        "kind": "bzip3",
+        "name": "bzip3-whole"
+      },
+      {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "block_bytes": 16384,
+        "kind": "v4",
+        "name": "bzip4-v4"
+      }
+    ],
+    "defaults": {},
+    "grid": {},
+    "inputs": [
+      "/usr/share/dict/web2",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/freedict.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/gcide.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt"
+    ],
+    "policies": [
+      {}
+    ],
+    "prefix_limit": 16384,
+    "whole_block_rule": "max(1, input bytes)"
+  },
+  "timing": "fresh Python worker + imports + codec startup + file I/O + full decode; verification hash outside timer"
+}

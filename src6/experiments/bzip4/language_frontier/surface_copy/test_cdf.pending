@@ -1,0 +1,128 @@
+import hashlib
+import importlib.machinery
+import importlib.util
+import itertools
+from pathlib import Path
+import random
+import subprocess
+import sys
+import unittest
+import zlib
+from bisect import bisect_right
+
+HERE = Path(__file__).resolve().parent
+path = HERE/'cdf_codec.py'
+if not path.exists(): path = HERE/'cdf_codec.pending'
+loader = importlib.machinery.SourceFileLoader('cdf_codec',str(path))
+spec = importlib.util.spec_from_loader(loader.name,loader)
+cdf = importlib.util.module_from_spec(spec)
+sys.modules[loader.name] = cdf
+loader.exec_module(cdf)
+
+
+class CDFTests(unittest.TestCase):
+    def test_reachable_dense_oracle(self):
+        rng = random.Random(419)
+        raw = b'abca abca\xff\xfe'*5+bytes(rng.randrange(256) for _ in range(25))
+        for p,k,s,r in itertools.product((0,1),(8,32),(0,1),(1,2,3)):
+            source = cdf.Source(p,k,s,r)
+            for b in raw:
+                query = source.prediction()
+                dense = source.reference()
+                actual = [query(i) for i in range(257)]
+                self.assertEqual(actual,dense)
+                self.assertEqual((dense[0],dense[-1]),(0,cdf.Q))
+                self.assertTrue(all(x<y for x,y in zip(dense,dense[1:])))
+                self.assertGreaterEqual(source.pending[2],1)
+                self.assertTrue(all(j<len(source.history) for j in source.pending[0]))
+                source.observe(b)
+                self.assertEqual(source.escape+sum(w for w,a in source.active.values()),cdf.Q)
+                self.assertLessEqual(len(source.active),k)
+
+    def test_rows_and_rescale(self):
+        rng = random.Random(313)
+        for dense in (False,True):
+            row = cdf.Row(dense)
+            for i in range(9000):
+                row.add(rng.randrange(256))
+                self.assertEqual(row.total,sum(row.counts.values()))
+                if i<16 or i in (4093,4094,4095,4096,8190,8191,8192,8999):
+                    expected = [0]
+                    for b in range(256): expected.append(expected[-1]+row.counts.get(b,0))
+                    self.assertEqual([row.count_prefix(k) for k in range(257)],expected)
+                    self.assertLessEqual(row.total,4095)
+
+    def test_cancelled_identities(self):
+        Q = cdf.Q
+        for n in range(4096):
+            for c,L in itertools.product((0,n),(0,Q)):
+                full = (Q-256)*(Q*c+16*L)//(Q*(n+16))
+                reduced = 255*(4096*c+L)//(16*(n+16))
+                self.assertEqual(full,reduced)
+                self.assertLess(255*(4096*c+L),1<<32)
+        for e,L in itertools.product((0,1,Q-1,Q),(0,1,Q-1,Q)):
+            for m in (0,Q-e):
+                inner = e*L+Q*m
+                self.assertEqual((Q-256)*inner//(Q*Q),(255*inner)>>24)
+                self.assertLess(255*inner,1<<40)
+
+    def test_every_scaled_code(self):
+        models = [cdf.Source(start=0),cdf.Source()]
+        models[1].history.append(173)
+        models[1].active = {0:(cdf.Q,100)}
+        models[1].escape = 0
+        for source in models:
+            query = source.prediction()
+            dense = source.reference()
+            for v in range(cdf.Q):
+                b,lo,hi = cdf.QueryArithmetic.select(query,v)
+                self.assertEqual(b,bisect_right(dense,v)-1)
+                self.assertLessEqual(lo,v)
+                self.assertLess(v,hi)
+        with self.assertRaises(ValueError): cdf.QueryArithmetic.select(lambda k:256*k,cdf.Q)
+
+    def test_frame_identity_and_roundtrip(self):
+        rng = random.Random(641)
+        samples = (b'',b'\xff',bytes(range(256)),bytes(rng.randrange(256) for _ in range(700)),b'overlap\xff\xfe '*100)
+        for raw in samples:
+            for block in (1,127,65536):
+                f = cdf.encode(raw,block_bytes=block)
+                self.assertEqual(f,cdf.encode_reference(raw,block_bytes=block))
+                self.assertEqual(cdf.decode(f),raw)
+                self.assertEqual(cdf.encode(raw,block_bytes=block),f)
+        # Cross a maximum-size restart boundary, independently of the dense oracle.
+        raw = (b'longspan\xff\xfe '*7000)[:65536+31]
+        self.assertEqual(cdf.decode(cdf.encode(raw)),raw)
+
+    def test_malformed_and_fresh_process(self):
+        raw = bytes(range(256))*2
+        f = cdf.encode(raw)
+        for n in range(len(f)):
+            with self.assertRaises(ValueError): cdf.decode(f[:n])
+        with self.assertRaises(ValueError): cdf.decode(f+b'x')
+        with self.assertRaises(ValueError): cdf.decode(f,output_budget=1)
+        with self.assertRaises(ValueError): cdf.decode(b'SCM3'+f[4:])
+        for at in (0,4,5,6,7,cdf.HEAD.size,cdf.HEAD.size+4):
+            g = bytearray(f); g[at] ^= 255
+            with self.assertRaises(ValueError): cdf.decode(g)
+        n,p,crc = cdf.SPAN.unpack_from(f,cdf.HEAD.size)
+        payload_start = cdf.HEAD.size+cdf.SPAN.size
+        for i in range(min(8,p)):
+            g = bytearray(f); g[payload_start+i] ^= 128
+            payload = bytes(g[payload_start:payload_start+p])
+            g[cdf.HEAD.size:payload_start] = cdf.SPAN.pack(n,p,zlib.crc32(payload))
+            with self.assertRaises(ValueError): cdf.decode(g)
+        script = ('import sys,importlib.machinery; m=importlib.machinery.SourceFileLoader("fresh_cdf",sys.argv[1]).load_module(); '
+                  'sys.stdout.buffer.write(m.decode(sys.stdin.buffer.read()))')
+        result = subprocess.run([sys.executable,'-c',script,str(path)],input=f,capture_output=True,cwd=HERE,check=True)
+        self.assertEqual(result.stdout,raw)
+
+    def test_future_invariance(self):
+        first,second = cdf.Source(),cdf.Source()
+        for b in b'same prefix\xff'*30:
+            qa,qb = first.prediction(),second.prediction()
+            self.assertEqual([qa(k) for k in range(257)],[qb(k) for k in range(257)])
+            first.observe(b); second.observe(b)
+
+
+if __name__ == '__main__': unittest.main()

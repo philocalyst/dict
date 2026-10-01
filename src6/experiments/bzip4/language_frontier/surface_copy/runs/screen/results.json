@@ -1,0 +1,2402 @@
+[
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1165,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "a425ae7a36f623f8f5c5aaf3b91de2fb1f9927914b344fa5e034f27c74c47de1",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 579,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "6c3d0b5170e8b9e1043dc5048e69726de57b2d6faa507eb602ffb5a49203cc59",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 644,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "7dc5a265b86f1e52f7a01b413461e13f3d7f49fa42e34668ffd91bdf9f604f60",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1595,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "fdfebd48c4a36354bdbd4a2a216aaaf2f7008e851084d53f10290f366df640be",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1469,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "ad73cd7a2efca41dfde99cd57ad0fb1ecc2f1d2f2613d7220e8c70e7243fa344",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 0,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 1014,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "c49991d9d024f2eaf9d70a052028ae09196a1a76f22ce1aee438a4dfc5c79666",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p0-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1158,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "f1b370b3f9f6d0794d78e63647139d431515e22ea40b96e4a2a7876c1f921261",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 577,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "df05edfc9bf2bab0d9a8b81ce69bae6d021d5df751668eb86ba41dc97c99da09",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 634,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "2aba8e6b613f2db177cce923295e4a5b2c09bec66607db86f3d033940e692b87",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1619,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "5b787bb2ae7e4d570356acc01cdb363af0317d206d1b28efc3f9c721e7aaf772",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1489,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "a440f068274769324cacf35c80ff1a5e67d9a72022276e584b82276c0c91caf6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 1,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 1014,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "e5a6783fe3d4d0f558064d374b770f2b11324309e6997d5ad2b1aa76b2a1e44f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p1-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1193,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "0a6ce7885a960eefa99bd379f071955f5e835e08ce2da0fefeb557e22aae3d12",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 589,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "7cd034c8b8c3a6608994d16a60ff6fb41acde627e442e89d7fe08dfa6691627d",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 641,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "94a018ec85315863429ad8494e89268e0f79c144ef6cb384638c18c5f4d45fd3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1696,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "28ace0ec73a7b8814ac7ca4ea5e0e368211bdd14202994007248c34505cea753",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1556,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "816e5cce0eb949a7813c7ddc9565fc56ed45b0942c046dd817d7ab56072cbd08",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 2,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 1050,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "9a158a207f3aa8d3ac81a5b60ab0542cb524e42f8e2703ab8cc26b04ac584152",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p2-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1124,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "357701ce5dd645c11b4fdc7a85dd27a77fb08a9bbe25e2fb7bfe20ce59208813",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 571,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "71d242df1c004d6ba99aab7a58f2cc5347de9a97923d9c9bb7e800a844955d22",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 644,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "856d6291b56f7dbdf3ca12c627be5b3748b13c595f0e8f57d70799f83c94863c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1542,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "f53edd1167089c77150467a5407a5c5c55f57b7158b62ad249b325657f5f9619",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1427,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "50060a19b46b819f95babdf9dbf8501d82f419102c30999a5229579774e8e282",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 3,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 980,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "3c8cdc8bd737a7746cf3ca5699f40452f6854ed66b92940d876be77eca44e4a5",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p3-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1107,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "597302e0aae49eadbdf22d95d12e77df7633a4bbcae6491e6b6783e7fac4fb7f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 568,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "468cdada197c4c0f17abe1cb2948c3312202a579e3f5841e259cdb6c5a157567",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 631,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "93d58ef1879c73e70cb0b7e1152ee3487d65dcfc6df19e2a8a8f6d2dded51d01",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1551,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "534a2ec4a4d93010f94b2cc60331377985d13907fda1fab919fb1bcf1fbe31d5",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1435,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "27d4cb817d3c3c651243271656734bf18740db65da311cc3caee2c6aa1a1dc9c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 4,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 967,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "223e5e535746b3f7b660e66c66281f651cf6ea13c95bf05dc694aa3937c96e69",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p4-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1135,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "cc300b63fd4ad158c5540b1e868b58c275102348b78ba7992ad9e61e03472fc8",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 579,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "1f1f754c75e4b6d431075c7514848a505c6526cb1213c696e6bd1e0fb94bbdb9",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 635,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "2f1ffcd016656d2c98beb4c79818d75ba21ed6e0831357c964d93394db2d37df",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1619,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "54c941b4a13e1ba141e21c05c91b7d1f5eae3712b454c55ea97513c0f1a0f46c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1495,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "659aac1c7517b68021d651c5baa9627f55f48388397ad22f5c11597589446796",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 5,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 995,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "8cff407a14af4cdf743f0790ff3f52a515dba365b8783d7405c44a1e71d3d48a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p5-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1176,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "4a881f98eee8f56e0bc71bc372df4c41b296d0bd1414759101bb2fa517d44fa0",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 574,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "b520f75d793ab0969d216534bed1e320505ec16009a9e549b89fafe00e69d8c5",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 637,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "48065ee0b82ea33749801fe76c4d8ef0f67d84804dc7db5fcb6ce9643e60ac8d",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1584,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "f0c86cc2d159a724d41a35a75da614104b136c7b38de7e96be19f8e66bc432a8",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1460,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "85d53dd1e19700701cfba906af68f9bbbf34a65fabcdc25e0443d1262b421a61",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 6,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 994,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "f3f5a713fff221ae0eb46f184b142271be02ba56c5919a86775c75be60890d6c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p6-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1170,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "1a617d1111d83ad67fdfac56c02510b58cd732fdd5e158253a3de883fe9161d0",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 573,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "9d34b0e5f7e56e7e3c6af57fdb5498773253999ad9e4cc96dbbbe9a517ad640b",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 629,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "49e4ef929f69e369a799c16ad45a40c650efe446184a5b4e87d98da1fa739663",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1605,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "3d50849ad8a5870bd08d892570138c5a3cb145981ed86bb042a60ca583be4a2f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1477,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "95eb8114483d779891697f4ffeb18b3eb9d7912990109322a0e52c68430d23a6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 7,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 992,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "2454ef3291005b4cb8d8c60101b28e2e614e5f9ae7325c51f13f58fc7a5922d4",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p7-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1205,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "b459f226f6383dc0a5884de937ab85559fe5b68dc0d374bae8b8eb5db9c34407",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 584,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "6f39d4c37712425d680710561d6a1b3d1456fdcd7011e1aa4340396e638db9e3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 635,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "0d0c4aeac5ea47e94fcd2321c96e428f10e2701a520f5a54f2e1c77489ce2f0e",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1675,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "790ac58daa74928e113cc464fc2122822af5b74154bd085f61e6a03aada48aab",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1541,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "a860b7e2d6bbe680bf6cff5c0773419c93fda036e1b0f945766bbb40eb79bb9a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 8,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 1023,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "e9caae00fbea106cb0646444f8f8b48c54db7d26819f1fae43bc279fd05e89a3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p8-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1136,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "a0160931dcf4e4d0b026c5a33feb5e726999e0e4782106ecca13168d97d37990",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 567,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "790e1e4623a855f86ab9182bd0b8fa8b20e6eccc32441c51bfee577517db08b9",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 638,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "9a8479589dd7f242a62fb995ae000041633607e0913b185df5084a6723fed911",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1531,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "1ce4d5a7add0fa396bf73e47dd5620c44d29d7770039732d9e61009626190556",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1418,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "f70954b3049807c685f2312f6b0dfe0abf078cd84bd1efa67f7d29932c314132",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 9,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 963,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "8a924e25065947b3838ca6eef71781fa7dd79ac6900c855c72941dba55ca4684",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p9-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1120,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "06685b5662a6115c35ac4b0b039c7e7e98fdc2412ed8cca2fbc32c9bc50a7fd6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 565,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "50b650eb6a867f0270b85a8273afe134fbafed5ed2b5863f2e02c21beb5cca35",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 627,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "f6b05ae4fc3cb5f4bc71dbb172a1cda9493513b39b957a7fb6888387d43229bd",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1536,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "0c50d4c6969759c64a2fa3282c9caa7c3f42d021568007dffae39adc5f0a5ed3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1424,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "f90cf5d45be521a47257f9de5e2824992a8492851fcd425d1fe906247440da67",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 10,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 950,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "a9cc535525a5677891cffb6e547bf9bc3c08777e44fea69268d5692d49b54f69",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p10-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1147,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "8844a8350df7d865ab71d1dff10341daa22704b10751dd921e7a9bc258a2bd21",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 575,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "d9dac98a7d5a0bafbce27f8b1391f64fa1e52ea4b25fb4a64773ce36571fae06",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 630,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "36b3e3df7c6089f52a9aaf376d706a8786cdbf06f5721486fa2f5c44421e577f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1596,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "fc676fae648a6c1e50e239475f345fb4dd0cb42df9d0a10c719dfd23070edd7b",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1480,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "49b45332ae13a7e6753a6746ae0e95db961a3a8d5117cc84d1442d6e0f20b018",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 11,
+    "options": {
+      "policy": 0,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 974,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "99a060875578c6e18a92c74a300ab53b138d330e1266d05441e6c87d16ba69d6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p11-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1079,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "44e01e558eaf1ff47d58a8f8401135608a6394a3ce7132c9824dc4a6d352b934",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 572,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "d00bfe3838aa8d847d7a0db8e87b52655b7552ffc9fb5afee073bfac77ee4de2",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 634,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "12d710fced06968f14b1d5c763ee0d3615bb41244555658fbc23c2662723edd3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1558,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "757778ac6d102c8322034a934852ad0bbada957e5c28af3de7ea672dfeba0937",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1448,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "196c184370912bba92ceb92eee5b75841f38008246ccc504c3a6465f3c6e19a2",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 12,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 938,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "adcc5b9395c451ec3c64957c504409aa1f92877033d4ba256d63d7577ea29e3d",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p12-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1059,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "155fadd0d5cec0dca3e8a65efc32edefd30e9e2ecad7317ea485430a89ca2b6a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 570,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "6f5a591954ec98b6c3ddd8023dbd6fa6cf3fff43aaa33adf5ccd5ad348ac1b46",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 625,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "ddf25033f882b38b2ae22880affdf5a8a88a3200428b178a3de75e361516cdee",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1572,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "03c783dfbd3cd4ca186adf7005c10aeb8bfafe519edb754b2ea371a9b1fa9c95",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1459,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "cfaf3abd4fe1bdfec9b4452e4d88645d22f6389e4eb1b68ebe8ad3e9bd62324c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 13,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 922,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "270dc1203a6cd8b7948d108f0da530548251701eb1fb1a616cfc3dc7eafcc363",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p13-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1074,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "9572111609fdbd6c2e4a9329a103dfa377c9dee74367b7a27563c578d86f9794",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 580,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "fd534fe315617dfb1b190cb5cdc0d7ce68d8b7d3ad2a97f494cbfc1c349e3b89",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 629,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "99abb5d12e3cc255e3eb25a09e706dcdcaa23ac4166d70c5b23aa1e42d68292e",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1633,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "e8a0526776ef915540600858eabf13f643e1f168d306e6192297eb9d73595e07",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1514,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "1ff5622509bce8ec9be4a02e37e3dc2994c15f09ab68560787a61347f980b840",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 14,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 935,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "2b9d449f498d4a4725f7f41c89bc2b0991b2701e3f21d543915515fc83cfd6f0",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p14-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1038,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "503fccd2b94bb4c87a3175185946b8d0ccee64789da9e8778b616db6a9b63b0c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 564,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "1463ea61f4928341562d23dfa60a9d5afe4a4bedfe4cc13c17c310842018af2c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 634,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "3d9e77cbc3b473b555e025c50cc1c80800ac5a706a9c1476c39e1efc152e2d2e",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1498,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "4bdf780d988da6afd8469947582187fe17fb96480547ebd4a25e995196d40bd2",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1400,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "a4fa08e4889e3a37313d1aac20515e8e3719e998eae5617af3fc059feacd98fd",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 15,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 897,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "2dab9471254d23b3f279c6898b0c923bf56214a7392ad87b8b7cf2baacaf593b",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p15-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1006,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "8a2dd7a1521caa9e161b6f9f4d11be3d8587b6285393a5078a7ecb59912c7cab",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 561,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "bc61ea1ec33cfec599a35a6b4a7c1eeec308600d23b16ced13ee26048a9849df",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 622,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "c1ced176383ccaf48924448ee1b5039e01c4a6eef9ce06cd108196439de2c392",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1496,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "fffe28e22b54f6fa1827476f677acee410475603b053418ad541b44789f517bb",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1398,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "5a6173bcd46a965a83e6f41b9a599068d59db41ba4445c5df8c289fcb8ae1537",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 16,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 868,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "52829bc24cb2cf18355a2333cafb950e5cb571d8058edfe563edaaa4ec940688",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p16-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1015,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "46b864ccfc6fd15731a50de9b08ce025b7991a81cf1b66bf7b0264124cbe794f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 570,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "c470e25460ccafd6b08531606d98306ad17e281ff2e888690464c0c0108eb3c6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 623,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "a32664ef8055e2e3a7b095d2c4c3bb74972e743414defa8075724f0c17d6e217",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1547,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "9614af14be30fd0bd1cfaba15f70feb311e1a6c781b6e8728e16c438e5da8d2c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1446,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "a45bb3cec099ac0433afedd845c1d61407a2cbd4f43387406ad22ac2d1f42eb7",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 17,
+    "options": {
+      "policy": 1,
+      "frontier": 8,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 872,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "1f3bb104401fd088ca2a362f0a57191362ff5173b3c9d067d7f456b3f61a8ab9",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p17-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1092,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "0badd46a3cc3bc16ddd6078c6bb99086a10d11ffc35c944183d5cde36e5d9241",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 565,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "0439c2105b0003e3d798d124c09c98db32b5f35a71f9f8241b611cbcd046cd0a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 626,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "87f12ddd858c259c6f533bbd4a05d918e6bbd57ba1592bd19a97d8f3cff23e12",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1538,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "6595a003966bc9ff6f9dbd0af5591a6cec887abfeee05022eda7aa672369c9fd",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1427,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "ccb2a91b0cfa5f055d3ef95ff2f383866cc090cb37e261820d0b1724e59bfb1b",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 18,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 891,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "9281c5df7b3e984f6bf60ec0cd4ebcfa346c8ae8135fb2661bf37c5819d0ce2d",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p18-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1072,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "ed6a274bcb832d00c41ea05724a0384f3f8fcb3fa2bc94c0a9186f60a4de7ab0",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 564,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "f200b8dd19e7be134cfba59f2429f1eeded69daaa1c3008583f33c2fe1a8001a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 617,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "2a818b882cf8457ac6f50bf87cf5722eb02a532a3d42afe1a87dd3b835378d80",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1545,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "c6296280ab2128f1703a8ea3d88eba3c5f60fe5e317c1a221f1b460c77bf07e1",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1434,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "f67d829af93a0dd378c80d1b72e89c9828508373ff0a8da72eee7c2147f5e7a9",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 19,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 869,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "c329c2edb5e1fe2e17b7756c42c08c945ac9e5809153f56403ccce046f419536",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p19-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1088,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "25f34821c39dd380de995e659ce14acb6307ea6173336b1bb99f44592265b9e4",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 574,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "150ca1e5c0d57cca4f37eff4d9bca129278ab3a637978021c32056d95be057c6",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 621,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "72f9ceb7b6bb2bedb195fd7d98fa896af6cad67cc4e2360b97482b8b119086d8",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1596,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "3b7e2c04a69f580974a7a636fdaec340cb90a4611d2f28e6e5ca74f133604fc2",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1483,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "70c3a1932ea37ea8403abadc4608fd4de50f2c342e189f8f9d5af97e33834936",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 20,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 0,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 875,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "6d76ccc2cea4c55fdee19361b59dd260551da313381e980db913ac438f893476",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p20-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1052,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "1030c108e5c6a939fc1d961b2d6998571100ae03e02a30dab152aec008f3d8a8",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 558,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "37f487a038568caea0510d76f4ce9e6d1e9d08b63b6060498708afdcaa1e9eae",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 627,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "9cbbab2642b11378e6bac602550ce90376671a26ca6e8d80317e700f7a635ab3",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1477,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "fca9892e967352991b40ddea4c1a9b784bea84a706f30f37c149a8cd9077bd45",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1380,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "4202078ddb687c21ad720a0f62cc4398f5f9f9ade7e351cda4cc17ed68536b54",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 21,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 1
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 856,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "e9771bbf60ffbed6d13d995ab6cbc1d3b6ff875697c62b41bd8ea8606bce09c5",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p21-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1021,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "7591e791cb845e3c37886b4f2f21ec865a0751631b0d51a0093309dcb1a6feb0",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 556,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "8c3a2b4d898276801eafe4db0697a3c3fd2663f26f4d4bf9bf15152680234a36",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 615,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "678ef20bb6bfccd509834e25f0b742701d81dcb82a1587e9afe24b3c3fbfa490",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1467,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "4108c0693496487d9b32cd553a52f88e55ab69ea2e77a95d88bef3b179f88635",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1374,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "f994eef5a098d1773303902600afb17bce23b31e79615510928e62be96766bcb",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 22,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 2
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 823,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "0b33648010b8cb51713a813dba94974afa60ab9f2f0e55291ea0dd0d43df2c1c",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p22-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1030,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "a33326904d5feaf5ff267c05a0e81d494c83e6ad67f1ad290c0ad39cf06bd239",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 566,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "a3b7a3055c2d238fe136863125d33ad713f9602b7db72bcda2152c89d34a1ba9",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 616,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "5666e88ee3e99a347b782fed8eb14cb6c16d145e2122165cec28f7260aa88ae4",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1507,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "6d5aa7d11d309473b161b855d85acdda576679bb3ca18560ef2d48188a88c011",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1415,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "503d8d439c8e59da771866d1699b9354f117f937631a2c6c71ef601fb4b6d7fa",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 23,
+    "options": {
+      "policy": 1,
+      "frontier": 32,
+      "survival": 1,
+      "start": 3
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 822,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "349cdbeb66a248920fdcbb558379957d3325bce6fe9858757a58b06ca45fdb7a",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p23-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "web2",
+    "length": 2048,
+    "bytes": 1722,
+    "input_sha256": "94def1aba1a63cec62328260e6a42b16f6b38b4171942c69203feb89b05d4cce",
+    "frame_sha256": "4d41f211aff2af398767e7e1c6ddededa171aa2bc67dece5eaf01e75bb617930",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-web2-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "freedict-eval8",
+    "length": 2048,
+    "bytes": 1470,
+    "input_sha256": "8ad83e5baed50e13ed3122824d1f7eced1065e7850c6784dee116e0b5b90bcab",
+    "frame_sha256": "fb82a549c19257c9b75c95de471fcb0d69aa183fddabd726aa9ac64cef7d2685",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-freedict-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "omw-eval8",
+    "length": 2048,
+    "bytes": 1502,
+    "input_sha256": "89113552e8dfba5875caedec5f479fec7098eeb9f1f9286ad36154f89fa3e5c7",
+    "frame_sha256": "f6dfef29c1ebcea4b052df25f9a771638a9cc48887de308edbc0d09858773b80",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-omw-eval8-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "ud-fi-test-form",
+    "length": 2048,
+    "bytes": 1869,
+    "input_sha256": "d2d010a820d2e1ab36adca729af9202747914e00f076d6349d3132e763ec07ae",
+    "frame_sha256": "3c0faf103fd8dfacb049a919a790178b827ab95dcb6bbd0a0f5f8e4d560bba24",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-ud-fi-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "ud-tr-test-form",
+    "length": 2048,
+    "bytes": 1858,
+    "input_sha256": "c762a9ca330b70a4c3a939465e559b2140ec5f16b3564ebcde8ce11217e06c7d",
+    "frame_sha256": "fe9306448e75d52c94b8e94b3a04b95802ffa9df4c8d0c2f1b3f0ecc8003ab1f",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-ud-tr-test-form-2048.scm",
+    "roundtrip": true
+  },
+  {
+    "policy_index": 24,
+    "options": {
+      "policy": 0,
+      "frontier": 8,
+      "survival": 0,
+      "start": 0
+    },
+    "name": "ud-ar-test-form",
+    "length": 2048,
+    "bytes": 1687,
+    "input_sha256": "f28bf9dcf7a2b8a88b1c0a60af6ffa86dbc984d98e422e71b1479dc56cefb1d4",
+    "frame_sha256": "2671748a0a9cce4ccfc331201aba2681ad45bbb9084b47a451eae8ef0306b300",
+    "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/surface_copy/runs/screen/p24-ud-ar-test-form-2048.scm",
+    "roundtrip": true
+  }
+]

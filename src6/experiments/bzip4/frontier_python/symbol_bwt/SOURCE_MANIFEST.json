@@ -1,0 +1,110 @@
+{
+  "schema": "symbol-bwt-source-manifest-1",
+  "purpose": "Exact implementation inputs and raw screen evidence; no external decoder state.",
+  "working_tree": "/Users/mileswirht/Downloads/dictionary",
+  "python": "3.14.7",
+  "implementation": [
+    {
+      "path": "src6/experiments/bzip4/frontier_python/symbol_bwt/codec.py",
+      "role": "new pure-Python SBW1 codec and decoder",
+      "sha256": "7fd9c43f1f291522a0e23a2c807888c5fd8639e05249c0874442eed74bdff638"
+    },
+    {
+      "path": "src6/experiments/bzip4/frontier_python/symbol_bwt/worker.py",
+      "role": "captured size-screen child",
+      "sha256": "48d2903f904b55f2e5f6bb358da2823a751b12be0a217410b1ddb9ffe4e53393"
+    },
+    {
+      "path": "src6/experiments/bzip4/frontier_python/symbol_bwt/screen.py",
+      "role": "raw subprocess capture and ledger driver",
+      "sha256": "a902666d42dd3f5a9639cc911f4f79fd5464f947152b906304dfa1ab4d4376c8"
+    }
+  ],
+  "read_only_dependencies": [
+    {
+      "path": "src6/experiments/bzip4/frontier_python/grammar/grammar.py",
+      "role": "pair grammar builder, model serialization, bounded flat expansions, root tokenization",
+      "sha256": "871efc235a9726aadf6730733c4459b8930dad9acd0896610d0cd0725746ccdc"
+    },
+    {
+      "path": "src6/experiments/bzip4/frontier_python/bwt_context/codec.py",
+      "role": "audited prior BWT/MTF/RUNA implementation and wire/bounds reference; not imported by SBW1",
+      "sha256": "ad20998c88df51a42b17ca1f1a9f587cc1f6bee6aae3efa352047c3ebd64addd"
+    },
+    {
+      "path": "src6/experiments/bzip4/frontier_python/protocol/capture.py",
+      "role": "stdout/stderr/status capture before JSON parsing",
+      "sha256": "1219a990d40bae7060580428e1608f7b561fbc89fa4029b412074f561717a5e8"
+    }
+  ],
+  "screen_evidence": [
+    {
+      "ledger": "results/size-screen-consistent-r8192-p24.json",
+      "raw_directory": "results/raw/size-screen-consistent-r8192-p24",
+      "configuration": "input-derived consistent pair grammar, max_rules=8192, max_passes=24, 262144-byte screen, 16384/65536 raw blocks",
+      "code_sha256": "c6146279b3260cc5269a24acc4a8ce0a7ceffed814d55aed44a593f421534a24",
+      "note": "pre-frame-save/pre-parser-bound hardening capture; complete bytes are unchanged by the later safety-only edits"
+    },
+    {
+      "ledger": "results/size-screen-overlap-r8192-p24.json",
+      "raw_directory": "results/raw/size-screen-overlap-r8192-p24",
+      "configuration": "input-derived overlap_greedy grammar ablation, max_rules=8192, max_passes=24, same six cells",
+      "code_sha256": "c6146279b3260cc5269a24acc4a8ce0a7ceffed814d55aed44a593f421534a24",
+      "note": "pre-frame-save/pre-parser-bound hardening capture; retained rejected ablation"
+    },
+    {
+      "ledger": "results/first-freedict-16-v2.json",
+      "raw_directory": "results/raw/first-freedict-16-v2",
+      "configuration": "first captured FreeDict consistent 16 KiB row; retained independently",
+      "code_sha256": "f32ef40a242d7b1ee1f932ea60bcb14098fc8c3133257f1e8c86c654d7ad068f",
+      "note": "size promotion started before parser-bound and encode block-count hardening; frame is retained, and final serial harness must use current source"
+    },
+    {
+      "ledger": "results/first-freedict-16.json",
+      "raw_directory": "results/raw/first-freedict-16",
+      "configuration": "early failed import capture retained; stderr/status are evidence of the transient packaging error",
+      "status": "failed-before-codec-execution"
+    },
+    {
+      "ledger": "results/final-size-freedict16-r8192-p64-consistent.json",
+      "raw_directory": "results/raw/final-freedict16-r8192-p64-consistent",
+      "frame_directory": "results/frames/final-r8192-p64-consistent",
+      "configuration": "authorized size-only full [1,9 MiB) FreeDict 16 KiB child; pre-final safety hardening",
+      "code_sha256": "f32ef40a242d7b1ee1f932ea60bcb14098fc8c3133257f1e8c86c654d7ad068f"
+    },
+    {
+      "ledger": "results/final-size-gcide-r8192-p64-consistent-v2.json",
+      "raw_directory": "results/raw/final-gcide-r8192-p64-consistent-v2",
+      "frame_directory": "results/frames/final-r8192-p64-consistent-v2",
+      "configuration": "authorized size-only full [1,9 MiB) GCIDE 16/64 KiB child; before encode block-count guard",
+      "code_sha256": "86b9237c1b8f0978e1c259c229dab886a7b2238bcdc155c0c9bac78bf37276ba"
+    },
+    {
+      "ledger": null,
+      "raw_directory": "results/raw/final-r8192-p64-consistent",
+      "frame_directory": "results/frames/final-r8192-p64-consistent",
+      "configuration": "full six-cell size-only run; aggregate parent JSON was interrupted after raw child files were written, so child stdout/status files are authoritative",
+      "cells": {
+        "freedict-eng-spa-16384": "f32ef40a242d7b1ee1f932ea60bcb14098fc8c3133257f1e8c86c654d7ad068f",
+        "freedict-eng-spa-65536": "86b9237c1b8f0978e1c259c229dab886a7b2238bcdc155c0c9bac78bf37276ba",
+        "gcide-054-16384": "86b9237c1b8f0978e1c259c229dab886a7b2238bcdc155c0c9bac78bf37276ba",
+        "gcide-054-65536": "86b9237c1b8f0978e1c259c229dab886a7b2238bcdc155c0c9bac78bf37276ba",
+        "omw-ja-20-16384": "027da4ad1fda9557afede2f7f482c8a5233f9bc123ea314fd14f40ceaaaf7fce",
+        "omw-ja-20-65536": "027da4ad1fda9557afede2f7f482c8a5233f9bc123ea314fd14f40ceaaaf7fce"
+      }
+    }
+  ],
+  "input_protocol": {
+    "projection_fields": "field three hex concatenated in source order",
+    "training_range": "[0, 1048576)",
+    "screen_range": "[1048576, 1310720)",
+    "source_manifest": "src6/bench/real-world/evidence/corpora/manifest.json",
+    "control": "protocol.bzip3_control with matched complete framing; timing disabled"
+  },
+  "current_code_sha256": "027da4ad1fda9557afede2f7f482c8a5233f9bc123ea314fd14f40ceaaaf7fce",
+  "prior_art_urls": [
+    "https://www.cs.helsinki.fi/u/tpkarkka/publications/spire2012.pdf",
+    "https://doi.org/10.1016/j.ipm.2004.08.009",
+    "https://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure",
+    "-p",
+    "test_bwt_review.py",
+    "-v"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 278159500,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 1278,
+    "sha256": "8a5446527845c5161e8fb3c17d9236f57759dc8a299d3ab505b70e22f971414b"
+  },
+  "stdout_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/bwt-review/bwt-review-tests-v2.stdout.bin",
+  "stderr_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/bwt-review/bwt-review-tests-v2.stderr.bin",
+  "status_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/bwt-review/bwt-review-tests-v2.status.json"
+}

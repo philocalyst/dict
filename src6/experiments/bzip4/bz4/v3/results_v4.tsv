@@ -1,0 +1,13 @@
+m_freedict.eval8.16384.b4sd	classes=64	total=573985	header=12416	delta=83300	payload=471966	framing=6303	buckets=713	blocks=512	encode_ms=7499	decode_MBps=539	x8=1100
+m_gcide.eval8.16384.b4sd	classes=128	total=1286217	header=28836	delta=149497	payload=1101421	framing=6463	buckets=1428	blocks=512	encode_ms=17077	decode_MBps=224	x8=469
+m_omw.eval8.16384.b4sd	classes=64	total=340823	header=10828	delta=152529	payload=171392	framing=6074	buckets=688	blocks=512	encode_ms=5095	decode_MBps=687	x8=989
+m_freedict.eval8.65536.b4sd	classes=64	total=564416	header=12467	delta=82331	payload=467922	framing=1696	buckets=714	blocks=128	encode_ms=7477	decode_MBps=587	x8=1314
+m_gcide.eval8.65536.b4sd	classes=128	total=1276838	header=29489	delta=149040	payload=1096573	framing=1736	buckets=1417	blocks=128	encode_ms=16767	decode_MBps=242	x8=512
+m_omw.eval8.65536.b4sd	classes=64	total=330148	header=10512	delta=148211	payload=169701	framing=1724	buckets=665	blocks=128	encode_ms=4976	decode_MBps=787	x8=1199
+m_freedict.untouched.65536.b4sd	classes=16	total=88811	header=2294	delta=11953	payload=74344	framing=220	buckets=183	blocks=16	encode_ms=336	decode_MBps=771	x8=1277
+m_gcide.untouched.65536.b4sd	classes=32	total=192005	header=5498	delta=29098	payload=157183	framing=226	buckets=340	blocks=16	encode_ms=1427	decode_MBps=289	x8=534
+m_omw.untouched.65536.b4sd	classes=16	total=63575	header=2005	delta=23846	payload=37496	framing=228	buckets=158	blocks=16	encode_ms=288	decode_MBps=838	x8=997
+m_json.eval8.65536.b4sd	classes=32	total=961555	header=3215	delta=22698	payload=934067	framing=1575	buckets=270	blocks=128	encode_ms=3258	decode_MBps=401	x8=1764
+m_macho.eval8.65536.b4sd	classes=128	total=2597654	header=36051	delta=476806	payload=2082911	framing=1886	buckets=1396	blocks=128	encode_ms=32336	decode_MBps=145	x8=316
+m_zigsrc.eval8.65536.b4sd	classes=128	total=1093818	header=29762	delta=296692	payload=765563	framing=1801	buckets=1407	blocks=128	encode_ms=13981	decode_MBps=267	x8=421
+words.b4sd	classes=32	total=538481	header=3565	delta=529973	payload=4372	framing=571	buckets=390	blocks=39	encode_ms=3443	decode_MBps=83	x8=91

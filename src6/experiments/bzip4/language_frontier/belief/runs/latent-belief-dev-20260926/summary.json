@@ -1,0 +1,90 @@
+{
+  "candidates": {
+    "k2-balanced": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1645130.670627323,
+      "compiled_bpb": 5.5783781963003305,
+      "frame_bpb": 6.109402126736111,
+      "frame_bytes": 225217,
+      "frame_vs_bzip3": 3.8898253855852434,
+      "frame_vs_v4": 3.1451374148139872,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1372483.1525814326,
+      "teacher_bpb": 4.653873537127796,
+      "v4_bytes": 71608
+    },
+    "k2-observed": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1633456.6003928357,
+      "compiled_bpb": 5.538793268476141,
+      "frame_bpb": 6.069797092013889,
+      "frame_bytes": 223757,
+      "frame_vs_bzip3": 3.864609060605537,
+      "frame_vs_v4": 3.124748631437828,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1372483.1525814326,
+      "teacher_bpb": 4.653873537127796,
+      "v4_bytes": 71608
+    },
+    "k4-balanced": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1816992.6577887686,
+      "compiled_bpb": 6.161135042957793,
+      "frame_bpb": 7.194959852430555,
+      "frame_bytes": 265235,
+      "frame_vs_bzip3": 4.580994490405707,
+      "frame_vs_v4": 3.7039855882024355,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1288546.2706729344,
+      "teacher_bpb": 4.36925683143763,
+      "v4_bytes": 71608
+    },
+    "k4-observed": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1824705.108691992,
+      "compiled_bpb": 6.187286745510498,
+      "frame_bpb": 7.221001519097222,
+      "frame_bytes": 266195,
+      "frame_vs_bzip3": 4.597575087652636,
+      "frame_vs_v4": 3.7173919115182663,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1288546.2706729344,
+      "teacher_bpb": 4.36925683143763,
+      "v4_bytes": 71608
+    },
+    "k8-balanced": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1858182.7525403877,
+      "compiled_bpb": 6.300804146797647,
+      "frame_bpb": 8.340576171875,
+      "frame_bytes": 307467,
+      "frame_vs_bzip3": 5.310402597626902,
+      "frame_vs_v4": 4.293752094738018,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1256602.9403967261,
+      "teacher_bpb": 4.260942045073534,
+      "v4_bytes": 71608
+    },
+    "k8-observed": {
+      "bzip3_bytes": 57899,
+      "compiled_bits": 1854624.2672323734,
+      "compiled_bpb": 6.288737885309426,
+      "frame_bpb": 8.328369140625,
+      "frame_bytes": 307017,
+      "frame_vs_bzip3": 5.302630442667404,
+      "frame_vs_v4": 4.287467880683723,
+      "input_bytes": 294912,
+      "rows": 9,
+      "teacher_bits": 1256602.9403967261,
+      "teacher_bpb": 4.260942045073534,
+      "v4_bytes": 71608
+    }
+  },
+  "cases": 9,
+  "phase": "dev"
+}

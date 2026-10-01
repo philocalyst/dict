@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "src6/experiments/bzip4/frontier_python/lead_review/dag_utility_probe.py"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 1631521750,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 899,
+    "sha256": "b05de99397e45155acd9986e1fc2567495042dffdb749190a097866592a4b4d3"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/dag-utility-1.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/dag-utility-1.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/dag-utility-1.status.json"
+}

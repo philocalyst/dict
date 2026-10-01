@@ -1,0 +1,13 @@
+  rows=323 cells=1422 KiB, rows by log 5..13: { 10, 10, 59, 96, 83, 26, 39, 0, 0 }
+  init_ms=2.09 deltas_ms=4.22 payloads_ms=4.47 (27.3 ns/token, 163742 tokens)
+m_omw.eval8.65536.b4sd	classes=64	total=330148	header=10512	delta=148211	payload=169701	framing=1724	buckets=665	blocks=128	encode_ms=5019	decode_MBps=771	x1=790
+     delta        use events=    73095 coded=  3.69 raw=  3.92 bits/event  bytes=69454
+     delta       past events=    33627 coded=  4.04 raw=  2.73 bits/event  bytes=28475
+     delta        def events=    10997 coded=  3.49 raw=  0.00 bits/event  bytes=4802
+     delta      arity events=    22466 coded=  2.50 raw=  0.00 bits/event  bytes=7017
+     delta       name events=    22466 coded=  2.40 raw=  0.00 bits/event  bytes=6750
+     delta     silent events=    57930 coded=  4.34 raw=  0.00 bits/event  bytes=31458
+   payload        use events=    98875 coded=  3.80 raw=  3.55 bits/event  bytes=90742
+   payload       past events=    53398 coded=  3.44 raw=  2.56 bits/event  bytes=40079
+   payload        def events=    11469 coded=  3.40 raw=  0.00 bits/event  bytes=4879
+   payload     silent events=    48046 coded=  5.62 raw=  0.00 bits/event  bytes=33739

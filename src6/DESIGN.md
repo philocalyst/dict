@@ -47,6 +47,28 @@ Direct field projections use that same context operation, including for tagged
 lexical and inline values; choosing a different query surface cannot change a
 language declaration.
 
+Rich structural queries and admission additionally share `nodes.Cursor(Root)`.
+It derives child traversal from actual fields, active union payloads, slices,
+optionals, and single-item ownership pointers. One derived metadata-owner rule
+serves both identity collection and public resolution: admitting a Feature or
+Representation identity cannot omit it from the resolver. Structural ancestry
+borrows an iterator; resolved pointers borrow only the document. The smaller
+Item/Inline cursor remains the fast path for rendering and ordinary senses.
+
+Relations select binary or n-ary endpoints with a tagged union. Value identity
+is expressed by a named `SharedValue`, independent of equality; define it once
+and use Reference to reuse it. Pointer edges are ownership edges encoded by
+value, never persisted process addresses or implicit graph aliases. Packet
+version 2 makes these changed semantics explicit.
+
+The optional Reader session owns a single decoded page, derived packet offsets,
+and shared source bounds. It does not own returned documents. Logical entry
+links use an explicitly prepared in-memory catalog, leaving the on-disk hot
+spelling index unchanged. This chooses transparent preparation cost over hidden
+first-follow scans or another always-stored identity table; it is not a claim
+that link readiness is cheap. A workload needing instant link readiness may
+justify a separately measured persisted catalog later.
+
 This is deliberately not a promise that entry-local data always beats columns.
 Batch analytics may prefer columns; cold decompression has a real first-read
 cost. Both storage and cold/warm query costs must be measured independently.
@@ -99,5 +121,6 @@ assertion of complete XML/RDF importer or exporter conformance.
 
 Only src6, its new build6 wiring and new benchmark/review artifacts are in
 scope. Existing implementations and their benchmark evidence remain intact.
-This version is not promoted as a replacement until its complete comparison
-and interoperability gates are evidenced.
+This version is not promoted as a replacement until its complete performance
+and native semantic-capability comparisons are evidenced. XML/RDF interchange
+conformance is a separate concern, not the definition of native richness.

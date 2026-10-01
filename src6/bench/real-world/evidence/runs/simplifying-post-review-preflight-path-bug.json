@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "status": "preflight-rejected-no-timing",
+  "purpose": "Retain the one attempted launch that was rejected before collection.",
+  "attempted_command": "python3 simplifying_measure.py --quiet-gate ROOT-EXPLICIT-QUIET-GATE",
+  "error": "missing retained file: src6/bench/real-world/evidence/baselines/real-lex6-post-review-original",
+  "cause": "The manifest stores the preserved runner path relative to repository root; the first wrapper version resolved it relative to the benchmark directory.",
+  "child_processes_launched": 0,
+  "clocked_samples_collected": 0,
+  "correction": "Resolve relative preserved-runner paths against repository root before preflight hash verification.",
+  "corrected_run": "evidence/runs/simplifying-post-review-timing.json",
+  "note": "This was a preflight path error, not a timed sample, and no sample was retried or discarded."
+}

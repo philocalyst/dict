@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/model_budget_profile.py",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1",
+    "--streams-dir",
+    "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 104526125,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 12519,
+    "sha256": "09661c89cbc6dfa1b95cc431d624e2e9046fbe8e7186d199ef539aa75da41c53"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/model_budget_profile.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/model_budget_profile.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/model_budget_profile.status.json"
+}

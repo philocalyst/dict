@@ -1,0 +1,549 @@
+{
+  "baseline_bzip3": {
+    "binary": {
+      "bytes": 484328,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "sha256": "02604a561c64eb640a71cca0b1e8944dc7d103b898b2d13d9f0b4edd346d4c44"
+    },
+    "codec": "bzip3-control",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/bin/bz3base",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/dev.target.bin",
+      "65536",
+      "1"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/bzip3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 56,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/bzip3.stdout",
+      "sha256": "811d7de003344e028e4194bc21a2dda5699a1dbd7e74a7953745887ad31752ea"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "input": "dev.target.bin",
+      "payload": 5886,
+      "total": 5934
+    }
+  },
+  "baseline_v4": {
+    "binary": {
+      "bytes": 550240,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "sha256": "0a566e101fabcd0bccd3bd95eac265f6c9dbf288819601e4e9b7f35536708c83"
+    },
+    "codec": "bz4-v4-end-to-end",
+    "command": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/bin/capture_frame",
+      "raw",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/dev.target.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.b4",
+      "65536"
+    ],
+    "external_decode": {
+      "command": [
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "d",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.b4",
+        "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.external-decoded.bin",
+        "1"
+      ],
+      "output": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.external-decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.decode.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.decode.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "frame": {
+      "bytes": 7274,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.b4",
+      "sha256": "38cfc4dbb499700bece74e3ad4404446c779f6fb73e349b4b60c3b1987aedd10"
+    },
+    "ok": true,
+    "returncode": 0,
+    "stderr": {
+      "bytes": 120,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.encode.stderr",
+      "sha256": "a769f903887060233ebc289084d8f9dc0bf0bf28e4aea5356736b77490ab1361"
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/v4.encode.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "storage": {
+      "block_bytes": 65536,
+      "blocks": 1,
+      "classes": 0,
+      "delta": 2507,
+      "framing": 21,
+      "header": 284,
+      "payload": 4462,
+      "raw_len": 16384,
+      "total": 7274
+    }
+  },
+  "candidates": [
+    {
+      "bzip3_frame_ratio": 2.021570610043815,
+      "case": "ud-tr-test-form",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 78905.22870813111,
+      "compiled_cross_entropy_bps": 4.815992963142768,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 11996,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-observed.lbel",
+        "sha256": "13b7fc45e62d8334cb41ee0245cb070174b7eebdfc62de16d69f9ff7a6342103"
+      },
+      "frame_bits_per_input_byte": 5.857421875,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 2126,
+        "output": 16384,
+        "payload": 9866,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 2060
+      },
+      "frame_bytes": 11996,
+      "frame_sha256": "13b7fc45e62d8334cb41ee0245cb070174b7eebdfc62de16d69f9ff7a6342103",
+      "k_compiled": 2,
+      "k_teacher": 2,
+      "model_table_sha256": "24db67a8f16b57f206b6e5f411237f67079c253cf4e5691708b60d8ac53d909c",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 11691,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k2.json",
+        "sha256": "0b22ecb6c712ed0e1693a0c4d7984990d86c9cb25cff6d3d6e4e0f60d786db17"
+      },
+      "teacher_cross_entropy_bits": 77485.92865711439,
+      "teacher_cross_entropy_bps": 4.729365762763329,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 1.6491613967555678
+    },
+    {
+      "bzip3_frame_ratio": 2.0069093360296595,
+      "case": "ud-tr-test-form",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 78212.10209782161,
+      "compiled_cross_entropy_bps": 4.773687872181495,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 11909,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k2-balanced.lbel",
+        "sha256": "5d8d2d7acba01e46d9be9c827554cfe25cf80e70adfe570e0cb5a576685afae1"
+      },
+      "frame_bits_per_input_byte": 5.81494140625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 2126,
+        "output": 16384,
+        "payload": 9779,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 2060
+      },
+      "frame_bytes": 11909,
+      "frame_sha256": "5d8d2d7acba01e46d9be9c827554cfe25cf80e70adfe570e0cb5a576685afae1",
+      "k_compiled": 2,
+      "k_teacher": 2,
+      "model_table_sha256": "cd8fc128035490bc54bc821d0b896f5802df1473a763d96420f9e075aa0f53ec",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 11691,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k2.json",
+        "sha256": "0b22ecb6c712ed0e1693a0c4d7984990d86c9cb25cff6d3d6e4e0f60d786db17"
+      },
+      "teacher_cross_entropy_bits": 77485.92865711439,
+      "teacher_cross_entropy_bps": 4.729365762763329,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 1.6372009898267803
+    },
+    {
+      "bzip3_frame_ratio": 2.9833164812942368,
+      "case": "ud-tr-test-form",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 108093.48825004335,
+      "compiled_cross_entropy_bps": 6.597502944948935,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 17703,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-observed.lbel",
+        "sha256": "0091be22138ce0f588690719b2b5a6f60d68b9a89f0511d22b30fe458b91f574"
+      },
+      "frame_bits_per_input_byte": 8.64404296875,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 4186,
+        "output": 16384,
+        "payload": 13513,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 4120
+      },
+      "frame_bytes": 17703,
+      "frame_sha256": "0091be22138ce0f588690719b2b5a6f60d68b9a89f0511d22b30fe458b91f574",
+      "k_compiled": 4,
+      "k_teacher": 4,
+      "model_table_sha256": "8b68dde92370f06399f1e97c190a33691db977a09c28d11ffa16279f7f1a95a2",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 23424,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k4.json",
+        "sha256": "9fbdef588ea748bd6ffe20508afeb8a77c06142814b78b88eeb92ba09c3f4c78"
+      },
+      "teacher_cross_entropy_bits": 74296.05662621207,
+      "teacher_cross_entropy_bps": 4.5346714249397015,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 2.433736596095683
+    },
+    {
+      "bzip3_frame_ratio": 2.9833164812942368,
+      "case": "ud-tr-test-form",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 108093.48825004335,
+      "compiled_cross_entropy_bps": 6.597502944948935,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 17703,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k4-balanced.lbel",
+        "sha256": "1041e39b48ef67c98590c93ce6a92c671e42c169772f76fdaaa48be867316cd6"
+      },
+      "frame_bits_per_input_byte": 8.64404296875,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 4186,
+        "output": 16384,
+        "payload": 13513,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 4120
+      },
+      "frame_bytes": 17703,
+      "frame_sha256": "1041e39b48ef67c98590c93ce6a92c671e42c169772f76fdaaa48be867316cd6",
+      "k_compiled": 4,
+      "k_teacher": 4,
+      "model_table_sha256": "fde2721c1d250317043587e36e4bbb6b03f3aa2d65bc0c22303c5fc19bb5cf7e",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 23424,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k4.json",
+        "sha256": "9fbdef588ea748bd6ffe20508afeb8a77c06142814b78b88eeb92ba09c3f4c78"
+      },
+      "teacher_cross_entropy_bits": 74296.05662621207,
+      "teacher_cross_entropy_bps": 4.5346714249397015,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 2.433736596095683
+    },
+    {
+      "bzip3_frame_ratio": 3.25530839231547,
+      "case": "ud-tr-test-form",
+      "clustering": "observed",
+      "compiled_cross_entropy_bits": 88041.3663364378,
+      "compiled_cross_entropy_bps": 5.373618550807971,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 19317,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-observed.lbel",
+        "sha256": "9b8f29e6fe400caf3effa6ee3e18e27f6942e818bf79e4f31692f5da0ce069e6"
+      },
+      "frame_bits_per_input_byte": 9.43212890625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 8306,
+        "output": 16384,
+        "payload": 11007,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 8240
+      },
+      "frame_bytes": 19317,
+      "frame_sha256": "9b8f29e6fe400caf3effa6ee3e18e27f6942e818bf79e4f31692f5da0ce069e6",
+      "k_compiled": 8,
+      "k_teacher": 8,
+      "model_table_sha256": "2e1e216f5df2ff6d206111b3da8f58da6a5ffba4a84404f5fe3c907e37b27fe3",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 46715,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k8.json",
+        "sha256": "cd53210b68da915e498914a9de55e7bec8af8eff09b71a0c6b492d7c3dd0ddc8"
+      },
+      "teacher_cross_entropy_bits": 72138.82739008097,
+      "teacher_cross_entropy_bps": 4.403004601445372,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 2.6556227660159473
+    },
+    {
+      "bzip3_frame_ratio": 3.1204920795416244,
+      "case": "ud-tr-test-form",
+      "clustering": "balanced",
+      "compiled_cross_entropy_bits": 81633.12199164675,
+      "compiled_cross_entropy_bps": 4.982490355935471,
+      "decoded": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.decoded.bin",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "external_decode": {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/decode_verify.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.lbel",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.decoded.bin"
+        ],
+        "returncode": 0,
+        "stderr": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.decode.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.decode.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "frame": {
+        "bytes": 18517,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/lbel-k8-balanced.lbel",
+        "sha256": "8ddca1c1532b3f105f0f57d2ed3cf45df9b8e7215d730763edc65e8462630a8c"
+      },
+      "frame_bits_per_input_byte": 9.04150390625,
+      "frame_breakdown": {
+        "checksum": 4,
+        "header": 8306,
+        "output": 16384,
+        "payload": 10207,
+        "restart_records": 40,
+        "segments": 4,
+        "tables": 8240
+      },
+      "frame_bytes": 18517,
+      "frame_sha256": "8ddca1c1532b3f105f0f57d2ed3cf45df9b8e7215d730763edc65e8462630a8c",
+      "k_compiled": 8,
+      "k_teacher": 8,
+      "model_table_sha256": "0979c58e00d3786596e1e90e994f98510da5e515ed3f765bf3fa80b4838ea296",
+      "round_trip": true,
+      "split": "dev",
+      "target": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+      },
+      "teacher_artifact": {
+        "bytes": 46715,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/belief/runs/latent-belief-dev-20260926/ud-tr-test-form/teacher-k8.json",
+        "sha256": "cd53210b68da915e498914a9de55e7bec8af8eff09b71a0c6b492d7c3dd0ddc8"
+      },
+      "teacher_cross_entropy_bits": 72138.82739008097,
+      "teacher_cross_entropy_bps": 4.403004601445372,
+      "teacher_params_in_frame": false,
+      "train": {
+        "bytes": 16384,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+      },
+      "v4_frame_ratio": 2.545642012647787
+    }
+  ],
+  "case": "ud-tr-test-form",
+  "phase": "dev",
+  "target": {
+    "bytes": 16384,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+    "sha256": "ea49607dc660d814a004f163dd2b07820e2519df4b798d4f05681c98d432dc9c"
+  },
+  "train": {
+    "bytes": 16384,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+    "sha256": "c1a0e79c59736e97420723e9d706b7c9b679f9b5586d36b31ebe1dc7b40e8367"
+  }
+}

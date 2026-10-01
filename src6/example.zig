@@ -24,10 +24,12 @@ fn show(allocator: std.mem.Allocator, writer: *std.Io.Writer) !void {
     var file = try lex.archive.build(allocator, .{ .entries = &entries }, .{});
     defer file.deinit();
     const dictionary = try lex.archive.Archive.open(file.bytes, .{});
+    var reader = try lex.archive.Reader.init(allocator, &dictionary, .{});
+    defer reader.deinit();
 
     var matches = try dictionary.lookup("bank");
     while (try matches.next()) |hit| {
-        var loaded = try dictionary.load(allocator, hit.entry);
+        var loaded = try reader.load(hit.entry);
         defer loaded.deinit();
         var senses = lex.query.entry(&loaded.value).select(.sense, .children);
         while (try senses.next()) |sense| {

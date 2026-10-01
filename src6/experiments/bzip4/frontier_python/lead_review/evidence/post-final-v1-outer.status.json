@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "src6/experiments/bzip4/frontier_python/lead_review/post_analysis.py",
+    "src6/experiments/bzip4/frontier_python/evidence/controls/final-v1",
+    "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 89254325542,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 112,
+    "sha256": "749dc252de6173acaa953481b62d2ec43d4f4fd035988e50585f88beea64ec1a"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1-outer.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1-outer.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1-outer.status.json"
+}

@@ -1,0 +1,720 @@
+<LexicalEntry id="omw-ja-可能-a">
+      <Lemma writtenForm="可能" partOfSpeech="a" />
+      <Sense id="omw-ja-可能-00001740-a" synset="omw-ja-00001740-a" />
+      <Sense id="omw-ja-可能-00051373-a" synset="omw-ja-00051373-a" />
+      <Sense id="omw-ja-可能-00306314-a" synset="omw-ja-00306314-a" />
+      <Sense id="omw-ja-可能-01821266-a" synset="omw-ja-01821266-a" />
+      <Sense id="omw-ja-可能-01822563-a" synset="omw-ja-01822563-a" />
+      <Sense id="omw-ja-可能-01835663-a" synset="omw-ja-01835663-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-a" ili="i1" partOfSpeech="a" members="omw-ja-可能-00001740-a">
+      <Definition>何かをするのに必要な方法、技能またはノウハウまたは権利を持っている</Definition>
+      <Example>泳ぐことができる</Example>
+      <Example>彼女はコンピュータをプログラムできた</Example>
+      <Example>私たちはやっと車を買うことができた</Example>
+      <Example>プロジェクトのために補助金を得ることができる</Example>
+    </Synset>
+    <Synset id="omw-ja-00051373-a" ili="i265" partOfSpeech="a" members="omw-ja-可能-00051373-a omw-ja-能力のある-00051373-a omw-ja-適切-00051373-a omw-ja-適当-00051373-a">
+      <Definition>必要な品質を持っている</Definition>
+      <Example>その仕事をするだけの力量がある</Example>
+      <Example>その仕事は私が要求する水準に達していない</Example>
+    </Synset><Synset id="omw-ja-00306314-a" ili="i1694" partOfSpeech="a" members="omw-ja-できる-00306314-a omw-ja-可能-00306314-a omw-ja-能力のある-00306314-a">
+      <Definition>力量か能力を持つさま</Definition>
+      <Example>勝つことができる</Example>
+      <Example>きつい仕事ができる</Example>
+      <Example>2フィート歩き続けることができる</Example>
+    </Synset>
+    <Synset id="omw-ja-01821266-a" ili="i10007" partOfSpeech="a" members="omw-ja-ありうる-01821266-a omw-ja-可能-01821266-a">
+      <Definition>起きるまたは存在できる</Definition>
+      <Example>現状打破は来年可能かもしれない</Example>
+      <Example>何でも可能である</Example>
+      <Example>可能性のある結果について警告される</Example>
+    </Synset>
+    <Synset id="omw-ja-01822563-a" ili="i10012" partOfSpeech="a" members="omw-ja-可能-01822563-a omw-ja-実行可能-01822563-a">
+      <Definition>手持ちの手段とその与えられた状況に応じてなされ得る</Definition>
+    </Synset>
+    <Synset id="omw-ja-01835663-a" ili="i10087" partOfSpeech="a" members="omw-ja-可能-01835663-a omw-ja-手術可能-01835663-a">
+      <Definition>ある特定の目的で使用可能である</Definition>
+      <Example>操作可能な計画</Example>
+      <Example>実行可能な解決策</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-実体-n">
+      <Lemma writtenForm="実体" partOfSpeech="n" />
+      <Sense id="omw-ja-実体-00001740-n" synset="omw-ja-00001740-n" />
+      <Sense id="omw-ja-実体-04867130-n" synset="omw-ja-04867130-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-n" ili="i35545" partOfSpeech="n" members="omw-ja-実体-00001740-n">
+      <Definition>（生命がある、あるいは生命がないに関わらず）それ自身の明確な存在を持つと感知される、知られている、あるいは推定される何か</Definition>
+    </Synset>
+    <Synset id="omw-ja-04867130-n" ili="i62563" partOfSpeech="n" members="omw-ja-まじめ-04867130-n omw-ja-丹心-04867130-n omw-ja-丹誠-04867130-n omw-ja-丹赤-04867130-n omw-ja-信-04867130-n omw-ja-信実-04867130-n omw-ja-実-04867130-n omw-ja-実体-04867130-n omw-ja-実意-04867130-n omw-ja-実法-04867130-n omw-ja-実直さ-04867130-n omw-ja-実直-04867130-n omw-ja-忠誠-04867130-n omw-ja-情実-04867130-n omw-ja-本気-04867130-n omw-ja-正直-04867130-n omw-ja-率直さ-04867130-n omw-ja-真-04867130-n omw-ja-真心-04867130-n omw-ja-真情-04867130-n omw-ja-真摯さ-04867130-n omw-ja-真正直-04867130-n omw-ja-真率さ-04867130-n omw-ja-真率-04867130-n omw-ja-真面目-04867130-n omw-ja-篤厚-04867130-n omw-ja-篤実さ-04867130-n omw-ja-篤実-04867130-n omw-ja-至心-04867130-n omw-ja-至情-04867130-n omw-ja-至誠-04867130-n omw-ja-至誠心-04867130-n omw-ja-衷情-04867130-n omw-ja-誠-04867130-n omw-ja-誠実さ-04867130-n omw-ja-誠実-04867130-n omw-ja-誠心-04867130-n omw-ja-誠情-04867130-n omw-ja-誠意-04867130-n omw-ja-赤心-04867130-n omw-ja-赤誠-04867130-n">
+      <Definition>率直で誠実な性質</Definition>
+      <Definition>うそつきでない、または偽善的でない</Definition>
+      <Example>彼の誠意は信頼をもたらした</Example>
+      <Example>彼らは私の誠意に対して何か証しになるものを要求した</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-アカペラで-r">
+      <Lemma writtenForm="アカペラで" partOfSpeech="r" />
+      <Sense id="omw-ja-アカペラで-00001740-r" synset="omw-ja-00001740-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-r" ili="i18157" partOfSpeech="r" members="omw-ja-アカペラで-00001740-r">
+      <Definition>音楽の伴奏なしで</Definition>
+      <Example>彼らはアカペラを行った</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-吐く-v">
+      <Lemma writtenForm="吐く" partOfSpeech="v" />
+      <Sense id="omw-ja-吐く-00001740-v" synset="omw-ja-00001740-v" />
+      <Sense id="omw-ja-吐く-00004605-v" synset="omw-ja-00004605-v" />
+      <Sense id="omw-ja-吐く-00076400-v" synset="omw-ja-00076400-v" />
+      <Sense id="omw-ja-吐く-00102303-v" synset="omw-ja-00102303-v" />
+      <Sense id="omw-ja-吐く-00940384-v" synset="omw-ja-00940384-v" />
+      <Sense id="omw-ja-吐く-00983824-v" synset="omw-ja-00983824-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-v" ili="i21778" partOfSpeech="v" members="omw-ja-吐く-00001740-v omw-ja-呼吸-plus-する-00001740-v omw-ja-息づく-00001740-v omw-ja-息吹く-00001740-v omw-ja-息衝く-00001740-v">
+      <Definition>肺に空気を吸い込みはき出す</Definition>
+      <Example>空気がきれいなら、もっとよく息ができる</Example>
+      <Example>患者は呼吸している</Example>
+    </Synset>
+    <Synset id="omw-ja-00004605-v" ili="i21791" partOfSpeech="v" members="omw-ja-吐く-00004605-v omw-ja-吐き出す-00004605-v">
+      <Definition>（呼吸または匂い）が衰える</Definition>
+      <Example>煙突は、濃い煙を吐き出す</Example>
+    </Synset>
+    <Synset id="omw-ja-00076400-v" ili="i22154" partOfSpeech="v" members="omw-ja-上げる-00076400-v omw-ja-吐きだす-00076400-v omw-ja-吐く-00076400-v omw-ja-吐き出す-00076400-v omw-ja-吐出-plus-する-00076400-v omw-ja-吐出す-00076400-v omw-ja-吐瀉-plus-する-00076400-v omw-ja-嘔げる-00076400-v omw-ja-嘔吐-plus-する-00076400-v omw-ja-嘔吐く-00076400-v omw-ja-戻す-00076400-v">
+      <Definition>口から胃の内容を放出する</Definition>
+      <Example>飲み過ぎた後に、学生は、吐いた</Example>
+      <Example>彼は続けて吐いた</Example>
+      <Example>その患者は、昨晩私達が与えた食物を吐き戻した</Example>
+    </Synset>
+    <Synset id="omw-ja-00102303-v" ili="i22284" partOfSpeech="v" members="omw-ja-吐きすてる-00102303-v omw-ja-吐きちらす-00102303-v omw-ja-吐きだす-00102303-v omw-ja-吐く-00102303-v omw-ja-吐き出す-00102303-v omw-ja-吐出す-00102303-v omw-ja-吐き捨てる-00102303-v omw-ja-吐捨てる-00102303-v omw-ja-吐き散らす-00102303-v omw-ja-吐散らす-00102303-v omw-ja-唾する-00102303-v omw-ja-喀痰-plus-する-00102303-v">
+      <Definition>強烈なさまでつばを吐いた</Definition>
+    </Synset>
+    <Synset id="omw-ja-00940384-v" ili="i26308" partOfSpeech="v" members="omw-ja-おっしゃる-00940384-v omw-ja-いう-00940384-v omw-ja-云う-00940384-v omw-ja-吐く-00940384-v omw-ja-弁じる-00940384-v omw-ja-放く-00940384-v omw-ja-洩らす-00940384-v omw-ja-漏らす-00940384-v omw-ja-発言-plus-する-00940384-v omw-ja-言いあらわす-00940384-v omw-ja-言う-00940384-v omw-ja-言い現す-00940384-v omw-ja-言い表わす-00940384-v omw-ja-言い表す-00940384-v omw-ja-言表わす-00940384-v omw-ja-言表す-00940384-v omw-ja-話す-00940384-v omw-ja-謂う-00940384-v">
+      <Definition>はっきり言う</Definition>
+      <Definition>口頭でまたは叫び、大声または騒音などのどれかで</Definition>
+      <Example>彼女は怒りを表した</Example>
+      <Example>彼は、悪態をついた</Example>
+    </Synset><Synset id="omw-ja-00983824-v" ili="i26505" partOfSpeech="v" members="omw-ja-云う-00983824-v omw-ja-他言-plus-する-00983824-v omw-ja-口ばしる-00983824-v omw-ja-口走る-00983824-v omw-ja-吐く-00983824-v omw-ja-吐露-plus-する-00983824-v omw-ja-吹く-00983824-v omw-ja-噴く-00983824-v omw-ja-放く-00983824-v omw-ja-放つ-00983824-v omw-ja-洩らす-00983824-v omw-ja-洩す-00983824-v omw-ja-漏らす-00983824-v omw-ja-漏す-00983824-v omw-ja-演述-plus-する-00983824-v omw-ja-現わす-00983824-v omw-ja-現す-00983824-v omw-ja-発しる-00983824-v omw-ja-発する-00983824-v omw-ja-発す-00983824-v omw-ja-発語-plus-する-00983824-v omw-ja-表わす-00983824-v omw-ja-表す-00983824-v omw-ja-表出-plus-する-00983824-v omw-ja-言いもらす-00983824-v omw-ja-言う-00983824-v omw-ja-言い洩らす-00983824-v omw-ja-言洩らす-00983824-v omw-ja-言い漏らす-00983824-v omw-ja-言漏らす-00983824-v omw-ja-言い現す-00983824-v omw-ja-言い表わす-00983824-v omw-ja-言い表す-00983824-v omw-ja-言表す-00983824-v omw-ja-述べる-00983824-v omw-ja-陳じる-00983824-v omw-ja-陳ずる-00983824-v omw-ja-飛ばす-00983824-v">
+      <Definition>聞こえるように表現する</Definition>
+      <Definition>音を立てる（必ずしも言葉ではない）</Definition>
+      <Example>彼女は、大きく深いため息をはいた</Example>
+      <Example>彼は、誰も理解することができなかった変な音を発した</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-呼吸-plus-する-v">
+      <Lemma writtenForm="呼吸+する" partOfSpeech="v" />
+      <Sense id="omw-ja-呼吸-plus-する-00001740-v" synset="omw-ja-00001740-v" />
+      <Sense id="omw-ja-呼吸-plus-する-00002325-v" synset="omw-ja-00002325-v" />
+      <Sense id="omw-ja-呼吸-plus-する-00239754-v" synset="omw-ja-00239754-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-v" ili="i21778" partOfSpeech="v" members="omw-ja-吐く-00001740-v omw-ja-呼吸-plus-する-00001740-v omw-ja-息づく-00001740-v omw-ja-息吹く-00001740-v omw-ja-息衝く-00001740-v">
+      <Definition>肺に空気を吸い込みはき出す</Definition>
+      <Example>空気がきれいなら、もっとよく息ができる</Example>
+      <Example>患者は呼吸している</Example>
+    </Synset>
+    <Synset id="omw-ja-00002325-v" ili="i21779" partOfSpeech="v" members="omw-ja-呼吸-plus-する-00002325-v">
+      <Definition>酸素を取り込み、一酸化炭素を生産することにより、呼吸の生医学的、代謝過程を経る</Definition>
+    </Synset>
+    <Synset id="omw-ja-00239754-v" ili="i22916" partOfSpeech="v" members="omw-ja-呼吸-plus-する-00239754-v">
+      <Definition>コルクの栓を抜かれた後に空気を吸収して、たち上らせるように完全な風味に達する</Definition>
+      <Example>この希少なボルドーは、少なくとも2時間は呼吸させなければならない</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-息づく-v">
+      <Lemma writtenForm="息づく" partOfSpeech="v" />
+      <Sense id="omw-ja-息づく-00001740-v" synset="omw-ja-00001740-v" />
+      <Sense id="omw-ja-息づく-00004032-v" synset="omw-ja-00004032-v" />
+      <Sense id="omw-ja-息づく-00006697-v" synset="omw-ja-00006697-v" />
+      <Sense id="omw-ja-息づく-02617083-v" synset="omw-ja-02617083-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-v" ili="i21778" partOfSpeech="v" members="omw-ja-吐く-00001740-v omw-ja-呼吸-plus-する-00001740-v omw-ja-息づく-00001740-v omw-ja-息吹く-00001740-v omw-ja-息衝く-00001740-v">
+      <Definition>肺に空気を吸い込みはき出す</Definition>
+      <Example>空気がきれいなら、もっとよく息ができる</Example>
+      <Example>患者は呼吸している</Example>
+    </Synset>
+    <Synset id="omw-ja-00004032-v" ili="i21788" partOfSpeech="v" members="omw-ja-吐息-plus-する-00004032-v omw-ja-嘆く-00004032-v omw-ja-嘆息-plus-する-00004032-v omw-ja-大息-plus-する-00004032-v omw-ja-太息-plus-する-00004032-v omw-ja-息づく-00004032-v omw-ja-息衝く-00004032-v omw-ja-歎く-00004032-v omw-ja-歎息-plus-する-00004032-v">
+      <Definition>ため息をつくか、ハアと口にする</Definition>
+      <Definition>深く、そして、重く呼吸する</Definition>
+      <Example>彼女は悲しそうにため息をついた</Example>
+    </Synset>
+    <Synset id="omw-ja-00006697-v" ili="i21799" partOfSpeech="v" members="omw-ja-息づく-00006697-v">
+      <Definition>苦しい息をする</Definition>
+    </Synset>
+    <Synset id="omw-ja-02617083-v" ili="i34759" partOfSpeech="v" members="omw-ja-息づく-02617083-v omw-ja-息吹く-02617083-v omw-ja-息衝く-02617083-v">
+      <Definition>生きている</Definition>
+      <Example>呼吸するあらゆる生物</Example>
+    </Synset></synsets><LexicalEntry id="omw-ja-息吹く-v">
+      <Lemma writtenForm="息吹く" partOfSpeech="v" />
+      <Sense id="omw-ja-息吹く-00001740-v" synset="omw-ja-00001740-v" />
+      <Sense id="omw-ja-息吹く-02617083-v" synset="omw-ja-02617083-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-v" ili="i21778" partOfSpeech="v" members="omw-ja-吐く-00001740-v omw-ja-呼吸-plus-する-00001740-v omw-ja-息づく-00001740-v omw-ja-息吹く-00001740-v omw-ja-息衝く-00001740-v">
+      <Definition>肺に空気を吸い込みはき出す</Definition>
+      <Example>空気がきれいなら、もっとよく息ができる</Example>
+      <Example>患者は呼吸している</Example>
+    </Synset>
+    <Synset id="omw-ja-02617083-v" ili="i34759" partOfSpeech="v" members="omw-ja-息づく-02617083-v omw-ja-息吹く-02617083-v omw-ja-息衝く-02617083-v">
+      <Definition>生きている</Definition>
+      <Example>呼吸するあらゆる生物</Example>
+    </Synset></synsets><LexicalEntry id="omw-ja-息衝く-v">
+      <Lemma writtenForm="息衝く" partOfSpeech="v" />
+      <Sense id="omw-ja-息衝く-00001740-v" synset="omw-ja-00001740-v" />
+      <Sense id="omw-ja-息衝く-00004032-v" synset="omw-ja-00004032-v" />
+      <Sense id="omw-ja-息衝く-02617083-v" synset="omw-ja-02617083-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001740-v" ili="i21778" partOfSpeech="v" members="omw-ja-吐く-00001740-v omw-ja-呼吸-plus-する-00001740-v omw-ja-息づく-00001740-v omw-ja-息吹く-00001740-v omw-ja-息衝く-00001740-v">
+      <Definition>肺に空気を吸い込みはき出す</Definition>
+      <Example>空気がきれいなら、もっとよく息ができる</Example>
+      <Example>患者は呼吸している</Example>
+    </Synset>
+    <Synset id="omw-ja-00004032-v" ili="i21788" partOfSpeech="v" members="omw-ja-吐息-plus-する-00004032-v omw-ja-嘆く-00004032-v omw-ja-嘆息-plus-する-00004032-v omw-ja-大息-plus-する-00004032-v omw-ja-太息-plus-する-00004032-v omw-ja-息づく-00004032-v omw-ja-息衝く-00004032-v omw-ja-歎く-00004032-v omw-ja-歎息-plus-する-00004032-v">
+      <Definition>ため息をつくか、ハアと口にする</Definition>
+      <Definition>深く、そして、重く呼吸する</Definition>
+      <Example>彼女は悲しそうにため息をついた</Example>
+    </Synset>
+    <Synset id="omw-ja-02617083-v" ili="i34759" partOfSpeech="v" members="omw-ja-息づく-02617083-v omw-ja-息吹く-02617083-v omw-ja-息衝く-02617083-v">
+      <Definition>生きている</Definition>
+      <Example>呼吸するあらゆる生物</Example>
+    </Synset></synsets><LexicalEntry id="omw-ja-西暦-r">
+      <Lemma writtenForm="西暦" partOfSpeech="r" />
+      <Sense id="omw-ja-西暦-00001837-r" synset="omw-ja-00001837-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00001837-r" ili="i18158" partOfSpeech="r" members="omw-ja-西暦-00001837-r">
+      <Definition>西暦紀元で</Definition>
+      <Definition>キリストが生まれたと想定された年の後の日付の前に使われる</Definition>
+      <Example>西暦200年に</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-できない-a">
+      <Lemma writtenForm="できない" partOfSpeech="a" />
+      <Sense id="omw-ja-できない-00002098-a" synset="omw-ja-00002098-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002098-a" ili="i2" partOfSpeech="a" members="omw-ja-できない-00002098-a">
+      <Definition>必要な手段または技術またはノウハウを持たないさま</Definition>
+      <Example>車なしでは町に着くことができない</Example>
+      <Example>資金を得ることができない</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-抽象的実体-n">
+      <Lemma writtenForm="抽象的実体" partOfSpeech="n" />
+      <Sense id="omw-ja-抽象的実体-00002137-n" synset="omw-ja-00002137-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002137-n" ili="i35547" partOfSpeech="n" members="omw-ja-抽象的実体-00002137-n">
+      <Definition>特定の例から共通点を抽出することによって形成された一般概念</Definition>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-紀元前-r">
+      <Lemma writtenForm="紀元前" partOfSpeech="r" />
+      <Sense id="omw-ja-紀元前-00002142-r" synset="omw-ja-00002142-r" />
+      <Sense id="omw-ja-紀元前-00002296-r" synset="omw-ja-00002296-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002142-r" ili="i18160" partOfSpeech="r" members="omw-ja-紀元前-00002142-r">
+      <Definition>キリスト紀元の前</Definition>
+      <Definition>キリストが生まれた年とされる前の年月に使われる</Definition>
+    </Synset>
+    <Synset id="omw-ja-00002296-r" ili="i18161" partOfSpeech="r" members="omw-ja-紀元前-00002296-r">
+      <Definition>西暦紀元の前の期間の</Definition>
+      <Definition>クリスチャンではない何人かの作家によって好まれる</Definition>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-向軸性-a">
+      <Lemma writtenForm="向軸性" partOfSpeech="a" />
+      <Sense id="omw-ja-向軸性-00002527-a" synset="omw-ja-00002527-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002527-a" ili="i4" partOfSpeech="a" members="omw-ja-向軸性-00002527-a">
+      <Definition>器官または生物の軸のに最も近い、あるいはの方へ向かう</Definition>
+      <Example>葉の上側は、向軸性の表面として知られている</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-ついさっき-r">
+      <Lemma writtenForm="ついさっき" partOfSpeech="r" />
+      <Sense id="omw-ja-ついさっき-00002621-r" synset="omw-ja-00002621-r" />
+      <Sense id="omw-ja-ついさっき-00033308-r" synset="omw-ja-00033308-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002621-r" ili="i18163" partOfSpeech="r" members="omw-ja-ついさっき-00002621-r omw-ja-丁度-00002621-r omw-ja-今-00002621-r">
+      <Definition>ほんのすこしだけ前の時間</Definition>
+      <Example>彼らは、ほとんど話者の話を聞くことができなかった</Example>
+      <Example>我々は、彼らをほとんど知らなかった</Example>
+      <Example>ちょうど打たれることが逃された</Example>
+      <Example>ドアがさっと開いた時、ベルをほとんど鳴らさなかった</Example>
+      <Example>去るための口実を見つける以前に、彼女はついさきほど到着したところであろう　−　W.B.イェーツ</Example>
+    </Synset>
+    <Synset id="omw-ja-00033308-r" ili="i18330" partOfSpeech="r" members="omw-ja-ついさっき-00033308-r omw-ja-ちょうど-00033308-r omw-ja-丁度-00033308-r omw-ja-たった今-00033308-r omw-ja-つい今しがた-00033308-r omw-ja-ただ今-00033308-r omw-ja-今し-00033308-r omw-ja-今-00033308-r omw-ja-今し方-00033308-r omw-ja-今方-00033308-r omw-ja-只今-00033308-r omw-ja-唯今-00033308-r">
+      <Definition>つい今しがた</Definition>
+      <Example>彼はちょうど到着したところだ</Example>
+      <Example>太陽はちょうど今出て来た</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-丁度-r">
+      <Lemma writtenForm="丁度" partOfSpeech="r" />
+      <Sense id="omw-ja-丁度-00002621-r" synset="omw-ja-00002621-r" />
+      <Sense id="omw-ja-丁度-00033308-r" synset="omw-ja-00033308-r" />
+      <Sense id="omw-ja-丁度-00158309-r" synset="omw-ja-00158309-r" />
+      <Sense id="omw-ja-丁度-00368287-r" synset="omw-ja-00368287-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002621-r" ili="i18163" partOfSpeech="r" members="omw-ja-ついさっき-00002621-r omw-ja-丁度-00002621-r omw-ja-今-00002621-r">
+      <Definition>ほんのすこしだけ前の時間</Definition>
+      <Example>彼らは、ほとんど話者の話を聞くことができなかった</Example>
+      <Example>我々は、彼らをほとんど知らなかった</Example>
+      <Example>ちょうど打たれることが逃された</Example>
+      <Example>ドアがさっと開いた時、ベルをほとんど鳴らさなかった</Example>
+      <Example>去るための口実を見つける以前に、彼女はついさきほど到着したところであろう　−　W.B.イェーツ</Example>
+    </Synset>
+    <Synset id="omw-ja-00033308-r" ili="i18330" partOfSpeech="r" members="omw-ja-ついさっき-00033308-r omw-ja-ちょうど-00033308-r omw-ja-丁度-00033308-r omw-ja-たった今-00033308-r omw-ja-つい今しがた-00033308-r omw-ja-ただ今-00033308-r omw-ja-今し-00033308-r omw-ja-今-00033308-r omw-ja-今し方-00033308-r omw-ja-今方-00033308-r omw-ja-只今-00033308-r omw-ja-唯今-00033308-r">
+      <Definition>つい今しがた</Definition>
+      <Example>彼はちょうど到着したところだ</Example>
+      <Example>太陽はちょうど今出て来た</Example>
+    </Synset>
+    <Synset id="omw-ja-00158309-r" ili="i19211" partOfSpeech="r" members="omw-ja-きちんきちん-00158309-r omw-ja-どんぴしゃり-00158309-r omw-ja-ちょっきり-00158309-r omw-ja-かっきり-00158309-r omw-ja-かっちり-00158309-r omw-ja-きちっと-00158309-r omw-ja-きちんと-00158309-r omw-ja-きっかり-00158309-r omw-ja-きっちり-00158309-r omw-ja-ちゃんと-00158309-r omw-ja-ちょうど-00158309-r omw-ja-ぴたっと-00158309-r omw-ja-ぴたりと-00158309-r omw-ja-ぴったり-00158309-r omw-ja-まさしく-00158309-r omw-ja-ずばり-00158309-r omw-ja-ぴたり-00158309-r omw-ja-まさに-00158309-r omw-ja-丁度-00158309-r omw-ja-将に-00158309-r omw-ja-当に-00158309-r omw-ja-恰度-00158309-r omw-ja-正しく-00158309-r omw-ja-正に-00158309-r omw-ja-正確-00158309-r omw-ja-確と-00158309-r omw-ja-聢と-00158309-r">
+      <Definition>正確さまたは精密度を示すこと</Definition>
+      <Example>彼は彼女に言われたとおり正確にやっていた</Example>
+      <Example>それは、彼が言ったとおりだった−−宝石はなくなった</Example>
+      <Example>それは、ちょうど十分な塩がある</Example>
+    </Synset>
+    <Synset id="omw-ja-00368287-r" ili="i20675" partOfSpeech="r" members="omw-ja-どんぴしゃり-00368287-r omw-ja-きちっと-00368287-r omw-ja-きちんと-00368287-r omw-ja-きっちり-00368287-r omw-ja-ちゃんと-00368287-r omw-ja-ちょうど-00368287-r omw-ja-ぴたっと-00368287-r omw-ja-ぴたりと-00368287-r omw-ja-ぴったり-00368287-r omw-ja-まさしく-00368287-r omw-ja-ずばり-00368287-r omw-ja-ぴたり-00368287-r omw-ja-まさに-00368287-r omw-ja-丁度-00368287-r omw-ja-将に-00368287-r omw-ja-恰度-00368287-r omw-ja-正しく-00368287-r omw-ja-正に-00368287-r omw-ja-正確-00368287-r omw-ja-確と-00368287-r omw-ja-聢と-00368287-r">
+      <Definition>正確な方法で</Definition>
+      <Example>彼女はいつも正確に自分の考えを表した</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-今-r">
+      <Lemma writtenForm="今" partOfSpeech="r" />
+      <Sense id="omw-ja-今-00002621-r" synset="omw-ja-00002621-r" />
+      <Sense id="omw-ja-今-00033308-r" synset="omw-ja-00033308-r" />
+      <Sense id="omw-ja-今-00048475-r" synset="omw-ja-00048475-r" />
+      <Sense id="omw-ja-今-00049220-r" synset="omw-ja-00049220-r" />
+      <Sense id="omw-ja-今-00049433-r" synset="omw-ja-00049433-r" />
+      <Sense id="omw-ja-今-00109021-r" synset="omw-ja-00109021-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002621-r" ili="i18163" partOfSpeech="r" members="omw-ja-ついさっき-00002621-r omw-ja-丁度-00002621-r omw-ja-今-00002621-r">
+      <Definition>ほんのすこしだけ前の時間</Definition>
+      <Example>彼らは、ほとんど話者の話を聞くことができなかった</Example>
+      <Example>我々は、彼らをほとんど知らなかった</Example>
+      <Example>ちょうど打たれることが逃された</Example>
+      <Example>ドアがさっと開いた時、ベルをほとんど鳴らさなかった</Example>
+      <Example>去るための口実を見つける以前に、彼女はついさきほど到着したところであろう　−　W.B.イェーツ</Example>
+    </Synset>
+    <Synset id="omw-ja-00033308-r" ili="i18330" partOfSpeech="r" members="omw-ja-ついさっき-00033308-r omw-ja-ちょうど-00033308-r omw-ja-丁度-00033308-r omw-ja-たった今-00033308-r omw-ja-つい今しがた-00033308-r omw-ja-ただ今-00033308-r omw-ja-今し-00033308-r omw-ja-今-00033308-r omw-ja-今し方-00033308-r omw-ja-今方-00033308-r omw-ja-只今-00033308-r omw-ja-唯今-00033308-r">
+      <Definition>つい今しがた</Definition>
+      <Example>彼はちょうど到着したところだ</Example>
+      <Example>太陽はちょうど今出て来た</Example>
+    </Synset>
+    <Synset id="omw-ja-00048475-r" ili="i18423" partOfSpeech="r" members="omw-ja-今では-00048475-r omw-ja-今-00048475-r omw-ja-此の程-00048475-r omw-ja-此の節-00048475-r omw-ja-この節-00048475-r">
+      <Definition>今の時勢に、時節柄</Definition>
+      <Example>もっぱら彼らの言語では、このごろ上流階級が識別される−ナンシー・ミットフォード</Example>
+      <Example>われわれは町ではもはや馬車をほとんど見かけない</Example>
+      <Example>今日、ほとんどすべての家にテレビがある</Example>
+    </Synset>
+    <Synset id="omw-ja-00049220-r" ili="i18426" partOfSpeech="r" members="omw-ja-さしあたって-00049220-r omw-ja-さしあたり-00049220-r omw-ja-今や-00049220-r omw-ja-今-00049220-r omw-ja-さし向き-00049220-r omw-ja-差しあたり-00049220-r omw-ja-差しむき-00049220-r omw-ja-差し向き-00049220-r omw-ja-差向き-00049220-r omw-ja-差し当たって-00049220-r omw-ja-差し当たり-00049220-r omw-ja-差し当り-00049220-r omw-ja-差当たり-00049220-r omw-ja-差当り-00049220-r omw-ja-現在-00049220-r">
+      <Definition>現時点において</Definition>
+      <Example>発売中の商品</Example>
+      <Example>今年をとろうとしている独裁者</Example>
+      <Example>彼らは現在海外にいる</Example>
+      <Example>彼は、現在新しい小説を書くことで忙しい</Example>
+      <Example>それはぽろそろ起こりそうだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00049433-r" ili="i18427" partOfSpeech="r" members="omw-ja-今にして-00049433-r omw-ja-今では-00049433-r omw-ja-今や-00049433-r omw-ja-今-00049433-r">
+      <Definition>史的現在では</Definition>
+      <Definition>過去の一連の出来事のナレーション中のこの時点で</Definition>
+      <Example>ケネディ大統領は、今、国家警備隊を呼んでいる</Example>
+      <Example>米国政府は、今では、デラウェアを越えると決める</Example>
+      <Example>船は現在、左舷に傾いている</Example>
+    </Synset>
+    <Synset id="omw-ja-00109021-r" ili="i18827" partOfSpeech="r" members="omw-ja-今-00109021-r omw-ja-この時-00109021-r">
+      <Definition>現時点で</Definition>
+      <Definition>現在</Definition>
+      <Example>私たちはここで終わりにして残りの問題を午後に論議する</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-もの-n">
+      <Lemma writtenForm="もの" partOfSpeech="n" />
+      <Sense id="omw-ja-もの-00002684-n" synset="omw-ja-00002684-n" />
+      <Sense id="omw-ja-もの-00022903-n" synset="omw-ja-00022903-n" />
+      <Sense id="omw-ja-もの-04424218-n" synset="omw-ja-04424218-n" />
+      <Sense id="omw-ja-もの-04424418-n" synset="omw-ja-04424418-n" />
+      <Sense id="omw-ja-もの-13943968-n" synset="omw-ja-13943968-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002684-n" ili="i35549" partOfSpeech="n" members="omw-ja-もの-00002684-n omw-ja-物-00002684-n">
+      <Definition>触れることができて目に見える実体</Definition>
+      <Definition>影を落とすことができる実体</Definition>
+      <Example>ラケットやボールやほかの物でいっぱいだった</Example>
+    </Synset>
+    <Synset id="omw-ja-00022903-n" ili="i35573" partOfSpeech="n" members="omw-ja-もの-00022903-n omw-ja-品-00022903-n omw-ja-品物-00022903-n omw-ja-物-00022903-n omw-ja-物品-00022903-n">
+      <Definition>ある種類の人工物の1つ</Definition>
+      <Example>衣料品1点</Example>
+    </Synset>
+    <Synset id="omw-ja-04424218-n" ili="i60191" partOfSpeech="n" members="omw-ja-シロモノ-04424218-n omw-ja-もの-04424218-n omw-ja-代物-04424218-n omw-ja-品-04424218-n omw-ja-品物-04424218-n omw-ja-物-04424218-n omw-ja-物件-04424218-n omw-ja-物品-04424218-n">
+      <Definition>人工品</Definition>
+      <Example>これはどうやって動くのか</Example>
+    </Synset>
+    <Synset id="omw-ja-04424418-n" ili="i60192" partOfSpeech="n" members="omw-ja-シロモノ-04424418-n omw-ja-もの-04424418-n omw-ja-代物-04424418-n omw-ja-品-04424418-n omw-ja-品物-04424418-n omw-ja-物-04424418-n omw-ja-物件-04424418-n omw-ja-物品-04424418-n">
+      <Definition>特定の名前を持たないもの</Definition>
+      <Example>私はそれが何なのか分からなかった</Example>
+    </Synset>
+    <Synset id="omw-ja-13943968-n" ili="i110218" partOfSpeech="n" members="omw-ja-こと-13943968-n omw-ja-もの-13943968-n omw-ja-事柄-13943968-n omw-ja-事物-13943968-n omw-ja-件-13943968-n omw-ja-その儀-13943968-n omw-ja-其の儀-13943968-n omw-ja-常態-13943968-n omw-ja-物-13943968-n omw-ja-物事-13943968-n">
+      <Definition>特殊状況</Definition>
+      <Example>この物事は終わらなければならない</Example>
+      <Example>それは驚くべき事である</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-物-n">
+      <Lemma writtenForm="物" partOfSpeech="n" />
+      <Sense id="omw-ja-物-00002684-n" synset="omw-ja-00002684-n" />
+      <Sense id="omw-ja-物-00019613-n" synset="omw-ja-00019613-n" />
+      <Sense id="omw-ja-物-00022903-n" synset="omw-ja-00022903-n" />
+      <Sense id="omw-ja-物-04424218-n" synset="omw-ja-04424218-n" />
+      <Sense id="omw-ja-物-04424418-n" synset="omw-ja-04424418-n" />
+      <Sense id="omw-ja-物-07480356-n" synset="omw-ja-07480356-n" />
+      <Sense id="omw-ja-物-13943968-n" synset="omw-ja-13943968-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002684-n" ili="i35549" partOfSpeech="n" members="omw-ja-もの-00002684-n omw-ja-物-00002684-n">
+      <Definition>触れることができて目に見える実体</Definition>
+      <Definition>影を落とすことができる実体</Definition>
+      <Example>ラケットやボールやほかの物でいっぱいだった</Example>
+    </Synset>
+    <Synset id="omw-ja-00019613-n" ili="i35567" partOfSpeech="n" members="omw-ja-サブスタンス-00019613-n omw-ja-物-00019613-n omw-ja-物質-00019613-n">
+      <Definition>人やもので構成される、実在する物理的な物質</Definition>
+      <Example>DNAは私たちの遺伝子の物質である</Example>
+    </Synset>
+    <Synset id="omw-ja-00022903-n" ili="i35573" partOfSpeech="n" members="omw-ja-もの-00022903-n omw-ja-品-00022903-n omw-ja-品物-00022903-n omw-ja-物-00022903-n omw-ja-物品-00022903-n">
+      <Definition>ある種類の人工物の1つ</Definition>
+      <Example>衣料品1点</Example>
+    </Synset>
+    <Synset id="omw-ja-04424218-n" ili="i60191" partOfSpeech="n" members="omw-ja-シロモノ-04424218-n omw-ja-もの-04424218-n omw-ja-代物-04424218-n omw-ja-品-04424218-n omw-ja-品物-04424218-n omw-ja-物-04424218-n omw-ja-物件-04424218-n omw-ja-物品-04424218-n">
+      <Definition>人工品</Definition>
+      <Example>これはどうやって動くのか</Example>
+    </Synset>
+    <Synset id="omw-ja-04424418-n" ili="i60192" partOfSpeech="n" members="omw-ja-シロモノ-04424418-n omw-ja-もの-04424418-n omw-ja-代物-04424418-n omw-ja-品-04424418-n omw-ja-品物-04424418-n omw-ja-物-04424418-n omw-ja-物件-04424418-n omw-ja-物品-04424418-n">
+      <Definition>特定の名前を持たないもの</Definition>
+      <Example>私はそれが何なのか分からなかった</Example>
+    </Synset>
+    <Synset id="omw-ja-07480356-n" ili="i76044" partOfSpeech="n" members="omw-ja-事-07480356-n omw-ja-事柄-07480356-n omw-ja-什-07480356-n omw-ja-代物-07480356-n omw-ja-物-07480356-n omw-ja-物事-07480356-n omw-ja-物件-07480356-n">
+      <Definition>永続的で不合理な欲求または嫌悪感</Definition>
+      <Example>彼はシーフードにはうるさい</Example>
+      <Example>彼女は彼をとても気にしている</Example>
+    </Synset>
+    <Synset id="omw-ja-13943968-n" ili="i110218" partOfSpeech="n" members="omw-ja-こと-13943968-n omw-ja-もの-13943968-n omw-ja-事柄-13943968-n omw-ja-事物-13943968-n omw-ja-件-13943968-n omw-ja-その儀-13943968-n omw-ja-其の儀-13943968-n omw-ja-常態-13943968-n omw-ja-物-13943968-n omw-ja-物事-13943968-n">
+      <Definition>特殊状況</Definition>
+      <Example>この物事は終わらなければならない</Example>
+      <Example>それは驚くべき事である</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-噎せ返る-v">
+      <Lemma writtenForm="噎せ返る" partOfSpeech="v" />
+      <Sense id="omw-ja-噎せ返る-00002724-v" synset="omw-ja-00002724-v" />
+      <Sense id="omw-ja-噎せ返る-00067129-v" synset="omw-ja-00067129-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002724-v" ili="i21781" partOfSpeech="v" members="omw-ja-噎せ返る-00002724-v">
+      <Definition>強い感情を抱いたときのように、とても苦しい息遣いをする</Definition>
+      <Example>死んだ夫について話したとき、感情が彼女は高ぶり声をつまらせた</Example>
+    </Synset>
+    <Synset id="omw-ja-00067129-v" ili="i22111" partOfSpeech="v" members="omw-ja-しゃくる-00067129-v omw-ja-包み泣-plus-する-00067129-v omw-ja-包み泣き-plus-する-00067129-v omw-ja-包泣-plus-する-00067129-v omw-ja-包泣き-plus-する-00067129-v omw-ja-咽ぶ-00067129-v omw-ja-咽び泣く-00067129-v omw-ja-啜りなき-plus-する-00067129-v omw-ja-啜り泣き-plus-する-00067129-v omw-ja-啜り泣く-00067129-v omw-ja-啜泣-plus-する-00067129-v omw-ja-啜泣き-plus-する-00067129-v omw-ja-啜泣く-00067129-v omw-ja-嗚咽-plus-する-00067129-v omw-ja-噎びなく-00067129-v omw-ja-噎ぶ-00067129-v omw-ja-噎び泣く-00067129-v omw-ja-噎泣く-00067129-v omw-ja-噎せ返る-00067129-v omw-ja-忍び泣く-00067129-v omw-ja-忍泣く-00067129-v omw-ja-欷歔-plus-する-00067129-v omw-ja-欷泣-plus-する-00067129-v omw-ja-歔欷-plus-する-00067129-v omw-ja-歔泣-plus-する-00067129-v omw-ja-しくしく泣く-00067129-v omw-ja-すすり泣き-plus-する-00067129-v omw-ja-しのび泣く-00067129-v omw-ja-すすり泣く-00067129-v omw-ja-むせび泣く-00067129-v omw-ja-泣きじゃくる-00067129-v omw-ja-鳴咽-plus-する-00067129-v">
+      <Definition>発作的に泣く</Definition>
+      <Example>彼はやるせなくすすり泣いていた</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-外転-a">
+      <Lemma writtenForm="外転" partOfSpeech="a" />
+      <Sense id="omw-ja-外転-00002956-a" synset="omw-ja-00002956-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00002956-a" ili="i7" partOfSpeech="a" members="omw-ja-外転-00002956-a">
+      <Definition>特に筋肉の</Definition>
+      <Definition>物体の中間線からまたは隣接部分から離れて描く</Definition>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-ほとんど～ない-r">
+      <Lemma writtenForm="ほとんど～ない" partOfSpeech="r" />
+      <Sense id="omw-ja-ほとんど～ない-00003093-r" synset="omw-ja-00003093-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003093-r" ili="i18165" partOfSpeech="r" members="omw-ja-ほとんど～ない-00003093-r">
+      <Definition>ほとんどない</Definition>
+      <Example>彼は、めったに釣りに行かない</Example>
+      <Example>彼は16歳以上ではまずなかった</Example>
+      <Example>彼らは、これまで緊急用の発電機をほとんど使ったことがない</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-がんがん-r">
+      <Lemma writtenForm="がんがん" partOfSpeech="r" />
+      <Sense id="omw-ja-がんがん-00003380-r" synset="omw-ja-00003380-r" />
+      <Sense id="omw-ja-がんがん-00350521-r" synset="omw-ja-00350521-r" />
+      <Sense id="omw-ja-がんがん-00444386-r" synset="omw-ja-00444386-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003380-r" ili="i18167" partOfSpeech="r" members="omw-ja-がんがん-00003380-r">
+      <Definition>腹立たしいさまで、または、腹立たしい程度に</Definition>
+    </Synset>
+    <Synset id="omw-ja-00350521-r" ili="i20555" partOfSpeech="r" members="omw-ja-がんがん-00350521-r omw-ja-ぎしぎし-00350521-r omw-ja-耳ざわりになるほど-00350521-r">
+      <Definition>とげとげしく、イライラした態度で</Definition>
+      <Example>彼女の声は耳ざわりに私たちの耳に響いた</Example>
+    </Synset>
+    <Synset id="omw-ja-00444386-r" ili="i21204" partOfSpeech="r" members="omw-ja-がんがん-00444386-r">
+      <Definition>強力に</Definition>
+      <Example>彼は頑丈でしっかりした体格だった</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-げっぷを出す-v">
+      <Lemma writtenForm="げっぷを出す" partOfSpeech="v" />
+      <Sense id="omw-ja-げっぷを出す-00003431-v" synset="omw-ja-00003431-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003431-v" ili="i21785" partOfSpeech="v" members="omw-ja-げっぷを出す-00003431-v">
+      <Definition>胃からガスを放出する</Definition>
+      <Example>中国では、テーブルでげっぷを出すのは行儀が良いことである</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-がんらい-r">
+      <Lemma writtenForm="がんらい" partOfSpeech="r" />
+      <Sense id="omw-ja-がんらい-00003483-r" synset="omw-ja-00003483-r" />
+      <Sense id="omw-ja-がんらい-00167286-r" synset="omw-ja-00167286-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00167286-r" ili="i19273" partOfSpeech="r" members="omw-ja-がんらい-00167286-r omw-ja-もとより-00167286-r omw-ja-元より-00167286-r omw-ja-元元-00167286-r omw-ja-元来-00167286-r omw-ja-先ずもって-00167286-r omw-ja-先ず-00167286-r omw-ja-先ず以て-00167286-r omw-ja-初めに-00167286-r omw-ja-固より-00167286-r omw-ja-最初に-00167286-r omw-ja-最初-00167286-r omw-ja-第一-00167286-r omw-ja-素より-00167286-r">
+      <Definition>今より前に</Definition>
+      <Example>まず最初になぜ私に言わなかったの</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-元来-r">
+      <Lemma writtenForm="元来" partOfSpeech="r" />
+      <Sense id="omw-ja-元来-00003483-r" synset="omw-ja-00003483-r" />
+      <Sense id="omw-ja-元来-00167286-r" synset="omw-ja-00167286-r" />
+      <Sense id="omw-ja-元来-00505352-r" synset="omw-ja-00505352-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00167286-r" ili="i19273" partOfSpeech="r" members="omw-ja-がんらい-00167286-r omw-ja-もとより-00167286-r omw-ja-元より-00167286-r omw-ja-元元-00167286-r omw-ja-元来-00167286-r omw-ja-先ずもって-00167286-r omw-ja-先ず-00167286-r omw-ja-先ず以て-00167286-r omw-ja-初めに-00167286-r omw-ja-固より-00167286-r omw-ja-最初に-00167286-r omw-ja-最初-00167286-r omw-ja-第一-00167286-r omw-ja-素より-00167286-r">
+      <Definition>今より前に</Definition>
+      <Example>まず最初になぜ私に言わなかったの</Example>
+    </Synset>
+    <Synset id="omw-ja-00505352-r" ili="i21676" partOfSpeech="r" members="omw-ja-うまれつき-00505352-r omw-ja-元来-00505352-r omw-ja-天然に-00505352-r omw-ja-天然-00505352-r omw-ja-根っから-00505352-r omw-ja-根から-00505352-r omw-ja-生まれながら-00505352-r omw-ja-生まれつき-00505352-r omw-ja-生れながら-00505352-r omw-ja-生れつき-00505352-r omw-ja-生まれ乍ら-00505352-r omw-ja-生れ乍ら-00505352-r omw-ja-生まれ付き-00505352-r omw-ja-生れ付き-00505352-r omw-ja-生得-00505352-r">
+      <Definition>生まれつきの性質を通して</Definition>
+      <Example>彼は生まれつき怠惰だった</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-基本的に-r">
+      <Lemma writtenForm="基本的に" partOfSpeech="r" />
+      <Sense id="omw-ja-基本的に-00003483-r" synset="omw-ja-00003483-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-基本的-r">
+      <Lemma writtenForm="基本的" partOfSpeech="r" />
+      <Sense id="omw-ja-基本的-00003483-r" synset="omw-ja-00003483-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-基礎的-r">
+      <Lemma writtenForm="基礎的" partOfSpeech="r" />
+      <Sense id="omw-ja-基礎的-00003483-r" synset="omw-ja-00003483-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-大体-r">
+      <Lemma writtenForm="大体" partOfSpeech="r" />
+      <Sense id="omw-ja-大体-00003483-r" synset="omw-ja-00003483-r" />
+      <Sense id="omw-ja-大体-00073897-r" synset="omw-ja-00073897-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00073897-r" ili="i18582" partOfSpeech="r" members="omw-ja-あらかた-00073897-r omw-ja-おおかた-00073897-r omw-ja-おおく-00073897-r omw-ja-おもに-00073897-r omw-ja-主として-00073897-r omw-ja-主に-00073897-r omw-ja-主-00073897-r omw-ja-大体-00073897-r omw-ja-大方-00073897-r omw-ja-粗方-00073897-r">
+      <Definition>大部分</Definition>
+      <Example>彼は、主に蝶に興味がある</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-本質的-r">
+      <Lemma writtenForm="本質的" partOfSpeech="r" />
+      <Sense id="omw-ja-本質的-00003483-r" synset="omw-ja-00003483-r" />
+      <Sense id="omw-ja-本質的-00036762-r" synset="omw-ja-00036762-r" />
+      <Sense id="omw-ja-本質的-00375163-r" synset="omw-ja-00375163-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00036762-r" ili="i18355" partOfSpeech="r" members="omw-ja-本来-00036762-r omw-ja-本質的-00036762-r omw-ja-それ自体-00036762-r">
+      <Definition>そなわる本質に関して</Definition>
+      <Example>この声明はそれ自体が興味深い</Example>
+    </Synset>
+    <Synset id="omw-ja-00375163-r" ili="i20714" partOfSpeech="r" members="omw-ja-本質的-00375163-r">
+      <Definition>固有の方法で</Definition>
+      <Example>主題はあからさまな種の性的行動であり、本質的に望ましくて刺激的であるかのように表されている</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-根本的に-r">
+      <Lemma writtenForm="根本的に" partOfSpeech="r" />
+      <Sense id="omw-ja-根本的に-00003483-r" synset="omw-ja-00003483-r" />
+      <Sense id="omw-ja-根本的に-00178342-r" synset="omw-ja-00178342-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    <Synset id="omw-ja-00178342-r" ili="i19359" partOfSpeech="r" members="omw-ja-徹底的に-00178342-r omw-ja-根本的に-00178342-r">
+      <Definition>根本的な方法で</Definition>
+      <Example>彼女は根本的に異なったアプローチを取った</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-由来-r">
+      <Lemma writtenForm="由来" partOfSpeech="r" />
+      <Sense id="omw-ja-由来-00003483-r" synset="omw-ja-00003483-r" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003483-r" ili="i18168" partOfSpeech="r" members="omw-ja-がんらい-00003483-r omw-ja-元来-00003483-r omw-ja-基本的に-00003483-r omw-ja-基本的-00003483-r omw-ja-基礎的-00003483-r omw-ja-大体-00003483-r omw-ja-本質的-00003483-r omw-ja-根本的に-00003483-r omw-ja-由来-00003483-r">
+      <Definition>本質の上で</Definition>
+      <Definition>基礎において、またはその本質によって</Definition>
+      <Example>彼は基本的に不正直である</Example>
+      <Example>議論は、基本的には技術的なものだった</Example>
+      <Example>彼の大騒ぎについて、彼が、本質では恥ずかしがり屋だということだ</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-新出現の-a">
+      <Lemma writtenForm="新出現の" partOfSpeech="a" />
+      <Sense id="omw-ja-新出現の-00003553-a" synset="omw-ja-00003553-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-a" ili="i10" partOfSpeech="a" members="omw-ja-新出現の-00003553-a omw-ja-新興の-00003553-a omw-ja-現れ出た-00003553-a">
+      <Definition>生まれるさま</Definition>
+      <Example>新興の共和国</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-新興の-a">
+      <Lemma writtenForm="新興の" partOfSpeech="a" />
+      <Sense id="omw-ja-新興の-00003553-a" synset="omw-ja-00003553-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-a" ili="i10" partOfSpeech="a" members="omw-ja-新出現の-00003553-a omw-ja-新興の-00003553-a omw-ja-現れ出た-00003553-a">
+      <Definition>生まれるさま</Definition>
+      <Example>新興の共和国</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-現れ出た-a">
+      <Lemma writtenForm="現れ出た" partOfSpeech="a" />
+      <Sense id="omw-ja-現れ出た-00003553-a" synset="omw-ja-00003553-a" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-a" ili="i10" partOfSpeech="a" members="omw-ja-新出現の-00003553-a omw-ja-新興の-00003553-a omw-ja-現れ出た-00003553-a">
+      <Definition>生まれるさま</Definition>
+      <Example>新興の共和国</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-一統-n">
+      <Lemma writtenForm="一統" partOfSpeech="n" />
+      <Sense id="omw-ja-一統-00003553-n" synset="omw-ja-00003553-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-n" ili="i35550" partOfSpeech="n" members="omw-ja-一統-00003553-n omw-ja-全体-00003553-n omw-ja-全般-00003553-n omw-ja-総体-00003553-n">
+      <Definition>1つのものとしてとらえらえる、部分の集合</Definition>
+      <Example>全体と比較してその部分はどのぐらいの大きさなのか</Example>
+      <Example>チームは単位である</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-全体-n">
+      <Lemma writtenForm="全体" partOfSpeech="n" />
+      <Sense id="omw-ja-全体-00003553-n" synset="omw-ja-00003553-n" />
+      <Sense id="omw-ja-全体-04765851-n" synset="omw-ja-04765851-n" />
+      <Sense id="omw-ja-全体-05818388-n" synset="omw-ja-05818388-n" />
+      <Sense id="omw-ja-全体-05869584-n" synset="omw-ja-05869584-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-n" ili="i35550" partOfSpeech="n" members="omw-ja-一統-00003553-n omw-ja-全体-00003553-n omw-ja-全般-00003553-n omw-ja-総体-00003553-n">
+      <Definition>1つのものとしてとらえらえる、部分の集合</Definition>
+      <Example>全体と比較してその部分はどのぐらいの大きさなのか</Example>
+      <Example>チームは単位である</Example>
+    </Synset>
+    <Synset id="omw-ja-04765851-n" ili="i62059" partOfSpeech="n" members="omw-ja-全体-04765851-n">
+      <Definition>完全で無差別な性質</Definition>
+      <Example>戦争とその結果の全体</Example>
+      <Example>包括的な国の全体</Example>
+    </Synset>
+    <Synset id="omw-ja-05818388-n" ili="i67455" partOfSpeech="n" members="omw-ja-全体-05818388-n omw-ja-総合-05818388-n">
+      <Definition>（細部と対照的に）全体に関する事実</Definition>
+      <Example>彼は全体について言及したが細部は無視した</Example>
+    </Synset>
+    <Synset id="omw-ja-05869584-n" ili="i67718" partOfSpeech="n" members="omw-ja-一切-05869584-n omw-ja-全て-05869584-n omw-ja-全体-05869584-n omw-ja-全部-05869584-n omw-ja-凡て-05869584-n omw-ja-皆-05869584-n omw-ja-総べて-05869584-n omw-ja-総て-05869584-n">
+      <Definition>すべての構成要素や部品を含むすべて</Definition>
+      <Example>全体として考慮されるヨーロッパ</Example>
+      <Example>アメリカ文学全体</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-全般-n">
+      <Lemma writtenForm="全般" partOfSpeech="n" />
+      <Sense id="omw-ja-全般-00003553-n" synset="omw-ja-00003553-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-n" ili="i35550" partOfSpeech="n" members="omw-ja-一統-00003553-n omw-ja-全体-00003553-n omw-ja-全般-00003553-n omw-ja-総体-00003553-n">
+      <Definition>1つのものとしてとらえらえる、部分の集合</Definition>
+      <Example>全体と比較してその部分はどのぐらいの大きさなのか</Example>
+      <Example>チームは単位である</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-総体-n">
+      <Lemma writtenForm="総体" partOfSpeech="n" />
+      <Sense id="omw-ja-総体-00003553-n" synset="omw-ja-00003553-n" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003553-n" ili="i35550" partOfSpeech="n" members="omw-ja-一統-00003553-n omw-ja-全体-00003553-n omw-ja-全般-00003553-n omw-ja-総体-00003553-n">
+      <Definition>1つのものとしてとらえらえる、部分の集合</Definition>
+      <Example>全体と比較してその部分はどのぐらいの大きさなのか</Example>
+      <Example>チームは単位である</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-弾き出す-v">
+      <Lemma writtenForm="弾き出す" partOfSpeech="v" />
+      <Sense id="omw-ja-弾き出す-00003662-v" synset="omw-ja-00003662-v" />
+      <Sense id="omw-ja-弾き出す-00637259-v" synset="omw-ja-00637259-v" />
+      <Sense id="omw-ja-弾き出す-02002720-v" synset="omw-ja-02002720-v" />
+      <Sense id="omw-ja-弾き出す-02405252-v" synset="omw-ja-02405252-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003662-v" ili="i21786" partOfSpeech="v" members="omw-ja-弾き出す-00003662-v">
+      <Definition>作動力の力で放つ、あるいは作動力の力で動かす</Definition>
+      <Example>空気を押し出す</Example>
+      <Example>破片を押し出す</Example>
+    </Synset>
+    <Synset id="omw-ja-00637259-v" ili="i24925" partOfSpeech="v" members="omw-ja-割りだす-00637259-v omw-ja-割り出す-00637259-v omw-ja-割出す-00637259-v omw-ja-弾き出す-00637259-v omw-ja-弾出す-00637259-v omw-ja-演算-plus-する-00637259-v omw-ja-算出-plus-する-00637259-v omw-ja-算定-plus-する-00637259-v omw-ja-算用-plus-する-00637259-v omw-ja-算計-plus-する-00637259-v omw-ja-計算-plus-する-00637259-v omw-ja-運算-plus-する-00637259-v">
+      <Definition>数学的演算や計算をする</Definition>
+    </Synset>
+    <Synset id="omw-ja-02002720-v" ili="i31750" partOfSpeech="v" members="omw-ja-ほうりだす-02002720-v omw-ja-一掃-plus-する-02002720-v omw-ja-いぶり出す-02002720-v omw-ja-たたき出す-02002720-v omw-ja-去なす-02002720-v omw-ja-叩き出す-02002720-v omw-ja-弾きだす-02002720-v omw-ja-弾き出す-02002720-v omw-ja-弾出す-02002720-v omw-ja-打ちはらう-02002720-v omw-ja-打ち払う-02002720-v omw-ja-打払う-02002720-v omw-ja-払い出す-02002720-v omw-ja-払出す-02002720-v omw-ja-撃ち払う-02002720-v omw-ja-撃払う-02002720-v omw-ja-放り出す-02002720-v omw-ja-放逐-plus-する-02002720-v omw-ja-討ち払う-02002720-v omw-ja-討払う-02002720-v omw-ja-追いたてる-02002720-v omw-ja-追いちらす-02002720-v omw-ja-追いはらう-02002720-v omw-ja-追ったてる-02002720-v omw-ja-追っぱらう-02002720-v omw-ja-追いやる-02002720-v omw-ja-追い出す-02002720-v omw-ja-追ん出す-02002720-v omw-ja-追い払う-02002720-v omw-ja-追っ払う-02002720-v omw-ja-追い散らす-02002720-v omw-ja-追い散す-02002720-v omw-ja-追い立てる-02002720-v omw-ja-追っ立てる-02002720-v omw-ja-追立てる-02002720-v omw-ja-追い遣る-02002720-v omw-ja-遣らう-02002720-v omw-ja-除する-02002720-v omw-ja-駆逐-plus-する-02002720-v">
+      <Definition>立ち去る力</Definition>
+      <Definition>直接の意味と比ゆ的意味の両方で使用される</Definition>
+      <Example>強盗らしき人を撃退してください</Example>
+      <Example>悪い考えを追い払ってください</Example>
+      <Example>疑いを晴らす</Example>
+      <Example>スーパーマーケットは、多くの失望した顧客を追い返さなければならなかった</Example>
+    </Synset>
+    <Synset id="omw-ja-02405252-v" ili="i33772" partOfSpeech="v" members="omw-ja-廃する-02405252-v omw-ja-廃す-02405252-v omw-ja-廃位-plus-する-02405252-v omw-ja-弾き出す-02405252-v omw-ja-突き落とす-02405252-v">
+      <Definition>去ることを強制する（職務を）</Definition>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-しゃくる-v">
+      <Lemma writtenForm="しゃくる" partOfSpeech="v" />
+      <Sense id="omw-ja-しゃくる-00003826-v" synset="omw-ja-00003826-v" />
+      <Sense id="omw-ja-しゃくる-00067129-v" synset="omw-ja-00067129-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003826-v" ili="i21787" partOfSpeech="v" members="omw-ja-しゃくる-00003826-v omw-ja-吃逆-plus-する-00003826-v">
+      <Definition>突発的に息をし、音をたてる</Definition>
+      <Example>しゃっくりが出たときは、1杯の冷水を飲みなさい</Example>
+    </Synset>
+    <Synset id="omw-ja-00067129-v" ili="i22111" partOfSpeech="v" members="omw-ja-しゃくる-00067129-v omw-ja-包み泣-plus-する-00067129-v omw-ja-包み泣き-plus-する-00067129-v omw-ja-包泣-plus-する-00067129-v omw-ja-包泣き-plus-する-00067129-v omw-ja-咽ぶ-00067129-v omw-ja-咽び泣く-00067129-v omw-ja-啜りなき-plus-する-00067129-v omw-ja-啜り泣き-plus-する-00067129-v omw-ja-啜り泣く-00067129-v omw-ja-啜泣-plus-する-00067129-v omw-ja-啜泣き-plus-する-00067129-v omw-ja-啜泣く-00067129-v omw-ja-嗚咽-plus-する-00067129-v omw-ja-噎びなく-00067129-v omw-ja-噎ぶ-00067129-v omw-ja-噎び泣く-00067129-v omw-ja-噎泣く-00067129-v omw-ja-噎せ返る-00067129-v omw-ja-忍び泣く-00067129-v omw-ja-忍泣く-00067129-v omw-ja-欷歔-plus-する-00067129-v omw-ja-欷泣-plus-する-00067129-v omw-ja-歔欷-plus-する-00067129-v omw-ja-歔泣-plus-する-00067129-v omw-ja-しくしく泣く-00067129-v omw-ja-すすり泣き-plus-する-00067129-v omw-ja-しのび泣く-00067129-v omw-ja-すすり泣く-00067129-v omw-ja-むせび泣く-00067129-v omw-ja-泣きじゃくる-00067129-v omw-ja-鳴咽-plus-する-00067129-v">
+      <Definition>発作的に泣く</Definition>
+      <Example>彼はやるせなくすすり泣いていた</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-吃逆-plus-する-v">
+      <Lemma writtenForm="吃逆+する" partOfSpeech="v" />
+      <Sense id="omw-ja-吃逆-plus-する-00003826-v" synset="omw-ja-00003826-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00003826-v" ili="i21787" partOfSpeech="v" members="omw-ja-しゃくる-00003826-v omw-ja-吃逆-plus-する-00003826-v">
+      <Definition>突発的に息をし、音をたてる</Definition>
+      <Example>しゃっくりが出たときは、1杯の冷水を飲みなさい</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-吐息-plus-する-v">
+      <Lemma writtenForm="吐息+する" partOfSpeech="v" />
+      <Sense id="omw-ja-吐息-plus-する-00004032-v" synset="omw-ja-00004032-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00004032-v" ili="i21788" partOfSpeech="v" members="omw-ja-吐息-plus-する-00004032-v omw-ja-嘆く-00004032-v omw-ja-嘆息-plus-する-00004032-v omw-ja-大息-plus-する-00004032-v omw-ja-太息-plus-する-00004032-v omw-ja-息づく-00004032-v omw-ja-息衝く-00004032-v omw-ja-歎く-00004032-v omw-ja-歎息-plus-する-00004032-v">
+      <Definition>ため息をつくか、ハアと口にする</Definition>
+      <Definition>深く、そして、重く呼吸する</Definition>
+      <Example>彼女は悲しそうにため息をついた</Example>
+    </Synset>
+    </synsets><LexicalEntry id="omw-ja-嘆く-v">
+      <Lemma writtenForm="嘆く" partOfSpeech="v" />
+      <Sense id="omw-ja-嘆く-00004032-v" synset="omw-ja-00004032-v" />
+      <Sense id="omw-ja-嘆く-00826333-v" synset="omw-ja-00826333-v" />
+      <Sense id="omw-ja-嘆く-00985800-v" synset="omw-ja-00985800-v" />
+      <Sense id="omw-ja-嘆く-01796924-v" synset="omw-ja-01796924-v" />
+      <Sense id="omw-ja-嘆く-01797051-v" synset="omw-ja-01797051-v" />
+    </LexicalEntry>
+    <synsets><Synset id="omw-ja-00004032-v" ili="i21788" partOfSpeech="v" members="omw-ja-吐息-plus-する-00004032-v omw-ja-嘆く-00004032-v omw-ja-嘆息-plus-する-00004032-v omw-ja-大息-plus-する-00004032-v omw-ja-太息-plus-する-00004032-v omw-ja-息づく-00004032-v omw-ja-息衝く-00004032-v omw-ja-歎く-00004032-v omw-ja-歎息-plus-する-00004032-v">
+      <Definition>ため息をつくか、ハアと口にする</Definition>
+      <

@@ -44,6 +44,30 @@
     "SLOB(real slob library)",
     "SQLite(indexed control)"
   ],
+  "format_references": [
+    {
+      "format": "StarDict",
+      "spec_url": "https://github.com/huzheng001/stardict-3/blob/master/dict/doc/StarDictFileFormat",
+      "reader_url": "https://github.com/Dushistov/sdcv",
+      "use": "ifo/idx/dict/syn layout and genuine sdcv validation"
+    },
+    {
+      "format": "DICT/dictzip",
+      "protocol_url": "https://www.rfc-editor.org/info/rfc2229/",
+      "dictzip_reference_url": "https://manpages.opensuse.org/Leap-16.0/dictd/dictzip.1.en.html",
+      "use": "DICT protocol boundary and dictzip random-access framing"
+    },
+    {
+      "format": "SLOB",
+      "reference_url": "https://github.com/itkach/slob",
+      "use": "reference writer/reader, aliases, ICU collation, and lzma2 mode"
+    },
+    {
+      "format": "SQLite",
+      "file_format_url": "https://www.sqlite.org/fileformat.html",
+      "use": "indexed control file format"
+    }
+  ],
   "schedule": {
     "main_page_bytes": 65536,
     "page_sweep_bytes": [16384, 65536, 262144],
@@ -53,7 +77,10 @@
     "prefix_correctness_passes": 1,
     "prefix_measured_batches": 3,
     "startup_process_runs": 3,
+    "lex6_query_mode": "fixed representative exact/prefix/missing/high-multiplicity/Unicode workload by default; --all-exact-queries for exhaustive query audit",
+    "lex6_load_modes": "uncached Archive.load plus stateful Reader: cold first decode, hot same-page 256 loads, mixed-page 256 render/snippet loads; Reader.init and cache counters retained",
     "gate": "ROOT-EXPLICIT-QUIET-GATE"
   },
+  "measurement_driver": "measure.py (refuses all timing without the literal gate)",
   "timing_policy": "disabled until the root explicitly grants the quiet gate"
 }

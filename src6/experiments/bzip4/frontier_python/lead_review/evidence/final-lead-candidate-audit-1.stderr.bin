@@ -1,0 +1,14 @@
+test_conditioning_is_identity_when_nothing_is_excluded (test_candidates.BwtIndependentAudit.test_conditioning_is_identity_when_nothing_is_excluded) ... ok
+test_differential_blocks_and_unseen_bytes (test_candidates.BwtIndependentAudit.test_differential_blocks_and_unseen_bytes) ... ok
+test_entropy_against_scalar_interval_decoder (test_candidates.BwtIndependentAudit.test_entropy_against_scalar_interval_decoder) ... ok
+test_factorizer_expansion_at_maximum_boundary (test_candidates.BwtIndependentAudit.test_factorizer_expansion_at_maximum_boundary) ... ok
+test_mutations_either_reject_or_preserve_exact_bytes (test_candidates.BwtIndependentAudit.test_mutations_either_reject_or_preserve_exact_bytes) ... ok
+test_rotation_sort_against_naive_definition (test_candidates.BwtIndependentAudit.test_rotation_sort_against_naive_definition) ... ok
+test_arbitrary_input_and_every_restart (test_grammar.GrammarAudit.test_arbitrary_input_and_every_restart) ... ok
+test_internal_definition_is_not_a_stream_symbol (test_grammar.GrammarAudit.test_internal_definition_is_not_a_stream_symbol) ... ok
+test_serialized_model_and_frame_mutations (test_grammar.GrammarAudit.test_serialized_model_and_frame_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.276s
+
+OK

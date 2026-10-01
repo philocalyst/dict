@@ -1,0 +1,2452 @@
+{
+  "codec_source_drift": {
+    "manifest": null,
+    "mismatches": [],
+    "ok": true
+  },
+  "matrix": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1",
+  "records": [
+    {
+      "capture": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_audit.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1"
+        ],
+        "cwd": "/Users/mileswirht/Downloads/dictionary",
+        "elapsed_ns": 69809484666,
+        "error": null,
+        "returncode": 0,
+        "status": "ok",
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 18670,
+          "sha256": "b73dacbf3ef318a5470ad9797314669e2f50d3478d989d3a3d3d53a0d5218003"
+        },
+        "timed_out": false
+      },
+      "name": "final_audit",
+      "result": {
+        "cells": 48,
+        "records": [
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1189002,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "6067c9a591ff275a356646db69a754d57f3cf01a10ddcf9991f0946b813cf097",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 899408,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "9a081309888a855183b3b5c8f8f1e888e89286e587852c21c0f6972431a9032c",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1141270,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "9eb872729e9ed71e2f88b877b32d606851dd7952f4742d6b33d430a3f4620196",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 888374,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "579e02681d2683c95bd07f8642112ffe0dc5a9a7c8d49f3e8c7ee48b6450121e",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 849886,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "a2c964fe9fd28f9ca48f8b788ace554fd244f4361a564dd34735c6e584010681",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 835334,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "947cd5f15504626e1a2223182e6c3490ab19d7e376a2d4d012a204a861746630",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 814375,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "495e0c42d6e175b510f289a7371e292d60553193fb029c8cf62430d057e3f5c1",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/freedict-eng-spa-16384.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 778935,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+            "frame_sha256": "628b7db41af670b5105d4e03c4a871683cfbb634450a2891edf841279f1f83fc",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/freedict-eng-spa-65536.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 150446,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "308db4d8b6fa1fa22b839af6b0e18804bd5b8daf1cb006a4d3c46d42215998ca",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 115160,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "924e8fbd50298b35243d183debbfdfb226a96fa177a5da419035b214b720fbf1",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 147325,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "29ea8e9dc17595a25aaafdd44cf01a2a6abcf1e99caf689ac27d57f25c6c40f3",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 116664,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "dd7caa49be98c86e57a1e3107af8652ce2d6b7d663d992c874cdfd91c3d4af5f",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 123548,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "aab1085baf853f0ccb3821880528f1db57574d8e0de7583b5c9c8ab78bc9037e",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 121776,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "f9bd1dd984876a3372e991aa08b5a83b766186bad38d9c83f9885a42be6517c8",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 123840,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "046c9d0d8900a72b9514418b049f06d246cb75e185e6cb419f598795001cd220",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 119716,
+            "corpus": "freedict-eng-spa",
+            "decoded_sha256": "4cb0f785eceaf6a3aa58c13968c1e59877a575f51b9ca166f0ebf5b81b53be45",
+            "frame_sha256": "6821a88d69f72a77b3731db12661f8ac6bf82bdbfad14375614757ed19752164",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 2362319,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "f85213358da86926be386e95c24be5f76a4a3f0e04dd4b3fddd319d8eeb11161",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 1905560,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "be50e0d97d6edd747c19e3f8cd973cb1611e2312aefaa7847e3e205503dd5975",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 2343433,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "548696a9e9bc984825befb4f66d7c9ab23082a47ccab47baafcb6c75eccc4641",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 1960472,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "ce89a2da06bdcc40541eee8f8af02ab2afb52ff49dd0ee53edb9d62e27a1c798",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1935401,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "2c7b9246c483aa08cd2cb246fc2ca06ee4a06b806e23329d1f6661a0f99f6542",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 1924994,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "86d4deaa20212665201321cc4074d126cc128f6b4ab9fec12205b5a46aee6721",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1860752,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "1b4489edcac9097b46d2789536cdd288644cf2c42a53df72617a4d14b34ed454",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/gcide-054-16384.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 1826256,
+            "corpus": "gcide-054",
+            "decoded_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+            "frame_sha256": "881bb14f9f8125f54408f40c3f9e8d3a04b2160b08f55880e82f7ee1bf157a95",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/gcide-054-65536.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 292647,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "c570d689578ae4ba496656dac13145d9b9603d6d297bbf004dc2ba8cf1c28f52",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 235103,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "4894cffa7d663fb05ac81b5274c5ce9b5cd7a5a70043de941747044c70243731",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 290911,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "994011ec6c625f22215a11b760333b53e4deca936cca38b198ff346dca7bb430",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 242643,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "ca06296cdad6937c90f5d9796dc99b15b92a91509947e095c3c6a3d8c4b98ce6",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 259063,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "ecff49e9c98e98b5385434720279249ae8e5b8efd2411ddddb42c4710f8ac0c9",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 257534,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "58713500cadd4c59917bc72059ce7b3bc42964f627718393143d65fab8b44fe6",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 256645,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "6d1c8dd6a1d32d90cf01f56fc3b1e5d721eb8728aba7620a417ab27231bcf71a",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 251473,
+            "corpus": "gcide-054",
+            "decoded_sha256": "758d16951785feacd36be0d224e80b00f90d11a8040b6f6830c1f07655a29d29",
+            "frame_sha256": "daedf08b2ca6be19eac41906e32e8d8d5fa7f998eea68646e131949818d61715",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1124142,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "b0df7c3fdb11dd445bf926cfffb5020b43e18f1cf580425a8a2ff680df95b131",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 674384,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "b26bd2869281cf59eee2ff63a0b751901f7c9a8893a6549ddfcf87bbdaeea9a5",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1085073,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "e3ba7d06a7704a79190a0cba5b066f50bfc006a8fdddaa698a7de49d08445e10",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 744565,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "4c4c4bb4f969430b6e27233704edcd850318fc60daaa20b45bff41d06aa6befa",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 1334367,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "1c2a18785be3a1d964977553fd2c0946a7282bf8805429b916cc91b730c990fd",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 1337156,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "9573da3fc9c6147af54174abbcb9326a0bc7a966667ca3538af0650846e0a7e9",
+            "lane": "final",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 512,
+            "complete_bytes": 778911,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "7e9e319b4e3092264aa51423c7f626bfe309e8519903cf7137542f814d24cd28",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/omw-ja-20-16384.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 128,
+            "complete_bytes": 642092,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+            "frame_sha256": "ced971f60e6bfa8df4765200e2be03466f4c2664b7fa14b90b1505ec94f85b8a",
+            "lane": "final",
+            "prior_independent_encode_identical": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/symbol_bwt/results/frames/final-r8192-p64-consistent/omw-ja-20-65536.sbw1",
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 155112,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "9134b85c2fb8ab550c91e66641109b2b9ede0b13beb47d2a1cae2865d614f4fa",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 95276,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "885f388aff442ac119e9a2a60c16a82ea887f8a8edddba48e12b1daf82c6fe74",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "native"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 147933,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "900aece5f128199d47c542137088f96d451f2627cb307d61647bb44e4d4b93b5",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 104273,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "157b69a419568d875c8c1623ea6526f58e27b7f432367e11a294c402586c85f3",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 129276,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "4123904e70b32b29284c639c71c360f240fe83bae563f09645fce291b3d7334e",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 119684,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "d19c99633d7fe28b1bd7df501c5a7246fa4ac67e33e1fa07b0f2776e06ae15a6",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "blocks_independently_verified": 64,
+            "complete_bytes": 109073,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "0ff42e9389e65d0a087f50221820f93a2fe7e53a849839fab1dd973dd7a5fd54",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "blocks_independently_verified": 16,
+            "complete_bytes": 95942,
+            "corpus": "omw-ja-20",
+            "decoded_sha256": "67fd410130b185a4a6c564bb31d71f8d512798a7c82604fd8fa34667903b3e1c",
+            "frame_sha256": "86496d06a5eff58941e63b9604d83d13dd7e009c0855233e3677f80909b3fd22",
+            "lane": "untouched",
+            "prior_independent_encode_identical": null,
+            "variant": "symbol_bwt"
+          }
+        ],
+        "status": "pass",
+        "timing_disabled": true
+      }
+    },
+    {
+      "capture": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/memory_profile.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1"
+        ],
+        "cwd": "/Users/mileswirht/Downloads/dictionary",
+        "elapsed_ns": 11557404208,
+        "error": null,
+        "returncode": 0,
+        "status": "ok",
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 30126,
+          "sha256": "208defd9de333a07b361c0772e0f8fa8c1c2de4427b4e54011741f801c89b99b"
+        },
+        "timed_out": false
+      },
+      "name": "memory_profile",
+      "result": {
+        "query_state": "Fresh preparation for each first/middle query; no retained derived cache is carried between queries.",
+        "records": [
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 1141270,
+            "frame_sha256": "9eb872729e9ed71e2f88b877b32d606851dd7952f4742d6b33d430a3f4620196",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1382390,
+                "current_before_bytes": 1314818,
+                "index": 0,
+                "peak_bytes_including_prepared": 2110320,
+                "peak_increment_from_query_start_bytes": 795502,
+                "prepare_live_traced_bytes": 1316258,
+                "prepare_peak_traced_bytes": 1348807,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 1369896,
+                "current_before_bytes": 1302591,
+                "index": 255,
+                "peak_bytes_including_prepared": 2103112,
+                "peak_increment_from_query_start_bytes": 800521,
+                "prepare_live_traced_bytes": 1303855,
+                "prepare_peak_traced_bytes": 1336575,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 888374,
+            "frame_sha256": "579e02681d2683c95bd07f8642112ffe0dc5a9a7c8d49f3e8c7ee48b6450121e",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1080120,
+                "current_before_bytes": 963663,
+                "index": 0,
+                "peak_bytes_including_prepared": 3945697,
+                "peak_increment_from_query_start_bytes": 2982034,
+                "prepare_live_traced_bytes": 964927,
+                "prepare_peak_traced_bytes": 997647,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 1080008,
+                "current_before_bytes": 963599,
+                "index": 63,
+                "peak_bytes_including_prepared": 3948214,
+                "peak_increment_from_query_start_bytes": 2984615,
+                "prepare_live_traced_bytes": 964863,
+                "prepare_peak_traced_bytes": 997583,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 849886,
+            "frame_sha256": "a2c964fe9fd28f9ca48f8b788ace554fd244f4361a564dd34735c6e584010681",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3947255,
+                "current_before_bytes": 3930182,
+                "index": 0,
+                "peak_bytes_including_prepared": 3976318,
+                "peak_increment_from_query_start_bytes": 46136,
+                "prepare_live_traced_bytes": 4068486,
+                "prepare_peak_traced_bytes": 6636150,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 3944503,
+                "current_before_bytes": 3927430,
+                "index": 255,
+                "peak_bytes_including_prepared": 3974828,
+                "peak_increment_from_query_start_bytes": 47398,
+                "prepare_live_traced_bytes": 4065686,
+                "prepare_peak_traced_bytes": 6633358,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 835334,
+            "frame_sha256": "947cd5f15504626e1a2223182e6c3490ab19d7e376a2d4d012a204a861746630",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3873684,
+                "current_before_bytes": 3807459,
+                "index": 0,
+                "peak_bytes_including_prepared": 3989893,
+                "peak_increment_from_query_start_bytes": 182434,
+                "prepare_live_traced_bytes": 3946035,
+                "prepare_peak_traced_bytes": 6496740,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3873668,
+                "current_before_bytes": 3807443,
+                "index": 63,
+                "peak_bytes_including_prepared": 3992428,
+                "peak_increment_from_query_start_bytes": 184985,
+                "prepare_live_traced_bytes": 3946019,
+                "prepare_peak_traced_bytes": 6496732,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 814375,
+            "frame_sha256": "495e0c42d6e175b510f289a7371e292d60553193fb029c8cf62430d057e3f5c1",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 4096187,
+                "current_before_bytes": 4069558,
+                "index": 0,
+                "peak_bytes_including_prepared": 4578149,
+                "peak_increment_from_query_start_bytes": 508591,
+                "prepare_live_traced_bytes": 4207942,
+                "prepare_peak_traced_bytes": 6735542,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 4088383,
+                "current_before_bytes": 4067518,
+                "index": 255,
+                "peak_bytes_including_prepared": 4582995,
+                "peak_increment_from_query_start_bytes": 515477,
+                "prepare_live_traced_bytes": 4205854,
+                "prepare_peak_traced_bytes": 6733454,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 778935,
+            "frame_sha256": "628b7db41af670b5105d4e03c4a871683cfbb634450a2891edf841279f1f83fc",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3967388,
+                "current_before_bytes": 3897371,
+                "index": 0,
+                "peak_bytes_including_prepared": 4598372,
+                "peak_increment_from_query_start_bytes": 701001,
+                "prepare_live_traced_bytes": 4036027,
+                "prepare_peak_traced_bytes": 6549211,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3967356,
+                "current_before_bytes": 3897339,
+                "index": 63,
+                "peak_bytes_including_prepared": 4625322,
+                "peak_increment_from_query_start_bytes": 727983,
+                "prepare_live_traced_bytes": 4035995,
+                "prepare_peak_traced_bytes": 6549179,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 147325,
+            "frame_sha256": "29ea8e9dc17595a25aaafdd44cf01a2a6abcf1e99caf689ac27d57f25c6c40f3",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 275327,
+                "current_before_bytes": 208134,
+                "index": 0,
+                "peak_bytes_including_prepared": 1001206,
+                "peak_increment_from_query_start_bytes": 793072,
+                "prepare_live_traced_bytes": 209398,
+                "prepare_peak_traced_bytes": 242118,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 275247,
+                "current_before_bytes": 208086,
+                "index": 31,
+                "peak_bytes_including_prepared": 1002005,
+                "peak_increment_from_query_start_bytes": 793919,
+                "prepare_live_traced_bytes": 209350,
+                "prepare_peak_traced_bytes": 242070,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 116664,
+            "frame_sha256": "dd7caa49be98c86e57a1e3107af8652ce2d6b7d663d992c874cdfd91c3d4af5f",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 282954,
+                "current_before_bytes": 166641,
+                "index": 0,
+                "peak_bytes_including_prepared": 3160632,
+                "peak_increment_from_query_start_bytes": 2993991,
+                "prepare_live_traced_bytes": 167905,
+                "prepare_peak_traced_bytes": 200625,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 282842,
+                "current_before_bytes": 166577,
+                "index": 7,
+                "peak_bytes_including_prepared": 3157901,
+                "peak_increment_from_query_start_bytes": 2991324,
+                "prepare_live_traced_bytes": 167841,
+                "prepare_peak_traced_bytes": 200561,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 123548,
+            "frame_sha256": "aab1085baf853f0ccb3821880528f1db57574d8e0de7583b5c9c8ab78bc9037e",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1511936,
+                "current_before_bytes": 1494863,
+                "index": 0,
+                "peak_bytes_including_prepared": 1541730,
+                "peak_increment_from_query_start_bytes": 46867,
+                "prepare_live_traced_bytes": 1632927,
+                "prepare_peak_traced_bytes": 2665199,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 1511920,
+                "current_before_bytes": 1494847,
+                "index": 31,
+                "peak_bytes_including_prepared": 1541951,
+                "peak_increment_from_query_start_bytes": 47104,
+                "prepare_live_traced_bytes": 1632911,
+                "prepare_peak_traced_bytes": 2665191,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 121776,
+            "frame_sha256": "f9bd1dd984876a3372e991aa08b5a83b766186bad38d9c83f9885a42be6517c8",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1527813,
+                "current_before_bytes": 1461588,
+                "index": 0,
+                "peak_bytes_including_prepared": 1653471,
+                "peak_increment_from_query_start_bytes": 191883,
+                "prepare_live_traced_bytes": 1601228,
+                "prepare_peak_traced_bytes": 2605825,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 1527797,
+                "current_before_bytes": 1461572,
+                "index": 7,
+                "peak_bytes_including_prepared": 1654297,
+                "peak_increment_from_query_start_bytes": 192725,
+                "prepare_live_traced_bytes": 1601212,
+                "prepare_peak_traced_bytes": 2605817,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 123840,
+            "frame_sha256": "046c9d0d8900a72b9514418b049f06d246cb75e185e6cb419f598795001cd220",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1573408,
+                "current_before_bytes": 1552543,
+                "index": 0,
+                "peak_bytes_including_prepared": 1787292,
+                "peak_increment_from_query_start_bytes": 234749,
+                "prepare_live_traced_bytes": 1690831,
+                "prepare_peak_traced_bytes": 2727183,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 1573376,
+                "current_before_bytes": 1552511,
+                "index": 31,
+                "peak_bytes_including_prepared": 1786258,
+                "peak_increment_from_query_start_bytes": 233747,
+                "prepare_live_traced_bytes": 1690799,
+                "prepare_peak_traced_bytes": 2727151,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "freedict-eng-spa",
+            "frame_bytes_loaded_before_trace": 119716,
+            "frame_sha256": "6821a88d69f72a77b3731db12661f8ac6bf82bdbfad14375614757ed19752164",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1583997,
+                "current_before_bytes": 1513980,
+                "index": 0,
+                "peak_bytes_including_prepared": 2326355,
+                "peak_increment_from_query_start_bytes": 812375,
+                "prepare_live_traced_bytes": 1653428,
+                "prepare_peak_traced_bytes": 2677108,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 1583965,
+                "current_before_bytes": 1513948,
+                "index": 7,
+                "peak_bytes_including_prepared": 2319149,
+                "peak_increment_from_query_start_bytes": 805201,
+                "prepare_live_traced_bytes": 1653428,
+                "prepare_peak_traced_bytes": 2677076,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 2343433,
+            "frame_sha256": "548696a9e9bc984825befb4f66d7c9ab23082a47ccab47baafcb6c75eccc4641",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2571483,
+                "current_before_bytes": 2504402,
+                "index": 0,
+                "peak_bytes_including_prepared": 3328313,
+                "peak_increment_from_query_start_bytes": 823911,
+                "prepare_live_traced_bytes": 2505666,
+                "prepare_peak_traced_bytes": 2538386,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 2571403,
+                "current_before_bytes": 2504354,
+                "index": 255,
+                "peak_bytes_including_prepared": 3347987,
+                "peak_increment_from_query_start_bytes": 843633,
+                "prepare_live_traced_bytes": 2505618,
+                "prepare_peak_traced_bytes": 2538338,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 1960472,
+            "frame_sha256": "ce89a2da06bdcc40541eee8f8af02ab2afb52ff49dd0ee53edb9d62e27a1c798",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2151498,
+                "current_before_bytes": 2035329,
+                "index": 0,
+                "peak_bytes_including_prepared": 5164495,
+                "peak_increment_from_query_start_bytes": 3129166,
+                "prepare_live_traced_bytes": 2036593,
+                "prepare_peak_traced_bytes": 2069313,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 2151386,
+                "current_before_bytes": 2035265,
+                "index": 63,
+                "peak_bytes_including_prepared": 5178726,
+                "peak_increment_from_query_start_bytes": 3143461,
+                "prepare_live_traced_bytes": 2036529,
+                "prepare_peak_traced_bytes": 2069249,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 1935401,
+            "frame_sha256": "2c7b9246c483aa08cd2cb246fc2ca06ee4a06b806e23329d1f6661a0f99f6542",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3886998,
+                "current_before_bytes": 3869925,
+                "index": 0,
+                "peak_bytes_including_prepared": 3930449,
+                "peak_increment_from_query_start_bytes": 60524,
+                "prepare_live_traced_bytes": 4006901,
+                "prepare_peak_traced_bytes": 6601698,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 3886982,
+                "current_before_bytes": 3869909,
+                "index": 255,
+                "peak_bytes_including_prepared": 3935217,
+                "peak_increment_from_query_start_bytes": 65308,
+                "prepare_live_traced_bytes": 4006885,
+                "prepare_peak_traced_bytes": 6601690,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 1924994,
+            "frame_sha256": "86d4deaa20212665201321cc4074d126cc128f6b4ab9fec12205b5a46aee6721",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3824844,
+                "current_before_bytes": 3758619,
+                "index": 0,
+                "peak_bytes_including_prepared": 4007529,
+                "peak_increment_from_query_start_bytes": 248910,
+                "prepare_live_traced_bytes": 3895515,
+                "prepare_peak_traced_bytes": 6477374,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3824828,
+                "current_before_bytes": 3758603,
+                "index": 63,
+                "peak_bytes_including_prepared": 4006795,
+                "peak_increment_from_query_start_bytes": 248192,
+                "prepare_live_traced_bytes": 3895499,
+                "prepare_peak_traced_bytes": 6477366,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 1860752,
+            "frame_sha256": "1b4489edcac9097b46d2789536cdd288644cf2c42a53df72617a4d14b34ed454",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 4024830,
+                "current_before_bytes": 4003965,
+                "index": 0,
+                "peak_bytes_including_prepared": 4567136,
+                "peak_increment_from_query_start_bytes": 563171,
+                "prepare_live_traced_bytes": 4140933,
+                "prepare_peak_traced_bytes": 6684949,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 4024798,
+                "current_before_bytes": 4003933,
+                "index": 255,
+                "peak_bytes_including_prepared": 4596504,
+                "peak_increment_from_query_start_bytes": 592571,
+                "prepare_live_traced_bytes": 4140901,
+                "prepare_peak_traced_bytes": 6684917,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 1826256,
+            "frame_sha256": "881bb14f9f8125f54408f40c3f9e8d3a04b2160b08f55880e82f7ee1bf157a95",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3920116,
+                "current_before_bytes": 3850099,
+                "index": 0,
+                "peak_bytes_including_prepared": 5518340,
+                "peak_increment_from_query_start_bytes": 1668241,
+                "prepare_live_traced_bytes": 3987107,
+                "prepare_peak_traced_bytes": 6531779,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3920092,
+                "current_before_bytes": 3850075,
+                "index": 63,
+                "peak_bytes_including_prepared": 5542470,
+                "peak_increment_from_query_start_bytes": 1692395,
+                "prepare_live_traced_bytes": 3987051,
+                "prepare_peak_traced_bytes": 6531755,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 290911,
+            "frame_sha256": "994011ec6c625f22215a11b760333b53e4deca936cca38b198ff346dca7bb430",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 418281,
+                "current_before_bytes": 351328,
+                "index": 0,
+                "peak_bytes_including_prepared": 1181626,
+                "peak_increment_from_query_start_bytes": 830298,
+                "prepare_live_traced_bytes": 352592,
+                "prepare_peak_traced_bytes": 385312,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 418241,
+                "current_before_bytes": 351296,
+                "index": 31,
+                "peak_bytes_including_prepared": 1186275,
+                "peak_increment_from_query_start_bytes": 834979,
+                "prepare_live_traced_bytes": 352560,
+                "prepare_peak_traced_bytes": 385280,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 242643,
+            "frame_sha256": "ca06296cdad6937c90f5d9796dc99b15b92a91509947e095c3c6a3d8c4b98ce6",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 408341,
+                "current_before_bytes": 292244,
+                "index": 0,
+                "peak_bytes_including_prepared": 3421341,
+                "peak_increment_from_query_start_bytes": 3129097,
+                "prepare_live_traced_bytes": 293508,
+                "prepare_peak_traced_bytes": 326228,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 408325,
+                "current_before_bytes": 292228,
+                "index": 7,
+                "peak_bytes_including_prepared": 3420012,
+                "peak_increment_from_query_start_bytes": 3127784,
+                "prepare_live_traced_bytes": 293492,
+                "prepare_peak_traced_bytes": 326212,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 259063,
+            "frame_sha256": "ecff49e9c98e98b5385434720279249ae8e5b8efd2411ddddb42c4710f8ac0c9",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2766332,
+                "current_before_bytes": 2749259,
+                "index": 0,
+                "peak_bytes_including_prepared": 2807815,
+                "peak_increment_from_query_start_bytes": 58556,
+                "prepare_live_traced_bytes": 2887275,
+                "prepare_peak_traced_bytes": 4803660,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 2766324,
+                "current_before_bytes": 2749251,
+                "index": 31,
+                "peak_bytes_including_prepared": 2810873,
+                "peak_increment_from_query_start_bytes": 61622,
+                "prepare_live_traced_bytes": 2887267,
+                "prepare_peak_traced_bytes": 4803660,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 257534,
+            "frame_sha256": "58713500cadd4c59917bc72059ce7b3bc42964f627718393143d65fab8b44fe6",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2790640,
+                "current_before_bytes": 2724415,
+                "index": 0,
+                "peak_bytes_including_prepared": 2971482,
+                "peak_increment_from_query_start_bytes": 247067,
+                "prepare_live_traced_bytes": 2862567,
+                "prepare_peak_traced_bytes": 4770062,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 2790632,
+                "current_before_bytes": 2724407,
+                "index": 7,
+                "peak_bytes_including_prepared": 2964445,
+                "peak_increment_from_query_start_bytes": 240038,
+                "prepare_live_traced_bytes": 2862559,
+                "prepare_peak_traced_bytes": 4770062,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 256645,
+            "frame_sha256": "6d1c8dd6a1d32d90cf01f56fc3b1e5d721eb8728aba7620a417ab27231bcf71a",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2843580,
+                "current_before_bytes": 2822715,
+                "index": 0,
+                "peak_bytes_including_prepared": 3272580,
+                "peak_increment_from_query_start_bytes": 449865,
+                "prepare_live_traced_bytes": 2960723,
+                "prepare_peak_traced_bytes": 4859091,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 2843556,
+                "current_before_bytes": 2822691,
+                "index": 31,
+                "peak_bytes_including_prepared": 3282032,
+                "peak_increment_from_query_start_bytes": 459341,
+                "prepare_live_traced_bytes": 2960731,
+                "prepare_peak_traced_bytes": 4859067,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "gcide-054",
+            "frame_bytes_loaded_before_trace": 251473,
+            "frame_sha256": "daedf08b2ca6be19eac41906e32e8d8d5fa7f998eea68646e131949818d61715",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2864416,
+                "current_before_bytes": 2794399,
+                "index": 0,
+                "peak_bytes_including_prepared": 4407458,
+                "peak_increment_from_query_start_bytes": 1613059,
+                "prepare_live_traced_bytes": 2932631,
+                "prepare_peak_traced_bytes": 4827159,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 2864392,
+                "current_before_bytes": 2794375,
+                "index": 7,
+                "peak_bytes_including_prepared": 4387170,
+                "peak_increment_from_query_start_bytes": 1592795,
+                "prepare_live_traced_bytes": 2932607,
+                "prepare_peak_traced_bytes": 4827135,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 1085073,
+            "frame_sha256": "e3ba7d06a7704a79190a0cba5b066f50bfc006a8fdddaa698a7de49d08445e10",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 1312627,
+                "current_before_bytes": 1245714,
+                "index": 0,
+                "peak_bytes_including_prepared": 2032903,
+                "peak_increment_from_query_start_bytes": 787189,
+                "prepare_live_traced_bytes": 1246978,
+                "prepare_peak_traced_bytes": 1279698,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 1312611,
+                "current_before_bytes": 1245698,
+                "index": 255,
+                "peak_bytes_including_prepared": 2052412,
+                "peak_increment_from_query_start_bytes": 806714,
+                "prepare_live_traced_bytes": 1246962,
+                "prepare_peak_traced_bytes": 1279682,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 744565,
+            "frame_sha256": "4c4c4bb4f969430b6e27233704edcd850318fc60daaa20b45bff41d06aa6befa",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 935223,
+                "current_before_bytes": 819158,
+                "index": 0,
+                "peak_bytes_including_prepared": 3800894,
+                "peak_increment_from_query_start_bytes": 2981736,
+                "prepare_live_traced_bytes": 820422,
+                "prepare_peak_traced_bytes": 853142,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 935207,
+                "current_before_bytes": 819142,
+                "index": 63,
+                "peak_bytes_including_prepared": 3816407,
+                "peak_increment_from_query_start_bytes": 2997265,
+                "prepare_live_traced_bytes": 820406,
+                "prepare_peak_traced_bytes": 853126,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 1334367,
+            "frame_sha256": "1c2a18785be3a1d964977553fd2c0946a7282bf8805429b916cc91b730c990fd",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3673578,
+                "current_before_bytes": 3656505,
+                "index": 0,
+                "peak_bytes_including_prepared": 3715042,
+                "peak_increment_from_query_start_bytes": 58537,
+                "prepare_live_traced_bytes": 3797529,
+                "prepare_peak_traced_bytes": 6215935,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 3673578,
+                "current_before_bytes": 3656505,
+                "index": 255,
+                "peak_bytes_including_prepared": 3715077,
+                "peak_increment_from_query_start_bytes": 58572,
+                "prepare_live_traced_bytes": 3797529,
+                "prepare_peak_traced_bytes": 6215935,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 1337156,
+            "frame_sha256": "9573da3fc9c6147af54174abbcb9326a0bc7a966667ca3538af0650846e0a7e9",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3565720,
+                "current_before_bytes": 3499463,
+                "index": 0,
+                "peak_bytes_including_prepared": 3710199,
+                "peak_increment_from_query_start_bytes": 210736,
+                "prepare_live_traced_bytes": 3639463,
+                "prepare_peak_traced_bytes": 6015404,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3565720,
+                "current_before_bytes": 3499463,
+                "index": 63,
+                "peak_bytes_including_prepared": 3699495,
+                "peak_increment_from_query_start_bytes": 200032,
+                "prepare_live_traced_bytes": 3639463,
+                "prepare_peak_traced_bytes": 6015404,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 778911,
+            "frame_sha256": "7e9e319b4e3092264aa51423c7f626bfe309e8519903cf7137542f814d24cd28",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3832498,
+                "current_before_bytes": 3811633,
+                "index": 0,
+                "peak_bytes_including_prepared": 4294430,
+                "peak_increment_from_query_start_bytes": 482797,
+                "prepare_live_traced_bytes": 3952713,
+                "prepare_peak_traced_bytes": 6356985,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 3832474,
+                "current_before_bytes": 3811609,
+                "index": 255,
+                "peak_bytes_including_prepared": 4320080,
+                "peak_increment_from_query_start_bytes": 508471,
+                "prepare_live_traced_bytes": 3952721,
+                "prepare_peak_traced_bytes": 6356961,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 642092,
+            "frame_sha256": "ced971f60e6bfa8df4765200e2be03466f4c2664b7fa14b90b1505ec94f85b8a",
+            "lane": "final",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 3694896,
+                "current_before_bytes": 3624879,
+                "index": 0,
+                "peak_bytes_including_prepared": 4420758,
+                "peak_increment_from_query_start_bytes": 795879,
+                "prepare_live_traced_bytes": 3764823,
+                "prepare_peak_traced_bytes": 6147847,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 3694872,
+                "current_before_bytes": 3624855,
+                "index": 63,
+                "peak_bytes_including_prepared": 4335482,
+                "peak_increment_from_query_start_bytes": 710627,
+                "prepare_live_traced_bytes": 3764799,
+                "prepare_peak_traced_bytes": 6147823,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 147933,
+            "frame_sha256": "900aece5f128199d47c542137088f96d451f2627cb307d61647bb44e4d4b93b5",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 275071,
+                "current_before_bytes": 208158,
+                "index": 0,
+                "peak_bytes_including_prepared": 1009154,
+                "peak_increment_from_query_start_bytes": 800996,
+                "prepare_live_traced_bytes": 209422,
+                "prepare_peak_traced_bytes": 242142,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 275055,
+                "current_before_bytes": 208142,
+                "index": 31,
+                "peak_bytes_including_prepared": 1003235,
+                "peak_increment_from_query_start_bytes": 795093,
+                "prepare_live_traced_bytes": 209406,
+                "prepare_peak_traced_bytes": 242126,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 104273,
+            "frame_sha256": "157b69a419568d875c8c1623ea6526f58e27b7f432367e11a294c402586c85f3",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 269763,
+                "current_before_bytes": 153698,
+                "index": 0,
+                "peak_bytes_including_prepared": 3126495,
+                "peak_increment_from_query_start_bytes": 2972797,
+                "prepare_live_traced_bytes": 154962,
+                "prepare_peak_traced_bytes": 187682,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 269755,
+                "current_before_bytes": 153690,
+                "index": 7,
+                "peak_bytes_including_prepared": 3155266,
+                "peak_increment_from_query_start_bytes": 3001576,
+                "prepare_live_traced_bytes": 154954,
+                "prepare_peak_traced_bytes": 187674,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "F"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 129276,
+            "frame_sha256": "4123904e70b32b29284c639c71c360f240fe83bae563f09645fce291b3d7334e",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2249078,
+                "current_before_bytes": 2231973,
+                "index": 0,
+                "peak_bytes_including_prepared": 2274538,
+                "peak_increment_from_query_start_bytes": 42565,
+                "prepare_live_traced_bytes": 2381453,
+                "prepare_peak_traced_bytes": 3807265,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 2249046,
+                "current_before_bytes": 2231973,
+                "index": 31,
+                "peak_bytes_including_prepared": 2270412,
+                "peak_increment_from_query_start_bytes": 38439,
+                "prepare_live_traced_bytes": 2381453,
+                "prepare_peak_traced_bytes": 3807265,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 119684,
+            "frame_sha256": "d19c99633d7fe28b1bd7df501c5a7246fa4ac67e33e1fa07b0f2776e06ae15a6",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2142909,
+                "current_before_bytes": 2076652,
+                "index": 0,
+                "peak_bytes_including_prepared": 2234819,
+                "peak_increment_from_query_start_bytes": 158167,
+                "prepare_live_traced_bytes": 2223268,
+                "prepare_peak_traced_bytes": 3567043,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 2142909,
+                "current_before_bytes": 2076652,
+                "index": 7,
+                "peak_bytes_including_prepared": 2255376,
+                "peak_increment_from_query_start_bytes": 178724,
+                "prepare_live_traced_bytes": 2223268,
+                "prepare_peak_traced_bytes": 3567043,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "grammar_input"
+          },
+          {
+            "block_bytes": 16384,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 109073,
+            "frame_sha256": "0ff42e9389e65d0a087f50221820f93a2fe7e53a849839fab1dd973dd7a5fd54",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2397606,
+                "current_before_bytes": 2376741,
+                "index": 0,
+                "peak_bytes_including_prepared": 2683574,
+                "peak_increment_from_query_start_bytes": 306833,
+                "prepare_live_traced_bytes": 2526309,
+                "prepare_peak_traced_bytes": 4046533,
+                "query": "first_block",
+                "raw_bytes": 16384
+              },
+              {
+                "current_after_bytes": 2397550,
+                "current_before_bytes": 2376717,
+                "index": 31,
+                "peak_bytes_including_prepared": 2658346,
+                "peak_increment_from_query_start_bytes": 281629,
+                "prepare_live_traced_bytes": 2526285,
+                "prepare_peak_traced_bytes": 4046509,
+                "query": "random_block",
+                "raw_bytes": 16384
+              }
+            ],
+            "variant": "symbol_bwt"
+          },
+          {
+            "block_bytes": 65536,
+            "corpus": "omw-ja-20",
+            "frame_bytes_loaded_before_trace": 95942,
+            "frame_sha256": "86496d06a5eff58941e63b9604d83d13dd7e009c0855233e3677f80909b3fd22",
+            "lane": "untouched",
+            "selected_block_queries": [
+              {
+                "current_after_bytes": 2274909,
+                "current_before_bytes": 2204892,
+                "index": 0,
+                "peak_bytes_including_prepared": 2592713,
+                "peak_increment_from_query_start_bytes": 387821,
+                "prepare_live_traced_bytes": 2351596,
+                "prepare_peak_traced_bytes": 3763772,
+                "query": "first_block",
+                "raw_bytes": 65536
+              },
+              {
+                "current_after_bytes": 2274893,
+                "current_before_bytes": 2204876,
+                "index": 7,
+                "peak_bytes_including_prepared": 2762857,
+                "peak_increment_from_query_start_bytes": 557981,
+                "prepare_live_traced_bytes": 2351580,
+                "prepare_peak_traced_bytes": 3763756,
+                "query": "random_block",
+                "raw_bytes": 65536
+              }
+            ],
+            "variant": "symbol_bwt"
+          }
+        ],
+        "scope": "Extra tracemalloc-visible Python allocations after frame/modules load; excludes frame, interpreter baseline, untraced native allocations, and full-output decode peak.",
+        "status": "pass",
+        "timing_disabled": true
+      }
+    },
+    {
+      "capture": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/work_profile.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1"
+        ],
+        "cwd": "/Users/mileswirht/Downloads/dictionary",
+        "elapsed_ns": 7679019959,
+        "error": null,
+        "returncode": 0,
+        "status": "ok",
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 9708,
+          "sha256": "93ab41135de56de3a061c0f22f1da0af6157fbd786e5acf0143db298d7c3c8e8"
+        },
+        "timed_out": false
+      },
+      "name": "work_profile",
+      "result": {
+        "records": [
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 15.77203280525546,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 531866,
+            "corpus": "freedict-eng-spa",
+            "event_count": 519825,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/freedict-eng-spa.final.symbol_bwt.b16384.frame",
+            "frame_sha256": "495e0c42d6e175b510f289a7371e292d60553193fb029c8cf62430d057e3f5c1",
+            "huffman_bits": 5995881,
+            "ideal_u16_prefix_shift_bytes": 2030162410,
+            "lane": "final",
+            "mtf_alphabet": 8332,
+            "mtf_rank_max": 8331,
+            "mtf_rank_median": 812,
+            "mtf_rank_p95": 6963,
+            "mtf_rank_sum": 1015081205,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 16.09374676249055,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 521234,
+            "corpus": "freedict-eng-spa",
+            "event_count": 508831,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/freedict-eng-spa.final.symbol_bwt.b65536.frame",
+            "frame_sha256": "628b7db41af670b5105d4e03c4a871683cfbb634450a2891edf841279f1f83fc",
+            "huffman_bits": 5830284,
+            "ideal_u16_prefix_shift_bytes": 1839830934,
+            "lane": "final",
+            "mtf_alphabet": 8275,
+            "mtf_rank_max": 8274,
+            "mtf_rank_median": 719,
+            "mtf_rank_p95": 6747,
+            "mtf_rank_sum": 919915467,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 13.471780047536456,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 77835,
+            "corpus": "freedict-eng-spa",
+            "event_count": 76932,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/freedict-eng-spa.untouched.symbol_bwt.b16384.frame",
+            "frame_sha256": "046c9d0d8900a72b9514418b049f06d246cb75e185e6cb419f598795001cd220",
+            "huffman_bits": 828918,
+            "ideal_u16_prefix_shift_bytes": 143926922,
+            "lane": "untouched",
+            "mtf_alphabet": 3413,
+            "mtf_rank_max": 3412,
+            "mtf_rank_median": 525,
+            "mtf_rank_p95": 2929,
+            "mtf_rank_sum": 71963461,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 13.514841403843427,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 77587,
+            "corpus": "freedict-eng-spa",
+            "event_count": 76648,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/freedict-eng-spa.untouched.symbol_bwt.b65536.frame",
+            "frame_sha256": "6821a88d69f72a77b3731db12661f8ac6bf82bdbfad14375614757ed19752164",
+            "huffman_bits": 811701,
+            "ideal_u16_prefix_shift_bytes": 127074840,
+            "lane": "untouched",
+            "mtf_alphabet": 3367,
+            "mtf_rank_max": 3366,
+            "mtf_rank_median": 438,
+            "mtf_rank_p95": 2853,
+            "mtf_rank_sum": 63537420,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          },
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 6.6877574596017135,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 1254323,
+            "corpus": "gcide-054",
+            "event_count": 1226953,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/gcide-054.final.symbol_bwt.b16384.frame",
+            "frame_sha256": "1b4489edcac9097b46d2789536cdd288644cf2c42a53df72617a4d14b34ed454",
+            "huffman_bits": 14367241,
+            "ideal_u16_prefix_shift_bytes": 4711987040,
+            "lane": "final",
+            "mtf_alphabet": 8392,
+            "mtf_rank_max": 8391,
+            "mtf_rank_median": 831,
+            "mtf_rank_p95": 6874,
+            "mtf_rank_sum": 2355993520,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 6.689154674294153,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 1254061,
+            "corpus": "gcide-054",
+            "event_count": 1226688,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/gcide-054.final.symbol_bwt.b65536.frame",
+            "frame_sha256": "881bb14f9f8125f54408f40c3f9e8d3a04b2160b08f55880e82f7ee1bf157a95",
+            "huffman_bits": 14206361,
+            "ideal_u16_prefix_shift_bytes": 4484421506,
+            "lane": "final",
+            "mtf_alphabet": 8387,
+            "mtf_rank_max": 8386,
+            "mtf_rank_median": 827,
+            "mtf_rank_p95": 6727,
+            "mtf_rank_sum": 2242210753,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 6.746725003217089,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 155420,
+            "corpus": "gcide-054",
+            "event_count": 153400,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/gcide-054.untouched.symbol_bwt.b16384.frame",
+            "frame_sha256": "6d1c8dd6a1d32d90cf01f56fc3b1e5d721eb8728aba7620a417ab27231bcf71a",
+            "huffman_bits": 1766590,
+            "ideal_u16_prefix_shift_bytes": 476667268,
+            "lane": "untouched",
+            "mtf_alphabet": 6231,
+            "mtf_rank_max": 6230,
+            "mtf_rank_median": 775,
+            "mtf_rank_p95": 5263,
+            "mtf_rank_sum": 238333634,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 6.750981831292412,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 155322,
+            "corpus": "gcide-054",
+            "event_count": 153092,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/gcide-054.untouched.symbol_bwt.b65536.frame",
+            "frame_sha256": "daedf08b2ca6be19eac41906e32e8d8d5fa7f998eea68646e131949818d61715",
+            "huffman_bits": 1740231,
+            "ideal_u16_prefix_shift_bytes": 445559234,
+            "lane": "untouched",
+            "mtf_alphabet": 6211,
+            "mtf_rank_max": 6210,
+            "mtf_rank_median": 743,
+            "mtf_rank_p95": 5107,
+            "mtf_rank_sum": 222779617,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          },
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 9.601465067301529,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 873680,
+            "corpus": "omw-ja-20",
+            "event_count": 680013,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/omw-ja-20.final.symbol_bwt.b16384.frame",
+            "frame_sha256": "7e9e319b4e3092264aa51423c7f626bfe309e8519903cf7137542f814d24cd28",
+            "huffman_bits": 5710049,
+            "ideal_u16_prefix_shift_bytes": 1286301832,
+            "lane": "final",
+            "mtf_alphabet": 7866,
+            "mtf_rank_max": 7865,
+            "mtf_rank_median": 1,
+            "mtf_rank_p95": 4914,
+            "mtf_rank_sum": 643150916,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 9.630123524819764,
+            "coded_raw_bytes": 8388608,
+            "coded_root_count": 871080,
+            "corpus": "omw-ja-20",
+            "event_count": 594313,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/omw-ja-20.final.symbol_bwt.b65536.frame",
+            "frame_sha256": "ced971f60e6bfa8df4765200e2be03466f4c2664b7fa14b90b1505ec94f85b8a",
+            "huffman_bits": 4733295,
+            "ideal_u16_prefix_shift_bytes": 960710910,
+            "lane": "final",
+            "mtf_alphabet": 7786,
+            "mtf_rank_max": 7785,
+            "mtf_rank_median": 0,
+            "mtf_rank_p95": 4066,
+            "mtf_rank_sum": 480355455,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 8388608
+          },
+          {
+            "block_bytes": 16384,
+            "bytes_per_coded_root": 14.676482938163089,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 71446,
+            "corpus": "omw-ja-20",
+            "event_count": 63972,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/omw-ja-20.untouched.symbol_bwt.b16384.frame",
+            "frame_sha256": "0ff42e9389e65d0a087f50221820f93a2fe7e53a849839fab1dd973dd7a5fd54",
+            "huffman_bits": 598269,
+            "ideal_u16_prefix_shift_bytes": 114055528,
+            "lane": "untouched",
+            "mtf_alphabet": 4995,
+            "mtf_rank_max": 4994,
+            "mtf_rank_median": 95,
+            "mtf_rank_p95": 3971,
+            "mtf_rank_sum": 57027764,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          },
+          {
+            "block_bytes": 65536,
+            "bytes_per_coded_root": 16.13367593433139,
+            "coded_raw_bytes": 1048576,
+            "coded_root_count": 64993,
+            "corpus": "omw-ja-20",
+            "event_count": 57368,
+            "frame": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1/frames/omw-ja-20.untouched.symbol_bwt.b65536.frame",
+            "frame_sha256": "86496d06a5eff58941e63b9604d83d13dd7e009c0855233e3677f80909b3fd22",
+            "huffman_bits": 522730,
+            "ideal_u16_prefix_shift_bytes": 84610160,
+            "lane": "untouched",
+            "mtf_alphabet": 4666,
+            "mtf_rank_max": 4665,
+            "mtf_rank_median": 90,
+            "mtf_rank_p95": 3490,
+            "mtf_rank_sum": 42305080,
+            "note": "Logical copied-prefix volume only; excludes reads/cache effects and is not a native speed or memory-bandwidth prediction.",
+            "raw_block_count": 0,
+            "raw_bytes": 1048576
+          }
+        ],
+        "status": "pass",
+        "timing_disabled": true
+      }
+    },
+    {
+      "capture": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/model_budget_profile.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1",
+          "--streams-dir",
+          "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics"
+        ],
+        "cwd": "/Users/mileswirht/Downloads/dictionary",
+        "elapsed_ns": 104526125,
+        "error": null,
+        "returncode": 0,
+        "status": "ok",
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 12519,
+          "sha256": "09661c89cbc6dfa1b95cc431d624e2e9046fbe8e7186d199ef539aa75da41c53"
+        },
+        "timed_out": false
+      },
+      "name": "model_budget_profile",
+      "result": {
+        "codecs": {
+          "bz2": "Python standard-library libbz2 binding, level 9",
+          "zlib": "Python standard-library zlib binding 1.2.12, level 9"
+        },
+        "diagnostic_only": true,
+        "not_a_candidate_frame_or_native_decoder_claim": true,
+        "records": [
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 27401,
+            "corpus": "freedict-eng-spa",
+            "fixed_other_candidate_bytes": 768709,
+            "frame_sha256": "495e0c42d6e175b510f289a7371e292d60553193fb029c8cf62430d057e3f5c1",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 420293,
+            "model_sha256": "370739e8156720d240bc5038c7e0a8174fddd45a5b74759024a2ae452b3a36b1",
+            "native_complete_bytes": 1189002,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27401,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.final.b16384.model.bz2",
+                "sha256": "0ffa4349d9679a72756ed2129512839b019158651a8bd5ae9b945f14afc90c2d"
+              },
+              "zlib": {
+                "bytes": 29491,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.final.b16384.model.zlib",
+                "sha256": "ed9d641fbb0835486b22045480b5eb86802774cad127f5c6fb983afc31758dea"
+              }
+            },
+            "stored_model_bytes": 45666,
+            "zlib_complete_model_stream_bytes": 29491
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 27217,
+            "corpus": "freedict-eng-spa",
+            "fixed_other_candidate_bytes": 733636,
+            "frame_sha256": "628b7db41af670b5105d4e03c4a871683cfbb634450a2891edf841279f1f83fc",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 165772,
+            "model_sha256": "72639198ac6d27e28f3d15fb8c34754a290dfce5f54d3d56b2e5946b30e1a4c6",
+            "native_complete_bytes": 899408,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27217,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.final.b65536.model.bz2",
+                "sha256": "5d5851a65317d104adf07be31afe92b6194e874123c8bcd0c1b63357670cee10"
+              },
+              "zlib": {
+                "bytes": 29187,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.final.b65536.model.zlib",
+                "sha256": "55284805652da9200f22b7db5e1dac5ad91c7506bd283af3c9752cdefe0aa9ba"
+              }
+            },
+            "stored_model_bytes": 45299,
+            "zlib_complete_model_stream_bytes": 29187
+          },
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 10597,
+            "corpus": "freedict-eng-spa",
+            "fixed_other_candidate_bytes": 106062,
+            "frame_sha256": "046c9d0d8900a72b9514418b049f06d246cb75e185e6cb419f598795001cd220",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 44384,
+            "model_sha256": "a6eaefd832ce097a1a67790cf49770760ada851a72ded4548301f4e5a218f20f",
+            "native_complete_bytes": 150446,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 10597,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.untouched.b16384.model.bz2",
+                "sha256": "7f4dba04a0bda335bd6ada792ab9cafed75be3c83c60eed010d1b72ded478ae3"
+              },
+              "zlib": {
+                "bytes": 10988,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.untouched.b16384.model.zlib",
+                "sha256": "27a351f24f9ef9a9152b4ee1dff263313c1690b1fe7bfc5f10f6a3c0d63a49df"
+              }
+            },
+            "stored_model_bytes": 17778,
+            "zlib_complete_model_stream_bytes": 10988
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 10438,
+            "corpus": "freedict-eng-spa",
+            "fixed_other_candidate_bytes": 102117,
+            "frame_sha256": "6821a88d69f72a77b3731db12661f8ac6bf82bdbfad14375614757ed19752164",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 13043,
+            "model_sha256": "e189bdca6bc178446bd66093e2f1cd8d83827287d75276e71f995f6b3dea4ed7",
+            "native_complete_bytes": 115160,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 10438,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.untouched.b65536.model.bz2",
+                "sha256": "385cb3d2b694f03167a7ba0e0eaa03e92b2267e55b787e91973b5dafc4bcb100"
+              },
+              "zlib": {
+                "bytes": 10852,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/freedict-eng-spa.untouched.b65536.model.zlib",
+                "sha256": "760a9ca482a47e838f13ae267c6c5063d99a1dfef9b5c96411e965c37bd65978"
+              }
+            },
+            "stored_model_bytes": 17599,
+            "zlib_complete_model_stream_bytes": 10852
+          },
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 27045,
+            "corpus": "gcide-054",
+            "fixed_other_candidate_bytes": 1815129,
+            "frame_sha256": "1b4489edcac9097b46d2789536cdd288644cf2c42a53df72617a4d14b34ed454",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 547190,
+            "model_sha256": "7737b2f37694c54caabd9a8bd06209004669e467e6dcef0882c28db04f6dd703",
+            "native_complete_bytes": 2362319,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27045,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.final.b16384.model.bz2",
+                "sha256": "fd45e16b98a2dfd77dd8e3230835e10e651962c5098ffcafb9fb6a56a172a02c"
+              },
+              "zlib": {
+                "bytes": 29281,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.final.b16384.model.zlib",
+                "sha256": "09af334e59f60e40a3e99c6c0704fa60f67650d95ddbdb41d56a2c8bcfea8257"
+              }
+            },
+            "stored_model_bytes": 45623,
+            "zlib_complete_model_stream_bytes": 29281
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 27035,
+            "corpus": "gcide-054",
+            "fixed_other_candidate_bytes": 1780643,
+            "frame_sha256": "881bb14f9f8125f54408f40c3f9e8d3a04b2160b08f55880e82f7ee1bf157a95",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 124917,
+            "model_sha256": "d1a9e014d470d8b6e2a9b20c963805b2aa3279494e52b8d1402ad08c65d55c1c",
+            "native_complete_bytes": 1905560,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27035,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.final.b65536.model.bz2",
+                "sha256": "8332422a7ed135812b420ebd166a70fdb8a26a02110a12d0832aaa62d1df7e7f"
+              },
+              "zlib": {
+                "bytes": 29222,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.final.b65536.model.zlib",
+                "sha256": "5cc43ff55f18fc638c4ba167599da6c5acb3902f30fbb128c9755d2e363639cb"
+              }
+            },
+            "stored_model_bytes": 45613,
+            "zlib_complete_model_stream_bytes": 29222
+          },
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 20764,
+            "corpus": "gcide-054",
+            "fixed_other_candidate_bytes": 223274,
+            "frame_sha256": "6d1c8dd6a1d32d90cf01f56fc3b1e5d721eb8728aba7620a417ab27231bcf71a",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 69373,
+            "model_sha256": "4a77069dde1a6f3092364290464ca258186cad98ad9d59d4c8101b4e8bac7890",
+            "native_complete_bytes": 292647,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 20764,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.untouched.b16384.model.bz2",
+                "sha256": "5d1b8f8376ddce4f210ac7452e2a3e8db430323844490060fa9a1f27c29a74c0"
+              },
+              "zlib": {
+                "bytes": 21768,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.untouched.b16384.model.zlib",
+                "sha256": "316a3bcf4b8719156a308a154f4c1d8f14598613d1dadeee27b17607b3a893db"
+              }
+            },
+            "stored_model_bytes": 33371,
+            "zlib_complete_model_stream_bytes": 21768
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 20647,
+            "corpus": "gcide-054",
+            "fixed_other_candidate_bytes": 218184,
+            "frame_sha256": "daedf08b2ca6be19eac41906e32e8d8d5fa7f998eea68646e131949818d61715",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 16919,
+            "model_sha256": "6886ea6cd093208c0f525422687cceffd5d2921a630535ecd1043e323eb73fd4",
+            "native_complete_bytes": 235103,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 20647,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.untouched.b65536.model.bz2",
+                "sha256": "ec95a0bbaa276d7d93f2f831f00cbfd7f927bab1c08391632a4a737b6ec9e6d7"
+              },
+              "zlib": {
+                "bytes": 21744,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/gcide-054.untouched.b65536.model.zlib",
+                "sha256": "ed9883bdb44e22c9d56ed9cad834ef8d31eb492a12bcc9bf75bca30bcea64b9f"
+              }
+            },
+            "stored_model_bytes": 33289,
+            "zlib_complete_model_stream_bytes": 21744
+          },
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 27972,
+            "corpus": "omw-ja-20",
+            "fixed_other_candidate_bytes": 732975,
+            "frame_sha256": "7e9e319b4e3092264aa51423c7f626bfe309e8519903cf7137542f814d24cd28",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 391167,
+            "model_sha256": "7dfe396cb2956da82f91a36829b1aafbcf31ed752dd746ee63869ce2c6e788b5",
+            "native_complete_bytes": 1124142,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27972,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.final.b16384.model.bz2",
+                "sha256": "fbeed15fa60d16fcdf5501262baa2a1daf56882f22035315bf5a0a8bb172a330"
+              },
+              "zlib": {
+                "bytes": 30294,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.final.b16384.model.zlib",
+                "sha256": "a1a64deca78976bffccbc6e5221511cd8da29f93a46827fa7e3a37ca98768af3"
+              }
+            },
+            "stored_model_bytes": 45936,
+            "zlib_complete_model_stream_bytes": 30294
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 27734,
+            "corpus": "omw-ja-20",
+            "fixed_other_candidate_bytes": 596509,
+            "frame_sha256": "ced971f60e6bfa8df4765200e2be03466f4c2664b7fa14b90b1505ec94f85b8a",
+            "lane": "final",
+            "model_and_any_new_framing_budget_to_tie_native": 77875,
+            "model_sha256": "1a417ead95d2ec7731d0d7e1b3dff5588edf4a0d66de830eab2235d1cd8cefb4",
+            "native_complete_bytes": 674384,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 27734,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.final.b65536.model.bz2",
+                "sha256": "2c8c7fe57a7cdd87cf617ac5204a10d337d9b68962ddc7cbf19f36aba6b9e67f"
+              },
+              "zlib": {
+                "bytes": 30038,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.final.b65536.model.zlib",
+                "sha256": "d87ff1ee89f2b71ddce6699b29c319404c43ef9e955b40d5d7ed7f96fc6053ee"
+              }
+            },
+            "stored_model_bytes": 45583,
+            "zlib_complete_model_stream_bytes": 30038
+          },
+          {
+            "block_bytes": 16384,
+            "bz2_complete_model_stream_bytes": 20665,
+            "corpus": "omw-ja-20",
+            "fixed_other_candidate_bytes": 77235,
+            "frame_sha256": "0ff42e9389e65d0a087f50221820f93a2fe7e53a849839fab1dd973dd7a5fd54",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 77877,
+            "model_sha256": "d42009d8f4df264434318c3ce8972c4690cdd5b3a8cb42e7343369eee65effbd",
+            "native_complete_bytes": 155112,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 20665,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.untouched.b16384.model.bz2",
+                "sha256": "d2e9f96230c03b26e76c62a0988e031270995c0e4e1ca4272a7c90f98e2c11fe"
+              },
+              "zlib": {
+                "bytes": 21822,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.untouched.b16384.model.zlib",
+                "sha256": "c8cec976256fe3e487aef73485afe47bdc8606072c528d4fdd6e0b247974044d"
+              }
+            },
+            "stored_model_bytes": 31838,
+            "zlib_complete_model_stream_bytes": 21822
+          },
+          {
+            "block_bytes": 65536,
+            "bz2_complete_model_stream_bytes": 19385,
+            "corpus": "omw-ja-20",
+            "fixed_other_candidate_bytes": 65997,
+            "frame_sha256": "86496d06a5eff58941e63b9604d83d13dd7e009c0855233e3677f80909b3fd22",
+            "lane": "untouched",
+            "model_and_any_new_framing_budget_to_tie_native": 29279,
+            "model_sha256": "dcef3593bb7deb866b97c746517df422c4ae6d9eec051fb212ac36b5b20af330",
+            "native_complete_bytes": 95276,
+            "saved_standard_codec_streams": {
+              "bz2": {
+                "bytes": 19385,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.untouched.b65536.model.bz2",
+                "sha256": "00e41a481ef75e386828dedffa89b5f65d72ce0b28c181937db7e8765c88178e"
+              },
+              "zlib": {
+                "bytes": 20423,
+                "path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/standard-model-diagnostics/omw-ja-20.untouched.b65536.model.zlib",
+                "sha256": "21a193efe6748ef4087723912629a688f66ff7f35bce8e660b2438bc49106104"
+              }
+            },
+            "stored_model_bytes": 29945,
+            "zlib_complete_model_stream_bytes": 20423
+          }
+        ],
+        "status": "pass",
+        "timing_disabled": true
+      }
+    },
+    {
+      "capture": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_tables.py",
+          "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1"
+        ],
+        "cwd": "/Users/mileswirht/Downloads/dictionary",
+        "elapsed_ns": 39903833,
+        "error": null,
+        "returncode": 0,
+        "status": "ok",
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 12387,
+          "sha256": "26e18ecb946ad15b1a4a501b4a33f5a5628d74e004dc5d55f690425b22cbc8a6"
+        },
+        "timed_out": false
+      },
+      "name": "final_tables",
+      "result": {
+        "derived_table": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/TABLES.md"
+      }
+    }
+  ],
+  "source_drift": {
+    "manifest": null,
+    "mismatches": [],
+    "ok": true
+  },
+  "source_snapshot": {
+    "schema": 1,
+    "sources": [
+      {
+        "bytes": 5375,
+        "sha256": "63e65232fcfbba57c4ebf3bee808543cb87a92e3099a081e25fd7ee375a057be",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/final_audit.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_audit.py"
+      },
+      {
+        "bytes": 3256,
+        "sha256": "42f088f289f26c1af7e7afd20370cf6e1008eeaf707b8a81db6acad515e2cf53",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/memory_profile.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/memory_profile.py"
+      },
+      {
+        "bytes": 3355,
+        "sha256": "5c57b6060f59daeafd5906cb7cbf2ec7e9ada88de9a9b4f3bc5f19c2ca2a51ac",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/work_profile.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/work_profile.py"
+      },
+      {
+        "bytes": 3438,
+        "sha256": "c39e8708c2782bf61109623c6e6ed1ee0b094b4a0022db6ee426e29fc31b9efd",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/model_budget_profile.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/model_budget_profile.py"
+      },
+      {
+        "bytes": 4251,
+        "sha256": "24f646c3a70e04354bdec3b2dc566a4d9e94694936aec7759bf4e044deb2c508",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/final_tables.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/final_tables.py"
+      },
+      {
+        "bytes": 3055,
+        "sha256": "8bca217335914ac120808c6aab45ba21ff3ebb91080b2f5ec2ac42b82eee8c38",
+        "snapshot": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/source-snapshot/post_analysis.py",
+        "source": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/post_analysis.py"
+      }
+    ]
+  },
+  "status": 0
+}

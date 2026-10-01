@@ -1,0 +1,64 @@
+rnian</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>n</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>californiano</ns0:quote>
+          <ns0:quote>californiana</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>A native or resident of the state of California in the United States of America.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>Calliope</ns0:orth>
+        <ns0:pron>/kəˈlaɪ.ə.pi/</ns0:pron>
+        <ns0:pron>/kəˈliː.ə.pi/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>pn</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>Calíope</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(Greek god) The Muse of eloquence and epic or heroic poetry; the mother of Orpheus with Apollo.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>Callirrhoë</ns0:orth>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>pn</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>Calírroe</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(Greek god) A naiad, daughter of Oceanus and Tethys.</ns0:def>
+        </ns0:sense>
+      </ns0:sense>
+    </ns0:entry>
+    <ns0:entry xmlns:ns0="http://www.tei-c.org/ns/1.0">
+      <ns0:form>
+        <ns0:orth>Callisto</ns0:orth>
+        <ns0:pron>/kəˈlɪs.toʊ̯/</ns0:pron>
+      </ns0:form>
+      <ns0:gramGrp>
+        <ns0:pos>pn</ns0:pos>
+      </ns0:gramGrp>
+      <ns0:sense>
+        <ns0:cit type="trans" xml:lang="es">
+          <ns0:quote>Calisto</ns0:quote>
+        </ns0:cit>
+        <ns0:sense>
+          <ns0:def>(Greek mythology) A nymph of Artemis.</ns0:def>
+        </ns0:sen

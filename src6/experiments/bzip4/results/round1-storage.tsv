@@ -1,0 +1,13 @@
+status	corpus	candidate	dictionary_bytes	predictor	input_bytes	header_bytes	directory_bytes	payload_bytes	total_bytes	matched_bzip3_total	bzip3_64k_total	roundtrip
+accepted	freedict-eng-spa	shared_lz	0	on	8388608	32	8192	1907365	1915589	NA	NA	ok
+accepted	freedict-eng-spa	shared_lz	8192	on	8388608	32	8192	1699819	1716235	NA	NA	ok
+accepted	freedict-eng-spa	shared_lz	32768	on	8388608	32	8192	1742028	1783020	1189002	899408	ok
+accepted	freedict-eng-spa	shared_lz	32768	off	8388608	32	8192	1959008	2000000	NA	NA	ok
+accepted	gcide-054	shared_lz	0	on	8388608	32	8192	3646963	3655187	NA	NA	ok
+accepted	gcide-054	shared_lz	8192	on	8388608	32	8192	3475350	3491766	NA	NA	ok
+accepted	gcide-054	shared_lz	32768	on	8388608	32	8192	3431204	3472196	2362319	1905560	ok
+accepted	gcide-054	shared_lz	32768	off	8388608	32	8192	3678060	3719052	NA	NA	ok
+accepted	omw-ja-20	shared_lz	0	on	8388608	32	8192	1654314	1662538	NA	NA	ok
+accepted	omw-ja-20	shared_lz	8192	on	8388608	32	8192	1539857	1556273	NA	NA	ok
+accepted	omw-ja-20	shared_lz	32768	on	8388608	32	8192	1551252	1592244	1124142	674384	ok
+accepted	omw-ja-20	shared_lz	32768	off	8388608	32	8192	1699650	1740642	NA	NA	ok

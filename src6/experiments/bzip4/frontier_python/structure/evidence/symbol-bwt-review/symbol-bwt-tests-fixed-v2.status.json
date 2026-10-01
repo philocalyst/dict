@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "symbol_bwt.test_codec",
+    "-v"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 181952125,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 779,
+    "sha256": "fc858696d02e6057a261515d7ef5a3da7eaa66d5b939b3e65c62a5bb7b7d8ae2"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/structure/evidence/symbol-bwt-review/symbol-bwt-tests-fixed-v2.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/structure/evidence/symbol-bwt-review/symbol-bwt-tests-fixed-v2.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/structure/evidence/symbol-bwt-review/symbol-bwt-tests-fixed-v2.status.json"
+}

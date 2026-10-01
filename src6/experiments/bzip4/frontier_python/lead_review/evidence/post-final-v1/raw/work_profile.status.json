@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/lead_review/work_profile.py",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/evidence/controls/final-v1"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 7679019959,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 9708,
+    "sha256": "93ab41135de56de3a061c0f22f1da0af6157fbd786e5acf0143db298d7c3c8e8"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/work_profile.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/work_profile.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/post-final-v1/raw/work_profile.status.json"
+}

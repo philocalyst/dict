@@ -1,0 +1,148 @@
+{
+  "confirmation_policy": "Confirmation paths are explicitly labelled and must remain untouched until root freezes candidates; this script performs no codec run.",
+  "corpora": [
+    {
+      "confirmation": {
+        "files": {
+          "form": {
+            "bytes": 263665,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/confirmation-20/form.txt",
+            "sha256": "3727d661939b6f4fce82f89e8813b3b81f628faac3d356b5b423f1eff4ea04a9"
+          },
+          "text": {
+            "bytes": 259196,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/confirmation-20/text.txt",
+            "sha256": "142a31d48584ee7fd781bb9e9c6628094855509c6331ed476981f23dd528dcd4"
+          }
+        },
+        "policy": "Do not benchmark or expose to implementors until root freezes candidate(s).",
+        "role": "confirmation_holdout_20",
+        "sentence_end_exclusive": 12217,
+        "sentence_start_inclusive": 9773,
+        "sentences": 2444
+      },
+      "exploratory": {
+        "files": {
+          "form": {
+            "bytes": 1007472,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+            "sha256": "dcdc4b3c32d0ef0844a3a2ac22d63f8247f78e51991c639124e5ed5d593c4e45"
+          },
+          "text": {
+            "bytes": 988496,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+            "sha256": "00527c05bc992a42f5931447c7d33e5039b6976ab02e2a660d8c9795a3e36316"
+          }
+        },
+        "role": "exploratory_train_80",
+        "sentence_end_exclusive": 9773,
+        "sentence_start_inclusive": 0,
+        "sentences": 9773
+      },
+      "id": "ud-fi-train",
+      "integer_form_tokens": 162815,
+      "license": "CC BY-SA 4.0 (retained LICENSE.txt)",
+      "license_file": {
+        "bytes": 25587,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/LICENSE.txt",
+        "sha256": "d59ddaa61ea7bef197ae6de9301a5f7dd3f107744766f9049bf9da516d30419b"
+      },
+      "license_source": "ud-fi-test/LICENSE.txt",
+      "raw": {
+        "bytes": 13375770,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/fi_tdt-ud-train.conllu",
+        "sha256": "07217d128d3752e61f1249c1e57de402ca17b31d2fba479d4f857ff78e28b40d"
+      },
+      "raw_git_blob_sha1_verified": true,
+      "role": "source_train_with_reserved_confirmation",
+      "sentence_count": 12217,
+      "source_blob_sha1": "ad70aa08b4c3aa0bec5a631c9db1222968b4cc05",
+      "source_commit": "bfaae13719f249573d940edda6a0d7aa8eec620f",
+      "source_repository": "UniversalDependencies/UD_Finnish-TDT",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Finnish-TDT/bfaae13719f249573d940edda6a0d7aa8eec620f/fi_tdt-ud-train.conllu",
+      "split_rule": "exploratory = records[0:floor(0.8*N)], confirmation = records[floor(0.8*N):N]"
+    },
+    {
+      "confirmation": {
+        "files": {
+          "form": {
+            "bytes": 71315,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/confirmation-20/form.txt",
+            "sha256": "9db8a1d8dc9e4187fd75ab1b718ebb24a685258fc1d5329273404a670bcbfe74"
+          },
+          "text": {
+            "bytes": 69777,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/confirmation-20/text.txt",
+            "sha256": "a3bc3fd14f3ce1610ebfb3d5d6ca821a456a505119abb99783c7541c1ade2f84"
+          }
+        },
+        "policy": "Do not benchmark or expose to implementors until root freezes candidate(s).",
+        "role": "confirmation_holdout_20",
+        "sentence_end_exclusive": 3435,
+        "sentence_start_inclusive": 2748,
+        "sentences": 687
+      },
+      "exploratory": {
+        "files": {
+          "form": {
+            "bytes": 184759,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+            "sha256": "472dafff7009ed0d4e8dc26169663e7584b3d0343170fd5a3419bc72060539f2"
+          },
+          "text": {
+            "bytes": 178864,
+            "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+            "sha256": "4c80e4a3a9019b6e907515f62c6cb0bf9c6805ae541f1bb9f228c89a4abade0a"
+          }
+        },
+        "role": "exploratory_train_80",
+        "sentence_end_exclusive": 2748,
+        "sentence_start_inclusive": 0,
+        "sentences": 2748
+      },
+      "id": "ud-tr-train",
+      "integer_form_tokens": 37522,
+      "license": "CC BY-NC-SA 3.0 (retained LICENSE.txt)",
+      "license_file": {
+        "bytes": 20746,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/LICENSE.txt",
+        "sha256": "446deff834665054c41eff659e9a7f22b62c00879574dde2aebb1d5db83b842b"
+      },
+      "license_source": "ud-tr-test/LICENSE.txt",
+      "raw": {
+        "bytes": 3139065,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/tr_imst-ud-train.conllu",
+        "sha256": "d7d65fb10bd0f6ed6ecb0258938d6d126a2b93b409582759d2b52195dd5b7313"
+      },
+      "raw_git_blob_sha1_verified": true,
+      "role": "source_train_with_reserved_confirmation",
+      "sentence_count": 3435,
+      "source_blob_sha1": "af49df52e2ba6b04ab2ea58d2a964a1efbc893c7",
+      "source_commit": "0c939115d8277ecfb39e1bbc3f066b1852ab5ddc",
+      "source_repository": "UniversalDependencies/UD_Turkish-IMST",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Turkish-IMST/0c939115d8277ecfb39e1bbc3f066b1852ab5ddc/tr_imst-ud-train.conllu",
+      "split_rule": "exploratory = records[0:floor(0.8*N)], confirmation = records[floor(0.8*N):N]"
+    }
+  ],
+  "download_budget": {
+    "arabic_train_status": "omitted; complete file exceeds remaining budget",
+    "limit_bytes": 26214400,
+    "new_raw_bytes": 16514835
+  },
+  "omitted": [
+    {
+      "http_content_length": 40698415,
+      "id": "ud-ar-train",
+      "reason": "The complete Arabic TRAIN file alone exceeds the remaining 25 MiB bounded-download budget.",
+      "source_commit": "dfb6b4c547f1fe10f1857b39e44de3f86c47a2fe",
+      "source_repository": "UniversalDependencies/UD_Arabic-PADT",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Arabic-PADT/dfb6b4c547f1fe10f1857b39e44de3f86c47a2fe/ar_padt-ud-train.conllu",
+      "status": "omitted_download_budget"
+    }
+  ],
+  "projection_policy": "Use the existing prepare_ud validator; FORM fields are ASCII-space joined per sentence and LF-terminated; # text comments are LF-terminated.",
+  "purpose": "Bounded commit-pinned UD TRAIN resources with pre-inspection sentence-index split.",
+  "raw_policy": "Retain official CoNLL-U TRAIN bytes verbatim; no archive/source compression.",
+  "schema": 1,
+  "split_policy": "Compute floor(0.8*N) from sentence count before inspecting candidate results; first 80% exploratory, final 20% confirmation."
+}

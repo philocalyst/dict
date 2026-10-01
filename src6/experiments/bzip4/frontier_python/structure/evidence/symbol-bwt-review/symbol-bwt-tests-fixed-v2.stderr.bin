@@ -1,0 +1,10 @@
+test_corrupt_truncated_and_padding_rejected (symbol_bwt.test_codec.SymbolBwtCodecTests.test_corrupt_truncated_and_padding_rejected) ... ok
+test_declared_model_lengths_are_bounded_before_slicing (symbol_bwt.test_codec.SymbolBwtCodecTests.test_declared_model_lengths_are_bounded_before_slicing) ... ok
+test_empty_small_unicode_random_and_pathological (symbol_bwt.test_codec.SymbolBwtCodecTests.test_empty_small_unicode_random_and_pathological) ... ok
+test_encode_block_count_bound (symbol_bwt.test_codec.SymbolBwtCodecTests.test_encode_block_count_bound) ... ok
+test_index_bounds_and_block_decode (symbol_bwt.test_codec.SymbolBwtCodecTests.test_index_bounds_and_block_decode) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.131s
+
+OK

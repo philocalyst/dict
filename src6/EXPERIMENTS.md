@@ -41,13 +41,13 @@ timed region without saying so.
 
 ## Experiments still worth doing
 
-### Typed reader sessions with one bounded page cache
+### Implemented: typed reader sessions with one bounded page cache
 
-`load` now uses one comptime dispatch on `EntryId` versus `ResourceId` to yield
-the actual decoded type. A session could additionally own page state and source
-extents, amortizing decompression without creating a cache per lexical kind.
-Measure first cold load, same-page next entry, page changes and
-already loaded render separately. A warmed session must not be labelled cold.
+`Reader.load` uses the same typed addresses and independent packet ownership,
+but shares source bounds and retains one decoded page with checked packet
+offsets. Tests check actual decode counts, eviction, errors and independently
+owned results. Measurement must still separate first load, same-page next
+entry, page changes and already-loaded rendering; a warmed session is not cold.
 
 ### Choose page size on a measured storage/latency frontier
 
@@ -73,7 +73,7 @@ ordered text and rich trees, while keeping stable source byte coordinates and
 exact source reconstruction. This is more promising than another source-only
 compression exception, but it is not implemented or counted as a current win.
 
-### Full interoperability and graph-level queries
+### Native graph-level queries and optional interchange
 
 Build real TEI, published LIFT 0.13 and OntoLex adapter fixtures with explicit
 loss accounting. Test identity scope, many-to-many source mappings, relation
@@ -81,7 +81,11 @@ qualification, language reset, ranges and residual material through import,
 storage, query and export—not merely through raw source preservation. Profile
 rules (such as OntoLex canonical forms) should remain separate from permissive
 archival representation. Cross-entry inverse relations and resource-fragment
-resolution need a deliberate query design, not an accidental global record table.
+resolution now use explicit, hop-bounded follow operations. Typed all-node
+resolution and runtime predicate filters are implemented; reverse indexes,
+general graph paths, grouping and a query planner remain experiments, not
+claims of XPath/XQuery/SPARQL completeness. Interchange remains optional and
+separate from preserving native semantic richness.
 
 ### Repeated-fragment factoring before entropy coding
 

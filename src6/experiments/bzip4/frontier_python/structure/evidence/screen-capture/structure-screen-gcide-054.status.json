@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/measure.py",
+    "--corpus",
+    "gcide-054",
+    "--lane",
+    "screen",
+    "--variants",
+    "all",
+    "--block-bytes",
+    "all",
+    "--retain-dir",
+    "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/screen"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 2344597708,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 16011,
+    "sha256": "2d78342eae1c3b184360dfb9137ae2d14c5080fcbdc67389c0f0c3aa7cc4efab"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/screen-capture/structure-screen-gcide-054.stdout.bin",
+  "stderr_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/screen-capture/structure-screen-gcide-054.stderr.bin",
+  "status_path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/frontier_python/structure/evidence/screen-capture/structure-screen-gcide-054.status.json"
+}

@@ -184,6 +184,26 @@ test "verifyAll rejects forged duplicate semantic IDs with valid digests" {
     try std.testing.expectError(error.DuplicateEntryId, view.verifyAll(std.testing.allocator));
 }
 
+test "all document readers reject a resealed resource catalog mismatch" {
+    const resources = [_]model.Resource{.{ .values = .{ .id = "authority-a" } }};
+    var owned = try archive.build(std.testing.allocator, .{ .entries = &.{}, .resources = &resources }, .{ .compression = .raw });
+    defer owned.deinit();
+    const pages_offset: usize = @intCast(std.mem.readInt(u64, owned.bytes[64..72], .little));
+    const position = std.mem.indexOfPos(u8, owned.bytes, pages_offset, "authority-a") orelse return error.TestUnexpectedResult;
+    @memcpy(owned.bytes[position..][0..11], "authority-b");
+    refreshFirstPageAndRoot(owned.bytes);
+    const view = try archive.Archive.open(owned.bytes, .{});
+    const address = (try view.resource("authority-a")).?.resource;
+    try std.testing.expectError(error.CatalogMismatch, view.load(std.testing.allocator, address));
+    try std.testing.expectError(error.CatalogMismatch, view.verifyAll(std.testing.allocator));
+    var reader = try archive.Reader.init(std.testing.allocator, &view, .{});
+    defer reader.deinit();
+    try std.testing.expectError(error.CatalogMismatch, reader.load(address));
+    // Reusing an already decoded page must not bypass document admission.
+    try std.testing.expectError(error.CatalogMismatch, reader.load(address));
+    try std.testing.expectEqual(@as(usize, 1), reader.stats.page_loads);
+}
+
 test "forced bzip3 pages roundtrip and multiple pages remain independent" {
     var entries = [_]model.Entry{
         entry("one", "compressible-one", &.{}),

@@ -371,12 +371,12 @@ const edge_items = [_]Item{
     } },
     .{ .relation = .{
         .predicate = .{ .custom = .{ .namespace = "urn:edge", .local = "related" } },
-        .target = .{ .unresolved = .{
+        .endpoints = .{ .binary = .{ .unresolved = .{
             .identifier = "missing",
             .base = "urn:base",
             .expected = .{ .local = "sense" },
             .display = "display",
-        } },
+        } } },
         .state = .deprecated,
     } },
     .{ .concept = .{

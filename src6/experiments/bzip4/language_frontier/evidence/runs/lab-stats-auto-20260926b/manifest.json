@@ -1,0 +1,16 @@
+{
+  "binary": {
+    "bytes": 626880,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/lab",
+    "sha256": "5bb319377286e8e898926256c23ed0ea5970ced5e22f8d4945bc6946180292cd"
+  },
+  "class_policy": "classes omitted: current plan.fit auto-search",
+  "command_policy": "one lab process at a time; --workers 1; --stats included",
+  "purpose": "Fresh serial replication of the three strongest saved m_* parses with v3 lab --stats.",
+  "run_id": "lab-stats-auto-20260926b",
+  "sample_count": 3,
+  "schema": 1,
+  "storage_policy": "report complete frame header/delta/payload/framing and --stats event/byte counters",
+  "successful_samples": 3,
+  "timing_policy": "raw lab stderr is retained, but timing fields are not parsed or reported as evidence"
+}

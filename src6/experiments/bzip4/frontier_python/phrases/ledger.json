@@ -1,0 +1,73 @@
+{
+  "scope": "bounded development screen only",
+  "protocol": {
+    "training": "[0,1048576)",
+    "development": "[1048576,1310720)",
+    "boundaries": [16384, 65536],
+    "final_8MiB_gate": "pending",
+    "linguistic_holdout": "[9437184,10485760) pending"
+  },
+  "decision": "reject flat phrase family for promotion after bounded DP refinement; final 8MiB gate remains unrun",
+  "retained_for_evidence_only": [
+    {
+      "variant": "lex_huff",
+      "reason": "best lexical flat-Huffman row on some corpora; still larger than native bzip3 screen controls"
+    },
+    {
+      "variant": "lex_dp_huff",
+      "reason": "two-round minimum-bit parser reduces greedy frames, but remains 29.6--231.0% above native bzip3 screen controls"
+    },
+    {
+      "variant": "ngram_huff",
+      "reason": "generic byte-fragment control; smaller than lexical on FreeDict but not uniform"
+    }
+  ],
+  "rejected_or_diagnostic": [
+    {
+      "variant": "lex_fixed",
+      "status": "rejected-storage",
+      "reason": "fixed-width IDs are substantially larger on every corpus and boundary"
+    },
+    {
+      "variant": "input_lex_huff",
+      "status": "input-derived-fully-stored",
+      "reason": "valid byte-codec size datapoint because the complete model is charged; cannot support first-MiB unseen-generalization claims"
+    },
+    {
+      "variant": "recursive-grammar",
+      "status": "not-implemented-in-this-slice",
+      "reason": "would be a separate batch-grammar family; this slice keeps flat preexpanded decoding"
+    },
+    {
+      "variant": "neural-arithmetic-coding",
+      "status": "rejected-scope",
+      "reason": "violates bounded pure-Python decoder and complete-model budget"
+    }
+  ],
+  "negative_tests": {
+    "truncated_frames": "expected FrameError",
+    "mutated_header_or_payload": "expected FrameError",
+    "trailing_payload": "expected FrameError",
+    "noncanonical_extra_padding": "expected FrameError",
+    "noncontiguous_directory": "expected FrameError",
+    "all_passed": true
+  },
+  "raw_evidence": [
+    "screen-freedict.raw.stdout",
+    "screen-freedict.raw.stderr",
+    "screen-freedict.status",
+    "screen-all.raw.stdout",
+    "screen-all.raw.stderr",
+    "screen-all.status",
+    "screen-dp16.raw.stdout",
+    "screen-dp16.raw.stderr",
+    "screen-dp16.status",
+    "screen-dp64.raw.stdout",
+    "screen-dp64.raw.stderr",
+    "screen-dp64.status",
+    "screen-dp-source-manifest.json",
+    "screen-64.raw.stdout",
+    "screen-64.raw.stderr",
+    "screen-64.status"
+  ]
+}

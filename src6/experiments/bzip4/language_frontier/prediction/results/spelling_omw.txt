@@ -1,0 +1,4 @@
+command: python3 src6/experiments/bzip4/language_frontier/prediction/spelling_model.py src6/experiments/bzip4/bz4/data/omw.train.bin src6/experiments/bzip4/bz4/data/omw.eval8.bin /tmp/lpred-omw.frame
+timing: /usr/bin/time -p; real=15.09 user=14.90 sys=0.09 (single serial run; descriptive only)
+output:
+input=src6/experiments/bzip4/bz4/data/omw.eval8.bin train=src6/experiments/bzip4/bz4/data/omw.train.bin input_bytes=8388608 input_sha256=d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261 frame_sha256=63075bc549b5124db0f8878c003eda7511c46d0686c835b2df34037889a9e13b types=29359 pieces=256 header=64 model=3603 spelling=293864 events=1988820 total=2286351 roundtrip=ok

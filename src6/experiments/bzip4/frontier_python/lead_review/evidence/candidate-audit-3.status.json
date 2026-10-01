@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "src6/experiments/bzip4/frontier_python/lead_review/test_candidates.py"
+  ],
+  "cwd": "/Users/mileswirht/Downloads/dictionary",
+  "returncode": 0,
+  "elapsed_ns": 1640748916,
+  "timed_out": false,
+  "error": null,
+  "status": "ok",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "bytes": 104,
+    "sha256": "00883bf8c5cd3cbb53c4d87e696302d1e5d1994f9032eab5b5ba1cc694e5e70d"
+  },
+  "stdout_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/candidate-audit-3.stdout.bin",
+  "stderr_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/candidate-audit-3.stderr.bin",
+  "status_path": "src6/experiments/bzip4/frontier_python/lead_review/evidence/candidate-audit-3.status.json"
+}

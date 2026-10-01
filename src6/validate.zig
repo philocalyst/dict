@@ -3,6 +3,7 @@
 //! to declare an unresolved local reference or malformed XML name valid.
 const std = @import("std");
 const model = @import("model.zig");
+const nodes = @import("nodes.zig");
 
 pub const Limits = struct {
     max_depth: usize = 96,
@@ -70,6 +71,7 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
     var context = Context{ .allocator = allocator, .limits = scope.limits, .shared_sources = scope.sources };
     defer context.ids.deinit(allocator);
     defer context.local_sources.deinit(allocator);
+    defer context.links.deinit(allocator);
     if (T == model.Entry) {
         for (value.sources) |source| try context.addSource(source.id, source.bytes.len);
     } else if (value.* == .source) {
@@ -78,32 +80,31 @@ pub fn check(allocator: std.mem.Allocator, value: anytype, scope: Scope) Error!v
         } else try context.addSource(value.source.id, value.source.bytes.len);
     }
 
-    // Local references may point forward, including to a qualified relation.
-    // A collection pass avoids making source order an accidental restriction.
-    context.collecting = true;
-    try context.visit(value, 0);
-    context.collecting = false;
-    context.visited = 0;
-    context.bytes = 0;
-    try context.visit(value, 0);
+    // Visit the model once. Only local-link obligations wait for the complete
+    // identity table; a forward reference does not require a second tree walk.
+    try context.scan(value);
     if (T == model.Entry) for (value.keys) |key| {
         try utf8(key.spelling);
         if (key.form) |id| {
-            const target = context.ids.get(id) orelse return error.UnresolvedLocal;
-            if (target != .form) return error.InvalidReferenceKind;
+            try context.require(id, .form);
         }
     };
+    for (context.links.items) |link| try context.require(link.id, link.kind);
 }
 
 const Context = struct {
+    const Target = enum { any, form, concept, sense };
+    const Link = struct { id: []const u8, kind: Target };
+
     allocator: std.mem.Allocator,
     limits: Limits,
-    ids: std.StringHashMapUnmanaged(?model.Kind) = .empty,
+    ids: std.StringHashMapUnmanaged(nodes.NodeRef) = .empty,
     shared_sources: *const SourceIndex,
     local_sources: SourceIndex = .{},
-    collecting: bool = true,
-    visited: usize = 0,
-    bytes: usize = 0,
+    traversal_work: usize = 0,
+    comparisons: usize = 0,
+    // Borrowed identifiers only. No pending nodes or duplicate model objects.
+    links: std.ArrayList(Link) = .empty,
 
     fn addSource(self: *Context, id: []const u8, length: usize) Error!void {
         if (self.shared_sources.length(id) != null) return error.DuplicateIdentity;
@@ -112,58 +113,70 @@ const Context = struct {
         try self.local_sources.add(self.allocator, id, length);
     }
 
-    fn visit(self: *Context, pointer: anytype, depth: usize) Error!void {
+    fn scan(self: *Context, pointer: anytype) Error!void {
         const T = @TypeOf(pointer.*);
-        if (depth > self.limits.max_depth or self.visited >= self.limits.max_values)
-            return error.ResourceLimit;
-        self.visited += 1;
-
-        if (comptime T == []const u8) {
-            if (pointer.len > self.limits.max_bytes -| self.bytes) return error.ResourceLimit;
-            self.bytes += pointer.len;
-            return;
+        var cursor = nodes.Cursor(T).init(pointer, .{}, .{
+            .max_depth = self.limits.max_depth,
+            .max_work = self.limits.max_values,
+            .max_bytes = self.limits.max_bytes,
+        });
+        while (true) {
+            cursor.limits.max_work = self.limits.max_values -| self.comparisons;
+            const event = (cursor.next() catch return error.ResourceLimit) orelse break;
+            self.traversal_work = cursor.work;
+            if (event.node.identity()) |id| try self.addIdentity(id, event.node);
+            try self.ruleNode(event.node);
         }
-        if (comptime T == model.Metadata) {
-            if (self.collecting) {
-                if (pointer.id) |id| try self.addIdentity(id, null);
-            }
-        }
-        if (!self.collecting) try self.rule(pointer);
-        switch (@typeInfo(T)) {
-            .@"struct" => |info| inline for (info.fields) |field| {
-                try self.visit(&@field(pointer.*, field.name), depth + 1);
-            },
-            .@"union" => switch (pointer.*) {
-                inline else => |*payload| try self.visit(payload, depth + 1),
-            },
-            .optional => if (pointer.*) |*payload| try self.visit(payload, depth + 1),
-            .array, .pointer => for (pointer.*) |*item| try self.visit(item, depth + 1),
-            .int, .bool, .@"enum", .void => {},
-            else => @compileError("unsupported lexical shape: " ++ @typeName(T)),
-        }
-        if (comptime T == model.Item) {
-            if (self.collecting) {
-                if (pointer.metadata().id) |id| self.ids.getPtr(id).?.* = std.meta.activeTag(pointer.*);
-            }
-        }
+        self.traversal_work = cursor.work;
     }
 
-    fn addIdentity(self: *Context, id: []const u8, kind: ?model.Kind) Error!void {
+    fn deferLink(self: *Context, id: []const u8, kind: Target) Error!void {
+        try self.chargeComparison();
+        try self.links.append(self.allocator, .{ .id = id, .kind = kind });
+    }
+
+    fn require(self: *Context, id: []const u8, kind: Target) Error!void {
+        try self.chargeComparison();
+        const target = self.ids.get(id) orelse return error.UnresolvedLocal;
+        const matches = switch (kind) {
+            .any => true,
+            .form => target.as(model.Form) != null,
+            .concept => target.as(model.Concept) != null,
+            .sense => target.as(model.Sense) != null,
+        };
+        if (!matches) return error.InvalidReferenceKind;
+    }
+
+    fn addIdentity(self: *Context, id: []const u8, owner: nodes.NodeRef) Error!void {
         if (id.len == 0) return error.InvalidIdentity;
+        try utf8(id);
         const result = try self.ids.getOrPut(self.allocator, id);
+        // A SharedValue definition is an ownership edge, not a graph alias in
+        // the packet encoding. Define it once and reuse it via Value.reference.
         if (result.found_existing) return error.DuplicateIdentity;
-        result.value_ptr.* = kind;
+        result.value_ptr.* = owner;
     }
 
     fn reference(self: *Context, value: model.Reference) Error!void {
         switch (value) {
-            .local => |id| if (!self.ids.contains(id)) return error.UnresolvedLocal,
+            .local => |id| try self.deferLink(id, .any),
             .entry, .resource => |target| {
                 if (target.id.len == 0 or (target.fragment != null and target.fragment.?.len == 0))
                     return error.InvalidIdentity;
             },
             .iri => |iri| if (iri.len == 0) return error.InvalidIdentity,
             .unresolved => |target| if (target.identifier.len == 0) return error.InvalidIdentity,
+        }
+    }
+
+    fn ruleNode(self: *Context, value: nodes.NodeRef) Error!void {
+        const semantic_types = .{
+            model.Reference, model.Anchor,     model.Name,        model.Language,
+            model.Inline,    model.Metadata,   model.Value,       model.Relation,
+            model.Certainty, model.Denotation, model.SharedValue,
+        };
+        inline for (semantic_types) |T| {
+            if (value.as(T)) |pointer| return self.rule(pointer);
         }
     }
 
@@ -186,10 +199,7 @@ const Context = struct {
             try utf8(pointer.namespace);
         }
         if (T == model.Language) switch (pointer.*) {
-            .tag => |tag| {
-                if (tag.len == 0) return error.InvalidLanguage;
-                for (tag) |byte| if (!std.ascii.isAlphanumeric(byte) and byte != '-') return error.InvalidLanguage;
-            },
+            .tag => |tag| if (!try languageTag(self, tag)) return error.InvalidLanguage,
             else => {},
         };
         if (T == model.Inline) switch (pointer.*) {
@@ -240,24 +250,28 @@ const Context = struct {
             else => {},
         };
         if (T == model.Relation) {
-            if (pointer.target == null and pointer.participants.len < 2) return error.InvalidValue;
+            switch (pointer.endpoints) {
+                .participants => |participants| if (participants.len < 2) return error.InvalidValue,
+                .binary => {},
+            }
             if (pointer.confidence) |confidence| {
                 try probability(confidence);
             }
-            if (pointer.target != null and pointer.target.? == .local) {
-                const actual = self.ids.get(pointer.target.?.local) orelse return error.UnresolvedLocal;
-                const expected: ?model.Kind = switch (pointer.predicate) {
+            if (pointer.endpoints == .binary and pointer.endpoints.binary == .local) {
+                const expected: Target = switch (pointer.predicate) {
                     .evokes => .concept,
                     .lexicalized_sense => .sense,
-                    else => null,
+                    else => .any,
                 };
-                if (expected != null and expected != actual) return error.InvalidReferenceKind;
+                if (expected != .any) try self.deferLink(pointer.endpoints.binary.local, expected);
             }
         }
         if (T == model.Certainty) {
             if (pointer.degree) |degree| try probability(degree);
         }
         if (T == model.Denotation and pointer.iri.len == 0) return error.InvalidIdentity;
+        if (T == model.SharedValue and (pointer.meta.id == null or pointer.meta.id.?.len == 0))
+            return error.InvalidIdentity;
     }
 
     fn attributes(self: *Context, values: []const model.Attribute) Error!void {
@@ -277,8 +291,9 @@ const Context = struct {
     }
 
     fn chargeComparison(self: *Context) Error!void {
-        if (self.visited >= self.limits.max_values) return error.ResourceLimit;
-        self.visited += 1;
+        if (self.traversal_work >= self.limits.max_values -| self.comparisons)
+            return error.ResourceLimit;
+        self.comparisons += 1;
     }
 
     fn equal(self: *Context, left: anytype, right: @TypeOf(left), depth: usize) Error!bool {
@@ -300,16 +315,160 @@ const Context = struct {
                 };
             },
             .optional => if (left.*) |*payload| if (right.*) |*other| try self.equal(payload, other, depth + 1) else false else right.* == null,
-            .array, .pointer => same: {
+            .array => same: {
                 if (left.len != right.len) break :same false;
                 for (left.*, right.*) |*a, *b| if (!try self.equal(a, b, depth + 1)) break :same false;
                 break :same true;
+            },
+            .pointer => |info| same: {
+                if (info.child == u8 and info.size == .slice)
+                    break :same std.mem.eql(u8, left.*, right.*);
+                switch (info.size) {
+                    .slice => {
+                        if (left.len != right.len) break :same false;
+                        for (left.*, right.*) |*a, *b| if (!try self.equal(a, b, depth + 1)) break :same false;
+                        break :same true;
+                    },
+                    .one => break :same try self.equal(left.*, right.*, depth + 1),
+                    .many, .c => @compileError("unbounded pointers are not a supported lexical shape"),
+                }
             },
             .void => true,
             else => left.* == right.*,
         };
     }
 };
+
+/// RFC 5646 structural grammar only. This deliberately does not claim IANA
+/// registry membership or canonicalization, and preserves the original case.
+fn languageTag(context: *Context, tag: []const u8) Error!bool {
+    if (tag.len == 0 or tag[0] == '-' or tag[tag.len - 1] == '-') return false;
+    for (tag) |byte| if (!std.ascii.isAlphanumeric(byte) and byte != '-') return false;
+    if (grandfathered(tag)) return true;
+
+    var position: usize = 0;
+    const language = nextSubtag(tag, &position) orelse return false;
+    if (language.len == 1 and std.ascii.toLower(language[0]) == 'x')
+        return privateUseTail(tag, &position);
+    if (!alpha(language) or language.len < 2 or language.len > 8) return false;
+
+    if (language.len <= 3) {
+        var extlangs: usize = 0;
+        while (extlangs < 3) : (extlangs += 1) {
+            const saved = position;
+            const candidate = nextSubtag(tag, &position) orelse break;
+            if (candidate.len != 3 or !alpha(candidate)) {
+                position = saved;
+                break;
+            }
+        }
+    }
+
+    var saved = position;
+    if (nextSubtag(tag, &position)) |script| {
+        if (script.len != 4 or !alpha(script)) position = saved;
+    }
+    saved = position;
+    if (nextSubtag(tag, &position)) |region| {
+        if (!((region.len == 2 and alpha(region)) or (region.len == 3 and numeric(region))))
+            position = saved;
+    }
+
+    const variants_start = position;
+    while (true) {
+        saved = position;
+        const variant = nextSubtag(tag, &position) orelse return true;
+        const valid = (variant.len >= 5 and variant.len <= 8 and alphanumeric(variant)) or
+            (variant.len == 4 and std.ascii.isDigit(variant[0]) and alphanumeric(variant));
+        if (!valid) {
+            position = saved;
+            break;
+        }
+        if (try duplicateBetween(context, tag, variants_start, saved, variant)) return false;
+    }
+
+    const extensions_start = position;
+    while (true) {
+        saved = position;
+        const singleton = nextSubtag(tag, &position) orelse return true;
+        if (singleton.len != 1 or !std.ascii.isAlphanumeric(singleton[0]) or
+            std.ascii.toLower(singleton[0]) == 'x')
+        {
+            position = saved;
+            break;
+        }
+        if (try duplicateBetween(context, tag, extensions_start, saved, singleton)) return false;
+        var extension_count: usize = 0;
+        while (true) {
+            const extension_saved = position;
+            const extension = nextSubtag(tag, &position) orelse break;
+            if (extension.len < 2 or extension.len > 8 or !alphanumeric(extension)) {
+                position = extension_saved;
+                break;
+            }
+            extension_count += 1;
+        }
+        if (extension_count == 0) return false;
+    }
+
+    const private = nextSubtag(tag, &position) orelse return position == tag.len;
+    if (private.len != 1 or std.ascii.toLower(private[0]) != 'x') return false;
+    return privateUseTail(tag, &position);
+}
+
+fn nextSubtag(tag: []const u8, position: *usize) ?[]const u8 {
+    if (position.* == tag.len) return null;
+    const start = position.*;
+    const end = std.mem.indexOfScalarPos(u8, tag, start, '-') orelse tag.len;
+    position.* = if (end == tag.len) end else end + 1;
+    return tag[start..end];
+}
+
+fn privateUseTail(tag: []const u8, position: *usize) bool {
+    var count: usize = 0;
+    while (nextSubtag(tag, position)) |part| {
+        if (part.len < 1 or part.len > 8 or !alphanumeric(part)) return false;
+        count += 1;
+    }
+    return count != 0;
+}
+
+fn duplicateBetween(context: *Context, tag: []const u8, start: usize, end: usize, needle: []const u8) Error!bool {
+    var position: usize = start;
+    while (position < end) {
+        const part = nextSubtag(tag[0..end], &position) orelse break;
+        try context.chargeComparison();
+        if (std.ascii.eqlIgnoreCase(part, needle)) return true;
+    }
+    return false;
+}
+
+fn alpha(value: []const u8) bool {
+    for (value) |byte| if (!std.ascii.isAlphabetic(byte)) return false;
+    return true;
+}
+
+fn numeric(value: []const u8) bool {
+    for (value) |byte| if (!std.ascii.isDigit(byte)) return false;
+    return true;
+}
+
+fn alphanumeric(value: []const u8) bool {
+    for (value) |byte| if (!std.ascii.isAlphanumeric(byte)) return false;
+    return true;
+}
+
+fn grandfathered(tag: []const u8) bool {
+    const values = [_][]const u8{
+        "en-GB-oed",   "i-ami",    "i-bnn",     "i-default", "i-enochian", "i-hak",
+        "i-klingon",   "i-lux",    "i-mingo",   "i-navajo",  "i-pwn",      "i-tao",
+        "i-tay",       "i-tsu",    "sgn-BE-FR", "sgn-BE-NL", "sgn-CH-DE",  "art-lojban",
+        "cel-gaulish", "no-bok",   "no-nyn",    "zh-guoyu",  "zh-hakka",   "zh-min",
+        "zh-min-nan",  "zh-xiang",
+    };
+    for (values) |value| if (std.ascii.eqlIgnoreCase(value, tag)) return true;
+    return false;
+}
 
 fn sameName(a: model.Name, b: model.Name) bool {
     return std.mem.eql(u8, a.namespace, b.namespace) and std.mem.eql(u8, a.local, b.local);

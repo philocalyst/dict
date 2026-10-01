@@ -156,7 +156,13 @@ pub const Sense = struct {
     denotations: []const Denotation = &.{},
 };
 
-pub const Denotation = struct { iri: []const u8 };
+/// A sense-owned denotation occurrence.  Its implicit subject remains the
+/// containing sense; metadata qualifies this occurrence without turning every
+/// denotation into a reified Relation.
+pub const Denotation = struct {
+    meta: Metadata = .{},
+    iri: []const u8,
+};
 
 pub const Translation = struct {
     meta: Metadata = .{},
@@ -185,6 +191,11 @@ pub const Value = union(enum) {
     decimal: []const u8,
     boolean: bool,
     reference: Reference,
+    /// Identity-bearing value sharing is distinct from copying an equal value.
+    /// References to the shared identity still use `.reference`; this pointer
+    /// is the native definition/embedding edge and is never followed by
+    /// reference resolution implicitly.
+    shared: *const SharedValue,
     structure: Structure,
     list: []const Value,
     set: []const Value,
@@ -194,6 +205,11 @@ pub const Value = union(enum) {
     unknown,
     unspecified,
     default,
+};
+
+pub const SharedValue = struct {
+    meta: Metadata,
+    value: Value,
 };
 
 pub const Structure = struct {
@@ -237,8 +253,13 @@ pub const Relation = struct {
         derived_from,
         custom: Name,
     },
-    target: ?Reference = null,
-    participants: []const Participant = &.{},
+    /// Exactly one endpoint representation is authoritative.  For a binary
+    /// relation the lexical owner is the source and `binary` is its target.
+    /// N-ary roles are qualified user names; no role spelling is reserved.
+    endpoints: union(enum) {
+        binary: Reference,
+        participants: []const Participant,
+    },
     category: ?Name = null,
     state: ClaimState = .asserted,
     confidence: ?[]const u8 = null,
@@ -375,18 +396,27 @@ pub const Range = struct {
     elements: []const RangeElement = &.{},
 };
 
+/// Independently addressable, typed shared atomic or structured values.
+pub const ValueLibrary = struct {
+    id: []const u8,
+    meta: Metadata = .{},
+    values: []const SharedValue = &.{},
+};
+
 /// Sources and lexical authorities use the same independently admitted packet
 /// machinery as entries, but are not disguised as headword-bearing entries.
 pub const Resource = union(enum) {
     source: Source,
     range: Range,
     concept: Concept,
+    values: ValueLibrary,
 
     pub fn identity(self: *const Resource) []const u8 {
         return switch (self.*) {
             .source => |source| source.id,
             .range => |range| range.id,
             .concept => |concept| concept.meta.id orelse "",
+            .values => |values| values.id,
         };
     }
 };

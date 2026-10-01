@@ -1,0 +1,106 @@
+{
+  "corpora": [
+    {
+      "form_projection": {
+        "bytes": 161246,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/form.txt",
+        "sha256": "dd86135ffd6a2ba7ee50347efe08641a9ab8fe932e017a62a396d96d640c7d80"
+      },
+      "id": "ud-fi-test",
+      "integer_form_tokens": 21070,
+      "license": "CC BY-SA 4.0 (see retained LICENSE.txt)",
+      "license_file": {
+        "bytes": 25587,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/LICENSE.txt",
+        "sha256": "d59ddaa61ea7bef197ae6de9301a5f7dd3f107744766f9049bf9da516d30419b"
+      },
+      "malformed_rows": 0,
+      "raw": {
+        "bytes": 1727677,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/fi_tdt-ud-test.conllu",
+        "sha256": "3317528f16ab74333dce44051971e1ed0d115c8ffa1359a20f3bddb8e63498ee"
+      },
+      "sentences": 1555,
+      "source_blob_sha1": "e69e8e7a6d248b42c8624244f773ce4202eaeeb4",
+      "source_commit": "bfaae13719f249573d940edda6a0d7aa8eec620f",
+      "source_repository": "UniversalDependencies/UD_Finnish-TDT",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Finnish-TDT/bfaae13719f249573d940edda6a0d7aa8eec620f/fi_tdt-ud-test.conllu",
+      "split": "test",
+      "text_projection": {
+        "bytes": 158155,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-test/text.txt",
+        "sha256": "4fd5ccdf8ac9709af6b5b259f93e60332c45a9f0f6d3c7c7f012958627802205"
+      }
+    },
+    {
+      "form_projection": {
+        "bytes": 67770,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/form.txt",
+        "sha256": "5c451a7d665bb59195cc2497fe2386f232992b1cc3287721bcf55232d9417647"
+      },
+      "id": "ud-tr-test",
+      "integer_form_tokens": 10032,
+      "license": "CC BY-NC-SA 3.0 (see retained LICENSE.txt)",
+      "license_file": {
+        "bytes": 20746,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/LICENSE.txt",
+        "sha256": "446deff834665054c41eff659e9a7f22b62c00879574dde2aebb1d5db83b842b"
+      },
+      "malformed_rows": 0,
+      "raw": {
+        "bytes": 846218,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/tr_imst-ud-test.conllu",
+        "sha256": "299d3af2adb8722b5dd09cd17a20302af3670d36f2e57ed26170bf21526fd3d4"
+      },
+      "sentences": 1100,
+      "source_blob_sha1": "55d12cf7e6e346810a1ad9328ce8598676a6fd47",
+      "source_commit": "0c939115d8277ecfb39e1bbc3f066b1852ab5ddc",
+      "source_repository": "UniversalDependencies/UD_Turkish-IMST",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Turkish-IMST/0c939115d8277ecfb39e1bbc3f066b1852ab5ddc/tr_imst-ud-test.conllu",
+      "split": "test",
+      "text_projection": {
+        "bytes": 65596,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-test/text.txt",
+        "sha256": "8b1960983fdf9a4343ab67a19f4bd44fca0d90e985f4529458927cd8ef654014"
+      }
+    },
+    {
+      "form_projection": {
+        "bytes": 245812,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/form.txt",
+        "sha256": "f50874d99df107c63571f3cdd0864d0ca51b17f2460aa464de7ab9b4c6826930"
+      },
+      "id": "ud-ar-test",
+      "integer_form_tokens": 28264,
+      "license": "CC BY-NC-SA 3.0 (see retained LICENSE.txt)",
+      "license_file": {
+        "bytes": 19848,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/LICENSE.txt",
+        "sha256": "79e211ff70191c7f5cf0e33a8cf2bfa5799318d51ae7a5fd1a065abcb3e3ab05"
+      },
+      "malformed_rows": 0,
+      "raw": {
+        "bytes": 5163066,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/ar_padt-ud-test.conllu",
+        "sha256": "793c87bf173d491af2092ef7f87b04a2cf6c596490e7347a2065058a053a6389"
+      },
+      "sentences": 680,
+      "source_blob_sha1": "a2684675edf31170ed1cc80798009a55bce58264",
+      "source_commit": "dfb6b4c547f1fe10f1857b39e44de3f86c47a2fe",
+      "source_repository": "UniversalDependencies/UD_Arabic-PADT",
+      "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Arabic-PADT/dfb6b4c547f1fe10f1857b39e44de3f86c47a2fe/ar_padt-ud-test.conllu",
+      "split": "test",
+      "text_projection": {
+        "bytes": 239109,
+        "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-ar-test/text.txt",
+        "sha256": "0fe7d5b4998640ca321d02c9b4a9da2d736ed749df43669baaf57b6b5320a160"
+      }
+    }
+  ],
+  "form_policy": "Dataset integer-ID FORM fields in source sentence order, ASCII-space joined, LF sentence terminators.",
+  "purpose": "Frozen multilingual holdouts for storage-only Bzip4 v4 screens.",
+  "raw_policy": "Retain official CoNLL-U test split bytes verbatim; no source-archive compression.",
+  "schema": 1,
+  "source_lock_policy": "The local raw SHA-256 is authoritative. Each raw file also matches the recorded source commit's Git blob SHA-1; reruns must use the pinned commit URL or retained bytes, never a mutable branch URL.",
+  "text_policy": "Dataset # text = sentence comments, preserving Unicode and punctuation, LF record terminators."
+}

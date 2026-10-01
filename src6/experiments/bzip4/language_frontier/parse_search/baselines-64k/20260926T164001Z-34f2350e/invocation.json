@@ -1,0 +1,51 @@
+{
+  "argv": [
+    "src6/experiments/bzip4/language_frontier/quickbench/bench.py",
+    "src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+    "src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "--limit",
+    "65536",
+    "--cache",
+    "src6/experiments/bzip4/language_frontier/parse_search/cache",
+    "--output",
+    "src6/experiments/bzip4/language_frontier/parse_search/baselines-64k"
+  ],
+  "bzip3": "vendored 1.5.1 native blocks, B3PY envelope = 32 + 16*blocks; not upstream .bz3 framing",
+  "cache": "encode only; each hit rehashed and decoded in a new process",
+  "matrix": {
+    "block_bytes": 65536,
+    "candidates": [],
+    "controls": [
+      {
+        "block_bytes": 65536,
+        "kind": "bzip3",
+        "name": "bzip3-block"
+      },
+      {
+        "block_bytes": "max(1, input bytes)",
+        "kind": "bzip3",
+        "name": "bzip3-whole"
+      },
+      {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "block_bytes": 65536,
+        "kind": "v4",
+        "name": "bzip4-v4"
+      }
+    ],
+    "defaults": {},
+    "grid": {},
+    "inputs": [
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/data/omw.eval8.bin",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+      "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt"
+    ],
+    "policies": [
+      {}
+    ],
+    "prefix_limit": 65536,
+    "whole_block_rule": "max(1, input bytes)"
+  },
+  "timing": "fresh Python worker + imports + codec startup + file I/O + full decode; verification hash outside timer"
+}

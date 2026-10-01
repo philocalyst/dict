@@ -1,0 +1,10 @@
+status: CORRECTED_CAUSAL_DIAGNOSTIC_REJECTED
+command: python3 src6/experiments/bzip4/language_frontier/prediction/circuit_probe.py src6/experiments/bzip4/bz4/data/omw.train.bin src6/experiments/bzip4/bz4/data/omw.eval8.bin
+python: 3.14.7 (Darwin arm64)
+model: two decoder-visible rows (start/interior), each 256 bytes plus END; u32 counts; K=8; EM rounds=3
+output:
+train=src6/experiments/bzip4/bz4/data/omw.train.bin input=src6/experiments/bzip4/bz4/data/omw.eval8.bin train_bytes=1048576 input_bytes=8388608 train_sha256=cb3c4f85e66516cf39505bf02651a6f4308415540c3ef6a73a159100228cffae input_sha256=d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261 components=8 rounds=3 types=29359 model_bytes_lower_bound=16488 hard_type_bits=2857691.1 marginal_type_bits=2855691.1 hard_type_bytes_plus_model=373699.4 marginal_type_bytes_plus_model=373449.4 diagnostic_only=1
+
+The corrected marginal type-only lower bound is 373,449.4 bytes, above the
+293,864-byte H1 spelling stream before its complete occurrence frame.  The
+mixture is rejected for this multilingual/Japanese held-out slice.

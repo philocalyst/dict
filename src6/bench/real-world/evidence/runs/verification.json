@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "status": "verification-ok",
+  "timing": "not run",
+  "platform": "macOS-15.7.4-arm64-64bit-Mach-O",
+  "checks": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "unittest",
+        "-v",
+        "test_prepare.py"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_freedict_nested_orth_and_duplicate_forms_are_not_dropped (test_prepare.ProjectionPolicyTests.test_freedict_nested_orth_and_duplicate_forms_are_not_dropped) ... ok\ntest_gcide_aliases_are_one_record_with_all_ent_keys (test_prepare.ProjectionPolicyTests.test_gcide_aliases_are_one_record_with_all_ent_keys) ... ok\ntest_mixed_content_tails_and_qualified_attribute_are_preserved (test_prepare.ProjectionPolicyTests.test_mixed_content_tails_and_qualified_attribute_are_preserved) ... ok\ntest_omw_shared_synset_expands_once_per_lexical_entry (test_prepare.ProjectionPolicyTests.test_omw_shared_synset_expands_once_per_lexical_entry) ... ok\ntest_projection_retains_key_order_duplicates_and_empty_content (test_prepare.ProjectionPolicyTests.test_projection_retains_key_order_duplicates_and_empty_content) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.012s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "py_compile",
+        "prepare.py",
+        "formats.py",
+        "smoke.py",
+        "sweep.py",
+        "legacy_probe.py",
+        "inventory.py",
+        "measure.py",
+        "report.py",
+        "verification.py"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/etc/profiles/per-user/mileswirht/bin/zig",
+        "build",
+        "-Doptimize=ReleaseSafe"
+      ],
+      "cwd": "/Users/mileswirht/Downloads/dictionary/src6/bench/real-world",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "frame": {
+    "bytes": 27344,
+    "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/parse_search/cache/1959d16db2a1ff5f0122364db300cd78857c4cbe6caa7c4721825ee3cce6b86f/frame.bin",
+    "sha256": "09c21515bd2f1e3cd76030ff074d39da9d65dd671e55a1aeb1c9243f418d5867"
+  },
+  "identity": {
+    "implementation": {
+      "codec": {
+        "binary": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+        "block_bytes": 65536,
+        "kind": "v4",
+        "name": "bzip4-v4"
+      },
+      "executable": {
+        "bytes": 34640,
+        "path": "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+        "sha256": "d8f1d508de5acfd500f20d1949528375ff4a1f470efb267f00d1770941cdeee3"
+      },
+      "files": [
+        {
+          "bytes": 549696,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/bz4/v3/zig-out/bin/bz4",
+          "sha256": "17cda3b68a1b0f8b0535c99cc77fdc0220351f210171c04620c1db6ace4f7fcc"
+        },
+        {
+          "bytes": 19860,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/quickbench/bench.py",
+          "sha256": "d507468ebab81771cedcde57545389ec6d5a5ab07cb2b1306856cfdd59db92b5"
+        },
+        {
+          "bytes": 3361,
+          "path": "/Users/mileswirht/Downloads/dictionary/src6/experiments/bzip4/language_frontier/quickbench/worker.py",
+          "sha256": "7d17fe8d4b30d55e9e99ad74e7c2b4fe96a8940699641dafee3907912bd043c9"
+        }
+      ],
+      "platform": "macOS-15.7.4-arm64-64bit-Mach-O",
+      "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]"
+    },
+    "raw_bytes": 65536,
+    "raw_sha256": "8f2f96aa1d811c5f7404b3e1e665bdcd5877749330e50e9e29b733e44d6e3049",
+    "schema": 1
+  }
+}
