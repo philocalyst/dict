@@ -1,0 +1,89 @@
+{
+  "baseline_calibration": {
+    "adapter_sha256": "e3320d9f29a92fa54e1962296acaffa7c850729556591048edd691cdd4c6b51f",
+    "case": "pride-and-prejudice-en",
+    "frame_bytes": 161119,
+    "frame_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+    "fresh_decoded_source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+    "ordinary_native_bzip3_no_wrapper": true,
+    "same_bytes_as_prior_control": true
+  },
+  "cases": [
+    {
+      "full": {
+        "bytes": 705012,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt",
+        "sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "utf8_scalar_count": 697950
+      },
+      "id": "pride-and-prejudice-en",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "48e0522844402a86a3ea98f0947ba85ea54838db3c59022299298ed968a5a163",
+      "source": "/workspace/scratch/books2026-dev/raw/pride-and-prejudice-en.raw"
+    },
+    {
+      "full": {
+        "bytes": 3339896,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt",
+        "sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+        "utf8_scalar_count": 3274043
+      },
+      "id": "war-and-peace-en",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "6cbcc5ca5e590fb9ace161a5b93e4ecf280d7118104be0d63b686c004cfa70ae",
+      "source": "/workspace/scratch/books2026-dev/raw/war-and-peace-en.raw"
+    },
+    {
+      "full": {
+        "bytes": 2179216,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt",
+        "sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+        "utf8_scalar_count": 2135650
+      },
+      "id": "don-quijote-es",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "4973737f16b7e8b8972c08e54a95b7bc43b5d93d6738bc08f9256f9c2c68a2ba",
+      "source": "/workspace/scratch/books2026-dev/raw/don-quijote-es.raw"
+    },
+    {
+      "full": {
+        "bytes": 716472,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt",
+        "sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "utf8_scalar_count": 700188
+      },
+      "id": "madame-bovary-fr",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "d8383b0e43723286604abcc1a5e96728f462e679b9b4d569d4b469d8f705f862",
+      "source": "/workspace/scratch/books2026-dev/raw/madame-bovary-fr.raw"
+    },
+    {
+      "full": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "utf8_scalar_count": 123674
+      },
+      "id": "die-verwandlung-de",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "fe91c871104780ce5a8fe3e12e79b757f6fb5ffa28ed83d6186e618fb3bf344a",
+      "source": "/workspace/scratch/books2026-dev/raw/die-verwandlung-de.raw"
+    },
+    {
+      "full": {
+        "bytes": 486098,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt",
+        "sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "utf8_scalar_count": 164142
+      },
+      "id": "kokoro-ja",
+      "original_reconstructed_exact": true,
+      "raw_sha256": "d0124c6a71ca3c8f6898dc84578134789fcbdf6a1133121d205ebdaf52274594",
+      "source": "/workspace/scratch/books2026-dev/raw/kokoro-ja.raw"
+    }
+  ],
+  "protocol": "ROOT-SOURCE-INVERSE-AND-CONTROL-CALIBRATION/1",
+  "schema": 1,
+  "scope": "Independent root reconstruction of all six development original editions from projected complete UTF-8 bodies and retained inverse metadata. Calibration is correctness/byte accounting only, no clock claim.",
+  "source_manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d"
+}

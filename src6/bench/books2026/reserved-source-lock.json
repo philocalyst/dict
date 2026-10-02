@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "role": "reserved-validation",
+  "source_limit_bytes": 16777216,
+  "selection_policy": "Selected before codec outcomes. One complete distinct original work/author perlanguage en/fr/es/de/ja; none overlap developmentauthors or translationpairs. No codec execution until root declares a frozen policy. No diagnosticprefixes produced.",
+  "projection_policy": "Same named reversible projections as DEV. PG marker lines pinned exactly incl legacy no-space JaneEyre markers; strict declaredASCII/Latin1 decoding. Japanese exacttitle/subtitle/author header, body and inverse ruby deletion map. Preserve CRLF and all remaining characters.",
+  "books": [
+    {
+      "id": "jane-eyre-en",
+      "repository": "GITenberg/Jane-Eyre_1260",
+      "commit": "d8976a3c05269fb2ecb83d4575d82c6c2abe0012",
+      "source_path": "1260.txt",
+      "url": "https://raw.githubusercontent.com/GITenberg/Jane-Eyre_1260/d8976a3c05269fb2ecb83d4575d82c6c2abe0012/1260.txt",
+      "source_bytes": 1070330,
+      "source_sha256": "bc74b04ec70c9283323f5043f3305c4b08e70650a96ca5a9e1c5e5c5b4c0aa9a",
+      "title": "Jane Eyre",
+      "author": "Charlotte Bronte",
+      "declared_language": "English",
+      "language": "en",
+      "source_encoding": "ascii",
+      "original_publication_year": 1847,
+      "projection": "pg-marked-body-v1",
+      "raw_filename": "jane-eyre-en.raw",
+      "rights": {
+        "work": "Public-domain original literary work; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete original header and full license retained in raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "exact_start_marker": "***START OF THE PROJECT GUTENBERG EBOOK JANE EYRE***",
+      "exact_end_marker": "***END OF THE PROJECT GUTENBERG EBOOK JANE EYRE***",
+      "declared_source_encoding": "ISO-646-US (US-ASCII)"
+    },
+    {
+      "id": "trois-mousquetaires-fr",
+      "repository": "GITenberg/Les-trois-mousquetaires_13951",
+      "commit": "a6a59868e5290f2b286fc39bdc36220e17fb8358",
+      "source_path": "13951-8.txt",
+      "url": "https://raw.githubusercontent.com/GITenberg/Les-trois-mousquetaires_13951/a6a59868e5290f2b286fc39bdc36220e17fb8358/13951-8.txt",
+      "source_bytes": 1381582,
+      "source_sha256": "f9d21d561924ee6fbaf76236575731d36d9adc1408fb048d1ca889808f9b9746",
+      "title": "Les trois mousquetaires",
+      "author": "Alexandre Dumas",
+      "declared_language": "French",
+      "language": "fr",
+      "source_encoding": "iso-8859-1",
+      "original_publication_year": 1844,
+      "projection": "pg-marked-body-v1",
+      "raw_filename": "trois-mousquetaires-fr.raw",
+      "rights": {
+        "work": "Public-domain original literary work; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete original header and full license retained in raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "exact_start_marker": "*** START OF THIS PROJECT GUTENBERG EBOOK LES TROIS MOUSQUETAIRES ***",
+      "exact_end_marker": "*** END OF THIS PROJECT GUTENBERG EBOOK LES TROIS MOUSQUETAIRES ***",
+      "declared_source_encoding": "ISO-8859-1"
+    },
+    {
+      "id": "la-regenta-es",
+      "repository": "GITenberg/La-Regenta_17073",
+      "commit": "1d7241178952dfb37b68cf8806e2de8e42a7413c",
+      "source_path": "17073-8.txt",
+      "url": "https://raw.githubusercontent.com/GITenberg/La-Regenta_17073/1d7241178952dfb37b68cf8806e2de8e42a7413c/17073-8.txt",
+      "source_bytes": 1840152,
+      "source_sha256": "e49616cf18299bc1d52c155b65095c5c5b6d04859fe11a6b1ee0b26dcd731684",
+      "title": "La Regenta",
+      "author": "Leopoldo Alas",
+      "declared_language": "Spanish",
+      "language": "es",
+      "source_encoding": "iso-8859-1",
+      "original_publication_year": 1884,
+      "projection": "pg-marked-body-v1",
+      "raw_filename": "la-regenta-es.raw",
+      "rights": {
+        "work": "Public-domain original literary work; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete original header and full license retained in raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "exact_start_marker": "*** START OF THIS PROJECT GUTENBERG EBOOK LA REGENTA ***",
+      "exact_end_marker": "*** END OF THIS PROJECT GUTENBERG EBOOK LA REGENTA ***",
+      "declared_source_encoding": "ISO-8859-1"
+    },
+    {
+      "id": "effi-briest-de",
+      "repository": "GITenberg/Effi-Briest_5323",
+      "commit": "ad711db620a52853f8191bfd1a66e45fda0e51be",
+      "source_path": "5323-8.txt",
+      "url": "https://raw.githubusercontent.com/GITenberg/Effi-Briest_5323/ad711db620a52853f8191bfd1a66e45fda0e51be/5323-8.txt",
+      "source_bytes": 621356,
+      "source_sha256": "e826e41e136f6e4ef9ce38e4f703f9b936ff54d3395511d347a569f7435fc957",
+      "title": "Effi Briest",
+      "author": "Theodor Fontane",
+      "declared_language": "German",
+      "language": "de",
+      "source_encoding": "iso-8859-1",
+      "original_publication_year": 1895,
+      "projection": "pg-marked-body-v1",
+      "raw_filename": "effi-briest-de.raw",
+      "rights": {
+        "work": "Public-domain original literary work; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete original header and full license retained in raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "exact_start_marker": "*** START OF THIS PROJECT GUTENBERG EBOOK EFFI BRIEST ***",
+      "exact_end_marker": "*** END OF THIS PROJECT GUTENBERG EBOOK EFFI BRIEST ***",
+      "declared_source_encoding": "ISO-8859-1"
+    },
+    {
+      "id": "kappa-ja",
+      "repository": "aozorahack/aozorabunko_text",
+      "commit": "0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65",
+      "source_path": "cards/000879/files/69_ruby_1321/69_ruby_1321.txt",
+      "url": "https://raw.githubusercontent.com/aozorahack/aozorabunko_text/0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65/cards/000879/files/69_ruby_1321/69_ruby_1321.txt",
+      "source_bytes": 85615,
+      "source_sha256": "c35ed7216b7cb0fd566c61ee843c75caf50c28411fe8e82ffad6199bfb1301a7",
+      "raw_filename": "kappa-ja.raw",
+      "source_encoding": "shift_jis",
+      "title": "河童",
+      "author": "芥川龍之介",
+      "declared_language": "Japanese",
+      "language": "ja",
+      "original_publication_year": 1927,
+      "projection": "aozora-ruby-body-v1",
+      "exact_header_lines": [
+        "河童",
+        "どうか Kappa と発音してください。",
+        "芥川龍之介"
+      ],
+      "required_part_headings": [
+        "序"
+      ],
+      "rights": {
+        "work": "Original Japanese work first published1927; author Ryunosuke Akutagawa died1927; public-domain literary work",
+        "source_terms": "Complete Aozora colophon retained with initial1927 publication and volunteer credit",
+        "usage_rules_url": "https://www.aozora.gr.jp/guide/kijyunn.html",
+        "mirror_readme_url": "https://raw.githubusercontent.com/aozorahack/aozorabunko_text/0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65/README.md",
+        "mirror_readme_sha256": "0603178ebd841735d3e39ca7bbfd7d7a25ea967d2ce475e34770e73db55e54a4"
+      }
+    }
+  ]
+}

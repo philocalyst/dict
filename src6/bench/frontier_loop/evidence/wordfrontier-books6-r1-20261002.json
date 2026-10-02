@@ -1,0 +1,2662 @@
+{
+  "accepted": false,
+  "backend_class": "self_contained",
+  "baseline": "bzip3-whole-native",
+  "candidate": "wordfrontier-quality-whole-books-r0",
+  "candidate_encoding_scope": "fresh",
+  "case_snapshot": [
+    {
+      "author": "Jane Austen",
+      "id": "pride-and-prejudice-en",
+      "kind": "book",
+      "language": "en",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-131072.txt",
+        "sha256": "b8946752c5b4a1f36293a10af77ea40b5af83bf0e9aa7040f196e1b79ae0a8f3"
+      },
+      "source": {
+        "bytes": 705012,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt",
+        "sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1"
+      },
+      "split": "development",
+      "title": "Pride and Prejudice",
+      "work_id": "pride-and-prejudice-en"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "id": "war-and-peace-en",
+      "kind": "book",
+      "language": "en",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-131072.txt",
+        "sha256": "d68f1899de27b28da654390f4b2aaec16aff44072c7473f781461b27ea5c6791"
+      },
+      "source": {
+        "bytes": 3339896,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt",
+        "sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186"
+      },
+      "split": "development",
+      "title": "War and Peace",
+      "work_id": "war-and-peace-en"
+    },
+    {
+      "author": "Miguel de Cervantes Saavedra",
+      "id": "don-quijote-es",
+      "kind": "book",
+      "language": "es",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-131072.txt",
+        "sha256": "994873772146dbfb7d0d20b14cf243e9f0885c84e31cf75b20f421431b07c459"
+      },
+      "source": {
+        "bytes": 2179216,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt",
+        "sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5"
+      },
+      "split": "development",
+      "title": "Don Quijote",
+      "work_id": "don-quijote-es"
+    },
+    {
+      "author": "Gustave Flaubert",
+      "id": "madame-bovary-fr",
+      "kind": "book",
+      "language": "fr",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-131072.txt",
+        "sha256": "9c3e6310914c4b51dfa2cc5bf0afb6a446f043d9ea029ab624c3657d1964192e"
+      },
+      "source": {
+        "bytes": 716472,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt",
+        "sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472"
+      },
+      "split": "development",
+      "title": "Madame Bovary",
+      "work_id": "madame-bovary-fr"
+    },
+    {
+      "author": "Franz Kafka",
+      "id": "die-verwandlung-de",
+      "kind": "book",
+      "language": "de",
+      "prefix": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-131072.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c"
+      },
+      "source": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c"
+      },
+      "split": "development",
+      "title": "Die Verwandlung",
+      "work_id": "die-verwandlung-de"
+    },
+    {
+      "author": "\u590f\u76ee\u6f31\u77f3",
+      "id": "kokoro-ja",
+      "kind": "book",
+      "language": "ja",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-131072.txt",
+        "sha256": "9238f072d64ce8da293de953ccab795e9d4332092289b933f31ae9d7cf91e319"
+      },
+      "source": {
+        "bytes": 486098,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt",
+        "sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216"
+      },
+      "split": "development",
+      "title": "\u3053\u3053\u308d",
+      "work_id": "kokoro-ja"
+    }
+  ],
+  "case_snapshot_sha256": "8067f3d83334503b9af24b260682bf37cdac7d4853dfc85243f1c0466c2af8a5",
+  "cohort_seal": null,
+  "decisive_test": "Exact full delivery-frame bytes on all six complete books versus ordinary bzip3 archives.",
+  "expected_case_ids": [
+    "pride-and-prejudice-en",
+    "war-and-peace-en",
+    "don-quijote-es",
+    "madame-bovary-fr",
+    "die-verwandlung-de",
+    "kokoro-ja"
+  ],
+  "freeze_sha256": null,
+  "goal_met": false,
+  "hillclimb_promoted": false,
+  "hypothesis": "Earlier dictionary constructors may fail to predict whole-book prose; measure that gap directly.",
+  "improves_incumbent_by_0_5_percent": false,
+  "incumbent_ratio": 1.0,
+  "incumbent_source": "whole_bzip3_baseline",
+  "mechanism": "fixed paid WPG2/GWT1 automatic quality policy with 64KiB original pages",
+  "next_action": "new_attributable_round",
+  "no_book_regression": false,
+  "parent": "wordfrontier-global-1",
+  "performance_final_ready": false,
+  "pins": {
+    "baseline_dependencies": {
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": {
+        "bytes": 30894944,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+      },
+      "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": {
+        "bytes": 225672,
+        "resolved": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+      },
+      "/usr/lib/x86_64-linux-gnu/libc.so.6": {
+        "bytes": 1995216,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+      },
+      "/usr/lib/x86_64-linux-gnu/libdl.so.2": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872"
+      },
+      "/usr/lib/x86_64-linux-gnu/libm.so.6": {
+        "bytes": 977112,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3"
+      },
+      "/usr/lib/x86_64-linux-gnu/libpthread.so.0": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500"
+      },
+      "/usr/lib/x86_64-linux-gnu/librt.so.1": {
+        "bytes": 14552,
+        "resolved": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b"
+      },
+      "/usr/lib/x86_64-linux-gnu/libutil.so.1": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11"
+      },
+      "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py": {
+        "bytes": 1494,
+        "resolved": "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+        "sha256": "28b138d383597b109866cdb617054d646e1d7ddbe961b0e10e1fcc1441fbe99c"
+      },
+      "/workspace/scratch/bzip3": {
+        "bytes": 94760,
+        "resolved": "/workspace/scratch/bzip3",
+        "sha256": "96d0e3d36f531bf4e255b43c9617ac8e6a4b2d23289647c147946761f2d6ce44"
+      }
+    },
+    "baseline_spec_sha256": "3e0ef7b1d15c2159a21b548d89cbdb1f07a37eb14768f493610f538612e6f588",
+    "candidate_dependencies": {
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": {
+        "bytes": 30894944,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0": {
+        "bytes": 2833617,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+        "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0": {
+        "bytes": 250985,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+        "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so": {
+        "bytes": 25034001,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "sha256": "ee2039cf13a45e1e89f04d0cea9585657d93ffaa425594e1935161013fdf4e12"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__config__.py": {
+        "bytes": 5281,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__config__.py",
+        "sha256": "50c60b30d4a99d1f7829ce309f9c902635f48972c5830fdbfce25c0044ade89e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__init__.py": {
+        "bytes": 25919,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__init__.py",
+        "sha256": "93924ac4b793328947dfd9eb9355e54eccdfd26a92c8dd52188aed2e52c7eb38"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_array_api_info.py": {
+        "bytes": 10354,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_array_api_info.py",
+        "sha256": "373252b9ff2fbad8c64aa8aa6a1ab78d12374b1317e17d5cbdae09e9d16fe045"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_configtool.py": {
+        "bytes": 1007,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_configtool.py",
+        "sha256": "105449de96b34f162113da29fa8716c8a4cb66bae91617e6992fed5ababc0b1a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/__init__.py": {
+        "bytes": 5542,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/__init__.py",
+        "sha256": "c89d22cb57d793da200859df9425b30412f094a492fb1950582a560a8cda4fa7"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs.py": {
+        "bytes": 208893,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs.py",
+        "sha256": "c922ae3ffe2c54f34b1e9d688e04cc8524568b7775f02701147147903f177fe5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs_scalars.py": {
+        "bytes": 12600,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs_scalars.py",
+        "sha256": "67959c2005f2d95b3c9162c2ce0cafc56547d02025f8eeb86052b7b6d6d4ef27"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_asarray.py": {
+        "bytes": 3911,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_asarray.py",
+        "sha256": "7c23472da6823fee486be451fdb22b1f1598df1925726be56621a12480e228b3"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype.py": {
+        "bytes": 10547,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype.py",
+        "sha256": "70ce899e3a072d445608780df15990ca37a28838dcc210792ff7cf30e7b5bae3"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype_ctypes.py": {
+        "bytes": 3726,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype_ctypes.py",
+        "sha256": "28f3e56a40ec3e4b938523abe6a1705b48c9f559e36ef5b811684e6c21d81881"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_exceptions.py": {
+        "bytes": 5159,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_exceptions.py",
+        "sha256": "5fc120d61ab5b94f0bf7088ec05a368d1aba4b4be78c27606051e3de1016f42a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_internal.py": {
+        "bytes": 28981,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_internal.py",
+        "sha256": "619ea730654ebdf4c3d67ce4d97a91773f24d395959d81a29636f54e71ef32af"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_machar.py": {
+        "bytes": 11569,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_machar.py",
+        "sha256": "6145f6e1761bc5727bf4aad66abdbb1650d829f7a876bfd10a413bc346c44eab"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_methods.py": {
+        "bytes": 9430,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_methods.py",
+        "sha256": "e2a8945044b9c273857979cf6afb6aa8c561674f5965e48a970a9d3f0d9e2922"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_tests.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 141888,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_tests.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "fae3aacacf309c276cc4c8cbdc13735117763f1c5f652cb48bb97ecc9c1b9dd8"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 10808937,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "ba96467ae494babaf7c3458b09cc03c4200c2e10010860d80e452ffb8b01c8cd"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_operand_flag_tests.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 16800,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_operand_flag_tests.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "2da00a615720d1fc0fb902fcf73f2ad7e1aba50ca469a34ae2426e5d102b983b"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_rational_tests.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 59592,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_rational_tests.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "2fed2e7ef5e6168b842e958eff52093b2669ee6d448b39c6c064990b79464550"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_simd.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 2882368,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_simd.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "346508d7b24a196ca4175518dd3b09aee32b6c7f9809f78fc031504436c0d3f7"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_string_helpers.py": {
+        "bytes": 2845,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_string_helpers.py",
+        "sha256": "e929a0a22ea80f60ae9e3c014abf41676d079029ef5ba9d33db953394de95a78"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_struct_ufunc_tests.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 16936,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_struct_ufunc_tests.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "53ffdbcd324e449e12d40c77f77635ba2d6fa7036640a273340224202c0afa19"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_type_aliases.py": {
+        "bytes": 3489,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_type_aliases.py",
+        "sha256": "9ac147064676b35c0a432ba0b8afdc17a3414b4ff700ec30ee3de8876ea6a374"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py": {
+        "bytes": 15130,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py",
+        "sha256": "f63e91d7662635b693e7ecb9ac200e3c16e01f86d81989670e016afaf6799c3b"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_umath_tests.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 50312,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_umath_tests.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "ed0edb6cafa2dba589761083c3edb64e72f30fd816c32a9af771440a5b7933b0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/arrayprint.py": {
+        "bytes": 65278,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/arrayprint.py",
+        "sha256": "00002f92b23453a3daff064e9e9b95641a5db020a3a58a5c585f2c03f48f61b8"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/cversions.py": {
+        "bytes": 347,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/cversions.py",
+        "sha256": "1ff88d229c7dfa1635710371aa34f677fe525d98496cca3f71aab8feae8b07b2"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/defchararray.py": {
+        "bytes": 38007,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/defchararray.py",
+        "sha256": "d6d4af2d611e69cdb40e87690c1c5aa492b0c1cce9246d65572daa8d27085578"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/einsumfunc.py": {
+        "bytes": 52820,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/einsumfunc.py",
+        "sha256": "85e15e0a210a8e2faa7d593ccc06756f96ca9be31430bcc2113310ef2c870617"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/fromnumeric.py": {
+        "bytes": 143882,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/fromnumeric.py",
+        "sha256": "b347fa59f908455c0564c943add61bdc48f217dbcc1abd1b9acd0f73e55c3803"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/function_base.py": {
+        "bytes": 19683,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/function_base.py",
+        "sha256": "413d696e597ff2b7ffdd9b06b4b42801e435392a82a9e006b4c4f33c013523fc"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/getlimits.py": {
+        "bytes": 26101,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/getlimits.py",
+        "sha256": "df641eeed94115dca20ef7528c6d5ca766b4349d2b48cc5e0d18a3dda8223eb8"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/memmap.py": {
+        "bytes": 12651,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/memmap.py",
+        "sha256": "c88b10ea7f64a59ba58204492459136e35709c1e257a8ca2cef529736894e27f"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/multiarray.py": {
+        "bytes": 58155,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/multiarray.py",
+        "sha256": "cf01c17723a8c6205170e846d9007fc410189bea7c0114a941bc9ef44cebac1a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numeric.py": {
+        "bytes": 82322,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numeric.py",
+        "sha256": "fc3727bd7bbaa1a1d74a2f50f8157dc86cdfc7bb5cf620b1ebdafd3272439b98"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numerictypes.py": {
+        "bytes": 15967,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numerictypes.py",
+        "sha256": "d7924b057d26fcc4206a21ffc81048e6096fd2f5ee794d1aae74b9e915df5319"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/overrides.py": {
+        "bytes": 7241,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/overrides.py",
+        "sha256": "32d8333816af1bbc33418080eceec0add089555ef649321bfdcbe4581b832c91"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/printoptions.py": {
+        "bytes": 1056,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/printoptions.py",
+        "sha256": "345a6fcb96e78dbbea9ca7aa42dd2f784131a400180153688865c7de98255807"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/records.py": {
+        "bytes": 36767,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/records.py",
+        "sha256": "8685c20ecc0cea16f2b6219d6069214484b34239ea2265dc21d1a536e3940d7e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/shape_base.py": {
+        "bytes": 32738,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/shape_base.py",
+        "sha256": "ef20cfac85d39a606764c512b475ecab58893621a623110071ea7143da3e2554"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/strings.py": {
+        "bytes": 50838,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/strings.py",
+        "sha256": "3957e29964a58d3c5f57e69bc0f23f8af390b675ebc8785ae6928d064b57b128"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/umath.py": {
+        "bytes": 2130,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/umath.py",
+        "sha256": "b7f49020747b764305f95469f1d2b2ae838477dd28a8d9739a01b0687dbca96f"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_distributor_init.py": {
+        "bytes": 421,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_distributor_init.py",
+        "sha256": "14148976054795071ae41ad011560fa059ba2924c98481675ad59b1241214d2a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_expired_attrs_2_0.py": {
+        "bytes": 3826,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_expired_attrs_2_0.py",
+        "sha256": "ccfdf511799bc3281c384cf27ad0c4a7e4712fd7147db51486df79eb368e49ff"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_globals.py": {
+        "bytes": 3091,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_globals.py",
+        "sha256": "9396559f351b28d48b3e667451163024de42ffbc48cdf30d69a4ac052acf4ee2"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/__init__.py": {
+        "bytes": 0,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/hook-numpy.py": {
+        "bytes": 1362,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/hook-numpy.py",
+        "sha256": "314db6a50e0091460f416bb90bca510e99d85c494b27c4741463582544298951"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pytesttester.py": {
+        "bytes": 6328,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pytesttester.py",
+        "sha256": "0e39582fcb8834dd9759ade79e55fa80f1aea0b8dcc750627bf3d0cdba767290"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/__init__.py": {
+        "bytes": 7188,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/__init__.py",
+        "sha256": "306e56bfd75cdd9c8e9837e2747e5c16dca47b234cefb02b0b8477516ed39fe6"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_add_docstring.py": {
+        "bytes": 3999,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_add_docstring.py",
+        "sha256": "ff783b0fee87010dcc4f85fa0c4d3bc8bb9af4ba96161b24355c754d2ed7f4ee"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_array_like.py": {
+        "bytes": 4188,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_array_like.py",
+        "sha256": "10f6547c94a36a6bec589e91b39670c00ff916106961da227dc555b557163e7d"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_char_codes.py": {
+        "bytes": 8764,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_char_codes.py",
+        "sha256": "8f4ee7a64f3635bec8adadb3ed94e553751c38fc2dda033ba992ab3cb7634f8f"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_dtype_like.py": {
+        "bytes": 3762,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_dtype_like.py",
+        "sha256": "f0ce517a42ea7617848d63089f84676e4133b12ee309ab42893d03e6183ee777"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_extended_precision.py": {
+        "bytes": 434,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_extended_precision.py",
+        "sha256": "a649d4aa06a4d0504d33eb0444fa96fa91461fbd7f2be89e84549e7b9a108aa1"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit.py": {
+        "bytes": 632,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit.py",
+        "sha256": "2926cac0e2adb686fee72b53e6f095907ac3327d181efca9b534f28ffe8061cc"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit_base.py": {
+        "bytes": 3058,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit_base.py",
+        "sha256": "9cf669b1096db91e41d22680605f6a0f685efe45e79acb2ffd185a50d16c5beb"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nested_sequence.py": {
+        "bytes": 2505,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nested_sequence.py",
+        "sha256": "b28d5a818187779803a3f201bef1ea041e65b2a19b1ea37f8a6c82e541d4f872"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_scalars.py": {
+        "bytes": 944,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_scalars.py",
+        "sha256": "2e15d8d814c799e60acde2197e98efb8c9fee5e38b8d4da7f73ef3d65e5b29ff"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_shape.py": {
+        "bytes": 275,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_shape.py",
+        "sha256": "e9c16ff8b6d2c86f6695f4813861b2ba5f50fc652b95c1d00bd2596be9b6d1c0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_ufunc.py": {
+        "bytes": 156,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_ufunc.py",
+        "sha256": "1ce91a13eeb05747dddeb9876460b7f580072087fcb72be5cde903e32e064310"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/__init__.py": {
+        "bytes": 3477,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/__init__.py",
+        "sha256": "8559d9ec2d0c09235b330f99caaf8c282612b5a197e91cea14c9e787b79de1d1"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_convertions.py": {
+        "bytes": 329,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_convertions.py",
+        "sha256": "d3133175e2cece20e61ec44cffc96e121e12fa441d328320e86c4d0c36acebd9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_inspect.py": {
+        "bytes": 7436,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_inspect.py",
+        "sha256": "cc5b890011f4f03d4a82afde79c6240f53a0834397a75b78a2a8d9c4cd2474b9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_pep440.py": {
+        "bytes": 13988,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_pep440.py",
+        "sha256": "8adf4fe3fa075d6c37071768573ec93ccba3e64c45e4ceff049f19d66f67bb4c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/char/__init__.py": {
+        "bytes": 93,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/char/__init__.py",
+        "sha256": "c6cea9a6b31d98d79755fb934645379c5f6a761bad59d3eee6869ea760235a67"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/conftest.py": {
+        "bytes": 8577,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/conftest.py",
+        "sha256": "a5776ff822a8728204a6bd03b18b2dbbb4e0aaf35dcd2bdf88334c94cc26a989"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/__init__.py": {
+        "bytes": 1290,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/__init__.py",
+        "sha256": "c0935a445d5414e9d92aa881aecb2158b8d31a2119f6bbd695c8add318fb634c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype.py": {
+        "bytes": 323,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype.py",
+        "sha256": "1870617d5b6c56b3fbbf5dc8ba3133f5a18810d91821d6dfb91bbe35ec355275"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype_ctypes.py": {
+        "bytes": 351,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype_ctypes.py",
+        "sha256": "c17e26dfb6f4cd08319734f93a313fba3d84e42a625fd13b1cb1693ba87f9436"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_internal.py": {
+        "bytes": 949,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_internal.py",
+        "sha256": "ab1a472442d735471826426dd4b92d42e666e01c18bb86d79ccb8110ea7a3ce5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py": {
+        "bytes": 2098,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py",
+        "sha256": "4fcf07660143e550ae5d109278b6cfa23f7d9ca512760cb0f315b27fa7aa8714"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_utils.py": {
+        "bytes": 923,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_utils.py",
+        "sha256": "e5f935f09378dd183a607bda9fa42376b39e3ae2ed4652d598fe8c69d0442550"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/arrayprint.py": {
+        "bytes": 339,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/arrayprint.py",
+        "sha256": "2db7b8b26597605cddf6c3bd2cb2793d94b80b76d2bcbb7a1d1b70484e7ac4df"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/defchararray.py": {
+        "bytes": 347,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/defchararray.py",
+        "sha256": "6bd96ebef9e2f2046b19574a3bb53fc70b0516f9339719d58312fbe632d19822"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/einsumfunc.py": {
+        "bytes": 339,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/einsumfunc.py",
+        "sha256": "08db9c20d81422ba622d09f8c4f23f9a88308df2a5140de1ee0c00bd15706f93"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/fromnumeric.py": {
+        "bytes": 343,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/fromnumeric.py",
+        "sha256": "e536a89c956e0b5d74aafddfddca93b668dac935f4066a89020a00267e47dd92"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/function_base.py": {
+        "bytes": 351,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/function_base.py",
+        "sha256": "be18e1cec1330ddd7544783aa6295f3093b75fa93de1a9f944026a8fe9e5ce6b"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/getlimits.py": {
+        "bytes": 335,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/getlimits.py",
+        "sha256": "ea70a4e13c342e35bb8e85aca6b2392e23338ded60b0e8ceda5490fcec0107c2"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/multiarray.py": {
+        "bytes": 793,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/multiarray.py",
+        "sha256": "6e374f2dbbc9ba3eb533a4d991b0793573823661f841b52aea0dde3e428fe930"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numeric.py": {
+        "bytes": 360,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numeric.py",
+        "sha256": "0ad93f42293207698cd31234941781f184d47d3c104977d576920c46dba76cca"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numerictypes.py": {
+        "bytes": 347,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numerictypes.py",
+        "sha256": "6d7c13c3351a8736c7ac51a14b946424ebdbe93604b109d00b9c30f6637ed55c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/overrides.py": {
+        "bytes": 335,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/overrides.py",
+        "sha256": "d456726f453a249bb2a23b7116f43b1d2276ae97e159e73417e5f499aa428dcf"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/records.py": {
+        "bytes": 327,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/records.py",
+        "sha256": "f727c50f1c8e73af255ea7db6a8b2044d970d5d6d63fc0911f320f12d12d4a07"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/shape_base.py": {
+        "bytes": 339,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/shape_base.py",
+        "sha256": "dacadd42d17577c2e951b0e318c5d3f93ab3d8ad8d6933be6440b8be2098b306"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/umath.py": {
+        "bytes": 319,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/umath.py",
+        "sha256": "84c56636b20276a5d18a2446ed4315d06afef7162a2469a438d1909f6d222bdf"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/__init__.py": {
+        "bytes": 193,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/__init__.py",
+        "sha256": "585c0c8695762c93fe2103aca5a227855f1ce973ca670aa9a44f9cbed229aaf5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/_ctypeslib.py": {
+        "bytes": 19079,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/_ctypeslib.py",
+        "sha256": "36d114a62b108437c44c12c092a61fec08ead3188d859bab6f94a61861f9e290"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/doc/ufuncs.py": {
+        "bytes": 5414,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/doc/ufuncs.py",
+        "sha256": "f71b7c1f7e0686b5eb16af5c585506bc915e3daf58b87f53ab50f30279b61361"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/dtypes.py": {
+        "bytes": 1312,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/dtypes.py",
+        "sha256": "cee3f0802d228c5da80d100e27a23d24a85a26e857140ca00722d06a856d4f9e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/exceptions.py": {
+        "bytes": 7800,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/exceptions.py",
+        "sha256": "c75cfb0b6463ac3156f2d2dec1b663c8c890a24d16066e642ae44f23154b5238"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__init__.py": {
+        "bytes": 2448,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__init__.py",
+        "sha256": "7008141d680941966c7eff1ca3c28136bfe6f01e9fa7374169436f25e05ffcda"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__main__.py": {
+        "bytes": 130,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__main__.py",
+        "sha256": "ea2da3547d9f3eb895d5aa1c4d8fdd505bd62b5f2a6bece3a6721203e3a9177c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__version__.py": {
+        "bytes": 48,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__version__.py",
+        "sha256": "f7d4ba9927afba1c0698ef64bbefbb55425e921374a2de3e2747192a21dcaa9c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/__init__.py": {
+        "bytes": 299,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/__init__.py",
+        "sha256": "eff6c0edcff10e92dce3ff2f3df1f7dbe2f19fd7dc513823436e6caddbf0bc03"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_backend.py": {
+        "bytes": 1151,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_backend.py",
+        "sha256": "a055d9f3e57071049b96d97cfe98162cfa82399f18fe9c7ba1e4e4fc19712537"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_distutils.py": {
+        "bytes": 2385,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_distutils.py",
+        "sha256": "8444f4581e2acbe0f80739de906016864f78e64e707aada51940d1ea1ae25cca"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_meson.py": {
+        "bytes": 8107,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_meson.py",
+        "sha256": "568b94424591524ef85a10ed91fe8747bf50a0af96af1f04eea3bb815a720e79"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_isocbind.py": {
+        "bytes": 2360,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_isocbind.py",
+        "sha256": "cda060a5f3cd466c551b776850895b6488b207df7432c5e2c0369bad28fd1e74"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_src_pyf.py": {
+        "bytes": 7695,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_src_pyf.py",
+        "sha256": "3c7a68f43dbc2aadeaff7f8a157f03dec143f5e5fc0357372ee2cdcd7cc1c8ec"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/auxfuncs.py": {
+        "bytes": 26920,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/auxfuncs.py",
+        "sha256": "767694c2b740bf8f8b6c488735b4b5beb8d03423b4941bb25a48f746dfd48b31"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/capi_maps.py": {
+        "bytes": 30079,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/capi_maps.py",
+        "sha256": "ec2f8d9dd23651b4ad3465db8606d63a6afdb4b0317d0bf0d737fb67bc394859"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cb_rules.py": {
+        "bytes": 25051,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cb_rules.py",
+        "sha256": "e8a6cfbbdc9f27eee901adb8223f47df82e5d7941cf025d3a8216250923a47c6"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cfuncs.py": {
+        "bytes": 52660,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cfuncs.py",
+        "sha256": "e09e0fd76a06a725991dbd4054a025ed827741482783018c0a7075221ac99fb5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/common_rules.py": {
+        "bytes": 5030,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/common_rules.py",
+        "sha256": "ffdcb32289493068297770fde0b741b0e0e77d4b2431182ddafd37ac40881c94"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/crackfortran.py": {
+        "bytes": 146879,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/crackfortran.py",
+        "sha256": "bdb02f5a3e97b332d2fa75349ce79d68d36dc2daaf92433c82a6403fd32f3c12"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/diagnose.py": {
+        "bytes": 5075,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/diagnose.py",
+        "sha256": "616363d6f33af1ee3b2dbdbbd30959939cab714fb24e5cc669834f059ee74c05"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f2py2e.py": {
+        "bytes": 28763,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f2py2e.py",
+        "sha256": "92b496e11a593c31cd5f62162dd9f6f0a5b38f497314d49cffa7d271b19031f2"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f90mod_rules.py": {
+        "bytes": 9810,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f90mod_rules.py",
+        "sha256": "ed9e6fa2b538c215f8d39c4c2faea1af88b589c09473d82be9a9f847e00c87b3"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/func2subr.py": {
+        "bytes": 10049,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/func2subr.py",
+        "sha256": "f6280230c0edb48805d4c1ba90139a8248c8fd217e5251a3002023dcd72fd3ea"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/rules.py": {
+        "bytes": 63091,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/rules.py",
+        "sha256": "22b8fed77a0b1a8c0d1d8125155f93654b34544774350a51b27a269c8d4d4f1f"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/symbolic.py": {
+        "bytes": 53214,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/symbolic.py",
+        "sha256": "52e16ce35d56612a91ec97dbb2ec8dbfffc80bdc0aab14005a85910de28f71dc"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/use_rules.py": {
+        "bytes": 3376,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/use_rules.py",
+        "sha256": "7a666148b3db343c811e7b1f28a5c39c6cf83ff830ae02f475f099703de7f43e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/__init__.py": {
+        "bytes": 8291,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/__init__.py",
+        "sha256": "3961349ba1ff6e5cafd70b6a42989753992ac45e8ed94c71715e6dd75534e511"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_helper.py": {
+        "bytes": 6787,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_helper.py",
+        "sha256": "8489f66721181b87cb077306bc23efa52acb5c57e1fb13b8cc62a58e4fd34236"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft.py": {
+        "bytes": 62598,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft.py",
+        "sha256": "09fa40a51f51d123ae72a97d829f6f5da766ff2e5c04cf979e3e6dac3a6f1521"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 539072,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e849dc89e717b2a315948dd0127786098372c7a2206cfd130fa818b73e69164d"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/helper.py": {
+        "bytes": 611,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/helper.py",
+        "sha256": "4681000ec3a7a028124cbd601399fedfa965cfc8b0c46ce7e7669fdcbfbd2846"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/__init__.py": {
+        "bytes": 3004,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/__init__.py",
+        "sha256": "cd81aea847cfaaaecb0db89da7162cf068023409a8278c50805bc5dd7289e518"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_array_utils_impl.py": {
+        "bytes": 1697,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_array_utils_impl.py",
+        "sha256": "1985a2c8da8b43b0c6512057cf46db47a000a994ad0c8c147bbb6c6d9fffd793"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraypad_impl.py": {
+        "bytes": 32296,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraypad_impl.py",
+        "sha256": "cf9fbe5d3f344dc9c365ecc756b7716ae252637c82e2f30375dec994efa1df3c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py": {
+        "bytes": 41275,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py",
+        "sha256": "545760a456497322616053dc4e4fcb403fd2aea5faa68cbfb21b0b2af662832d"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arrayterator_impl.py": {
+        "bytes": 7218,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arrayterator_impl.py",
+        "sha256": "1ed3800c81ee1bd0036db3138268783ff9ae91ed55fbc13e14d10eddb54e18f0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_datasource.py": {
+        "bytes": 22731,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_datasource.py",
+        "sha256": "ce4f956e7e099431c455adc37ba0373608e79e2cd2262f8717466fbc0e98228e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_format_impl.py": {
+        "bytes": 36865,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_format_impl.py",
+        "sha256": "cdc437c57c4f7fb7a992db18adc7416c83ee38287d38f575837801ea085fe2b1"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py": {
+        "bytes": 196425,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py",
+        "sha256": "0191b2376f44730e0b46e5354cd51c3c2edc5473bdc9ee1b27d15023b9ff1b07"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py": {
+        "bytes": 38432,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py",
+        "sha256": "52dbbb68041ced9a6c1e7ff4e288149d9ab565c7477e2a5cabd791abcd7ba155"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_index_tricks_impl.py": {
+        "bytes": 32186,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_index_tricks_impl.py",
+        "sha256": "83b369e04f001bdb20ca2f474d482f38cd3ca489408ff72f5f0e1c73b36b5392"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_iotools.py": {
+        "bytes": 30876,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_iotools.py",
+        "sha256": "d23b69be99792feff5383236d45fb58b5f6dd5edcbfbac09c517750922dec0bd"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py": {
+        "bytes": 71949,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py",
+        "sha256": "71d393edd6308ef52923d8841d3af0cdb6ed2a13fd65980e08c8ab4c17983d49"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py": {
+        "bytes": 99277,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py",
+        "sha256": "92e71acf00ae7e1e26370102c99c447abc6ca9afc6c50333d6462e65444323cb"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_polynomial_impl.py": {
+        "bytes": 44134,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_polynomial_impl.py",
+        "sha256": "4d68aa946dd60daf7bb5acb1402125b590fd4cd854c85a6bccbfd499decbc6ca"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_scimath_impl.py": {
+        "bytes": 15692,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_scimath_impl.py",
+        "sha256": "400538b8cfc837356a093b3e013132cb526144497fc03267ff2814ef962d7e01"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py": {
+        "bytes": 39479,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py",
+        "sha256": "e6f914f6b3cec0abd273b4f3c5d7d6b4cd3cb95d26d798873d3c5ba9c638ece7"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_stride_tricks_impl.py": {
+        "bytes": 18025,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_stride_tricks_impl.py",
+        "sha256": "cb7531a778c5cc3c26210d77ecddb36a9efebd6fe338d5109979db7eaaeceb40"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_twodim_base_impl.py": {
+        "bytes": 33925,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_twodim_base_impl.py",
+        "sha256": "de738bbc20fa71f33a303de8dfcd45e3c181f29a2ab1418308339094e0505e66"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_type_check_impl.py": {
+        "bytes": 19221,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_type_check_impl.py",
+        "sha256": "59e55f5b3ff42a5bdbd8affa974c789c7c070703d881f7317998a757f769fe6c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_ufunclike_impl.py": {
+        "bytes": 6309,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_ufunclike_impl.py",
+        "sha256": "d1e7a67ff11894b9926b88a736bde2b89d5ea1332a2f2211d27e9d4329a06b76"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_user_array_impl.py": {
+        "bytes": 7697,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_user_array_impl.py",
+        "sha256": "b779e7ac5baf6c18b3155d4adc2f4d37220cf342d4e6ca40f3c325ad82731289"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_utils_impl.py": {
+        "bytes": 23499,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_utils_impl.py",
+        "sha256": "96db16f4c329de4d6fc3b22789d8584f97e8f60ae0c33eb6e1fbd17a21c3c967"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_version.py": {
+        "bytes": 4851,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_version.py",
+        "sha256": "e1d52b73d26cd0a3c443969da18291e5d9cfe1f7e3083b4950a3ea70c6aec18e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/array_utils.py": {
+        "bytes": 144,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/array_utils.py",
+        "sha256": "5db732849f52d0894d9cff4dcbacb280b30400259650f34e53cbdebe3d531292"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/format.py": {
+        "bytes": 477,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/format.py",
+        "sha256": "9e9274789853eee28d2b96b49423067e226ff91e23c8d86220f7996c970d5c1b"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/introspect.py": {
+        "bytes": 2749,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/introspect.py",
+        "sha256": "bbec207ccb98b7c188dc09d135d5ece23e30f5e353b1ace5aab6b34be3fb80a0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/mixins.py": {
+        "bytes": 7200,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/mixins.py",
+        "sha256": "29f7fbe9272981657772bba2708f40edae337c19c65665edc10cccceee710c4a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/npyio.py": {
+        "bytes": 68,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/npyio.py",
+        "sha256": "79a3ef7c7192cd413bd132471cb3823c85fd1b98a132e0447b1cbafcf36127d4"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/recfunctions.py": {
+        "bytes": 59539,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/recfunctions.py",
+        "sha256": "4f869ae715dabfd9ed7f0e589b33e2abf614921d76c06938d17c812d03c21335"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/scimath.py": {
+        "bytes": 169,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/scimath.py",
+        "sha256": "aa315a41eab4cc4225ee02aa3a16a3fef9820bf29a15dc9398774b514912a792"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/stride_tricks.py": {
+        "bytes": 88,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/stride_tricks.py",
+        "sha256": "c74fc17f097270102547706fa714e775e3fde9d1c14ff7c049b9134d3cc16202"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/user_array.py": {
+        "bytes": 63,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/user_array.py",
+        "sha256": "ceceaee93017a00c9218065cd6a13a7ca0f800dfadeaead909a89968a9878aca"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/__init__.py": {
+        "bytes": 2124,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/__init__.py",
+        "sha256": "ee956f17038914a380ac6794b3a30d8f730daaab31ef1c74beddbfedabcd020e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_linalg.py": {
+        "bytes": 115106,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_linalg.py",
+        "sha256": "eab0bbee9c8758d387934dc32849f01deceb50261d02e22d41f03ad6ff2562cc"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 231833,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "64bfb8bb8a1a09ca31f7a6e307a87b4c78a75f3489aaf3c61ed8aa4ffada9845"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/lapack_lite.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 30001,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/lapack_lite.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "93ca06e05991d23cc5fa02e76c757b97cf20b5ef29ec0ef69fb88a2432ddf5d5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/linalg.py": {
+        "bytes": 585,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/linalg.py",
+        "sha256": "e8d8a63faf2d61ad2a051825587f3bfed3a1dac72c86d0e97307ef06f99de8fa"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/__init__.py": {
+        "bytes": 1406,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/__init__.py",
+        "sha256": "5e90d6617c1ab83738f7e20db24e39e43d37530e29eb115db1d58e9f6aedf3b5"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/core.py": {
+        "bytes": 288733,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/core.py",
+        "sha256": "7e72288b07fa5e01fce25612aa7e0ba154e09b443285a1894d000a6fa75266ae"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/extras.py": {
+        "bytes": 70680,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/extras.py",
+        "sha256": "7fca9feadff1f64df838a98788d21fb7d3c50b22d831e0521a18988e152e2297"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/mrecords.py": {
+        "bytes": 27073,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/mrecords.py",
+        "sha256": "d34833cf2ff1c42e34f295592115124616f0a9cd541dcca113eb4ed8560cf081"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/testutils.py": {
+        "bytes": 10235,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/testutils.py",
+        "sha256": "bcd1b56b2ebcf733a4b6b9bedf7b72cf46ec08bc642472ba8fefb626d1d13eae"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matlib.py": {
+        "bytes": 10638,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matlib.py",
+        "sha256": "fd2f4df12d8d36c1c6414725a31af1001b490de8c7894c8c74c24eed26b23e40"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/__init__.py": {
+        "bytes": 243,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/__init__.py",
+        "sha256": "52de88a9f8ee03e930c28e8704e6008058d75c2fe1ed857fdc7c83b0a33bd9d9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/defmatrix.py": {
+        "bytes": 30875,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/defmatrix.py",
+        "sha256": "c29c3a95953d5faaa9f30009a240d7b76441acbd5e5ea96606dfa88c8c18ce55"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/__init__.py": {
+        "bytes": 6726,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/__init__.py",
+        "sha256": "8064b02cda4f0a95df3e08894ac815a15b09d004b573efcc5a518e7a21b9e6c2"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/_polybase.py": {
+        "bytes": 39358,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/_polybase.py",
+        "sha256": "6f49028938149bc0f9402fcb5929bac8dbf00bbf67a4301e92c2b4bd03dc8824"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/chebyshev.py": {
+        "bytes": 62322,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/chebyshev.py",
+        "sha256": "4f4beb0ec3ab3bc36dc5bcdfffed1dbff94fc85e5ce393a30e85490f37860402"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite.py": {
+        "bytes": 54603,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite.py",
+        "sha256": "220bb0262b6d283877cb4ac5d4cf652ee229b455e0abe3e16873538df1370a70"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite_e.py": {
+        "bytes": 52305,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite_e.py",
+        "sha256": "7e1bae8b68cb73423958412c443732c3c14a485c4e97d8ebf1be32448c4466a4"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/laguerre.py": {
+        "bytes": 52474,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/laguerre.py",
+        "sha256": "5c9e5d36a5ae64d86ac0045bfd05b89dfad11f226fd4930282c3f65b8f8a13d3"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/legendre.py": {
+        "bytes": 51129,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/legendre.py",
+        "sha256": "b0c25398675ec0d85c72b2bd0b27cd208151833998f80247860a3acf1b4662fa"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polynomial.py": {
+        "bytes": 52196,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polynomial.py",
+        "sha256": "f88202a2c6f68fc0a5b087d73c35a05ea2f1e96ba153aa25a1c538264c4dee42"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polyutils.py": {
+        "bytes": 22657,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polyutils.py",
+        "sha256": "99011ade80b3f57f9dd4768d757929049cd7586ce0638d960cc8c93a7f7cf0ef"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/__init__.py": {
+        "bytes": 7480,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/__init__.py",
+        "sha256": "585ce7b73b5454d6a25c2a50967f2dc322fc1d214d4bb5c0589949b105e06ea9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 320144,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "53a8bd2e993d32c304b91020970c8b67fa178e142137f525743ba92755524b84"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_common.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 241288,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_common.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e7fb21cc610f6e22f1f40a365b0fe6c573132b6c22199ed21dbe51c0e7c73620"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/extending.py": {
+        "bytes": 884,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/extending.py",
+        "sha256": "8e920bd678cc85fd277a19a53079206642319ecd890bd1840d88000a15fcec6f"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/parse.py": {
+        "bytes": 1750,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/parse.py",
+        "sha256": "3caf6f754c709af76716f1f7acea609e7a484b09e277bae2e573a606b316a49c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending.py": {
+        "bytes": 1959,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending.py",
+        "sha256": "67b67f5e9ec73c4e0ae4167b030a59dbdaafb9fb45024be132d357e77b6530cc"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending_distributions.py": {
+        "bytes": 2036,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending_distributions.py",
+        "sha256": "7dd78f5de523e3ac972b430ad5cb33c541d088e4e236e36cadb66a3f0e00746b"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 809096,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "d7fed73c3e361b6ff683a9148b74d982f1702b1af3631e496066034cd1cba7ad"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 130384,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "a3a98159adbf86abf95b34b4989840f0f0bfbde3a5c87ad2a3e01ea7c0428d4d"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 145528,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "2b9bc903a5ab4f857e169e93cf59a824564f1361b1fc4ff5bb336a54ece72ba9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 121968,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "9fb7e485037c7f00aa3e4aa1056f15f7f9b964aa4f04657952194efaa9174356"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pickle.py": {
+        "bytes": 2742,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pickle.py",
+        "sha256": "2ede3b99afef9e72477674257398d9fc3a811ec74a8b442250d68890c7fde6a0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 91560,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "62906d05604056ee4de2ce978cd9d23e0de603c80a769a648ceac74d8ab680b6"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 218080,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "d15c630c101e132de14d924facadf581f5e004b0974b17afa2f0dea1bcf5fe6e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-x86_64-linux-gnu.so": {
+        "bytes": 619416,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "70b2d9942f3d35be9f95c7bc3ba19e78e3db00e2b0a323ca02363cee9c9e128c"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/rec/__init__.py": {
+        "bytes": 83,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/rec/__init__.py",
+        "sha256": "90d0186284800348b3a545516fed7cb09c3e88ab45ab6465d94e52387de91d13"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/strings/__init__.py": {
+        "bytes": 83,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/strings/__init__.py",
+        "sha256": "a36ef01d6f2319a51f6c3a294b2126603e918dea37dc0ce4181053816ae5187e"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/__init__.py": {
+        "bytes": 581,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/__init__.py",
+        "sha256": "12a7be3b1fb7252aa4e904679cf3c52c25bd224aaff4eb890e19e6dae18cdf37"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/__init__.py": {
+        "bytes": 0,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/extbuild.py": {
+        "bytes": 7716,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/extbuild.py",
+        "sha256": "2e0d6ca80f7843be0a8b9bbeb31d0f123eeeaebdd83f8ef4f810a2caf2701314"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py": {
+        "bytes": 95499,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py",
+        "sha256": "47a619d254380998c7f35f2b92c032eafcb1184b5342408684e1bde9a303ef8a"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/overrides.py": {
+        "bytes": 2134,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/overrides.py",
+        "sha256": "07c63c3e5a6f2bbd48712ba8b9b5d68f82f935598b5529fb58c8352fbc593bc9"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/print_coercion_tables.py": {
+        "bytes": 6286,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/print_coercion_tables.py",
+        "sha256": "49ba0d9822dce45c95f9447c80a8c97363c8a233755d04ef1f45b30eaef93363"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/__init__.py": {
+        "bytes": 6048,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/__init__.py",
+        "sha256": "15d6881f8ee3f2e18403996e4eef839eb38e4c5c3ede77b62551defb29ffedb0"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/mypy_plugin.py": {
+        "bytes": 6541,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/mypy_plugin.py",
+        "sha256": "d6971f2f125a6057423ca4095701ef7586d9495759ed1488720d505c747b9ea3"
+      },
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/version.py": {
+        "bytes": 293,
+        "resolved": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/version.py",
+        "sha256": "e5acbe1a666da629f581c40a2c09d54229c7aa918f3a1d567dbac0829c807472"
+      },
+      "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": {
+        "bytes": 225672,
+        "resolved": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+      },
+      "/usr/lib/x86_64-linux-gnu/libc.so.6": {
+        "bytes": 1995216,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+      },
+      "/usr/lib/x86_64-linux-gnu/libdl.so.2": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872"
+      },
+      "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+        "bytes": 182856,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "sha256": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af"
+      },
+      "/usr/lib/x86_64-linux-gnu/libm.so.6": {
+        "bytes": 977112,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3"
+      },
+      "/usr/lib/x86_64-linux-gnu/libpthread.so.0": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500"
+      },
+      "/usr/lib/x86_64-linux-gnu/librt.so.1": {
+        "bytes": 14552,
+        "resolved": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b"
+      },
+      "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": {
+        "bytes": 2497768,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33",
+        "sha256": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00"
+      },
+      "/usr/lib/x86_64-linux-gnu/libutil.so.1": {
+        "bytes": 14408,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11"
+      },
+      "/usr/lib/x86_64-linux-gnu/libz.so.1.3.1": {
+        "bytes": 125376,
+        "resolved": "/usr/lib/x86_64-linux-gnu/libz.so.1.3.1",
+        "sha256": "85590dd58edf5445e18bc7193e5ebc01ac5841f1ae187e97705a662e90c6421e"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": {
+        "bytes": 35038,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig",
+        "sha256": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": {
+        "bytes": 42816,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig",
+        "sha256": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": {
+        "bytes": 5191,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig",
+        "sha256": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": {
+        "bytes": 3758,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig",
+        "sha256": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": {
+        "bytes": 9872,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig",
+        "sha256": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": {
+        "bytes": 14171,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig",
+        "sha256": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": {
+        "bytes": 19460,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig",
+        "sha256": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": {
+        "bytes": 2800,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig",
+        "sha256": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": {
+        "bytes": 12107,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig",
+        "sha256": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": {
+        "bytes": 10006,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig",
+        "sha256": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": {
+        "bytes": 1230,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig",
+        "sha256": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": {
+        "bytes": 13840,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig",
+        "sha256": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": {
+        "bytes": 13729,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig",
+        "sha256": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": {
+        "bytes": 1824,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig",
+        "sha256": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": {
+        "bytes": 7663,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig",
+        "sha256": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a"
+      },
+      "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": {
+        "bytes": 3245,
+        "resolved": "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig",
+        "sha256": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": {
+        "bytes": 3299,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/attribute_register.py",
+        "sha256": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_best.py": {
+        "bytes": 4759,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_best.py",
+        "sha256": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": {
+        "bytes": 5597,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_dp.py",
+        "sha256": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_m.py": {
+        "bytes": 2635,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_m.py",
+        "sha256": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_page.py": {
+        "bytes": 9761,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_page.py",
+        "sha256": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_register.py": {
+        "bytes": 2194,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_register.py",
+        "sha256": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": {
+        "bytes": 2365,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/compose_scope.py",
+        "sha256": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": {
+        "bytes": 3864,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py",
+        "sha256": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": {
+        "bytes": 3070,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/dependent_members.py",
+        "sha256": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": {
+        "bytes": 858,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h",
+        "sha256": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": {
+        "bytes": 7346,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig",
+        "sha256": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": {
+        "bytes": 310608,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/prepared_wpg",
+        "sha256": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": {
+        "bytes": 12403,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp",
+        "sha256": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": {
+        "bytes": 4699,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py",
+        "sha256": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": {
+        "bytes": 10889,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp",
+        "sha256": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/scope_register.py": {
+        "bytes": 5168,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/scope_register.py",
+        "sha256": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/screen.py": {
+        "bytes": 1513,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/screen.py",
+        "sha256": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/template_split.py": {
+        "bytes": 5823,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/template_split.py",
+        "sha256": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0"
+      },
+      "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": {
+        "bytes": 7639,
+        "resolved": "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py",
+        "sha256": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353"
+      },
+      "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": {
+        "bytes": 14908,
+        "resolved": "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+        "sha256": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": {
+        "bytes": 9339,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py",
+        "sha256": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": {
+        "bytes": 8826,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py",
+        "sha256": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": {
+        "bytes": 6191,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h",
+        "sha256": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": {
+        "bytes": 10718,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py",
+        "sha256": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": {
+        "bytes": 304064,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry",
+        "sha256": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": {
+        "bytes": 20948,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp",
+        "sha256": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": {
+        "bytes": 2766,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig",
+        "sha256": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": {
+        "bytes": 2742,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig",
+        "sha256": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": {
+        "bytes": 3073,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig",
+        "sha256": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": {
+        "bytes": 11718,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig",
+        "sha256": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": {
+        "bytes": 14484,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig",
+        "sha256": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": {
+        "bytes": 15912,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig",
+        "sha256": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": {
+        "bytes": 15935,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig",
+        "sha256": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146"
+      },
+      "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": {
+        "bytes": 15768,
+        "resolved": "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp",
+        "sha256": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9"
+      },
+      "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": {
+        "bytes": 6992496,
+        "resolved": "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference",
+        "sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f"
+      },
+      "/workspace/scratch/wgp6/frozen-backend-runtime2/native": {
+        "bytes": 5353144,
+        "resolved": "/workspace/scratch/wgp6/frozen-backend-runtime2/native",
+        "sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b"
+      },
+      "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": {
+        "bytes": 5368808,
+        "resolved": "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward",
+        "sha256": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7"
+      },
+      "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": {
+        "bytes": 5369336,
+        "resolved": "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist",
+        "sha256": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34"
+      },
+      "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": {
+        "bytes": 59456,
+        "resolved": "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context",
+        "sha256": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+      },
+      "/workspace/scratch/wordfrontier-native/wordfrontier-decode": {
+        "bytes": 362248,
+        "resolved": "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+        "sha256": "ffbd6a64e98ae0e3c93439bed8b424cee134e176b9522c4eba5f32e1a6cdae39"
+      },
+      "directory:/workspace/scratch/wgp6/frozen-backend-runtime2": {
+        "m_reference": {
+          "bytes": 6992496,
+          "sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f"
+        },
+        "manifest.json": {
+          "bytes": 2250,
+          "sha256": "0eaba336be7a1019a80865941a19c4ffc03b6022ef96318c77bca42b4d9b67ff"
+        },
+        "native": {
+          "bytes": 5353144,
+          "sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b"
+        },
+        "native_forward": {
+          "bytes": 5368808,
+          "sha256": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7"
+        },
+        "native_forward_hoist": {
+          "bytes": 5369336,
+          "sha256": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34"
+        },
+        "reparse_context": {
+          "bytes": 59456,
+          "sha256": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        }
+      }
+    },
+    "candidate_spec_sha256": "57de625e6b4e9b03071bdb9e9bb06a419405fd4a75edfc13cbaddb7f646f9bd8",
+    "harness_sha256": "d6145b89d89e3ff3fc91f67618354d4bfff45ad8cc88babe1d4fd457907372d7",
+    "registry_sha256": "b0c6f884c31a8826723c135b68c65eb732a48e995b0cff608bb278ef4b457622"
+  },
+  "primary": {
+    "eligible": true,
+    "language_balanced_work_geo": 1.0638284181915134,
+    "language_geo": {
+      "de": 1.0858415364103147,
+      "en": 1.0421464705790389,
+      "es": 1.0668801387102187,
+      "fr": 1.0797285032600767,
+      "ja": 1.045279729244654
+    },
+    "target_35_percent": false,
+    "worst_case_ratio": 1.0858415364103147
+  },
+  "qualification_report_sha256": null,
+  "run_id": "f63a3646ece74a32902b78db861e7c05",
+  "scores": {
+    "all_cases_passed": true,
+    "kinds": {
+      "book": {
+        "case_win_fraction": 0.0,
+        "cases": [
+          {
+            "baseline_bytes": 161119,
+            "candidate_bytes": 169043,
+            "id": "pride-and-prejudice-en",
+            "kind": "book",
+            "language": "en",
+            "ratio": 1.049181040100795,
+            "work_id": "pride-and-prejudice-en"
+          },
+          {
+            "baseline_bytes": 732272,
+            "candidate_bytes": 758018,
+            "id": "war-and-peace-en",
+            "kind": "book",
+            "language": "en",
+            "ratio": 1.0351590665763541,
+            "work_id": "war-and-peace-en"
+          },
+          {
+            "baseline_bytes": 500612,
+            "candidate_bytes": 534093,
+            "id": "don-quijote-es",
+            "kind": "book",
+            "language": "es",
+            "ratio": 1.0668801387102187,
+            "work_id": "don-quijote-es"
+          },
+          {
+            "baseline_bytes": 179597,
+            "candidate_bytes": 193916,
+            "id": "madame-bovary-fr",
+            "kind": "book",
+            "language": "fr",
+            "ratio": 1.0797285032600767,
+            "work_id": "madame-bovary-fr"
+          },
+          {
+            "baseline_bytes": 35251,
+            "candidate_bytes": 38277,
+            "id": "die-verwandlung-de",
+            "kind": "book",
+            "language": "de",
+            "ratio": 1.0858415364103147,
+            "work_id": "die-verwandlung-de"
+          },
+          {
+            "baseline_bytes": 97505,
+            "candidate_bytes": 101920,
+            "id": "kokoro-ja",
+            "kind": "book",
+            "language": "ja",
+            "ratio": 1.045279729244654,
+            "work_id": "kokoro-ja"
+          }
+        ],
+        "eligible": true,
+        "expected": 6,
+        "language_balanced_work_geo": 1.0638284181915134,
+        "language_geo": {
+          "de": 1.0858415364103147,
+          "en": 1.0421464705790389,
+          "es": 1.0668801387102187,
+          "fr": 1.0797285032600767,
+          "ja": 1.045279729244654
+        },
+        "median_case_ratio": 1.0580305894055069,
+        "scored": 6,
+        "work_geo_by_language": {
+          "de": {
+            "die-verwandlung-de": 1.0858415364103147
+          },
+          "en": {
+            "pride-and-prejudice-en": 1.049181040100795,
+            "war-and-peace-en": 1.0351590665763541
+          },
+          "es": {
+            "don-quijote-es": 1.0668801387102187
+          },
+          "fr": {
+            "madame-bovary-fr": 1.0797285032600767
+          },
+          "ja": {
+            "kokoro-ja": 1.045279729244654
+          }
+        },
+        "worst_case_ratio": 1.0858415364103147
+      }
+    },
+    "missing_or_failed": []
+  },
+  "size_proof": "fresh exact decode of every current frame",
+  "specs": {
+    "baseline": {
+      "backend_class": "control",
+      "decisive_test": "Every registered complete book decodes exactly in a fresh process.",
+      "decode_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+        "decode",
+        "bzip3",
+        "/workspace/scratch/bzip3",
+        "{frame}",
+        "{output}"
+      ],
+      "dependencies": {
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0",
+        "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+        "/usr/lib/x86_64-linux-gnu/libdl.so.2": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872",
+        "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+        "/usr/lib/x86_64-linux-gnu/libpthread.so.0": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500",
+        "/usr/lib/x86_64-linux-gnu/librt.so.1": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b",
+        "/usr/lib/x86_64-linux-gnu/libutil.so.1": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11",
+        "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py": "28b138d383597b109866cdb617054d646e1d7ddbe961b0e10e1fcc1441fbe99c",
+        "/workspace/scratch/bzip3": "96d0e3d36f531bf4e255b43c9617ac8e6a4b2d23289647c147946761f2d6ce44"
+      },
+      "encode_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+        "encode",
+        "bzip3",
+        "/workspace/scratch/bzip3",
+        "{input}",
+        "{frame}"
+      ],
+      "hypothesis": "Reference whole-file compression on the identical exact source.",
+      "id": "bzip3-whole-native",
+      "limits": {
+        "max_frame_bytes": 67108864,
+        "max_raw_bytes": 33554432,
+        "timeout_seconds": 600
+      },
+      "mechanism": "ordinary complete native archive, no comparison wrapper",
+      "model_accounting": {
+        "data_dependencies": [],
+        "embedded_learned_bytes": 0,
+        "kind": "universal_code"
+      },
+      "parent": "standard-controls"
+    },
+    "candidate": {
+      "backend_class": "self_contained",
+      "decisive_test": "Exact full delivery-frame bytes on all six complete books versus ordinary bzip3 archives.",
+      "decode_argv": [
+        "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+        "decode",
+        "{frame}",
+        "{output}"
+      ],
+      "dependencies": {
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so": "ee2039cf13a45e1e89f04d0cea9585657d93ffaa425594e1935161013fdf4e12",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__config__.py": "50c60b30d4a99d1f7829ce309f9c902635f48972c5830fdbfce25c0044ade89e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__init__.py": "93924ac4b793328947dfd9eb9355e54eccdfd26a92c8dd52188aed2e52c7eb38",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_array_api_info.py": "373252b9ff2fbad8c64aa8aa6a1ab78d12374b1317e17d5cbdae09e9d16fe045",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_configtool.py": "105449de96b34f162113da29fa8716c8a4cb66bae91617e6992fed5ababc0b1a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/__init__.py": "c89d22cb57d793da200859df9425b30412f094a492fb1950582a560a8cda4fa7",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs.py": "c922ae3ffe2c54f34b1e9d688e04cc8524568b7775f02701147147903f177fe5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_add_newdocs_scalars.py": "67959c2005f2d95b3c9162c2ce0cafc56547d02025f8eeb86052b7b6d6d4ef27",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_asarray.py": "7c23472da6823fee486be451fdb22b1f1598df1925726be56621a12480e228b3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype.py": "70ce899e3a072d445608780df15990ca37a28838dcc210792ff7cf30e7b5bae3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_dtype_ctypes.py": "28f3e56a40ec3e4b938523abe6a1705b48c9f559e36ef5b811684e6c21d81881",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_exceptions.py": "5fc120d61ab5b94f0bf7088ec05a368d1aba4b4be78c27606051e3de1016f42a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_internal.py": "619ea730654ebdf4c3d67ce4d97a91773f24d395959d81a29636f54e71ef32af",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_machar.py": "6145f6e1761bc5727bf4aad66abdbb1650d829f7a876bfd10a413bc346c44eab",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_methods.py": "e2a8945044b9c273857979cf6afb6aa8c561674f5965e48a970a9d3f0d9e2922",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_tests.cpython-312-x86_64-linux-gnu.so": "fae3aacacf309c276cc4c8cbdc13735117763f1c5f652cb48bb97ecc9c1b9dd8",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so": "ba96467ae494babaf7c3458b09cc03c4200c2e10010860d80e452ffb8b01c8cd",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_operand_flag_tests.cpython-312-x86_64-linux-gnu.so": "2da00a615720d1fc0fb902fcf73f2ad7e1aba50ca469a34ae2426e5d102b983b",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_rational_tests.cpython-312-x86_64-linux-gnu.so": "2fed2e7ef5e6168b842e958eff52093b2669ee6d448b39c6c064990b79464550",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_simd.cpython-312-x86_64-linux-gnu.so": "346508d7b24a196ca4175518dd3b09aee32b6c7f9809f78fc031504436c0d3f7",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_string_helpers.py": "e929a0a22ea80f60ae9e3c014abf41676d079029ef5ba9d33db953394de95a78",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_struct_ufunc_tests.cpython-312-x86_64-linux-gnu.so": "53ffdbcd324e449e12d40c77f77635ba2d6fa7036640a273340224202c0afa19",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_type_aliases.py": "9ac147064676b35c0a432ba0b8afdc17a3414b4ff700ec30ee3de8876ea6a374",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_ufunc_config.py": "f63e91d7662635b693e7ecb9ac200e3c16e01f86d81989670e016afaf6799c3b",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/_umath_tests.cpython-312-x86_64-linux-gnu.so": "ed0edb6cafa2dba589761083c3edb64e72f30fd816c32a9af771440a5b7933b0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/arrayprint.py": "00002f92b23453a3daff064e9e9b95641a5db020a3a58a5c585f2c03f48f61b8",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/cversions.py": "1ff88d229c7dfa1635710371aa34f677fe525d98496cca3f71aab8feae8b07b2",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/defchararray.py": "d6d4af2d611e69cdb40e87690c1c5aa492b0c1cce9246d65572daa8d27085578",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/einsumfunc.py": "85e15e0a210a8e2faa7d593ccc06756f96ca9be31430bcc2113310ef2c870617",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/fromnumeric.py": "b347fa59f908455c0564c943add61bdc48f217dbcc1abd1b9acd0f73e55c3803",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/function_base.py": "413d696e597ff2b7ffdd9b06b4b42801e435392a82a9e006b4c4f33c013523fc",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/getlimits.py": "df641eeed94115dca20ef7528c6d5ca766b4349d2b48cc5e0d18a3dda8223eb8",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/memmap.py": "c88b10ea7f64a59ba58204492459136e35709c1e257a8ca2cef529736894e27f",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/multiarray.py": "cf01c17723a8c6205170e846d9007fc410189bea7c0114a941bc9ef44cebac1a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numeric.py": "fc3727bd7bbaa1a1d74a2f50f8157dc86cdfc7bb5cf620b1ebdafd3272439b98",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numerictypes.py": "d7924b057d26fcc4206a21ffc81048e6096fd2f5ee794d1aae74b9e915df5319",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/overrides.py": "32d8333816af1bbc33418080eceec0add089555ef649321bfdcbe4581b832c91",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/printoptions.py": "345a6fcb96e78dbbea9ca7aa42dd2f784131a400180153688865c7de98255807",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/records.py": "8685c20ecc0cea16f2b6219d6069214484b34239ea2265dc21d1a536e3940d7e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/shape_base.py": "ef20cfac85d39a606764c512b475ecab58893621a623110071ea7143da3e2554",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/strings.py": "3957e29964a58d3c5f57e69bc0f23f8af390b675ebc8785ae6928d064b57b128",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/umath.py": "b7f49020747b764305f95469f1d2b2ae838477dd28a8d9739a01b0687dbca96f",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_distributor_init.py": "14148976054795071ae41ad011560fa059ba2924c98481675ad59b1241214d2a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_expired_attrs_2_0.py": "ccfdf511799bc3281c384cf27ad0c4a7e4712fd7147db51486df79eb368e49ff",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_globals.py": "9396559f351b28d48b3e667451163024de42ffbc48cdf30d69a4ac052acf4ee2",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pyinstaller/hook-numpy.py": "314db6a50e0091460f416bb90bca510e99d85c494b27c4741463582544298951",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_pytesttester.py": "0e39582fcb8834dd9759ade79e55fa80f1aea0b8dcc750627bf3d0cdba767290",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/__init__.py": "306e56bfd75cdd9c8e9837e2747e5c16dca47b234cefb02b0b8477516ed39fe6",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_add_docstring.py": "ff783b0fee87010dcc4f85fa0c4d3bc8bb9af4ba96161b24355c754d2ed7f4ee",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_array_like.py": "10f6547c94a36a6bec589e91b39670c00ff916106961da227dc555b557163e7d",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_char_codes.py": "8f4ee7a64f3635bec8adadb3ed94e553751c38fc2dda033ba992ab3cb7634f8f",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_dtype_like.py": "f0ce517a42ea7617848d63089f84676e4133b12ee309ab42893d03e6183ee777",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_extended_precision.py": "a649d4aa06a4d0504d33eb0444fa96fa91461fbd7f2be89e84549e7b9a108aa1",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit.py": "2926cac0e2adb686fee72b53e6f095907ac3327d181efca9b534f28ffe8061cc",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nbit_base.py": "9cf669b1096db91e41d22680605f6a0f685efe45e79acb2ffd185a50d16c5beb",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_nested_sequence.py": "b28d5a818187779803a3f201bef1ea041e65b2a19b1ea37f8a6c82e541d4f872",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_scalars.py": "2e15d8d814c799e60acde2197e98efb8c9fee5e38b8d4da7f73ef3d65e5b29ff",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_shape.py": "e9c16ff8b6d2c86f6695f4813861b2ba5f50fc652b95c1d00bd2596be9b6d1c0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_typing/_ufunc.py": "1ce91a13eeb05747dddeb9876460b7f580072087fcb72be5cde903e32e064310",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/__init__.py": "8559d9ec2d0c09235b330f99caaf8c282612b5a197e91cea14c9e787b79de1d1",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_convertions.py": "d3133175e2cece20e61ec44cffc96e121e12fa441d328320e86c4d0c36acebd9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_inspect.py": "cc5b890011f4f03d4a82afde79c6240f53a0834397a75b78a2a8d9c4cd2474b9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_utils/_pep440.py": "8adf4fe3fa075d6c37071768573ec93ccba3e64c45e4ceff049f19d66f67bb4c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/char/__init__.py": "c6cea9a6b31d98d79755fb934645379c5f6a761bad59d3eee6869ea760235a67",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/conftest.py": "a5776ff822a8728204a6bd03b18b2dbbb4e0aaf35dcd2bdf88334c94cc26a989",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/__init__.py": "c0935a445d5414e9d92aa881aecb2158b8d31a2119f6bbd695c8add318fb634c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype.py": "1870617d5b6c56b3fbbf5dc8ba3133f5a18810d91821d6dfb91bbe35ec355275",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_dtype_ctypes.py": "c17e26dfb6f4cd08319734f93a313fba3d84e42a625fd13b1cb1693ba87f9436",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_internal.py": "ab1a472442d735471826426dd4b92d42e666e01c18bb86d79ccb8110ea7a3ce5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_multiarray_umath.py": "4fcf07660143e550ae5d109278b6cfa23f7d9ca512760cb0f315b27fa7aa8714",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/_utils.py": "e5f935f09378dd183a607bda9fa42376b39e3ae2ed4652d598fe8c69d0442550",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/arrayprint.py": "2db7b8b26597605cddf6c3bd2cb2793d94b80b76d2bcbb7a1d1b70484e7ac4df",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/defchararray.py": "6bd96ebef9e2f2046b19574a3bb53fc70b0516f9339719d58312fbe632d19822",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/einsumfunc.py": "08db9c20d81422ba622d09f8c4f23f9a88308df2a5140de1ee0c00bd15706f93",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/fromnumeric.py": "e536a89c956e0b5d74aafddfddca93b668dac935f4066a89020a00267e47dd92",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/function_base.py": "be18e1cec1330ddd7544783aa6295f3093b75fa93de1a9f944026a8fe9e5ce6b",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/getlimits.py": "ea70a4e13c342e35bb8e85aca6b2392e23338ded60b0e8ceda5490fcec0107c2",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/multiarray.py": "6e374f2dbbc9ba3eb533a4d991b0793573823661f841b52aea0dde3e428fe930",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numeric.py": "0ad93f42293207698cd31234941781f184d47d3c104977d576920c46dba76cca",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/numerictypes.py": "6d7c13c3351a8736c7ac51a14b946424ebdbe93604b109d00b9c30f6637ed55c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/overrides.py": "d456726f453a249bb2a23b7116f43b1d2276ae97e159e73417e5f499aa428dcf",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/records.py": "f727c50f1c8e73af255ea7db6a8b2044d970d5d6d63fc0911f320f12d12d4a07",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/shape_base.py": "dacadd42d17577c2e951b0e318c5d3f93ab3d8ad8d6933be6440b8be2098b306",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/core/umath.py": "84c56636b20276a5d18a2446ed4315d06afef7162a2469a438d1909f6d222bdf",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/__init__.py": "585c0c8695762c93fe2103aca5a227855f1ce973ca670aa9a44f9cbed229aaf5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ctypeslib/_ctypeslib.py": "36d114a62b108437c44c12c092a61fec08ead3188d859bab6f94a61861f9e290",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/doc/ufuncs.py": "f71b7c1f7e0686b5eb16af5c585506bc915e3daf58b87f53ab50f30279b61361",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/dtypes.py": "cee3f0802d228c5da80d100e27a23d24a85a26e857140ca00722d06a856d4f9e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/exceptions.py": "c75cfb0b6463ac3156f2d2dec1b663c8c890a24d16066e642ae44f23154b5238",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__init__.py": "7008141d680941966c7eff1ca3c28136bfe6f01e9fa7374169436f25e05ffcda",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__main__.py": "ea2da3547d9f3eb895d5aa1c4d8fdd505bd62b5f2a6bece3a6721203e3a9177c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/__version__.py": "f7d4ba9927afba1c0698ef64bbefbb55425e921374a2de3e2747192a21dcaa9c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/__init__.py": "eff6c0edcff10e92dce3ff2f3df1f7dbe2f19fd7dc513823436e6caddbf0bc03",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_backend.py": "a055d9f3e57071049b96d97cfe98162cfa82399f18fe9c7ba1e4e4fc19712537",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_distutils.py": "8444f4581e2acbe0f80739de906016864f78e64e707aada51940d1ea1ae25cca",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_backends/_meson.py": "568b94424591524ef85a10ed91fe8747bf50a0af96af1f04eea3bb815a720e79",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_isocbind.py": "cda060a5f3cd466c551b776850895b6488b207df7432c5e2c0369bad28fd1e74",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/_src_pyf.py": "3c7a68f43dbc2aadeaff7f8a157f03dec143f5e5fc0357372ee2cdcd7cc1c8ec",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/auxfuncs.py": "767694c2b740bf8f8b6c488735b4b5beb8d03423b4941bb25a48f746dfd48b31",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/capi_maps.py": "ec2f8d9dd23651b4ad3465db8606d63a6afdb4b0317d0bf0d737fb67bc394859",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cb_rules.py": "e8a6cfbbdc9f27eee901adb8223f47df82e5d7941cf025d3a8216250923a47c6",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/cfuncs.py": "e09e0fd76a06a725991dbd4054a025ed827741482783018c0a7075221ac99fb5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/common_rules.py": "ffdcb32289493068297770fde0b741b0e0e77d4b2431182ddafd37ac40881c94",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/crackfortran.py": "bdb02f5a3e97b332d2fa75349ce79d68d36dc2daaf92433c82a6403fd32f3c12",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/diagnose.py": "616363d6f33af1ee3b2dbdbbd30959939cab714fb24e5cc669834f059ee74c05",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f2py2e.py": "92b496e11a593c31cd5f62162dd9f6f0a5b38f497314d49cffa7d271b19031f2",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/f90mod_rules.py": "ed9e6fa2b538c215f8d39c4c2faea1af88b589c09473d82be9a9f847e00c87b3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/func2subr.py": "f6280230c0edb48805d4c1ba90139a8248c8fd217e5251a3002023dcd72fd3ea",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/rules.py": "22b8fed77a0b1a8c0d1d8125155f93654b34544774350a51b27a269c8d4d4f1f",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/symbolic.py": "52e16ce35d56612a91ec97dbb2ec8dbfffc80bdc0aab14005a85910de28f71dc",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/f2py/use_rules.py": "7a666148b3db343c811e7b1f28a5c39c6cf83ff830ae02f475f099703de7f43e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/__init__.py": "3961349ba1ff6e5cafd70b6a42989753992ac45e8ed94c71715e6dd75534e511",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_helper.py": "8489f66721181b87cb077306bc23efa52acb5c57e1fb13b8cc62a58e4fd34236",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft.py": "09fa40a51f51d123ae72a97d829f6f5da766ff2e5c04cf979e3e6dac3a6f1521",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-x86_64-linux-gnu.so": "e849dc89e717b2a315948dd0127786098372c7a2206cfd130fa818b73e69164d",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/fft/helper.py": "4681000ec3a7a028124cbd601399fedfa965cfc8b0c46ce7e7669fdcbfbd2846",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/__init__.py": "cd81aea847cfaaaecb0db89da7162cf068023409a8278c50805bc5dd7289e518",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_array_utils_impl.py": "1985a2c8da8b43b0c6512057cf46db47a000a994ad0c8c147bbb6c6d9fffd793",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraypad_impl.py": "cf9fbe5d3f344dc9c365ecc756b7716ae252637c82e2f30375dec994efa1df3c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arraysetops_impl.py": "545760a456497322616053dc4e4fcb403fd2aea5faa68cbfb21b0b2af662832d",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_arrayterator_impl.py": "1ed3800c81ee1bd0036db3138268783ff9ae91ed55fbc13e14d10eddb54e18f0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_datasource.py": "ce4f956e7e099431c455adc37ba0373608e79e2cd2262f8717466fbc0e98228e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_format_impl.py": "cdc437c57c4f7fb7a992db18adc7416c83ee38287d38f575837801ea085fe2b1",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py": "0191b2376f44730e0b46e5354cd51c3c2edc5473bdc9ee1b27d15023b9ff1b07",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_histograms_impl.py": "52dbbb68041ced9a6c1e7ff4e288149d9ab565c7477e2a5cabd791abcd7ba155",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_index_tricks_impl.py": "83b369e04f001bdb20ca2f474d482f38cd3ca489408ff72f5f0e1c73b36b5392",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_iotools.py": "d23b69be99792feff5383236d45fb58b5f6dd5edcbfbac09c517750922dec0bd",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py": "71d393edd6308ef52923d8841d3af0cdb6ed2a13fd65980e08c8ab4c17983d49",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py": "92e71acf00ae7e1e26370102c99c447abc6ca9afc6c50333d6462e65444323cb",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_polynomial_impl.py": "4d68aa946dd60daf7bb5acb1402125b590fd4cd854c85a6bccbfd499decbc6ca",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_scimath_impl.py": "400538b8cfc837356a093b3e013132cb526144497fc03267ff2814ef962d7e01",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_shape_base_impl.py": "e6f914f6b3cec0abd273b4f3c5d7d6b4cd3cb95d26d798873d3c5ba9c638ece7",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_stride_tricks_impl.py": "cb7531a778c5cc3c26210d77ecddb36a9efebd6fe338d5109979db7eaaeceb40",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_twodim_base_impl.py": "de738bbc20fa71f33a303de8dfcd45e3c181f29a2ab1418308339094e0505e66",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_type_check_impl.py": "59e55f5b3ff42a5bdbd8affa974c789c7c070703d881f7317998a757f769fe6c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_ufunclike_impl.py": "d1e7a67ff11894b9926b88a736bde2b89d5ea1332a2f2211d27e9d4329a06b76",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_user_array_impl.py": "b779e7ac5baf6c18b3155d4adc2f4d37220cf342d4e6ca40f3c325ad82731289",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_utils_impl.py": "96db16f4c329de4d6fc3b22789d8584f97e8f60ae0c33eb6e1fbd17a21c3c967",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/_version.py": "e1d52b73d26cd0a3c443969da18291e5d9cfe1f7e3083b4950a3ea70c6aec18e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/array_utils.py": "5db732849f52d0894d9cff4dcbacb280b30400259650f34e53cbdebe3d531292",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/format.py": "9e9274789853eee28d2b96b49423067e226ff91e23c8d86220f7996c970d5c1b",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/introspect.py": "bbec207ccb98b7c188dc09d135d5ece23e30f5e353b1ace5aab6b34be3fb80a0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/mixins.py": "29f7fbe9272981657772bba2708f40edae337c19c65665edc10cccceee710c4a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/npyio.py": "79a3ef7c7192cd413bd132471cb3823c85fd1b98a132e0447b1cbafcf36127d4",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/recfunctions.py": "4f869ae715dabfd9ed7f0e589b33e2abf614921d76c06938d17c812d03c21335",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/scimath.py": "aa315a41eab4cc4225ee02aa3a16a3fef9820bf29a15dc9398774b514912a792",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/stride_tricks.py": "c74fc17f097270102547706fa714e775e3fde9d1c14ff7c049b9134d3cc16202",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/lib/user_array.py": "ceceaee93017a00c9218065cd6a13a7ca0f800dfadeaead909a89968a9878aca",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/__init__.py": "ee956f17038914a380ac6794b3a30d8f730daaab31ef1c74beddbfedabcd020e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_linalg.py": "eab0bbee9c8758d387934dc32849f01deceb50261d02e22d41f03ad6ff2562cc",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so": "64bfb8bb8a1a09ca31f7a6e307a87b4c78a75f3489aaf3c61ed8aa4ffada9845",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/lapack_lite.cpython-312-x86_64-linux-gnu.so": "93ca06e05991d23cc5fa02e76c757b97cf20b5ef29ec0ef69fb88a2432ddf5d5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/linalg/linalg.py": "e8d8a63faf2d61ad2a051825587f3bfed3a1dac72c86d0e97307ef06f99de8fa",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/__init__.py": "5e90d6617c1ab83738f7e20db24e39e43d37530e29eb115db1d58e9f6aedf3b5",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/core.py": "7e72288b07fa5e01fce25612aa7e0ba154e09b443285a1894d000a6fa75266ae",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/extras.py": "7fca9feadff1f64df838a98788d21fb7d3c50b22d831e0521a18988e152e2297",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/mrecords.py": "d34833cf2ff1c42e34f295592115124616f0a9cd541dcca113eb4ed8560cf081",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/ma/testutils.py": "bcd1b56b2ebcf733a4b6b9bedf7b72cf46ec08bc642472ba8fefb626d1d13eae",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matlib.py": "fd2f4df12d8d36c1c6414725a31af1001b490de8c7894c8c74c24eed26b23e40",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/__init__.py": "52de88a9f8ee03e930c28e8704e6008058d75c2fe1ed857fdc7c83b0a33bd9d9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/matrixlib/defmatrix.py": "c29c3a95953d5faaa9f30009a240d7b76441acbd5e5ea96606dfa88c8c18ce55",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/__init__.py": "8064b02cda4f0a95df3e08894ac815a15b09d004b573efcc5a518e7a21b9e6c2",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/_polybase.py": "6f49028938149bc0f9402fcb5929bac8dbf00bbf67a4301e92c2b4bd03dc8824",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/chebyshev.py": "4f4beb0ec3ab3bc36dc5bcdfffed1dbff94fc85e5ce393a30e85490f37860402",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite.py": "220bb0262b6d283877cb4ac5d4cf652ee229b455e0abe3e16873538df1370a70",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/hermite_e.py": "7e1bae8b68cb73423958412c443732c3c14a485c4e97d8ebf1be32448c4466a4",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/laguerre.py": "5c9e5d36a5ae64d86ac0045bfd05b89dfad11f226fd4930282c3f65b8f8a13d3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/legendre.py": "b0c25398675ec0d85c72b2bd0b27cd208151833998f80247860a3acf1b4662fa",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polynomial.py": "f88202a2c6f68fc0a5b087d73c35a05ea2f1e96ba153aa25a1c538264c4dee42",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/polynomial/polyutils.py": "99011ade80b3f57f9dd4768d757929049cd7586ce0638d960cc8c93a7f7cf0ef",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/__init__.py": "585ce7b73b5454d6a25c2a50967f2dc322fc1d214d4bb5c0589949b105e06ea9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-x86_64-linux-gnu.so": "53a8bd2e993d32c304b91020970c8b67fa178e142137f525743ba92755524b84",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_common.cpython-312-x86_64-linux-gnu.so": "e7fb21cc610f6e22f1f40a365b0fe6c573132b6c22199ed21dbe51c0e7c73620",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/extending.py": "8e920bd678cc85fd277a19a53079206642319ecd890bd1840d88000a15fcec6f",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/cffi/parse.py": "3caf6f754c709af76716f1f7acea609e7a484b09e277bae2e573a606b316a49c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending.py": "67b67f5e9ec73c4e0ae4167b030a59dbdaafb9fb45024be132d357e77b6530cc",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_examples/numba/extending_distributions.py": "7dd78f5de523e3ac972b430ad5cb33c541d088e4e236e36cadb66a3f0e00746b",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-x86_64-linux-gnu.so": "d7fed73c3e361b6ff683a9148b74d982f1702b1af3631e496066034cd1cba7ad",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-x86_64-linux-gnu.so": "a3a98159adbf86abf95b34b4989840f0f0bfbde3a5c87ad2a3e01ea7c0428d4d",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-x86_64-linux-gnu.so": "2b9bc903a5ab4f857e169e93cf59a824564f1361b1fc4ff5bb336a54ece72ba9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-x86_64-linux-gnu.so": "9fb7e485037c7f00aa3e4aa1056f15f7f9b964aa4f04657952194efaa9174356",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_pickle.py": "2ede3b99afef9e72477674257398d9fc3a811ec74a8b442250d68890c7fde6a0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-x86_64-linux-gnu.so": "62906d05604056ee4de2ce978cd9d23e0de603c80a769a648ceac74d8ab680b6",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-x86_64-linux-gnu.so": "d15c630c101e132de14d924facadf581f5e004b0974b17afa2f0dea1bcf5fe6e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-x86_64-linux-gnu.so": "70b2d9942f3d35be9f95c7bc3ba19e78e3db00e2b0a323ca02363cee9c9e128c",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/rec/__init__.py": "90d0186284800348b3a545516fed7cb09c3e88ab45ab6465d94e52387de91d13",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/strings/__init__.py": "a36ef01d6f2319a51f6c3a294b2126603e918dea37dc0ce4181053816ae5187e",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/__init__.py": "12a7be3b1fb7252aa4e904679cf3c52c25bd224aaff4eb890e19e6dae18cdf37",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/extbuild.py": "2e0d6ca80f7843be0a8b9bbeb31d0f123eeeaebdd83f8ef4f810a2caf2701314",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py": "47a619d254380998c7f35f2b92c032eafcb1184b5342408684e1bde9a303ef8a",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/overrides.py": "07c63c3e5a6f2bbd48712ba8b9b5d68f82f935598b5529fb58c8352fbc593bc9",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/print_coercion_tables.py": "49ba0d9822dce45c95f9447c80a8c97363c8a233755d04ef1f45b30eaef93363",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/__init__.py": "15d6881f8ee3f2e18403996e4eef839eb38e4c5c3ede77b62551defb29ffedb0",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/typing/mypy_plugin.py": "d6971f2f125a6057423ca4095701ef7586d9495759ed1488720d505c747b9ea3",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/version.py": "e5acbe1a666da629f581c40a2c09d54229c7aa918f3a1d567dbac0829c807472",
+        "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0",
+        "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+        "/usr/lib/x86_64-linux-gnu/libdl.so.2": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872",
+        "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+        "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+        "/usr/lib/x86_64-linux-gnu/libpthread.so.0": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500",
+        "/usr/lib/x86_64-linux-gnu/librt.so.1": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b",
+        "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+        "/usr/lib/x86_64-linux-gnu/libutil.so.1": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11",
+        "/usr/lib/x86_64-linux-gnu/libz.so.1.3.1": "85590dd58edf5445e18bc7193e5ebc01ac5841f1ae187e97705a662e90c6421e",
+        "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+        "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+        "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+        "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+        "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+        "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+        "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+        "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+        "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+        "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+        "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+        "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+        "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+        "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+        "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+        "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+        "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+        "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+        "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+        "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+        "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+        "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+        "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+        "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+        "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376",
+        "/workspace/scratch/wordfrontier-native/wordfrontier-decode": "ffbd6a64e98ae0e3c93439bed8b424cee134e176b9522c4eba5f32e1a6cdae39"
+      },
+      "encode_argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+        "encode",
+        "{input}",
+        "{frame}",
+        "--profile",
+        "quality",
+        "--backend-dir",
+        "/workspace/scratch/wgp6/frozen-backend-runtime2"
+      ],
+      "hypothesis": "Earlier dictionary constructors may fail to predict whole-book prose; measure that gap directly.",
+      "id": "wordfrontier-quality-whole-books-r0",
+      "limits": {
+        "max_frame_bytes": 201392128,
+        "max_raw_bytes": 33554432,
+        "timeout_seconds": 3600
+      },
+      "mechanism": "fixed paid WPG2/GWT1 automatic quality policy with 64KiB original pages",
+      "model_accounting": {
+        "data_dependencies": [],
+        "embedded_learned_bytes": 0,
+        "kind": "frame_learned_only"
+      },
+      "parent": "wordfrontier-global-1"
+    }
+  },
+  "stage": "development",
+  "target_35_percent": false,
+  "timing_scope": "diagnostic child-process command wall only; not quiet or paired",
+  "trials": {
+    "die-verwandlung-de": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7",
+        "cache_key": "646030ec0f884c1f92d533b0ecf61fa2b55aa165ec62b0fa8eefbf90398e36d9",
+        "candidate": "bzip3-whole-native",
+        "case": "die-verwandlung-de",
+        "complete_bytes": 35251,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 166428610
+        },
+        "decoded_bytes": 126200,
+        "decoded_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/c8d946047ed5419a80cc71ab53a5d9b7/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 65177861
+        },
+        "event": "trial",
+        "frame_bytes": 35251,
+        "frame_sha256": "aa6e44b3ddcdc535ff105498109bc21f10ad7eb8dc157739c822c13623c60ebd",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "c8d946047ed5419a80cc71ab53a5d9b7",
+        "utc_ns": 1790903675864913061
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9",
+        "cache_key": "4754497a85cb130933dd40e5d0bd34952e6ff3a31410032eb048c48719f63316",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "die-verwandlung-de",
+        "complete_bytes": 38277,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 9239717
+        },
+        "decoded_bytes": 126200,
+        "decoded_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/7df40a7973ff40d2b43ac59587b526e9/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 1928162723
+        },
+        "event": "trial",
+        "frame_bytes": 38277,
+        "frame_sha256": "a9b540b802aa9105c34e48f38d20fd5c137e10129afc31cfb8f82bb832d8aa26",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "7df40a7973ff40d2b43ac59587b526e9",
+        "utc_ns": 1790903676180540887
+      }
+    },
+    "don-quijote-es": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3",
+        "cache_key": "7c113d624ea4ae99853183d922653e4e48699015cee7e82771bde545abfac68d",
+        "candidate": "bzip3-whole-native",
+        "case": "don-quijote-es",
+        "complete_bytes": 500612,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 315625622
+        },
+        "decoded_bytes": 2179216,
+        "decoded_sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/7e86f080df894657a2d1429add9929c3/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 315986568
+        },
+        "event": "trial",
+        "frame_bytes": 500612,
+        "frame_sha256": "22103b2bc882e2e379c43fbfbcde9526970708cc72f4f413c9b385f3013da3ce",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "7e86f080df894657a2d1429add9929c3",
+        "utc_ns": 1790903544508794860
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b",
+        "cache_key": "5846123daf1fa3910f9930897875124cc2cd183c2345f2dc9b497505987c6814",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "don-quijote-es",
+        "complete_bytes": 534093,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 65936301
+        },
+        "decoded_bytes": 2179216,
+        "decoded_sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/054c223aae824f2db9cd5cc63237ad1b/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 99889785239
+        },
+        "event": "trial",
+        "frame_bytes": 534093,
+        "frame_sha256": "be7023d36245f389bf51226f3f52a21c50764c72e801db3813f1d61fd0ec1823",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "054c223aae824f2db9cd5cc63237ad1b",
+        "utc_ns": 1790903545241399786
+      }
+    },
+    "kokoro-ja": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d",
+        "cache_key": "902cc448d895354c360fb63fdc7f092b97507ea9590d5165208fc9954a593b07",
+        "candidate": "bzip3-whole-native",
+        "case": "kokoro-ja",
+        "complete_bytes": 97505,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 165682895
+        },
+        "decoded_bytes": 486098,
+        "decoded_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/c96de175446447a88ba2a187f6c1762d/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 115532760
+        },
+        "event": "trial",
+        "frame_bytes": 97505,
+        "frame_sha256": "89cc8c51982d584535212b2693c0b0da2f00ac14540793ae18994322bcf03c2c",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "c96de175446447a88ba2a187f6c1762d",
+        "utc_ns": 1790903678499792276
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863",
+        "cache_key": "61f3e8db94aa2ed9ed24bb186407a2099b9a67b9afd30cf8ae2d865c6c961989",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "kokoro-ja",
+        "complete_bytes": 101920,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 8804102
+        },
+        "decoded_bytes": 486098,
+        "decoded_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/2fec03f9a9584a5e9a789a3421a26863/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 6541233027
+        },
+        "event": "trial",
+        "frame_bytes": 101920,
+        "frame_sha256": "606ce36312f696abab75681a38ac63212ff86b2983680aa97842f28bd2f96fe4",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "2fec03f9a9584a5e9a789a3421a26863",
+        "utc_ns": 1790903678869887745
+      }
+    },
+    "madame-bovary-fr": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b",
+        "cache_key": "65f28da7a777e36081ea579d62b4657162b5a74fb2ca11c3e6b4032584a5062a",
+        "candidate": "bzip3-whole-native",
+        "case": "madame-bovary-fr",
+        "complete_bytes": 179597,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 166160081
+        },
+        "decoded_bytes": 716472,
+        "decoded_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/71de0a833052442491fff47e135bd59b/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 165629949
+        },
+        "event": "trial",
+        "frame_bytes": 179597,
+        "frame_sha256": "52acd8afcc05d0e2c294520442fc82f74d7a94b07ba3ba3042982844e5f9e5b2",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "71de0a833052442491fff47e135bd59b",
+        "utc_ns": 1790903645606967643
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913",
+        "cache_key": "2c3572f6d0d76b3f5178832589a324e589adea79c37c9df030ef48e7495a8802",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "madame-bovary-fr",
+        "complete_bytes": 193916,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 16761108
+        },
+        "decoded_bytes": 716472,
+        "decoded_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/360158fa0b2e49c6bdb8a42388b69913/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 29436487257
+        },
+        "event": "trial",
+        "frame_bytes": 193916,
+        "frame_sha256": "7b0da6f6e501b76d1c6c9608b19ad249d36a10b847e5dc3be535b67a1dd8c06b",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "360158fa0b2e49c6bdb8a42388b69913",
+        "utc_ns": 1790903646031521427
+      }
+    },
+    "pride-and-prejudice-en": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4",
+        "cache_key": "57bcb83019b22c48bec22e42d78fade046663ac83bae6869adfa0ed5ca31ecda",
+        "candidate": "bzip3-whole-native",
+        "case": "pride-and-prejudice-en",
+        "complete_bytes": 161119,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 165239072
+        },
+        "decoded_bytes": 705012,
+        "decoded_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/10d85232e9004e0cae51ba24baa0bba4/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 165820941
+        },
+        "event": "trial",
+        "frame_bytes": 161119,
+        "frame_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "10d85232e9004e0cae51ba24baa0bba4",
+        "utc_ns": 1790903376312140327
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d",
+        "cache_key": "a32ea00c7ee1a8743e3560f0ad09c55106f3c10040e0010d131c3a68ee84dd88",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "pride-and-prejudice-en",
+        "complete_bytes": 169043,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 16841890
+        },
+        "decoded_bytes": 705012,
+        "decoded_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/1417998fe9d14da9b1537280940fa96d/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 18966193047
+        },
+        "event": "trial",
+        "frame_bytes": 169043,
+        "frame_sha256": "2e71fa7a6f5a5636fc521c76a247b79beb0f90e07957737d0b8ac3d9cc7dcad9",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "1417998fe9d14da9b1537280940fa96d",
+        "utc_ns": 1790903376731135527
+      }
+    },
+    "war-and-peace-en": {
+      "baseline": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9",
+        "cache_key": "d5f08f57d08de2a3df60073f9bb91fc2d12f1a40332b077a6c54ef4af3734469",
+        "candidate": "bzip3-whole-native",
+        "case": "war-and-peace-en",
+        "complete_bytes": 732272,
+        "decode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "decode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 416119261
+        },
+        "decoded_bytes": 3339896,
+        "decoded_sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+            "encode",
+            "bzip3",
+            "/workspace/scratch/bzip3",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/encode_job/frame.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/61e81e3c031f4021b2fb2d8c90487ad9/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 415989689
+        },
+        "event": "trial",
+        "frame_bytes": 732272,
+        "frame_sha256": "7d833c3e46067cb244cd86a7bbd326dd6b36c2b9da3fa1016b688fd5b64a9e0b",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "baseline",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "61e81e3c031f4021b2fb2d8c90487ad9",
+        "utc_ns": 1790903396090834292
+      },
+      "candidate": {
+        "artifact_dir": "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b",
+        "cache_key": "af3e5f009c000c4b3282eb6a67558a24cc2ef6952e08a16975358980a68fde25",
+        "candidate": "wordfrontier-quality-whole-books-r0",
+        "case": "war-and-peace-en",
+        "complete_bytes": 758018,
+        "decode": {
+          "argv": [
+            "/workspace/scratch/wordfrontier-native/wordfrontier-decode",
+            "decode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/decode_job/frame.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/decode_job/output.bin"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/decode_job/decode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/decode_job/decode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 65437407
+        },
+        "decoded_bytes": 3339896,
+        "decoded_sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+        "encode": {
+          "argv": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+            "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py",
+            "encode",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/encode_job/input.bin",
+            "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/encode_job/frame.bin",
+            "--profile",
+            "quality",
+            "--backend-dir",
+            "/workspace/scratch/wgp6/frozen-backend-runtime2"
+          ],
+          "exit_code": 0,
+          "stderr": "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/encode_job/encode.stderr",
+          "stdout": "/workspace/scratch/frontier-loop-books6/final-run/trials/933f8a0ddc4949309f495c9e9b93c30b/encode_job/encode.stdout",
+          "timed_out": false,
+          "wall_ns_diagnostic": 147007401714
+        },
+        "event": "trial",
+        "frame_bytes": 758018,
+        "frame_sha256": "2fc22c9ba4eadba2c379b566d2718e1a118297a3622ca85e21981b0392a6aeac",
+        "fresh_decode": true,
+        "fresh_encode": true,
+        "role": "candidate",
+        "side_information_bytes": 0,
+        "stage": "development",
+        "status": "pass",
+        "trial_id": "933f8a0ddc4949309f495c9e9b93c30b",
+        "utc_ns": 1790903397028760242
+      }
+    }
+  }
+}

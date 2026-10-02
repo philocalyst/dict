@@ -1,0 +1,51 @@
+{
+  "admission": "negative; no 8 MiB follow-up under preregistered gate",
+  "name": "omw-ja-20-content-development",
+  "native_binary_sha256": "30b903d5a3944fc23d4066c0d232afb27169f887a39362f01ede4b6976c432d6",
+  "pages": 16,
+  "paid_wall_s": 15.762494543989305,
+  "private_SGN2": {
+    "classes": 16,
+    "definition_gen_events": 0,
+    "dictionary_bytes": 23792,
+    "directory_bytes": 287,
+    "encode_s": 12.99103585400735,
+    "frame_bytes": 51336,
+    "gen": false,
+    "gen_min_match": 0,
+    "header_bytes": 1977,
+    "payload_bytes": 25280,
+    "payload_gen_events": 0
+  },
+  "private_learner_sha256": "dcf6382eab50b416d460f81a348c4e1638c2408200e9a952811865886ec7bb5a",
+  "private_search": {
+    "classes": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "measure": "complete_frame_bytes",
+    "modes": [
+      "no_GEN",
+      "GEN_min_12",
+      "GEN_min_16",
+      "GEN_min_24"
+    ]
+  },
+  "raw_bytes": 1048576,
+  "scope": "pinned-development",
+  "selected": "unchanged_M",
+  "selected_frame_sha256": "6154ce4d1836b0c4cac63dd123d338761c472eaddb73c70b04cf630f35c599f3",
+  "source_sha256": "256a84131871e344cba72e8fe26130f2148e3ac2c3e08c1af7048125cb79a2b1",
+  "unchanged_M": {
+    "classes": 16,
+    "encode_s": 2.6947169019986177,
+    "frame_bytes": 51272
+  },
+  "verified_full_and_all_pages": true,
+  "whole_bzip3_bytes_from_same_source_prior_diagnostic": 48022
+}

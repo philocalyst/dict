@@ -1,0 +1,18 @@
+{
+  "byte_identical": true,
+  "fork_binary_sha256": "24641411902375399cd533ee4c56ccf780dca08a35dd46c38921f062932e0fac",
+  "fork_frame_sha256": "55628d78d32de8669d4dc4fced189d80d2dabafe2898bb299ffd01d948cb73e9",
+  "frame_bytes": 168943,
+  "frozen_frame_sha256": "55628d78d32de8669d4dc4fced189d80d2dabafe2898bb299ffd01d948cb73e9",
+  "frozen_reference_binary": "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference",
+  "frozen_reference_binary_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+  "policy": {
+    "block_bytes": 65536,
+    "hoist": 0,
+    "max_iters": 20,
+    "seed": "a-best",
+    "triples": 1
+  },
+  "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+  "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1"
+}

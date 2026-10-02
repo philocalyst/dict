@@ -1,0 +1,72 @@
+{
+  "SGN2": {
+    "binary_sha256": "7cfed3e328fb80820569e66022080cc8c9818c74778b997333ffa22fdc80fe95",
+    "bytes": 51623,
+    "definition_gen_bytes": 125,
+    "definition_gen_events": 8,
+    "dictionary": 23701,
+    "directory": 287,
+    "encode_s": 0.18187169900920708,
+    "frame_sha256": "8591209732ee81ba7579a18a35ec2db75fcdb6de00de1921d8f6c6b3034561dd",
+    "header": 2105,
+    "payload": 25186,
+    "payload_gen_bytes": 219,
+    "payload_gen_events": 17
+  },
+  "SGT1": {
+    "binary_sha256": "b5541d84205dbc9871740ac244f4a0a376812837e88cbeea1144648563e8b4ae",
+    "bytes": 51608,
+    "definition_gen_bytes": 119,
+    "definition_gen_events": 8,
+    "dictionary": 23701,
+    "directory": 287,
+    "encode_s": 0.18219525201129727,
+    "frame_sha256": "e98c6c7176d993df28b1120c5bd2d2a5eea06171f55979ae527d23b5eaafed47",
+    "header": 2105,
+    "payload": 25186,
+    "payload_gen_bytes": 210,
+    "payload_gen_events": 17
+  },
+  "admission": "negative: typed operands save 15 B but forced GEN is 336 B above M; no 8 MiB follow-up",
+  "fixed_policy": {
+    "classes": 16,
+    "gen": true,
+    "gen_min_match": 12
+  },
+  "full_and_all_16_pages_exact": true,
+  "name": "omw-ja-20-content-development",
+  "operand_unit_tests": "2/2 passed",
+  "raw_bytes": 1048576,
+  "same_forward_graph": true,
+  "scope": "pinned-development",
+  "source_sha256": "256a84131871e344cba72e8fe26130f2148e3ac2c3e08c1af7048125cb79a2b1",
+  "typed_exhaustive": {
+    "classes": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "full_and_all_16_pages_exact": true,
+    "modes": [
+      "no_GEN",
+      "GEN_min_12",
+      "GEN_min_16",
+      "GEN_min_24"
+    ],
+    "outer_bytes": 51272,
+    "outer_selected": "unchanged_M",
+    "paid_wall_s": 16.07640591499512,
+    "private_bytes": 51336,
+    "private_encode_s": 13.254241066999384,
+    "selected_private_mode": "no_GEN",
+    "unchanged_M_encode_s": 2.7430378349963576
+  },
+  "unchanged_M": {
+    "bytes": 51272,
+    "fresh_encode_s": 2.733023629989475
+  }
+}

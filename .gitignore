@@ -20,6 +20,7 @@
 __pycache__/
 **/.zig-cache/
 /src6/bench/native_controls/native-controls
+/src6/bench/native_controls/native-controls-reader
 /src6/experiments/wordzip/wordzip
 /src6/experiments/wordzip/sbwt
 /src6/experiments/wordzip/sbwt-lab
@@ -36,5 +37,7 @@ __pycache__/
 /src6/experiments/wordgrammar/wordgrammar
 /src6/experiments/wordgrammar/*.bin
 /src6/experiments/wordgrammar/*.wgr
+/src6/experiments/wordgrammar/geometry/geometry_decode
+/src6/experiments/wordgrammar/geometry/prepared_geometry
 /src6/experiments/dictionary_frontier/zig-out/
 /src6/bench/real-world/zig-out/

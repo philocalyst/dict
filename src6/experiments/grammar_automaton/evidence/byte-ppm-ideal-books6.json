@@ -1,0 +1,297 @@
+{
+  "status": "development_only_ideal_entropy_not_frame_bytes",
+  "manifest_path": "/workspace/scratch/books2026-dev/manifest.json",
+  "manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "model_path": "/workspace/dict/src6/experiments/grammar_automaton/byte_ppm_screen.py",
+  "model_sha256": "d89c49f80bca11c2a973cc2e074b24002db32e9c8015c26b8da598cc83d36d55",
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "raw_bytes": 705012,
+        "candidate_ideal_bits": {
+          "ppm0": 3218625.19,
+          "ppm1": 2403261.08,
+          "ppm2": 1893834.77,
+          "ppm4": 1402172.03,
+          "ppm8": 1396034.38,
+          "ppm16": 1397518.7,
+          "ppm32": 1397523.31,
+          "match8": 1480163.35,
+          "match16": 1401554.2,
+          "bayesian_fixed_prior_mixture": 1396036.96
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 204828,
+            "hits": 124173,
+            "misses": 80655,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 8700,
+            "hits": 5788,
+            "misses": 2912,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 79,
+          "2": 1268,
+          "4": 27949,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 14383,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+        "raw_bytes": 1048576,
+        "candidate_ideal_bits": {
+          "ppm0": 4903747.7,
+          "ppm1": 3593520.28,
+          "ppm2": 2877958.04,
+          "ppm4": 2192490.13,
+          "ppm8": 2163606.48,
+          "ppm16": 2165740.8,
+          "ppm32": 2164474.89,
+          "match8": 2292768.84,
+          "match16": 2179239.92,
+          "bayesian_fixed_prior_mixture": 2163609.06
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 305148,
+            "hits": 192353,
+            "misses": 112795,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 28917,
+            "hits": 22030,
+            "misses": 6887,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 102,
+          "2": 1692,
+          "4": 32768,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 25315,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "language": "es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+        "raw_bytes": 1048576,
+        "candidate_ideal_bits": {
+          "ppm0": 4692210.94,
+          "ppm1": 3366594.38,
+          "ppm2": 2835043.1,
+          "ppm4": 2231853.18,
+          "ppm8": 2210250.16,
+          "ppm16": 2211373.64,
+          "ppm32": 2211395.16,
+          "match8": 2318830.08,
+          "match16": 2219145.19,
+          "bayesian_fixed_prior_mixture": 2210252.75
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 279023,
+            "hits": 163816,
+            "misses": 115207,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 18363,
+            "hits": 13632,
+            "misses": 4731,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 88,
+          "2": 1340,
+          "4": 32541,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 20980,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "language": "fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "raw_bytes": 716472,
+        "candidate_ideal_bits": {
+          "ppm0": 3302448.24,
+          "ppm1": 2391202.48,
+          "ppm2": 1944095.2,
+          "ppm4": 1541088.58,
+          "ppm8": 1533566.49,
+          "ppm16": 1534404.36,
+          "ppm32": 1534409.01,
+          "match8": 1595282.33,
+          "match16": 1536516.92,
+          "bayesian_fixed_prior_mixture": 1533569.07
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 161767,
+            "hits": 91286,
+            "misses": 70481,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 4500,
+            "hits": 2911,
+            "misses": 1589,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 97,
+          "2": 1407,
+          "4": 32398,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 10174,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "language": "de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "raw_bytes": 126200,
+        "candidate_ideal_bits": {
+          "ppm0": 583980.52,
+          "ppm1": 422102.21,
+          "ppm2": 341583.13,
+          "ppm4": 292471.8,
+          "ppm8": 292715.75,
+          "ppm16": 292977.44,
+          "ppm32": 292981.38,
+          "match8": 306151.09,
+          "match16": 293725.51,
+          "bayesian_fixed_prior_mixture": 292474.38
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 32441,
+            "hits": 19364,
+            "misses": 13077,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 1466,
+            "hits": 986,
+            "misses": 480,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 82,
+          "2": 1079,
+          "4": 16347,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 2805,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "language": "ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "raw_bytes": 486098,
+        "candidate_ideal_bits": {
+          "ppm0": 2238574.17,
+          "ppm1": 1414964.49,
+          "ppm2": 1106164.9,
+          "ppm4": 891160.62,
+          "ppm8": 819489.18,
+          "ppm16": 820581.5,
+          "ppm32": 820701.76,
+          "match8": 910845.56,
+          "match16": 841675.07,
+          "bayesian_fixed_prior_mixture": 819491.76
+        },
+        "match_stats": {
+          "8": {
+            "eligible": 264441,
+            "hits": 179318,
+            "misses": 85123,
+            "live_contexts": 32768
+          },
+          "16": {
+            "eligible": 56435,
+            "hits": 42231,
+            "misses": 14204,
+            "live_contexts": 32768
+          }
+        },
+        "ppm_live_contexts": {
+          "1": 84,
+          "2": 2512,
+          "4": 30035,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "ppm_skipped_new_successors": 12138,
+        "assumptions": "Exact bytes. PPM orders 0,1,2,4,8,16,32; causal Witten-Bell distinct-count recursive backoff; 32768 LRU rows/order; at most 16 successors in orders >=4 and 256 in orders 1,2; exact 8/16-byte last-successor match with KT hit probability; Bayesian mixture of six listed experts with equal fixed prior.",
+        "limits": "Ideal real probabilities omit integer CDF quantization, arithmetic termination, raw-length/header/CRC bytes and a native decoder. The Bayesian static-regret bound applies only to ideal probabilities, not to an eventual integer coder."
+      }
+    }
+  ]
+}

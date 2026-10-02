@@ -1,0 +1,777 @@
+{
+  "status": "development_only_ideal_entropy_not_frame_bytes",
+  "manifest_path": "/workspace/scratch/books2026-dev/manifest.json",
+  "manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "model_path": "/workspace/dict/src6/experiments/grammar_automaton/word_order_screen.py",
+  "model_sha256": "1d01c0278e90b7ab37474f10f58248ceb59d0ccc1f0859106a6c902e807b6b25",
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 705012,
+        "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 122897,
+        "word_types": 6701,
+        "word_first_uses": 6701,
+        "word_spelling_bits": 234086.86,
+        "separator_tokens": 122898,
+        "separator_types": 150,
+        "separator_first_uses": 150,
+        "separator_spelling_bits": 4706.14,
+        "word_global_bits": 1310114.89,
+        "separator_bits": 191858.84,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 187746.72
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 185579.88,
+            "eligible_flags": 112122,
+            "hits": 7906,
+            "misses": 104216,
+            "flag_bits": 41250.91,
+            "global_word_bits_avoided": 58585.57,
+            "live_contexts": 6701
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 186148.94,
+            "eligible_flags": 50069,
+            "hits": 4421,
+            "misses": 45648,
+            "flag_bits": 21576.03,
+            "global_word_bits_avoided": 34358.24,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 187465.72,
+            "eligible_flags": 6754,
+            "hits": 674,
+            "misses": 6080,
+            "flag_bits": 3169.84,
+            "global_word_bits_avoided": 5417.81,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 187722.4,
+            "eligible_flags": 518,
+            "hits": 52,
+            "misses": 466,
+            "flag_bits": 248.41,
+            "global_word_bits_avoided": 442.97,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 187746.72,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 187746.72,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 196726.34,
+            "eligible_known_word_events": 110109,
+            "live_contexts_per_order": {
+              "1": 6701
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 193449.52,
+            "eligible_known_word_events": 110109,
+            "live_contexts_per_order": {
+              "1": 6701,
+              "2": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 193280.96,
+            "eligible_known_word_events": 110109,
+            "live_contexts_per_order": {
+              "1": 6701,
+              "2": 32768,
+              "3": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 193283.89,
+            "eligible_known_word_events": 110109,
+            "live_contexts_per_order": {
+              "1": 6701,
+              "2": 32768,
+              "3": 32768,
+              "4": 32768
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 1048576,
+        "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 180256,
+        "word_types": 11075,
+        "word_first_uses": 11075,
+        "word_spelling_bits": 376901.06,
+        "separator_tokens": 180257,
+        "separator_types": 311,
+        "separator_first_uses": 311,
+        "separator_spelling_bits": 9207.71,
+        "word_global_bits": 2011506.22,
+        "separator_bits": 305768.67,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 289659.36
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 284007.44,
+            "eligible_flags": 162669,
+            "hits": 14863,
+            "misses": 147806,
+            "flag_bits": 71750.06,
+            "global_word_bits_avoided": 116965.42,
+            "live_contexts": 11075
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 286108.84,
+            "eligible_flags": 68129,
+            "hits": 7958,
+            "misses": 60171,
+            "flag_bits": 35443.26,
+            "global_word_bits_avoided": 63847.42,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 288899.0,
+            "eligible_flags": 9641,
+            "hits": 1767,
+            "misses": 7874,
+            "flag_bits": 6632.23,
+            "global_word_bits_avoided": 12715.13,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 289427.68,
+            "eligible_flags": 1520,
+            "hits": 671,
+            "misses": 849,
+            "flag_bits": 1510.54,
+            "global_word_bits_avoided": 3363.98,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 289446.35,
+            "eligible_flags": 485,
+            "hits": 464,
+            "misses": 21,
+            "flag_bits": 129.54,
+            "global_word_bits_avoided": 1833.65,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 289502.1,
+            "eligible_flags": 365,
+            "hits": 344,
+            "misses": 21,
+            "flag_bits": 120.5,
+            "global_word_bits_avoided": 1378.56,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 304735.08,
+            "eligible_known_word_events": 159397,
+            "live_contexts_per_order": {
+              "1": 11075
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 298933.74,
+            "eligible_known_word_events": 159397,
+            "live_contexts_per_order": {
+              "1": 11075,
+              "2": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 298420.88,
+            "eligible_known_word_events": 159397,
+            "live_contexts_per_order": {
+              "1": 11075,
+              "2": 32768,
+              "3": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 298385.48,
+            "eligible_known_word_events": 159397,
+            "live_contexts_per_order": {
+              "1": 11075,
+              "2": 32768,
+              "3": 32768,
+              "4": 32768
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "language": "es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 1048576,
+        "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 187142,
+        "word_types": 15469,
+        "word_first_uses": 15469,
+        "word_spelling_bits": 513009.25,
+        "separator_tokens": 187142,
+        "separator_types": 277,
+        "separator_first_uses": 277,
+        "separator_spelling_bits": 7591.71,
+        "word_global_bits": 2146697.58,
+        "separator_bits": 276627.74,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 302915.67
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 299385.73,
+            "eligible_flags": 164220,
+            "hits": 12325,
+            "misses": 151895,
+            "flag_bits": 63151.43,
+            "global_word_bits_avoided": 91390.88,
+            "live_contexts": 15469
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 300000.73,
+            "eligible_flags": 71514,
+            "hits": 7283,
+            "misses": 64231,
+            "flag_bits": 33963.37,
+            "global_word_bits_avoided": 57282.85,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 301992.42,
+            "eligible_flags": 11989,
+            "hits": 1714,
+            "misses": 10275,
+            "flag_bits": 7103.99,
+            "global_word_bits_avoided": 14489.93,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 302676.1,
+            "eligible_flags": 1612,
+            "hits": 349,
+            "misses": 1263,
+            "flag_bits": 1220.66,
+            "global_word_bits_avoided": 3137.21,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 302908.55,
+            "eligible_flags": 11,
+            "hits": 6,
+            "misses": 5,
+            "flag_bits": 13.02,
+            "global_word_bits_avoided": 69.98,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 302915.67,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 327218.59,
+            "eligible_known_word_events": 157737,
+            "live_contexts_per_order": {
+              "1": 15469
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 320930.38,
+            "eligible_known_word_events": 157737,
+            "live_contexts_per_order": {
+              "1": 15469,
+              "2": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 320275.14,
+            "eligible_known_word_events": 157737,
+            "live_contexts_per_order": {
+              "1": 15469,
+              "2": 32768,
+              "3": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 320248.1,
+            "eligible_known_word_events": 157737,
+            "live_contexts_per_order": {
+              "1": 15469,
+              "2": 32768,
+              "3": 32768,
+              "4": 32768
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "language": "fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 716472,
+        "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 123306,
+        "word_types": 13460,
+        "word_first_uses": 13460,
+        "word_spelling_bits": 458134.82,
+        "separator_tokens": 123307,
+        "separator_types": 164,
+        "separator_first_uses": 164,
+        "separator_spelling_bits": 4549.4,
+        "word_global_bits": 1552793.56,
+        "separator_bits": 256312.63,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 226138.27
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 224279.43,
+            "eligible_flags": 103072,
+            "hits": 5854,
+            "misses": 97218,
+            "flag_bits": 32434.04,
+            "global_word_bits_avoided": 47304.82,
+            "live_contexts": 13460
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 224662.89,
+            "eligible_flags": 38115,
+            "hits": 3189,
+            "misses": 34926,
+            "flag_bits": 15824.63,
+            "global_word_bits_avoided": 27627.74,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 225783.38,
+            "eligible_flags": 5046,
+            "hits": 624,
+            "misses": 4422,
+            "flag_bits": 2730.29,
+            "global_word_bits_avoided": 5569.43,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 226089.89,
+            "eligible_flags": 543,
+            "hits": 78,
+            "misses": 465,
+            "flag_bits": 327.25,
+            "global_word_bits_avoided": 714.32,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 226135.93,
+            "eligible_flags": 3,
+            "hits": 3,
+            "misses": 0,
+            "flag_bits": 1.68,
+            "global_word_bits_avoided": 20.39,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 226138.27,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 32768
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 231889.07,
+            "eligible_known_word_events": 97949,
+            "live_contexts_per_order": {
+              "1": 13460
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 228934.45,
+            "eligible_known_word_events": 97949,
+            "live_contexts_per_order": {
+              "1": 13460,
+              "2": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 228808.3,
+            "eligible_known_word_events": 97949,
+            "live_contexts_per_order": {
+              "1": 13460,
+              "2": 32768,
+              "3": 32768
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 228816.47,
+            "eligible_known_word_events": 97949,
+            "live_contexts_per_order": {
+              "1": 13460,
+              "2": 32768,
+              "3": 32768,
+              "4": 32768
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "language": "de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 126200,
+        "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 19897,
+        "word_types": 4146,
+        "word_first_uses": 4146,
+        "word_spelling_bits": 148991.24,
+        "separator_tokens": 19898,
+        "separator_types": 82,
+        "separator_first_uses": 82,
+        "separator_spelling_bits": 2667.56,
+        "word_global_bits": 302399.23,
+        "separator_bits": 33861.46,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 42032.59
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 41782.58,
+            "eligible_flags": 14167,
+            "hits": 713,
+            "misses": 13454,
+            "flag_bits": 4084.34,
+            "global_word_bits_avoided": 6084.38,
+            "live_contexts": 4145
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 41942.76,
+            "eligible_flags": 3009,
+            "hits": 205,
+            "misses": 2804,
+            "flag_bits": 1086.04,
+            "global_word_bits_avoided": 1804.62,
+            "live_contexts": 14935
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 42022.62,
+            "eligible_flags": 197,
+            "hits": 19,
+            "misses": 178,
+            "flag_bits": 94.29,
+            "global_word_bits_avoided": 174.06,
+            "live_contexts": 19212
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 42030.82,
+            "eligible_flags": 17,
+            "hits": 3,
+            "misses": 14,
+            "flag_bits": 13.83,
+            "global_word_bits_avoided": 27.98,
+            "live_contexts": 19811
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 42032.59,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 19889
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 42032.59,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 19881
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 42354.4,
+            "eligible_known_word_events": 12784,
+            "live_contexts_per_order": {
+              "1": 4145
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 42246.15,
+            "eligible_known_word_events": 12784,
+            "live_contexts_per_order": {
+              "1": 4145,
+              "2": 14935
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 42250.07,
+            "eligible_known_word_events": 12784,
+            "live_contexts_per_order": {
+              "1": 4145,
+              "2": 14935,
+              "3": 19212
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 42251.09,
+            "eligible_known_word_events": 12784,
+            "live_contexts_per_order": {
+              "1": 4145,
+              "2": 14935,
+              "3": 19212,
+              "4": 19811
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "language": "ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "raw_bytes": 486098,
+        "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "unicode_version_used_by_encoder_screen": "15.0.0",
+        "word_tokens": 22905,
+        "word_types": 18990,
+        "word_first_uses": 18990,
+        "word_spelling_bits": 1420266.3,
+        "separator_tokens": 22906,
+        "separator_types": 51,
+        "separator_first_uses": 51,
+        "separator_spelling_bits": 2045.14,
+        "word_global_bits": 1476023.58,
+        "separator_bits": 44870.76,
+        "candidate_ideal_bits": [
+          {
+            "mode": "global_words",
+            "estimated_bytes": 190111.79
+          },
+          {
+            "mode": "last_successor_order1",
+            "estimated_bytes": 190112.79,
+            "eligible_flags": 3104,
+            "hits": 2,
+            "misses": 3102,
+            "flag_bits": 30.24,
+            "global_word_bits_avoided": 22.28,
+            "live_contexts": 18990
+          },
+          {
+            "mode": "last_successor_order2",
+            "estimated_bytes": 190112.03,
+            "eligible_flags": 4,
+            "hits": 0,
+            "misses": 4,
+            "flag_bits": 1.87,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 22859
+          },
+          {
+            "mode": "last_successor_order3",
+            "estimated_bytes": 190111.79,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 22897
+          },
+          {
+            "mode": "last_successor_order4",
+            "estimated_bytes": 190111.79,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 22897
+          },
+          {
+            "mode": "last_successor_order8",
+            "estimated_bytes": 190111.79,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 22897
+          },
+          {
+            "mode": "last_successor_order16",
+            "estimated_bytes": 190111.79,
+            "eligible_flags": 0,
+            "hits": 0,
+            "misses": 0,
+            "flag_bits": 0.0,
+            "global_word_bits_avoided": 0.0,
+            "live_contexts": 22889
+          },
+          {
+            "mode": "sparse_mixture_through_order1",
+            "estimated_bytes": 190098.02,
+            "eligible_known_word_events": 221,
+            "live_contexts_per_order": {
+              "1": 18990
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order2",
+            "estimated_bytes": 190095.87,
+            "eligible_known_word_events": 221,
+            "live_contexts_per_order": {
+              "1": 18990,
+              "2": 22859
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order3",
+            "estimated_bytes": 190095.4,
+            "eligible_known_word_events": 221,
+            "live_contexts_per_order": {
+              "1": 18990,
+              "2": 22859,
+              "3": 22897
+            }
+          },
+          {
+            "mode": "sparse_mixture_through_order4",
+            "estimated_bytes": 190095.22,
+            "eligible_known_word_events": 221,
+            "live_contexts_per_order": {
+              "1": 18990,
+              "2": 22859,
+              "3": 22897,
+              "4": 22897
+            }
+          }
+        ],
+        "coding_assumptions": "Unicode letter/mark/number runs capped at eight non-ASCII scalars or 64 ASCII bytes; invalid UTF-8 literal separator; KT new/known and token frequencies; first-use byte spelling with order-1 KT; gamma token length; exact separators; 32768 LRU contexts/order and at most 16 recorded successors/context; fixed integer sparse-mixture masses 8,1,2,4,8; last-successor flags after two visits",
+        "limits": "Ideal entropy omits integer coder rounding, frame index/CRC, mode signaling, token-boundary bits, and complete decoder implementation; no archive-size claim"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "candidate": "wordfrontier-global/1",
+  "status": "frozen development-tested source; no final input used to tune policy",
+  "source_sha256": {
+    "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+    "/workspace/dict/src6/experiments/wordfrontier/test_wordfrontier.py": "040a29ff506df938795d416c103e379bee115845b2a4ae3da872d9801b33d675",
+    "/workspace/dict/src6/experiments/wordfrontier/README.md": "b27fbf75ffefac7af086d9274d297906f9bc6010d791440f7ff006232c811dd4",
+    "/workspace/dict/src6/experiments/wordfrontier/Makefile": "73b8266655f4df26cf2beff9bdca66faacff0a90571a4fc56be2930df8333188"
+  },
+  "runtime_default_sha256": {
+    "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+    "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+    "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+    "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+    "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+    "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+    "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+    "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+    "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+    "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+    "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+    "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+    "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+    "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+    "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+    "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+    "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+    "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+    "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+    "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+    "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+    "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+    "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+    "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference": "4f7faf921798b7f56d8f85eaa990e1d3da73655e996bc95df33140e84adb2060",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376",
+    "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9"
+  },
+  "encoder_policy": {
+    "profiles": [
+      "quality",
+      "access"
+    ],
+    "all_families": [
+      "WPG2",
+      "GWT1"
+    ],
+    "tie_order": [
+      "WPG2",
+      "GWT1"
+    ],
+    "page_bytes": 65536,
+    "max_input_bytes": 33554432,
+    "all_original_pages_fresh_verified_before_publish": true,
+    "whole_model_and_frame_charged": true
+  },
+  "integrity_suite": {
+    "command": "python3 src6/experiments/wordfrontier/test_wordfrontier.py -v",
+    "tests": 4,
+    "status": "PASS",
+    "log_sha256": "7a93af1a86e93d23d82f8cdb5ddb1882ddf26a2c02ddcb7ece9a13c8a0059203"
+  },
+  "cli": {
+    "encode": "python3 src6/experiments/wordfrontier/wordfrontier.py encode INPUT FRAME --profile quality|access",
+    "decode": "python3 src6/experiments/wordfrontier/wordfrontier.py decode FRAME OUTPUT",
+    "extract": "python3 src6/experiments/wordfrontier/wordfrontier.py extract FRAME OUTPUT --index N",
+    "inspect": "python3 src6/experiments/wordfrontier/wordfrontier.py inspect FRAME JSON_OUTPUT",
+    "bench": "python3 src6/experiments/wordfrontier/wordfrontier.py bench FRAME JSON_OUTPUT --measure 1 --quiet-gate WORDZIP-READER-QUIET"
+  },
+  "timing_scope": "all_family_search_wall_ns includes both full paid encoder searches; all_search_native_codec_ns excludes Python transform/process/file IO. Native decode/query preparation clocks are returned separately from adapter_wall_ns. No throughput claims from concurrent smoke work.",
+  "runtime_revision": 2,
+  "runtime_revision_reason": "Private prepared native decoder uses a 512 MiB live allocation cap; encoded formats and compression policies are unchanged.",
+  "post_budget_dependency_manifests": {
+    "src6/experiments/word_constructions/evidence/wpg2-post-budget-manifest.sha256": "0a257b4de3bc553826a8c7072eca7af8e73f1c300a29cf7e5c30a9d65e57059e",
+    "src6/experiments/wordgrammar/geometry/evidence/gwt1-native-sources.sha256": "916aa0e5c46b9cb3f3eb5b777c505cc6c49606f3f9109e56818a0ae142c08af9"
+  }
+}

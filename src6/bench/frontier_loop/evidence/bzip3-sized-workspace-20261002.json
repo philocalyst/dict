@@ -1,0 +1,145 @@
+{
+  "binary_sha256": "96d0e3d36f531bf4e255b43c9617ac8e6a4b2d23289647c147946761f2d6ce44",
+  "clocks": "diagnostic only",
+  "policy": "Smallest whole MiB block that holds exact complete book (minimum1MiB); one native block, fixed deterministic input-length policy, no settings sweep.",
+  "rows": [
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "1",
+        "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt"
+      ],
+      "block_mib": 1,
+      "case": "pride-and-prejudice-en",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/pride-and-prejudice-en.bz3",
+      "frame_bytes": 161119,
+      "frame_sha256": "79edd5fc22ad1b4b609d74c540df3c2c55a4b0a04a9c705c2ddf4458d27e71b9",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 161119,
+      "source": {
+        "bytes": 705012,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt",
+        "sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "utf8_scalar_count": 697950
+      }
+    },
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "4",
+        "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt"
+      ],
+      "block_mib": 4,
+      "case": "war-and-peace-en",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/war-and-peace-en.bz3",
+      "frame_bytes": 732272,
+      "frame_sha256": "18dbf072cf9f77665d4b3ba4b5b1c4cce98edd115c42d2021b36fb0b8377fa7f",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 732272,
+      "source": {
+        "bytes": 3339896,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt",
+        "sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+        "utf8_scalar_count": 3274043
+      }
+    },
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "3",
+        "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt"
+      ],
+      "block_mib": 3,
+      "case": "don-quijote-es",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/don-quijote-es.bz3",
+      "frame_bytes": 500612,
+      "frame_sha256": "56699bb6fb0fb9aeac119e4fb964f8a51a64eb3a595318bf6602702eb80dbb18",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 500612,
+      "source": {
+        "bytes": 2179216,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt",
+        "sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+        "utf8_scalar_count": 2135650
+      }
+    },
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "1",
+        "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt"
+      ],
+      "block_mib": 1,
+      "case": "madame-bovary-fr",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/madame-bovary-fr.bz3",
+      "frame_bytes": 179597,
+      "frame_sha256": "c64aebfc6fa11d7ab1cb7e4375c6721eff678f6da8de86e200d066b653c77eff",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 179597,
+      "source": {
+        "bytes": 716472,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt",
+        "sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "utf8_scalar_count": 700188
+      }
+    },
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "1",
+        "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt"
+      ],
+      "block_mib": 1,
+      "case": "die-verwandlung-de",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/die-verwandlung-de.bz3",
+      "frame_bytes": 35251,
+      "frame_sha256": "60304d6fdcb6af2d162140b06723d30cb985dc1ca88e59cf9bc6d0838fc73408",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 35251,
+      "source": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "utf8_scalar_count": 123674
+      }
+    },
+    {
+      "argv": [
+        "/workspace/scratch/bzip3",
+        "-c",
+        "-b",
+        "1",
+        "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt"
+      ],
+      "block_mib": 1,
+      "case": "kokoro-ja",
+      "exact_decode": true,
+      "frame": "/workspace/scratch/frontier-loop-books6/bzip3-sized/kokoro-ja.bz3",
+      "frame_bytes": 97505,
+      "frame_sha256": "38e93f5a81bf80b5eff322f3e16b2014202c47aca004c37f56de130ef0ece6ca",
+      "payload_after_header_byte9_identical": true,
+      "prior_bytes": 97505,
+      "source": {
+        "bytes": 486098,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt",
+        "sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "utf8_scalar_count": 164142
+      }
+    }
+  ]
+}

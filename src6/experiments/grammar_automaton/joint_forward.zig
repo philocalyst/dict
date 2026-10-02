@@ -1,0 +1,373 @@
+//! Forward-DAG development adapter for the private native-v4 event automaton.
+//! Parse and price interchange are private encoder artifacts, never archives.
+const std = @import("std");
+const bz4 = @import("bz4");
+const automaton = @import("automaton_fit_joint.zig");
+
+fn now(io: std.Io) i96 {
+    return std.Io.Clock.awake.now(io).nanoseconds;
+}
+
+fn takeArray(gpa: std.mem.Allocator, bytes: []const u8, at: *usize) ![]u32 {
+    if (bytes.len - at.* < 4) return error.BadParse;
+    const count = std.mem.readInt(u32, bytes[at.*..][0..4], .little);
+    at.* += 4;
+    if (count > (bytes.len - at.*) / 4) return error.BadParse;
+    const out = try gpa.alloc(u32, count);
+    for (out) |*x| {
+        x.* = std.mem.readInt(u32, bytes[at.*..][0..4], .little);
+        at.* += 4;
+    }
+    return out;
+}
+
+fn readParse(gpa: std.mem.Allocator, bytes: []const u8) !bz4.Parse {
+    if (!std.mem.startsWith(u8, bytes, "P6F1") and !std.mem.startsWith(u8, bytes, "P6P1")) return error.BadParse;
+    var at: usize = 4;
+    const body_off = try takeArray(gpa, bytes, &at);
+    const kids = try takeArray(gpa, bytes, &at);
+    const block_off = try takeArray(gpa, bytes, &at);
+    const toks = try takeArray(gpa, bytes, &at);
+    if (at != bytes.len or body_off.len == 0 or block_off.len == 0) return error.BadParse;
+    if (body_off[0] != 0 or body_off[body_off.len - 1] != kids.len or block_off[0] != 0 or block_off[block_off.len - 1] != toks.len) return error.BadParse;
+    for (body_off[0 .. body_off.len - 1], body_off[1..]) |a, b| if (a >= b or b > kids.len) return error.BadParse;
+    for (block_off[0 .. block_off.len - 1], block_off[1..]) |a, b| if (a > b or b > toks.len) return error.BadParse;
+    // Forward references are valid in Lane M. Topological validation makes
+    // cycles fail before any unchanged native planner traverses this graph.
+    const entries = body_off.len - 1;
+    if (entries > 500000 or kids.len > 4000000 or toks.len > 16000000) return error.GraphBudget;
+    const lengths = try gpa.alloc(u64, entries);
+    defer gpa.free(lengths);
+    const pending = try gpa.alloc(u32, entries);
+    defer gpa.free(pending);
+    @memset(pending, 0);
+    const successor_off = try gpa.alloc(u32, entries + 1);
+    defer gpa.free(successor_off);
+    @memset(successor_off, 0);
+    for (body_off[0..entries], body_off[1..], 0..) |begin, end, entry| {
+        for (kids[begin..end]) |child| {
+            if (child >= bz4.Parse.cut) return error.BadParse;
+            if (child >= 256) {
+                if (child - 256 >= entries) return error.BadParse;
+                pending[entry] += 1;
+                successor_off[child - 256 + 1] += 1;
+            }
+        }
+    }
+    for (successor_off[1..], successor_off[0..entries]) |*end, begin| end.* += begin;
+    const successors = try gpa.alloc(u32, successor_off[entries]);
+    defer gpa.free(successors);
+    const cursor = try gpa.dupe(u32, successor_off[0..entries]);
+    defer gpa.free(cursor);
+    for (body_off[0..entries], body_off[1..], 0..) |begin, end, entry| {
+        for (kids[begin..end]) |child| if (child >= 256) {
+            successors[cursor[child - 256]] = @intCast(entry);
+            cursor[child - 256] += 1;
+        };
+    }
+    var ready: std.ArrayList(u32) = .empty;
+    defer ready.deinit(gpa);
+    for (pending, 0..) |count, entry| if (count == 0) {
+        try ready.append(gpa, @intCast(entry));
+    };
+    var at_ready: usize = 0;
+    while (at_ready < ready.items.len) : (at_ready += 1) {
+        const entry = ready.items[at_ready];
+        var length: u64 = 0;
+        for (kids[body_off[entry]..body_off[entry + 1]]) |child| {
+            length += if (child < 256) 1 else lengths[child - 256];
+            if (length > 64 * 1024 * 1024) return error.BadParse;
+        }
+        lengths[entry] = length;
+        for (successors[successor_off[entry]..successor_off[entry + 1]]) |parent| {
+            pending[parent] -= 1;
+            if (pending[parent] == 0) try ready.append(gpa, parent);
+        }
+    }
+    if (at_ready != entries) return error.BadParse;
+    var raw_length: u64 = 0;
+    for (toks) |tok| {
+        if (tok >= 256 and tok - 256 >= entries) return error.BadParse;
+        raw_length += if (tok < 256) 1 else lengths[tok - 256];
+        if (raw_length > 64 * 1024 * 1024) return error.BadParse;
+    }
+
+    return .{ .body_off = body_off, .kids = kids, .block_off = block_off, .toks = toks };
+}
+
+const Ledger = struct {
+    header_bytes: usize,
+    directory_bytes: usize,
+    model_dictionary_bytes: usize,
+    model_bytes: usize,
+    dictionary_bytes: usize,
+    payload_bytes: usize,
+    raw_bytes: usize,
+    blocks: usize,
+    block_raw_lengths: std.ArrayList(usize),
+};
+
+fn ledger(gpa: std.mem.Allocator, bytes: []const u8) !Ledger {
+    if (!std.mem.startsWith(u8, bytes, bz4.frame.magic)) return error.BadFrame;
+    var pos = bz4.frame.magic.len;
+    const header_len = try bz4.frame.takeVarint(bytes, &pos);
+    if (header_len > bytes.len - pos) return error.BadFrame;
+    const header_bytes = pos;
+    pos += header_len;
+    var model_dictionary_bytes: usize = header_len;
+    var dictionary_bytes: usize = 0;
+    var payload_bytes: usize = 0;
+    var raw_bytes: usize = 0;
+    var blocks: usize = 0;
+    var lengths: std.ArrayList(usize) = .empty;
+    errdefer lengths.deinit(gpa);
+    while (try bz4.frame.Block.read(bytes, &pos)) |b| {
+        model_dictionary_bytes += b.delta.len;
+        dictionary_bytes += b.delta.len;
+        payload_bytes += b.payload.len;
+        raw_bytes += b.raw_len;
+        if (b.items != 0) {
+            blocks += 1;
+            try lengths.append(gpa, b.raw_len);
+        }
+    }
+    if (pos != bytes.len) return error.BadFrame;
+    return .{ .header_bytes = header_bytes, .directory_bytes = bytes.len - header_bytes - model_dictionary_bytes - payload_bytes, .model_dictionary_bytes = model_dictionary_bytes, .model_bytes = header_len, .dictionary_bytes = dictionary_bytes, .payload_bytes = payload_bytes, .raw_bytes = raw_bytes, .blocks = blocks, .block_raw_lengths = lengths };
+}
+
+fn writeLedger(init: std.process.Init, stats: Ledger, codec_ns: i96, frame_bytes: usize, classes: ?u16) !void {
+    try json(init, .{ .codec_ns = codec_ns, .frame_bytes = frame_bytes, .classes = classes, .header_bytes = stats.header_bytes, .directory_bytes = stats.directory_bytes, .model_dictionary_bytes = stats.model_dictionary_bytes, .model_bytes = stats.model_bytes, .dictionary_bytes = stats.dictionary_bytes, .payload_bytes = stats.payload_bytes, .raw_bytes = stats.raw_bytes, .blocks = stats.blocks, .block_raw_lengths = stats.block_raw_lengths.items });
+}
+
+fn json(init: std.process.Init, value: anytype) !void {
+    var buffer: [4096]u8 = undefined;
+    var writer = std.Io.File.stdout().writer(init.io, &buffer);
+    try writer.interface.print("{f}\n", .{std.json.fmt(value, .{})});
+    try writer.interface.flush();
+}
+
+fn varCost(model: bz4.Model, row: u16, sym: u16) f64 {
+    const frequency = model.norm[model.cell(row, sym)];
+    return @log2(@as(f64, @floatFromInt(@as(u32, 1) << @intCast(model.logs[row]))) / (@as(f64, @floatFromInt(frequency)) + 0.25));
+}
+
+fn appendInt(out: *std.ArrayList(u8), gpa: std.mem.Allocator, value: u32) !void {
+    var bytes: [4]u8 = undefined;
+    std.mem.writeInt(u32, &bytes, value, .little);
+    try out.appendSlice(gpa, &bytes);
+}
+
+fn priceCells(entries: usize, classes: u16) !usize {
+    if (classes == 0 or classes > 128) return error.PriceBudget;
+    const tokens = std.math.add(usize, entries, 256) catch return error.PriceBudget;
+    const cells = std.math.mul(usize, tokens, @as(usize, classes) + 1) catch return error.PriceBudget;
+    if (cells > 20_000_000) return error.PriceBudget;
+    const bytes = std.math.add(usize, std.math.mul(usize, cells, 8) catch return error.PriceBudget, 12) catch return error.PriceBudget;
+    if (bytes > 192 * 1024 * 1024) return error.PriceBudget;
+    return cells;
+}
+
+fn priceFile(gpa: std.mem.Allocator, input: bz4.Parse, plan: *bz4.Plan, classes: u16) ![]u8 {
+    const cells = try priceCells(input.entries(), classes);
+    var bytes: std.ArrayList(u8) = .empty;
+    errdefer bytes.deinit(gpa);
+    try bytes.ensureTotalCapacityPrecise(gpa, 12 + cells * 8);
+    try bytes.appendSlice(gpa, "P6C1");
+    try appendInt(&bytes, gpa, @intCast(256 + input.entries()));
+    try appendInt(&bytes, gpa, classes);
+    var aliases: [256]u32 = undefined;
+    for (&aliases, 0..) |*alias, byte| alias.* = @intCast(byte);
+    for (input.entries()..plan.parse.entries()) |e| {
+        const body = plan.parse.body(e);
+        if (body.len == 1 and body[0] < 256) aliases[body[0]] = @intCast(256 + e);
+    }
+    const model = plan.model;
+    for (0..256 + input.entries()) |original| {
+        const token: u32 = if (original < 256) aliases[original] else @intCast(original);
+        const sym: u16 = if (token < 256) 0 else plan.bucket[token - 256];
+        for (0..classes + 1) |state| {
+            var row: u16 = @intCast(if (state == classes) 2 * classes else state);
+            var price: f64 = 0;
+            const via = plan.via[sym];
+            if (via != 0) {
+                price += varCost(model, row, via);
+                row = model.next[model.cell(row, via)];
+            }
+            price += varCost(model, row, sym) + @as(f64, @floatFromInt(model.widths[sym]));
+            try appendInt(&bytes, gpa, @bitCast(@as(f32, @floatCast(@max(0, price)))));
+            try appendInt(&bytes, gpa, model.next[model.cell(row, sym)]);
+        }
+    }
+    return bytes.toOwnedSlice(gpa);
+}
+
+pub fn main(init: std.process.Init) !void {
+    var args = std.process.Args.Iterator.init(init.minimal.args);
+    _ = args.next();
+    const operation = args.next() orelse return error.Usage;
+    const input_path = args.next() orelse return error.Usage;
+    const output_path = args.next() orelse return error.Usage;
+    const parameter = if (args.next()) |arg| try std.fmt.parseUnsigned(u32, arg, 10) else 0;
+    const classes: u16 = if (std.mem.eql(u8, operation, "compile") or std.mem.eql(u8, operation, "prices") or std.mem.eql(u8, operation, "trace") or std.mem.eql(u8, operation, "auto")) std.math.cast(u16, parameter) orelse return error.BadClasses else 0;
+    if (classes != 0 and (classes > 128 or !std.math.isPowerOfTwo(classes))) return error.BadClasses;
+    const price_path = args.next();
+    if (args.next() != null) return error.Usage;
+    const byte_limit: usize = if (std.mem.eql(u8, operation, "original")) 64 * 1024 * 1024 else 512 * 1024 * 1024;
+    const input = try std.Io.Dir.cwd().readFileAlloc(init.io, input_path, init.gpa, .limited(byte_limit));
+    defer init.gpa.free(input);
+    const start = now(init.io);
+    if (std.mem.eql(u8, operation, "original")) {
+        if (price_path != null or parameter == 0 or parameter > 65536) return error.BadBlock;
+        const bytes = try bz4.compress(init.gpa, input, .{ .learn = .{ .block = parameter } });
+        defer init.gpa.free(bytes);
+        const duration = now(init.io) - start;
+        var stats = try ledger(init.gpa, bytes);
+        defer stats.block_raw_lengths.deinit(init.gpa);
+        try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = bytes });
+        try writeLedger(init, stats, duration, bytes.len, null);
+    } else if (std.mem.eql(u8, operation, "compile") or std.mem.eql(u8, operation, "prices") or std.mem.eql(u8, operation, "trace") or std.mem.eql(u8, operation, "auto")) {
+        var arena: std.heap.ArenaAllocator = .init(init.gpa);
+        defer arena.deinit();
+        const parse = try readParse(arena.allocator(), input);
+        if (std.mem.eql(u8, operation, "auto")) {
+            if (price_path != null) return error.Usage;
+            const fitted = try automaton.fit(init.gpa, parse, .{ .classes = classes });
+            defer init.gpa.free(fitted.bytes);
+            defer init.gpa.free(fitted.trial_ledger);
+            const duration = now(init.io) - start;
+            var stats = try ledger(init.gpa, fitted.bytes);
+            defer stats.block_raw_lengths.deinit(init.gpa);
+            try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = fitted.bytes });
+            try json(init, .{ .codec_ns = duration, .frame_bytes = fitted.bytes.len,
+                .baseline_bytes = fitted.baseline_bytes, .classes = fitted.classes,
+                .feature = @tagName(fitted.feature), .selectors = fitted.selectors,
+                .merged_rows = fitted.merged,
+                .trials = fitted.trials, .trial_ledger = fitted.trial_ledger,
+                .header_bytes = stats.header_bytes,
+                .directory_bytes = stats.directory_bytes, .model_bytes = stats.model_bytes,
+                .dictionary_bytes = stats.dictionary_bytes,
+                .model_dictionary_bytes = stats.model_dictionary_bytes,
+                .payload_bytes = stats.payload_bytes, .raw_bytes = stats.raw_bytes,
+                .blocks = stats.blocks, .block_raw_lengths = stats.block_raw_lengths.items });
+            return;
+        }
+        if (classes != 0 and (price_path != null or std.mem.eql(u8, operation, "prices"))) {
+            _ = try priceCells(parse.entries(), classes);
+        }
+        const fit = try bz4.plan.fit(arena.allocator(), init.gpa, parse, .{ .classes = classes });
+        defer init.gpa.free(fit.bytes);
+        if (std.mem.eql(u8, operation, "trace")) {
+            var planned = try bz4.plan.baseline(arena.allocator(), parse, fit.options);
+            var starts: std.ArrayList(bz4.TraceRow) = .empty;
+            defer starts.deinit(init.gpa);
+            var delta_starts: std.ArrayList(bz4.TraceRow) = .empty;
+            defer delta_starts.deinit(init.gpa);
+            var trace_stats: bz4.Stats = .{ .token_starts = &starts,
+                .delta_token_starts = &delta_starts };
+            const measured = try bz4.encode(init.gpa, &planned, &trace_stats);
+            defer init.gpa.free(measured);
+            if (!std.mem.eql(u8, fit.bytes, measured)) return error.ReplannedFrameMismatch;
+            var trace: std.ArrayList(u8) = .empty;
+            defer trace.deinit(init.gpa);
+            try trace.appendSlice(init.gpa, "WGT4");
+            try appendInt(&trace, init.gpa, planned.model.rows);
+            try appendInt(&trace, init.gpa, planned.model.alphabet);
+            try appendInt(&trace, init.gpa, @intCast(delta_starts.items.len));
+            try appendInt(&trace, init.gpa, @intCast(starts.items.len));
+            for (planned.model.logs) |log| try trace.append(init.gpa, log);
+            for (planned.model.norm) |frequency| {
+                var bytes: [2]u8 = undefined;
+                std.mem.writeInt(u16, &bytes, frequency, .little);
+                try trace.appendSlice(init.gpa, &bytes);
+            }
+            for ([_][]const bz4.TraceRow{ delta_starts.items, starts.items }) |records| {
+                for (records) |item| {
+                    var bytes: [16]u8 = undefined;
+                    std.mem.writeInt(u16, bytes[0..2], item.row, .little);
+                    std.mem.writeInt(u16, bytes[2..4], item.sym, .little);
+                    std.mem.writeInt(u32, bytes[4..8], item.suffix, .little);
+                    bytes[8] = item.suffix_len;
+                    bytes[9] = item.kind;
+                    std.mem.writeInt(u32, bytes[10..14], item.token_len, .little);
+                    std.mem.writeInt(u16, bytes[14..16], item.after_row, .little);
+                    try trace.appendSlice(init.gpa, &bytes);
+                }
+            }
+            try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = trace.items });
+            if (price_path) |path| try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = path, .data = measured });
+            try json(init, .{ .codec_ns = now(init.io) - start, .frame_bytes = measured.len, .classes = fit.options.classes, .delta_token_starts = delta_starts.items.len, .payload_token_starts = starts.items.len, .trace_bytes = trace.items.len });
+            return;
+        }
+        if (price_path) |path| {
+            var planned = try bz4.plan.baseline(arena.allocator(), parse, fit.options);
+            const measured = try bz4.encode(init.gpa, &planned, null);
+            defer init.gpa.free(measured);
+            if (!std.mem.eql(u8, fit.bytes, measured)) return error.ReplannedFrameMismatch;
+            const price_bytes = try priceFile(init.gpa, parse, &planned, fit.options.classes);
+            defer init.gpa.free(price_bytes);
+            const duration = now(init.io) - start;
+            var stats = try ledger(init.gpa, fit.bytes);
+            defer stats.block_raw_lengths.deinit(init.gpa);
+            try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = path, .data = price_bytes });
+            try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = fit.bytes });
+            try writeLedger(init, stats, duration, fit.bytes.len, fit.options.classes);
+            return;
+        }
+        if (std.mem.eql(u8, operation, "prices")) {
+            var planned = try bz4.plan.baseline(arena.allocator(), parse, fit.options);
+            const measured = try bz4.encode(init.gpa, &planned, null);
+            defer init.gpa.free(measured);
+            const price_bytes = try priceFile(init.gpa, parse, &planned, fit.options.classes);
+            defer init.gpa.free(price_bytes);
+            const duration = now(init.io) - start;
+            try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = price_bytes });
+            try json(init, .{ .codec_ns = duration, .classes = fit.options.classes, .tokens = 256 + parse.entries(), .price_bytes = price_bytes.len, .fitted_frame_bytes = fit.bytes.len });
+            return;
+        }
+        const duration = now(init.io) - start;
+        var stats = try ledger(init.gpa, fit.bytes);
+        defer stats.block_raw_lengths.deinit(init.gpa);
+        try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = fit.bytes });
+        try writeLedger(init, stats, duration, fit.bytes.len, fit.options.classes);
+    } else if (std.mem.eql(u8, operation, "decode")) {
+        if (parameter != 0 or price_path != null) return error.Usage;
+        const decoded = try bz4.decompress(init.gpa, input, 1);
+        defer init.gpa.free(decoded);
+        const duration = now(init.io) - start;
+        try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = decoded });
+        try json(init, .{ .codec_ns = duration, .decoded = decoded.len });
+    } else if (std.mem.eql(u8, operation, "extract")) {
+        if (price_path != null) return error.Usage;
+        var decoder = try bz4.Decoder.init(init.gpa, input);
+        defer decoder.deinit();
+        var index: usize = 0;
+        var parsed: usize = 0;
+        var chosen: ?bz4.Job = null;
+        while (try decoder.next()) |job| {
+            parsed += 1;
+            if (job.items != 0) {
+                if (index == parameter) {
+                    chosen = job;
+                    break;
+                }
+                index += 1;
+            }
+        }
+        const job = chosen orelse return error.BlockOutOfRange;
+        const decoded = try init.gpa.alloc(u8, job.raw_len);
+        defer init.gpa.free(decoded);
+        try decoder.run(job, decoded);
+        const duration = now(init.io) - start;
+        try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = decoded });
+        try json(init, .{ .codec_ns = duration, .block_index = parameter, .blocks_parsed = parsed, .raw_bytes = decoded.len, .access_mode = "replay_dictionary_deltas_then_decode_block" });
+    } else if (std.mem.eql(u8, operation, "inspect")) {
+        if (parameter != 0 or price_path != null) return error.Usage;
+        var stats = try ledger(init.gpa, input);
+        defer stats.block_raw_lengths.deinit(init.gpa);
+        var out: std.Io.Writer.Allocating = .init(init.gpa);
+        defer out.deinit();
+        try out.writer.print("{f}\n", .{std.json.fmt(.{ .frame_bytes = input.len, .header_bytes = stats.header_bytes, .directory_bytes = stats.directory_bytes, .model_dictionary_bytes = stats.model_dictionary_bytes, .model_bytes = stats.model_bytes, .dictionary_bytes = stats.dictionary_bytes, .payload_bytes = stats.payload_bytes, .raw_bytes = stats.raw_bytes, .blocks = stats.blocks, .block_raw_lengths = stats.block_raw_lengths.items }, .{})});
+        try std.Io.Dir.cwd().writeFile(init.io, .{ .sub_path = output_path, .data = out.written() });
+        try writeLedger(init, stats, now(init.io) - start, input.len, null);
+    } else return error.Usage;
+}

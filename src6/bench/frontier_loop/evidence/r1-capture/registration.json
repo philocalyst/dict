@@ -1,0 +1,13 @@
+{
+  "files": {
+    "/workspace/scratch/frontier-loop-books6/final-specs/bzip2.json": "f1db4c258802e450288338ed7a4703b0d7b1c422fe6210bbfdb20e4090fb4b49",
+    "/workspace/scratch/frontier-loop-books6/final-specs/bzip3.json": "409b94bdf0fbed246cc7b27837248962d5cb59e21a4b3a90359348bf4af65cd4",
+    "/workspace/scratch/frontier-loop-books6/final-specs/cases.json": "efb34ed464d089896999a183d2f7c5cf2cd3bf8b3531014c3f235fa69a7ca11d",
+    "/workspace/scratch/frontier-loop-books6/final-specs/wordfrontier.json": "2aa524b8da8193bf8cd476cde1c5df00ebbe37342bf51bdb45fc5c9787348b7c",
+    "/workspace/scratch/frontier-loop-books6/final-specs/xz.json": "df47a6b6e02a18078c9675861301ec012e4a914d73ed35c416f9869236e580ed",
+    "/workspace/scratch/frontier-loop-books6/final-specs/zstd.json": "ce8797929c00a296b07b8b93f9491b3ebe00bf053fe2f43bbf7c56aed3de6073"
+  },
+  "generator": "/workspace/dict/src6/bench/frontier_loop/build_specs.py",
+  "generator_sha256": "2f4bf65fd105891d23d3ef1559ad7470c837f686dbc259a1791e6f598bc17b2a",
+  "role": "development only; no validation outcome opened"
+}

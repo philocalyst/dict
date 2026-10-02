@@ -1,0 +1,410 @@
+{
+  "backend": "same optimal static byte-Huffman packing of each serialized inventory/map component; code-length vector and raw component length charged",
+  "occurrence_backend": "same static Huffman type-ID source by first-use order on both sides",
+  "purpose": "sorted exact type inventory: front coding vs minimal DAFSA",
+  "rows": [
+    {
+      "dawg": {
+        "arcs": 21209,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 378573,
+          "payload_bytes": 47322,
+          "total_bytes": 47582
+        },
+        "raw_model_bytes": 65322,
+        "root_path_count": 9843,
+        "states": 13223
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 150183,
+          "payload_bytes": 18773,
+          "total_bytes": 19033
+        },
+        "raw_uleb_vector_bytes": 19558
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 304780,
+          "payload_bytes": 38098,
+          "total_bytes": 38358
+        },
+        "raw_model_bytes": 58157
+      },
+      "input_sha256_prefix": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+      "inventory": {
+        "invalid_utf8_types": 0,
+        "letter_run_type_bytes": 76349,
+        "occurrences": 140956,
+        "types": 9843,
+        "types_over_64_codepoints": 0
+      },
+      "limit_bytes": 1048576,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 9845,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 867718,
+        "occurrence_payload_bytes": 108465,
+        "shared_occurrence_source_bytes": 118317
+      },
+      "source": "freedict",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 184932,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 9224,
+        "dawg_minus_frontcoded_raw_bytes": 7165,
+        "dawg_raw_bytes": 203197,
+        "frontcoded_byte_huffman_bytes": 175708,
+        "frontcoded_raw_bytes": 196032
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 165899,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 9224,
+        "dawg_minus_frontcoded_raw_bytes": 7165,
+        "dawg_raw_bytes": 183639,
+        "frontcoded_byte_huffman_bytes": 156675,
+        "frontcoded_raw_bytes": 176474
+      }
+    },
+    {
+      "dawg": {
+        "arcs": 97910,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1902015,
+          "payload_bytes": 237752,
+          "total_bytes": 238012
+        },
+        "raw_model_bytes": 322964,
+        "root_path_count": 55856,
+        "states": 55914
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1034170,
+          "payload_bytes": 129272,
+          "total_bytes": 129532
+        },
+        "raw_uleb_vector_bytes": 151056
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1678132,
+          "payload_bytes": 209767,
+          "total_bytes": 210027
+        },
+        "raw_model_bytes": 313231
+      },
+      "input_sha256_prefix": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+      "inventory": {
+        "invalid_utf8_types": 0,
+        "letter_run_type_bytes": 474407,
+        "occurrences": 1125509,
+        "types": 55856,
+        "types_over_64_codepoints": 1
+      },
+      "limit_bytes": 8388608,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 55859,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 7351461,
+        "occurrence_payload_bytes": 918933,
+        "shared_occurrence_source_bytes": 974799
+      },
+      "source": "freedict",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 1342343,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 27985,
+        "dawg_minus_frontcoded_raw_bytes": 9733,
+        "dawg_raw_bytes": 1448819,
+        "frontcoded_byte_huffman_bytes": 1314358,
+        "frontcoded_raw_bytes": 1439086
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 1212811,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 27985,
+        "dawg_minus_frontcoded_raw_bytes": 9733,
+        "dawg_raw_bytes": 1297763,
+        "frontcoded_byte_huffman_bytes": 1184826,
+        "frontcoded_raw_bytes": 1288030
+      }
+    },
+    {
+      "dawg": {
+        "arcs": 24578,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 470983,
+          "payload_bytes": 58873,
+          "total_bytes": 59133
+        },
+        "raw_model_bytes": 75324,
+        "root_path_count": 16960,
+        "states": 12611
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 274172,
+          "payload_bytes": 34272,
+          "total_bytes": 34532
+        },
+        "raw_uleb_vector_bytes": 34368
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 387712,
+          "payload_bytes": 48464,
+          "total_bytes": 48724
+        },
+        "raw_model_bytes": 83126
+      },
+      "input_sha256_prefix": "c4ee208c312158f9bf7020ae77e862782925f08313d29dcbab1fb32c626b8961",
+      "inventory": {
+        "invalid_utf8_types": 0,
+        "letter_run_type_bytes": 121363,
+        "occurrences": 178239,
+        "types": 16960,
+        "types_over_64_codepoints": 0
+      },
+      "limit_bytes": 1048576,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 16963,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 1570503,
+        "occurrence_payload_bytes": 196313,
+        "shared_occurrence_source_bytes": 213283
+      },
+      "source": "gcide",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 306948,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 10409,
+        "dawg_minus_frontcoded_raw_bytes": -7802,
+        "dawg_raw_bytes": 322975,
+        "frontcoded_byte_huffman_bytes": 296539,
+        "frontcoded_raw_bytes": 330777
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 272416,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 10409,
+        "dawg_minus_frontcoded_raw_bytes": -7802,
+        "dawg_raw_bytes": 288607,
+        "frontcoded_byte_huffman_bytes": 262007,
+        "frontcoded_raw_bytes": 296409
+      }
+    },
+    {
+      "dawg": {
+        "arcs": 89225,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1852175,
+          "payload_bytes": 231522,
+          "total_bytes": 231782
+        },
+        "raw_model_bytes": 300288,
+        "root_path_count": 72676,
+        "states": 40830
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1378857,
+          "payload_bytes": 172358,
+          "total_bytes": 172618
+        },
+        "raw_uleb_vector_bytes": 201516
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 1589938,
+          "payload_bytes": 198743,
+          "total_bytes": 199003
+        },
+        "raw_model_bytes": 339978
+      },
+      "input_sha256_prefix": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+      "inventory": {
+        "invalid_utf8_types": 0,
+        "letter_run_type_bytes": 553266,
+        "occurrences": 1428843,
+        "types": 72676,
+        "types_over_64_codepoints": 0
+      },
+      "limit_bytes": 8388608,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 72679,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 13130723,
+        "occurrence_payload_bytes": 1641341,
+        "shared_occurrence_source_bytes": 1714027
+      },
+      "source": "gcide",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 2118427,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 32779,
+        "dawg_minus_frontcoded_raw_bytes": -39690,
+        "dawg_raw_bytes": 2215831,
+        "frontcoded_byte_huffman_bytes": 2085648,
+        "frontcoded_raw_bytes": 2255521
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 1945809,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 32779,
+        "dawg_minus_frontcoded_raw_bytes": -39690,
+        "dawg_raw_bytes": 2014315,
+        "frontcoded_byte_huffman_bytes": 1913030,
+        "frontcoded_raw_bytes": 2054005
+      }
+    },
+    {
+      "dawg": {
+        "arcs": 33054,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 380119,
+          "payload_bytes": 47515,
+          "total_bytes": 47775
+        },
+        "raw_model_bytes": 104212,
+        "root_path_count": 3136,
+        "states": 30255
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 259,
+          "huffman_payload_bits": 42681,
+          "payload_bytes": 5336,
+          "total_bytes": 5595
+        },
+        "raw_uleb_vector_bytes": 6144
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 280191,
+          "payload_bytes": 35024,
+          "total_bytes": 35284
+        },
+        "raw_model_bytes": 51961
+      },
+      "input_sha256_prefix": "541e802f3112fb96a823219ffa4eb9102d0c4125e9eed6292f524ab8154a4502",
+      "inventory": {
+        "invalid_utf8_types": 1,
+        "letter_run_type_bytes": 60700,
+        "occurrences": 119930,
+        "types": 3136,
+        "types_over_64_codepoints": 1
+      },
+      "limit_bytes": 1048576,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 3138,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 652055,
+        "occurrence_payload_bytes": 81507,
+        "shared_occurrence_source_bytes": 84652
+      },
+      "source": "omw",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 138022,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 12491,
+        "dawg_minus_frontcoded_raw_bytes": 52251,
+        "dawg_raw_bytes": 195008,
+        "frontcoded_byte_huffman_bytes": 125531,
+        "frontcoded_raw_bytes": 142757
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 132427,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 12491,
+        "dawg_minus_frontcoded_raw_bytes": 52251,
+        "dawg_raw_bytes": 188864,
+        "frontcoded_byte_huffman_bytes": 119936,
+        "frontcoded_raw_bytes": 136613
+      }
+    },
+    {
+      "dawg": {
+        "arcs": 264402,
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 3063506,
+          "payload_bytes": 382939,
+          "total_bytes": 383199
+        },
+        "raw_model_bytes": 844138,
+        "root_path_count": 22428,
+        "states": 245017
+      },
+      "first_use_bridge": {
+        "description": "decoder bridge: first-use-rank -> sorted lexical-rank permutation, shared by both inventory representations",
+        "native_class_bucket_placement": "not priced; requires native plan/frame integration",
+        "packed_static_byte_huffman": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 381702,
+          "payload_bytes": 47713,
+          "total_bytes": 47973
+        },
+        "raw_uleb_vector_bytes": 50772
+      },
+      "frontcoded": {
+        "packed_model": {
+          "header_bytes": 260,
+          "huffman_payload_bits": 2284254,
+          "payload_bytes": 285532,
+          "total_bytes": 285792
+        },
+        "raw_model_bytes": 418625
+      },
+      "input_sha256_prefix": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+      "inventory": {
+        "invalid_utf8_types": 0,
+        "letter_run_type_bytes": 509581,
+        "occurrences": 942411,
+        "types": 22428,
+        "types_over_64_codepoints": 6
+      },
+      "limit_bytes": 8388608,
+      "shared_occurrence_source": {
+        "first_use_id_huffman_header_bytes": 22431,
+        "occurrence_frame_header_bytes": 7,
+        "occurrence_payload_bits": 5777903,
+        "occurrence_payload_bytes": 722238,
+        "shared_occurrence_source_bytes": 744676
+      },
+      "source": "omw",
+      "totals_with_first_use_bridge": {
+        "dawg_byte_huffman_bytes": 1175848,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 97407,
+        "dawg_minus_frontcoded_raw_bytes": 425513,
+        "dawg_raw_bytes": 1639586,
+        "frontcoded_byte_huffman_bytes": 1078441,
+        "frontcoded_raw_bytes": 1214073
+      },
+      "totals_with_same_first_use_id_payload": {
+        "dawg_byte_huffman_bytes": 1127875,
+        "dawg_minus_frontcoded_byte_huffman_bytes": 97407,
+        "dawg_minus_frontcoded_raw_bytes": 425513,
+        "dawg_raw_bytes": 1588814,
+        "frontcoded_byte_huffman_bytes": 1030468,
+        "frontcoded_raw_bytes": 1163301
+      }
+    }
+  ],
+  "status": "diagnostic only; no native frame or complete class/bucket mapping claim"
+}

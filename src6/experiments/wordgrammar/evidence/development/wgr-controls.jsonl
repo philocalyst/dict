@@ -1,0 +1,4 @@
+{"input": "/workspace/scratch/wgr-gcide-debian-054-8m.txt", "raw": 8388608, "bzip3_matched_bytes": 1908398, "bzip3_whole_bytes": 1242698, "encode_ns": 750246776, "decode_ns": 616427643, "decode_mbps": 13.608422813705646}
+{"input": "/workspace/scratch/wgr-omw-ja-20-8m.txt", "raw": 8388608, "bzip3_matched_bytes": 715076, "bzip3_whole_bytes": 350232, "encode_ns": 435854069, "decode_ns": 349734860, "decode_mbps": 23.985621564862022}
+{"input": "/workspace/scratch/wgr-freedict-eng-fra-8m.txt", "raw": 3440543, "bzip3_matched_bytes": 155139, "bzip3_whole_bytes": 101400, "encode_ns": 99990989, "decode_ns": 79235763, "decode_mbps": 43.421592343346276}
+{"input": "/workspace/scratch/frontier-corpora/ud/multilingual/development/text.txt", "raw": 2145015, "bzip3_matched_bytes": 541536, "bzip3_whole_bytes": 444268, "encode_ns": 242031666, "decode_ns": 183094299, "decode_mbps": 11.715356576995333}

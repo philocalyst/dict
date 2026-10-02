@@ -1,0 +1,225 @@
+{
+  "status": "development_only_ideal_entropy_not_frame_bytes",
+  "manifest_path": "/workspace/scratch/books2026-dev/manifest.json",
+  "manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "model_path": "/workspace/dict/src6/experiments/grammar_automaton/lz_ppm_screen.py",
+  "model_sha256": "ca2e5d82d115f323975d93d5afc6d2b58e8d13bb312a09e52686592b47993f20",
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "raw_bytes": 705012,
+        "ppm8_literal_ideal_bytes": 174504.3,
+        "lz_ppm8_ideal_bytes": 174505.25,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 1396034.38,
+          "lz_ppm8": 1396042.01
+        },
+        "literal_bits_removed_by_copies": 0.0,
+        "copy_operand_bits": 0.0,
+        "copy_flag_bits": 0.0,
+        "literal_flag_bits": 7.64,
+        "copy_count": 0,
+        "copied_bytes": 0,
+        "eligible_positions": 12592,
+        "literal_decisions_at_eligible_positions": 12592,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 79,
+          "2": 1268,
+          "4": 27949,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+        "raw_bytes": 1048576,
+        "ppm8_literal_ideal_bytes": 270450.81,
+        "lz_ppm8_ideal_bytes": 270357.3,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 2163606.48,
+          "lz_ppm8": 2162858.39
+        },
+        "literal_bits_removed_by_copies": 1559.26,
+        "copy_operand_bits": 608.0,
+        "copy_flag_bits": 89.83,
+        "literal_flag_bits": 113.34,
+        "copy_count": 16,
+        "copied_bytes": 5769,
+        "eligible_positions": 28012,
+        "literal_decisions_at_eligible_positions": 27996,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 102,
+          "2": 1692,
+          "4": 32768,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "language": "es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "entire_book": false,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+        "raw_bytes": 1048576,
+        "ppm8_literal_ideal_bytes": 276281.27,
+        "lz_ppm8_ideal_bytes": 276282.24,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 2210250.16,
+          "lz_ppm8": 2210257.9
+        },
+        "literal_bits_removed_by_copies": 59.89,
+        "copy_operand_bits": 44.0,
+        "copy_flag_bits": 14.24,
+        "literal_flag_bits": 9.39,
+        "copy_count": 1,
+        "copied_bytes": 51,
+        "eligible_positions": 23790,
+        "literal_decisions_at_eligible_positions": 23789,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 88,
+          "2": 1340,
+          "4": 32541,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "language": "fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "raw_bytes": 716472,
+        "ppm8_literal_ideal_bytes": 191695.81,
+        "lz_ppm8_ideal_bytes": 191696.71,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 1533566.49,
+          "lz_ppm8": 1533573.71
+        },
+        "literal_bits_removed_by_copies": 0.0,
+        "copy_operand_bits": 0.0,
+        "copy_flag_bits": 0.0,
+        "literal_flag_bits": 7.22,
+        "copy_count": 0,
+        "copied_bytes": 0,
+        "eligible_positions": 7049,
+        "literal_decisions_at_eligible_positions": 7049,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 97,
+          "2": 1407,
+          "4": 32398,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "language": "de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "raw_bytes": 126200,
+        "ppm8_literal_ideal_bytes": 36589.47,
+        "lz_ppm8_ideal_bytes": 36590.25,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 292715.75,
+          "lz_ppm8": 292722.01
+        },
+        "literal_bits_removed_by_copies": 0.0,
+        "copy_operand_bits": 0.0,
+        "copy_flag_bits": 0.0,
+        "literal_flag_bits": 6.26,
+        "copy_count": 0,
+        "copied_bytes": 0,
+        "eligible_positions": 1861,
+        "literal_decisions_at_eligible_positions": 1861,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 82,
+          "2": 1079,
+          "4": 16347,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "language": "ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "entire_book": true,
+      "result": {
+        "status": "development_only_ideal_entropy_not_frame_bytes",
+        "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "raw_bytes": 486098,
+        "ppm8_literal_ideal_bytes": 102436.15,
+        "lz_ppm8_ideal_bytes": 102437.13,
+        "candidate_ideal_bits": {
+          "ppm8_literals": 819489.18,
+          "lz_ppm8": 819497.02
+        },
+        "literal_bits_removed_by_copies": 56.14,
+        "copy_operand_bits": 38.0,
+        "copy_flag_bits": 13.52,
+        "literal_flag_bits": 12.46,
+        "copy_count": 1,
+        "copied_bytes": 90,
+        "eligible_positions": 70439,
+        "literal_decisions_at_eligible_positions": 70438,
+        "live_donor_contexts": 65536,
+        "ppm_live_contexts": {
+          "1": 84,
+          "2": 2512,
+          "4": 30035,
+          "8": 32768,
+          "16": 32768,
+          "32": 32768
+        },
+        "assumptions": "Exact previous-16-byte context, 65536 LRU contexts, four latest exact donors/context, copy <=65535 bytes; gamma distance and length, 2-bit donor rank, KT copy/literal flag on every eligible decoded position; PPM8 literals and PPM state updated over copied bytes.",
+        "limits": "Greedy source-aware parse; ideal PPM and flag probabilities, no range rounding/header/CRC/source-length bytes. Every candidate's operands and flags are counted, but no complete decoder exists; this is a falsifier only."
+      }
+    }
+  ]
+}

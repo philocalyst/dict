@@ -1,0 +1,362 @@
+{
+  "datasets": {
+    "omw-ja-dev512": {
+      "candidate_stats": {
+        "joint": {
+          "copied_bytes": 1038582,
+          "decoded_dictionary_bytes": 1460393,
+          "dictionary_events": 509533,
+          "dictionary_stream_bytes": 210058,
+          "lexemes": 1536,
+          "literal_bytes": 421811,
+          "model_bytes": 63453,
+          "root_directory_bytes": 2168,
+          "root_events": 4612,
+          "root_stream_bytes": 3665
+        },
+        "joint_owner": {
+          "copied_bytes": 1038582,
+          "decoded_dictionary_bytes": 1460393,
+          "dictionary_events": 509533,
+          "dictionary_stream_bytes": 210058,
+          "lexemes": 1536,
+          "literal_bytes": 421811,
+          "model_bytes": 63477,
+          "root_directory_bytes": 2168,
+          "root_events": 4612,
+          "root_stream_bytes": 3731
+        },
+        "surface": {
+          "copied_bytes": 1040601,
+          "decoded_dictionary_bytes": 1468075,
+          "dictionary_events": 513054,
+          "dictionary_stream_bytes": 211658,
+          "lexemes": 512,
+          "literal_bytes": 427474,
+          "model_bytes": 63867,
+          "root_directory_bytes": 2168,
+          "root_events": 512,
+          "root_stream_bytes": 2328
+        },
+        "typed": {
+          "copied_bytes": 0,
+          "decoded_dictionary_bytes": 1460393,
+          "dictionary_events": 1462443,
+          "dictionary_stream_bytes": 394798,
+          "lexemes": 1536,
+          "literal_bytes": 1460393,
+          "model_bytes": 90254,
+          "root_directory_bytes": 2168,
+          "root_events": 4612,
+          "root_stream_bytes": 3870
+        }
+      },
+      "screen": {
+        "controls": {
+          "bzip3": {
+            "complete_bytes": 136947,
+            "sha256": "7801992d1fd316fa2271696591abd2b836661d8741c76e4b4af671b0f41e13bd"
+          },
+          "zstd19": {
+            "complete_bytes": 140593,
+            "sha256": "cd97d4873231b402d761298387bb28af5d34d44841ba2c67499718b4d60d22e4"
+          }
+        },
+        "encoder_candidates_paid": 240,
+        "input": "/workspace/scratch/lexical-pages-shape-omw-ja-dev512.flat.raw.lpb",
+        "input_sha256": "1cd8c6fe48a5ee003e81973e3b15541ee90fadd9abbd84e9e2eddea18ad389d4",
+        "pages": 30,
+        "policy": "fixed global complete-frame minimum across all declared representation/order/context candidates; every candidate encoded and admitted; no source-name or language rule",
+        "protocol": "LEXICAL-DIRECT-GRAMMAR-SCREEN/1",
+        "provenance": {
+          "native_evidence": "/workspace/scratch/lexical-constructions-dev-omw-ja-dev512/native.jsonl",
+          "python_screen_sha256": "4f7baf8327f7095bb3526986952c73a2f53d7d5c5bb6c74828d00494f10655af",
+          "scope": "DEV only; original native T and production packet/source oracle; direct context rANS rather than generic backend over templates; all framing/models/seek indices paid",
+          "shared_flat_control_module": "/workspace/dict/src6/experiments/lexical_columns/screen.py",
+          "shared_flat_control_sha256": "b87205ab9129a6ecf0ac124b829c16b257532ef96969bd4a97f89ede80b0bfe7"
+        },
+        "roots": 512,
+        "selected_pages": {
+          "joint": 22,
+          "joint_frequency": 0,
+          "joint_global": 0,
+          "joint_owner": 0,
+          "joint_owner_frequency": 0,
+          "packet_ans": 0,
+          "surface": 8,
+          "typed": 0
+        },
+        "timing": false,
+        "variants": {
+          "adaptive": {
+            "complete_bytes": 282661,
+            "delta_percent": {
+              "bzip3": 106.40174666111707,
+              "zstd19": 101.04912762370817
+            },
+            "sha256": "ea5adcc4eae5097435a0494a87e5d4d68fc6e850b9a7c96240285272d19c3102"
+          },
+          "joint": {
+            "complete_bytes": 283008,
+            "delta_percent": {
+              "bzip3": 106.65512935661243,
+              "zstd19": 101.29593934264153
+            },
+            "sha256": "e57e711761a6b8e3e01176c6ee103956dbb00a5bdebe0ecfec69f494db023758"
+          },
+          "joint_frequency": {
+            "complete_bytes": 283008,
+            "delta_percent": {
+              "bzip3": 106.65512935661243,
+              "zstd19": 101.29593934264153
+            },
+            "sha256": "5836d0fa650f52d37ba4972b2f8c11faaac60d5011a64f8216655a384c02875a"
+          },
+          "joint_global": {
+            "complete_bytes": 419530,
+            "delta_percent": {
+              "bzip3": 206.3447903203429,
+              "zstd19": 198.40034710120702
+            },
+            "sha256": "423f6ade50b743992f44c1304ddd66a4653559276ac5a9e80dede01321f2d6b6"
+          },
+          "joint_owner": {
+            "complete_bytes": 283098,
+            "delta_percent": {
+              "bzip3": 106.72084821135184,
+              "zstd19": 101.35995390951184
+            },
+            "sha256": "035cfe3aa3ddd15fa440bab9d06d373558d33fc02845851a2049f1a7ea2b5f6c"
+          },
+          "joint_owner_frequency": {
+            "complete_bytes": 283098,
+            "delta_percent": {
+              "bzip3": 106.72084821135184,
+              "zstd19": 101.35995390951184
+            },
+            "sha256": "355b994144e14aff770eea85d0f8cc4a0ced34f78d2a98512792d23302ecc04d"
+          },
+          "packet_ans": {
+            "complete_bytes": 497554,
+            "delta_percent": {
+              "bzip3": 263.3186561224415,
+              "zstd19": 253.8967089399899
+            },
+            "sha256": "df77c20d3d13a2e6c47615a18978bb803d61a8115acb4f642c206dd870ca2b63"
+          },
+          "surface": {
+            "complete_bytes": 283685,
+            "delta_percent": {
+              "bzip3": 107.14948118615233,
+              "zstd19": 101.77747114009944
+            },
+            "sha256": "92c02c531f04f1af93ef532ede85ec26db1ac9e1454bb0fb1d6b61788e45d5c1"
+          },
+          "typed": {
+            "complete_bytes": 494754,
+            "delta_percent": {
+              "bzip3": 261.27406953054833,
+              "zstd19": 251.90514463735747
+            },
+            "sha256": "0a55a625c8def9f9938059498738323e5a5cbb6fe9ea8bf628c9d2f141bd1092"
+          }
+        }
+      }
+    },
+    "rich128": {
+      "candidate_stats": {
+        "joint": {
+          "copied_bytes": 56176,
+          "decoded_dictionary_bytes": 82091,
+          "dictionary_events": 41322,
+          "dictionary_stream_bytes": 27344,
+          "lexemes": 2265,
+          "literal_bytes": 25915,
+          "model_bytes": 15352,
+          "root_directory_bytes": 540,
+          "root_events": 77224,
+          "root_stream_bytes": 20990
+        },
+        "joint_owner": {
+          "copied_bytes": 56176,
+          "decoded_dictionary_bytes": 82091,
+          "dictionary_events": 41322,
+          "dictionary_stream_bytes": 27344,
+          "lexemes": 2265,
+          "literal_bytes": 25915,
+          "model_bytes": 15662,
+          "root_directory_bytes": 540,
+          "root_events": 77224,
+          "root_stream_bytes": 17303
+        },
+        "surface": {
+          "copied_bytes": 362795,
+          "decoded_dictionary_bytes": 422538,
+          "dictionary_events": 89519,
+          "dictionary_stream_bytes": 55141,
+          "lexemes": 128,
+          "literal_bytes": 59743,
+          "model_bytes": 11386,
+          "root_directory_bytes": 540,
+          "root_events": 128,
+          "root_stream_bytes": 517
+        },
+        "typed": {
+          "copied_bytes": 0,
+          "decoded_dictionary_bytes": 82091,
+          "dictionary_events": 84412,
+          "dictionary_stream_bytes": 38147,
+          "lexemes": 2265,
+          "literal_bytes": 82091,
+          "model_bytes": 23950,
+          "root_directory_bytes": 540,
+          "root_events": 77224,
+          "root_stream_bytes": 20723
+        }
+      },
+      "screen": {
+        "controls": {
+          "bzip3": {
+            "complete_bytes": 36457,
+            "sha256": "86d8b4ad6e38e986914ffa09ddd2f1d749cf79d0dfb3945580e0444424e275fa"
+          },
+          "zstd19": {
+            "complete_bytes": 34456,
+            "sha256": "5ea757e60068dea93b5a75f656c54c0412ae141bd8f4dbed23840b38a7087213"
+          }
+        },
+        "encoder_candidates_paid": 56,
+        "input": "/workspace/scratch/lexical-pages-shape-rich128.flat.raw.lpb",
+        "input_sha256": "96479afc64f6a211f7b34471a130bf624dce91bb5217b5d6e8b16e2571505c93",
+        "pages": 7,
+        "policy": "fixed global complete-frame minimum across all declared representation/order/context candidates; every candidate encoded and admitted; no source-name or language rule",
+        "protocol": "LEXICAL-DIRECT-GRAMMAR-SCREEN/1",
+        "provenance": {
+          "native_evidence": "/workspace/scratch/lexical-constructions-dev-rich128/native.jsonl",
+          "python_screen_sha256": "4f7baf8327f7095bb3526986952c73a2f53d7d5c5bb6c74828d00494f10655af",
+          "scope": "DEV only; original native T and production packet/source oracle; direct context rANS rather than generic backend over templates; all framing/models/seek indices paid",
+          "shared_flat_control_module": "/workspace/dict/src6/experiments/lexical_columns/screen.py",
+          "shared_flat_control_sha256": "b87205ab9129a6ecf0ac124b829c16b257532ef96969bd4a97f89ede80b0bfe7"
+        },
+        "roots": 128,
+        "selected_pages": {
+          "joint": 0,
+          "joint_frequency": 0,
+          "joint_global": 0,
+          "joint_owner": 3,
+          "joint_owner_frequency": 4,
+          "packet_ans": 0,
+          "surface": 0,
+          "typed": 0
+        },
+        "timing": false,
+        "variants": {
+          "adaptive": {
+            "complete_bytes": 61718,
+            "delta_percent": {
+              "bzip3": 69.28984831445264,
+              "zstd19": 79.12119804968656
+            },
+            "sha256": "35b5f63eb682358d986047f158fdeb4768cbeb1f3a17aeefd65cb73bd2851246"
+          },
+          "joint": {
+            "complete_bytes": 65130,
+            "delta_percent": {
+              "bzip3": 78.64881915681488,
+              "zstd19": 89.02368237752496
+            },
+            "sha256": "a9736ae564a65953e896160a2ce84faab7cb75af69b362876239a01e9a592712"
+          },
+          "joint_frequency": {
+            "complete_bytes": 65102,
+            "delta_percent": {
+              "bzip3": 78.57201634802644,
+              "zstd19": 88.94241931739029
+            },
+            "sha256": "35fd21430ea751ca104ae9a8f0596d26eb7bd62393d9370d48172a9ce7abea15"
+          },
+          "joint_global": {
+            "complete_bytes": 88672,
+            "delta_percent": {
+              "bzip3": 143.2235236031489,
+              "zstd19": 157.34850243789182
+            },
+            "sha256": "216a035c04e61acd927525d8fff91e3719ee1df44bfbb905a01cffb194dbbe44"
+          },
+          "joint_owner": {
+            "complete_bytes": 61753,
+            "delta_percent": {
+              "bzip3": 69.3858518254382,
+              "zstd19": 79.22277687485489
+            },
+            "sha256": "a4e3c2b7dc1ae81648cf332772a233562aec75dc65d0ed4d1bcb98897306b2e6"
+          },
+          "joint_owner_frequency": {
+            "complete_bytes": 61749,
+            "delta_percent": {
+              "bzip3": 69.37487999561127,
+              "zstd19": 79.21116786626423
+            },
+            "sha256": "c4badf0f2e3b3bb1e37aecab31886b14ec6eb082212ee5ceb052f576d3e91873"
+          },
+          "packet_ans": {
+            "complete_bytes": 199957,
+            "delta_percent": {
+              "bzip3": 448.47354417532983,
+              "zstd19": 480.3256326909682
+            },
+            "sha256": "bfd222efafc4c9ef0473c984d183bda022450b07a81b3476491db2f949811c8f"
+          },
+          "surface": {
+            "complete_bytes": 68488,
+            "delta_percent": {
+              "bzip3": 87.8596702965137,
+              "zstd19": 98.76944508938936
+            },
+            "sha256": "ab397abfd9d345e57b02826539edfb15b3cbf427515d4fa1891c1290ed399b45"
+          },
+          "typed": {
+            "complete_bytes": 84264,
+            "delta_percent": {
+              "bzip3": 131.13256713388375,
+              "zstd19": 144.55537497097745
+            },
+            "sha256": "326b38f96e9c217afb53ba5c2d9c2956c99a620b6fadff606f8c650fd6b6e0a6"
+          }
+        }
+      }
+    }
+  },
+  "historical_binary_snapshot": "/workspace/scratch/lexical-constructions-v1-negative/lexical-constructions",
+  "historical_source_snapshot": "/workspace/scratch/lexical-constructions-v1-negative/source",
+  "native_binary_sha256": "6dfd542cd69dabc7e6da6f0da9d2be6caf1e729465ef977f9e5c5561fe0aae31",
+  "protocol": "LEXICAL-DIRECT-GRAMMAR-FIRST-DEV/1",
+  "scope": "DEV only, all actual complete frames, no timing, unfrozen encoder",
+  "snapshot_files": {
+    "/workspace/scratch/lexical-constructions-v1-negative/lexical-constructions": "6dfd542cd69dabc7e6da6f0da9d2be6caf1e729465ef977f9e5c5561fe0aae31",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/README.md": "3577c3a39b84186facc48c5aa312be5659477100cfdffebbad32f5f58c15cb92",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/build.zig": "ee76c7bbfd5efac2d293c2fd2e2048d55aced4baa9d425c80412967c4471e2d4",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/bundle.zig": "cca5464777cf4579bb1a18a5ce0f6a3df1267bf4ac75c5fea033ac7b8820d199",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/construction_admission.zig": "ebd1629e2889aaa976de75ba94e2b7fd5b2f892c2650e11cc0b31871e9eb8ae3",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/construction_model.zig": "b446ba559bb0ce7690773104e74782c670b7c88180fc320e7a766c69850448fc",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/entropy.zig": "cbda0e41c3ff6fd2f81c62c0eb929f08bd16a31b3b1cf4fb225f280f0204f587",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/grammar.zig": "1244f0248155b3f0b2de05b334af0023575666105688af253bd30ff22b21def1",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/runner.zig": "235b20faa3f20c448c2e22cc293cf3d0e7d3784ae2b81e5e771c053bfe9166f7",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/screen.py": "4f7baf8327f7095bb3526986952c73a2f53d7d5c5bb6c74828d00494f10655af",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/surface.zig": "f8f3e6a9958c316ea18d1ffd83084507a1456584814a9071bbcb7d645747c3f3",
+    "/workspace/scratch/lexical-constructions-v1-negative/source/test.zig": "381aacb744cecbcc1dc4b16991168679c2182f282c3d691440d26c8d6875ae95"
+  },
+  "source": {
+    "/workspace/dict/src6/experiments/lexical_constructions/README.md": "3577c3a39b84186facc48c5aa312be5659477100cfdffebbad32f5f58c15cb92",
+    "/workspace/dict/src6/experiments/lexical_constructions/build.zig": "ee76c7bbfd5efac2d293c2fd2e2048d55aced4baa9d425c80412967c4471e2d4",
+    "/workspace/dict/src6/experiments/lexical_constructions/bundle.zig": "cca5464777cf4579bb1a18a5ce0f6a3df1267bf4ac75c5fea033ac7b8820d199",
+    "/workspace/dict/src6/experiments/lexical_constructions/construction_admission.zig": "ebd1629e2889aaa976de75ba94e2b7fd5b2f892c2650e11cc0b31871e9eb8ae3",
+    "/workspace/dict/src6/experiments/lexical_constructions/construction_model.zig": "b446ba559bb0ce7690773104e74782c670b7c88180fc320e7a766c69850448fc",
+    "/workspace/dict/src6/experiments/lexical_constructions/entropy.zig": "cbda0e41c3ff6fd2f81c62c0eb929f08bd16a31b3b1cf4fb225f280f0204f587",
+    "/workspace/dict/src6/experiments/lexical_constructions/grammar.zig": "1244f0248155b3f0b2de05b334af0023575666105688af253bd30ff22b21def1",
+    "/workspace/dict/src6/experiments/lexical_constructions/runner.zig": "235b20faa3f20c448c2e22cc293cf3d0e7d3784ae2b81e5e771c053bfe9166f7",
+    "/workspace/dict/src6/experiments/lexical_constructions/screen.py": "4f7baf8327f7095bb3526986952c73a2f53d7d5c5bb6c74828d00494f10655af",
+    "/workspace/dict/src6/experiments/lexical_constructions/surface.zig": "f8f3e6a9958c316ea18d1ffd83084507a1456584814a9071bbcb7d645747c3f3",
+    "/workspace/dict/src6/experiments/lexical_constructions/test.zig": "381aacb744cecbcc1dc4b16991168679c2182f282c3d691440d26c8d6875ae95"
+  }
+}

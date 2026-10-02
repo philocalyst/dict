@@ -1,0 +1,49 @@
+{
+  "backend_class": "control",
+  "decisive_test": "Every registered complete book decodes exactly in a fresh process.",
+  "decode_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+    "decode",
+    "bzip2",
+    "/usr/bin/bzip2",
+    "{frame}",
+    "{output}"
+  ],
+  "dependencies": {
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "/usr/bin/bzip2": "ef7b10842fa6846421d7219c7733cd6413c199dad422027286bd3d54cfac6f15",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0",
+    "/usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4": "c630f057efedc12f848710d71f40283895591e5b4608539f387895c64e0553da",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+    "/usr/lib/x86_64-linux-gnu/libdl.so.2": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libpthread.so.0": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500",
+    "/usr/lib/x86_64-linux-gnu/librt.so.1": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b",
+    "/usr/lib/x86_64-linux-gnu/libutil.so.1": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py": "e3320d9f29a92fa54e1962296acaffa7c850729556591048edd691cdd4c6b51f"
+  },
+  "encode_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+    "encode",
+    "bzip2",
+    "/usr/bin/bzip2",
+    "{input}",
+    "{frame}"
+  ],
+  "hypothesis": "Reference whole-file compression on the identical exact source.",
+  "id": "bzip2-whole-native",
+  "limits": {
+    "max_frame_bytes": 67108864,
+    "max_raw_bytes": 33554432,
+    "timeout_seconds": 600
+  },
+  "mechanism": "ordinary complete native archive, no comparison wrapper",
+  "model_accounting": {
+    "data_dependencies": [],
+    "embedded_learned_bytes": 0,
+    "kind": "universal_code"
+  },
+  "parent": "standard-controls"
+}

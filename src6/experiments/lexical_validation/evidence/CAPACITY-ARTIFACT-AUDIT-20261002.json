@@ -1,0 +1,282 @@
+{
+  "all_source_records_and_original_groups": true,
+  "all_ten_TR_first_fixed_frames_identical": true,
+  "all_twelve_first_fixed_controls_identical": true,
+  "direct_typed_headword_projections": 454993,
+  "files": {
+    "/workspace/dict/src6/experiments/lexical_validation/evidence/ROOT-CAPACITY-REGISTRATION-20261002.json": {
+      "bytes": 1337,
+      "sha256": "ec4aab670f573405f1725d6aab73999d45e81236011a3ecdae264845506ca0ca"
+    },
+    "/workspace/dict/src6/experiments/lexical_validation/evidence/SOURCE-CHECKPOINT-20261001.json": {
+      "bytes": 237421,
+      "sha256": "064e8b9d65c249dcf0d424bcd8a2b98fd0e3fa9ae483dc07e3ce5ef6fa0e3fbf"
+    },
+    "/workspace/dict/src6/experiments/lexical_validation/run_capacity.py": {
+      "bytes": 12183,
+      "sha256": "448382da338be9809dfc0826227311add266ec311c9f88a80c9bcea7eabc62e0"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-capture/lexical-shared-constructions": {
+      "bytes": 6929184,
+      "sha256": "336ebc07506450e2ee2b03c217b3da06dfc00d518c1c2a88142c586bba2d28db"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/complete_size-adaptive.lgb": {
+      "bytes": 2097348,
+      "sha256": "be2a8851e20f5f9b41d14f75b1d9aa3e15501e33125e83c3f71c48fb99b9d982"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/flat.matched_pages.bzip3.lpb": {
+      "bytes": 1813579,
+      "sha256": "1713ea63f0b8659d74ebc652bc61eeb5dfa21568d81b657fa98bea567d7a416b"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/flat.matched_pages.zstd19.lpb": {
+      "bytes": 1858632,
+      "sha256": "cb29bd4a991f335795225918c1574b07f6c6ce19b75d89129062b2d35a86dd4c"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/flat.whole_flat.bzip3.lgc": {
+      "bytes": 1079165,
+      "sha256": "43274f9ed1caf8f42c8f53156fee72350abf922f559cf03ce5e842a32e98199e"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/flat.whole_flat.zstd19.lgc": {
+      "bytes": 1352413,
+      "sha256": "003c63d0a17bfa7508eef0dd54a0c4a55a671f8dfb005df2f4caaf8e5bb61b8f"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_causal_joint.lgb": {
+      "bytes": 2581803,
+      "sha256": "9827cf32bbc2305156bd28fdf4ebd52213b9767d278d675a5ef1cde5a317c87a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_causal_joint_frequency.lgb": {
+      "bytes": 2581396,
+      "sha256": "a2666436b4d93d3c2226c1f8786ec31e497cf495cd15fd4b54f75840639307b6"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_causal_owner.lgb": {
+      "bytes": 2581806,
+      "sha256": "cc352d29828e609b07281fae699ee5175960671fd714e1385cd582a23977a41f"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_causal_owner_frequency.lgb": {
+      "bytes": 2581399,
+      "sha256": "75429cfc66ec44aa49abc4a59ae5d36f3692273d50b6c772917107201378ca3a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_causal_surface.lgb": {
+      "bytes": 2097348,
+      "sha256": "be2a8851e20f5f9b41d14f75b1d9aa3e15501e33125e83c3f71c48fb99b9d982"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_joint.lgb": {
+      "bytes": 2491063,
+      "sha256": "8e0ec8377714728d6626432e127c05e94cfd91f5b140784aaac22725feb5dcdc"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_owner.lgb": {
+      "bytes": 2491066,
+      "sha256": "5a85c3dad030883ed0770e785381b46587409363c572fcfb38982d8b54dc63a5"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_packet_ans.lgb": {
+      "bytes": 4925998,
+      "sha256": "5f9d04bd816f508939e6f4b53d9bcc81970f3d2a6abd084de7a9d6e063b81f8b"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_surface.lgb": {
+      "bytes": 2320370,
+      "sha256": "746dc858f61465b09ed4c3a78e45fd4a98f81e0b255b3b849e52ffd3da04a798"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/global_typed.lgb": {
+      "bytes": 4993294,
+      "sha256": "860089fad93ad7c2ddb84c0441fb822f3c88c6f8fda322789177e4e01dbe6be5"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/native-status.json": {
+      "bytes": 551,
+      "sha256": "321df2223e076704751c6791a8ee5b3f93b8f37b5d0884951de8dc26780e97a1"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/native.jsonl": {
+      "bytes": 9804,
+      "sha256": "e0c34f101bbad1952e8a871ac7369c8d95c1bde624c5a313b2e6299a29391966"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/native.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/ara-eng/typed_access-adaptive.lgb": {
+      "bytes": 2491063,
+      "sha256": "8e0ec8377714728d6626432e127c05e94cfd91f5b140784aaac22725feb5dcdc"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/complete_size-adaptive.lgb": {
+      "bytes": 915715,
+      "sha256": "ea1e7f01bf3262d57df5cbd281356509b621c6637014ca414e9b86b4a7dcfe38"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/flat.matched_pages.bzip3.lpb": {
+      "bytes": 941628,
+      "sha256": "fd8eabfdd27ffdbc56e9637f8b34c999468f575a89083849ed1e04a14a49fcbd"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/flat.matched_pages.zstd19.lpb": {
+      "bytes": 975665,
+      "sha256": "a4a43f1ebe5979aafbce4599b64d6c1ccb566ea66f4ace7610a3f8066e5321a2"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/flat.whole_flat.bzip3.lgc": {
+      "bytes": 510812,
+      "sha256": "a53703781ad914ba39e7c62670ceae7083193d586500c9b5c93edc892d3f71a0"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/flat.whole_flat.zstd19.lgc": {
+      "bytes": 668407,
+      "sha256": "241b48f5aa3aa04935fe5bba857c89d0721caa592280e340b5db361168cb691b"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_causal_joint.lgb": {
+      "bytes": 972326,
+      "sha256": "6d5fba30c334f4200db972c275b7f9cd1ec8affe26e566a984a9a66c6b2b9e67"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_causal_joint_frequency.lgb": {
+      "bytes": 972960,
+      "sha256": "8a731dfe1cc35666452ae887b941ae6d07f244b9d054023ed183356c78c69339"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_causal_owner.lgb": {
+      "bytes": 972331,
+      "sha256": "9129111cee4288c762e635ded48816eac6aa0d9a7ff9f2142b9ee0cc08d7f14b"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_causal_owner_frequency.lgb": {
+      "bytes": 972965,
+      "sha256": "3fb248db748bb4899fc7c4c90e99e4dedb2ed707e42395d741570a545993116a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_causal_surface.lgb": {
+      "bytes": 915715,
+      "sha256": "ea1e7f01bf3262d57df5cbd281356509b621c6637014ca414e9b86b4a7dcfe38"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_joint.lgb": {
+      "bytes": 1007494,
+      "sha256": "f2fdc00dabecd4c84ea7126b72767212aed031422000534cbfc46ec96a593860"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_owner.lgb": {
+      "bytes": 1007499,
+      "sha256": "7ec417f5ffa7e60c741ddb24f7cb25cfc7d29cf58693f17343b679c244ad02c9"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_packet_ans.lgb": {
+      "bytes": 2238691,
+      "sha256": "aec2277c6e344eadede382ccfc91e479eac6b40cfe50cb97d08d8d6ac8831abc"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_surface.lgb": {
+      "bytes": 986201,
+      "sha256": "5565cc511753b58d00e05aa6c89dadba327ff4fe74449314edbb16fed3ae0370"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/global_typed.lgb": {
+      "bytes": 2254190,
+      "sha256": "17f2f7c997485695ade67dd9b01fb2f2540b5834b6a9335b33890478e7e0aa4a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/native-status.json": {
+      "bytes": 551,
+      "sha256": "4b41753561014de7561b35f5d3be065e3cf3c4c92a1e9e2fe986314173065f1e"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/native.jsonl": {
+      "bytes": 9718,
+      "sha256": "56df67b7328236e99c95936616fbf18540e0b31581e4a8d415ec5bc994483be3"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/native.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/jpn-eng/typed_access-adaptive.lgb": {
+      "bytes": 972326,
+      "sha256": "6d5fba30c334f4200db972c275b7f9cd1ec8affe26e566a984a9a66c6b2b9e67"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/complete_size-adaptive.lgb": {
+      "bytes": 40960,
+      "sha256": "10526500b88902a2c569eb55b0b4eb5ee9c04cf4adef8e3a766a41347a5b6387"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/flat.matched_pages.bzip3.lpb": {
+      "bytes": 31195,
+      "sha256": "20ea2162affccd605d34b83990007d4c28280ef7d9d642ac443a67fd91883274"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/flat.matched_pages.zstd19.lpb": {
+      "bytes": 31820,
+      "sha256": "4eb4a837d3f9f267bd1190b0586375c8faae0eb016a4f531a3d11a80412e53f1"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/flat.whole_flat.bzip3.lgc": {
+      "bytes": 21626,
+      "sha256": "a0e616177a2b978b587b16fae12e27ea3d6a2cdadce161868fcfe8a99463835a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/flat.whole_flat.zstd19.lgc": {
+      "bytes": 25602,
+      "sha256": "270fa6ed4724a446744c85c1318ef8d91c0b2fd66f71449d2cdd26790cc35036"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_causal_joint.lgb": {
+      "bytes": 46926,
+      "sha256": "79f4b586150b50ee198a856ff054588f3f6cf32a6da4ccffc3160c821df3080c"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_causal_joint_frequency.lgb": {
+      "bytes": 46926,
+      "sha256": "da95bf9eeba576e182bd16157cb04628816a501a9fd9e23e5a12890ae2492b19"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_causal_owner.lgb": {
+      "bytes": 46929,
+      "sha256": "c5db6377afd24d2f4c05104b56b334018de78d25c3585c71887c7e541606e7f8"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_causal_owner_frequency.lgb": {
+      "bytes": 46929,
+      "sha256": "c8e0b1b6c5277284184b8cb4191ba94aa31c006bf3b515e2e5188fa80541eebc"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_causal_surface.lgb": {
+      "bytes": 40960,
+      "sha256": "10526500b88902a2c569eb55b0b4eb5ee9c04cf4adef8e3a766a41347a5b6387"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_joint.lgb": {
+      "bytes": 43322,
+      "sha256": "1bc03f52d91a70bcc6d776293392bfee829d95d4021d621cff0779135f0d018a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_owner.lgb": {
+      "bytes": 43325,
+      "sha256": "75d2db41a890b89b4bca83e82ec6a277a612a13250a1f1562b21e5befd935526"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_packet_ans.lgb": {
+      "bytes": 90230,
+      "sha256": "0de51468e7b19b7a3c3fa352a281add8e2fd7cdd540fa8f7e699447f4029e105"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_surface.lgb": {
+      "bytes": 41027,
+      "sha256": "a687469ba6191a96b2a7f2a013a4d70e2864f9c69d82bec13a45f12c88f32e7f"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/global_typed.lgb": {
+      "bytes": 90050,
+      "sha256": "df92a007657f083d80eba3a2111b026ca7bd896a12ac35810e7c0e0e7b43c23e"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/native-status.json": {
+      "bytes": 551,
+      "sha256": "6f8b3571f767d81cf58c3daa6f00a2804b3bdc3736f160b1e1ffa8f555debced"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/native.jsonl": {
+      "bytes": 9489,
+      "sha256": "34c7a38e159408273a2a75e301d28246df69a57f2b9235802c16adb91723b102"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/native.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/scratch/lexical-constructions-v2-capacity-validation-20261002/tur-eng/typed_access-adaptive.lgb": {
+      "bytes": 43322,
+      "sha256": "1bc03f52d91a70bcc6d776293392bfee829d95d4021d621cff0779135f0d018a"
+    },
+    "/workspace/scratch/lexical-constructions-v2-validation/ara-eng/native.flat.raw.lpb": {
+      "bytes": 23428962,
+      "sha256": "dc649dfb56351f63b8da64337cd6476098ceff6c1b54920ae558eebe5f3f8756"
+    },
+    "/workspace/scratch/lexical-constructions-v2-validation/jpn-eng/native.flat.raw.lpb": {
+      "bytes": 8378299,
+      "sha256": "5779acc31e4f8defbcaa5de68feabc1bf1cc79d78496acb31984eb5b1cac91e9"
+    },
+    "/workspace/scratch/lexical-constructions-v2-validation/tur-eng/native.flat.raw.lpb": {
+      "bytes": 452514,
+      "sha256": "4cfb9646a6b4189a599ef186f75cdb731bf2fdb4d25838dbc255ffef291a5973"
+    },
+    "src6/experiments/lexical_validation/evidence/CAPACITY-FREEZE-BOUNDED-20261002.json": {
+      "bytes": 86795,
+      "sha256": "22db34ae729fb4f5ab4e824b25d04123f88c1447acad0e21c7cad12d2d04ff04"
+    }
+  },
+  "full_native/source/root/group_observations": 649990,
+  "no_timeouts": true,
+  "peak_RSS": "not measured; fixed4GiB virtual address-space cap is not a peak RSS measurement",
+  "protocol": "LTCV2-CAPACITY-RESULT-ARTIFACT-AUDIT/1",
+  "published_frames": 48,
+  "registration": "/workspace/dict/src6/experiments/lexical_validation/evidence/ROOT-CAPACITY-REGISTRATION-20261002.json",
+  "registration_sha256": "ec4aab670f573405f1725d6aab73999d45e81236011a3ecdae264845506ca0ca",
+  "result": "/workspace/dict/src6/experiments/lexical_validation/evidence/CAPACITY-RESULT-20261002.json",
+  "result_sha256": "5946056f3314bf972c45bcb769a6f4786b56296394dc64d1724e9ccb067900dd",
+  "source": "/workspace/dict/src6/experiments/lexical_validation/capture_capacity_result.py",
+  "source_groups": 991,
+  "source_roots": 64999,
+  "source_sha256": "0affa0eb5bd03708bc95f5b9f6aa1901220012581b76a1bc1e614d3e10674dde",
+  "timing": false
+}

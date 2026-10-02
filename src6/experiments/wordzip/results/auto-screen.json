@@ -1,0 +1,30 @@
+[
+  {
+    "input": "src6/experiments/wordzip/development/gcide-debian-054.raw",
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":223163,\"codec_us\":4795785,\"codec_ns\":4795785403,\"peakrss_kib\":18488}\n",
+    "stderr": "rules=0 grammar=13 entropy=177 blocks=16\ncapacity_trial=0 complete_bytes=235805\nrules=491 grammar=1622 entropy=467 blocks=16\ncapacity_trial=512 complete_bytes=231495\nrules=1986 grammar=6339 entropy=1157 blocks=16\ncapacity_trial=2048 complete_bytes=224826\nrules=5877 grammar=20028 entropy=2702 blocks=16\ncapacity_trial=8192 complete_bytes=223163\nrules=5877 grammar=20028 entropy=2702 blocks=16\ncapacity_trial=16384 complete_bytes=223163\ncapacity_selected=8192 complete_bytes=223163\n",
+    "decode": "{\"input_bytes\":223163,\"output_bytes\":1048576,\"codec_us\":26994,\"codec_ns\":26994837,\"peakrss_kib\":10240}\n",
+    "binary_sha256": "e4bac599fecab419a19ee7978d28230bbffa58a279fed9e48877f01a4ee1762e"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/multilingual.raw",
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":267217,\"codec_us\":4335624,\"codec_ns\":4335624338,\"peakrss_kib\":18752}\n",
+    "stderr": "rules=0 grammar=13 entropy=226 blocks=16\ncapacity_trial=0 complete_bytes=268492\nrules=511 grammar=1605 entropy=499 blocks=16\ncapacity_trial=512 complete_bytes=268856\nrules=2040 grammar=6664 entropy=1170 blocks=16\ncapacity_trial=2048 complete_bytes=267217\nrules=6829 grammar=24250 entropy=2879 blocks=16\ncapacity_trial=8192 complete_bytes=269191\nrules=6829 grammar=24250 entropy=2879 blocks=16\ncapacity_trial=16384 complete_bytes=269191\ncapacity_selected=2048 complete_bytes=267217\n",
+    "decode": "{\"input_bytes\":267217,\"output_bytes\":1048576,\"codec_us\":19738,\"codec_ns\":19738209,\"peakrss_kib\":12288}\n",
+    "binary_sha256": "e4bac599fecab419a19ee7978d28230bbffa58a279fed9e48877f01a4ee1762e"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/freedict-eng-fra.raw",
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":40530,\"codec_us\":1786278,\"codec_ns\":1786278652,\"peakrss_kib\":12292}\n",
+    "stderr": "rules=0 grammar=13 entropy=199 blocks=16\ncapacity_trial=0 complete_bytes=44346\nrules=404 grammar=1471 entropy=442 blocks=16\ncapacity_trial=512 complete_bytes=40530\nrules=1496 grammar=5659 entropy=783 blocks=16\ncapacity_trial=2048 complete_bytes=43563\nrules=1502 grammar=5715 entropy=786 blocks=16\ncapacity_trial=8192 complete_bytes=43591\nrules=1502 grammar=5715 entropy=786 blocks=16\ncapacity_trial=16384 complete_bytes=43591\ncapacity_selected=512 complete_bytes=40530\n",
+    "decode": "{\"input_bytes\":40530,\"output_bytes\":1048576,\"codec_us\":5734,\"codec_ns\":5734329,\"peakrss_kib\":12292}\n",
+    "binary_sha256": "e4bac599fecab419a19ee7978d28230bbffa58a279fed9e48877f01a4ee1762e"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/omw-ja-20.raw",
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":77438,\"codec_us\":2174966,\"codec_ns\":2174966084,\"peakrss_kib\":16296}\n",
+    "stderr": "rules=0 grammar=13 entropy=214 blocks=16\ncapacity_trial=0 complete_bytes=97417\nrules=396 grammar=1602 entropy=386 blocks=16\ncapacity_trial=512 complete_bytes=90669\nrules=1653 grammar=6344 entropy=744 blocks=16\ncapacity_trial=2048 complete_bytes=87590\nrules=4427 grammar=20215 entropy=2034 blocks=16\ncapacity_trial=8192 complete_bytes=77438\nrules=4427 grammar=20215 entropy=2034 blocks=16\ncapacity_trial=16384 complete_bytes=77438\ncapacity_selected=8192 complete_bytes=77438\n",
+    "decode": "{\"input_bytes\":77438,\"output_bytes\":1048576,\"codec_us\":9642,\"codec_ns\":9642049,\"peakrss_kib\":12300}\n",
+    "binary_sha256": "e4bac599fecab419a19ee7978d28230bbffa58a279fed9e48877f01a4ee1762e"
+  }
+]

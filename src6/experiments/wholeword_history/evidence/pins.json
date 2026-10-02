@@ -1,0 +1,15 @@
+{
+  "source_manifest": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "control_manifest": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "files": {
+    "m_whole.zig": "78e085be71ecb77a1387aff13293757305e4bf088ec5af694b1ee22f7ba08567",
+    "whole_reader.zig": "90a5f5226c6524269d4ffeed7e984c33a73582b928c38b9ab092e7a94da970d6",
+    "budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+    "learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+    "lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+    "m_whole": "24641411902375399cd533ee4c56ccf780dca08a35dd46c38921f062932e0fac",
+    "whole_reader": "38c431d0d4baab8d59ae269eb44aec4e5b07cebc4b7f85b2b1aaf823d739dc5d",
+    "grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+    "m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90"
+  }
+}

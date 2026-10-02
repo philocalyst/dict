@@ -1,0 +1,30 @@
+{
+  "build_argv": [
+    "/home/agent/.local/bin/zig",
+    "build",
+    "--build-file",
+    "src6/experiments/lexical_columns/timing_build.zig",
+    "-Doptimize=ReleaseSafe",
+    "--prefix",
+    "/workspace/scratch/lexical-columns-order-install"
+  ],
+  "changes": "independent client clone: execution-order CLI/branch, untimed pair exercise and order reporting only; same immutable encoder, reader, native oracle/setup, model, format and C++ inverse",
+  "files": {
+    "/workspace/dict/src6/experiments/lexical_columns/timing_access.zig": "3103e7fefd26865cd04ca15e7d80a5d5a8f2f60c3d543fd7771393cc71321232",
+    "/workspace/dict/src6/experiments/lexical_columns/timing_build.zig": "4fff3bb871b706b18c03cfd087bf93bb95504a9662f003cc135d612f24b608f2",
+    "/workspace/dict/src6/experiments/lexical_columns/timing_stage.py": "d21e3b12d503b377706345468f9531e83d89e4ee539b55602ebca745dfb1ea18",
+    "/workspace/scratch/lexical-columns-order-install/bin/lexical-register-order-access": "4b76a0953f1dba368b13a417b050c8c3dbe1e8b390ae6a42e597bcfec518a298",
+    "/workspace/scratch/lexical-columns-order-parity/baseline-first.jsonl": "e18ff802eaaffab78edfe83c30674b493389de40ba13f2926534ae8e21e9b141",
+    "/workspace/scratch/lexical-columns-order-parity/construction-first.jsonl": "b42a6a68a08483f618b03836c8e67d332cb95d9895d65da7317dd93f8e681892",
+    "/workspace/scratch/lexical-columns-order-parity/original.jsonl": "25f3445322de957f4f9c1a1af8f5444b1294f86b0cf7bfbfef172e1dcb624804",
+    "/workspace/scratch/lexical-columns-order-parity/parent-generation.jsonl": "716206999f5680ac1385db1f4e8a1d30ad78474e6d5a85bf4528e8534e5fb4aa",
+    "/workspace/scratch/lexical-columns-order-parity/rich4.flat.raw.lpb": "ce3f65ae98644998b3088e7a3248bd43e4296254cf1b4744cad627416a820564",
+    "/workspace/scratch/lexical-columns-order-parity/screen.jsonl": "5aa56ab48eba969c4d3f2fbdb62cac8028bafc6670dd4b58e28aaafb36cc69bc"
+  },
+  "original_client": "/workspace/scratch/lexical-columns-install/bin/lexical-register-access",
+  "original_client_sha256": "b82ff80d4bcce35e6df9d076270e7ea1e5a3c5a338e411200f8430dc5626c6de",
+  "parity": "original/new AB/new BA full native/source/canonical/direct-projection setup gates exact on frozen rich4; six untimed pair observations identical AB/BA; zero benchmark clocks",
+  "protocol": "LEXICAL-CONSTRUCTIONS-ORDER-INSTRUMENTATION/1",
+  "source_freeze": "/workspace/scratch/lexical-columns-freeze-manifest.json",
+  "source_freeze_sha256": "13752e100ee623dacd4e2e9788bf1faf26caca0289c0c67058c6bb8f946044dc"
+}

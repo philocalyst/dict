@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "purpose": "New-treebank and new-lexicon holdouts reserved for frozen deep structural compression experiments",
+  "caveat": "Seven translations of 1000 aligned PUD sentences, not seven independent text samples",
+  "sources": [
+    {
+      "language": "ja",
+      "repository": "UniversalDependencies/UD_Japanese-PUD",
+      "commit": "1008051ad13cff4a06d0a1cc2cba25c0764c8d5f",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Japanese-PUD/ja_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Japanese-PUD/1008051ad13cff4a06d0a1cc2cba25c0764c8d5f/ja_pud-ud-test.conllu",
+      "bytes": 6995077,
+      "sha256": "bcf4ecf12eefa0365a2e5c2b6540cc682b43fe429ad36cc95a6a3cec0f60d41b"
+    },
+    {
+      "language": "ja",
+      "repository": "UniversalDependencies/UD_Japanese-PUD",
+      "commit": "1008051ad13cff4a06d0a1cc2cba25c0764c8d5f",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Japanese-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Japanese-PUD/1008051ad13cff4a06d0a1cc2cba25c0764c8d5f/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "zh",
+      "repository": "UniversalDependencies/UD_Chinese-PUD",
+      "commit": "7b54411fb8cec041c4f8794413e08878605792f3",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Chinese-PUD/zh_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-PUD/7b54411fb8cec041c4f8794413e08878605792f3/zh_pud-ud-test.conllu",
+      "bytes": 2199911,
+      "sha256": "e12582af2e2bbc2e27155ca7dc12b6fc4a037dbc716e1f805d67e34ffb2596b3"
+    },
+    {
+      "language": "zh",
+      "repository": "UniversalDependencies/UD_Chinese-PUD",
+      "commit": "7b54411fb8cec041c4f8794413e08878605792f3",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Chinese-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-PUD/7b54411fb8cec041c4f8794413e08878605792f3/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "ar",
+      "repository": "UniversalDependencies/UD_Arabic-PUD",
+      "commit": "2865170299b7bc25ae742fd5a0c62ca62022170c",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Arabic-PUD/ar_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Arabic-PUD/2865170299b7bc25ae742fd5a0c62ca62022170c/ar_pud-ud-test.conllu",
+      "bytes": 2401101,
+      "sha256": "befc6dd18b5b8803644ae8208e2e5f52c0957a36437627c05110914ec42281a3"
+    },
+    {
+      "language": "ar",
+      "repository": "UniversalDependencies/UD_Arabic-PUD",
+      "commit": "2865170299b7bc25ae742fd5a0c62ca62022170c",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Arabic-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Arabic-PUD/2865170299b7bc25ae742fd5a0c62ca62022170c/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "tr",
+      "repository": "UniversalDependencies/UD_Turkish-PUD",
+      "commit": "4817a5e719906e25662fd6ea8d937b4992c6897d",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Turkish-PUD/tr_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Turkish-PUD/4817a5e719906e25662fd6ea8d937b4992c6897d/tr_pud-ud-test.conllu",
+      "bytes": 1382437,
+      "sha256": "7c1b6fe01662a7617758fbecdda6af6fc3914ace46b1809d6514af0a1c1df88c"
+    },
+    {
+      "language": "tr",
+      "repository": "UniversalDependencies/UD_Turkish-PUD",
+      "commit": "4817a5e719906e25662fd6ea8d937b4992c6897d",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Turkish-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Turkish-PUD/4817a5e719906e25662fd6ea8d937b4992c6897d/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "fi",
+      "repository": "UniversalDependencies/UD_Finnish-PUD",
+      "commit": "10ed81b8dea32128887bf6c6c4d1ed262b79cbd9",
+      "license": "CC BY-SA 4.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Finnish-PUD/fi_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Finnish-PUD/10ed81b8dea32128887bf6c6c4d1ed262b79cbd9/fi_pud-ud-test.conllu",
+      "bytes": 1435997,
+      "sha256": "6a74b9b3d2a79d456eaf358511f60bb80862a2482c559a8e6f933ee59bd313dd"
+    },
+    {
+      "language": "fi",
+      "repository": "UniversalDependencies/UD_Finnish-PUD",
+      "commit": "10ed81b8dea32128887bf6c6c4d1ed262b79cbd9",
+      "license": "CC BY-SA 4.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Finnish-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Finnish-PUD/10ed81b8dea32128887bf6c6c4d1ed262b79cbd9/LICENSE.txt",
+      "bytes": 202,
+      "sha256": "899b1804a12ebc090b96339614eede1b64b686721b650a71430b55b5235f7f79"
+    },
+    {
+      "language": "ko",
+      "repository": "UniversalDependencies/UD_Korean-PUD",
+      "commit": "e942f9c5e9351f37bcb8f202bb9df70f78c60d35",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Korean-PUD/ko_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Korean-PUD/e942f9c5e9351f37bcb8f202bb9df70f78c60d35/ko_pud-ud-test.conllu",
+      "bytes": 1936429,
+      "sha256": "55f9c8d465400e070664c5319091d31ce35a16ec220b0bebc5e3c9b12f530948"
+    },
+    {
+      "language": "ko",
+      "repository": "UniversalDependencies/UD_Korean-PUD",
+      "commit": "e942f9c5e9351f37bcb8f202bb9df70f78c60d35",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Korean-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Korean-PUD/e942f9c5e9351f37bcb8f202bb9df70f78c60d35/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "hi",
+      "repository": "UniversalDependencies/UD_Hindi-PUD",
+      "commit": "66d03982c23dd3049b7f7d11964247794411079c",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Hindi-PUD/hi_pud-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Hindi-PUD/66d03982c23dd3049b7f7d11964247794411079c/hi_pud-ud-test.conllu",
+      "bytes": 3043589,
+      "sha256": "3562b7f49420912acad70a45a483f683dcb44624ea92f82e21b29f2ee41a9dff"
+    },
+    {
+      "language": "hi",
+      "repository": "UniversalDependencies/UD_Hindi-PUD",
+      "commit": "66d03982c23dd3049b7f7d11964247794411079c",
+      "license": "CC BY-SA 3.0",
+      "kind": "ud-pud",
+      "relative_path": "sources/UD_Hindi-PUD/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Hindi-PUD/66d03982c23dd3049b7f7d11964247794411079c/LICENSE.txt",
+      "bytes": 19556,
+      "sha256": "b278eb53fe50b8bb7fa0d90fb8536c35fdcaa80f9d63812cb51db539555d2a89"
+    },
+    {
+      "language": "tr",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "GPL-2.0; retained COPYING",
+      "kind": "freedict",
+      "pair": "tur-eng",
+      "relative_path": "sources/freedict/tur-eng/tur-eng.tei",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/tur-eng/tur-eng.tei",
+      "bytes": 317831,
+      "sha256": "a9cc5988fe83bdb25721696cd321b1fe70d72b7cfa472318419608050338e6f1"
+    },
+    {
+      "language": "tr",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "GPL-2.0; retained COPYING",
+      "kind": "freedict",
+      "pair": "tur-eng",
+      "relative_path": "sources/freedict/tur-eng/COPYING",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/tur-eng/COPYING",
+      "bytes": 17982,
+      "sha256": "91df39d1816bfb17a4dda2d3d2c83b1f6f2d38d53e53e41e8f97ad5ac46a0cad"
+    },
+    {
+      "language": "ar",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "Arabeyes GPL; retained COPYING",
+      "kind": "freedict",
+      "pair": "ara-eng",
+      "relative_path": "sources/freedict/ara-eng/ara-eng.tei",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/ara-eng/ara-eng.tei",
+      "bytes": 15481504,
+      "sha256": "83215918918264ccbe550ad170f8832dcc11a11a3c80010b1d7e2968f770f44b"
+    },
+    {
+      "language": "ar",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "Arabeyes GPL; retained COPYING",
+      "kind": "freedict",
+      "pair": "ara-eng",
+      "relative_path": "sources/freedict/ara-eng/COPYING",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/ara-eng/COPYING",
+      "bytes": 18487,
+      "sha256": "5aab25807293519364ffc97cf092cd6bd5bcc8aac512009637f2c335a80c5108"
+    },
+    {
+      "language": "ja",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "CC BY-SA 3.0; retained COPYING",
+      "kind": "freedict",
+      "pair": "jpn-eng",
+      "relative_path": "sources/freedict/jpn-eng/jpn-eng.tei",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/jpn-eng/jpn-eng.tei",
+      "bytes": 96872578,
+      "sha256": "5a85395036dc0b271fd0709af6ead2f2b72002ec5a73b632670e0451e17a9dfc"
+    },
+    {
+      "language": "ja",
+      "repository": "freedict/fd-dictionaries",
+      "commit": "5bdceeac8d0dba3298c1bebe734f60d54dad30f7",
+      "license": "CC BY-SA 3.0; retained COPYING",
+      "kind": "freedict",
+      "pair": "jpn-eng",
+      "relative_path": "sources/freedict/jpn-eng/COPYING",
+      "url": "https://raw.githubusercontent.com/freedict/fd-dictionaries/5bdceeac8d0dba3298c1bebe734f60d54dad30f7/jpn-eng/COPYING",
+      "bytes": 21205,
+      "sha256": "2b1a255b55fc594584814764d100e3f4193b20cec40fb4154471762608ab37a5"
+    }
+  ]
+}

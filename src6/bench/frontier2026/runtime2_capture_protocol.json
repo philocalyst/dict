@@ -1,0 +1,47 @@
+{
+  "schema": "FRONTIER2026-RUNTIME2-CAPTURE/1",
+  "status": "frozen; capture launch awaits global quiet-window release",
+  "baseline_driver": "src6/bench/frontier2026/access_capture.py",
+  "wrapper": "src6/bench/frontier2026/access_capture_runtime2.py",
+  "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+  "backend_manifest": "/workspace/scratch/wgp6/frozen-backend-runtime2/manifest.json",
+  "backend_manifest_sha256": "0eaba336be7a1019a80865941a19c4ffc03b6022ef96318c77bca42b4d9b67ff",
+  "raw_m_source": "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference_reclaim.zig",
+  "backend_binary_sha256": {
+    "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+    "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+    "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+    "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+    "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+  },
+  "encoder_runtime_identity": {
+    "numpy": "Record NumPy version and SHA-256 for every NumPy .py/.so file plus each linked dynamic library dependency.",
+    "zlib": "Record Python zlib build/runtime version and module origin. If origin is a file, hash the extension and every resolved ldd shared-library dependency; built-in/frozen origin is recorded explicitly and the Python executable remains pinned.",
+    "hardware": "Record machine, CPU model, logical CPU count, process affinity, platform, and kernel through the capture fingerprint."
+  },
+  "output_directory": "/workspace/scratch/frontier2026-access-final-runtime2-20261001",
+  "canonical_commit": "6f043e245eea265e4a222524443e3ff01e09c3cb",
+  "corpus_manifest": "/workspace/scratch/frontier-corpora/manifest.json",
+  "matrix": {
+    "final_lanes": 22,
+    "matched_block_bytes": 65536,
+    "matched_candidates": 12,
+    "whole_frame_native_controls": 4,
+    "total_cells": 352,
+    "profiles": ["wordfrontier quality", "wordfrontier access", "LaneA+M quality", "LaneA+M hoisted", "four WSB2 variants", "four native matched controls", "four whole-frame controls"]
+  },
+  "invariants": [
+    "The original runtime-1 capture and its 128 complete cells plus OMW-Japanese OOM remain immutable historical evidence.",
+    "Runtime-2 uses a new output directory and a fresh complete matrix; no runtime-1 cell is silently relabeled or reused.",
+    "The only intended change is byte-identical allocation lifetime reclamation in the frozen encoder backend; algorithms, model IDs, candidate order, page size, input bytes, and decoder policies remain fixed.",
+    "The runtime-2 wrapper remaps the two raw-M candidates' source_files fingerprint from the runtime-1 m_reference.zig path to the manifest-pinned m_reference_reclaim.zig source; capture commands and candidate policies are unchanged.",
+    "Verify all backend source, executable, manifest, dynamic library, harness, corpus manifest, and existing codec fingerprints at start and end.",
+    "Freeze NumPy source/extension modules and linked libraries because GWT1 encoder context proposals depend on NumPy; record zlib identity and CPU/hardware metadata for interpretation of later timings.",
+    "Every successful cell records full charged frame bytes, complete ledger, encoder argv/stdout/stderr/exit, and the unchanged candidate-specific fresh verification gate: all independent WPG2/WSB2/native-control restarts are checked against the source; LaneA+M is freshly full-decoded with every native restart CRC and exact whole-source oracle, while its prepared logical-range queries are checked against the source; whole-frame controls are fully decoded and source-checked.",
+    "Compare each corresponding runtime-2 frame byte-for-byte with runtime-1 wherever the runtime-1 cell completed; any difference aborts the capture and disqualifies the resource-only claim.",
+    "If the frozen 4 GiB allocation limit still rejects a source, preserve an explicit failed cell and stop pending a parent-approved failure-aware protocol; do not skip or tune that source.",
+    "Do not run timing until all size cells and guards pass and the parent grants a separate globally quiet timing window."
+  ],
+  "launch": "python3 src6/bench/frontier2026/access_capture_runtime2.py size --out /workspace/scratch/frontier2026-access-final-runtime2-20261001 --whole-controls",
+  "launch_authorization": "blocked until the parent releases the global quiet timing window"
+}

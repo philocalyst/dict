@@ -1,0 +1,59 @@
+{
+  "status": "development_only",
+  "wire": "WGJ1",
+  "release_safe_binary_sha256_before_trial_telemetry": "e1a286090e70e4ef1c9ce56574648cf4100fe31d54708167ba5f1fa32bc5afdb",
+  "policy": "baseline native classes; thirteen causal features; selector caps 1,4,16,64; shared or separate clone rows; complete-frame minimum",
+  "corpora": {
+    "freedict": {
+      "source_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+      "graph_sha256": "a98c6587dc55dff2decb1ea643c1cb62f37a46ed76fb75cdabdd58e4f58d8e07",
+      "untouched_m_frame_bytes": 82176,
+      "untouched_m_frame_sha256": "33b042b85b21eb04ec866245e75aa9a8afe287b18107685ee95da25156cc4a13",
+      "wga1_frame_bytes": 82040,
+      "wga1_frame_sha256": "41bc366875405a7f645902b70b3ed94c8d141bafffd0026c6d37947a47467e1a",
+      "wgj_frame_bytes": 82023,
+      "wgj_frame_sha256": "2fbcfe22f8bbf161a1f59b54a8fb8cff5e427dcbcfb8e5143a8654e94d35c596",
+      "selected_feature": "second_base_row",
+      "selected_selectors": 1,
+      "merged_rows": false,
+      "complete_candidate_trials": 18,
+      "ledger": {"header_bytes": 6, "directory_bytes": 215, "model_dictionary_bytes": 15508, "payload_bytes": 66294},
+      "full_decode_byte_exact": true,
+      "independent_pages_exact": 16
+    },
+    "gcide": {
+      "source_sha256": "c4ee208c312158f9bf7020ae77e862782925f08313d29dcbab1fb32c626b8961",
+      "graph_sha256": "01c2414b75462acccacd41fadd66dafee4123c01d14323323f5790656b358560",
+      "untouched_m_frame_bytes": 193523,
+      "untouched_m_frame_sha256": "07321fc5f61856729b37f0bcc03dde1805db23cb71894a8b2df644f067ec1d49",
+      "wga1_frame_bytes": 193488,
+      "wga1_frame_sha256": "97ad214edbcfd03f1851229ef100108e7be38a7115afde80f679f087c061479c",
+      "wgj_frame_bytes": 193408,
+      "wgj_frame_sha256": "bf57012161377b5ed8e096274a72a942ed2c71be95fdc03c0951a2b976838dda",
+      "selected_feature": "suffix2_kind",
+      "selected_selectors": 8,
+      "merged_rows": true,
+      "complete_candidate_trials": 22,
+      "ledger": {"header_bytes": 6, "directory_bytes": 220, "model_dictionary_bytes": 35340, "payload_bytes": 157842},
+      "full_decode_byte_exact": true,
+      "independent_pages_exact": 16
+    },
+    "omw_ja": {
+      "source_sha256": "541e802f3112fb96a823219ffa4eb9102d0c4125e9eed6292f524ab8154a4502",
+      "graph_sha256": "ab6545a5b3345ba8e4c6f3401f3189f87fa681100f10fdef2512b9b78e7045eb",
+      "untouched_m_frame_bytes": 45274,
+      "untouched_m_frame_sha256": "d25cc0c9b19545d610eeed90bc902408cc9f509cbeb99d9cfdee64bb541dcd61",
+      "wga1_frame_bytes": 44867,
+      "wga1_frame_sha256": "ad26d1942402cd75cd5aedd952e912a6902dd2953166014e7a0fad141fad2507",
+      "wgj_frame_bytes": 44712,
+      "wgj_frame_sha256": "be7b57e54d9b2caf35403d257f164679b168a3d3b99836f52f63133fe0466e4d",
+      "selected_feature": "suffix1",
+      "selected_selectors": 11,
+      "merged_rows": false,
+      "complete_candidate_trials": 49,
+      "ledger": {"header_bytes": 6, "directory_bytes": 217, "model_dictionary_bytes": 21650, "payload_bytes": 22839},
+      "full_decode_byte_exact": true,
+      "independent_pages_exact": 16
+    }
+  }
+}

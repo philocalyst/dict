@@ -1,0 +1,11 @@
+{
+  "report_sha256": "dba20a80aa1fae73fcea53a9ef6e7883b9270be2b5c1011f8e2d425833f8be7c",
+  "harness_sha256": "7807866165fc5ed67de3adabed798744088b3d24f09163a33290e0eeadbbd23a",
+  "observed_speedup_range": [
+    3.151013540801759,
+    5.956300478460861
+  ],
+  "rss_limit": "wait4 per-process ru_maxrss includes memory inherited when the Python coordinator launches each child before exec. The roughly 16 MiB floor obscures smaller native decoder peaks; these readings do not establish a native memory reduction on the four small books or a cold-cache memory bound.",
+  "initial_32m_report": "book-readers-paired-20261002.json remains diagnostic evidence; its 32 MiB workspace overallocates for these books and its initial source capture was not retained. Use the right-sized run for comparisons.",
+  "compression_status": "All six candidate archives remain larger than ordinary whole-file bzip3. Decoder speed does not satisfy the compression aspiration."
+}

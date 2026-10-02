@@ -1,0 +1,67 @@
+{
+  "schema": "wordgrammar-freeze-1",
+  "date_utc": "2026-10-01",
+  "wire": "WGP5",
+  "encode_commands": [
+    "wordgrammar encode-fast INPUT OUTPUT [BLOCK_BYTES]",
+    "wordgrammar encode-auto INPUT OUTPUT [BLOCK_BYTES]"
+  ],
+  "decode_command": "wordgrammar decode FRAME OUTPUT [BLOCK_INDEX]",
+  "inspect_command": "wordgrammar inspect FRAME JSON_OUTPUT",
+  "policy": {
+    "classes": 32,
+    "class_precision_bits": 14,
+    "class_fit_rounds": 2,
+    "prune_bits": 24,
+    "min_pair_count": 8,
+    "max_phrase_bytes": 128,
+    "parse_refinements": 2,
+    "copy_min_bytes": 6,
+    "copy_max_bytes": 4096,
+    "copy_hash_bits": 18,
+    "copy_search_candidates": 16,
+    "fast_rule_limit": 16128,
+    "auto_rule_limits": [
+      0,
+      128,
+      512,
+      2048,
+      8192,
+      16128
+    ],
+    "auto_tie_break": "first ascending capacity"
+  },
+  "normalized_environment": {
+    "WGR_COPY": "1",
+    "WGR_PACK": "1",
+    "WGR_CONTEXT": "1",
+    "WGR_PARAMPRICE": "1",
+    "WGR_REFINE": "2",
+    "WGR_ROW_BITS": "14",
+    "WGR_PATCH": null,
+    "WGR_COPYFIRST": null,
+    "WGR_REPARSE": null
+  },
+  "bounds": {
+    "encode_input_bytes": 67108864,
+    "decoder_frame_bytes": 536870912,
+    "decoder_raw_bytes": 268435456,
+    "model_header_bytes": 16777216,
+    "expanded_dictionary_bytes": 33554432,
+    "decoder_class_limit": 64,
+    "raw_restart_bytes": 65536,
+    "estimated_encoder_work_bytes": 4294967296,
+    "joint_parse_array_bytes": 134217728
+  },
+  "build": {
+    "command": "g++ -std=c++17 -O3 -DNDEBUG -Wall -Wextra codec.cpp -o wordgrammar",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0"
+  },
+  "hashes": {
+    "codec.cpp": "216625c8542dbf1cf18df76fe09aab86823ac319cde467db94d4b60892202d17",
+    "wordgrammar": "07d045298f98b8aa860191d198513ae8cae9cac2c475c1c06b00c4a629cf0ff7",
+    "test_codec.py": "a8f1665db66968166ab3cae871b8caaab1c1ff17500764db66bc87af4aa9333d"
+  },
+  "limits": "Development evidence predates this fingerprint; only independent post-freeze harness runs establish final performance.",
+  "audit_repair": "Independent ASAN audit found a valid 4MiB-block distance needing a fourth varint byte. The supported restart contract is now explicitly capped at 64KiB in encoder and decoder, with exact DP and estimated total work checks. Default 16/64KiB frames are unchanged."
+}

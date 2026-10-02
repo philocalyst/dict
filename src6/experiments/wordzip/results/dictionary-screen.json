@@ -1,0 +1,98 @@
+[
+  {
+    "input": "src6/experiments/wordzip/development/gcide-debian-054.raw",
+    "dict": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":223163,\"codec_us\":1211855,\"codec_ns\":1211855000}\n",
+    "stderr": "rules=5877 grammar=20028 entropy=2702 blocks=16\n",
+    "decode": "{\"input_bytes\":223163,\"output_bytes\":1048576,\"codec_us\":20133,\"codec_ns\":20133000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/gcide-debian-054.raw",
+    "dict": 1,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":225742,\"codec_us\":1201416,\"codec_ns\":1201416000}\n",
+    "stderr": "rules=5877 grammar=22607 entropy=2702 blocks=16\n",
+    "decode": "{\"input_bytes\":225742,\"output_bytes\":1048576,\"codec_us\":20071,\"codec_ns\":20071000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/gcide-debian-054.raw",
+    "dict": 2,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":223272,\"codec_us\":1341728,\"codec_ns\":1341728000}\n",
+    "stderr": "rules=5877 grammar=20137 entropy=2702 blocks=16\n",
+    "decode": "{\"input_bytes\":223272,\"output_bytes\":1048576,\"codec_us\":19610,\"codec_ns\":19610000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/multilingual.raw",
+    "dict": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":269191,\"codec_us\":1573244,\"codec_ns\":1573244000}\n",
+    "stderr": "rules=6829 grammar=24250 entropy=2879 blocks=16\n",
+    "decode": "{\"input_bytes\":269191,\"output_bytes\":1048576,\"codec_us\":21826,\"codec_ns\":21826000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/multilingual.raw",
+    "dict": 1,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":264019,\"codec_us\":1530977,\"codec_ns\":1530977000}\n",
+    "stderr": "rules=6829 grammar=19078 entropy=2879 blocks=16\n",
+    "decode": "{\"input_bytes\":264019,\"output_bytes\":1048576,\"codec_us\":21661,\"codec_ns\":21661000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/multilingual.raw",
+    "dict": 2,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":266632,\"codec_us\":1397320,\"codec_ns\":1397320000}\n",
+    "stderr": "rules=6829 grammar=21691 entropy=2879 blocks=16\n",
+    "decode": "{\"input_bytes\":266632,\"output_bytes\":1048576,\"codec_us\":21767,\"codec_ns\":21767000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/freedict-eng-fra.raw",
+    "dict": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":43591,\"codec_us\":335250,\"codec_ns\":335250000}\n",
+    "stderr": "rules=1502 grammar=5715 entropy=786 blocks=16\n",
+    "decode": "{\"input_bytes\":43591,\"output_bytes\":1048576,\"codec_us\":5624,\"codec_ns\":5624000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/freedict-eng-fra.raw",
+    "dict": 1,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":50967,\"codec_us\":333269,\"codec_ns\":333269000}\n",
+    "stderr": "rules=1502 grammar=13091 entropy=786 blocks=16\n",
+    "decode": "{\"input_bytes\":50967,\"output_bytes\":1048576,\"codec_us\":5813,\"codec_ns\":5813000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/freedict-eng-fra.raw",
+    "dict": 2,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":52276,\"codec_us\":335729,\"codec_ns\":335729000}\n",
+    "stderr": "rules=1502 grammar=14400 entropy=786 blocks=16\n",
+    "decode": "{\"input_bytes\":52276,\"output_bytes\":1048576,\"codec_us\":5714,\"codec_ns\":5714000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/omw-ja-20.raw",
+    "dict": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":77438,\"codec_us\":494696,\"codec_ns\":494696000}\n",
+    "stderr": "rules=4427 grammar=20215 entropy=2034 blocks=16\n",
+    "decode": "{\"input_bytes\":77438,\"output_bytes\":1048576,\"codec_us\":9804,\"codec_ns\":9804000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/omw-ja-20.raw",
+    "dict": 1,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":98801,\"codec_us\":487875,\"codec_ns\":487875000}\n",
+    "stderr": "rules=4427 grammar=41578 entropy=2034 blocks=16\n",
+    "decode": "{\"input_bytes\":98801,\"output_bytes\":1048576,\"codec_us\":10238,\"codec_ns\":10238000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  },
+  {
+    "input": "src6/experiments/wordzip/development/omw-ja-20.raw",
+    "dict": 2,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":100817,\"codec_us\":487670,\"codec_ns\":487670000}\n",
+    "stderr": "rules=4427 grammar=43594 entropy=2034 blocks=16\n",
+    "decode": "{\"input_bytes\":100817,\"output_bytes\":1048576,\"codec_us\":9992,\"codec_ns\":9992000}\n",
+    "binary_sha256": "b247abc939e6e5fd872a495fa88c09662e91017aa2eb5de67aa2fd0bf1cb8a12"
+  }
+]

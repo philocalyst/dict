@@ -1,0 +1,634 @@
+[
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "all",
+      "floor": 0.0,
+      "rounds": 0,
+      "share": 0,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 231026209,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 15974,
+      "entries": 6976,
+      "body_items": 17437,
+      "tokens": 53677,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 233191791,
+      "frame_bytes": 83768,
+      "classes": 16,
+      "entries": 6976,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 224,
+        "model_dictionary_bytes": 26379,
+        "payload_bytes": 57159,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3397571,
+      "decoded": 1048576
+    },
+    "frame_sha256": "f9df2fb46c6f3f5366df367ae74beb13cca524b618f75fce91c4399def487c5b",
+    "encoder_codec_ns": 464218000,
+    "delta_bytes": 895
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "all",
+      "floor": 0.0,
+      "rounds": 0,
+      "share": 32,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 234044663,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 15974,
+      "entries": 8752,
+      "body_items": 24085,
+      "tokens": 48699,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 249873773,
+      "frame_bytes": 84387,
+      "classes": 16,
+      "entries": 8752,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 226,
+        "model_dictionary_bytes": 34326,
+        "payload_bytes": 49829,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3515170,
+      "decoded": 1048576
+    },
+    "frame_sha256": "f5ef92539e0572b85f042a1251601c6ee0cf468b315e627ace22fcfb2f9fed4f",
+    "encoder_codec_ns": 483918436,
+    "delta_bytes": 1514
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "all",
+      "floor": 0.0,
+      "rounds": 2,
+      "share": 0,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 269949991,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 15974,
+      "entries": 5761,
+      "body_items": 16886,
+      "tokens": 57342,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 197649391,
+      "frame_bytes": 82374,
+      "classes": 16,
+      "entries": 5761,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 224,
+        "model_dictionary_bytes": 23585,
+        "payload_bytes": 58559,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3303716,
+      "decoded": 1048576
+    },
+    "frame_sha256": "d93193fd8fcab0a284b67a2982a53ec4e6ada8156256b2ab65d9af8195413c2f",
+    "encoder_codec_ns": 467599382,
+    "delta_bytes": -499
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "all",
+      "floor": 0.0,
+      "rounds": 2,
+      "share": 32,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 275529634,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 15974,
+      "entries": 7610,
+      "body_items": 24172,
+      "tokens": 51288,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 240782506,
+      "frame_bytes": 83464,
+      "classes": 16,
+      "entries": 7610,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 226,
+        "model_dictionary_bytes": 31857,
+        "payload_bytes": 51375,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3644391,
+      "decoded": 1048576
+    },
+    "frame_sha256": "60e098fc2c32bed4d9367678d139bdc0befee5434069efd0cd6b9426a738ce4b",
+    "encoder_codec_ns": 516312140,
+    "delta_bytes": 591
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "prefix",
+      "floor": 0.0,
+      "rounds": 0,
+      "share": 0,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 193803642,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 3456,
+      "entries": 6014,
+      "body_items": 18215,
+      "tokens": 59446,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 226697612,
+      "frame_bytes": 85572,
+      "classes": 16,
+      "entries": 6014,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 224,
+        "model_dictionary_bytes": 24968,
+        "payload_bytes": 60374,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3503239,
+      "decoded": 1048576
+    },
+    "frame_sha256": "fed8a89615a43df78628fe64535812b041a72c7bb23598c141cb26a1e0655ab4",
+    "encoder_codec_ns": 420501254,
+    "delta_bytes": 2699
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "prefix",
+      "floor": 0.0,
+      "rounds": 0,
+      "share": 32,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 197227744,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 3456,
+      "entries": 7795,
+      "body_items": 26493,
+      "tokens": 52548,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 210324138,
+      "frame_bytes": 84904,
+      "classes": 16,
+      "entries": 7795,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 226,
+        "model_dictionary_bytes": 33176,
+        "payload_bytes": 51496,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3653169,
+      "decoded": 1048576
+    },
+    "frame_sha256": "4dadc8af12a810990ad1c826512331d788e390d0bc46d5bd005a8690399401ff",
+    "encoder_codec_ns": 407551882,
+    "delta_bytes": 2031
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "prefix",
+      "floor": 0.0,
+      "rounds": 2,
+      "share": 0,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 215462736,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 3456,
+      "entries": 5576,
+      "body_items": 18402,
+      "tokens": 61373,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 208914561,
+      "frame_bytes": 84385,
+      "classes": 16,
+      "entries": 5576,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 224,
+        "model_dictionary_bytes": 23868,
+        "payload_bytes": 60287,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 3389696,
+      "decoded": 1048576
+    },
+    "frame_sha256": "cba87f7f86d71acb79846eda23feffe4a75d50c0ae9d540ea0ce4545e27869a8",
+    "encoder_codec_ns": 424377297,
+    "delta_bytes": 1512
+  },
+  {
+    "corpus": "freedict",
+    "input_bytes": 1048576,
+    "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+    "sources": {
+      "prepare.cpp": "e282d26daede0ec1e9d4f24a1372f67001770e648c51d9b98d6d1d417161dd6c",
+      "compile.zig": "af536f28eca5cbd07f6b680072508ed0115a01c1d041a31a6b0b89a25044ed42",
+      "prepare": "81f35a147da1d92c6c3d3725d19898d8ca6e5955e51c6aa4e681744dae5e4d75",
+      "compile": "8e8bc5526a36a68abb403912e97e87080319674de2a981bcdcb6c7e2dfe5bd89"
+    },
+    "old_fullframe": 82873,
+    "old": {
+      "codec_ns": 2341757817,
+      "input_bytes": 1048576,
+      "output_bytes": 82873,
+      "header_bytes": 6,
+      "directory_bytes": 226,
+      "model_dictionary_bytes": 33770,
+      "payload_bytes": 48871,
+      "blocks": 16,
+      "block_raw_lengths": [
+        65536,
+        65537,
+        65537,
+        65534,
+        65536,
+        65537,
+        65543,
+        65528,
+        65536,
+        65538,
+        65534,
+        65536,
+        65536,
+        65536,
+        65536,
+        65536
+      ]
+    },
+    "policy": {
+      "seed": "prefix",
+      "floor": 0.0,
+      "rounds": 2,
+      "share": 32,
+      "once": 1,
+      "classes": 16
+    },
+    "prepare": {
+      "codec_ns": 210182354,
+      "raw_bytes": 1048576,
+      "types": 10067,
+      "seed_candidates": 3456,
+      "entries": 7408,
+      "body_items": 26861,
+      "tokens": 53964,
+      "blocks": 16
+    },
+    "encoded": {
+      "codec_ns": 200106538,
+      "frame_bytes": 84844,
+      "classes": 16,
+      "entries": 7408,
+      "ledger": {
+        "header_bytes": 6,
+        "directory_bytes": 226,
+        "model_dictionary_bytes": 32533,
+        "payload_bytes": 52079,
+        "raw_bytes": 1048576,
+        "blocks": 16
+      }
+    },
+    "decoded": {
+      "codec_ns": 4549241,
+      "decoded": 1048576
+    },
+    "frame_sha256": "91265db24b52244128cfdb93f0cd3a0a20040919fd1746f8acf176bb3debd44d",
+    "encoder_codec_ns": 410288892,
+    "delta_bytes": 1971
+  }
+]

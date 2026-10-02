@@ -1,0 +1,264 @@
+{
+  "kind": "retained-development-input-prefixes",
+  "raw_prefix_bytes": 1048576,
+  "profile": "access",
+  "native_full_decode_exact": true,
+  "no_final_holdout": true,
+  "families": {
+    "freedict": {
+      "archive_bytes": 83576,
+      "archive_sha256": "c7931cf14db7a3bd53525866c5b7f1fa420061973e9a605f014da093e452d8ed",
+      "source_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+      "mode": 0,
+      "selected_graph": "conditional_dp",
+      "trials": [
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 83790,
+          "v4_frame_bytes": 83655,
+          "frame_sha256": "f87ddac92f552e69d7b7a0f48db25b7ceed3a0b600ace44152f4276383963b13",
+          "codec_ns_paid": 4303281211,
+          "phase_wall_ns": {
+            "python_transform": 509271,
+            "initial_model_process": 2299753395,
+            "price_model_process": 936177189,
+            "conditional_dp_process": 255546821,
+            "final_model_process": 824599815
+          },
+          "model_dictionary_bytes": 14951,
+          "payload_bytes": 68561
+        },
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 83576,
+          "v4_frame_bytes": 83441,
+          "frame_sha256": "c7931cf14db7a3bd53525866c5b7f1fa420061973e9a605f014da093e452d8ed",
+          "codec_ns_paid": 4303281211,
+          "phase_wall_ns": {
+            "python_transform": 509271,
+            "initial_model_process": 2299753395,
+            "price_model_process": 936177189,
+            "conditional_dp_process": 255546821,
+            "final_model_process": 824599815
+          },
+          "model_dictionary_bytes": 14902,
+          "payload_bytes": 68396
+        }
+      ]
+    },
+    "gcide": {
+      "archive_bytes": 198302,
+      "archive_sha256": "bc11657328b723afc81ae44f4d105c8a6866473a4b95c1745695973551760bd8",
+      "source_sha256": "c4ee208c312158f9bf7020ae77e862782925f08313d29dcbab1fb32c626b8961",
+      "mode": 0,
+      "selected_graph": "conditional_dp",
+      "trials": [
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 198623,
+          "v4_frame_bytes": 198488,
+          "frame_sha256": "dae8e550e333bcbe8994aeb03eddb250cf814d9ce0e680b4f204297345b81518",
+          "codec_ns_paid": 16133229600,
+          "phase_wall_ns": {
+            "python_transform": 515512,
+            "initial_model_process": 6391308629,
+            "price_model_process": 4674157553,
+            "conditional_dp_process": 1061973549,
+            "final_model_process": 4027301728
+          },
+          "model_dictionary_bytes": 33928,
+          "payload_bytes": 164416
+        },
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 198302,
+          "v4_frame_bytes": 198167,
+          "frame_sha256": "bc11657328b723afc81ae44f4d105c8a6866473a4b95c1745695973551760bd8",
+          "codec_ns_paid": 16133229600,
+          "phase_wall_ns": {
+            "python_transform": 515512,
+            "initial_model_process": 6391308629,
+            "price_model_process": 4674157553,
+            "conditional_dp_process": 1061973549,
+            "final_model_process": 4027301728
+          },
+          "model_dictionary_bytes": 34258,
+          "payload_bytes": 163765
+        }
+      ]
+    },
+    "omw": {
+      "archive_bytes": 39924,
+      "archive_sha256": "f4e02bdf0be461d53d6284240b1cf54b88a52270e4c449ba3a7473322dd1828b",
+      "source_sha256": "541e802f3112fb96a823219ffa4eb9102d0c4125e9eed6292f524ab8154a4502",
+      "mode": 3,
+      "selected_graph": "conditional_dp",
+      "trials": [
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 47343,
+          "v4_frame_bytes": 47208,
+          "frame_sha256": "0cad2c2d512b0ee75063e44054b53c63f77768a7eb915f27b0ffeade038d6acc",
+          "codec_ns_paid": 1603820659,
+          "phase_wall_ns": {
+            "python_transform": 519519,
+            "initial_model_process": 1382643381,
+            "price_model_process": 68999803,
+            "conditional_dp_process": 99547890,
+            "final_model_process": 62432676
+          },
+          "model_dictionary_bytes": 21762,
+          "payload_bytes": 25302
+        },
+        {
+          "mode": 0,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 46340,
+          "v4_frame_bytes": 46205,
+          "frame_sha256": "d74312a692b76a52d1cd93762f3a4c7e467027ae6a7db7d5c34ece3274a56954",
+          "codec_ns_paid": 1603820659,
+          "phase_wall_ns": {
+            "python_transform": 519519,
+            "initial_model_process": 1382643381,
+            "price_model_process": 68999803,
+            "conditional_dp_process": 99547890,
+            "final_model_process": 62432676
+          },
+          "model_dictionary_bytes": 21284,
+          "payload_bytes": 24777
+        },
+        {
+          "mode": 1,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 683529,
+          "frame_bytes": 40179,
+          "v4_frame_bytes": 40044,
+          "frame_sha256": "0b17146555c9e97e73e0615a2ff95b27a2d4b21befa348db046f8b747255aae6",
+          "codec_ns_paid": 3061973451,
+          "phase_wall_ns": {
+            "python_transform": 107036126,
+            "initial_model_process": 1805562347,
+            "price_model_process": 584610258,
+            "conditional_dp_process": 156572974,
+            "final_model_process": 526331845
+          },
+          "model_dictionary_bytes": 19810,
+          "payload_bytes": 20130
+        },
+        {
+          "mode": 1,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 683529,
+          "frame_bytes": 40290,
+          "v4_frame_bytes": 40155,
+          "frame_sha256": "cd8d1d4e88464727ea4c143544069be9b197690768e7935b318145fc9accce31",
+          "codec_ns_paid": 3061973451,
+          "phase_wall_ns": {
+            "python_transform": 107036126,
+            "initial_model_process": 1805562347,
+            "price_model_process": 584610258,
+            "conditional_dp_process": 156572974,
+            "final_model_process": 526331845
+          },
+          "model_dictionary_bytes": 19744,
+          "payload_bytes": 20307
+        },
+        {
+          "mode": 2,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 1033967,
+          "frame_bytes": 45188,
+          "v4_frame_bytes": 45053,
+          "frame_sha256": "c02776a65839f092b9b7c77b582a4eee75eb8d0b63f89845256ad8057a3796b0",
+          "codec_ns_paid": 3376162854,
+          "phase_wall_ns": {
+            "python_transform": 44506879,
+            "initial_model_process": 1851510266,
+            "price_model_process": 645990340,
+            "conditional_dp_process": 295925136,
+            "final_model_process": 593854894
+          },
+          "model_dictionary_bytes": 22395,
+          "payload_bytes": 22514
+        },
+        {
+          "mode": 2,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 1033967,
+          "frame_bytes": 44548,
+          "v4_frame_bytes": 44413,
+          "frame_sha256": "3c5aa89ffe505e236497f3cbb77c8a6ade793021225bd15de49639dcfa8449e2",
+          "codec_ns_paid": 3376162854,
+          "phase_wall_ns": {
+            "python_transform": 44506879,
+            "initial_model_process": 1851510266,
+            "price_model_process": 645990340,
+            "conditional_dp_process": 295925136,
+            "final_model_process": 593854894
+          },
+          "model_dictionary_bytes": 22034,
+          "payload_bytes": 22235
+        },
+        {
+          "mode": 3,
+          "profile": "access",
+          "graph": "base",
+          "source_bytes": 668932,
+          "frame_bytes": 40224,
+          "v4_frame_bytes": 40089,
+          "frame_sha256": "27e4e2b649830cc3a083f149fd820c5a9f9d6cde927f30a6c4b3c283527bc08d",
+          "codec_ns_paid": 2501106241,
+          "phase_wall_ns": {
+            "python_transform": 138633245,
+            "initial_model_process": 1536553949,
+            "price_model_process": 575582063,
+            "conditional_dp_process": 162409229,
+            "final_model_process": 237978815
+          },
+          "model_dictionary_bytes": 18241,
+          "payload_bytes": 21745
+        },
+        {
+          "mode": 3,
+          "profile": "access",
+          "graph": "conditional_dp",
+          "source_bytes": 668932,
+          "frame_bytes": 39924,
+          "v4_frame_bytes": 39789,
+          "frame_sha256": "f4e02bdf0be461d53d6284240b1cf54b88a52270e4c449ba3a7473322dd1828b",
+          "codec_ns_paid": 2501106241,
+          "phase_wall_ns": {
+            "python_transform": 138633245,
+            "initial_model_process": 1536553949,
+            "price_model_process": 575582063,
+            "conditional_dp_process": 162409229,
+            "final_model_process": 237978815
+          },
+          "model_dictionary_bytes": 17367,
+          "payload_bytes": 22319
+        }
+      ]
+    }
+  }
+}

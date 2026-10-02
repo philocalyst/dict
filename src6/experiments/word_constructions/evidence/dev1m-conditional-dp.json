@@ -1,0 +1,301 @@
+{
+  "kind": "retained-development-input-prefixes",
+  "raw_prefix_bytes": 1048576,
+  "backend": "LaneA best seed + M native v4; conditional root DP with native fit",
+  "m_reference_binary_sha256": "4f7faf921798b7f56d8f85eaa990e1d3da73655e996bc95df33140e84adb2060",
+  "full_native_reader_decode_exact": true,
+  "families": {
+    "freedict": {
+      "input_bytes": 1048576,
+      "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+      "frame_bytes": 82074,
+      "selected_mode": 0,
+      "frame_sha256": "2394a5ef8aa552aa09209bc269eb54b5623eb20fb68f2e508d88b634d6da8ef3",
+      "trials": [
+        {
+          "mode": 0,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 82311,
+          "v4_frame_bytes": 82176,
+          "frame_sha256": "3ec297692650f504000125de625d9afe5bfd5c288e14576c121b7b208547772e",
+          "codec_ns_paid": 4371714289,
+          "model_dictionary_bytes": 15470,
+          "payload_bytes": 66485
+        },
+        {
+          "mode": 0,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 82074,
+          "v4_frame_bytes": 81939,
+          "frame_sha256": "2394a5ef8aa552aa09209bc269eb54b5623eb20fb68f2e508d88b634d6da8ef3",
+          "codec_ns_paid": 4371714289,
+          "model_dictionary_bytes": 15412,
+          "payload_bytes": 66306
+        },
+        {
+          "mode": 1,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 82311,
+          "v4_frame_bytes": 82176,
+          "frame_sha256": "c7235eb2c42815eddca59235fe5629eff3315cd87f69ba746b9e05c50d42c6d8",
+          "codec_ns_paid": 4342857861,
+          "model_dictionary_bytes": 15470,
+          "payload_bytes": 66485
+        },
+        {
+          "mode": 1,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 82074,
+          "v4_frame_bytes": 81939,
+          "frame_sha256": "5dd1932e03117e54abf8964ebc10c4b237c0ee56d0594fb8ced88c7c9b0098c8",
+          "codec_ns_paid": 4342857861,
+          "model_dictionary_bytes": 15412,
+          "payload_bytes": 66306
+        },
+        {
+          "mode": 2,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 82311,
+          "v4_frame_bytes": 82176,
+          "frame_sha256": "75ba9f914bab34e30708fcc9888894024923da626b8b4d98918538ac6ebbfb9a",
+          "codec_ns_paid": 4308140826,
+          "model_dictionary_bytes": 15470,
+          "payload_bytes": 66485
+        },
+        {
+          "mode": 2,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 82074,
+          "v4_frame_bytes": 81939,
+          "frame_sha256": "1a34b9f9032cb224946fb1a04a555813c9de753af3793f9c91155fa944d9899d",
+          "codec_ns_paid": 4308140826,
+          "model_dictionary_bytes": 15412,
+          "payload_bytes": 66306
+        },
+        {
+          "mode": 3,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 82311,
+          "v4_frame_bytes": 82176,
+          "frame_sha256": "9059445ff2f09caa05177b363621c9b152d35647894f1fe603ac52b621170c4b",
+          "codec_ns_paid": 4357616224,
+          "model_dictionary_bytes": 15470,
+          "payload_bytes": 66485
+        },
+        {
+          "mode": 3,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 82074,
+          "v4_frame_bytes": 81939,
+          "frame_sha256": "ab9e807443ad760b2d0512ab625e0f7b9b3f7bf47064b03c03c1f899d8853f0d",
+          "codec_ns_paid": 4357616224,
+          "model_dictionary_bytes": 15412,
+          "payload_bytes": 66306
+        }
+      ]
+    },
+    "gcide": {
+      "input_bytes": 1048576,
+      "input_sha256": "c4ee208c312158f9bf7020ae77e862782925f08313d29dcbab1fb32c626b8961",
+      "frame_bytes": 193406,
+      "selected_mode": 0,
+      "frame_sha256": "60471b4e87ef0258f60f93e911aa4f988e4b2b8eb0c7d3fd542ab80d0e67d641",
+      "trials": [
+        {
+          "mode": 0,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 193658,
+          "v4_frame_bytes": 193523,
+          "frame_sha256": "e372a42995f146bd4bc65021ef75a429bac29e10e4689460a9102158541f51c6",
+          "codec_ns_paid": 16045390674,
+          "model_dictionary_bytes": 35159,
+          "payload_bytes": 158138
+        },
+        {
+          "mode": 0,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 193406,
+          "v4_frame_bytes": 193271,
+          "frame_sha256": "60471b4e87ef0258f60f93e911aa4f988e4b2b8eb0c7d3fd542ab80d0e67d641",
+          "codec_ns_paid": 16045390674,
+          "model_dictionary_bytes": 34971,
+          "payload_bytes": 158074
+        },
+        {
+          "mode": 1,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 193658,
+          "v4_frame_bytes": 193523,
+          "frame_sha256": "ead1963403a2384ad069eca85d2f311eca42e5f4a172ca004b10a7dafa9c473f",
+          "codec_ns_paid": 16398258291,
+          "model_dictionary_bytes": 35159,
+          "payload_bytes": 158138
+        },
+        {
+          "mode": 1,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 193406,
+          "v4_frame_bytes": 193271,
+          "frame_sha256": "5064c6081bb23d1d37e00519b5b8d3f4cf963a0ebde4739c4c177208c1cb3d83",
+          "codec_ns_paid": 16398258291,
+          "model_dictionary_bytes": 34971,
+          "payload_bytes": 158074
+        },
+        {
+          "mode": 2,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 193658,
+          "v4_frame_bytes": 193523,
+          "frame_sha256": "155371883edb221410f590cb1fb784d5bf638b0105e15242170497342af2a195",
+          "codec_ns_paid": 16213025994,
+          "model_dictionary_bytes": 35159,
+          "payload_bytes": 158138
+        },
+        {
+          "mode": 2,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 193406,
+          "v4_frame_bytes": 193271,
+          "frame_sha256": "2e8a48c81f5c1f670d470e61593078539c0b069dde65b91dd6707a3fdb9c0de7",
+          "codec_ns_paid": 16213025994,
+          "model_dictionary_bytes": 34971,
+          "payload_bytes": 158074
+        },
+        {
+          "mode": 3,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 193658,
+          "v4_frame_bytes": 193523,
+          "frame_sha256": "26d3c41f94c611ba7ab74d48ffad40d71b7c64ca833e578f46636f467f7e7821",
+          "codec_ns_paid": 16105192783,
+          "model_dictionary_bytes": 35159,
+          "payload_bytes": 158138
+        },
+        {
+          "mode": 3,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 193406,
+          "v4_frame_bytes": 193271,
+          "frame_sha256": "b90b4ab83fdc001999e026d433076f477c90c5fc577b852afe62bdff0b4e11cb",
+          "codec_ns_paid": 16105192783,
+          "model_dictionary_bytes": 34971,
+          "payload_bytes": 158074
+        }
+      ]
+    },
+    "omw": {
+      "input_bytes": 1048576,
+      "input_sha256": "541e802f3112fb96a823219ffa4eb9102d0c4125e9eed6292f524ab8154a4502",
+      "frame_bytes": 38829,
+      "selected_mode": 3,
+      "frame_sha256": "e243f8e3de5662705ea90a35955a8e6a2be5ce489078961f23c0f3fe05d0a0ee",
+      "trials": [
+        {
+          "mode": 0,
+          "graph": "base",
+          "source_bytes": 1048576,
+          "frame_bytes": 45409,
+          "v4_frame_bytes": 45274,
+          "frame_sha256": "7c623c35e0bd6e7012eccc1cea6505cb9e2bf8c8629bacf86d7d94ab18bf43b7",
+          "codec_ns_paid": 2183588050,
+          "model_dictionary_bytes": 21673,
+          "payload_bytes": 23378
+        },
+        {
+          "mode": 0,
+          "graph": "conditional_dp",
+          "source_bytes": 1048576,
+          "frame_bytes": 42773,
+          "v4_frame_bytes": 42638,
+          "frame_sha256": "2909ba5f1ebb6fd75755fbf611bed8345e28ad19f6b1c2fcdde73b669dc2f4eb",
+          "codec_ns_paid": 2183588050,
+          "model_dictionary_bytes": 21389,
+          "payload_bytes": 21027
+        },
+        {
+          "mode": 1,
+          "graph": "base",
+          "source_bytes": 683529,
+          "frame_bytes": 39309,
+          "v4_frame_bytes": 39174,
+          "frame_sha256": "b1c88c2161be95fefc998023b5d5f0bb06246ac27072f48388e210ccf449867b",
+          "codec_ns_paid": 2416341046,
+          "model_dictionary_bytes": 19044,
+          "payload_bytes": 19974
+        },
+        {
+          "mode": 1,
+          "graph": "conditional_dp",
+          "source_bytes": 683529,
+          "frame_bytes": 38833,
+          "v4_frame_bytes": 38698,
+          "frame_sha256": "1b779c163b05343297c69a778eb9c265703f2ae9a1877eb20de314f03e8c2c56",
+          "codec_ns_paid": 2416341046,
+          "model_dictionary_bytes": 19561,
+          "payload_bytes": 18981
+        },
+        {
+          "mode": 2,
+          "graph": "base",
+          "source_bytes": 1033967,
+          "frame_bytes": 43532,
+          "v4_frame_bytes": 43397,
+          "frame_sha256": "375bdb5a7d13b68b0166115addab8d0d4b88002d204d67d276cbbe1c0b43974d",
+          "codec_ns_paid": 3232292350,
+          "model_dictionary_bytes": 22221,
+          "payload_bytes": 20951
+        },
+        {
+          "mode": 2,
+          "graph": "conditional_dp",
+          "source_bytes": 1033967,
+          "frame_bytes": 43198,
+          "v4_frame_bytes": 43063,
+          "frame_sha256": "d6fb857c1845188ab8fd651ef5670d835024b0a7d7927eb8e1f613e5673f61b6",
+          "codec_ns_paid": 3232292350,
+          "model_dictionary_bytes": 21859,
+          "payload_bytes": 20979
+        },
+        {
+          "mode": 3,
+          "graph": "base",
+          "source_bytes": 668932,
+          "frame_bytes": 41729,
+          "v4_frame_bytes": 41594,
+          "frame_sha256": "3e7e3e9c4174d14b41b825a9ab3b1b0b2b98df0556ad427ca1b324b8612476e2",
+          "codec_ns_paid": 1412609429,
+          "model_dictionary_bytes": 17895,
+          "payload_bytes": 23545
+        },
+        {
+          "mode": 3,
+          "graph": "conditional_dp",
+          "source_bytes": 668932,
+          "frame_bytes": 38829,
+          "v4_frame_bytes": 38694,
+          "frame_sha256": "e243f8e3de5662705ea90a35955a8e6a2be5ce489078961f23c0f3fe05d0a0ee",
+          "codec_ns_paid": 1412609429,
+          "model_dictionary_bytes": 17309,
+          "payload_bytes": 21231
+        }
+      ]
+    }
+  },
+  "no_final_holdout": true
+}

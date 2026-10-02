@@ -1,0 +1,107 @@
+{
+  "codec_files": {
+    "build.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/build.zig",
+      "original_sha256": "46ff81e326b3f22f85bcd4f3a869173741e90e8977133665196907704f8338a6",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/build.zig",
+      "sha256": "46ff81e326b3f22f85bcd4f3a869173741e90e8977133665196907704f8338a6"
+    },
+    "bundle.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/bundle.zig",
+      "original_sha256": "cca5464777cf4579bb1a18a5ce0f6a3df1267bf4ac75c5fea033ac7b8820d199",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/bundle.zig",
+      "sha256": "cca5464777cf4579bb1a18a5ce0f6a3df1267bf4ac75c5fea033ac7b8820d199"
+    },
+    "construction_admission.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/construction_admission.zig",
+      "original_sha256": "f7bd3b032d7ef7de3caabb327488b591e64142cd5469732b9230635c925f5a58",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/construction_admission.zig",
+      "sha256": "f7bd3b032d7ef7de3caabb327488b591e64142cd5469732b9230635c925f5a58"
+    },
+    "construction_model.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/construction_model.zig",
+      "original_sha256": "b446ba559bb0ce7690773104e74782c670b7c88180fc320e7a766c69850448fc",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/construction_model.zig",
+      "sha256": "b446ba559bb0ce7690773104e74782c670b7c88180fc320e7a766c69850448fc"
+    },
+    "entropy.zig": {
+      "changed": true,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/entropy.zig",
+      "original_sha256": "3e589e603c913aa81a586ec658326e6b55a21888789463261cc8219fef0a957c",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/entropy.zig",
+      "sha256": "9b49b0dfb2728ef0be5a8ed1d066ea96cc9205ea3c68aee2ef39193e575448ce"
+    },
+    "global_bundle.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/global_bundle.zig",
+      "original_sha256": "763f692c0ed7219245b6d888677a110a5f63db97b85d7258bc0dbfd49f569544",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/global_bundle.zig",
+      "sha256": "763f692c0ed7219245b6d888677a110a5f63db97b85d7258bc0dbfd49f569544"
+    },
+    "global_runner.zig": {
+      "changed": true,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/global_runner.zig",
+      "original_sha256": "203d10f6b5a9d32fb03773fabe1759f2cc615d34719b1c4483ef70e3e811348b",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/global_runner.zig",
+      "sha256": "657a4952afd1a520d9114f4328193c1b041c3bde605ddd66119735cff1c5c093"
+    },
+    "grammar.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/grammar.zig",
+      "original_sha256": "74aaf8bb9afc83ed80bb652247ead4fe592451b5115ffc483cb2952d943fc658",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/grammar.zig",
+      "sha256": "74aaf8bb9afc83ed80bb652247ead4fe592451b5115ffc483cb2952d943fc658"
+    },
+    "runner.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/runner.zig",
+      "original_sha256": "96ad3c780e024e865ec368167134bcd34c17f8594b4795b29f8040c596f53be6",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/runner.zig",
+      "sha256": "96ad3c780e024e865ec368167134bcd34c17f8594b4795b29f8040c596f53be6"
+    },
+    "surface.zig": {
+      "changed": true,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/surface.zig",
+      "original_sha256": "60c04e3599cb7c311e35e948e8f63003125957f33d0d4906e78ac9e313c0392b",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/surface.zig",
+      "sha256": "8a26e818ea0f1d3de73a96dd12ff21aad33105bcc79a328838d88dbf2eb84167"
+    },
+    "test.zig": {
+      "changed": false,
+      "original_path": "/workspace/scratch/lexical-constructions-v2-owned-capture/source/test.zig",
+      "original_sha256": "538bc67821286afca997bd0525408d1e9aae19ecceedc25b4cbabd9c3bd6147b",
+      "path": "/workspace/dict/src6/experiments/lexical_capacity/test.zig",
+      "sha256": "538bc67821286afca997bd0525408d1e9aae19ecceedc25b4cbabd9c3bd6147b"
+    }
+  },
+  "old_runner_comment": "historical 8M entropy comment retained verbatim; actual constant is recorded above to keep the codec diff resource-only",
+  "original_freeze": "/workspace/dict/src6/experiments/lexical_constructions/evidence/DEV-2-OWNED-FREEZE-20261001.json",
+  "original_freeze_sha256": "1f524079af2a999550f0cf2c633cf6db16bdc6ee41a4b6d48d621fe7ccdced84",
+  "phase": "prepared; no fresh validation",
+  "precise_diff": "/workspace/dict/src6/experiments/lexical_validation/evidence/CAPACITY-RESOURCE-ONLY-20261002.patch",
+  "precise_diff_sha256": "1de4701ce89265df8fa28be6acee78017fe516c65352673fb26cdd32edaf97a0",
+  "prepare_source": "/workspace/dict/src6/experiments/lexical_validation/prepare_capacity.py",
+  "prepare_source_sha256": "8251c46eab407f818e464360f6114d9784509799448af92d57601a07dcd2a3e5",
+  "proposal": "/workspace/dict/src6/experiments/lexical_validation/CAPACITY-PROPOSAL-20261002.md",
+  "proposal_sha256": "8ca0516526da55d0be674cee351ac5e984f4545945219b2a178beaf7b1e2cbd0",
+  "protocol": "LTCV2-CAPACITY-ONLY-SOURCE/1",
+  "resource_changes": {
+    "absolute_entropy_events": [
+      8000000,
+      134217728
+    ],
+    "global_aggregate_work": [
+      64000000,
+      134217728
+    ],
+    "lexemes": [
+      100000,
+      500000
+    ]
+  },
+  "unchanged": "schema/wire/ten options/order/ties/models/source/groups/per-root non-work limits/semantic limits; old freeze and first fixed failures preserved"
+}

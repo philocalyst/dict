@@ -1,0 +1,9 @@
+test_failed_outputs_are_not_published (__main__.AutomaticWordCodec.test_failed_outputs_are_not_published) ... ok
+test_geometry_dispatch_partial_page_and_empty (__main__.AutomaticWordCodec.test_geometry_dispatch_partial_page_and_empty) ... ok
+test_paid_choice_profiles_and_determinism (__main__.AutomaticWordCodec.test_paid_choice_profiles_and_determinism) ... ok
+test_pre_read_limits_and_environment_override (__main__.AutomaticWordCodec.test_pre_read_limits_and_environment_override) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.164s
+
+OK

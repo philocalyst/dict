@@ -1,0 +1,651 @@
+{
+  "protocol": "WORD-FRONTIER-NATIVE-DISPATCH-GATE/1",
+  "status": "verified",
+  "binary_sha256": "ffbd6a64e98ae0e3c93439bed8b424cee134e176b9522c4eba5f32e1a6cdae39",
+  "reference_sha256": "2946af1b122def1729b13ea946cb5f9a91a2a5ea93fb1fab70de3afc5766c1b7",
+  "scope": "same delivered WPG2/GWT1 frames and unchanged bounded readers; native dispatch only",
+  "complete_frames": 44,
+  "records": [
+    {
+      "corpus": "freedict-eng-fra-content-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "e3847ce48b327c174fb9b0353edd5b13e4cc1a190adc8cca163bb56d5b9cf287",
+      "frame_sha256": "e8e57f3238201c6c4d67948a6c6a7b04176d1e363b35e49c271e4b8d1561edf7",
+      "frame_bytes": 30796,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        7,
+        13
+      ]
+    },
+    {
+      "corpus": "freedict-eng-fra-content-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "e3847ce48b327c174fb9b0353edd5b13e4cc1a190adc8cca163bb56d5b9cf287",
+      "frame_sha256": "7131c086e8b725490752d0aecd20dba041756e5437813bc3e38e41437a049493",
+      "frame_bytes": 30703,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        7,
+        13
+      ]
+    },
+    {
+      "corpus": "freedict-eng-fra-words-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "1572dd6109c75dcde759187513bf6200c62f568f3e2604045cb18f07ab9a1fd9",
+      "frame_sha256": "1b34cd9bc919ca2c620a69b57d6b09bf5957a48a86c040cd05a6f1153e5f3f47",
+      "frame_bytes": 7759,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "freedict-eng-fra-words-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "1572dd6109c75dcde759187513bf6200c62f568f3e2604045cb18f07ab9a1fd9",
+      "frame_sha256": "a365602d9430c4b57c97a1add0ecaa8d13e353c561af39c6c1695d5754626da4",
+      "frame_bytes": 7668,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "freedict-spa-eng-content-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "1ffa68fe9ca7b2500bb786910f8104dc424c2e84c350825e0813b889f2eb9473",
+      "frame_sha256": "e5c95ea16f7f58e5717771226a06feb814f9d140fe13d0b9459ddb374529bb04",
+      "frame_bytes": 12061,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "corpus": "freedict-spa-eng-content-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "1ffa68fe9ca7b2500bb786910f8104dc424c2e84c350825e0813b889f2eb9473",
+      "frame_sha256": "b5cb181bf0ba5500430562bc71b4eafaf9297889bcf592a19ba5827f3ad8d74d",
+      "frame_bytes": 11977,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "corpus": "freedict-spa-eng-words-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "ac45c373185c2b1f5dd853a0ee3a233f6468a5dd22af1c404edf83956039fb8a",
+      "frame_sha256": "1d9ca44894998ff84d3996f990fc7a41589f0d03af99ff8de32db0cbf9a5d1a5",
+      "frame_bytes": 3890,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "freedict-spa-eng-words-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "ac45c373185c2b1f5dd853a0ee3a233f6468a5dd22af1c404edf83956039fb8a",
+      "frame_sha256": "8cca745de16ba704f9aefbc497b1380f7673d0500db0528a1473290dd6ee6add",
+      "frame_bytes": 3863,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "gcide-debian-054-content-final",
+      "profile": "wordfrontier-access",
+      "family": "GWT1",
+      "source_sha256": "8d744c83d055bd544985096a204075088e22d29e9b15f2d30e258c54910042f0",
+      "frame_sha256": "3ab963f194da5d46c1e69dfad36f4428dda114348293f100634aff20f035da7c",
+      "frame_bytes": 1746319,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        89,
+        178
+      ]
+    },
+    {
+      "corpus": "gcide-debian-054-content-final",
+      "profile": "wordfrontier-quality",
+      "family": "GWT1",
+      "source_sha256": "8d744c83d055bd544985096a204075088e22d29e9b15f2d30e258c54910042f0",
+      "frame_sha256": "30090936c36b8a846fcce9df1d99601b1434ab8ea54592b3ba19d99755756115",
+      "frame_bytes": 1702566,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        89,
+        178
+      ]
+    },
+    {
+      "corpus": "gcide-debian-054-words-final",
+      "profile": "wordfrontier-access",
+      "family": "GWT1",
+      "source_sha256": "a58e44c37c018f82943e374ee41440c17797dc542c10ece86faf53a55f8b115f",
+      "frame_sha256": "5689cef11cf466251a82eaa648fe05415b32883c23502041b7c350403a7f5754",
+      "frame_bytes": 89355,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "corpus": "gcide-debian-054-words-final",
+      "profile": "wordfrontier-quality",
+      "family": "GWT1",
+      "source_sha256": "a58e44c37c018f82943e374ee41440c17797dc542c10ece86faf53a55f8b115f",
+      "frame_sha256": "69b0b7501086da62f0ed4f8243d398bd54e6ba7dd0ad669d94bd36c834ac9d31",
+      "frame_bytes": 87493,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "corpus": "omw-cmn-20-content-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "e02abc9dad15085c0f0d1f75c0e63629de5dbf435bd3aacd19a5698220a8476e",
+      "frame_sha256": "25ed1a6d9ec3af1f942190a487e6e46c87c100afbc2eebe9526afd081366f1aa",
+      "frame_bytes": 357912,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        44,
+        87
+      ]
+    },
+    {
+      "corpus": "omw-cmn-20-content-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "e02abc9dad15085c0f0d1f75c0e63629de5dbf435bd3aacd19a5698220a8476e",
+      "frame_sha256": "cb892f39b4031ff8e502fbb00245f601cad73d3ddf8161a84cc5dc89b82b4fb6",
+      "frame_bytes": 344455,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        44,
+        87
+      ]
+    },
+    {
+      "corpus": "omw-cmn-20-words-final",
+      "profile": "wordfrontier-access",
+      "family": "GWT1",
+      "source_sha256": "19545bef5d3970a69fc1ad1cd2796d5001dcd1cfca22c346dd0b44a6e89d0920",
+      "frame_sha256": "d5c5112f2d8a89777c5fb279975a70ffc05b788164ec4fc34bed3646ea158167",
+      "frame_bytes": 54452,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "corpus": "omw-cmn-20-words-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "19545bef5d3970a69fc1ad1cd2796d5001dcd1cfca22c346dd0b44a6e89d0920",
+      "frame_sha256": "071dd1903c4d66a6871e64f307af67b77a9ffa2896951f54f18a6bb987532ebb",
+      "frame_bytes": 52496,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "corpus": "omw-ja-20-content-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "533de12e8bc4fbfefd4047e274a865e09988af154c110118b5bd01e5a3e4a092",
+      "frame_sha256": "d2913344036a34bae955e0c7ec8766fd470cf9eb05630c81018fe2973bfa61db",
+      "frame_bytes": 1247679,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        170,
+        339
+      ]
+    },
+    {
+      "corpus": "omw-ja-20-content-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "533de12e8bc4fbfefd4047e274a865e09988af154c110118b5bd01e5a3e4a092",
+      "frame_sha256": "e14637842af395c0b58b4d3462a5fba5234e84efb1f5ea9a613db405b89651d3",
+      "frame_bytes": 1212617,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        170,
+        339
+      ]
+    },
+    {
+      "corpus": "omw-ja-20-words-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "7654bd86e3c0f719e7dca85aa431e485e33c4aa93bda28275024fe0b0d9cd3a5",
+      "frame_sha256": "e4f4e1bf50341d59e1a061e126952d53b661e0306d3343c55e2d93b77b5fc228",
+      "frame_bytes": 84549,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "corpus": "omw-ja-20-words-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "7654bd86e3c0f719e7dca85aa431e485e33c4aa93bda28275024fe0b0d9cd3a5",
+      "frame_sha256": "488cbde3abba98f7c41fe8f10c47844cd4b58d991d503b3f116f94c75e690b4b",
+      "frame_bytes": 82639,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "corpus": "ud-en-forms-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "97389c01a4f4a99107156861b8f098cb36d2362c16dd9a38c078f094b7a8b4f4",
+      "frame_sha256": "cdaffe7dd10f1bbcb997894e867d71c21fad236e7f4006c5719810d4ba967691",
+      "frame_bytes": 48896,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-en-forms-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "97389c01a4f4a99107156861b8f098cb36d2362c16dd9a38c078f094b7a8b4f4",
+      "frame_sha256": "e4c1112d66f458874381a40212c3c5c1b83abed2d3813d1d66035ebfb245cd89",
+      "frame_bytes": 47931,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-en-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "696b699c1a7f933c412c28837fd15fd7d8162e7c0a06c0015b778b6cdd5def69",
+      "frame_sha256": "7e42949b51066d379963fca94ad8f84517b8782960f1d8ce3fbecae6920fc887",
+      "frame_bytes": 49475,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-en-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "696b699c1a7f933c412c28837fd15fd7d8162e7c0a06c0015b778b6cdd5def69",
+      "frame_sha256": "a8d4c29bb2942e8b2fdb84e58c36fb53b14ccfa7082b7e3d9c6af1773a69aa3f",
+      "frame_bytes": 48602,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-es-forms-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "d6cdd08253649346fb2d601ce6b37a312ef17009bccec99bc5544c304c8c1236",
+      "frame_sha256": "db4b5fb6fa11ed586e2c6614a50663029b6e500ebd18bf8308d4f29c8f4c514c",
+      "frame_bytes": 90242,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "corpus": "ud-es-forms-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "d6cdd08253649346fb2d601ce6b37a312ef17009bccec99bc5544c304c8c1236",
+      "frame_sha256": "91d669fe54be1415f9faf51271fc8d56e1ad8a6ab6240fa15c0b6722c728db06",
+      "frame_bytes": 88357,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "corpus": "ud-es-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "2391d5ea8ba1a30bbaff3e9a1de710a1d4b9647dbbd2d9261eaffaf7bd8e97b6",
+      "frame_sha256": "bbe92644fdc1ce3f8078f2353121ba8a346150ad36b7a934ba332f5bf323d969",
+      "frame_bytes": 92928,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "corpus": "ud-es-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "2391d5ea8ba1a30bbaff3e9a1de710a1d4b9647dbbd2d9261eaffaf7bd8e97b6",
+      "frame_sha256": "7f8abe0d0947a60e06af0637ba60c3a02077e6aca62c490b5046e5a437bc1667",
+      "frame_bytes": 90997,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "corpus": "ud-ja-forms-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "474b1706d60d81dbc7b86f090bb609b874670b575387786dfc10fe0f364eab9c",
+      "frame_sha256": "588495b0e60e1574f8a3110caa945666914a5eb85754742199e91e1a0c508a40",
+      "frame_bytes": 25002,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-ja-forms-final",
+      "profile": "wordfrontier-quality",
+      "family": "GWT1",
+      "source_sha256": "474b1706d60d81dbc7b86f090bb609b874670b575387786dfc10fe0f364eab9c",
+      "frame_sha256": "2a2d750932fe215566759e0b30b49f8e3f7b60cc03505b652ca50b6052c0c342",
+      "frame_bytes": 24609,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-ja-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "ecc085aac12c61edadec0d10b4b26658aac920a2ccd03b6e65102d1605b194d3",
+      "frame_sha256": "b1df550c40133c920049fa4153e4892ad73aab65250e9d870b468484df7a2ab1",
+      "frame_bytes": 22960,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "ud-ja-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "ecc085aac12c61edadec0d10b4b26658aac920a2ccd03b6e65102d1605b194d3",
+      "frame_sha256": "a5c7518eba42a755604afe9e3d3b6691a71205c053e38edc0e6941a823654769",
+      "frame_bytes": 22424,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "ud-multilingual-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "8e10522ebaf47fbdc908aa28aaa3e8e037d30a4fc86c4c5486ca4a92cf06799e",
+      "frame_sha256": "9c651b0b5599f19dbe80f12b195702ff630ac873b05b3a981e554dc8819aac97",
+      "frame_bytes": 494220,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        17,
+        33
+      ]
+    },
+    {
+      "corpus": "ud-multilingual-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "8e10522ebaf47fbdc908aa28aaa3e8e037d30a4fc86c4c5486ca4a92cf06799e",
+      "frame_sha256": "72bcd24ade18d9ba7e9ccc0ab4d819479273ed2d05687032039f11dcf649a727",
+      "frame_bytes": 480017,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        17,
+        33
+      ]
+    },
+    {
+      "corpus": "ud-multilingual-tagged-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "f71096bbdeb58a8a3e2115d7b12c1ec823c27d492539ffb076f9938a73b4695e",
+      "frame_sha256": "eaab8e380a6c87625986b67cdf0354e2ab18d6845b680f48e4bfe334669be3c8",
+      "frame_bytes": 492070,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        17,
+        34
+      ]
+    },
+    {
+      "corpus": "ud-multilingual-tagged-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "f71096bbdeb58a8a3e2115d7b12c1ec823c27d492539ffb076f9938a73b4695e",
+      "frame_sha256": "c49bdbe3bbbaf6a195bc214ab8a464139afab44d5f071494de3cd568e8735dd5",
+      "frame_bytes": 480541,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        17,
+        34
+      ]
+    },
+    {
+      "corpus": "ud-ru-forms-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "917915064f9ddb6e91cd5204d0c477e239ee2f975270654e30564615947dbb8e",
+      "frame_sha256": "382ad5014184bd63eaf77fda01d92751cce877f8975cd90a8ff4b78cb390095c",
+      "frame_bytes": 298291,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        13,
+        25
+      ]
+    },
+    {
+      "corpus": "ud-ru-forms-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "917915064f9ddb6e91cd5204d0c477e239ee2f975270654e30564615947dbb8e",
+      "frame_sha256": "7532b49881ee958f28174ae068d53b3bc44308374ebf94d2aba07ebf372f93a3",
+      "frame_bytes": 290564,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        13,
+        25
+      ]
+    },
+    {
+      "corpus": "ud-ru-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "GWT1",
+      "source_sha256": "62b24f56940bea9d56e7d012722ef6c235a8ab5c32b92afea1c95b654776bb4e",
+      "frame_sha256": "c904d592b092089a5c94cce6f19dc53bd0147d5515f7e5edf61e02df5a7b7dd4",
+      "frame_bytes": 298297,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        13,
+        25
+      ]
+    },
+    {
+      "corpus": "ud-ru-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "62b24f56940bea9d56e7d012722ef6c235a8ab5c32b92afea1c95b654776bb4e",
+      "frame_sha256": "52b11d68fd6764450dac9a53343114fedf6ce18c65cfb88ffdc2b8adfd5a25e0",
+      "frame_bytes": 291152,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        13,
+        25
+      ]
+    },
+    {
+      "corpus": "ud-zh-forms-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "c47dc26143e3d91a2a81c72f77ba1160b65cb91d20455b445188e114b3634a4c",
+      "frame_sha256": "f7f0507642011bd6184c4955201f87435fe44c3e7447c796520701d53d386828",
+      "frame_bytes": 26739,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-zh-forms-final",
+      "profile": "wordfrontier-quality",
+      "family": "GWT1",
+      "source_sha256": "c47dc26143e3d91a2a81c72f77ba1160b65cb91d20455b445188e114b3634a4c",
+      "frame_sha256": "7ba990a8394342cea572f7a65e3ea06b6bbd775b7ad35cc2f50b6fb1dfe4c249",
+      "frame_bytes": 26016,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0,
+        1
+      ]
+    },
+    {
+      "corpus": "ud-zh-prose-final",
+      "profile": "wordfrontier-access",
+      "family": "WPG2",
+      "source_sha256": "6b9f3e0c64a291012aa537ef8ff7a122f8ba5b0358e511b25a727d7901911414",
+      "frame_sha256": "9c8c720c17f72056437df5e0c843282d36738475917d9cca8b476163f427d921",
+      "frame_bytes": 24654,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    },
+    {
+      "corpus": "ud-zh-prose-final",
+      "profile": "wordfrontier-quality",
+      "family": "WPG2",
+      "source_sha256": "6b9f3e0c64a291012aa537ef8ff7a122f8ba5b0358e511b25a727d7901911414",
+      "frame_sha256": "35d544026e8288768f2fafe8a1e3a0a16c5177abc433a973ca6551928d037163",
+      "frame_bytes": 23957,
+      "full_byte_exact": true,
+      "independent_pages": [
+        0
+      ]
+    }
+  ],
+  "invalid_dispatch_cases": 5,
+  "corrupt_full_publication_rejected": true,
+  "timing": false,
+  "reader_dependencies": {
+    "src6/experiments/wordfrontier/native_decode.cpp": {
+      "bytes": 2865,
+      "sha256": "8b4d580748d0d0c3a4493c1a26d2092642132af002f7f00a8909f9ca26d3cc88"
+    },
+    "src6/experiments/wordfrontier/build_native_decode.sh": {
+      "bytes": 1502,
+      "sha256": "69c182d3e7466bf32d338dafad2c6b3b13e29368a3fc0a8ce894858b7a39f580"
+    },
+    "src6/experiments/wordfrontier/verify_native_decode.py": {
+      "bytes": 5138,
+      "sha256": "06e9708f5caba8c489fabf38ee5299480ee32ece66c541d1571e8b369aea66a1"
+    },
+    "src6/experiments/word_constructions/prepared_wpg.cpp": {
+      "bytes": 12403,
+      "sha256": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349"
+    },
+    "src6/experiments/word_constructions/register_decode.cpp": {
+      "bytes": 10889,
+      "sha256": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906"
+    },
+    "src6/experiments/word_constructions/prepared_jobs.h": {
+      "bytes": 858,
+      "sha256": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9"
+    },
+    "src6/experiments/word_constructions/prepared_jobs.zig": {
+      "bytes": 7346,
+      "sha256": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b"
+    },
+    "src6/experiments/word_constructions/decoder_budget.zig": {
+      "bytes": 2902,
+      "sha256": "9ff93d021fab6d475eb4dc8de7eaca3bf4e64292154260ba611f4fec912e1217"
+    },
+    "src6/experiments/word_constructions/libwpgjobs.a": {
+      "bytes": 408840,
+      "sha256": "329ba6422cb437587967d46cdf283e6c469a44c020d58ade1f3b47e71aece476"
+    },
+    "src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": {
+      "bytes": 20948,
+      "sha256": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861"
+    },
+    "src6/experiments/wordgrammar/geometry/geometry_residual.h": {
+      "bytes": 6191,
+      "sha256": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9"
+    }
+  }
+}

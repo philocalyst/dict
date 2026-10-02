@@ -1,0 +1,3 @@
+{"input": "/workspace/scratch/frontier-corpora/dictionaries/freedict-eng-fra/development/words.txt", "raw": 61521, "bzip3_matched_bytes": 25512, "bzip3_whole_bytes": 25508, "encode_ns": 7767197, "decode_ns": 5948533, "decode_mbps": 10.342213786155343}
+{"input": "/workspace/scratch/frontier-corpora/dictionaries/omw-ja-20/development/words.txt", "raw": 948378, "bzip3_matched_bytes": 325733, "bzip3_whole_bytes": 292096, "encode_ns": 112196653, "decode_ns": 88573753, "decode_mbps": 10.707212553136367}
+{"input": "/workspace/scratch/frontier-corpora/dictionaries/gcide-debian-054/development/words.txt", "raw": 1011358, "bzip3_matched_bytes": 334240, "bzip3_whole_bytes": 351569, "encode_ns": 113456824, "decode_ns": 90999460, "decode_mbps": 11.11389012638097}

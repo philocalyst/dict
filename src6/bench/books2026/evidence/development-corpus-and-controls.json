@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "role": "development",
+  "corpus_manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "controls_sha256": "d250b69a570833cebe0ad425c3ccb7ef16167c269e536d7669e6fbe147459646",
+  "tools": [
+    {
+      "name": "bzip3",
+      "path": "/workspace/scratch/bzip3",
+      "sha256": "96d0e3d36f531bf4e255b43c9617ac8e6a4b2d23289647c147946761f2d6ce44",
+      "version": "bzip3 1.5.1\nCopyright (C) by Kamila Szewczyk, 2022-2023.\nLicense: GNU Lesser GPL version 3 <https://www.gnu.org/licenses/lgpl-3.0.en.html>",
+      "dynamic_libraries": [
+        {
+          "path": "/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+        },
+        {
+          "path": "/lib64/ld-linux-x86-64.so.2",
+          "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+        }
+      ]
+    },
+    {
+      "name": "bzip2",
+      "path": "/usr/bin/bzip2",
+      "sha256": "ef7b10842fa6846421d7219c7733cd6413c199dad422027286bd3d54cfac6f15",
+      "version": "bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.\n   \n   Copyright (C) 1996-2019 by Julian Seward.\n   \n   This program is free software; you can redistribute it and/or modify\n   it under the terms set out in the LICENSE file, which is included\n   in the bzip2 source distribution.\n   \n   This program is distributed in the hope that it will be useful,\n   but WITHOUT ANY WARRANTY; without even the implied warranty of\n   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n   LICENSE file for more details.",
+      "dynamic_libraries": [
+        {
+          "path": "/lib/x86_64-linux-gnu/libbz2.so.1.0",
+          "sha256": "c630f057efedc12f848710d71f40283895591e5b4608539f387895c64e0553da"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+        },
+        {
+          "path": "/lib64/ld-linux-x86-64.so.2",
+          "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+        }
+      ]
+    },
+    {
+      "name": "zstd",
+      "path": "/usr/bin/zstd",
+      "sha256": "3eb7744cf8fd1ecd46d617098ee870b3e7911fe570ffaba662c1c5b7d6456020",
+      "version": "*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***",
+      "dynamic_libraries": [
+        {
+          "path": "/lib/x86_64-linux-gnu/libz.so.1",
+          "sha256": "85590dd58edf5445e18bc7193e5ebc01ac5841f1ae187e97705a662e90c6421e"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/liblzma.so.5",
+          "sha256": "01e05a4b5268805a10a2414a8904fb1fb45c60626dce53b5ea19c1d491049b99"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/liblz4.so.1",
+          "sha256": "67bf8b84af77e962e09be661944f7c61393c4806746734e36db9fbdaebc1de36"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/libxxhash.so.0",
+          "sha256": "7dd49b353facbee50c371d0559ce29db5afee5ac33249ca5c7068420fb642762"
+        },
+        {
+          "path": "/lib64/ld-linux-x86-64.so.2",
+          "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+        }
+      ]
+    },
+    {
+      "name": "xz",
+      "path": "/usr/bin/xz",
+      "sha256": "133d08171b67ba0216b26bfd523b91442a91a1a9a253ba016849b85b6f70d088",
+      "version": "xz (XZ Utils) 5.8.1\nliblzma 5.8.1",
+      "dynamic_libraries": [
+        {
+          "path": "/lib/x86_64-linux-gnu/liblzma.so.5",
+          "sha256": "01e05a4b5268805a10a2414a8904fb1fb45c60626dce53b5ea19c1d491049b99"
+        },
+        {
+          "path": "/lib/x86_64-linux-gnu/libc.so.6",
+          "sha256": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826"
+        },
+        {
+          "path": "/lib64/ld-linux-x86-64.so.2",
+          "sha256": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0"
+        }
+      ]
+    }
+  ],
+  "harness_sha256": "8fbb571609b8aa4d53cc71bbd1c18ed5446639b6e2807925e8d1562e11b5abff",
+  "source_lock_sha256": "3e4acc5810bd7369b6416c6d2eb21cb34b2e035b50af8b99864d3ad561a4a1fc",
+  "test_command": "python3 -m unittest discover -s src6/bench/books2026 -p test_prepare.py -v",
+  "projection_tests": "8/8 pass",
+  "book_count": 6,
+  "total_full_bytes": 7552894,
+  "books": [
+    {
+      "id": "pride-and-prejudice-en",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt",
+        "bytes": 705012,
+        "utf8_scalar_count": 697950,
+        "sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1"
+      },
+      "source_sha256": "48e0522844402a86a3ea98f0947ba85ea54838db3c59022299298ed968a5a163",
+      "full_original_source_reconstruction_sha256": "48e0522844402a86a3ea98f0947ba85ea54838db3c59022299298ed968a5a163",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 161119,
+          "frame_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 207909,
+          "frame_sha256": "114c4e947e186ff71afa6ed09873c7c61b4822cc01010b4931339bc474d040f6",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 176128,
+          "frame_sha256": "e9131bb101b7c22cb3a7ee4eb4cb297587ce3061ad4195680332ebc61d14d14a",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 206200,
+          "frame_sha256": "323b32703e77cb6ff1d08626b322ac176c59944179891d816d057b91a3f443ae",
+          "exact_source_verified": true
+        }
+      }
+    },
+    {
+      "id": "war-and-peace-en",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt",
+        "bytes": 3339896,
+        "utf8_scalar_count": 3274043,
+        "sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186"
+      },
+      "source_sha256": "6cbcc5ca5e590fb9ace161a5b93e4ecf280d7118104be0d63b686c004cfa70ae",
+      "full_original_source_reconstruction_sha256": "6cbcc5ca5e590fb9ace161a5b93e4ecf280d7118104be0d63b686c004cfa70ae",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 732272,
+          "frame_sha256": "7d833c3e46067cb244cd86a7bbd326dd6b36c2b9da3fa1016b688fd5b64a9e0b",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 937926,
+          "frame_sha256": "11846709b15812a6b823c038f40c1d7e95322ad3c07bce3d756d1fff5ad78456",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 882505,
+          "frame_sha256": "df7a22c0b958691cde7ead682ff76d22f7fd1628eff2f01af04872d088bc2487",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 929768,
+          "frame_sha256": "93aa53c31d9aa02dced6f3555ab0c2dca315372ca63be13c049cd1d4a941cbb5",
+          "exact_source_verified": true
+        }
+      }
+    },
+    {
+      "id": "don-quijote-es",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt",
+        "bytes": 2179216,
+        "utf8_scalar_count": 2135650,
+        "sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5"
+      },
+      "source_sha256": "4973737f16b7e8b8972c08e54a95b7bc43b5d93d6738bc08f9256f9c2c68a2ba",
+      "full_original_source_reconstruction_sha256": "4973737f16b7e8b8972c08e54a95b7bc43b5d93d6738bc08f9256f9c2c68a2ba",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 500612,
+          "frame_sha256": "22103b2bc882e2e379c43fbfbcde9526970708cc72f4f413c9b385f3013da3ce",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 631808,
+          "frame_sha256": "d7d8febfaadadb0b2aac965a81c4480c1974c5d16520ad0c72c57f7c6912dbee",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 594992,
+          "frame_sha256": "820b2aedc8e3049796c3efb084136d908cef32bf6caadfbc65924d00a954ff40",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 626480,
+          "frame_sha256": "795d0a13f4b88c26cecc579613bf8625f8969a5f8e2d475305b00312d8552051",
+          "exact_source_verified": true
+        }
+      }
+    },
+    {
+      "id": "madame-bovary-fr",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt",
+        "bytes": 716472,
+        "utf8_scalar_count": 700188,
+        "sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472"
+      },
+      "source_sha256": "d8383b0e43723286604abcc1a5e96728f462e679b9b4d569d4b469d8f705f862",
+      "full_original_source_reconstruction_sha256": "d8383b0e43723286604abcc1a5e96728f462e679b9b4d569d4b469d8f705f862",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 179597,
+          "frame_sha256": "52acd8afcc05d0e2c294520442fc82f74d7a94b07ba3ba3042982844e5f9e5b2",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 226338,
+          "frame_sha256": "1b5d440c99d13d86ea775ac08e001a9040d238ae9356b7a6a0b6134ee9df7839",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 198131,
+          "frame_sha256": "c4d70d4a7bdcd317903c0aa2a0caefc17dfeeb1b6dbb9dd7501f0d1c13c148a7",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 224140,
+          "frame_sha256": "2a43eccae60f4fbcef4d9828ba4db9c4eba138e853afd49ab18f292710f2768a",
+          "exact_source_verified": true
+        }
+      }
+    },
+    {
+      "id": "die-verwandlung-de",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt",
+        "bytes": 126200,
+        "utf8_scalar_count": 123674,
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c"
+      },
+      "source_sha256": "fe91c871104780ce5a8fe3e12e79b757f6fb5ffa28ed83d6186e618fb3bf344a",
+      "full_original_source_reconstruction_sha256": "fe91c871104780ce5a8fe3e12e79b757f6fb5ffa28ed83d6186e618fb3bf344a",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 35251,
+          "frame_sha256": "aa6e44b3ddcdc535ff105498109bc21f10ad7eb8dc157739c822c13623c60ebd",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 43386,
+          "frame_sha256": "25e18d627e356a5b34bd1e82ae59fc5f016b025abbb960e03d527f7661a17021",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 37781,
+          "frame_sha256": "53c4ee510232e9353c0215254588c247f047997dc7db2436d8c35eec1a4b1f2e",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 42924,
+          "frame_sha256": "401f362b06b73157b185b9ab063cd96a8c925de4c0c5908e51aca4b24e74cc08",
+          "exact_source_verified": true
+        }
+      }
+    },
+    {
+      "id": "kokoro-ja",
+      "full": {
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt",
+        "bytes": 486098,
+        "utf8_scalar_count": 164142,
+        "sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216"
+      },
+      "source_sha256": "d0124c6a71ca3c8f6898dc84578134789fcbdf6a1133121d205ebdaf52274594",
+      "full_original_source_reconstruction_sha256": "d0124c6a71ca3c8f6898dc84578134789fcbdf6a1133121d205ebdaf52274594",
+      "controls": {
+        "bzip3": {
+          "complete_frame_bytes": 97505,
+          "frame_sha256": "89cc8c51982d584535212b2693c0b0da2f00ac14540793ae18994322bcf03c2c",
+          "exact_source_verified": true
+        },
+        "zstd": {
+          "complete_frame_bytes": 122965,
+          "frame_sha256": "f11c53f7e1f2dba235604ecce1caee457cc55813cf5855da0f84867f5c75f591",
+          "exact_source_verified": true
+        },
+        "bzip2": {
+          "complete_frame_bytes": 103143,
+          "frame_sha256": "829582f96f27847a85450ac161abceaeeb6f7459cdb6342d31654e788665e667",
+          "exact_source_verified": true
+        },
+        "xz": {
+          "complete_frame_bytes": 121188,
+          "frame_sha256": "8f6d96fea0fafd9040de53367d07e587e5e5b3be584f332ed7eea765d7e773b8",
+          "exact_source_verified": true
+        }
+      }
+    }
+  ],
+  "clocks_claim": "none; process clocks are concurrent diagnostics only"
+}

@@ -1,0 +1,33 @@
+--- audited/entropy.zig
++++ capacity/entropy.zig
+@@ -5,7 +5,7 @@
+ pub const lower: u32 = 1 << 23;
+ pub const scale: u5 = 12;
+ pub const total: u32 = 1 << scale;
+-pub const max_events: usize = 8_000_000;
++pub const max_events: usize = 128 * 1024 * 1024;
+ pub const max_models: usize = 8192;
+ fn integerBytes(input: u64) usize { var n = input; var count: usize = 1; while (n >= 128) : (n >>= 7) count += 1; return count; }
+ 
+--- audited/global_runner.zig
++++ capacity/global_runner.zig
+@@ -24,7 +24,7 @@
+ };
+ // The shared profile raises archive aggregates, never per-root unchecked
+ // integer domains. Entropy work remains capped by entropy.max_events (8M).
+-const limits = grammar.Limits{ .max_frame_bytes = 64 * 1024 * 1024, .max_roots = 65535, .max_work = 64_000_000, .max_canonical_bytes = 32 * 1024 * 1024, .dictionary = .{ .max_bytes = 32 * 1024 * 1024, .max_work = 64_000_000 }, .packet = .{ .max_work = 64_000_000 } };
++const limits = grammar.Limits{ .max_frame_bytes = 64 * 1024 * 1024, .max_roots = 65535, .max_work = 128 * 1024 * 1024, .max_canonical_bytes = 32 * 1024 * 1024, .dictionary = .{ .max_bytes = 32 * 1024 * 1024, .max_work = 128 * 1024 * 1024 }, .packet = .{ .max_work = 128 * 1024 * 1024 } };
+ pub fn main(init: std.process.Init) !void {
+     var args = std.process.Args.Iterator.init(init.minimal.args); _ = args.next();
+     const input = args.next() orelse return error.MissingInput;
+--- audited/surface.zig
++++ capacity/surface.zig
+@@ -4,7 +4,7 @@
+ const ans = @import("entropy.zig");
+ pub const Error = ans.Error || error{ InvalidConstruction, AllocationLimit };
+ pub const default_max_bytes: usize = 1024 * 1024;
+-pub const default_max_lexemes: usize = 100_000;
++pub const default_max_lexemes: usize = 500_000;
+ pub const absolute_max_bytes: usize = 32 * 1024 * 1024;
+ pub const Limits = struct { max_bytes: usize = default_max_bytes, max_lexemes: usize = default_max_lexemes, max_work: usize = ans.max_events };
+ const length_context: u32 = 899980;

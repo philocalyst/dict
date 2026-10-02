@@ -1,0 +1,20 @@
+{
+  "freeze": "/workspace/dict/src6/experiments/lexical_validation/evidence/CAPACITY-FREEZE-BOUNDED-20261002.json",
+  "freeze_sha256": "22db34ae729fb4f5ab4e824b25d04123f88c1447acad0e21c7cad12d2d04ff04",
+  "independent_audit": "/workspace/dict/src6/experiments/structural_wordcodec/CAPACITY_AUDIT_20261002.md",
+  "independent_audit_sha256": "87f959b42e18304b8e21f712e28532e4f7e9c9dd039dd8542777bf46a8d57cf6",
+  "interpretation": "Capacity-only admission repair, no model/wire/policy/source change. First fixed Turkish loss and Arabic/Japanese failures remain retained; this is not new untouched validation or a compression improvement. All remaining failures retained, no further ceilings lifted.",
+  "native_sha256": "336ebc07506450e2ee2b03c217b3da06dfc00d518c1c2a88142c586bba2d28db",
+  "protocol": "ROOT-REGISTERED-CAPACITY-RETEST/1",
+  "registered_before_outcomes_utc": "2026-10-02T01:05:21.055064+00:00",
+  "root_preflight": {
+    "all_three_original_whole_sources_required": true,
+    "all_twenty_development_candidates_and_four_selectors_byte_identical": true,
+    "exact_three_resource_files_diff_verified": true,
+    "frozen_source_runtime_test_frame_hashes_checked": 237,
+    "native_address_space_bytes": 4294967296,
+    "native_timeout_seconds": 1800,
+    "ten_options_and_both_backend_scopes_fixed": true
+  },
+  "schema": 1
+}

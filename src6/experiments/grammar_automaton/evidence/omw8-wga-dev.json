@@ -1,0 +1,28 @@
+{
+  "status": "development_only",
+  "source_bytes": 8388608,
+  "source_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+  "p6f1_graph_sha256": "1f7c356cdacbc82adb7b4ad8bcb0571580feb9b0f0706220147e1b22a393d82a",
+  "original_native_v4_bytes": 331721,
+  "original_native_v4_sha256": "96d9cb80ebfa39331cae101ae96fd693e8b6e12e1e4ef029b4f6083fe07544c1",
+  "wga_empty_selector_bytes": 331724,
+  "wga_bytes": 330666,
+  "wga_sha256": "01cfb51dc742c5d07d20f4ba7717dabfb3e3b616ba4a2d3e1959570a01d5ca8c",
+  "wga_feature": "kind_length",
+  "wga_selectors": 16,
+  "complete_candidate_trials": 35,
+  "codec_ns_diagnostic": 77257394254,
+  "ledger": {
+    "header_bytes": 6,
+    "directory_bytes": 1718,
+    "model_dictionary_bytes": 160240,
+    "payload_bytes": 168702
+  },
+  "full_decode_byte_exact": true,
+  "independent_65536_byte_pages_exact": 128,
+  "pages_total": 128,
+  "release_safe_binary_sha256": "407956175bbbf9167eafbfe6b03b9e7b51590fa257b2ea4c53b78bce15d0153f",
+  "encoder_resource_error": false,
+  "decoder_resource_error": false,
+  "allocator_peak_measured": false
+}

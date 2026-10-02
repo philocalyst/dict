@@ -1,0 +1,711 @@
+{
+  "limit_bytes": 8388608,
+  "rows": [
+    {
+      "best_factorized_delta_bytes": 189528,
+      "best_factorized_literal_mode": "frontcoded",
+      "best_factorized_mode": "top1",
+      "direct_front_coded_control": {
+        "huffman_payload_bits": 7351461,
+        "model_bytes": 369097,
+        "model_components": {
+          "frame_and_occurrence_count": 7,
+          "front_coded_type_literals": 313231,
+          "word_id_huffman_lengths": 55859
+        },
+        "payload_bytes": 918933,
+        "raw_uleb_operand_bytes": 3287101,
+        "shannon_type_id_bits": 7310254.02885623,
+        "total_bytes": 1288030
+      },
+      "factorized_candidates": [
+        {
+          "conditional_penalty_bits": 4956830.877619711,
+          "conditional_penalty_bits_per_occurrence": 4.404079290009863,
+          "huffman_payload_bits": 12371059,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00012464546609358465,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 448118987,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 448063131
+          },
+          "literal_mode": "raw",
+          "mode": "one",
+          "model_bytes": 413340,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 71651,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 171159,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 129851,
+            "stem_to_class_map": 20336
+          },
+          "payload_bytes": 1546383,
+          "raw_uleb_operand_bytes": 4261318,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 5370262.102333777,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 5430853,
+          "total_bytes": 1959723
+        },
+        {
+          "conditional_penalty_bits": 4956830.877619711,
+          "conditional_penalty_bits_per_occurrence": 4.404079290009863,
+          "huffman_payload_bits": 12371059,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00012464546609358465,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 448118987,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 448063131
+          },
+          "literal_mode": "frontcoded",
+          "mode": "one",
+          "model_bytes": 345147,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 71651,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 154733,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 78084,
+            "stem_to_class_map": 20336
+          },
+          "payload_bytes": 1546383,
+          "raw_uleb_operand_bytes": 4261318,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 5370262.102333777,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 5430853,
+          "total_bytes": 1891530
+        },
+        {
+          "conditional_penalty_bits": 283575.5932062464,
+          "conditional_penalty_bits_per_occurrence": 0.25195319913589886,
+          "huffman_payload_bits": 8408053,
+          "inventory": {
+            "classes": 7739,
+            "observed_fraction_of_class_support": 0.029229792660839478,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 1910927,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 1855071
+          },
+          "literal_mode": "raw",
+          "mode": "top1",
+          "model_bytes": 494744,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 134015,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 171159,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 129851,
+            "stem_to_class_map": 39376
+          },
+          "payload_bytes": 1051007,
+          "raw_uleb_operand_bytes": 3559764,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 697006.8179203126,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 1467847,
+          "total_bytes": 1545751
+        },
+        {
+          "conditional_penalty_bits": 283575.5932062464,
+          "conditional_penalty_bits_per_occurrence": 0.25195319913589886,
+          "huffman_payload_bits": 8408053,
+          "inventory": {
+            "classes": 7739,
+            "observed_fraction_of_class_support": 0.029229792660839478,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 1910927,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 1855071
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top1",
+          "model_bytes": 426551,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 134015,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 154733,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 78084,
+            "stem_to_class_map": 39376
+          },
+          "payload_bytes": 1051007,
+          "raw_uleb_operand_bytes": 3559764,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 697006.8179203126,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 1467847,
+          "total_bytes": 1477558
+        },
+        {
+          "conditional_penalty_bits": 21441.184911309392,
+          "conditional_penalty_bits_per_occurrence": 0.01905021186974906,
+          "huffman_payload_bits": 8225969,
+          "inventory": {
+            "classes": 13825,
+            "observed_fraction_of_class_support": 0.6429541635011626,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 86874,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 31018
+          },
+          "literal_mode": "raw",
+          "mode": "top2",
+          "model_bytes": 538053,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 176756,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 171159,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 129851,
+            "stem_to_class_map": 39944
+          },
+          "payload_bytes": 1028247,
+          "raw_uleb_operand_bytes": 3423102,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 434872.40962537564,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 1285763,
+          "total_bytes": 1566300
+        },
+        {
+          "conditional_penalty_bits": 21441.184911309392,
+          "conditional_penalty_bits_per_occurrence": 0.01905021186974906,
+          "huffman_payload_bits": 8225969,
+          "inventory": {
+            "classes": 13825,
+            "observed_fraction_of_class_support": 0.6429541635011626,
+            "observed_stem_tail_types": 55856,
+            "stems": 20333,
+            "supported_stem_tail_pairs": 86874,
+            "tail_signatures": 22039,
+            "unobserved_generated_pairs": 31018
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top2",
+          "model_bytes": 469860,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 176756,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 154733,
+            "stem_id_huffman_lengths": 20336,
+            "stem_literals": 78084,
+            "stem_to_class_map": 39944
+          },
+          "payload_bytes": 1028247,
+          "raw_uleb_operand_bytes": 3423102,
+          "shannon_stem_bits": 6896822.804142168,
+          "shannon_tail_given_class_bits": 434872.40962537564,
+          "shannon_tail_given_stem_bits": 413431.22471406625,
+          "stem_operand_bits": 6940206,
+          "tail_operand_bits": 1285763,
+          "total_bytes": 1498107
+        }
+      ],
+      "factorized_huffman_payload_delta_bits": 1056592,
+      "factorized_model_saving_bytes": -57454,
+      "factorized_payload_delta_bytes": 132074,
+      "input": "dict/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/freedict-eval8-end-to-end/external-decoded.bin",
+      "input_bytes": 8388608,
+      "input_sha256": "6bb3b4061872a262fe896be3510b294f14b743228e0864689c0621618e7ddbf8",
+      "ratio_factorized_to_direct": 1.1471456410176781,
+      "scope_note": "Exact counted diagnostic model and Huffman operands over letter-run type inventory; not a codec frame. Non-letter atoms and surrounding structure are common and omitted.",
+      "type_inventory": {
+        "candidate_substrings": 450704,
+        "factored_types": 55033,
+        "invalid_utf8_types_kept_as_identity": 0,
+        "occurrences": 1125509,
+        "over_64_codepoint_types_kept_as_identity": 1,
+        "surface_bytes": 474407,
+        "types": 55856
+      }
+    },
+    {
+      "best_factorized_delta_bytes": 147459,
+      "best_factorized_literal_mode": "frontcoded",
+      "best_factorized_mode": "top1",
+      "direct_front_coded_control": {
+        "huffman_payload_bits": 13130723,
+        "model_bytes": 412664,
+        "model_components": {
+          "frame_and_occurrence_count": 7,
+          "front_coded_type_literals": 339978,
+          "word_id_huffman_lengths": 72679
+        },
+        "payload_bytes": 1641341,
+        "raw_uleb_operand_bytes": 4213365,
+        "shannon_type_id_bits": 13080703.75983074,
+        "total_bytes": 2054005
+      },
+      "factorized_candidates": [
+        {
+          "conditional_penalty_bits": 6200326.9408351295,
+          "conditional_penalty_bits_per_occurrence": 4.339403937895996,
+          "huffman_payload_bits": 19412481,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00018717057675236926,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 388287525,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 388214849
+          },
+          "literal_mode": "raw",
+          "mode": "one",
+          "model_bytes": 362155,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 47982,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 112474,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 153256,
+            "stem_to_class_map": 24218
+          },
+          "payload_bytes": 2426561,
+          "raw_uleb_operand_bytes": 5715277,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 7168526.479239609,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 7253748,
+          "total_bytes": 2788716
+        },
+        {
+          "conditional_penalty_bits": 6200326.9408351295,
+          "conditional_penalty_bits_per_occurrence": 4.339403937895996,
+          "huffman_payload_bits": 19412481,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00018717057675236926,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 388287525,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 388214849
+          },
+          "literal_mode": "frontcoded",
+          "mode": "one",
+          "model_bytes": 285838,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 47982,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 100299,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 89114,
+            "stem_to_class_map": 24218
+          },
+          "payload_bytes": 2426561,
+          "raw_uleb_operand_bytes": 5715277,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 7168526.479239609,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 7253748,
+          "total_bytes": 2712399
+        },
+        {
+          "conditional_penalty_bits": 746973.9072190842,
+          "conditional_penalty_bits_per_occurrence": 0.5227823541278392,
+          "huffman_payload_bits": 14566168,
+          "inventory": {
+            "classes": 5801,
+            "observed_fraction_of_class_support": 0.015571955909312577,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 4667108,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 4594432
+          },
+          "literal_mode": "raw",
+          "mode": "top1",
+          "model_bytes": 457010,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 119810,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 112474,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 153256,
+            "stem_to_class_map": 47245
+          },
+          "payload_bytes": 1820771,
+          "raw_uleb_operand_bytes": 5204421,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 1715173.4456235636,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 2407435,
+          "total_bytes": 2277781
+        },
+        {
+          "conditional_penalty_bits": 746973.9072190842,
+          "conditional_penalty_bits_per_occurrence": 0.5227823541278392,
+          "huffman_payload_bits": 14566168,
+          "inventory": {
+            "classes": 5801,
+            "observed_fraction_of_class_support": 0.015571955909312577,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 4667108,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 4594432
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top1",
+          "model_bytes": 380693,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 119810,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 100299,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 89114,
+            "stem_to_class_map": 47245
+          },
+          "payload_bytes": 1820771,
+          "raw_uleb_operand_bytes": 5204421,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 1715173.4456235636,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 2407435,
+          "total_bytes": 2201464
+        },
+        {
+          "conditional_penalty_bits": 108122.64275310328,
+          "conditional_penalty_bits_per_occurrence": 0.0756714647817173,
+          "huffman_payload_bits": 14111681,
+          "inventory": {
+            "classes": 13152,
+            "observed_fraction_of_class_support": 0.19847991195178102,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 366163,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 293487
+          },
+          "literal_mode": "raw",
+          "mode": "top2",
+          "model_bytes": 523198,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 185526,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 112474,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 153256,
+            "stem_to_class_map": 47717
+          },
+          "payload_bytes": 1763961,
+          "raw_uleb_operand_bytes": 4844635,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 1076322.1811575827,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 1952948,
+          "total_bytes": 2287159
+        },
+        {
+          "conditional_penalty_bits": 108122.64275310328,
+          "conditional_penalty_bits_per_occurrence": 0.0756714647817173,
+          "huffman_payload_bits": 14111681,
+          "inventory": {
+            "classes": 13152,
+            "observed_fraction_of_class_support": 0.19847991195178102,
+            "observed_stem_tail_types": 72676,
+            "stems": 24215,
+            "supported_stem_tail_pairs": 366163,
+            "tail_signatures": 16035,
+            "unobserved_generated_pairs": 293487
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top2",
+          "model_bytes": 446881,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 185526,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 100299,
+            "stem_id_huffman_lengths": 24218,
+            "stem_literals": 89114,
+            "stem_to_class_map": 47717
+          },
+          "payload_bytes": 1763961,
+          "raw_uleb_operand_bytes": 4844635,
+          "shannon_stem_bits": 12112504.221426276,
+          "shannon_tail_given_class_bits": 1076322.1811575827,
+          "shannon_tail_given_stem_bits": 968199.5384044794,
+          "stem_operand_bits": 12158733,
+          "tail_operand_bits": 1952948,
+          "total_bytes": 2210842
+        }
+      ],
+      "factorized_huffman_payload_delta_bits": 1435445,
+      "factorized_model_saving_bytes": 31971,
+      "factorized_payload_delta_bytes": 179430,
+      "input": "dict/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/gcide-eval8-end-to-end/external-decoded.bin",
+      "input_bytes": 8388608,
+      "input_sha256": "8b93c30f4a5d659f879af5fc7db9de38ee524cc07b91ada7be2905cf5aaf519b",
+      "ratio_factorized_to_direct": 1.071790964481586,
+      "scope_note": "Exact counted diagnostic model and Huffman operands over letter-run type inventory; not a codec frame. Non-letter atoms and surrounding structure are common and omitted.",
+      "type_inventory": {
+        "candidate_substrings": 412146,
+        "factored_types": 72072,
+        "invalid_utf8_types_kept_as_identity": 0,
+        "occurrences": 1428843,
+        "over_64_codepoint_types_kept_as_identity": 0,
+        "surface_bytes": 553266,
+        "types": 72676
+      }
+    },
+    {
+      "best_factorized_delta_bytes": 133217,
+      "best_factorized_literal_mode": "frontcoded",
+      "best_factorized_mode": "top2",
+      "direct_front_coded_control": {
+        "huffman_payload_bits": 5777903,
+        "model_bytes": 441063,
+        "model_components": {
+          "frame_and_occurrence_count": 7,
+          "front_coded_type_literals": 418625,
+          "word_id_huffman_lengths": 22431
+        },
+        "payload_bytes": 722238,
+        "raw_uleb_operand_bytes": 1188413,
+        "shannon_type_id_bits": 5729659.613303556,
+        "total_bytes": 1163301
+      },
+      "factorized_candidates": [
+        {
+          "conditional_penalty_bits": 2730186.793239992,
+          "conditional_penalty_bits_per_occurrence": 2.8970234783337547,
+          "huffman_payload_bits": 8628031,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00015834232781013153,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 141642480,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 141620052
+          },
+          "literal_mode": "raw",
+          "mode": "one",
+          "model_bytes": 489778,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 37047,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 323946,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 105910,
+            "stem_to_class_map": 11434
+          },
+          "payload_bytes": 1078504,
+          "raw_uleb_operand_bytes": 2341203,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 3001923.2972015417,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 3122174,
+          "total_bytes": 1568282
+        },
+        {
+          "conditional_penalty_bits": 2730186.793239992,
+          "conditional_penalty_bits_per_occurrence": 2.8970234783337547,
+          "huffman_payload_bits": 8628031,
+          "inventory": {
+            "classes": 1,
+            "observed_fraction_of_class_support": 0.00015834232781013153,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 141642480,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 141620052
+          },
+          "literal_mode": "frontcoded",
+          "mode": "one",
+          "model_bytes": 446342,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 37047,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 320392,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 66028,
+            "stem_to_class_map": 11434
+          },
+          "payload_bytes": 1078504,
+          "raw_uleb_operand_bytes": 2341203,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 3001923.2972015417,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 3122174,
+          "total_bytes": 1524846
+        },
+        {
+          "conditional_penalty_bits": 89081.38979333616,
+          "conditional_penalty_bits_per_occurrence": 0.09452498940837507,
+          "huffman_payload_bits": 6637604,
+          "inventory": {
+            "classes": 4378,
+            "observed_fraction_of_class_support": 0.005797670901782368,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 3868450,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 3846022
+          },
+          "literal_mode": "raw",
+          "mode": "top1",
+          "model_bytes": 511266,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 53240,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 323946,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 105910,
+            "stem_to_class_map": 16729
+          },
+          "payload_bytes": 829701,
+          "raw_uleb_operand_bytes": 2085339,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 360817.893754886,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 1131747,
+          "total_bytes": 1340967
+        },
+        {
+          "conditional_penalty_bits": 89081.38979333616,
+          "conditional_penalty_bits_per_occurrence": 0.09452498940837507,
+          "huffman_payload_bits": 6637604,
+          "inventory": {
+            "classes": 4378,
+            "observed_fraction_of_class_support": 0.005797670901782368,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 3868450,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 3846022
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top1",
+          "model_bytes": 467830,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 53240,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 320392,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 66028,
+            "stem_to_class_map": 16729
+          },
+          "payload_bytes": 829701,
+          "raw_uleb_operand_bytes": 2085339,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 360817.893754886,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 1131747,
+          "total_bytes": 1297531
+        },
+        {
+          "conditional_penalty_bits": 2172.327058065799,
+          "conditional_penalty_bits_per_occurrence": 0.0023050739624917355,
+          "huffman_payload_bits": 6589182,
+          "inventory": {
+            "classes": 5246,
+            "observed_fraction_of_class_support": 0.9490922940205662,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 23631,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 1203
+          },
+          "literal_mode": "raw",
+          "mode": "top2",
+          "model_bytes": 516306,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 57805,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 323946,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 105910,
+            "stem_to_class_map": 17204
+          },
+          "payload_bytes": 823648,
+          "raw_uleb_operand_bytes": 2081587,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 273908.83101961564,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 1083325,
+          "total_bytes": 1339954
+        },
+        {
+          "conditional_penalty_bits": 2172.327058065799,
+          "conditional_penalty_bits_per_occurrence": 0.0023050739624917355,
+          "huffman_payload_bits": 6589182,
+          "inventory": {
+            "classes": 5246,
+            "observed_fraction_of_class_support": 0.9490922940205662,
+            "observed_stem_tail_types": 22428,
+            "stems": 11432,
+            "supported_stem_tail_pairs": 23631,
+            "tail_signatures": 12390,
+            "unobserved_generated_pairs": 1203
+          },
+          "literal_mode": "frontcoded",
+          "mode": "top2",
+          "model_bytes": 472870,
+          "model_components": {
+            "class_support_and_tail_code_lengths": 57805,
+            "frame_and_occurrence_count": 7,
+            "signature_literals": 320392,
+            "stem_id_huffman_lengths": 11434,
+            "stem_literals": 66028,
+            "stem_to_class_map": 17204
+          },
+          "payload_bytes": 823648,
+          "raw_uleb_operand_bytes": 2081587,
+          "shannon_stem_bits": 5457923.109342008,
+          "shannon_tail_given_class_bits": 273908.83101961564,
+          "shannon_tail_given_stem_bits": 271736.50396154984,
+          "stem_operand_bits": 5505857,
+          "tail_operand_bits": 1083325,
+          "total_bytes": 1296518
+        }
+      ],
+      "factorized_huffman_payload_delta_bits": 811279,
+      "factorized_model_saving_bytes": -31807,
+      "factorized_payload_delta_bytes": 101410,
+      "input": "dict/src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/omw-eval8-end-to-end/external-decoded.bin",
+      "input_bytes": 8388608,
+      "input_sha256": "d76875c462ecbadb0e9bc6efb371c598a2197fcc0ff5bf53e722ea2674037261",
+      "ratio_factorized_to_direct": 1.1145163633487807,
+      "scope_note": "Exact counted diagnostic model and Huffman operands over letter-run type inventory; not a codec frame. Non-letter atoms and surrounding structure are common and omitted.",
+      "type_inventory": {
+        "candidate_substrings": 672727,
+        "factored_types": 16394,
+        "invalid_utf8_types_kept_as_identity": 0,
+        "occurrences": 942411,
+        "over_64_codepoint_types_kept_as_identity": 6,
+        "surface_bytes": 509581,
+        "types": 22428
+      }
+    }
+  ],
+  "schema": "wgp6-lexical-factor-probe-1"
+}

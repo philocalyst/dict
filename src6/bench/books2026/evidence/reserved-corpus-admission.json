@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "role": "reserved-validation",
+  "selection_policy": "Selected complete distinct works/authors before codec outcomes. No codec outcomes generated. No diagnostic prefixes.",
+  "manifest_sha256": "45597f778be203cc061cf2cf11b806532110148ccc0143344270ae4c62b7041a",
+  "source_lock_sha256": "8bb3b669cba43b928cd4f8931421d9768e11bc4d2252848a596ab8b353b5d09b",
+  "total_full_bytes": 5042828,
+  "books": [
+    {
+      "id": "jane-eyre-en",
+      "author": "Charlotte Bronte",
+      "language": "en",
+      "full_bytes": 1050674,
+      "full_sha256": "852cb5ce721f94628f9dfec92521dd6af3cdeb86cc5a3a911a32fdf1e5cf3539",
+      "source_sha256": "bc74b04ec70c9283323f5043f3305c4b08e70650a96ca5a9e1c5e5c5b4c0aa9a",
+      "full_original_source_reconstruction_sha256": "bc74b04ec70c9283323f5043f3305c4b08e70650a96ca5a9e1c5e5c5b4c0aa9a"
+    },
+    {
+      "id": "trois-mousquetaires-fr",
+      "author": "Alexandre Dumas",
+      "language": "fr",
+      "full_bytes": 1394757,
+      "full_sha256": "1b1774fa830449151574b3ba908fe3ff573876c2430d836722b2ede6c9e30216",
+      "source_sha256": "f9d21d561924ee6fbaf76236575731d36d9adc1408fb048d1ca889808f9b9746",
+      "full_original_source_reconstruction_sha256": "f9d21d561924ee6fbaf76236575731d36d9adc1408fb048d1ca889808f9b9746"
+    },
+    {
+      "id": "la-regenta-es",
+      "author": "Leopoldo Alas",
+      "language": "es",
+      "full_bytes": 1869750,
+      "full_sha256": "e41f0a45999cbaafa83499b8eae2541c870cb185f0b116fcff9e0dcfa72f7326",
+      "source_sha256": "e49616cf18299bc1d52c155b65095c5c5b6d04859fe11a6b1ee0b26dcd731684",
+      "full_original_source_reconstruction_sha256": "e49616cf18299bc1d52c155b65095c5c5b6d04859fe11a6b1ee0b26dcd731684"
+    },
+    {
+      "id": "effi-briest-de",
+      "author": "Theodor Fontane",
+      "language": "de",
+      "full_bytes": 613972,
+      "full_sha256": "0a4b19e09a447649c0e353712a1d873abedccce75de9565ca3574cd515a8c69b",
+      "source_sha256": "e826e41e136f6e4ef9ce38e4f703f9b936ff54d3395511d347a569f7435fc957",
+      "full_original_source_reconstruction_sha256": "e826e41e136f6e4ef9ce38e4f703f9b936ff54d3395511d347a569f7435fc957"
+    },
+    {
+      "id": "kappa-ja",
+      "author": "芥川龍之介",
+      "language": "ja",
+      "full_bytes": 113675,
+      "full_sha256": "7d283b1772855cfda8f4bb09bed99f517a9573ec1909562f77516093d885b264",
+      "source_sha256": "c35ed7216b7cb0fd566c61ee843c75caf50c28411fe8e82ffad6199bfb1301a7",
+      "full_original_source_reconstruction_sha256": "c35ed7216b7cb0fd566c61ee843c75caf50c28411fe8e82ffad6199bfb1301a7"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "purpose": "prepared 64 KiB source-page access and full-decode comparison; separate from frozen storage matrix",
+  "raw_page_bytes": 65536,
+  "query_count": 256,
+  "query_slot_cycle": ["first", "middle", "last"],
+  "warmup_processes_per_operation": 1,
+  "paired_fresh_process_trials": 5,
+  "quiet_gate": "FRONTIER2026-ACCESS-QUIET",
+  "participants": [
+    {
+      "name": "laneA-plus-M-quality-raw",
+      "kind": "raw-native-frame",
+      "encode_argv": ["${WPG6_BIN_DIR}/m_reference", "{raw}", "{frame}", "{graph}", "65536", "20", "a-best", "1", "0"],
+      "reader_argv": ["/tmp/frontier2026-bz4-reader", "bench-reader", "{frame}", "{report}.json", "--block", "65536", "--measure", "{measure}", "--quiet-gate", "WORDZIP-READER-QUIET"],
+      "accounting": "complete native LaneA+M frame; no WPG2 page wrapper; reader keeps original immutable Jobs and reads exact 64 KiB logical source ranges"
+    },
+    {
+      "name": "laneA-plus-M-hoisted-raw",
+      "kind": "raw-native-frame",
+      "encode_argv": ["${WPG6_BIN_DIR}/m_reference", "{raw}", "{frame}", "{graph}", "65536", "20", "a-best", "1", "1"],
+      "reader_argv": ["/tmp/frontier2026-bz4-reader", "bench-reader", "{frame}", "{report}.json", "--block", "65536", "--measure", "{measure}", "--quiet-gate", "WORDZIP-READER-QUIET"],
+      "accounting": "complete native LaneA+M hoisted frame; no WPG2 page wrapper; reader keeps original immutable Jobs and reads exact 64 KiB logical source ranges"
+    },
+    {
+      "name": "wpg2-quality",
+      "kind": "wpg2-profile",
+      "encode_argv": ["python3", "src6/experiments/word_constructions/wpg_codec.py", "encode", "{raw}", "{frame}", "--profile", "quality", "--block", "65536"],
+      "reader_argv": ["src6/experiments/word_constructions/prepared_wpg", "bench", "{frame}", "{report}.json", "--measure", "{measure}", "--quiet-gate", "WORDZIP-READER-QUIET"],
+      "accounting": "complete WPG2 wrapper, page index, native model, native directory, and payload; reader preparation and original-page constructors charged"
+    },
+    {
+      "name": "wpg2-access",
+      "kind": "wpg2-profile",
+      "encode_argv": ["python3", "src6/experiments/word_constructions/wpg_codec.py", "encode", "{raw}", "{frame}", "--profile", "access", "--block", "65536"],
+      "reader_argv": ["src6/experiments/word_constructions/prepared_wpg", "bench", "{frame}", "{report}.json", "--measure", "{measure}", "--quiet-gate", "WORDZIP-READER-QUIET"],
+      "accounting": "complete WPG2 wrapper, page index, native model, native directory, and payload; reader preparation and original-page constructors charged"
+    },
+    {
+      "name": "wsb2-prepared",
+      "kind": "wsb2-frame",
+      "encoder_registry": "src6/bench/frontier2026/candidates.json",
+      "reader_argv": ["src6/experiments/wordzip/sbwt-session", "bench-reader", "{frame}", "{report}.json", "--measure", "{measure}", "--quiet-gate", "WORDZIP-READER-QUIET"],
+      "accounting": "complete WSB2 models, directory, payload; one retained prepared model followed by 256 uncached native block reads"
+    },
+    {
+      "name": "native-controls-batch-reader",
+      "kind": "wctr26-frame",
+      "codec_values": ["bzip2", "bzip3", "zstd", "xz"],
+      "encoder_argv": ["src6/bench/native_controls/native-controls", "encode", "{codec}", "{raw}", "{frame}", "--block", "65536"],
+      "verification_argv": ["src6/bench/native_controls/native-controls-reader", "{codec}", "{frame}", "{raw}", "{report}", "--mode", "verify", "--measure", "0"],
+      "full_decode_argv": ["src6/bench/native_controls/native-controls-reader", "{codec}", "{frame}", "{raw}", "{report}", "--mode", "full", "--measure", "{measure}", "--quiet-gate", "FRONTIER2026-ACCESS-QUIET"],
+      "reader_argv": ["src6/bench/native_controls/native-controls-reader", "{codec}", "{frame}", "{raw}", "{report}", "--mode", "query", "--measure", "{measure}", "--quiet-gate", "FRONTIER2026-ACCESS-QUIET"],
+      "source_files": ["src6/bench/native_controls/codec.c", "src6/bench/native_controls/reader.c"],
+      "accounting": "complete WCTR26 32-byte header, 16-byte per-block directory, CRCs, and payload; one retained codec state and 256 uncached restart decodes"
+    }
+  ],
+  "whole_frame_controls": {
+    "separate_from_matched_access": true,
+    "description": "Whole-frame bzip2/bzip3/zstd/xz controls are full-decoded and source-verified; page slicing requires full decode and is reported separately, never as matched independent page access."
+  }
+}

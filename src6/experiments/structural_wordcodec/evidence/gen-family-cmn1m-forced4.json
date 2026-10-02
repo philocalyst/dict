@@ -1,0 +1,54 @@
+{
+  "SGF1": {
+    "bytes": 89914,
+    "codec_ns": 362660760,
+    "encoder_binary_sha256": "03f5c0e98de8b1db00c5b548c6b1f5f1b8bfefc564898ea246b086879ce3c310",
+    "full_and_all_16_pages_exact": true,
+    "ledger": {
+      "definition_gen_bytes": 620,
+      "definition_gen_events": 70,
+      "dictionary_bytes": 29730,
+      "directory_bytes": 297,
+      "header_bytes": 1850,
+      "payload_bytes": 55008,
+      "payload_gen_bytes": 2408,
+      "payload_gen_events": 292,
+      "template_bytes": 1,
+      "templates": 0
+    },
+    "reader_binary_sha256": "fc96c0d4b35b69be22d394f53f475671f1918157ab98977564468835558c81f0",
+    "sha256": "7a4d23be2cc607ce41c7b34cf30400d352b73146d2ed2bca89da54f38eb8c018"
+  },
+  "admission": "forced diagnostic loses M by 3090 bytes; exact template-cap MDL chose 0 families; no 8 MiB follow-up",
+  "forward_graph_sha256": "2a4270a0a92150b25e396069b606fb093233dbb6011ee247aa1183bf442ca94d",
+  "name": "omw-cmn-20-content-development",
+  "policy": {
+    "classes": 16,
+    "exact_template_caps": [
+      0,
+      8,
+      16,
+      32,
+      64
+    ],
+    "families_eligible": true,
+    "forced": true,
+    "gen_min_match": 4,
+    "selected_template_count": 0
+  },
+  "raw_bytes": 1048576,
+  "resource_limit": {
+    "address_space_bytes": 4294967296,
+    "cpu_seconds": 120,
+    "wall_timeout_seconds": 110
+  },
+  "scope": "pinned-development",
+  "source_sha256": "bd118f9eaed4c8bed70575cb090900c4e58defc69aa968426331194dd53e8e0c",
+  "unchanged_M": {
+    "bytes": 86824,
+    "full_and_all_16_pages_exact": true,
+    "sha256": "59383ab778e9c25b548b4e2f7922d3cfd7270cce31b236b62e60cccfaab0808e"
+  },
+  "unit_tests": "4/4 pass",
+  "whole_bzip3_bytes_prior_same_source": 90524
+}

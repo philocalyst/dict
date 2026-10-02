@@ -1,0 +1,2532 @@
+{
+  "harness_sha256": "a67585242cd0390c889cb134c8cd55922d17a4d15a8398bd476ac4d93ffe45ed",
+  "rows": [
+    {
+      "case": "die-verwandlung-de",
+      "event": {
+        "accounting": {
+          "flags_bytes": 8,
+          "geometry_model_bytes": 21,
+          "header_bytes": 48,
+          "index_bytes": 24,
+          "native_frame_bytes": 38176,
+          "sum_bytes": 38277
+        },
+        "all_family_search_wall_ns": 1762710380,
+        "all_search_native_codec_ns": 1362349617,
+        "candidates": [
+          {
+            "adapter_wall_ns": 995745432,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 29,
+                "native_header_bytes": 6,
+                "native_model_dictionary_bytes": 5869,
+                "native_payload_bytes": 32433,
+                "outer_page_index_bytes_in_wrapper": 14,
+                "outer_wrapper_bytes": 37,
+                "sum_bytes": 38374
+              },
+              "archive_bytes": 38374,
+              "archive_sha256": "8fc7ed7d784860c0ed90e2cd451ba9a4117a0ee479f7215fb916cbcde9be192c",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 38374,
+                "pages": 2,
+                "payload_jobs": 2,
+                "prepare_ns": 0,
+                "raw_bytes": 126200
+              },
+              "native_payload_jobs": 2,
+              "native_verification_wall_ns": 4077910,
+              "original_page_bytes": 65536,
+              "original_pages": 2,
+              "paid_native_codec_ns": 917006247,
+              "paid_process_and_transform_wall_ns": 924614067,
+              "profile": "quality",
+              "search_wall_ns": 926462846,
+              "selected_graph": "conditional_dp",
+              "source_bytes": 126200,
+              "source_crc32": 3268100042,
+              "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+              "transformed_bytes": 126200,
+              "trials": [
+                {
+                  "codec_ns_paid": 917006247,
+                  "frame_bytes": 38442,
+                  "frame_sha256": "28ebc5427c2a94ba26c60dc18fb0de6ecd02d7047f460aace8e8517ce8774801",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 5881,
+                  "payload_bytes": 32489,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 34041531,
+                    "final_model_process": 208420912,
+                    "initial_model_process": 437891628,
+                    "price_model_process": 244187751,
+                    "python_transform": 72245
+                  },
+                  "profile": "quality",
+                  "source_bytes": 126200,
+                  "v4_frame_bytes": 38405
+                },
+                {
+                  "codec_ns_paid": 917006247,
+                  "frame_bytes": 38374,
+                  "frame_sha256": "8fc7ed7d784860c0ed90e2cd451ba9a4117a0ee479f7215fb916cbcde9be192c",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 5869,
+                  "payload_bytes": 32433,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 34041531,
+                    "final_model_process": 208420912,
+                    "initial_model_process": 437891628,
+                    "price_model_process": 244187751,
+                    "python_transform": 72245
+                  },
+                  "profile": "quality",
+                  "source_bytes": 126200,
+                  "v4_frame_bytes": 38337
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 38374
+          },
+          {
+            "adapter_wall_ns": 766603913,
+            "encoder": {
+              "backend_wall_ns": 446642610,
+              "flags_bytes": 8,
+              "frame_bytes": 38277,
+              "frame_sha256": "a9b540b802aa9105c34e48f38d20fd5c137e10129afc31cfb8f82bb832d8aa26",
+              "model_bytes": 21,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    60664
+                  ],
+                  "blocks": 2,
+                  "classes": 8,
+                  "codec_ns": 445343370,
+                  "directory_bytes": 29,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 17792656,
+                  "entries": 1652,
+                  "frame_bytes": 38176,
+                  "header_bytes": 6,
+                  "iterations": [
+                    {
+                      "deleted": 2455,
+                      "dl_bytes": 42748.23292822062,
+                      "iter": 0,
+                      "ms": 20.310321,
+                      "num_entries": 1456,
+                      "proposed_pairs": 16,
+                      "proposed_triples": 0,
+                      "tokens": 32308
+                    },
+                    {
+                      "deleted": 247,
+                      "dl_bytes": 42031.81682028643,
+                      "iter": 1,
+                      "ms": 15.87904,
+                      "num_entries": 1558,
+                      "proposed_pairs": 292,
+                      "proposed_triples": 57,
+                      "tokens": 30968
+                    },
+                    {
+                      "deleted": 238,
+                      "dl_bytes": 41871.99603444769,
+                      "iter": 2,
+                      "ms": 15.497395,
+                      "num_entries": 1609,
+                      "proposed_pairs": 244,
+                      "proposed_triples": 45,
+                      "tokens": 30522
+                    },
+                    {
+                      "deleted": 217,
+                      "dl_bytes": 41799.67644551139,
+                      "iter": 3,
+                      "ms": 15.553731,
+                      "num_entries": 1634,
+                      "proposed_pairs": 200,
+                      "proposed_triples": 42,
+                      "tokens": 30285
+                    },
+                    {
+                      "deleted": 225,
+                      "dl_bytes": 41766.300920070826,
+                      "iter": 4,
+                      "ms": 15.969218,
+                      "num_entries": 1641,
+                      "proposed_pairs": 200,
+                      "proposed_triples": 32,
+                      "tokens": 30221
+                    },
+                    {
+                      "deleted": 212,
+                      "dl_bytes": 41741.68077684596,
+                      "iter": 5,
+                      "ms": 15.989206,
+                      "num_entries": 1649,
+                      "proposed_pairs": 189,
+                      "proposed_triples": 31,
+                      "tokens": 30124
+                    },
+                    {
+                      "deleted": 197,
+                      "dl_bytes": 41721.070200830145,
+                      "iter": 6,
+                      "ms": 15.373935,
+                      "num_entries": 1652,
+                      "proposed_pairs": 170,
+                      "proposed_triples": 30,
+                      "tokens": 30108
+                    }
+                  ],
+                  "model_dictionary_bytes": 5750,
+                  "payload_bytes": 32391,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 16136092,
+                    "learning": 17792656,
+                    "seed": 3692859
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 126200,
+                  "seed_estimates": [
+                    42697.94763120041,
+                    42207.08327384142,
+                    41840.17034327136,
+                    41389.738004734165,
+                    40421.27600251981
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 30108
+                }
+              ],
+              "native_frame_bytes": 38176,
+              "page_directory_bytes": 24,
+              "pages": 2,
+              "profile": "quality",
+              "residual_fit_wall_ns": 199463225,
+              "residual_trials": [
+                {
+                  "flags_bytes": 477,
+                  "model_and_flags_bytes": 486,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 8,
+                  "model_and_flags_bytes": 29,
+                  "model_bytes": 21,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 126200,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+              "wrapper_bytes": 101
+            },
+            "format": "GWT1",
+            "frame_bytes": 38277
+          }
+        ],
+        "encoder_adapter_wall_ns": 1799847553,
+        "format": "GWT1",
+        "frame_bytes": 38277,
+        "frame_sha256": "a9b540b802aa9105c34e48f38d20fd5c137e10129afc31cfb8f82bb832d8aa26",
+        "fresh_native_all_original_pages_exact": 2,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 2104598,
+        "native_full_verification": {
+          "archive_mapped_bytes": 38277,
+          "decode_ns": 0,
+          "decoder_limit_bytes": 536870912,
+          "decoder_live_bytes": 592978,
+          "decoder_peak_bytes": 592978,
+          "flags_bytes": 8,
+          "frame_bytes": 38277,
+          "geometry_model_bytes": 21,
+          "index_bytes": 24,
+          "job_directory_bytes": 304,
+          "model_reserved_bytes": 592554,
+          "native_frame_bytes": 38176,
+          "native_job_stack_bytes": 65536,
+          "native_jobs": 2,
+          "page_scratch_peak_bytes": 131072,
+          "pages": 2,
+          "prepare_ns": 0,
+          "raw_bytes": 126200,
+          "rss_peak_kb": 14376
+        },
+        "native_or_family_inspection": {
+          "archive_mapped_bytes": 38277,
+          "decoder_limit_bytes": 536870912,
+          "decoder_live_bytes": 592978,
+          "decoder_peak_bytes": 592978,
+          "flags_bytes": 8,
+          "frame_bytes": 38277,
+          "geometry_model_bytes": 21,
+          "header_bytes": 48,
+          "index_bytes": 24,
+          "job_directory_bytes": 304,
+          "model_reserved_bytes": 592554,
+          "native_frame_bytes": 38176,
+          "native_jobs": 2,
+          "normalized_bytes": 126200,
+          "page_bytes": 65536,
+          "pages": 2,
+          "prepare_ns": 0,
+          "protocol": "GWT1-PREPARED-INSPECT/1",
+          "raw_bytes": 126200,
+          "rss_peak_kb": 14376,
+          "verified_scope": "outer header/index/tree and native model/Jobs; payload and source CRC require decode"
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 2,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 11026130,
+        "source_bytes": 126200,
+        "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer header/index/tree and native model/Jobs; payload and source CRC require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/97eb3565e3b84d22be9e1f907b389d78/encode_job/encode.stdout"
+    },
+    {
+      "case": "don-quijote-es",
+      "event": {
+        "accounting": {
+          "native_directory_bytes": 452,
+          "native_header_bytes": 6,
+          "native_model_dictionary_bytes": 63033,
+          "native_payload_bytes": 470340,
+          "outer_page_index_bytes_in_wrapper": 238,
+          "outer_wrapper_bytes": 262,
+          "sum_bytes": 534093
+        },
+        "all_family_search_wall_ns": 99005658947,
+        "all_search_native_codec_ns": 94787765385,
+        "candidates": [
+          {
+            "adapter_wall_ns": 70234877513,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 452,
+                "native_header_bytes": 6,
+                "native_model_dictionary_bytes": 63033,
+                "native_payload_bytes": 470340,
+                "outer_page_index_bytes_in_wrapper": 238,
+                "outer_wrapper_bytes": 262,
+                "sum_bytes": 534093
+              },
+              "archive_bytes": 534093,
+              "archive_sha256": "be7023d36245f389bf51226f3f52a21c50764c72e801db3813f1d61fd0ec1823",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 534093,
+                "pages": 34,
+                "payload_jobs": 34,
+                "prepare_ns": 0,
+                "raw_bytes": 2179216
+              },
+              "native_payload_jobs": 34,
+              "native_verification_wall_ns": 38924055,
+              "original_page_bytes": 65536,
+              "original_pages": 34,
+              "paid_native_codec_ns": 70023981882,
+              "paid_process_and_transform_wall_ns": 70085124431,
+              "profile": "quality",
+              "search_wall_ns": 70121837070,
+              "selected_graph": "conditional_dp",
+              "source_bytes": 2179216,
+              "source_crc32": 2574052591,
+              "source_sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+              "transformed_bytes": 2179216,
+              "trials": [
+                {
+                  "codec_ns_paid": 70023981882,
+                  "frame_bytes": 537728,
+                  "frame_sha256": "7ddd0d9dfee9b4af841e46076013945fd693aa9cd83ac5a243de4d2f26ef205e",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 63709,
+                  "payload_bytes": 473299,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 2586118459,
+                    "final_model_process": 19975995667,
+                    "initial_model_process": 24736508208,
+                    "price_model_process": 22785512435,
+                    "python_transform": 989662
+                  },
+                  "profile": "quality",
+                  "source_bytes": 2179216,
+                  "v4_frame_bytes": 537466
+                },
+                {
+                  "codec_ns_paid": 70023981882,
+                  "frame_bytes": 534093,
+                  "frame_sha256": "be7023d36245f389bf51226f3f52a21c50764c72e801db3813f1d61fd0ec1823",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 63033,
+                  "payload_bytes": 470340,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 2586118459,
+                    "final_model_process": 19975995667,
+                    "initial_model_process": 24736508208,
+                    "price_model_process": 22785512435,
+                    "python_transform": 989662
+                  },
+                  "profile": "quality",
+                  "source_bytes": 2179216,
+                  "v4_frame_bytes": 533831
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 534093
+          },
+          {
+            "adapter_wall_ns": 28769680694,
+            "encoder": {
+              "backend_wall_ns": 24766372355,
+              "flags_bytes": 136,
+              "frame_bytes": 537465,
+              "frame_sha256": "a0db7181cc643cd1c104c5dbea3f9a5e9b68c01ec00c29d38d2a0a0c6ac405a3",
+              "model_bytes": 27,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    16528
+                  ],
+                  "blocks": 34,
+                  "classes": 64,
+                  "codec_ns": 24763783503,
+                  "directory_bytes": 451,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 255636084,
+                  "entries": 14685,
+                  "frame_bytes": 536846,
+                  "header_bytes": 6,
+                  "iterations": [
+                    {
+                      "deleted": 21051,
+                      "dl_bytes": 611115.7799757747,
+                      "iter": 0,
+                      "ms": 447.922258,
+                      "num_entries": 13676,
+                      "proposed_pairs": 144,
+                      "proposed_triples": 18,
+                      "tokens": 377409
+                    },
+                    {
+                      "deleted": 1808,
+                      "dl_bytes": 604567.4082070863,
+                      "iter": 1,
+                      "ms": 309.841419,
+                      "num_entries": 14259,
+                      "proposed_pairs": 2060,
+                      "proposed_triples": 331,
+                      "tokens": 369418
+                    },
+                    {
+                      "deleted": 1613,
+                      "dl_bytes": 603246.0052311113,
+                      "iter": 2,
+                      "ms": 315.565458,
+                      "num_entries": 14484,
+                      "proposed_pairs": 1572,
+                      "proposed_triples": 266,
+                      "tokens": 367276
+                    },
+                    {
+                      "deleted": 1410,
+                      "dl_bytes": 602586.635885841,
+                      "iter": 3,
+                      "ms": 305.478606,
+                      "num_entries": 14621,
+                      "proposed_pairs": 1309,
+                      "proposed_triples": 238,
+                      "tokens": 366064
+                    },
+                    {
+                      "deleted": 1364,
+                      "dl_bytes": 602360.3094469246,
+                      "iter": 4,
+                      "ms": 306.669805,
+                      "num_entries": 14685,
+                      "proposed_pairs": 1203,
+                      "proposed_triples": 225,
+                      "tokens": 365341
+                    }
+                  ],
+                  "model_dictionary_bytes": 63041,
+                  "payload_bytes": 473348,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 255636084,
+                    "learning": 193167388,
+                    "seed": 41976562
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 2179216,
+                  "seed_estimates": [
+                    599676.3185037296,
+                    598701.0213401777,
+                    590591.8499747799,
+                    589446.1372678156,
+                    576536.6578747376
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 365341
+                }
+              ],
+              "native_frame_bytes": 536846,
+              "page_directory_bytes": 408,
+              "pages": 34,
+              "profile": "quality",
+              "residual_fit_wall_ns": 3105128242,
+              "residual_trials": [
+                {
+                  "flags_bytes": 14730,
+                  "model_and_flags_bytes": 14739,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 136,
+                  "model_and_flags_bytes": 163,
+                  "model_bytes": 27,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 2179216,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+              "wrapper_bytes": 619
+            },
+            "format": "GWT1",
+            "frame_bytes": 537465
+          }
+        ],
+        "encoder_adapter_wall_ns": 99436996478,
+        "format": "WPG2",
+        "frame_bytes": 534093,
+        "frame_sha256": "be7023d36245f389bf51226f3f52a21c50764c72e801db3813f1d61fd0ec1823",
+        "fresh_native_all_original_pages_exact": 34,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 42835557,
+        "native_full_verification": {
+          "decode_ns": 0,
+          "frame_bytes": 534093,
+          "pages": 34,
+          "payload_jobs": 34,
+          "prepare_ns": 0,
+          "raw_bytes": 2179216
+        },
+        "native_or_family_inspection": {
+          "accounting": {
+            "native_directory_bytes": 452,
+            "native_header_bytes": 6,
+            "native_model_dictionary_bytes": 63033,
+            "native_payload_bytes": 470340,
+            "outer_page_index_bytes_in_wrapper": 238,
+            "outer_wrapper_bytes": 262,
+            "sum_bytes": 534093
+          },
+          "archive_bytes": 534093,
+          "archive_sha256": "be7023d36245f389bf51226f3f52a21c50764c72e801db3813f1d61fd0ec1823",
+          "format": "WPG2",
+          "mode": 0,
+          "mode_name": "raw",
+          "native_payload_jobs": 34,
+          "original_page_bytes": 65536,
+          "original_pages": 34,
+          "source_bytes": 2179216,
+          "source_crc32": 2574052591,
+          "transformed_bytes": 2179216
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 34,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 362239716,
+        "source_bytes": 2179216,
+        "source_sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer structural CRC and unchanged native frame ledger; full payload CRCs require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/8e5e000dc5f44af08b93c3ca13089ea4/encode_job/encode.stdout"
+    },
+    {
+      "case": "kokoro-ja",
+      "event": {
+        "accounting": {
+          "native_directory_bytes": 108,
+          "native_header_bytes": 6,
+          "native_model_dictionary_bytes": 15644,
+          "native_payload_bytes": 86083,
+          "outer_page_index_bytes_in_wrapper": 56,
+          "outer_wrapper_bytes": 79,
+          "sum_bytes": 101920
+        },
+        "all_family_search_wall_ns": 6313373730,
+        "all_search_native_codec_ns": 6050746656,
+        "candidates": [
+          {
+            "adapter_wall_ns": 4393730271,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 108,
+                "native_header_bytes": 6,
+                "native_model_dictionary_bytes": 15644,
+                "native_payload_bytes": 86083,
+                "outer_page_index_bytes_in_wrapper": 56,
+                "outer_wrapper_bytes": 79,
+                "sum_bytes": 101920
+              },
+              "archive_bytes": 101920,
+              "archive_sha256": "606ce36312f696abab75681a38ac63212ff86b2983680aa97842f28bd2f96fe4",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 101920,
+                "pages": 8,
+                "payload_jobs": 8,
+                "prepare_ns": 0,
+                "raw_bytes": 486098
+              },
+              "native_payload_jobs": 8,
+              "native_verification_wall_ns": 7463785,
+              "original_page_bytes": 65536,
+              "original_pages": 8,
+              "paid_native_codec_ns": 4303669885,
+              "paid_process_and_transform_wall_ns": 4316160132,
+              "profile": "quality",
+              "search_wall_ns": 4320840788,
+              "selected_graph": "base",
+              "source_bytes": 486098,
+              "source_crc32": 3504121957,
+              "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+              "transformed_bytes": 486098,
+              "trials": [
+                {
+                  "codec_ns_paid": 4303669885,
+                  "frame_bytes": 101920,
+                  "frame_sha256": "606ce36312f696abab75681a38ac63212ff86b2983680aa97842f28bd2f96fe4",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 15644,
+                  "payload_bytes": 86083,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 127069234,
+                    "final_model_process": 1143065461,
+                    "initial_model_process": 1731562497,
+                    "price_model_process": 1314208013,
+                    "python_transform": 254927
+                  },
+                  "profile": "quality",
+                  "source_bytes": 486098,
+                  "v4_frame_bytes": 101841
+                },
+                {
+                  "codec_ns_paid": 4303669885,
+                  "frame_bytes": 102252,
+                  "frame_sha256": "85496fdc86aae8208d1669e56cfce2464d099d5c84bbff29c55dfcf7997af463",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 15666,
+                  "payload_bytes": 86393,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 127069234,
+                    "final_model_process": 1143065461,
+                    "initial_model_process": 1731562497,
+                    "price_model_process": 1314208013,
+                    "python_transform": 254927
+                  },
+                  "profile": "quality",
+                  "source_bytes": 486098,
+                  "v4_frame_bytes": 102173
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 101920
+          },
+          {
+            "adapter_wall_ns": 1919278507,
+            "encoder": {
+              "backend_wall_ns": 1748836638,
+              "flags_bytes": 32,
+              "frame_bytes": 101997,
+              "frame_sha256": "5ba5eb40ff94281570f83b794f5b387b18ab400ad524dbbfa1dda3d54298776c",
+              "model_bytes": 9,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    27346
+                  ],
+                  "blocks": 8,
+                  "classes": 16,
+                  "codec_ns": 1747076771,
+                  "directory_bytes": 108,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 50926502,
+                  "entries": 4210,
+                  "frame_bytes": 101812,
+                  "header_bytes": 6,
+                  "iterations": [
+                    {
+                      "deleted": 5693,
+                      "dl_bytes": 114092.28100838921,
+                      "iter": 0,
+                      "ms": 72.106505,
+                      "num_entries": 3822,
+                      "proposed_pairs": 21,
+                      "proposed_triples": 4,
+                      "tokens": 75729
+                    },
+                    {
+                      "deleted": 586,
+                      "dl_bytes": 112901.1277123697,
+                      "iter": 1,
+                      "ms": 55.56441,
+                      "num_entries": 4136,
+                      "proposed_pairs": 733,
+                      "proposed_triples": 167,
+                      "tokens": 73187
+                    },
+                    {
+                      "deleted": 559,
+                      "dl_bytes": 112666.90011929706,
+                      "iter": 2,
+                      "ms": 50.261288,
+                      "num_entries": 4195,
+                      "proposed_pairs": 496,
+                      "proposed_triples": 122,
+                      "tokens": 72719
+                    },
+                    {
+                      "deleted": 518,
+                      "dl_bytes": 112612.59339620301,
+                      "iter": 3,
+                      "ms": 52.158187,
+                      "num_entries": 4210,
+                      "proposed_pairs": 424,
+                      "proposed_triples": 109,
+                      "tokens": 72589
+                    }
+                  ],
+                  "model_dictionary_bytes": 15761,
+                  "payload_bytes": 85937,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 50926502,
+                    "learning": 46674036,
+                    "seed": 7024656
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 486098,
+                  "seed_estimates": [
+                    113656.05181695682,
+                    108787.66833012059,
+                    112118.58235359742,
+                    107149.6452488944,
+                    105432.66656863212
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 72589
+                }
+              ],
+              "native_frame_bytes": 101812,
+              "page_directory_bytes": 96,
+              "pages": 8,
+              "profile": "quality",
+              "residual_fit_wall_ns": 71655690,
+              "residual_trials": [
+                {
+                  "flags_bytes": 32,
+                  "model_and_flags_bytes": 41,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 32,
+                  "model_and_flags_bytes": 41,
+                  "model_bytes": 9,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 486098,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+              "wrapper_bytes": 185
+            },
+            "format": "GWT1",
+            "frame_bytes": 101997
+          }
+        ],
+        "encoder_adapter_wall_ns": 6418252711,
+        "format": "WPG2",
+        "frame_bytes": 101920,
+        "frame_sha256": "606ce36312f696abab75681a38ac63212ff86b2983680aa97842f28bd2f96fe4",
+        "fresh_native_all_original_pages_exact": 8,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 42362439,
+        "native_full_verification": {
+          "decode_ns": 0,
+          "frame_bytes": 101920,
+          "pages": 8,
+          "payload_jobs": 8,
+          "prepare_ns": 0,
+          "raw_bytes": 486098
+        },
+        "native_or_family_inspection": {
+          "accounting": {
+            "native_directory_bytes": 108,
+            "native_header_bytes": 6,
+            "native_model_dictionary_bytes": 15644,
+            "native_payload_bytes": 86083,
+            "outer_page_index_bytes_in_wrapper": 56,
+            "outer_wrapper_bytes": 79,
+            "sum_bytes": 101920
+          },
+          "archive_bytes": 101920,
+          "archive_sha256": "606ce36312f696abab75681a38ac63212ff86b2983680aa97842f28bd2f96fe4",
+          "format": "WPG2",
+          "mode": 0,
+          "mode_name": "raw",
+          "native_payload_jobs": 8,
+          "original_page_bytes": 65536,
+          "original_pages": 8,
+          "source_bytes": 486098,
+          "source_crc32": 3504121957,
+          "transformed_bytes": 486098
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 8,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 37541534,
+        "source_bytes": 486098,
+        "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer structural CRC and unchanged native frame ledger; full payload CRCs require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/1d5419f3e963453a9633da18fc6a5933/encode_job/encode.stdout"
+    },
+    {
+      "case": "madame-bovary-fr",
+      "event": {
+        "accounting": {
+          "native_directory_bytes": 146,
+          "native_header_bytes": 6,
+          "native_model_dictionary_bytes": 32675,
+          "native_payload_bytes": 160989,
+          "outer_page_index_bytes_in_wrapper": 77,
+          "outer_wrapper_bytes": 100,
+          "sum_bytes": 193916
+        },
+        "all_family_search_wall_ns": 28886105156,
+        "all_search_native_codec_ns": 27505966779,
+        "candidates": [
+          {
+            "adapter_wall_ns": 17988979413,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 146,
+                "native_header_bytes": 6,
+                "native_model_dictionary_bytes": 32675,
+                "native_payload_bytes": 160989,
+                "outer_page_index_bytes_in_wrapper": 77,
+                "outer_wrapper_bytes": 100,
+                "sum_bytes": 193916
+              },
+              "archive_bytes": 193916,
+              "archive_sha256": "7b0da6f6e501b76d1c6c9608b19ad249d36a10b847e5dc3be535b67a1dd8c06b",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 193916,
+                "pages": 11,
+                "payload_jobs": 11,
+                "prepare_ns": 0,
+                "raw_bytes": 716472
+              },
+              "native_payload_jobs": 11,
+              "native_verification_wall_ns": 15520890,
+              "original_page_bytes": 65536,
+              "original_pages": 11,
+              "paid_native_codec_ns": 17883152056,
+              "paid_process_and_transform_wall_ns": 17903359772,
+              "profile": "quality",
+              "search_wall_ns": 17909393500,
+              "selected_graph": "conditional_dp",
+              "source_bytes": 716472,
+              "source_crc32": 802790581,
+              "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+              "transformed_bytes": 716472,
+              "trials": [
+                {
+                  "codec_ns_paid": 17883152056,
+                  "frame_bytes": 194583,
+                  "frame_sha256": "cfee39404c48a326afee994cac703081ce82afde6f61dbd48a0acdc201a47a2b",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 28229,
+                  "payload_bytes": 166102,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 579518237,
+                    "final_model_process": 7800234395,
+                    "initial_model_process": 5238875138,
+                    "price_model_process": 4284361278,
+                    "python_transform": 370724
+                  },
+                  "profile": "quality",
+                  "source_bytes": 716472,
+                  "v4_frame_bytes": 194483
+                },
+                {
+                  "codec_ns_paid": 17883152056,
+                  "frame_bytes": 193916,
+                  "frame_sha256": "7b0da6f6e501b76d1c6c9608b19ad249d36a10b847e5dc3be535b67a1dd8c06b",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 32675,
+                  "payload_bytes": 160989,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 579518237,
+                    "final_model_process": 7800234395,
+                    "initial_model_process": 5238875138,
+                    "price_model_process": 4284361278,
+                    "python_transform": 370724
+                  },
+                  "profile": "quality",
+                  "source_bytes": 716472,
+                  "v4_frame_bytes": 193816
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 193916
+          },
+          {
+            "adapter_wall_ns": 10896712870,
+            "encoder": {
+              "backend_wall_ns": 9624851600,
+              "flags_bytes": 47,
+              "frame_bytes": 196930,
+              "frame_sha256": "df010dd9719be198042779545830bcd9638029dbaa8a27b09c365d2fb0fe103e",
+              "model_bytes": 21,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    61112
+                  ],
+                  "blocks": 11,
+                  "classes": 64,
+                  "codec_ns": 9622814723,
+                  "directory_bytes": 145,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 106409545,
+                  "entries": 6972,
+                  "frame_bytes": 196682,
+                  "header_bytes": 6,
+                  "iterations": [
+                    {
+                      "deleted": 10038,
+                      "dl_bytes": 224827.68846343222,
+                      "iter": 0,
+                      "ms": 143.719322,
+                      "num_entries": 6379,
+                      "proposed_pairs": 41,
+                      "proposed_triples": 5,
+                      "tokens": 145325
+                    },
+                    {
+                      "deleted": 867,
+                      "dl_bytes": 221959.6935288592,
+                      "iter": 1,
+                      "ms": 104.325015,
+                      "num_entries": 6626,
+                      "proposed_pairs": 927,
+                      "proposed_triples": 187,
+                      "tokens": 141032
+                    },
+                    {
+                      "deleted": 761,
+                      "dl_bytes": 221188.88865128587,
+                      "iter": 2,
+                      "ms": 106.830923,
+                      "num_entries": 6802,
+                      "proposed_pairs": 792,
+                      "proposed_triples": 145,
+                      "tokens": 139296
+                    },
+                    {
+                      "deleted": 693,
+                      "dl_bytes": 220835.9830505332,
+                      "iter": 3,
+                      "ms": 103.639271,
+                      "num_entries": 6901,
+                      "proposed_pairs": 665,
+                      "proposed_triples": 127,
+                      "tokens": 138395
+                    },
+                    {
+                      "deleted": 666,
+                      "dl_bytes": 220661.4536285497,
+                      "iter": 4,
+                      "ms": 103.419029,
+                      "num_entries": 6926,
+                      "proposed_pairs": 567,
+                      "proposed_triples": 124,
+                      "tokens": 138109
+                    },
+                    {
+                      "deleted": 608,
+                      "dl_bytes": 220524.76349506137,
+                      "iter": 5,
+                      "ms": 102.502554,
+                      "num_entries": 6971,
+                      "proposed_pairs": 530,
+                      "proposed_triples": 123,
+                      "tokens": 137702
+                    },
+                    {
+                      "deleted": 618,
+                      "dl_bytes": 220492.09508663946,
+                      "iter": 6,
+                      "ms": 103.589598,
+                      "num_entries": 6972,
+                      "proposed_pairs": 508,
+                      "proposed_triples": 111,
+                      "tokens": 137736
+                    }
+                  ],
+                  "model_dictionary_bytes": 33178,
+                  "payload_bytes": 163353,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 106409545,
+                    "learning": 91498044,
+                    "seed": 12195037
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 716472,
+                  "seed_estimates": [
+                    217918.2493721855,
+                    217117.64576758535,
+                    214931.50142611936,
+                    214030.86712105223,
+                    209856.9674629129
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 137736
+                }
+              ],
+              "native_frame_bytes": 196682,
+              "page_directory_bytes": 132,
+              "pages": 11,
+              "profile": "quality",
+              "residual_fit_wall_ns": 948600633,
+              "residual_trials": [
+                {
+                  "flags_bytes": 6485,
+                  "model_and_flags_bytes": 6494,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 47,
+                  "model_and_flags_bytes": 68,
+                  "model_bytes": 21,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 716472,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+              "wrapper_bytes": 248
+            },
+            "format": "GWT1",
+            "frame_bytes": 196930
+          }
+        ],
+        "encoder_adapter_wall_ns": 29045618879,
+        "format": "WPG2",
+        "frame_bytes": 193916,
+        "frame_sha256": "7b0da6f6e501b76d1c6c9608b19ad249d36a10b847e5dc3be535b67a1dd8c06b",
+        "fresh_native_all_original_pages_exact": 11,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 42486162,
+        "native_full_verification": {
+          "decode_ns": 0,
+          "frame_bytes": 193916,
+          "pages": 11,
+          "payload_jobs": 11,
+          "prepare_ns": 0,
+          "raw_bytes": 716472
+        },
+        "native_or_family_inspection": {
+          "accounting": {
+            "native_directory_bytes": 146,
+            "native_header_bytes": 6,
+            "native_model_dictionary_bytes": 32675,
+            "native_payload_bytes": 160989,
+            "outer_page_index_bytes_in_wrapper": 77,
+            "outer_wrapper_bytes": 100,
+            "sum_bytes": 193916
+          },
+          "archive_bytes": 193916,
+          "archive_sha256": "7b0da6f6e501b76d1c6c9608b19ad249d36a10b847e5dc3be535b67a1dd8c06b",
+          "format": "WPG2",
+          "mode": 0,
+          "mode_name": "raw",
+          "native_payload_jobs": 11,
+          "original_page_bytes": 65536,
+          "original_pages": 11,
+          "source_bytes": 716472,
+          "source_crc32": 802790581,
+          "transformed_bytes": 716472
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 11,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 92813777,
+        "source_bytes": 716472,
+        "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer structural CRC and unchanged native frame ledger; full payload CRCs require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/792f3c9180a14cb29499903d6f8a44fd/encode_job/encode.stdout"
+    },
+    {
+      "case": "pride-and-prejudice-en",
+      "event": {
+        "accounting": {
+          "native_directory_bytes": 143,
+          "native_header_bytes": 6,
+          "native_model_dictionary_bytes": 24545,
+          "native_payload_bytes": 144249,
+          "outer_page_index_bytes_in_wrapper": 77,
+          "outer_wrapper_bytes": 100,
+          "sum_bytes": 169043
+        },
+        "all_family_search_wall_ns": 18916779702,
+        "all_search_native_codec_ns": 17478673659,
+        "candidates": [
+          {
+            "adapter_wall_ns": 12831364209,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 143,
+                "native_header_bytes": 6,
+                "native_model_dictionary_bytes": 24545,
+                "native_payload_bytes": 144249,
+                "outer_page_index_bytes_in_wrapper": 77,
+                "outer_wrapper_bytes": 100,
+                "sum_bytes": 169043
+              },
+              "archive_bytes": 169043,
+              "archive_sha256": "2e71fa7a6f5a5636fc521c76a247b79beb0f90e07957737d0b8ac3d9cc7dcad9",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 169043,
+                "pages": 11,
+                "payload_jobs": 11,
+                "prepare_ns": 0,
+                "raw_bytes": 705012
+              },
+              "native_payload_jobs": 11,
+              "native_verification_wall_ns": 12179950,
+              "original_page_bytes": 65536,
+              "original_pages": 11,
+              "paid_native_codec_ns": 12729334123,
+              "paid_process_and_transform_wall_ns": 12745916347,
+              "profile": "quality",
+              "search_wall_ns": 12751601495,
+              "selected_graph": "base",
+              "source_bytes": 705012,
+              "source_crc32": 1400079158,
+              "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+              "transformed_bytes": 705012,
+              "trials": [
+                {
+                  "codec_ns_paid": 12729334123,
+                  "frame_bytes": 169043,
+                  "frame_sha256": "2e71fa7a6f5a5636fc521c76a247b79beb0f90e07957737d0b8ac3d9cc7dcad9",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 24545,
+                  "payload_bytes": 144249,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 614479129,
+                    "final_model_process": 3389900240,
+                    "initial_model_process": 4813524338,
+                    "price_model_process": 3927665510,
+                    "python_transform": 347130
+                  },
+                  "profile": "quality",
+                  "source_bytes": 705012,
+                  "v4_frame_bytes": 168943
+                },
+                {
+                  "codec_ns_paid": 12729334123,
+                  "frame_bytes": 169078,
+                  "frame_sha256": "919f67d9105bc3c63309ee52f194c011976b38e74a575788b1bd0be147dfb44a",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 24622,
+                  "payload_bytes": 144206,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 614479129,
+                    "final_model_process": 3389900240,
+                    "initial_model_process": 4813524338,
+                    "price_model_process": 3927665510,
+                    "python_transform": 347130
+                  },
+                  "profile": "quality",
+                  "source_bytes": 705012,
+                  "v4_frame_bytes": 168978
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 169043
+          },
+          {
+            "adapter_wall_ns": 6085130770,
+            "encoder": {
+              "backend_wall_ns": 4751388119,
+              "flags_bytes": 44,
+              "frame_bytes": 169434,
+              "frame_sha256": "f7d473559cf142b5c50a5e381406c1e3aed74a859e7ccf038949a33a647c1c06",
+              "model_bytes": 21,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    49652
+                  ],
+                  "blocks": 11,
+                  "classes": 32,
+                  "codec_ns": 4749339536,
+                  "directory_bytes": 144,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 86887397,
+                  "entries": 6056,
+                  "frame_bytes": 169189,
+                  "header_bytes": 6,
+                  "iterations": [
+                    {
+                      "deleted": 8181,
+                      "dl_bytes": 194443.77440019592,
+                      "iter": 0,
+                      "ms": 115.013723,
+                      "num_entries": 5561,
+                      "proposed_pairs": 37,
+                      "proposed_triples": 4,
+                      "tokens": 126765
+                    },
+                    {
+                      "deleted": 684,
+                      "dl_bytes": 191962.8078490094,
+                      "iter": 1,
+                      "ms": 88.687547,
+                      "num_entries": 5801,
+                      "proposed_pairs": 808,
+                      "proposed_triples": 116,
+                      "tokens": 122893
+                    },
+                    {
+                      "deleted": 611,
+                      "dl_bytes": 191392.999720147,
+                      "iter": 2,
+                      "ms": 91.146186,
+                      "num_entries": 5921,
+                      "proposed_pairs": 634,
+                      "proposed_triples": 97,
+                      "tokens": 121536
+                    },
+                    {
+                      "deleted": 550,
+                      "dl_bytes": 191020.0638398535,
+                      "iter": 3,
+                      "ms": 91.701275,
+                      "num_entries": 5979,
+                      "proposed_pairs": 519,
+                      "proposed_triples": 89,
+                      "tokens": 120988
+                    },
+                    {
+                      "deleted": 538,
+                      "dl_bytes": 190888.0907572202,
+                      "iter": 4,
+                      "ms": 90.872184,
+                      "num_entries": 6009,
+                      "proposed_pairs": 481,
+                      "proposed_triples": 87,
+                      "tokens": 120730
+                    },
+                    {
+                      "deleted": 498,
+                      "dl_bytes": 190758.67822755396,
+                      "iter": 5,
+                      "ms": 89.662811,
+                      "num_entries": 6051,
+                      "proposed_pairs": 461,
+                      "proposed_triples": 79,
+                      "tokens": 120398
+                    },
+                    {
+                      "deleted": 503,
+                      "dl_bytes": 190719.23817502125,
+                      "iter": 6,
+                      "ms": 89.003518,
+                      "num_entries": 6056,
+                      "proposed_pairs": 440,
+                      "proposed_triples": 68,
+                      "tokens": 120287
+                    }
+                  ],
+                  "model_dictionary_bytes": 24726,
+                  "payload_bytes": 144313,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 86887397,
+                    "learning": 69488348,
+                    "seed": 11917859
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 705012,
+                  "seed_estimates": [
+                    188239.49599213235,
+                    187834.85633245658,
+                    185242.2062240013,
+                    184917.6199443092,
+                    181903.32830645688
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 120287
+                }
+              ],
+              "native_frame_bytes": 169189,
+              "page_directory_bytes": 132,
+              "pages": 11,
+              "profile": "quality",
+              "residual_fit_wall_ns": 1004507084,
+              "residual_trials": [
+                {
+                  "flags_bytes": 4534,
+                  "model_and_flags_bytes": 4543,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 44,
+                  "model_and_flags_bytes": 65,
+                  "model_bytes": 21,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 705012,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+              "wrapper_bytes": 245
+            },
+            "format": "GWT1",
+            "frame_bytes": 169434
+          }
+        ],
+        "encoder_adapter_wall_ns": 19065171999,
+        "format": "WPG2",
+        "frame_bytes": 169043,
+        "frame_sha256": "2e71fa7a6f5a5636fc521c76a247b79beb0f90e07957737d0b8ac3d9cc7dcad9",
+        "fresh_native_all_original_pages_exact": 11,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 46220130,
+        "native_full_verification": {
+          "decode_ns": 0,
+          "frame_bytes": 169043,
+          "pages": 11,
+          "payload_jobs": 11,
+          "prepare_ns": 0,
+          "raw_bytes": 705012
+        },
+        "native_or_family_inspection": {
+          "accounting": {
+            "native_directory_bytes": 143,
+            "native_header_bytes": 6,
+            "native_model_dictionary_bytes": 24545,
+            "native_payload_bytes": 144249,
+            "outer_page_index_bytes_in_wrapper": 77,
+            "outer_wrapper_bytes": 100,
+            "sum_bytes": 169043
+          },
+          "archive_bytes": 169043,
+          "archive_sha256": "2e71fa7a6f5a5636fc521c76a247b79beb0f90e07957737d0b8ac3d9cc7dcad9",
+          "format": "WPG2",
+          "mode": 0,
+          "mode_name": "raw",
+          "native_payload_jobs": 11,
+          "original_page_bytes": 65536,
+          "original_pages": 11,
+          "source_bytes": 705012,
+          "source_crc32": 1400079158,
+          "transformed_bytes": 705012
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 11,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 74389104,
+        "source_bytes": 705012,
+        "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer structural CRC and unchanged native frame ledger; full payload CRCs require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/02c8576187d24cab9a59673a333f5987/encode_job/encode.stdout"
+    },
+    {
+      "case": "war-and-peace-en",
+      "event": {
+        "accounting": {
+          "native_directory_bytes": 680,
+          "native_header_bytes": 7,
+          "native_model_dictionary_bytes": 99240,
+          "native_payload_bytes": 657710,
+          "outer_page_index_bytes_in_wrapper": 357,
+          "outer_wrapper_bytes": 381,
+          "sum_bytes": 758018
+        },
+        "all_family_search_wall_ns": 144695073543,
+        "all_search_native_codec_ns": 138650474548,
+        "candidates": [
+          {
+            "adapter_wall_ns": 104556996873,
+            "encoder": {
+              "accounting": {
+                "native_directory_bytes": 680,
+                "native_header_bytes": 7,
+                "native_model_dictionary_bytes": 99240,
+                "native_payload_bytes": 657710,
+                "outer_page_index_bytes_in_wrapper": 357,
+                "outer_wrapper_bytes": 381,
+                "sum_bytes": 758018
+              },
+              "archive_bytes": 758018,
+              "archive_sha256": "2fc22c9ba4eadba2c379b566d2718e1a118297a3622ca85e21981b0392a6aeac",
+              "backend_binary_sha256": {
+                "m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+                "native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+                "native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+                "native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+                "reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+              },
+              "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+              "format": "WPG2",
+              "fresh_native_full_decode_exact": true,
+              "mode": 0,
+              "mode_name": "raw",
+              "native_decoder": {
+                "decode_ns": 0,
+                "frame_bytes": 758018,
+                "pages": 51,
+                "payload_jobs": 51,
+                "prepare_ns": 0,
+                "raw_bytes": 3339896
+              },
+              "native_payload_jobs": 51,
+              "native_verification_wall_ns": 59277742,
+              "original_page_bytes": 65536,
+              "original_pages": 51,
+              "paid_native_codec_ns": 104342676786,
+              "paid_process_and_transform_wall_ns": 104399058737,
+              "profile": "quality",
+              "search_wall_ns": 104423077075,
+              "selected_graph": "conditional_dp",
+              "source_bytes": 3339896,
+              "source_crc32": 3916139620,
+              "source_sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+              "transformed_bytes": 3339896,
+              "trials": [
+                {
+                  "codec_ns_paid": 104342676786,
+                  "frame_bytes": 759924,
+                  "frame_sha256": "eb7b8f5a7c66b1c4b85d85da6bc2c93eb7f537ddb1f418bddb8f645ccfc3bea0",
+                  "graph": "base",
+                  "mode": 0,
+                  "model_dictionary_bytes": 99084,
+                  "payload_bytes": 659772,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 7839357683,
+                    "final_model_process": 27137760138,
+                    "initial_model_process": 34564093465,
+                    "price_model_process": 34856329911,
+                    "python_transform": 1517540
+                  },
+                  "profile": "quality",
+                  "source_bytes": 3339896,
+                  "v4_frame_bytes": 759543
+                },
+                {
+                  "codec_ns_paid": 104342676786,
+                  "frame_bytes": 758018,
+                  "frame_sha256": "2fc22c9ba4eadba2c379b566d2718e1a118297a3622ca85e21981b0392a6aeac",
+                  "graph": "conditional_dp",
+                  "mode": 0,
+                  "model_dictionary_bytes": 99240,
+                  "payload_bytes": 657710,
+                  "phase_wall_ns": {
+                    "conditional_dp_process": 7839357683,
+                    "final_model_process": 27137760138,
+                    "initial_model_process": 34564093465,
+                    "price_model_process": 34856329911,
+                    "python_transform": 1517540
+                  },
+                  "profile": "quality",
+                  "source_bytes": 3339896,
+                  "v4_frame_bytes": 757637
+                }
+              ]
+            },
+            "format": "WPG2",
+            "frame_bytes": 758018
+          },
+          {
+            "adapter_wall_ns": 40137776478,
+            "encoder": {
+              "backend_wall_ns": 34311356671,
+              "flags_bytes": 204,
+              "frame_bytes": 761857,
+              "frame_sha256": "d707db375b246c982892ec7e7e78fe031ac3d78842caf8e04eae130e2952bf9b",
+              "model_bytes": 27,
+              "native_decoder_sha256": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+              "native_encoder_sha256": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+              "native_events": [
+                {
+                  "block_raw_lengths": [
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    65536,
+                    63096
+                  ],
+                  "blocks": 51,
+                  "classes": 128,
+                  "codec_ns": 34307797762,
+                  "directory_bytes": 681,
+                  "encoder_allocation_limit": 4294967296,
+                  "encoder_peak_allocated_bytes": 426122242,
+                  "entries": 20892,
+                  "frame_bytes": 760966,
+                  "header_bytes": 7,
+                  "iterations": [
+                    {
+                      "deleted": 29216,
+                      "dl_bytes": 877564.5684221138,
+                      "iter": 0,
+                      "ms": 689.11012,
+                      "num_entries": 19861,
+                      "proposed_pairs": 142,
+                      "proposed_triples": 15,
+                      "tokens": 516555
+                    },
+                    {
+                      "deleted": 2397,
+                      "dl_bytes": 869052.9178130846,
+                      "iter": 1,
+                      "ms": 473.811405,
+                      "num_entries": 20411,
+                      "proposed_pairs": 2542,
+                      "proposed_triples": 405,
+                      "tokens": 506694
+                    },
+                    {
+                      "deleted": 1946,
+                      "dl_bytes": 867288.307233127,
+                      "iter": 2,
+                      "ms": 477.756045,
+                      "num_entries": 20701,
+                      "proposed_pairs": 1926,
+                      "proposed_triples": 310,
+                      "tokens": 503511
+                    },
+                    {
+                      "deleted": 1691,
+                      "dl_bytes": 866425.709468674,
+                      "iter": 3,
+                      "ms": 472.064075,
+                      "num_entries": 20856,
+                      "proposed_pairs": 1594,
+                      "proposed_triples": 252,
+                      "tokens": 501864
+                    },
+                    {
+                      "deleted": 1721,
+                      "dl_bytes": 866220.4651828881,
+                      "iter": 4,
+                      "ms": 475.430916,
+                      "num_entries": 20892,
+                      "proposed_pairs": 1516,
+                      "proposed_triples": 241,
+                      "tokens": 501513
+                    }
+                  ],
+                  "model_dictionary_bytes": 99168,
+                  "payload_bytes": 661110,
+                  "phase_peak_allocated_bytes": {
+                    "fitting": 426122242,
+                    "learning": 351659784,
+                    "seed": 50258001
+                  },
+                  "policy": {
+                    "block_bytes": 65536,
+                    "converge_frac": 0.0005,
+                    "hoist": false,
+                    "max_input_bytes": 67108864,
+                    "max_iters": 20,
+                    "max_material_len": 256,
+                    "seed": "a-best",
+                    "symbol_order": "learner_original",
+                    "triples": true
+                  },
+                  "raw_bytes": 3339896,
+                  "seed_estimates": [
+                    856603.0199426374,
+                    851439.2192025618,
+                    846383.1096781271,
+                    840423.4350618409,
+                    824886.8001225954
+                  ],
+                  "seed_selected": "best+a4",
+                  "tokens": 501513
+                }
+              ],
+              "native_frame_bytes": 760966,
+              "page_directory_bytes": 612,
+              "pages": 51,
+              "profile": "quality",
+              "residual_fit_wall_ns": 4563975935,
+              "residual_trials": [
+                {
+                  "flags_bytes": 23681,
+                  "model_and_flags_bytes": 23690,
+                  "model_bytes": 9,
+                  "policy": "two_rows"
+                },
+                {
+                  "flags_bytes": 204,
+                  "model_and_flags_bytes": 231,
+                  "model_bytes": 27,
+                  "policy": "mdl_tree"
+                }
+              ],
+              "source_bytes": 3339896,
+              "source_identity": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+              "source_sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+              "wrapper_bytes": 891
+            },
+            "format": "GWT1",
+            "frame_bytes": 761857
+          }
+        ],
+        "encoder_adapter_wall_ns": 145779579784,
+        "format": "WPG2",
+        "frame_bytes": 758018,
+        "frame_sha256": "2fc22c9ba4eadba2c379b566d2718e1a118297a3622ca85e21981b0392a6aeac",
+        "fresh_native_all_original_pages_exact": 51,
+        "fresh_native_full_decode_exact": true,
+        "inspection_adapter_wall_ns": 41429215,
+        "native_full_verification": {
+          "decode_ns": 0,
+          "frame_bytes": 758018,
+          "pages": 51,
+          "payload_jobs": 51,
+          "prepare_ns": 0,
+          "raw_bytes": 3339896
+        },
+        "native_or_family_inspection": {
+          "accounting": {
+            "native_directory_bytes": 680,
+            "native_header_bytes": 7,
+            "native_model_dictionary_bytes": 99240,
+            "native_payload_bytes": 657710,
+            "outer_page_index_bytes_in_wrapper": 357,
+            "outer_wrapper_bytes": 381,
+            "sum_bytes": 758018
+          },
+          "archive_bytes": 758018,
+          "archive_sha256": "2fc22c9ba4eadba2c379b566d2718e1a118297a3622ca85e21981b0392a6aeac",
+          "format": "WPG2",
+          "mode": 0,
+          "mode_name": "raw",
+          "native_payload_jobs": 51,
+          "original_page_bytes": 65536,
+          "original_pages": 51,
+          "source_bytes": 3339896,
+          "source_crc32": 3916139620,
+          "transformed_bytes": 3339896
+        },
+        "operation": "encode",
+        "original_page_bytes": 65536,
+        "original_pages": 51,
+        "policy": "wordfrontier-global/1",
+        "policy_fingerprint": "dde560bff0c1f87042e928ea070fc1b571eaae52cfc05161b050383d4877db3a",
+        "policy_parameters": {
+          "GWT1": {
+            "residual_choices": [
+              "two_rows",
+              "mdl_tree"
+            ],
+            "width": 72
+          },
+          "WPG2": {
+            "deduplicate_identical_sources": true,
+            "graphs": [
+              "base",
+              "conditional_dp"
+            ],
+            "modes": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "prune": false,
+            "reparse": "both"
+          },
+          "backend_directory": "/workspace/scratch/wgp6/frozen-backend-runtime2",
+          "max_input_bytes": 33554432,
+          "original_page_bytes": 65536,
+          "profile": "quality",
+          "shared_backend": {
+            "class_search": "original_auto",
+            "hoist": false,
+            "max_iters": 20,
+            "seed": "a-best",
+            "triples": true
+          },
+          "tie_order": [
+            "WPG2",
+            "GWT1"
+          ],
+          "verify_every_original_page": true
+        },
+        "profile": "quality",
+        "runtime_sha256": {
+          "/workspace/dict/src6/experiments/bzip4/bz4/grammar2.zig": "d78548b8625421713009b475f961880b5e0cb996ecfad045244df56ffb153a62",
+          "/workspace/dict/src6/experiments/bzip4/bz4/m_lexicon.zig": "a49bf471bbaa90332bb13c20f1eaccabf1e04d716e2dae9a1ae519736ac77f90",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/binary.zig": "61bf528609a468606408d902d7452916a8145a549593138346f561cf68028d47",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/bits.zig": "ae3667d59170ff2cd6137f2c40038cb07cbd7acd97f76679430bf4475e148e8f",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/classes.zig": "20a2df1f86200bd2113575217ab4d1dc96f52c39e9ed3df2f59004a9c2f0179e",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/decode.zig": "ecb11214eb25edb68b26ba65081905e4e929128eb3ec242f2c1d20251c2b34ac",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/encode.zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/frame.zig": "1d4f97ef86cc34fee98c55c2c043ce716e3037e120fb5d099e3b369573634e20",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/lab.zig": "9f3343d866ef8a918d6250bc8cbf8ca9d772a4c1e275c6fd9625d3d84da5e250",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/learn.zig": "5e558650c6d88eca656c3ed6751643c0a3a9bbf3ba6ab2f061085a4ceab8b096",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/main.zig": "63e72fd469d8b940d380e021e587140f33728e7423753385de9d0b8bd30f34ec",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/model.zig": "72dd4d15bc4459f197b337786570243b93fe79e7c2e2f6cf6ef1b4fdb77a50d3",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/plan.zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/root.zig": "81b8a717d18bd7d1ebca9e4237e894d1aa2b263c7d701bc2a987786cb79996c2",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/tans.zig": "79ada042b529e8ca07a113413fa3da09d9265b00a340c0f435c7fadaa5d8c49a",
+          "/workspace/dict/src6/experiments/bzip4/bz4/v3/src/test.zig": "9d51afd0fa09ff2b916fe47240b479f1156bf5432ca92189e2a9ec6b4c0ad8fb",
+          "/workspace/dict/src6/experiments/word_constructions/attribute_register.py": "e4ba58487db15e1839810c21ad6eb21b0bc093f1ec72a4e205a89421d2d1efa2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_best.py": "611c048ac0a2f4adc59ed589a1648dfdd292e3baadaab29aa483a17bb14ed503",
+          "/workspace/dict/src6/experiments/word_constructions/compose_dp.py": "d5f6b88a9b0b49387b4dd6f3f1e5620030b946568ff4b6aaf590bf2dce9576cd",
+          "/workspace/dict/src6/experiments/word_constructions/compose_m.py": "1cc94a63f73304d694335126154d4152d93cb2ecebd9a9475971ecc6028f8383",
+          "/workspace/dict/src6/experiments/word_constructions/compose_page.py": "ab3a6b28e5d29cdb8262c53db3994a964cb972c09fa185de285b8a520b002dc2",
+          "/workspace/dict/src6/experiments/word_constructions/compose_register.py": "65382728ad6b141bf1c5ef0bdeddfa13b2b18c0674a238845329c98ebc83cdc4",
+          "/workspace/dict/src6/experiments/word_constructions/compose_scope.py": "102dbd434edc144dce09ea83a5cfd64e989adf7307e30736af44c363d9efc4e8",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_fields.py": "813cea418a84ba0e615c9a6f071693fd5bad425d735fd5a7b8644a577a11c3be",
+          "/workspace/dict/src6/experiments/word_constructions/dependent_members.py": "24089afb37b0e715a0118f021c78c80594b1c54fbacdcdf61c8aead2b254007e",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.h": "0c43310533aa471713c00aa6d4618582d9859aedd59da6a01b062c6e73c108b9",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_jobs.zig": "17ce69fad884893f38a096c6890c0d2fb0e1c898f2562d2cb38e6a6bec60f49b",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg": "fb10045310fed707a7e3df8ac5ce6d37972e78d4bc4b656c684ff309cf6a69e5",
+          "/workspace/dict/src6/experiments/word_constructions/prepared_wpg.cpp": "a1901f9982e7debc2c0cf45e0d6a2e708bca8bfa02d9797e08953e6349dcb349",
+          "/workspace/dict/src6/experiments/word_constructions/prior_word_register.py": "d27bd61d7129dd5d51b0437a008267c654e085766d1bf16de2ffa4cf3e72c02f",
+          "/workspace/dict/src6/experiments/word_constructions/register_decode.cpp": "eed54030fa46dfb529ead6273ca3df341244eb7d468d6e123f81048fab55f906",
+          "/workspace/dict/src6/experiments/word_constructions/scope_register.py": "fe43288b61ebc25f78f22dad6af1cebfddcbdecc55ef1f8a79587a756b19e40c",
+          "/workspace/dict/src6/experiments/word_constructions/screen.py": "81b434cc1aa833e73ad6cf8728dc33148f2f6d695126989b42728ccb397b70bd",
+          "/workspace/dict/src6/experiments/word_constructions/template_split.py": "0dd813206b238427129466575b5a5b6ccf88a3c75c6cb02e783db539094421c0",
+          "/workspace/dict/src6/experiments/word_constructions/wpg_codec.py": "4e298f4d3fa03d4e2af346e2f671c1ddd9c9f7d12ca4a7a2940ce4c6dc563353",
+          "/workspace/dict/src6/experiments/wordfrontier/wordfrontier.py": "ed64f8cec4e5eda4d4ef3e6d90c92ad95d4dae19903017488ff2b4cc925e7c64",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/context_tree.py": "35d52c315621a9f93fd0cd58522a8c59d1a589120e9bbcd5f449a5b192b9a1b1",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry.py": "233ea8f95e3065cc3ccd7f7090f01f777a6389c3c84ab12bbab7e0ea1e5da78c",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/geometry_residual.h": "62d911a54ad6e6485f64ebd250c0f13506b64e4b593340b205a1ccf105adadb9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/pages.py": "412620c1dadad37d54fe67099ee99144d973cf87ccc9ea48f93cc2183421f6b9",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry": "7d39bfb1a2756c421b01186947c28b4d75f58901d010926661467d1bfec65a57",
+          "/workspace/dict/src6/experiments/wordgrammar/geometry/prepared_geometry.cpp": "7ccf3d4a6e3371983bc074e8ef2e81cefb773676e81204337f9b16fdc6b81861",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/budget.zig": "57a9ab10326acf559d0162b1c076116abf97e3c43fbc015f87c37911e6a28de7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/learner_epochs.zig": "49c2523b1efb1638983c9dd95b90eeb0efd16af5829cc90f8e3db9c39f74e5d3",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/lifetime_fit.zig": "d4e38b884438505fd8b90e47c10ee4c5f5c12aa20fbc1ec2b14c2bd4a203ca52",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/m_reference.zig": "f046619191388287e6ae1697a43253682ec8c02ee814f969a8660f15b0301425",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native.zig": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward.zig": "1cdfc91e1e9172d21bdc456f6ec53934ebc80fe50caf6b2871a6c1331b09d8a7",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/native_forward_hoist.zig": "47efa1f9df1bfcbf518b9d437b8fb90b99b4ec4c7b5da34064c746ba1daa9146",
+          "/workspace/dict/src6/experiments/wordgrammar/wgp6/reparse_context.cpp": "296616126368202c17e775eec5c682409f163978e8f5b8a08a32a7b4a37b82d9",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/m_reference": "40a7aad7afdb9316382e1c6dcfea438e46baf11556b504f52964d4287506ca9f",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward": "deda8c55bc0cbb596d6441e70065c3b20732402a89385e92444b39e389a5b7d7",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/native_forward_hoist": "a20559cbc8bb2cb94ed43f57df2774bcfd3c1157072faff906f7d59869ffff34",
+          "/workspace/scratch/wgp6/frozen-backend-runtime2/reparse_context": "f642a4cb981768158131ce4d8b31d99fa1e967cd1da3403946df08dd70fbf376"
+        },
+        "selected_verification_wall_ns": 1016681067,
+        "source_bytes": 3339896,
+        "source_sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186",
+        "tie_order": [
+          "WPG2",
+          "GWT1"
+        ],
+        "timing_scope": "adapter wall includes all family trials and integrity gates; native codec sum includes all C++/Zig search phases, excludes Python transforms and process/file I/O",
+        "verified_scope": "outer structural CRC and unchanged native frame ledger; full payload CRCs require decode"
+      },
+      "stdout_path": "/workspace/scratch/frontier-loop-books6/run/trials/5e45c79ba17f494f9827c72b65dafa5a/encode_job/encode.stdout"
+    }
+  ],
+  "scope": "Complete paid automatic family/search telemetry. All process clocks diagnostic; no speed claim. Selected outer frames independently verified by loop."
+}

@@ -1,0 +1,567 @@
+{
+  "status": "development_diagnostic_bzip3_backend_not_new_native_codec",
+  "source_script_sha256": "ec2f3259f373b60ec6bfbf607ae470f8a34da00c451d6186622ec3d4d02dd3c8",
+  "runner_sha256": "244ec2770d333be965bf797bf694cdc2bcff78438db21f9408c653eaba591869",
+  "manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "controls_sha256": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "backend_path": "/workspace/scratch/bzip3",
+  "backend_sha256": "96d0e3d36f531bf4e255b43c9617ac8e6a4b2d23289647c147946761f2d6ce44",
+  "header_bytes": 64,
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "source_bytes": 705012,
+      "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+      "bzip3_control_bytes": 161119,
+      "bzip3_control_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+      "optimistic_free_donor_position_residual_frame_bytes": 150165,
+      "optimistic_free_donor_position_residual_frame_sha256": "2af1ab58812d5a7607c78b438f3dc1d2f393df1b90b8f632b063b764f0e7bb52",
+      "route_frame_bytes": 23732,
+      "route_frame_sha256": "411532d81699e72becf94ae418e439dc4fff7cc33a026f4ece17c172ec254969",
+      "literal_frame_bytes": 160880,
+      "literal_frame_sha256": "8bd3bd77b2efb28fbe9b2473686b8b629b51b82ae77b40ef56c729cc4bb183db",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 184676,
+      "paid_two_backend_frame_sha256": "c16171f7c8fd0fe5f424483ea27fd82878ee23abb6ef8156cfd2c3b66d0708cf",
+      "paid_to_bzip3_ratio": 1.1462087028842036,
+      "optimistic_to_bzip3_ratio": 0.9320129841918086,
+      "all_source_pages_exact": 11,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+        "source_bytes": 705012,
+        "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+        "optimistic_literal_bytes": 271173,
+        "optimistic_literal_sha256": "d020e683bcc068dac1317da179096351e89dace9b6222a895394b477bb22a75d",
+        "route_bytes": 32818,
+        "route_sha256": "96ac0a128f246c291db96ca93a5e49dfcf326369d85df207b8ad5b1cf14b3595",
+        "paid_literal_bytes": 672949,
+        "paid_literal_sha256": "a30a86af5fdba4dde32961ce35a7b21f25bc255edaa2b31d32da7daf7d59f93e",
+        "pages_exact": 11,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 9345,
+          "optimistic_covered_bytes": 433839,
+          "optimistic_lcs_runs": 311111,
+          "paid_covered_bytes": 32063,
+          "paid_keep_segments": 3109,
+          "literal_clauses": 6500,
+          "candidate_pairs": 74364,
+          "candidate_work_cells": 1087586675,
+          "donor_clauses": 2845,
+          "length_distributions": {
+            "clause": {
+              "count": 9345,
+              "min": 2,
+              "p50": 50,
+              "p90": 185,
+              "max": 704,
+              "bins": {
+                "31": 3537,
+                "63": 1799,
+                "127": 2158,
+                "511": 361,
+                "255": 1477,
+                "512+": 13
+              }
+            },
+            "candidate_donor": {
+              "count": 74364,
+              "min": 3,
+              "p50": 113,
+              "p90": 277,
+              "max": 704,
+              "bins": {
+                "31": 18988,
+                "63": 5924,
+                "127": 16251,
+                "511": 8876,
+                "255": 23892,
+                "512+": 433
+              }
+            },
+            "paid_donor": {
+              "count": 2845,
+              "min": 9,
+              "p50": 174,
+              "p90": 336,
+              "max": 704,
+              "bins": {
+                "127": 658,
+                "63": 174,
+                "255": 1284,
+                "31": 98,
+                "511": 604,
+                "512+": 27
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "source_bytes": 1048576,
+      "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+      "bzip3_control_bytes": 247364,
+      "bzip3_control_sha256": "d309e9e67a3f54d612c167d95410744cd64dec2de7fdccbcbb4fcd50bc48c4c5",
+      "optimistic_free_donor_position_residual_frame_bytes": 223339,
+      "optimistic_free_donor_position_residual_frame_sha256": "1b0336a15a2c8d75b3707bd4b70377afc783d1689553aa24dfe7242b6f05c066",
+      "route_frame_bytes": 42533,
+      "route_frame_sha256": "f820b0acb237dd17d94cc4d8219acc5fa42493a1660d8871b6dff41812b1a2bc",
+      "literal_frame_bytes": 245018,
+      "literal_frame_sha256": "094adca21f975dfee28e34a773d1234a60b8bceb467baa380d41a87483be9b48",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 287615,
+      "paid_two_backend_frame_sha256": "996d857a391b335182157e6de05735341bbb7532048be4eb537323ea3d718d19",
+      "paid_to_bzip3_ratio": 1.162719716692809,
+      "optimistic_to_bzip3_ratio": 0.9028759237399137,
+      "all_source_pages_exact": 16,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+        "source_bytes": 1048576,
+        "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+        "optimistic_literal_bytes": 407247,
+        "optimistic_literal_sha256": "30d7e9fc9aa8ef760bd320fc57e13e5d7e7269ed74db2e63de8f6c9e9c51bea2",
+        "route_bytes": 61626,
+        "route_sha256": "08f51b0a444a4782e1bbcbfea97d041920fd38c182453057d57d561f26322691",
+        "paid_literal_bytes": 972733,
+        "paid_literal_sha256": "e0556ba27598b244937b0fab6dc67b731705b12fc86446528c30789718d73488",
+        "pages_exact": 16,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 17552,
+          "optimistic_covered_bytes": 641329,
+          "optimistic_lcs_runs": 440925,
+          "paid_covered_bytes": 75843,
+          "paid_keep_segments": 6308,
+          "literal_clauses": 11989,
+          "candidate_pairs": 139840,
+          "candidate_work_cells": 1491758101,
+          "donor_clauses": 5563,
+          "length_distributions": {
+            "clause": {
+              "count": 17552,
+              "min": 1,
+              "p50": 29,
+              "p90": 162,
+              "max": 761,
+              "bins": {
+                "31": 9002,
+                "63": 2664,
+                "127": 3204,
+                "511": 456,
+                "255": 2204,
+                "512+": 22
+              }
+            },
+            "candidate_donor": {
+              "count": 139840,
+              "min": 1,
+              "p50": 79,
+              "p90": 243,
+              "max": 761,
+              "bins": {
+                "31": 52245,
+                "63": 11482,
+                "127": 27579,
+                "511": 11078,
+                "255": 36738,
+                "512+": 718
+              }
+            },
+            "paid_donor": {
+              "count": 5563,
+              "min": 8,
+              "p50": 145,
+              "p90": 296,
+              "max": 761,
+              "bins": {
+                "31": 687,
+                "63": 377,
+                "255": 2305,
+                "127": 1341,
+                "511": 806,
+                "512+": 47
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "language": "es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "source_bytes": 1048576,
+      "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+      "bzip3_control_bytes": 252940,
+      "bzip3_control_sha256": "5e878a3338c8239937b4bff6eb9572952f9f2847a6fa07d6376e8789ac132b52",
+      "optimistic_free_donor_position_residual_frame_bytes": 220574,
+      "optimistic_free_donor_position_residual_frame_sha256": "a9091bf4a6ac2ed2403c04785bfd6519c9551c62bc1a4488364256bdb5c457a4",
+      "route_frame_bytes": 27357,
+      "route_frame_sha256": "da0a36b3eb6194fdb7b733cdc46c4507ed61c8fd522a348c695619e69af80bb7",
+      "literal_frame_bytes": 251706,
+      "literal_frame_sha256": "de14d95ed9a4de5e35c0b170bde424223f874425f551800586dec818baef5cd4",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 279127,
+      "paid_two_backend_frame_sha256": "a169b413e7e7718cf8b85f16a32c999314e3e8eaa798ede4167121420cb23cc5",
+      "paid_to_bzip3_ratio": 1.1035304815371234,
+      "optimistic_to_bzip3_ratio": 0.8720408001897684,
+      "all_source_pages_exact": 16,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+        "source_bytes": 1048576,
+        "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+        "optimistic_literal_bytes": 404393,
+        "optimistic_literal_sha256": "63f271f59d93b0ed1d0ef9f29193193e91024970432062487a3ec1349114ca52",
+        "route_bytes": 37639,
+        "route_sha256": "a7bddab3786030878375624c1d7999642a08a0e5052af7308e35679b79cdb419",
+        "paid_literal_bytes": 998871,
+        "paid_literal_sha256": "7aea7555f68f0d0766803a8119a98ed8e471d526f9ed447820e9e1fd839744d7",
+        "pages_exact": 16,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 6792,
+          "optimistic_covered_bytes": 644183,
+          "optimistic_lcs_runs": 456289,
+          "paid_covered_bytes": 49705,
+          "paid_keep_segments": 4274,
+          "literal_clauses": 3513,
+          "candidate_pairs": 53760,
+          "candidate_work_cells": 3221649228,
+          "donor_clauses": 3279,
+          "length_distributions": {
+            "clause": {
+              "count": 6792,
+              "min": 1,
+              "p50": 115,
+              "p90": 369,
+              "max": 1024,
+              "bins": {
+                "31": 2131,
+                "63": 473,
+                "127": 1019,
+                "512+": 286,
+                "255": 1727,
+                "511": 1156
+              }
+            },
+            "candidate_donor": {
+              "count": 53760,
+              "min": 1,
+              "p50": 235,
+              "p90": 578,
+              "max": 1024,
+              "bins": {
+                "31": 11572,
+                "63": 1508,
+                "127": 3748,
+                "512+": 7523,
+                "255": 12296,
+                "511": 17113
+              }
+            },
+            "paid_donor": {
+              "count": 3279,
+              "min": 10,
+              "p50": 310,
+              "p90": 636,
+              "max": 1024,
+              "bins": {
+                "63": 67,
+                "512+": 646,
+                "255": 878,
+                "511": 1393,
+                "127": 218,
+                "31": 77
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "language": "fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "source_bytes": 716472,
+      "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+      "bzip3_control_bytes": 179597,
+      "bzip3_control_sha256": "52acd8afcc05d0e2c294520442fc82f74d7a94b07ba3ba3042982844e5f9e5b2",
+      "optimistic_free_donor_position_residual_frame_bytes": 149634,
+      "optimistic_free_donor_position_residual_frame_sha256": "9d0d179335bf35f1ee33db76e7d6a19a4865a4e42daed82e7f2f140c65df63b9",
+      "route_frame_bytes": 20360,
+      "route_frame_sha256": "a0eea5bf181d731b1338c695d70e714956b76eda060575518101db5785168085",
+      "literal_frame_bytes": 179314,
+      "literal_frame_sha256": "9b0eb275c23c4d6c32ac4ae87ac368f5aa90ff5b911c75fac4c8702c51da98ca",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 199738,
+      "paid_two_backend_frame_sha256": "66e03f95e784736eda575743471f24bb3aea4984f8f14a4ace4bd4bc05f3bcc2",
+      "paid_to_bzip3_ratio": 1.1121455258161328,
+      "optimistic_to_bzip3_ratio": 0.8331653646775837,
+      "all_source_pages_exact": 11,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+        "source_bytes": 716472,
+        "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+        "optimistic_literal_bytes": 263467,
+        "optimistic_literal_sha256": "6d4e958724f003b1ff30f887e3a7375c45385e3669c1e33aad67fdf85e1715b0",
+        "route_bytes": 28904,
+        "route_sha256": "379d770017a086dac63729daf19126b10ec81e4fe3b296e234d59d3ff215ec8d",
+        "paid_literal_bytes": 695191,
+        "paid_literal_sha256": "ae10989745e56994598e5fb6c56ec17ce5a7f4ca5f98d84a4c436f8f1229802a",
+        "pages_exact": 11,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 11335,
+          "optimistic_covered_bytes": 453005,
+          "optimistic_lcs_runs": 327845,
+          "paid_covered_bytes": 21281,
+          "paid_keep_segments": 2092,
+          "literal_clauses": 9365,
+          "candidate_pairs": 90284,
+          "candidate_work_cells": 1326487292,
+          "donor_clauses": 1970,
+          "length_distributions": {
+            "clause": {
+              "count": 11335,
+              "min": 1,
+              "p50": 27,
+              "p90": 182,
+              "max": 1024,
+              "bins": {
+                "31": 5974,
+                "63": 1579,
+                "255": 1555,
+                "127": 1789,
+                "511": 417,
+                "512+": 21
+              }
+            },
+            "candidate_donor": {
+              "count": 90284,
+              "min": 1,
+              "p50": 95,
+              "p90": 298,
+              "max": 1024,
+              "bins": {
+                "31": 32795,
+                "63": 6874,
+                "255": 24827,
+                "127": 11642,
+                "511": 13101,
+                "512+": 1045
+              }
+            },
+            "paid_donor": {
+              "count": 1970,
+              "min": 8,
+              "p50": 201,
+              "p90": 365,
+              "max": 1024,
+              "bins": {
+                "63": 131,
+                "255": 861,
+                "511": 558,
+                "127": 242,
+                "31": 125,
+                "512+": 53
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "language": "de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "source_bytes": 126200,
+      "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+      "bzip3_control_bytes": 35251,
+      "bzip3_control_sha256": "aa6e44b3ddcdc535ff105498109bc21f10ad7eb8dc157739c822c13623c60ebd",
+      "optimistic_free_donor_position_residual_frame_bytes": 29351,
+      "optimistic_free_donor_position_residual_frame_sha256": "7e270d777f4f5bc50e60a8b7fb76dae043f41017dd9c62d083d74882513063cc",
+      "route_frame_bytes": 3619,
+      "route_frame_sha256": "02a55943cccb85aeae608057369ba578eaf678649ce2171f8d3bb0bb9f957755",
+      "literal_frame_bytes": 34980,
+      "literal_frame_sha256": "ecb7e21c79ad23c3e5b984ca904048b2cd7be9598de1c16d018cda8fc4f7c4d4",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 38663,
+      "paid_two_backend_frame_sha256": "cf728bd002893f6e0053b93123555e456565a5ff0c435518cbdf241e77379d7d",
+      "paid_to_bzip3_ratio": 1.0967915803806985,
+      "optimistic_to_bzip3_ratio": 0.832628861592579,
+      "all_source_pages_exact": 2,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+        "source_bytes": 126200,
+        "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+        "optimistic_literal_bytes": 50796,
+        "optimistic_literal_sha256": "728566f640f02ba68fbe22f0acc34a2eb53db0b3b162f8e38cd00f694b47b55a",
+        "route_bytes": 4734,
+        "route_sha256": "fe079326d936fa0f97c21462bcdd5bbb7807088d9bc32d0d90db0cf9bbe418b9",
+        "paid_literal_bytes": 120558,
+        "paid_literal_sha256": "90c2b33d8fa4899c75436afb1354d17d778b96c3ab93c5ce22099cef0fb5c351",
+        "pages_exact": 2,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 855,
+          "optimistic_covered_bytes": 75404,
+          "optimistic_lcs_runs": 53028,
+          "paid_covered_bytes": 5642,
+          "paid_keep_segments": 519,
+          "literal_clauses": 428,
+          "candidate_pairs": 6768,
+          "candidate_work_cells": 314430761,
+          "donor_clauses": 427,
+          "length_distributions": {
+            "clause": {
+              "count": 855,
+              "min": 4,
+              "p50": 119,
+              "p90": 319,
+              "max": 947,
+              "bins": {
+                "31": 166,
+                "127": 185,
+                "63": 101,
+                "255": 249,
+                "511": 135,
+                "512+": 19
+              }
+            },
+            "candidate_donor": {
+              "count": 6768,
+              "min": 4,
+              "p50": 214,
+              "p90": 486,
+              "max": 947,
+              "bins": {
+                "31": 903,
+                "127": 731,
+                "63": 223,
+                "255": 2219,
+                "511": 2146,
+                "512+": 546
+              }
+            },
+            "paid_donor": {
+              "count": 427,
+              "min": 39,
+              "p50": 274,
+              "p90": 521,
+              "max": 947,
+              "bins": {
+                "63": 7,
+                "127": 38,
+                "511": 186,
+                "255": 143,
+                "512+": 53
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "language": "ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "source_bytes": 486098,
+      "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+      "bzip3_control_bytes": 97505,
+      "bzip3_control_sha256": "89cc8c51982d584535212b2693c0b0da2f00ac14540793ae18994322bcf03c2c",
+      "optimistic_free_donor_position_residual_frame_bytes": 110369,
+      "optimistic_free_donor_position_residual_frame_sha256": "713d345595f51735e12785656e2542f8e6fc8b313af4f17b4d1f423b8e1327d7",
+      "route_frame_bytes": 27761,
+      "route_frame_sha256": "4cc11d98f6fb20e26af595c6cb6effa721dbc9cb8c041175d3f9a77016437500",
+      "literal_frame_bytes": 95353,
+      "literal_frame_sha256": "db526f6eaacb5ed906365dcd04fcaa441ab2867f41b8a3144138543c8218f49a",
+      "paid_envelope_bytes": 64,
+      "paid_two_backend_frame_diagnostic_bytes": 123178,
+      "paid_two_backend_frame_sha256": "632e4e3d839d16c5eeeba42a256980acec507b6098d6432d4dd05460cbed0ce7",
+      "paid_to_bzip3_ratio": 1.263299317983693,
+      "optimistic_to_bzip3_ratio": 1.1319316958104713,
+      "all_source_pages_exact": 8,
+      "transform": {
+        "status": "source_only_no_entropy_frame",
+        "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+        "source_bytes": 486098,
+        "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+        "optimistic_literal_bytes": 193990,
+        "optimistic_literal_sha256": "84f255d8d255161a5d6faec4a057d784131c18239672e575ecc990d50ba93a49",
+        "route_bytes": 44409,
+        "route_sha256": "288ac3ec122052f6face9cb352ecd4ec91babf958ee4dfdb4df2c5b65e5f7ead",
+        "paid_literal_bytes": 393676,
+        "paid_literal_sha256": "9da4d26d1a8b260acd8f276cd30844acad732af23ff357a19d695e84afced560",
+        "pages_exact": 8,
+        "full_inverse_exact": true,
+        "ledger": {
+          "clauses": 4900,
+          "optimistic_covered_bytes": 292108,
+          "optimistic_lcs_runs": 125971,
+          "paid_covered_bytes": 92422,
+          "paid_keep_segments": 6716,
+          "literal_clauses": 472,
+          "candidate_pairs": 38912,
+          "candidate_work_cells": 435061886,
+          "donor_clauses": 4428,
+          "length_distributions": {
+            "clause": {
+              "count": 4900,
+              "min": 4,
+              "p50": 90,
+              "p90": 173,
+              "max": 466,
+              "bins": {
+                "31": 342,
+                "63": 998,
+                "127": 2331,
+                "255": 1147,
+                "511": 82
+              }
+            },
+            "candidate_donor": {
+              "count": 38912,
+              "min": 4,
+              "p50": 96,
+              "p90": 191,
+              "max": 466,
+              "bins": {
+                "31": 2831,
+                "63": 6421,
+                "127": 17840,
+                "255": 10718,
+                "511": 1102
+              }
+            },
+            "paid_donor": {
+              "count": 4428,
+              "min": 13,
+              "p50": 102,
+              "p90": 189,
+              "max": 466,
+              "bins": {
+                "31": 45,
+                "63": 728,
+                "127": 2320,
+                "255": 1203,
+                "511": 132
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "complete": true
+}

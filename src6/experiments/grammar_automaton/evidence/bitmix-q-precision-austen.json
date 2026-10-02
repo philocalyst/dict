@@ -1,0 +1,72 @@
+{
+  "status": "development_only_precision_ablation_not_frame_bytes",
+  "single_change": "Q 4096 to 65536; all contexts, caps and update equations unchanged",
+  "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+  "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+  "original_source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+  "original_binary_sha256": "1d347c81e6a1221654f282f2baa675f0bc777e1b7d9daec72ce3a8ad8be9a12a",
+  "new_cpp_sha256": "bba1ccb02735269d5e4a8c83b708563b0fab316179da46b2a6eaccc5a681ecb0",
+  "new_binary_sha256": "066a4d9df18f8aaacd9e6d188b2c7bd469ea45d1fe895f2e0299af20a42f17fd",
+  "q4096": {
+    "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+    "source_bytes": 705012,
+    "expert_ideal_bits": {
+      "base": 3214125.25165,
+      "byte1": 2421188.74559,
+      "byte2": 1933557.8702,
+      "byte4": 1577321.28186,
+      "byte8": 1553339.96941,
+      "word": 1743759.32743,
+      "match": 1791998.78733
+    },
+    "integer_discounted_mixture_ideal_bits": 1529640.13069,
+    "live_contexts": {
+      "byte1": 2884,
+      "byte2": 22032,
+      "byte4": 189753,
+      "byte8": 262142,
+      "word": 147372
+    },
+    "context_collisions": {
+      "byte1": 29995,
+      "byte2": 98323,
+      "byte4": 848328,
+      "byte8": 4172317,
+      "word": 283831
+    },
+    "match_eligible_bytes": 348872,
+    "match_exact_continuation_bytes": 216159,
+    "match_table_collisions": 197453
+  },
+  "q65536": {
+    "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+    "source_bytes": 705012,
+    "expert_ideal_bits": {
+      "base": 3214196.12361,
+      "byte1": 2421068.14092,
+      "byte2": 1933314.89242,
+      "byte4": 1577085.31059,
+      "byte8": 1553102.99827,
+      "word": 1743501.56767,
+      "match": 1564695.87324
+    },
+    "integer_discounted_mixture_ideal_bits": 1529760.18902,
+    "live_contexts": {
+      "byte1": 2884,
+      "byte2": 22032,
+      "byte4": 189753,
+      "byte8": 262142,
+      "word": 147372
+    },
+    "context_collisions": {
+      "byte1": 29995,
+      "byte2": 98323,
+      "byte4": 848328,
+      "byte8": 4172317,
+      "word": 283831
+    },
+    "match_eligible_bytes": 348872,
+    "match_exact_continuation_bytes": 216159,
+    "match_table_collisions": 197453
+  }
+}

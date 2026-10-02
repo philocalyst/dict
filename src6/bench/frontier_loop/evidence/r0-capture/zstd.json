@@ -1,0 +1,52 @@
+{
+  "backend_class": "control",
+  "decisive_test": "Every registered complete book decodes exactly in a fresh process.",
+  "decode_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+    "decode",
+    "zstd",
+    "/usr/bin/zstd",
+    "{frame}",
+    "{output}"
+  ],
+  "dependencies": {
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "/usr/bin/zstd": "3eb7744cf8fd1ecd46d617098ee870b3e7911fe570ffaba662c1c5b7d6456020",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "438c546d8e8cc48496bf3a95f753051afd9db66a629a74e31a9ded71586b56e0",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "fa430b8f298f817a266046af84a77533185ad6fc4406c7d3787b5a0a0c207826",
+    "/usr/lib/x86_64-linux-gnu/libdl.so.2": "295fa521a03cd2faa99974f378c9e23dd622021ec7d32bcad4f8ea61aec8a872",
+    "/usr/lib/x86_64-linux-gnu/liblz4.so.1.10.0": "67bf8b84af77e962e09be661944f7c61393c4806746734e36db9fbdaebc1de36",
+    "/usr/lib/x86_64-linux-gnu/liblzma.so.5.8.1": "01e05a4b5268805a10a2414a8904fb1fb45c60626dce53b5ea19c1d491049b99",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "6d567d53e895273ca14a1f9dc164fc6c8d39aed2f60aa46a733c2784228915f3",
+    "/usr/lib/x86_64-linux-gnu/libpthread.so.0": "85e21f7dba0394411d00959176fd18b470e575b0b05f1f4f41e5636802ce0500",
+    "/usr/lib/x86_64-linux-gnu/librt.so.1": "7b7b84d1aedda0e0b2bdfc68844362782132180b8f02be1300e21e77572e514b",
+    "/usr/lib/x86_64-linux-gnu/libutil.so.1": "e3981d10efd152a53f083e38f5f9ddde7a049c85d0ab388a5eec91b52fc98a11",
+    "/usr/lib/x86_64-linux-gnu/libxxhash.so.0.8.3": "7dd49b353facbee50c371d0559ce29db5afee5ac33249ca5c7068420fb642762",
+    "/usr/lib/x86_64-linux-gnu/libz.so.1.3.1": "85590dd58edf5445e18bc7193e5ebc01ac5841f1ae187e97705a662e90c6421e",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py": "e3320d9f29a92fa54e1962296acaffa7c850729556591048edd691cdd4c6b51f"
+  },
+  "encode_argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "/workspace/dict/src6/bench/frontier_loop/codec_adapter.py",
+    "encode",
+    "zstd",
+    "/usr/bin/zstd",
+    "{input}",
+    "{frame}"
+  ],
+  "hypothesis": "Reference whole-file compression on the identical exact source.",
+  "id": "zstd-whole-native",
+  "limits": {
+    "max_frame_bytes": 67108864,
+    "max_raw_bytes": 33554432,
+    "timeout_seconds": 600
+  },
+  "mechanism": "ordinary complete native archive, no comparison wrapper",
+  "model_accounting": {
+    "data_dependencies": [],
+    "embedded_learned_bytes": 0,
+    "kind": "universal_code"
+  },
+  "parent": "standard-controls"
+}

@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "author": "Jane Austen",
+      "id": "pride-and-prejudice-en",
+      "kind": "book",
+      "language": "en",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-131072.txt",
+        "sha256": "b8946752c5b4a1f36293a10af77ea40b5af83bf0e9aa7040f196e1b79ae0a8f3"
+      },
+      "source": {
+        "bytes": 705012,
+        "path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.full.txt",
+        "sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1"
+      },
+      "split": "development",
+      "title": "Pride and Prejudice",
+      "work_id": "pride-and-prejudice-en"
+    },
+    {
+      "author": "Leo Tolstoy",
+      "id": "war-and-peace-en",
+      "kind": "book",
+      "language": "en",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-131072.txt",
+        "sha256": "d68f1899de27b28da654390f4b2aaec16aff44072c7473f781461b27ea5c6791"
+      },
+      "source": {
+        "bytes": 3339896,
+        "path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.full.txt",
+        "sha256": "184cb03eecec9a2c7da23d4129bac1587b0b79fcf69fa6577520179fb4fcc186"
+      },
+      "split": "development",
+      "title": "War and Peace",
+      "work_id": "war-and-peace-en"
+    },
+    {
+      "author": "Miguel de Cervantes Saavedra",
+      "id": "don-quijote-es",
+      "kind": "book",
+      "language": "es",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-131072.txt",
+        "sha256": "994873772146dbfb7d0d20b14cf243e9f0885c84e31cf75b20f421431b07c459"
+      },
+      "source": {
+        "bytes": 2179216,
+        "path": "/workspace/scratch/books2026-dev/books/don-quijote-es.full.txt",
+        "sha256": "da7b0077b6b9a98a942a1f9b41011fcf2888d0b01b91dbd19d55fbffbbab2cd5"
+      },
+      "split": "development",
+      "title": "Don Quijote",
+      "work_id": "don-quijote-es"
+    },
+    {
+      "author": "Gustave Flaubert",
+      "id": "madame-bovary-fr",
+      "kind": "book",
+      "language": "fr",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-131072.txt",
+        "sha256": "9c3e6310914c4b51dfa2cc5bf0afb6a446f043d9ea029ab624c3657d1964192e"
+      },
+      "source": {
+        "bytes": 716472,
+        "path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.full.txt",
+        "sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472"
+      },
+      "split": "development",
+      "title": "Madame Bovary",
+      "work_id": "madame-bovary-fr"
+    },
+    {
+      "author": "Franz Kafka",
+      "id": "die-verwandlung-de",
+      "kind": "book",
+      "language": "de",
+      "prefix": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-131072.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c"
+      },
+      "source": {
+        "bytes": 126200,
+        "path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.full.txt",
+        "sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c"
+      },
+      "split": "development",
+      "title": "Die Verwandlung",
+      "work_id": "die-verwandlung-de"
+    },
+    {
+      "author": "\u590f\u76ee\u6f31\u77f3",
+      "id": "kokoro-ja",
+      "kind": "book",
+      "language": "ja",
+      "prefix": {
+        "bytes": 131072,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-131072.txt",
+        "sha256": "9238f072d64ce8da293de953ccab795e9d4332092289b933f31ae9d7cf91e319"
+      },
+      "source": {
+        "bytes": 486098,
+        "path": "/workspace/scratch/books2026-dev/books/kokoro-ja.full.txt",
+        "sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216"
+      },
+      "split": "development",
+      "title": "\u3053\u3053\u308d",
+      "work_id": "kokoro-ja"
+    }
+  ],
+  "schema": 1,
+  "source_manifest": "/workspace/scratch/books2026-dev/manifest.json",
+  "source_manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d"
+}

@@ -1,0 +1,251 @@
+{
+  "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+  "binary_path": "/workspace/scratch/grammar_automaton/bit_mix_score",
+  "binary_sha256": "1d347c81e6a1221654f282f2baa675f0bc777e1b7d9daec72ce3a8ad8be9a12a",
+  "source_path": "/workspace/scratch/books2026-dev/manifest.json",
+  "source_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "controls_path": "/workspace/scratch/books2026-dev/controls/prefix-1048576/controls.json",
+  "controls_sha256": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+      "source_bytes": 705012,
+      "entire_book": true,
+      "bzip3_frame_bytes": 161119,
+      "bzip3_frame_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 705012,
+        "expert_ideal_bits": {
+          "base": 3214125.25165,
+          "byte1": 2421188.74559,
+          "byte2": 1933557.8702,
+          "byte4": 1577321.28186,
+          "byte8": 1553339.96941,
+          "word": 1743759.32743,
+          "match": 1791998.78733
+        },
+        "integer_discounted_mixture_ideal_bits": 1529640.13069,
+        "live_contexts": {
+          "byte1": 2884,
+          "byte2": 22032,
+          "byte4": 189753,
+          "byte8": 262142,
+          "word": 147372
+        },
+        "context_collisions": {
+          "byte1": 29995,
+          "byte2": 98323,
+          "byte4": 848328,
+          "byte8": 4172317,
+          "word": 283831
+        },
+        "match_eligible_bytes": 348872,
+        "match_exact_continuation_bytes": 216159,
+        "match_table_collisions": 197453
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+      "source_bytes": 1048576,
+      "entire_book": false,
+      "bzip3_frame_bytes": 247364,
+      "bzip3_frame_sha256": "d309e9e67a3f54d612c167d95410744cd64dec2de7fdccbcbb4fcd50bc48c4c5",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 1048576,
+        "expert_ideal_bits": {
+          "base": 4872970.92584,
+          "byte1": 3602808.65272,
+          "byte2": 2922373.31959,
+          "byte4": 2429992.69992,
+          "byte8": 2388229.42824,
+          "word": 2671530.86663,
+          "match": 2707329.31376
+        },
+        "integer_discounted_mixture_ideal_bits": 2343267.88577,
+        "live_contexts": {
+          "byte1": 4036,
+          "byte2": 30657,
+          "byte4": 224205,
+          "byte8": 262144,
+          "word": 202295
+        },
+        "context_collisions": {
+          "byte1": 55027,
+          "byte2": 154541,
+          "byte4": 1435202,
+          "byte8": 6255260,
+          "word": 566882
+        },
+        "match_eligible_bytes": 511486,
+        "match_exact_continuation_bytes": 320475,
+        "match_table_collisions": 358098
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+      "source_bytes": 1048576,
+      "entire_book": false,
+      "bzip3_frame_bytes": 252940,
+      "bzip3_frame_sha256": "5e878a3338c8239937b4bff6eb9572952f9f2847a6fa07d6376e8789ac132b52",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 1048576,
+        "expert_ideal_bits": {
+          "base": 4695005.74378,
+          "byte1": 3386310.28927,
+          "byte2": 2862182.12499,
+          "byte4": 2409844.87501,
+          "byte8": 2376362.18216,
+          "word": 2662992.94276,
+          "match": 2706096.70627
+        },
+        "integer_discounted_mixture_ideal_bits": 2349926.3753,
+        "live_contexts": {
+          "byte1": 3346,
+          "byte2": 24371,
+          "byte4": 209840,
+          "byte8": 262144,
+          "word": 215247
+        },
+        "context_collisions": {
+          "byte1": 35991,
+          "byte2": 122795,
+          "byte4": 1247376,
+          "byte8": 6485480,
+          "word": 652743
+        },
+        "match_eligible_bytes": 502225,
+        "match_exact_continuation_bytes": 298624,
+        "match_table_collisions": 367871
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+      "source_bytes": 716472,
+      "entire_book": true,
+      "bzip3_frame_bytes": 179597,
+      "bzip3_frame_sha256": "52acd8afcc05d0e2c294520442fc82f74d7a94b07ba3ba3042982844e5f9e5b2",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 716472,
+        "expert_ideal_bits": {
+          "base": 3303427.65774,
+          "byte1": 2412914.27425,
+          "byte2": 1976403.38008,
+          "byte4": 1704282.9148,
+          "byte8": 1686453.88657,
+          "word": 1947758.90251,
+          "match": 1888004.13796
+        },
+        "integer_discounted_mixture_ideal_bits": 1670926.78581,
+        "live_contexts": {
+          "byte1": 3527,
+          "byte2": 25243,
+          "byte4": 205610,
+          "byte8": 262141,
+          "word": 208327
+        },
+        "context_collisions": {
+          "byte1": 26222,
+          "byte2": 107258,
+          "byte4": 1013786,
+          "byte8": 4555700,
+          "word": 575494
+        },
+        "match_eligible_bytes": 312225,
+        "match_exact_continuation_bytes": 182956,
+        "match_table_collisions": 234825
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+      "source_bytes": 126200,
+      "entire_book": true,
+      "bzip3_frame_bytes": 35251,
+      "bzip3_frame_sha256": "aa6e44b3ddcdc535ff105498109bc21f10ad7eb8dc157739c822c13623c60ebd",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 126200,
+        "expert_ideal_bits": {
+          "base": 583798.245201,
+          "byte1": 426015.321321,
+          "byte2": 350015.572303,
+          "byte4": 308697.47902,
+          "byte8": 305184.27629,
+          "word": 332406.005797,
+          "match": 334782.954018
+        },
+        "integer_discounted_mixture_ideal_bits": 303426.260644,
+        "live_contexts": {
+          "byte1": 2780,
+          "byte2": 18274,
+          "byte4": 130329,
+          "byte8": 246295,
+          "word": 116631
+        },
+        "context_collisions": {
+          "byte1": 5433,
+          "byte2": 17998,
+          "byte4": 126375,
+          "byte8": 583058,
+          "word": 67122
+        },
+        "match_eligible_bytes": 38066,
+        "match_exact_continuation_bytes": 22838,
+        "match_table_collisions": 15089
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+      "source_bytes": 486098,
+      "entire_book": true,
+      "bzip3_frame_bytes": 97505,
+      "bzip3_frame_sha256": "89cc8c51982d584535212b2693c0b0da2f00ac14540793ae18994322bcf03c2c",
+      "scorer_result": {
+        "status": "development_only_quantized_ideal_bits_not_frame_bytes",
+        "source_bytes": 486098,
+        "expert_ideal_bits": {
+          "base": 2238708.75254,
+          "byte1": 1435460.93468,
+          "byte2": 1140455.63186,
+          "byte4": 933604.296817,
+          "byte8": 883466.589964,
+          "word": 1134175.78208,
+          "match": 1096019.78002
+        },
+        "integer_discounted_mixture_ideal_bits": 881316.743064,
+        "live_contexts": {
+          "byte1": 4479,
+          "byte2": 33094,
+          "byte4": 176759,
+          "byte8": 260997,
+          "word": 262101
+        },
+        "context_collisions": {
+          "byte1": 20241,
+          "byte2": 56812,
+          "byte4": 352690,
+          "byte8": 1891227,
+          "word": 2525935
+        },
+        "match_eligible_bytes": 308886,
+        "match_exact_continuation_bytes": 214619,
+        "match_table_collisions": 62802
+      }
+    }
+  ]
+}

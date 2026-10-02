@@ -1,0 +1,1623 @@
+{
+  "status": "development_only_q15_ideal_bits_not_frame_bytes",
+  "binary_path": "/workspace/scratch/grammar_automaton/word_context/ccw_score",
+  "binary_sha256": "4ef6088a17c7e805ba9baff481b36b31b0e9560da4306eedd705a0591ea7c3fa",
+  "source_cpp_sha256": "2b70c63398661aa3c828964d27b15c58df8e76ec524ba9ec7c306f6d6e07f05f",
+  "squash_table_sha256": "82e8ea89e8116a4ec34b6ad77ab39523109c64d79cde563468a083d98d3d0da7",
+  "squash_generator_sha256": "c4b087da1b9f3127e055f9e5bc28cb720d3ac02da5a980d2d7b599d7aee5dff4",
+  "runner_sha256": "9f8209d7cb5c1f66ae7817f4740c38beae808ac68bc2b6e4b3c825ef18d3acf4",
+  "manifest_path": "/workspace/scratch/books2026-dev/manifest.json",
+  "manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "controls_path": "/workspace/scratch/books2026-dev/controls/prefix-1048576/controls.json",
+  "controls_sha256": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "cases": [
+    {
+      "book_id": "pride-and-prejudice-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/pride-and-prejudice-en.prefix-1048576.txt",
+      "source_sha256": "f4500f2c1ede6e0655e853dcf4dda1f32ec560361cfa1a154510ac65867074d1",
+      "entire_book": true,
+      "bzip3_frame_bytes": 161119,
+      "bzip3_frame_sha256": "ed2f4dfae4204f1fd8d2b12eff84072d05602a04071490894ccead163c74e416",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 705012,
+        "source_bits": 5640096,
+        "fixed_state_plus_source_bytes": 371534160,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              810166.430477,
+              800667.855732,
+              797557.243637,
+              805799.674335
+            ],
+            "total_bits": 3214191.20418
+          },
+          "byte1": {
+            "quarter_bits": [
+              697526.123255,
+              695070.469583,
+              696370.369947,
+              695940.038328
+            ],
+            "total_bits": 2784907.00111
+          },
+          "byte2": {
+            "quarter_bits": [
+              588347.444579,
+              576923.250693,
+              577878.052249,
+              571762.74663
+            ],
+            "total_bits": 2314911.49415
+          },
+          "byte3": {
+            "quarter_bits": [
+              493864.598086,
+              457154.028391,
+              455729.289319,
+              446593.070948
+            ],
+            "total_bits": 1853340.98674
+          },
+          "byte4": {
+            "quarter_bits": [
+              449975.457596,
+              398379.386969,
+              393765.647867,
+              381913.759702
+            ],
+            "total_bits": 1624034.25213
+          },
+          "byte5": {
+            "quarter_bits": [
+              430583.112802,
+              372285.450467,
+              366396.10049,
+              353453.024824
+            ],
+            "total_bits": 1522717.68858
+          },
+          "byte6": {
+            "quarter_bits": [
+              421705.720768,
+              360381.274596,
+              354097.923645,
+              340205.420829
+            ],
+            "total_bits": 1476390.33984
+          },
+          "byte7": {
+            "quarter_bits": [
+              417406.949877,
+              354842.98183,
+              348335.643975,
+              333920.002452
+            ],
+            "total_bits": 1454505.57813
+          },
+          "byte8": {
+            "quarter_bits": [
+              415338.933501,
+              352192.004431,
+              345443.437365,
+              330872.542395
+            ],
+            "total_bits": 1443846.91769
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              738833.850981,
+              734891.781451,
+              733914.868159,
+              735975.910652
+            ],
+            "total_bits": 2943616.41124
+          },
+          "match": {
+            "quarter_bits": [
+              465326.102554,
+              431680.958864,
+              432654.92718,
+              424390.90625
+            ],
+            "total_bits": 1754052.89485
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              423766.528003,
+              363473.3803,
+              358205.692101,
+              346616.109053
+            ],
+            "total_bits": 1492061.70946
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              424577.231653,
+              364006.633399,
+              358790.284876,
+              347270.831154
+            ],
+            "total_bits": 1494644.98108
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              423777.505619,
+              363443.465673,
+              358172.553816,
+              346609.304782
+            ],
+            "total_bits": 1492002.82989
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              424574.665389,
+              364018.917731,
+              358804.81468,
+              347221.045532
+            ],
+            "total_bits": 1494619.44333
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              388730.532248,
+              331622.108458,
+              327484.722506,
+              314086.739556
+            ],
+            "total_bits": 1361924.10277
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              387450.512354,
+              329987.610675,
+              325759.402601,
+              312186.99899
+            ],
+            "total_bits": 1355384.52462
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              386671.047425,
+              329202.562905,
+              325164.612018,
+              311666.695749
+            ],
+            "total_bits": 1352704.9181
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              386675.517684,
+              329207.160831,
+              325171.141066,
+              311644.527439
+            ],
+            "total_bits": 1352698.34702
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 80,
+            "row_replacements": 0,
+            "prefix_replacements": 1319712
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 1270,
+            "row_replacements": 0,
+            "prefix_replacements": 855681
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 7649,
+            "row_replacements": 0,
+            "prefix_replacements": 524906
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 27944,
+            "row_replacements": 15,
+            "prefix_replacements": 376130
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 72317,
+            "row_replacements": 730,
+            "prefix_replacements": 285854
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 136036,
+            "row_replacements": 9592,
+            "prefix_replacements": 212899
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 194209,
+            "row_replacements": 43540,
+            "prefix_replacements": 149779
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 231029,
+            "row_replacements": 107087,
+            "prefix_replacements": 97907
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 127718,
+            "row_replacements": 136541,
+            "prefix_replacements": 396662
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 131068,
+            "row_replacements": 426628,
+            "prefix_replacements": 121250
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 127900,
+            "row_replacements": 136059,
+            "prefix_replacements": 396534
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 131068,
+            "row_replacements": 426402,
+            "prefix_replacements": 121377
+          }
+        },
+        "match_eligible_bytes": 373842,
+        "match_continuation_bytes": 231134,
+        "match_replacements": 107164
+      }
+    },
+    {
+      "book_id": "war-and-peace-en",
+      "language": "en",
+      "source_path": "/workspace/scratch/books2026-dev/books/war-and-peace-en.prefix-1048576.txt",
+      "source_sha256": "125594e29707d58718043419f5e43022338a0db75ef417005a03534c8e587e61",
+      "entire_book": false,
+      "bzip3_frame_bytes": 247364,
+      "bzip3_frame_sha256": "d309e9e67a3f54d612c167d95410744cd64dec2de7fdccbcbb4fcd50bc48c4c5",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 1048576,
+        "source_bits": 8388608,
+        "fixed_state_plus_source_bytes": 371534160,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              1216572.25789,
+              1223815.86593,
+              1215885.12529,
+              1216769.45353
+            ],
+            "total_bits": 4873042.70263
+          },
+          "byte1": {
+            "quarter_bits": [
+              1028196.67147,
+              1039078.76566,
+              1035000.78987,
+              1035936.85376
+            ],
+            "total_bits": 4138213.08075
+          },
+          "byte2": {
+            "quarter_bits": [
+              864611.468659,
+              870228.318298,
+              860723.786394,
+              864381.138692
+            ],
+            "total_bits": 3459944.71204
+          },
+          "byte3": {
+            "quarter_bits": [
+              725360.634263,
+              703262.734749,
+              683737.662483,
+              691163.318093
+            ],
+            "total_bits": 2803524.34959
+          },
+          "byte4": {
+            "quarter_bits": [
+              663376.636765,
+              621263.853375,
+              592207.355498,
+              599974.768929
+            ],
+            "total_bits": 2476822.61457
+          },
+          "byte5": {
+            "quarter_bits": [
+              635563.026846,
+              583880.078845,
+              551769.808051,
+              559068.265339
+            ],
+            "total_bits": 2330281.17908
+          },
+          "byte6": {
+            "quarter_bits": [
+              621871.018148,
+              566458.700219,
+              533067.473417,
+              539650.992676
+            ],
+            "total_bits": 2261048.18446
+          },
+          "byte7": {
+            "quarter_bits": [
+              615211.295462,
+              558187.810472,
+              523715.587934,
+              530560.404869
+            ],
+            "total_bits": 2227675.09874
+          },
+          "byte8": {
+            "quarter_bits": [
+              611839.643591,
+              554001.623239,
+              519126.664089,
+              526200.427103
+            ],
+            "total_bits": 2211168.35802
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              1105664.41276,
+              1112453.13642,
+              1107738.15997,
+              1107692.34334
+            ],
+            "total_bits": 4433548.05249
+          },
+          "match": {
+            "quarter_bits": [
+              684701.057494,
+              666251.273527,
+              646784.098104,
+              653627.285038
+            ],
+            "total_bits": 2651363.71416
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              626263.614189,
+              570539.412803,
+              538257.776167,
+              546947.303385
+            ],
+            "total_bits": 2282008.10655
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              627309.770031,
+              571404.412681,
+              538638.980324,
+              547448.350462
+            ],
+            "total_bits": 2284801.5135
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              626266.505683,
+              570592.055498,
+              538319.318878,
+              546877.867889
+            ],
+            "total_bits": 2282055.74795
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              627307.26616,
+              571384.700714,
+              538673.955836,
+              547450.335492
+            ],
+            "total_bits": 2284816.2582
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              571779.491046,
+              520763.219157,
+              491066.867902,
+              499154.51506
+            ],
+            "total_bits": 2082764.09316
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              569916.34129,
+              518379.143116,
+              488525.110075,
+              496723.519244
+            ],
+            "total_bits": 2073544.11373
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              568753.684022,
+              517345.310706,
+              487651.073543,
+              496128.956403
+            ],
+            "total_bits": 2069879.02467
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              568751.281887,
+              517377.586724,
+              487618.139795,
+              496102.75667
+            ],
+            "total_bits": 2069849.76508
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 103,
+            "row_replacements": 0,
+            "prefix_replacements": 1941026
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 1694,
+            "row_replacements": 0,
+            "prefix_replacements": 1243972
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 10964,
+            "row_replacements": 0,
+            "prefix_replacements": 784802
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 41225,
+            "row_replacements": 62,
+            "prefix_replacements": 585351
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 106042,
+            "row_replacements": 3583,
+            "prefix_replacements": 444500
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 185789,
+            "row_replacements": 38392,
+            "prefix_replacements": 331369
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 235888,
+            "row_replacements": 131462,
+            "prefix_replacements": 233944
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 254940,
+            "row_replacements": 262524,
+            "prefix_replacements": 154271
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 130879,
+            "row_replacements": 301987,
+            "prefix_replacements": 573679
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 131072,
+            "row_replacements": 701768,
+            "prefix_replacements": 175515
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 130927,
+            "row_replacements": 301908,
+            "prefix_replacements": 573627
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 131072,
+            "row_replacements": 701422,
+            "prefix_replacements": 175980
+          }
+        },
+        "match_eligible_bytes": 545598,
+        "match_continuation_bytes": 340029,
+        "match_replacements": 262586
+      }
+    },
+    {
+      "book_id": "don-quijote-es",
+      "language": "es",
+      "source_path": "/workspace/scratch/books2026-dev/books/don-quijote-es.prefix-1048576.txt",
+      "source_sha256": "f1a529c48351308b6fd13b4d9c9e0ff084ef8d81501ca5a21983c67fbb3a4977",
+      "entire_book": false,
+      "bzip3_frame_bytes": 252940,
+      "bzip3_frame_sha256": "5e878a3338c8239937b4bff6eb9572952f9f2847a6fa07d6376e8789ac132b52",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 1048576,
+        "source_bits": 8388608,
+        "fixed_state_plus_source_bytes": 371534160,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              1176595.52858,
+              1175743.51862,
+              1172236.42331,
+              1170490.77785
+            ],
+            "total_bits": 4695066.24836
+          },
+          "byte1": {
+            "quarter_bits": [
+              1005917.95449,
+              1000386.84206,
+              996035.942454,
+              996895.483982
+            ],
+            "total_bits": 3999236.22299
+          },
+          "byte2": {
+            "quarter_bits": [
+              882672.719196,
+              869891.093919,
+              863306.013574,
+              865420.359524
+            ],
+            "total_bits": 3481290.18621
+          },
+          "byte3": {
+            "quarter_bits": [
+              769811.025602,
+              733674.657207,
+              720220.04369,
+              724344.487685
+            ],
+            "total_bits": 2948050.21418
+          },
+          "byte4": {
+            "quarter_bits": [
+              704341.138487,
+              647242.50735,
+              627512.426579,
+              627715.99301
+            ],
+            "total_bits": 2606812.06543
+          },
+          "byte5": {
+            "quarter_bits": [
+              673024.280399,
+              604369.970547,
+              579689.740841,
+              577527.428369
+            ],
+            "total_bits": 2434611.42016
+          },
+          "byte6": {
+            "quarter_bits": [
+              658425.141301,
+              584287.501438,
+              557551.300007,
+              553502.886388
+            ],
+            "total_bits": 2353766.82913
+          },
+          "byte7": {
+            "quarter_bits": [
+              651668.912749,
+              574863.631276,
+              547079.229991,
+              542164.99027
+            ],
+            "total_bits": 2315776.76429
+          },
+          "byte8": {
+            "quarter_bits": [
+              648217.589725,
+              570074.83837,
+              541948.476279,
+              536607.722075
+            ],
+            "total_bits": 2296848.62645
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              1077662.26011,
+              1071003.36461,
+              1067166.46448,
+              1066562.61753
+            ],
+            "total_bits": 4282394.70673
+          },
+          "match": {
+            "quarter_bits": [
+              722764.755315,
+              685506.805347,
+              674191.125236,
+              669815.934568
+            ],
+            "total_bits": 2752278.62047
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              657147.267096,
+              584018.65488,
+              558435.550037,
+              553470.725259
+            ],
+            "total_bits": 2353072.19727
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              658348.261457,
+              584819.441881,
+              559152.46223,
+              554175.055051
+            ],
+            "total_bits": 2356495.22062
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              657159.60701,
+              583962.666055,
+              558420.011986,
+              553612.215407
+            ],
+            "total_bits": 2353154.50046
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              658334.650707,
+              584767.48328,
+              559106.096468,
+              554328.788706
+            ],
+            "total_bits": 2356537.01916
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              602889.038015,
+              529709.651638,
+              504428.689506,
+              501916.277717
+            ],
+            "total_bits": 2138943.65688
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              600841.208302,
+              527110.718849,
+              501664.751343,
+              499058.822793
+            ],
+            "total_bits": 2128675.50129
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              599634.427814,
+              526074.710362,
+              500886.36218,
+              498359.470056
+            ],
+            "total_bits": 2124954.97041
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              599624.25925,
+              526092.793048,
+              500859.67529,
+              498379.193901
+            ],
+            "total_bits": 2124955.92149
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 89,
+            "row_replacements": 0,
+            "prefix_replacements": 1957302
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 1342,
+            "row_replacements": 0,
+            "prefix_replacements": 1390628
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 8076,
+            "row_replacements": 0,
+            "prefix_replacements": 945803
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 32533,
+            "row_replacements": 26,
+            "prefix_replacements": 701702
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 89486,
+            "row_replacements": 1892,
+            "prefix_replacements": 529539
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 172609,
+            "row_replacements": 27481,
+            "prefix_replacements": 377535
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 232754,
+            "row_replacements": 122831,
+            "prefix_replacements": 249948
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 254827,
+            "row_replacements": 268568,
+            "prefix_replacements": 154411
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 130886,
+            "row_replacements": 291484,
+            "prefix_replacements": 569043
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 131072,
+            "row_replacements": 698149,
+            "prefix_replacements": 174092
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 130872,
+            "row_replacements": 291392,
+            "prefix_replacements": 569686
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 131072,
+            "row_replacements": 698252,
+            "prefix_replacements": 173376
+          }
+        },
+        "match_eligible_bytes": 539505,
+        "match_continuation_bytes": 319046,
+        "match_replacements": 268566
+      }
+    },
+    {
+      "book_id": "madame-bovary-fr",
+      "language": "fr",
+      "source_path": "/workspace/scratch/books2026-dev/books/madame-bovary-fr.prefix-1048576.txt",
+      "source_sha256": "99ce19cc439840890f672293920cd3aca7f74396e190bdaec36e9f14cad6a472",
+      "entire_book": true,
+      "bzip3_frame_bytes": 179597,
+      "bzip3_frame_sha256": "52acd8afcc05d0e2c294520442fc82f74d7a94b07ba3ba3042982844e5f9e5b2",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 716472,
+        "source_bits": 5731776,
+        "fixed_state_plus_source_bytes": 371534160,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              816959.310241,
+              826940.909687,
+              829136.678401,
+              830414.981187
+            ],
+            "total_bits": 3303451.87952
+          },
+          "byte1": {
+            "quarter_bits": [
+              697686.067356,
+              703245.287006,
+              705696.231519,
+              703924.350011
+            ],
+            "total_bits": 2810551.93589
+          },
+          "byte2": {
+            "quarter_bits": [
+              606644.967925,
+              603821.061342,
+              605614.447043,
+              601243.910706
+            ],
+            "total_bits": 2417324.38702
+          },
+          "byte3": {
+            "quarter_bits": [
+              537514.236522,
+              513233.144555,
+              510261.402714,
+              501917.056171
+            ],
+            "total_bits": 2062925.83996
+          },
+          "byte4": {
+            "quarter_bits": [
+              501716.551644,
+              460623.820163,
+              452468.620623,
+              439200.527203
+            ],
+            "total_bits": 1854009.51963
+          },
+          "byte5": {
+            "quarter_bits": [
+              484716.966205,
+              433617.700463,
+              421507.737516,
+              405478.67554
+            ],
+            "total_bits": 1745321.07972
+          },
+          "byte6": {
+            "quarter_bits": [
+              476493.016559,
+              419872.296179,
+              405645.291747,
+              387728.431438
+            ],
+            "total_bits": 1689739.03592
+          },
+          "byte7": {
+            "quarter_bits": [
+              472520.929899,
+              413097.423431,
+              398003.826573,
+              378993.177479
+            ],
+            "total_bits": 1662615.35738
+          },
+          "byte8": {
+            "quarter_bits": [
+              470584.679474,
+              409747.391166,
+              394291.391687,
+              374747.260209
+            ],
+            "total_bits": 1649370.72254
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              746831.422321,
+              754102.264977,
+              756268.588129,
+              755191.774827
+            ],
+            "total_bits": 3012394.05025
+          },
+          "match": {
+            "quarter_bits": [
+              516827.530817,
+              484152.498775,
+              477940.543585,
+              464832.29811
+            ],
+            "total_bits": 1943752.87129
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              475096.460196,
+              419039.305315,
+              405467.673419,
+              387846.010648
+            ],
+            "total_bits": 1687449.44958
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              475884.073057,
+              419948.248771,
+              406654.82486,
+              388742.716168
+            ],
+            "total_bits": 1691229.86286
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              475107.268413,
+              419017.251399,
+              405581.215489,
+              387773.83432
+            ],
+            "total_bits": 1687479.56962
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              475887.151333,
+              419939.911415,
+              406744.08588,
+              388702.490338
+            ],
+            "total_bits": 1691273.63897
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              442095.757117,
+              381707.924503,
+              368248.254856,
+              348986.607145
+            ],
+            "total_bits": 1541038.54362
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              440687.764712,
+              379821.40404,
+              366200.297656,
+              346842.376328
+            ],
+            "total_bits": 1533551.84274
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              439799.587373,
+              378905.41975,
+              365458.986651,
+              346175.535376
+            ],
+            "total_bits": 1530339.52915
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              439799.388137,
+              378870.477837,
+              365444.662101,
+              346157.328039
+            ],
+            "total_bits": 1530271.85611
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 98,
+            "row_replacements": 0,
+            "prefix_replacements": 1392405
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 1409,
+            "row_replacements": 0,
+            "prefix_replacements": 967390
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 8359,
+            "row_replacements": 0,
+            "prefix_replacements": 680426
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 32392,
+            "row_replacements": 13,
+            "prefix_replacements": 488884
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 82084,
+            "row_replacements": 1314,
+            "prefix_replacements": 352864
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 151400,
+            "row_replacements": 14999,
+            "prefix_replacements": 241501
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 209768,
+            "row_replacements": 64748,
+            "prefix_replacements": 152829
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 241125,
+            "row_replacements": 145100,
+            "prefix_replacements": 89805
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 130108,
+            "row_replacements": 195902,
+            "prefix_replacements": 383002
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 131072,
+            "row_replacements": 454692,
+            "prefix_replacements": 108044
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 130138,
+            "row_replacements": 196160,
+            "prefix_replacements": 383286
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 131066,
+            "row_replacements": 454578,
+            "prefix_replacements": 108252
+          }
+        },
+        "match_eligible_bytes": 338597,
+        "match_continuation_bytes": 197751,
+        "match_replacements": 144889
+      }
+    },
+    {
+      "book_id": "die-verwandlung-de",
+      "language": "de",
+      "source_path": "/workspace/scratch/books2026-dev/books/die-verwandlung-de.prefix-1048576.txt",
+      "source_sha256": "397a130287733370f63eef16aaacf0798095ba4385486e775f3129568521f07c",
+      "entire_book": true,
+      "bzip3_frame_bytes": 35251,
+      "bzip3_frame_sha256": "aa6e44b3ddcdc535ff105498109bc21f10ad7eb8dc157739c822c13623c60ebd",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 126200,
+        "source_bits": 1009600,
+        "fixed_state_plus_source_bytes": 370616656,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              148167.055787,
+              144828.060988,
+              145297.968844,
+              145512.52969
+            ],
+            "total_bits": 583805.615309
+          },
+          "byte1": {
+            "quarter_bits": [
+              126145.523226,
+              122801.689958,
+              122899.362906,
+              122701.36392
+            ],
+            "total_bits": 494547.94001
+          },
+          "byte2": {
+            "quarter_bits": [
+              110055.978873,
+              102845.192032,
+              102373.045713,
+              101891.286217
+            ],
+            "total_bits": 417165.502835
+          },
+          "byte3": {
+            "quarter_bits": [
+              101260.972022,
+              89363.0035648,
+              87537.4111674,
+              86229.8422675
+            ],
+            "total_bits": 364391.229022
+          },
+          "byte4": {
+            "quarter_bits": [
+              97061.4017662,
+              82823.6273419,
+              80166.0219047,
+              78238.9937275
+            ],
+            "total_bits": 338290.04474
+          },
+          "byte5": {
+            "quarter_bits": [
+              95243.8189549,
+              80000.9132035,
+              76918.9251826,
+              74676.3245761
+            ],
+            "total_bits": 326839.981917
+          },
+          "byte6": {
+            "quarter_bits": [
+              94420.3124063,
+              78715.9413873,
+              75522.0251409,
+              73025.0036113
+            ],
+            "total_bits": 321683.282546
+          },
+          "byte7": {
+            "quarter_bits": [
+              94005.9669269,
+              78098.9477737,
+              74880.1914424,
+              72185.1244429
+            ],
+            "total_bits": 319170.230586
+          },
+          "byte8": {
+            "quarter_bits": [
+              93789.9058226,
+              77790.1191388,
+              74584.8916884,
+              71756.5222318
+            ],
+            "total_bits": 317921.438882
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              135407.085401,
+              131571.854581,
+              131571.338257,
+              131412.826372
+            ],
+            "total_bits": 529963.104611
+          },
+          "match": {
+            "quarter_bits": [
+              97013.7761631,
+              85285.7202571,
+              84553.6526289,
+              82638.3933719
+            ],
+            "total_bits": 349491.542421
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              94240.5770444,
+              78659.8834406,
+              75565.6925326,
+              72958.4943821
+            ],
+            "total_bits": 321424.6474
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              94382.9550869,
+              78752.2132878,
+              75697.1502217,
+              73052.3252105
+            ],
+            "total_bits": 321884.643807
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              94240.2120827,
+              78659.8769007,
+              75568.3244902,
+              72961.1396871
+            ],
+            "total_bits": 321429.553161
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              94382.5895305,
+              78751.7596517,
+              75697.3738166,
+              73059.519
+            ],
+            "total_bits": 321891.241999
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              88805.7574604,
+              72041.5060661,
+              69310.9467743,
+              66588.3911607
+            ],
+            "total_bits": 296746.601461
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              88543.2191412,
+              71885.8624254,
+              69142.209922,
+              66404.7869725
+            ],
+            "total_bits": 295976.078461
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              88358.3256657,
+              71787.3950033,
+              69044.5034591,
+              66296.8892114
+            ],
+            "total_bits": 295487.113339
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              88358.3004065,
+              71787.5727186,
+              69045.2508501,
+              66299.6783549
+            ],
+            "total_bits": 295490.80233
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 83,
+            "row_replacements": 0,
+            "prefix_replacements": 251082
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 1081,
+            "row_replacements": 0,
+            "prefix_replacements": 163300
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 5531,
+            "row_replacements": 0,
+            "prefix_replacements": 108066
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 16351,
+            "row_replacements": 0,
+            "prefix_replacements": 70832
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 33246,
+            "row_replacements": 21,
+            "prefix_replacements": 46792
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 52640,
+            "row_replacements": 130,
+            "prefix_replacements": 29372
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 70969,
+            "row_replacements": 465,
+            "prefix_replacements": 16877
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 86010,
+            "row_replacements": 973,
+            "prefix_replacements": 9509
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 71897,
+            "row_replacements": 4545,
+            "prefix_replacements": 49020
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 95961,
+            "row_replacements": 16299,
+            "prefix_replacements": 9184
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 71809,
+            "row_replacements": 4595,
+            "prefix_replacements": 48967
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 96030,
+            "row_replacements": 16236,
+            "prefix_replacements": 9142
+          }
+        },
+        "match_eligible_bytes": 39238,
+        "match_continuation_bytes": 23527,
+        "match_replacements": 980
+      }
+    },
+    {
+      "book_id": "kokoro-ja",
+      "language": "ja",
+      "source_path": "/workspace/scratch/books2026-dev/books/kokoro-ja.prefix-1048576.txt",
+      "source_sha256": "1d8498d268651953dbb68c730b9e7b0045066b801ce23c399b05d7bca371d216",
+      "entire_book": true,
+      "bzip3_frame_bytes": 97505,
+      "bzip3_frame_sha256": "89cc8c51982d584535212b2693c0b0da2f00ac14540793ae18994322bcf03c2c",
+      "scorer": {
+        "status": "development_only_q15_ideal_bits_not_frame_bytes",
+        "source_bytes": 486098,
+        "source_bits": 3888784,
+        "fixed_state_plus_source_bytes": 371009872,
+        "sizeof_packed_row": 168,
+        "experts": {
+          "partial_byte": {
+            "quarter_bits": [
+              564708.531323,
+              561636.046366,
+              556465.706098,
+              555844.362447
+            ],
+            "total_bits": 2238654.64623
+          },
+          "byte1": {
+            "quarter_bits": [
+              431631.213745,
+              430773.940918,
+              427580.388829,
+              425673.249193
+            ],
+            "total_bits": 1715658.79268
+          },
+          "byte2": {
+            "quarter_bits": [
+              346216.034315,
+              332857.713224,
+              332236.363763,
+              326637.007918
+            ],
+            "total_bits": 1337947.11922
+          },
+          "byte3": {
+            "quarter_bits": [
+              312629.843058,
+              294692.572923,
+              288265.696567,
+              280793.813212
+            ],
+            "total_bits": 1176381.92576
+          },
+          "byte4": {
+            "quarter_bits": [
+              291447.285989,
+              267881.556822,
+              259828.279002,
+              250255.857085
+            ],
+            "total_bits": 1069412.9789
+          },
+          "byte5": {
+            "quarter_bits": [
+              280268.338172,
+              254647.749964,
+              246236.387586,
+              235365.028374
+            ],
+            "total_bits": 1016517.5041
+          },
+          "byte6": {
+            "quarter_bits": [
+              269037.606959,
+              238448.38943,
+              227503.806943,
+              213795.744964
+            ],
+            "total_bits": 948785.548296
+          },
+          "byte7": {
+            "quarter_bits": [
+              263576.576076,
+              231041.356287,
+              219776.131508,
+              205033.716992
+            ],
+            "total_bits": 919427.780863
+          },
+          "byte8": {
+            "quarter_bits": [
+              260459.244141,
+              227172.676597,
+              216021.198812,
+              200834.934481
+            ],
+            "total_bits": 904488.05403
+          },
+          "script_boundary": {
+            "quarter_bits": [
+              533541.817615,
+              531358.823523,
+              531747.972291,
+              529247.370505
+            ],
+            "total_bits": 2125895.98393
+          },
+          "match": {
+            "quarter_bits": [
+              301637.963116,
+              283259.380755,
+              272925.711823,
+              260622.494569
+            ],
+            "total_bits": 1118445.55026
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              260618.633494,
+              227398.786601,
+              216128.584319,
+              200950.507677
+            ],
+            "total_bits": 905096.512092
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              260667.531979,
+              227448.54747,
+              216153.947877,
+              200975.171171
+            ],
+            "total_bits": 905245.198496
+          },
+          "scalar_joint_previous1": {
+            "quarter_bits": [
+              265087.492525,
+              235723.683766,
+              226674.287591,
+              214643.287137
+            ],
+            "total_bits": 942128.751019
+          },
+          "scalar_joint_previous2": {
+            "quarter_bits": [
+              258484.131379,
+              225785.891715,
+              214868.086545,
+              200718.959446
+            ],
+            "total_bits": 899857.069086
+          }
+        },
+        "variants": {
+          "packed_orders_only": {
+            "quarter_bits": [
+              251288.458754,
+              217022.232849,
+              204834.022573,
+              190293.087391
+            ],
+            "total_bits": 863437.801567
+          },
+          "joint_previous1": {
+            "quarter_bits": [
+              250479.991994,
+              216508.915236,
+              204504.620301,
+              189998.334503
+            ],
+            "total_bits": 861491.862034
+          },
+          "joint_previous2": {
+            "quarter_bits": [
+              249975.014258,
+              216278.673378,
+              204375.271149,
+              189902.319878
+            ],
+            "total_bits": 860531.278664
+          },
+          "joint_previous2_scalar_segments": {
+            "quarter_bits": [
+              248086.078662,
+              213219.781765,
+              201098.786736,
+              186776.110908
+            ],
+            "total_bits": 849180.758071
+          }
+        },
+        "tables": {
+          "byte1": {
+            "capacity": 1024,
+            "occupied": 85,
+            "row_replacements": 0,
+            "prefix_replacements": 691605
+          },
+          "byte2": {
+            "capacity": 65536,
+            "occupied": 2514,
+            "row_replacements": 0,
+            "prefix_replacements": 370960
+          },
+          "byte3": {
+            "capacity": 262144,
+            "occupied": 12654,
+            "row_replacements": 0,
+            "prefix_replacements": 241820
+          },
+          "byte4": {
+            "capacity": 262144,
+            "occupied": 30035,
+            "row_replacements": 5,
+            "prefix_replacements": 185475
+          },
+          "byte5": {
+            "capacity": 262144,
+            "occupied": 54880,
+            "row_replacements": 141,
+            "prefix_replacements": 158935
+          },
+          "byte6": {
+            "capacity": 262144,
+            "occupied": 88719,
+            "row_replacements": 1479,
+            "prefix_replacements": 86833
+          },
+          "byte7": {
+            "capacity": 262144,
+            "occupied": 124113,
+            "row_replacements": 5268,
+            "prefix_replacements": 74343
+          },
+          "byte8": {
+            "capacity": 262144,
+            "occupied": 155759,
+            "row_replacements": 13855,
+            "prefix_replacements": 59096
+          },
+          "joint1": {
+            "capacity": 131072,
+            "occupied": 131064,
+            "row_replacements": 345927,
+            "prefix_replacements": 1323
+          },
+          "joint2": {
+            "capacity": 131072,
+            "occupied": 131063,
+            "row_replacements": 353118,
+            "prefix_replacements": 239
+          },
+          "joint3": {
+            "capacity": 131072,
+            "occupied": 26363,
+            "row_replacements": 65,
+            "prefix_replacements": 176683
+          },
+          "joint4": {
+            "capacity": 131072,
+            "occupied": 98364,
+            "row_replacements": 21440,
+            "prefix_replacements": 66383
+          }
+        },
+        "match_eligible_bytes": 317231,
+        "match_continuation_bytes": 219641,
+        "match_replacements": 13963
+      }
+    }
+  ]
+}

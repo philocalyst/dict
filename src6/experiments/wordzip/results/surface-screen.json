@@ -1,0 +1,98 @@
+[
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/freedict-eval8-end-to-end/external-decoded.bin",
+    "copy": 0,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":713783,\"codec_us\":10330526,\"codec_ns\":10330526350,\"peakrss_kib\":48232}\n",
+    "stderr": "rules=14640 grammar=53285 entropy=6536 blocks=128\n",
+    "decode": "{\"input_bytes\":713783,\"output_bytes\":8388608,\"codec_us\":111356,\"codec_ns\":111356906,\"peakrss_kib\":13168}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/freedict-eval8-end-to-end/external-decoded.bin",
+    "copy": 5,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":737374,\"codec_us\":12305817,\"codec_ns\":12305817865,\"peakrss_kib\":49292}\n",
+    "stderr": "rules=14640 grammar=53285 entropy=7199 blocks=128\n",
+    "decode": "{\"input_bytes\":737374,\"output_bytes\":8388608,\"codec_us\":104021,\"codec_ns\":104021756,\"peakrss_kib\":26624}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/freedict-eval8-end-to-end/external-decoded.bin",
+    "copy": 8,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":720823,\"codec_us\":12557554,\"codec_ns\":12557554998,\"peakrss_kib\":49284}\n",
+    "stderr": "rules=14640 grammar=53285 entropy=7227 blocks=128\n",
+    "decode": "{\"input_bytes\":720823,\"output_bytes\":8388608,\"codec_us\":103340,\"codec_ns\":103340969,\"peakrss_kib\":26624}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/freedict-eval8-end-to-end/external-decoded.bin",
+    "copy": 12,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":715010,\"codec_us\":13171796,\"codec_ns\":13171796963,\"peakrss_kib\":49800}\n",
+    "stderr": "rules=14640 grammar=53285 entropy=7136 blocks=128\n",
+    "decode": "{\"input_bytes\":715010,\"output_bytes\":8388608,\"codec_us\":106096,\"codec_ns\":106096725,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/gcide-eval8-end-to-end/external-decoded.bin",
+    "copy": 0,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":1622022,\"codec_us\":19366962,\"codec_ns\":19366962385,\"peakrss_kib\":61404}\n",
+    "stderr": "rules=16281 grammar=58285 entropy=9142 blocks=128\n",
+    "decode": "{\"input_bytes\":1622022,\"output_bytes\":8388608,\"codec_us\":200508,\"codec_ns\":200508346,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/gcide-eval8-end-to-end/external-decoded.bin",
+    "copy": 5,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":1686762,\"codec_us\":19408427,\"codec_ns\":19408427757,\"peakrss_kib\":54416}\n",
+    "stderr": "rules=16281 grammar=58285 entropy=9890 blocks=128\n",
+    "decode": "{\"input_bytes\":1686762,\"output_bytes\":8388608,\"codec_us\":191746,\"codec_ns\":191746743,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/gcide-eval8-end-to-end/external-decoded.bin",
+    "copy": 8,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":1641115,\"codec_us\":23029867,\"codec_ns\":23029867050,\"peakrss_kib\":54800}\n",
+    "stderr": "rules=16281 grammar=58285 entropy=9912 blocks=128\n",
+    "decode": "{\"input_bytes\":1641115,\"output_bytes\":8388608,\"codec_us\":197611,\"codec_ns\":197611940,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/gcide-eval8-end-to-end/external-decoded.bin",
+    "copy": 12,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":1625757,\"codec_us\":23261646,\"codec_ns\":23261646363,\"peakrss_kib\":55184}\n",
+    "stderr": "rules=16281 grammar=58285 entropy=9465 blocks=128\n",
+    "decode": "{\"input_bytes\":1625757,\"output_bytes\":8388608,\"codec_us\":286738,\"codec_ns\":286738191,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/omw-eval8-end-to-end/external-decoded.bin",
+    "copy": 0,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":536324,\"codec_us\":7887983,\"codec_ns\":7887983590,\"peakrss_kib\":58428}\n",
+    "stderr": "rules=12206 grammar=55453 entropy=4115 blocks=128\n",
+    "decode": "{\"input_bytes\":536324,\"output_bytes\":8388608,\"codec_us\":79694,\"codec_ns\":79694002,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/omw-eval8-end-to-end/external-decoded.bin",
+    "copy": 5,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":540206,\"codec_us\":9652677,\"codec_ns\":9652677853,\"peakrss_kib\":54896}\n",
+    "stderr": "rules=12206 grammar=55453 entropy=5616 blocks=128\n",
+    "decode": "{\"input_bytes\":540206,\"output_bytes\":8388608,\"codec_us\":72881,\"codec_ns\":72881206,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/omw-eval8-end-to-end/external-decoded.bin",
+    "copy": 8,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":527431,\"codec_us\":8013664,\"codec_ns\":8013664030,\"peakrss_kib\":54952}\n",
+    "stderr": "rules=12206 grammar=55453 entropy=5678 blocks=128\n",
+    "decode": "{\"input_bytes\":527431,\"output_bytes\":8388608,\"codec_us\":72844,\"codec_ns\":72844320,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  },
+  {
+    "input": "src6/experiments/bzip4/language_frontier/evidence/runs/storage-screen-auto-20260926-strict/samples/omw-eval8-end-to-end/external-decoded.bin",
+    "copy": 12,
+    "stdout": "{\"input_bytes\":8388608,\"output_bytes\":520345,\"codec_us\":7844081,\"codec_ns\":7844081054,\"peakrss_kib\":55332}\n",
+    "stderr": "rules=12206 grammar=55453 entropy=5452 blocks=128\n",
+    "decode": "{\"input_bytes\":520345,\"output_bytes\":8388608,\"codec_us\":76780,\"codec_ns\":76780475,\"peakrss_kib\":26648}\n",
+    "binary_sha256": "258ade9eca727ddbca6e514d900e9e37885cfe2d541ec7c8aec2961852025bf9"
+  }
+]

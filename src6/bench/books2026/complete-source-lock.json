@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "role": "development",
+  "selection_policy": "Complete works selected before codec outcomes; no translated duplicate works in this set.",
+  "source_limit_bytes": 16777216,
+  "projection_policy": "Each book has a named explicit projection. PG strict EBOOK markers and declared encoding only; Aozora body boundaries and reversible ruby/format deletion, opaque gaiji retained. Preserve CRLF and all remaining whitespace; output UTF8 no BOM.",
+  "books": [
+    {
+      "id": "pride-and-prejudice-en",
+      "repository": "GITenberg/Pride-and-Prejudice_1342",
+      "commit": "81db45c9c48c592f0b77f01fc59e677ad0a5634e",
+      "source_path": "1342-0.txt",
+      "raw_filename": "pride-and-prejudice-en.raw",
+      "source_bytes": 724725,
+      "source_sha256": "48e0522844402a86a3ea98f0947ba85ea54838db3c59022299298ed968a5a163",
+      "source_encoding": "utf-8-sig",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "declared_language": "English",
+      "language": "en",
+      "original_publication_year": 1813,
+      "projection": "pg-marked-body-v1",
+      "rights": {
+        "work": "public domain in the United States; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete Project Gutenberg header and license footer retained in original raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "url": "https://raw.githubusercontent.com/GITenberg/Pride-and-Prejudice_1342/81db45c9c48c592f0b77f01fc59e677ad0a5634e/1342-0.txt"
+    },
+    {
+      "id": "war-and-peace-en",
+      "repository": "GITenberg/War-and-Peace_2600",
+      "commit": "fa22ab90f00f627e83d14acabe32d91602d2365d",
+      "source_path": "2600-0.txt",
+      "raw_filename": "war-and-peace-en.raw",
+      "source_bytes": 3359542,
+      "source_sha256": "6cbcc5ca5e590fb9ace161a5b93e4ecf280d7118104be0d63b686c004cfa70ae",
+      "source_encoding": "utf-8-sig",
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "declared_language": "English",
+      "language": "en",
+      "original_publication_year": 1869,
+      "projection": "pg-marked-body-v1",
+      "rights": {
+        "work": "public domain in the United States; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete Project Gutenberg header and license footer retained in original raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "url": "https://raw.githubusercontent.com/GITenberg/War-and-Peace_2600/fa22ab90f00f627e83d14acabe32d91602d2365d/2600-0.txt",
+      "translator": "Louise and Aylmer Maude"
+    },
+    {
+      "id": "don-quijote-es",
+      "repository": "GITenberg/Don-Quijote_2000",
+      "commit": "7879f2c1653ec515d125f49b177c3ef7f596bc3f",
+      "source_path": "2000-8.txt",
+      "raw_filename": "don-quijote-es.raw",
+      "source_bytes": 2155394,
+      "source_sha256": "4973737f16b7e8b8972c08e54a95b7bc43b5d93d6738bc08f9256f9c2c68a2ba",
+      "source_encoding": "iso-8859-1",
+      "title": "Don Quijote",
+      "author": "Miguel de Cervantes Saavedra",
+      "declared_language": "Spanish",
+      "language": "es",
+      "original_publication_year": 1605,
+      "projection": "pg-marked-body-v1",
+      "rights": {
+        "work": "public domain in the United States; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete Project Gutenberg header and license footer retained in original raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "url": "https://raw.githubusercontent.com/GITenberg/Don-Quijote_2000/7879f2c1653ec515d125f49b177c3ef7f596bc3f/2000-8.txt"
+    },
+    {
+      "id": "madame-bovary-fr",
+      "repository": "GITenberg/Madame-Bovary_14155",
+      "commit": "defa45e6414550caa8293881e586bfcfbceadc67",
+      "source_path": "14155-8.txt",
+      "raw_filename": "madame-bovary-fr.raw",
+      "source_bytes": 719880,
+      "source_sha256": "d8383b0e43723286604abcc1a5e96728f462e679b9b4d569d4b469d8f705f862",
+      "source_encoding": "iso-8859-1",
+      "title": "Madame Bovary",
+      "author": "Gustave Flaubert",
+      "declared_language": "French",
+      "language": "fr",
+      "original_publication_year": 1857,
+      "projection": "pg-marked-body-v1",
+      "rights": {
+        "work": "public domain in the United States; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete Project Gutenberg header and license footer retained in original raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "url": "https://raw.githubusercontent.com/GITenberg/Madame-Bovary_14155/defa45e6414550caa8293881e586bfcfbceadc67/14155-8.txt"
+    },
+    {
+      "id": "die-verwandlung-de",
+      "repository": "GITenberg/Die-Verwandlung_22367",
+      "commit": "dd2beec59176851bfb071689539d6091b3d95d11",
+      "source_path": "22367-8.txt",
+      "raw_filename": "die-verwandlung-de.raw",
+      "source_bytes": 143353,
+      "source_sha256": "fe91c871104780ce5a8fe3e12e79b757f6fb5ffa28ed83d6186e618fb3bf344a",
+      "source_encoding": "iso-8859-1",
+      "title": "Die Verwandlung",
+      "author": "Franz Kafka",
+      "declared_language": "German",
+      "language": "de",
+      "original_publication_year": 1915,
+      "projection": "pg-marked-body-v1",
+      "rights": {
+        "work": "public domain in the United States; source edition carries Project Gutenberg terms",
+        "source_terms": "Complete Project Gutenberg header and license footer retained in original raw source",
+        "source_license_marker": "*** START: FULL LICENSE ***"
+      },
+      "url": "https://raw.githubusercontent.com/GITenberg/Die-Verwandlung_22367/dd2beec59176851bfb071689539d6091b3d95d11/22367-8.txt"
+    },
+    {
+      "id": "kokoro-ja",
+      "repository": "aozorahack/aozorabunko_text",
+      "commit": "0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65",
+      "source_path": "cards/000148/files/773_ruby_5968/773_ruby_5968.txt",
+      "raw_filename": "kokoro-ja.raw",
+      "source_bytes": 374152,
+      "source_sha256": "d0124c6a71ca3c8f6898dc84578134789fcbdf6a1133121d205ebdaf52274594",
+      "source_encoding": "shift_jis",
+      "title": "こころ",
+      "author": "夏目漱石",
+      "language": "ja",
+      "declared_language": "Japanese",
+      "original_publication_year": 1914,
+      "projection": "aozora-ruby-body-v1",
+      "required_part_headings": [
+        "上　先生と私",
+        "中　両親と私",
+        "下　先生と遺書"
+      ],
+      "url": "https://raw.githubusercontent.com/aozorahack/aozorabunko_text/0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65/cards/000148/files/773_ruby_5968/773_ruby_5968.txt",
+      "rights": {
+        "work": "Original Japanese work first published1914; author Natsume Soseki died1916; public-domain literary work",
+        "source_terms": "Aozora volunteer transcription; complete original colophon retained; mirror README references Aozora usage rules",
+        "usage_rules_url": "https://www.aozora.gr.jp/guide/kijyunn.html",
+        "mirror_readme_url": "https://raw.githubusercontent.com/aozorahack/aozorabunko_text/0984f7dc18a2270bdfd2ff99bf14fd1b3ebb4f65/README.md",
+        "mirror_readme_sha256": "0603178ebd841735d3e39ca7bbfd7d7a25ea967d2ce475e34770e73db55e54a4"
+      }
+    }
+  ]
+}

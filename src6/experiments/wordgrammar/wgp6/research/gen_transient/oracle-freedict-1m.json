@@ -1,0 +1,641 @@
+{
+  "all_word_activation_name_plus_def_bits": 24404.432054407498,
+  "all_word_def_bits": 13381.443523845459,
+  "all_word_name_bits": 11068.928152733475,
+  "corpus": "freedict.raw",
+  "expanded_root_bytes": 1048576,
+  "input_bytes": 1048576,
+  "input_sha256": "e44e3d9312898da49775edbd9b90fcfb398f717027c3effc51d9980e67fd4698",
+  "interpretation": "Gross upper bound only: subtracts only exact NAME and DEF event prices for standalone word-root activations. It does not credit source child/ARITY costs, fitting/model-size changes, or charge any GEN command, operand, cache-control, or new event-row costs. Not a net win estimate.",
+  "native_stats": {
+    "blocks": 16,
+    "classes": 16,
+    "delta": {
+      "arity": {
+        "delta_coded_bits": 9763.006909,
+        "delta_events": 7000,
+        "delta_raw_bits": 0,
+        "payload_coded_bits": 0.0,
+        "payload_events": 0,
+        "payload_raw_bits": 0
+      },
+      "cut": {
+        "delta_coded_bits": 0.0,
+        "delta_events": 0,
+        "delta_raw_bits": 0,
+        "payload_coded_bits": 0.0,
+        "payload_events": 0,
+        "payload_raw_bits": 0
+      },
+      "def": {
+        "delta_coded_bits": 6733.49962,
+        "delta_events": 1987,
+        "delta_raw_bits": 0,
+        "payload_coded_bits": 14526.315594,
+        "payload_events": 5013,
+        "payload_raw_bits": 0
+      },
+      "name": {
+        "delta_coded_bits": 17383.106859,
+        "delta_events": 7000,
+        "delta_raw_bits": 0,
+        "payload_coded_bits": 0.0,
+        "payload_events": 0,
+        "payload_raw_bits": 0
+      },
+      "past": {
+        "delta_coded_bits": 6424.620592,
+        "delta_events": 1178,
+        "delta_raw_bits": 3275,
+        "payload_coded_bits": 31049.923208,
+        "payload_events": 6679,
+        "payload_raw_bits": 20696
+      },
+      "silent": {
+        "delta_coded_bits": 18092.897796,
+        "delta_events": 7950,
+        "delta_raw_bits": 0,
+        "payload_coded_bits": 19140.986851,
+        "payload_events": 3241,
+        "payload_raw_bits": 0
+      },
+      "use": {
+        "delta_coded_bits": 69814.046583,
+        "delta_events": 13989,
+        "delta_raw_bits": 53688,
+        "payload_coded_bits": 193399.172373,
+        "payload_events": 41462,
+        "payload_raw_bits": 167118
+      }
+    },
+    "entries": 7000,
+    "entry_bits_sum": 505248.245359,
+    "entry_bucket_uses_sum": 55153,
+    "frame_bytes": 81280,
+    "token_bits_sum": 631104.576386,
+    "tokens": 53154
+  },
+  "parse_cut_symbols": 0,
+  "parse_sha256": "49563526c98ac9960ad2b1007b4df17cc9d44d35efbfd0c8553844336f59c595",
+  "provenance": {
+    "frozen_v3_encode_zig": "f272401694b481a06eff5ab7318613af95b63328a2544954d2c9b5b465059349",
+    "frozen_v3_plan_zig": "0e98a6cc7b2a94ca85501f1a17b0b5124e7d0ff7eb39179ca3ef40a72bf55c4d",
+    "instrumented_encode_copy_zig": "8be5fddf9c28161dc29dc6fa95b8441493cfcdff69774b6445a76cdb93b84884",
+    "instrumented_plan_copy_zig": "3155cf920a8664ca53b0a7752105720c32c0f3fdc6a8c3f746dc6c001558d480",
+    "instrumented_stats_native_zig": "9614ef3b3af34a124406bc7f88cdc987678c2bb36fccff98011f236f754a32a7",
+    "stats_binary_sha256": "795538f0269a70571490d6831c28202f0b0bfd14237e7dd7f374b0dc7945d5f6",
+    "stats_oracle_python": "f48497cc7edfc02e494ee37388814f4acb8f4c8025cfff9ef64b6abc7d631f1d",
+    "wgp6_encode_driver": "d6bba780e36cacdd351635af2a68eb7164c08385d38b2c32d28b1704d2dacc33",
+    "wgp6_native_binary": "41c47a75e0c9a469474fc089c94149aa2ed3ad5ae028a2c8812abc8d92a9f56b",
+    "wgp6_native_source": "b9bc7107198d9d9d0f0ebc865da7557f8297cae6d0aeb79248ab1679f7463b40",
+    "wgp6_prepare_binary": "f3726086f133ebccb4a1d38fa1dba56fd36fcaf42004d8e225a814916f585615",
+    "wgp6_prepare_source": "beefcd900d2d78b5f7f9388519b200aeabeb44713c6ed2d790be56eca933222a"
+  },
+  "scope": "retained old DEV prefix only; actual WGP6 maximal complete-frame winner and unchanged v3 fit/encoder pricing",
+  "singleton_activation_name_plus_def_bits": 295.9737074230808,
+  "singleton_details_top64": [
+    {
+      "def_bits": 19.62408293174841,
+      "name_bits": 19.930256554191377,
+      "occurrences": 1,
+      "token_bits": 114.99020710629573,
+      "utf8_bytes": 12,
+      "word_hex": "6e6f7274687765737465726e"
+    },
+    {
+      "def_bits": 8.449253214616757,
+      "name_bits": 4.411285364417736,
+      "occurrences": 1,
+      "token_bits": 41.959557959658056,
+      "utf8_bytes": 4,
+      "word_hex": "65726e61"
+    },
+    {
+      "def_bits": 5.676663710719829,
+      "name_bits": 5.466670267694166,
+      "occurrences": 1,
+      "token_bits": 53.57164167917734,
+      "utf8_bytes": 9,
+      "word_hex": "43617274657369616e"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 4.678071905112638,
+      "occurrences": 1,
+      "token_bits": 29.980572114105346,
+      "utf8_bytes": 2,
+      "word_hex": "72c3"
+    },
+    {
+      "def_bits": 3.8502528804953178,
+      "name_bits": 4.299560281858907,
+      "occurrences": 1,
+      "token_bits": 24.19877374676973,
+      "utf8_bytes": 3,
+      "word_hex": "6bc9aa"
+    },
+    {
+      "def_bits": 4.3706433799203905,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 25.730212073094616,
+      "utf8_bytes": 3,
+      "word_hex": "696572"
+    },
+    {
+      "def_bits": 2.5405683813627027,
+      "name_bits": 4.0,
+      "occurrences": 1,
+      "token_bits": 36.00970663260011,
+      "utf8_bytes": 5,
+      "word_hex": "7275656461"
+    },
+    {
+      "def_bits": 4.3706433799203905,
+      "name_bits": 1.9556058806415466,
+      "occurrences": 1,
+      "token_bits": 26.685177162028115,
+      "utf8_bytes": 5,
+      "word_hex": "616c697374"
+    },
+    {
+      "def_bits": 4.356143810225276,
+      "name_bits": 1.9556058806415466,
+      "occurrences": 1,
+      "token_bits": 23.237718185056895,
+      "utf8_bytes": 2,
+      "word_hex": "6f78"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 22.99440418532266,
+      "utf8_bytes": 3,
+      "word_hex": "617373"
+    },
+    {
+      "def_bits": 3.9556058806415466,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 25.232712413623798,
+      "utf8_bytes": 3,
+      "word_hex": "6c696d"
+    },
+    {
+      "def_bits": 4.3706433799203905,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 32.34213184685599,
+      "utf8_bytes": 3,
+      "word_hex": "696373"
+    },
+    {
+      "def_bits": 4.356143810225276,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 22.29120490031154,
+      "utf8_bytes": 3,
+      "word_hex": "6c6f6e"
+    },
+    {
+      "def_bits": 4.356143810225276,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 23.560665575304768,
+      "utf8_bytes": 3,
+      "word_hex": "6e656c"
+    },
+    {
+      "def_bits": 4.3706433799203905,
+      "name_bits": 1.7145977811377513,
+      "occurrences": 1,
+      "token_bits": 23.942509208497725,
+      "utf8_bytes": 3,
+      "word_hex": "6e6964"
+    },
+    {
+      "def_bits": 4.356143810225276,
+      "name_bits": 1.7145977811377513,
+      "occurrences": 1,
+      "token_bits": 23.220911197226172,
+      "utf8_bytes": 4,
+      "word_hex": "72617465"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 24.475629471448965,
+      "utf8_bytes": 2,
+      "word_hex": "726d"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 24.662042595679846,
+      "utf8_bytes": 3,
+      "word_hex": "72656d"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 23.520023590807423,
+      "utf8_bytes": 3,
+      "word_hex": "726164"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 22.173756114370367,
+      "utf8_bytes": 2,
+      "word_hex": "6166"
+    },
+    {
+      "def_bits": 3.9556058806415466,
+      "name_bits": 1.7145977811377513,
+      "occurrences": 1,
+      "token_bits": 21.92247145526118,
+      "utf8_bytes": 3,
+      "word_hex": "756572"
+    },
+    {
+      "def_bits": 4.093109404391481,
+      "name_bits": 1.573735245297902,
+      "occurrences": 1,
+      "token_bits": 23.34057621160954,
+      "utf8_bytes": 4,
+      "word_hex": "72616e74"
+    },
+    {
+      "def_bits": 3.8502528804953178,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 26.02400899486569,
+      "utf8_bytes": 3,
+      "word_hex": "656c74"
+    },
+    {
+      "def_bits": 3.2995602818589083,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 25.1843493920624,
+      "utf8_bytes": 3,
+      "word_hex": "6c6576"
+    },
+    {
+      "def_bits": 3.8502528804953178,
+      "name_bits": 1.3275746580285048,
+      "occurrences": 1,
+      "token_bits": 34.72986160278454,
+      "utf8_bytes": 10,
+      "word_hex": "cb8c74cda1ca83c99b6b"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 2.6780719051126374,
+      "occurrences": 1,
+      "token_bits": 25.073573138897117,
+      "utf8_bytes": 4,
+      "word_hex": "43617269"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 2.6780719051126374,
+      "occurrences": 1,
+      "token_bits": 25.090579564202805,
+      "utf8_bytes": 3,
+      "word_hex": "736974"
+    },
+    {
+      "def_bits": 3.8502528804953178,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 21.560513042774417,
+      "utf8_bytes": 2,
+      "word_hex": "736c"
+    },
+    {
+      "def_bits": 3.8502528804953178,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 23.508982742134336,
+      "utf8_bytes": 3,
+      "word_hex": "726f70"
+    },
+    {
+      "def_bits": 2.5405683813627027,
+      "name_bits": 2.327574658028505,
+      "occurrences": 1,
+      "token_bits": 44.00485858255542,
+      "utf8_bytes": 11,
+      "word_hex": "5265766f6c756369c3b36e"
+    },
+    {
+      "def_bits": 2.742612157307348,
+      "name_bits": 1.9556058806415466,
+      "occurrences": 1,
+      "token_bits": 38.260438000302145,
+      "utf8_bytes": 8,
+      "word_hex": "63616c656e646172"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 23.1833405336111,
+      "utf8_bytes": 4,
+      "word_hex": "6576656e"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 29.63360277530449,
+      "utf8_bytes": 6,
+      "word_hex": "6d656469756d"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.9556058806415466,
+      "occurrences": 1,
+      "token_bits": 25.05948183423076,
+      "utf8_bytes": 4,
+      "word_hex": "74696e79"
+    },
+    {
+      "def_bits": 1.2789008112928153,
+      "name_bits": 2.9556058806415466,
+      "occurrences": 1,
+      "token_bits": 29.848188095768375,
+      "utf8_bytes": 6,
+      "word_hex": "6272616e6368"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 45.429935201362,
+      "utf8_bytes": 11,
+      "word_hex": "6d617468656d6174696373"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.7520724865564148,
+      "occurrences": 1,
+      "token_bits": 25.065714775987715,
+      "utf8_bytes": 3,
+      "word_hex": "73706c"
+    },
+    {
+      "def_bits": 2.5405683813627027,
+      "name_bits": 1.573735245297902,
+      "occurrences": 1,
+      "token_bits": 35.23950006470894,
+      "utf8_bytes": 6,
+      "word_hex": "506173637561"
+    },
+    {
+      "def_bits": 2.5405683813627027,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 20.759169762760045,
+      "utf8_bytes": 2,
+      "word_hex": "466c"
+    },
+    {
+      "def_bits": 2.733213459305099,
+      "name_bits": 1.0227200765000832,
+      "occurrences": 1,
+      "token_bits": 37.916523880388716,
+      "utf8_bytes": 8,
+      "word_hex": "636cc3a17369636f"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 41.762733907133786,
+      "utf8_bytes": 9,
+      "word_hex": "4361707269636f726e"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 18.84851528544217,
+      "utf8_bytes": 2,
+      "word_hex": "7969"
+    },
+    {
+      "def_bits": 2.3417885172482054,
+      "name_bits": 1.231815675223074,
+      "occurrences": 1,
+      "token_bits": 23.79174924141475,
+      "utf8_bytes": 5,
+      "word_hex": "cb88c99b64"
+    },
+    {
+      "def_bits": 2.5405683813627027,
+      "name_bits": 1.0227200765000832,
+      "occurrences": 1,
+      "token_bits": 35.47046838022521,
+      "utf8_bytes": 7,
+      "word_hex": "4e617669646164"
+    },
+    {
+      "def_bits": 1.2789008112928153,
+      "name_bits": 2.21864028647534,
+      "occurrences": 1,
+      "token_bits": 18.867951350589802,
+      "utf8_bytes": 2,
+      "word_hex": "4672"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.0227200765000832,
+      "occurrences": 1,
+      "token_bits": 40.50359107935051,
+      "utf8_bytes": 7,
+      "word_hex": "5665726465616e"
+    },
+    {
+      "def_bits": 2.4301443916690513,
+      "name_bits": 1.0227200765000832,
+      "occurrences": 1,
+      "token_bits": 44.25568473158635,
+      "utf8_bytes": 9,
+      "word_hex": "4575636c696465616e"
+    },
+    {
+      "def_bits": 1.2789008112928153,
+      "name_bits": 1.7145977811377513,
+      "occurrences": 1,
+      "token_bits": 37.111047395184215,
+      "utf8_bytes": 8,
+      "word_hex": "6d617267696e616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 14.045803689613125,
+      "utf8_bytes": 7,
+      "word_hex": "4361706974616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 14.045803689613125,
+      "utf8_bytes": 4,
+      "word_hex": "6974616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 12.377948180543623,
+      "utf8_bytes": 8,
+      "word_hex": "6269626c6963616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 14.045803689613125,
+      "utf8_bytes": 7,
+      "word_hex": "536f6d656f6e65"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 13.752072486556415,
+      "utf8_bytes": 5,
+      "word_hex": "6f66666963"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 13.4019474998384,
+      "utf8_bytes": 3,
+      "word_hex": "736564"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 15.923184402949168,
+      "utf8_bytes": 8,
+      "word_hex": "736f75746865726e"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 12.377948180543623,
+      "utf8_bytes": 4,
+      "word_hex": "74686174"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 14.49617426200425,
+      "utf8_bytes": 5,
+      "word_hex": "636174616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 12.377948180543623,
+      "utf8_bytes": 7,
+      "word_hex": "43656e7472616c"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 18.0,
+      "utf8_bytes": 5,
+      "word_hex": "6374697665"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 15.0,
+      "utf8_bytes": 7,
+      "word_hex": "4361737069616e"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 14.723875594725763,
+      "utf8_bytes": 3,
+      "word_hex": "737573"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 15.771181309504119,
+      "utf8_bytes": 3,
+      "word_hex": "61646a"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 11.311749690866822,
+      "utf8_bytes": 5,
+      "word_hex": "cb8c73c99b"
+    },
+    {
+      "def_bits": 0.0,
+      "name_bits": 0.0,
+      "occurrences": 1,
+      "token_bits": 15.923184402949168,
+      "utf8_bytes": 4,
+      "word_hex": "72616469"
+    }
+  ],
+  "singleton_full_token_bits": 4801.123441686067,
+  "singleton_retained_bits_outside_name_def": 4505.149734262986,
+  "singleton_word_types": 278,
+  "wgp6": {
+    "candidates": [
+      {
+        "bytes": 82134,
+        "step": 0
+      },
+      {
+        "bytes": 82061,
+        "step": 1
+      },
+      {
+        "bytes": 81445,
+        "step": 2
+      },
+      {
+        "bytes": 81400,
+        "step": 3
+      },
+      {
+        "bytes": 81280,
+        "step": 4
+      }
+    ],
+    "frame_bytes": 81280,
+    "selected": "maximal_round_4"
+  },
+  "word_identity_groups": 5181,
+  "word_root_occurrences": 26292
+}

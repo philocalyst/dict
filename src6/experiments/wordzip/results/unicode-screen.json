@@ -1,0 +1,946 @@
+[
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27035,\"codec_us\":13091,\"codec_ns\":13091579,\"peakrss_kib\":10240}\n",
+    "stderr": "rules=0 grammar=13 entropy=252 blocks=1\n",
+    "decode": "{\"input_bytes\":27035,\"output_bytes\":57467,\"codec_us\":2587,\"codec_ns\":2587761,\"peakrss_kib\":10240}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":26569,\"codec_us\":24482,\"codec_ns\":24482885,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=506 grammar=1627 entropy=556 blocks=1\n",
+    "decode": "{\"input_bytes\":26569,\"output_bytes\":57467,\"codec_us\":1933,\"codec_ns\":1933549,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27292,\"codec_us\":33338,\"codec_ns\":33338606,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=903 grammar=2885 entropy=730 blocks=1\n",
+    "decode": "{\"input_bytes\":27292,\"output_bytes\":57467,\"codec_us\":2033,\"codec_ns\":2033667,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27292,\"codec_us\":33171,\"codec_ns\":33171975,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=903 grammar=2885 entropy=730 blocks=1\n",
+    "decode": "{\"input_bytes\":27292,\"output_bytes\":57467,\"codec_us\":2051,\"codec_ns\":2051169,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27035,\"codec_us\":14160,\"codec_ns\":14160034,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=252 blocks=1\n",
+    "decode": "{\"input_bytes\":27035,\"output_bytes\":57467,\"codec_us\":2547,\"codec_ns\":2547525,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":26689,\"codec_us\":24816,\"codec_ns\":24816367,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=510 grammar=1822 entropy=558 blocks=1\n",
+    "decode": "{\"input_bytes\":26689,\"output_bytes\":57467,\"codec_us\":1968,\"codec_ns\":1968395,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27514,\"codec_us\":30478,\"codec_ns\":30478998,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=844 grammar=3080 entropy=716 blocks=1\n",
+    "decode": "{\"input_bytes\":27514,\"output_bytes\":57467,\"codec_us\":2067,\"codec_ns\":2067940,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":57467,\"output_bytes\":27514,\"codec_us\":31386,\"codec_ns\":31386833,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=844 grammar=3080 entropy=716 blocks=1\n",
+    "decode": "{\"input_bytes\":27514,\"output_bytes\":57467,\"codec_us\":2081,\"codec_ns\":2081867,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":29323,\"codec_us\":15817,\"codec_ns\":15817497,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=248 blocks=2\n",
+    "decode": "{\"input_bytes\":29323,\"output_bytes\":69610,\"codec_us\":2961,\"codec_ns\":2961198,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":29935,\"codec_us\":31592,\"codec_ns\":31592948,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=504 grammar=1591 entropy=514 blocks=2\n",
+    "decode": "{\"input_bytes\":29935,\"output_bytes\":69610,\"codec_us\":2371,\"codec_ns\":2371206,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":30724,\"codec_us\":40079,\"codec_ns\":40079921,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=1081 grammar=3456 entropy=742 blocks=2\n",
+    "decode": "{\"input_bytes\":30724,\"output_bytes\":69610,\"codec_us\":2643,\"codec_ns\":2643745,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":30724,\"codec_us\":40264,\"codec_ns\":40264215,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=1081 grammar=3456 entropy=742 blocks=2\n",
+    "decode": "{\"input_bytes\":30724,\"output_bytes\":69610,\"codec_us\":2364,\"codec_ns\":2364123,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":29323,\"codec_us\":16956,\"codec_ns\":16956404,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=248 blocks=2\n",
+    "decode": "{\"input_bytes\":29323,\"output_bytes\":69610,\"codec_us\":2996,\"codec_ns\":2996684,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":29934,\"codec_us\":33966,\"codec_ns\":33966188,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=503 grammar=1836 entropy=540 blocks=2\n",
+    "decode": "{\"input_bytes\":29934,\"output_bytes\":69610,\"codec_us\":2278,\"codec_ns\":2278874,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":30925,\"codec_us\":38704,\"codec_ns\":38704323,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=1077 grammar=3920 entropy=764 blocks=2\n",
+    "decode": "{\"input_bytes\":30925,\"output_bytes\":69610,\"codec_us\":2334,\"codec_ns\":2334518,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/zh/development/forms.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":69610,\"output_bytes\":30925,\"codec_us\":38468,\"codec_ns\":38468533,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=1077 grammar=3920 entropy=764 blocks=2\n",
+    "decode": "{\"input_bytes\":30925,\"output_bytes\":69610,\"codec_us\":2343,\"codec_ns\":2343595,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":22472,\"codec_us\":12795,\"codec_ns\":12795337,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=263 blocks=1\n",
+    "decode": "{\"input_bytes\":22472,\"output_bytes\":58945,\"codec_us\":2487,\"codec_ns\":2487764,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":22580,\"codec_us\":25192,\"codec_ns\":25192409,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=506 grammar=1606 entropy=527 blocks=1\n",
+    "decode": "{\"input_bytes\":22580,\"output_bytes\":58945,\"codec_us\":1768,\"codec_ns\":1768261,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":23233,\"codec_us\":27498,\"codec_ns\":27498554,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=768 grammar=2458 entropy=651 blocks=1\n",
+    "decode": "{\"input_bytes\":23233,\"output_bytes\":58945,\"codec_us\":1782,\"codec_ns\":1782588,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":23233,\"codec_us\":27644,\"codec_ns\":27644537,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=768 grammar=2458 entropy=651 blocks=1\n",
+    "decode": "{\"input_bytes\":23233,\"output_bytes\":58945,\"codec_us\":1854,\"codec_ns\":1854051,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":22472,\"codec_us\":13723,\"codec_ns\":13723870,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=263 blocks=1\n",
+    "decode": "{\"input_bytes\":22472,\"output_bytes\":58945,\"codec_us\":2447,\"codec_ns\":2447279,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":22621,\"codec_us\":24818,\"codec_ns\":24818361,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=511 grammar=1838 entropy=553 blocks=1\n",
+    "decode": "{\"input_bytes\":22621,\"output_bytes\":58945,\"codec_us\":1676,\"codec_ns\":1676169,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":23166,\"codec_us\":25506,\"codec_ns\":25506776,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=705 grammar=2591 entropy=643 blocks=1\n",
+    "decode": "{\"input_bytes\":23166,\"output_bytes\":58945,\"codec_us\":1937,\"codec_ns\":1937306,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":58945,\"output_bytes\":23166,\"codec_us\":25694,\"codec_ns\":25694907,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=705 grammar=2591 entropy=643 blocks=1\n",
+    "decode": "{\"input_bytes\":23166,\"output_bytes\":58945,\"codec_us\":1746,\"codec_ns\":1746951,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":24168,\"codec_us\":16802,\"codec_ns\":16802257,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=249 blocks=2\n",
+    "decode": "{\"input_bytes\":24168,\"output_bytes\":70709,\"codec_us\":2673,\"codec_ns\":2673331,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":25382,\"codec_us\":30182,\"codec_ns\":30182564,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=504 grammar=1609 entropy=509 blocks=2\n",
+    "decode": "{\"input_bytes\":25382,\"output_bytes\":70709,\"codec_us\":2077,\"codec_ns\":2077920,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":26437,\"codec_us\":34738,\"codec_ns\":34738941,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=906 grammar=2933 entropy=658 blocks=2\n",
+    "decode": "{\"input_bytes\":26437,\"output_bytes\":70709,\"codec_us\":2157,\"codec_ns\":2157027,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":26437,\"codec_us\":34777,\"codec_ns\":34777483,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=906 grammar=2933 entropy=658 blocks=2\n",
+    "decode": "{\"input_bytes\":26437,\"output_bytes\":70709,\"codec_us\":2128,\"codec_ns\":2128703,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":24168,\"codec_us\":16250,\"codec_ns\":16250426,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=0 grammar=13 entropy=249 blocks=2\n",
+    "decode": "{\"input_bytes\":24168,\"output_bytes\":70709,\"codec_us\":2724,\"codec_ns\":2724807,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":24413,\"codec_us\":27746,\"codec_ns\":27746407,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=504 grammar=1824 entropy=540 blocks=2\n",
+    "decode": "{\"input_bytes\":24413,\"output_bytes\":70709,\"codec_us\":1894,\"codec_ns\":1894136,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":25332,\"codec_us\":27239,\"codec_ns\":27239280,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=875 grammar=3203 entropy=676 blocks=2\n",
+    "decode": "{\"input_bytes\":25332,\"output_bytes\":70709,\"codec_us\":2026,\"codec_ns\":2026113,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ja/development/forms.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":70709,\"output_bytes\":25332,\"codec_us\":32009,\"codec_ns\":32009946,\"peakrss_kib\":10496}\n",
+    "stderr": "rules=875 grammar=3203 entropy=676 blocks=2\n",
+    "decode": "{\"input_bytes\":25332,\"output_bytes\":70709,\"codec_us\":2151,\"codec_ns\":2151276,\"peakrss_kib\":10496}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":240142,\"codec_us\":209081,\"codec_ns\":209081472,\"peakrss_kib\":18172}\n",
+    "stderr": "rules=0 grammar=13 entropy=208 blocks=16\n",
+    "decode": "{\"input_bytes\":240142,\"output_bytes\":1048576,\"codec_us\":35977,\"codec_ns\":35977102,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":244476,\"codec_us\":296833,\"codec_ns\":296833718,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=512 grammar=1673 entropy=496 blocks=16\n",
+    "decode": "{\"input_bytes\":244476,\"output_bytes\":1048576,\"codec_us\":20455,\"codec_ns\":20455937,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":239190,\"codec_us\":568670,\"codec_ns\":568670451,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2040 grammar=6811 entropy=1200 blocks=16\n",
+    "decode": "{\"input_bytes\":239190,\"output_bytes\":1048576,\"codec_us\":19912,\"codec_ns\":19912612,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":239260,\"codec_us\":1262657,\"codec_ns\":1262657273,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=5926 grammar=21060 entropy=2662 blocks=16\n",
+    "decode": "{\"input_bytes\":239260,\"output_bytes\":1048576,\"codec_us\":22024,\"codec_ns\":22024826,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":240142,\"codec_us\":228825,\"codec_ns\":228825340,\"peakrss_kib\":18176}\n",
+    "stderr": "rules=0 grammar=13 entropy=208 blocks=16\n",
+    "decode": "{\"input_bytes\":240142,\"output_bytes\":1048576,\"codec_us\":33125,\"codec_ns\":33125209,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":235571,\"codec_us\":301122,\"codec_ns\":301122825,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=512 grammar=1538 entropy=557 blocks=16\n",
+    "decode": "{\"input_bytes\":235571,\"output_bytes\":1048576,\"codec_us\":18508,\"codec_ns\":18508472,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":228704,\"codec_us\":612419,\"codec_ns\":612419186,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2036 grammar=6215 entropy=1332 blocks=16\n",
+    "decode": "{\"input_bytes\":228704,\"output_bytes\":1048576,\"codec_us\":17929,\"codec_ns\":17929428,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":226289,\"codec_us\":1112717,\"codec_ns\":1112717907,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=5141 grammar=16895 entropy=2819 blocks=16\n",
+    "decode": "{\"input_bytes\":226289,\"output_bytes\":1048576,\"codec_us\":20574,\"codec_ns\":20574454,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":236022,\"codec_us\":208033,\"codec_ns\":208033106,\"peakrss_kib\":18036}\n",
+    "stderr": "rules=0 grammar=13 entropy=202 blocks=16\n",
+    "decode": "{\"input_bytes\":236022,\"output_bytes\":1048576,\"codec_us\":32744,\"codec_ns\":32744523,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":240879,\"codec_us\":282933,\"codec_ns\":282933692,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=512 grammar=1698 entropy=502 blocks=16\n",
+    "decode": "{\"input_bytes\":240879,\"output_bytes\":1048576,\"codec_us\":19941,\"codec_ns\":19941680,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":235471,\"codec_us\":566962,\"codec_ns\":566962796,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2044 grammar=6847 entropy=1211 blocks=16\n",
+    "decode": "{\"input_bytes\":235471,\"output_bytes\":1048576,\"codec_us\":18944,\"codec_ns\":18944828,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":234308,\"codec_us\":1201317,\"codec_ns\":1201317607,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=5808 grammar=20678 entropy=2634 blocks=16\n",
+    "decode": "{\"input_bytes\":234308,\"output_bytes\":1048576,\"codec_us\":20664,\"codec_ns\":20664050,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":236022,\"codec_us\":227400,\"codec_ns\":227400553,\"peakrss_kib\":18044}\n",
+    "stderr": "rules=0 grammar=13 entropy=202 blocks=16\n",
+    "decode": "{\"input_bytes\":236022,\"output_bytes\":1048576,\"codec_us\":34966,\"codec_ns\":34966867,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":230900,\"codec_us\":306450,\"codec_ns\":306450744,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=512 grammar=1540 entropy=564 blocks=16\n",
+    "decode": "{\"input_bytes\":230900,\"output_bytes\":1048576,\"codec_us\":18657,\"codec_ns\":18657301,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":223259,\"codec_us\":600377,\"codec_ns\":600377624,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2039 grammar=6238 entropy=1324 blocks=16\n",
+    "decode": "{\"input_bytes\":223259,\"output_bytes\":1048576,\"codec_us\":17827,\"codec_ns\":17827931,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ru/development/forms.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1048576,\"output_bytes\":220601,\"codec_us\":1082972,\"codec_ns\":1082972286,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=5122 grammar=16880 entropy=2801 blocks=16\n",
+    "decode": "{\"input_bytes\":220601,\"output_bytes\":1048576,\"codec_us\":19368,\"codec_ns\":19368256,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":340413,\"codec_us\":204149,\"codec_ns\":204149111,\"peakrss_kib\":22588}\n",
+    "stderr": "rules=0 grammar=13 entropy=183 blocks=16\n",
+    "decode": "{\"input_bytes\":340413,\"output_bytes\":988496,\"codec_us\":38297,\"codec_ns\":38297584,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":342500,\"codec_us\":387957,\"codec_ns\":387957125,\"peakrss_kib\":13868}\n",
+    "stderr": "rules=508 grammar=1385 entropy=529 blocks=16\n",
+    "decode": "{\"input_bytes\":342500,\"output_bytes\":988496,\"codec_us\":26023,\"codec_ns\":26023837,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":337197,\"codec_us\":794460,\"codec_ns\":794460112,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2030 grammar=5999 entropy=1265 blocks=16\n",
+    "decode": "{\"input_bytes\":337197,\"output_bytes\":988496,\"codec_us\":25952,\"codec_ns\":25952785,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":339672,\"codec_us\":1769146,\"codec_ns\":1769146899,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=6804 grammar=22270 entropy=3100 blocks=16\n",
+    "decode": "{\"input_bytes\":339672,\"output_bytes\":988496,\"codec_us\":32394,\"codec_ns\":32394588,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":340413,\"codec_us\":223964,\"codec_ns\":223964270,\"peakrss_kib\":22684}\n",
+    "stderr": "rules=0 grammar=13 entropy=183 blocks=16\n",
+    "decode": "{\"input_bytes\":340413,\"output_bytes\":988496,\"codec_us\":38567,\"codec_ns\":38567227,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":342580,\"codec_us\":406337,\"codec_ns\":406337202,\"peakrss_kib\":13896}\n",
+    "stderr": "rules=510 grammar=1413 entropy=534 blocks=16\n",
+    "decode": "{\"input_bytes\":342580,\"output_bytes\":988496,\"codec_us\":27333,\"codec_ns\":27333134,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":338563,\"codec_us\":752252,\"codec_ns\":752252459,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2029 grammar=6057 entropy=1273 blocks=16\n",
+    "decode": "{\"input_bytes\":338563,\"output_bytes\":988496,\"codec_us\":25236,\"codec_ns\":25236019,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":988496,\"output_bytes\":341395,\"codec_us\":1803308,\"codec_ns\":1803308433,\"peakrss_kib\":14292}\n",
+    "stderr": "rules=6747 grammar=22146 entropy=3070 blocks=16\n",
+    "decode": "{\"input_bytes\":341395,\"output_bytes\":988496,\"codec_us\":29952,\"codec_ns\":29952314,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":340495,\"codec_us\":208101,\"codec_ns\":208101130,\"peakrss_kib\":23052}\n",
+    "stderr": "rules=0 grammar=13 entropy=182 blocks=16\n",
+    "decode": "{\"input_bytes\":340495,\"output_bytes\":1007472,\"codec_us\":38738,\"codec_ns\":38738870,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":335243,\"codec_us\":373782,\"codec_ns\":373782561,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=512 grammar=1463 entropy=541 blocks=16\n",
+    "decode": "{\"input_bytes\":335243,\"output_bytes\":1007472,\"codec_us\":25612,\"codec_ns\":25612863,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":323588,\"codec_us\":733685,\"codec_ns\":733685152,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2031 grammar=6205 entropy=1278 blocks=16\n",
+    "decode": "{\"input_bytes\":323588,\"output_bytes\":1007472,\"codec_us\":23492,\"codec_ns\":23492804,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":320991,\"codec_us\":1733285,\"codec_ns\":1733285178,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=6961 grammar=23514 entropy=3198 blocks=16\n",
+    "decode": "{\"input_bytes\":320991,\"output_bytes\":1007472,\"codec_us\":27034,\"codec_ns\":27034779,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":340495,\"codec_us\":218105,\"codec_ns\":218105754,\"peakrss_kib\":23060}\n",
+    "stderr": "rules=0 grammar=13 entropy=182 blocks=16\n",
+    "decode": "{\"input_bytes\":340495,\"output_bytes\":1007472,\"codec_us\":39216,\"codec_ns\":39216686,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":335468,\"codec_us\":363828,\"codec_ns\":363828598,\"peakrss_kib\":13248}\n",
+    "stderr": "rules=512 grammar=1512 entropy=537 blocks=16\n",
+    "decode": "{\"input_bytes\":335468,\"output_bytes\":1007472,\"codec_us\":25832,\"codec_ns\":25832095,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":323513,\"codec_us\":745343,\"codec_ns\":745343026,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=2034 grammar=6251 entropy=1290 blocks=16\n",
+    "decode": "{\"input_bytes\":323513,\"output_bytes\":1007472,\"codec_us\":24082,\"codec_ns\":24082319,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-fi-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":1007472,\"output_bytes\":320817,\"codec_us\":1747964,\"codec_ns\":1747964416,\"peakrss_kib\":13872}\n",
+    "stderr": "rules=6957 grammar=23595 entropy=3207 blocks=16\n",
+    "decode": "{\"input_bytes\":320817,\"output_bytes\":1007472,\"codec_us\":26866,\"codec_ns\":26866289,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":62906,\"codec_us\":38588,\"codec_ns\":38588050,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=0 grammar=13 entropy=176 blocks=3\n",
+    "decode": "{\"input_bytes\":62906,\"output_bytes\":178864,\"codec_us\":6892,\"codec_ns\":6892336,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":62940,\"codec_us\":79805,\"codec_ns\":79805238,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=511 grammar=1492 entropy=523 blocks=3\n",
+    "decode": "{\"input_bytes\":62940,\"output_bytes\":178864,\"codec_us\":4843,\"codec_ns\":4843711,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":65462,\"codec_us\":140604,\"codec_ns\":140604043,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1804 grammar=5359 entropy=903 blocks=3\n",
+    "decode": "{\"input_bytes\":65462,\"output_bytes\":178864,\"codec_us\":5114,\"codec_ns\":5114687,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":65462,\"codec_us\":136978,\"codec_ns\":136978217,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1804 grammar=5359 entropy=903 blocks=3\n",
+    "decode": "{\"input_bytes\":65462,\"output_bytes\":178864,\"codec_us\":5130,\"codec_ns\":5130145,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":62906,\"codec_us\":40485,\"codec_ns\":40485511,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=0 grammar=13 entropy=176 blocks=3\n",
+    "decode": "{\"input_bytes\":62906,\"output_bytes\":178864,\"codec_us\":6949,\"codec_ns\":6949042,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":63559,\"codec_us\":76924,\"codec_ns\":76924389,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=510 grammar=1483 entropy=528 blocks=3\n",
+    "decode": "{\"input_bytes\":63559,\"output_bytes\":178864,\"codec_us\":4942,\"codec_ns\":4942455,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":67190,\"codec_us\":137121,\"codec_ns\":137121314,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1717 grammar=5098 entropy=890 blocks=3\n",
+    "decode": "{\"input_bytes\":67190,\"output_bytes\":178864,\"codec_us\":5842,\"codec_ns\":5842797,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":178864,\"output_bytes\":67190,\"codec_us\":134963,\"codec_ns\":134963587,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1717 grammar=5098 entropy=890 blocks=3\n",
+    "decode": "{\"input_bytes\":67190,\"output_bytes\":178864,\"codec_us\":5437,\"codec_ns\":5437250,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":63221,\"codec_us\":39985,\"codec_ns\":39985097,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=0 grammar=13 entropy=171 blocks=3\n",
+    "decode": "{\"input_bytes\":63221,\"output_bytes\":184759,\"codec_us\":7248,\"codec_ns\":7248180,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":63114,\"codec_us\":74881,\"codec_ns\":74881897,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=511 grammar=1468 entropy=513 blocks=3\n",
+    "decode": "{\"input_bytes\":63114,\"output_bytes\":184759,\"codec_us\":5352,\"codec_ns\":5352230,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":65795,\"codec_us\":139788,\"codec_ns\":139788373,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1804 grammar=5437 entropy=907 blocks=3\n",
+    "decode": "{\"input_bytes\":65795,\"output_bytes\":184759,\"codec_us\":5139,\"codec_ns\":5139444,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":65795,\"codec_us\":139774,\"codec_ns\":139774087,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1804 grammar=5437 entropy=907 blocks=3\n",
+    "decode": "{\"input_bytes\":65795,\"output_bytes\":184759,\"codec_us\":5070,\"codec_ns\":5070444,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":63221,\"codec_us\":40692,\"codec_ns\":40692879,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=0 grammar=13 entropy=171 blocks=3\n",
+    "decode": "{\"input_bytes\":63221,\"output_bytes\":184759,\"codec_us\":7096,\"codec_ns\":7096035,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":63275,\"codec_us\":75933,\"codec_ns\":75933711,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=511 grammar=1495 entropy=513 blocks=3\n",
+    "decode": "{\"input_bytes\":63275,\"output_bytes\":184759,\"codec_us\":5351,\"codec_ns\":5351539,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":66172,\"codec_us\":108434,\"codec_ns\":108434668,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1789 grammar=5390 entropy=893 blocks=3\n",
+    "decode": "{\"input_bytes\":66172,\"output_bytes\":184759,\"codec_us\":5036,\"codec_ns\":5036352,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/dict-baseline/src6/experiments/bzip4/language_frontier/evidence/corpora/ud-tr-train/exploratory-80/form.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":184759,\"output_bytes\":66172,\"codec_us\":137048,\"codec_ns\":137048188,\"peakrss_kib\":13184}\n",
+    "stderr": "rules=1789 grammar=5390 entropy=893 blocks=3\n",
+    "decode": "{\"input_bytes\":66172,\"output_bytes\":184759,\"codec_us\":5079,\"codec_ns\":5079251,\"peakrss_kib\":13184}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":56851,\"codec_us\":51729,\"codec_ns\":51729306,\"peakrss_kib\":10624}\n",
+    "stderr": "rules=0 grammar=13 entropy=194 blocks=4\n",
+    "decode": "{\"input_bytes\":56851,\"output_bytes\":245699,\"codec_us\":7769,\"codec_ns\":7769212,\"peakrss_kib\":10624}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "9a7066180e2154f81f621e14669a07858020e3442c646664cc20c171ce70e0c1"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":57146,\"codec_us\":77374,\"codec_ns\":77374586,\"peakrss_kib\":10808}\n",
+    "stderr": "rules=508 grammar=1541 entropy=547 blocks=4\n",
+    "decode": "{\"input_bytes\":57146,\"output_bytes\":245699,\"codec_us\":4648,\"codec_ns\":4648967,\"peakrss_kib\":10808}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "efaefaff4198bccb74f840db6dc13d4171f7e52276d4382c0d97b691688417f4"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":58759,\"codec_us\":132672,\"codec_ns\":132672924,\"peakrss_kib\":10868}\n",
+    "stderr": "rules=1708 grammar=5157 entropy=948 blocks=4\n",
+    "decode": "{\"input_bytes\":58759,\"output_bytes\":245699,\"codec_us\":4861,\"codec_ns\":4861424,\"peakrss_kib\":10868}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "12c0198f89c035d0ddda9f53152daa0a400058e89c69c59e785cf4a1a788a1cd"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":58759,\"codec_us\":132748,\"codec_ns\":132748885,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=1708 grammar=5157 entropy=948 blocks=4\n",
+    "decode": "{\"input_bytes\":58759,\"output_bytes\":245699,\"codec_us\":4996,\"codec_ns\":4996366,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "12c0198f89c035d0ddda9f53152daa0a400058e89c69c59e785cf4a1a788a1cd"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":56851,\"codec_us\":57983,\"codec_ns\":57983601,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=0 grammar=13 entropy=194 blocks=4\n",
+    "decode": "{\"input_bytes\":56851,\"output_bytes\":245699,\"codec_us\":7621,\"codec_ns\":7621275,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "9a7066180e2154f81f621e14669a07858020e3442c646664cc20c171ce70e0c1"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":57400,\"codec_us\":77955,\"codec_ns\":77955630,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=510 grammar=1496 entropy=538 blocks=4\n",
+    "decode": "{\"input_bytes\":57400,\"output_bytes\":245699,\"codec_us\":4588,\"codec_ns\":4588895,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "1ef4ba5da97a1fad3fdd1e19fd8f3306aa5ad0802712efef88bbbe507f48b7b1"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":58957,\"codec_us\":134954,\"codec_ns\":134954512,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=1692 grammar=5087 entropy=944 blocks=4\n",
+    "decode": "{\"input_bytes\":58957,\"output_bytes\":245699,\"codec_us\":5065,\"codec_ns\":5065045,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "81ec1065e53a741a15a125f0b24fdba6eb473a7360ab4f28f2595116e8af753f"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/text.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":245699,\"output_bytes\":58957,\"codec_us\":134763,\"codec_ns\":134763194,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=1692 grammar=5087 entropy=944 blocks=4\n",
+    "decode": "{\"input_bytes\":58957,\"output_bytes\":245699,\"codec_us\":4874,\"codec_ns\":4874299,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "83b4a78e298f2d13a3665ec3463f38be9af56ebb410b3b24940bf2be2dce8a7c",
+    "frame_sha256": "81ec1065e53a741a15a125f0b24fdba6eb473a7360ab4f28f2595116e8af753f"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 0,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":56938,\"codec_us\":52477,\"codec_ns\":52477643,\"peakrss_kib\":10972}\n",
+    "stderr": "rules=0 grammar=13 entropy=194 blocks=4\n",
+    "decode": "{\"input_bytes\":56938,\"output_bytes\":253749,\"codec_us\":8076,\"codec_ns\":8076195,\"peakrss_kib\":10972}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "8d24fbad2e4b4c64cc6134218867698289b5cba39f20d37b24769ab334ead706"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 0,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":56040,\"codec_us\":73300,\"codec_ns\":73300571,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=508 grammar=1546 entropy=545 blocks=4\n",
+    "decode": "{\"input_bytes\":56040,\"output_bytes\":253749,\"codec_us\":4725,\"codec_ns\":4725841,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "398c637b35f02f1b7c0ff69da343d88274054e054f8486d666cb095934f31be4"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 0,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":57728,\"codec_us\":127551,\"codec_ns\":127551734,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=1750 grammar=5361 entropy=950 blocks=4\n",
+    "decode": "{\"input_bytes\":57728,\"output_bytes\":253749,\"codec_us\":4760,\"codec_ns\":4760055,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "21559ec4c53f042e912f43a899d77145f31ae781a88265684b7ff39bcfce329e"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 0,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":57728,\"codec_us\":128952,\"codec_ns\":128952078,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=1750 grammar=5361 entropy=950 blocks=4\n",
+    "decode": "{\"input_bytes\":57728,\"output_bytes\":253749,\"codec_us\":4841,\"codec_ns\":4841948,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "21559ec4c53f042e912f43a899d77145f31ae781a88265684b7ff39bcfce329e"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 2,
+    "cap": 0,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":56938,\"codec_us\":58264,\"codec_ns\":58264414,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=0 grammar=13 entropy=194 blocks=4\n",
+    "decode": "{\"input_bytes\":56938,\"output_bytes\":253749,\"codec_us\":8018,\"codec_ns\":8018196,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "8d24fbad2e4b4c64cc6134218867698289b5cba39f20d37b24769ab334ead706"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 2,
+    "cap": 512,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":56041,\"codec_us\":75752,\"codec_ns\":75752558,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=508 grammar=1532 entropy=543 blocks=4\n",
+    "decode": "{\"input_bytes\":56041,\"output_bytes\":253749,\"codec_us\":4699,\"codec_ns\":4699301,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "fd6de09b3853f5229f910a2f841208c6b84a285331afa1e6c962f67604256bd7"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 2,
+    "cap": 2048,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":57650,\"codec_us\":100143,\"codec_ns\":100143215,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=1743 grammar=5329 entropy=940 blocks=4\n",
+    "decode": "{\"input_bytes\":57650,\"output_bytes\":253749,\"codec_us\":4807,\"codec_ns\":4807644,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "08dd6982be10a52c092cc2c0913b1c49f21bb24d77fe8804c54e832137023dc6"
+  },
+  {
+    "input": "/workspace/scratch/frontier-corpora/ud/ar/development/forms.txt",
+    "policy": 2,
+    "cap": 8192,
+    "stdout": "{\"input_bytes\":253749,\"output_bytes\":57650,\"codec_us\":134533,\"codec_ns\":134533295,\"peakrss_kib\":11048}\n",
+    "stderr": "rules=1743 grammar=5329 entropy=940 blocks=4\n",
+    "decode": "{\"input_bytes\":57650,\"output_bytes\":253749,\"codec_us\":4800,\"codec_ns\":4800892,\"peakrss_kib\":11048}\n",
+    "binary_sha256": "52afe6483317bd30100366bb7fab345c40552e7e1bce1a10edbf0585542f7a57",
+    "source_sha256": "92b38cb595509f1080d254e85192b3c7e551fbd6dd138519a3370372363fcd68",
+    "encode_status": 0,
+    "decode_status": 0,
+    "input_sha256": "fa5817fa3c1fa532e1e3624dae2550ad340db2505d14e6b0ac8fb9495bf384ea",
+    "frame_sha256": "08dd6982be10a52c092cc2c0913b1c49f21bb24d77fe8804c54e832137023dc6"
+  }
+]
