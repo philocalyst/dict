@@ -96,3 +96,12 @@ This shows a modeling gap in the tested in-house predictors. It does not meet
 the 35% aspiration, establish a new invention, or permit a claim on the reserved
 books. The evidence supports closing these fixed losing candidates while
 retaining the independent grader for a genuinely different future model.
+
+A further preregistered adaptive-history test replaces cumulative KT counts
+with compact recent-bit states, local EWMA, run prediction and two integer
+mixing layers. Its 15,822,624-byte modeled decoder state fits the 16 MiB goal.
+Word/scalar features improve its fixed byte-only output on all six inputs,
+but both outputs still exceed bzip3 before framing. The best ideal costs lose
+by 1.1–14.0%, and the fixed native-wire gate therefore closes this candidate.
+Heavy tagged-row replacement is observed; it does not prove that capacity
+scaling would solve the model. No reserved outcome or native frame follows.

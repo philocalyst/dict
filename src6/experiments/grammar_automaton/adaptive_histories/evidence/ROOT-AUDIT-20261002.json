@@ -1,0 +1,10 @@
+{
+  "schema": "ROOT-AH1-AUDIT/1",
+  "evidence_sha256": "83b24b3d67d240fa91025f6eff580d852ca7daf918242b3d35db1df14b8369f9",
+  "source_cpp_sha256": "8f14e5dd914bdba6ef38ba2381c0a114bbb5bb517e795b3192bf9df3de1c59b9",
+  "cases": 6,
+  "all_ideal_variants_lose": true,
+  "state_bytes": 15822624,
+  "per_bit_work": "Eight history family predictions plus one run lookup; eight row updates per bit plus one per completed byte.",
+  "method": "Independent read-only source/binary/control/manifest/input rehash and score/work identities. No extra book scoring; independent tiny prefix-causality source review was performed before this receipt. No frame, native decoder performance, or reserved-book claim."
+}

@@ -315,3 +315,9 @@ retry, saving 9.59% total bytes against matched development-prefix controls.
 That external reference is a source of modeling evidence, not our compressor;
 the two longest books are prefixes in this calibration. Its gains do not meet
 the 35% aspiration or the fast-reader requirement.
+
+The subsequent [compact adaptive-history diagnostic](../experiments/grammar_automaton/adaptive_histories/RESULTS.md)
+adds nonstationary bit-state updates, run prediction and two integer mixer
+layers within 15.8 MB of modeled decoder state. Its word/scalar features help
+every fixed development input, but its best ideal scores still lose bzip3
+by 1.1–14.0%. No native frame or compression win is claimed for this model.
