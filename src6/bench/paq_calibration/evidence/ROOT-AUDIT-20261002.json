@@ -1,0 +1,29 @@
+{
+  "schema": "ROOT-PAQ-AUDIT/1",
+  "consolidated_report_sha256": "9bd50719b5262445da424161d2465a480db6bd7ece66470ad9408b24f6ffda17",
+  "bundle_files_rehashed": 22,
+  "upstream_source_and_build_copy_files_rehashed": 702,
+  "profiles": {
+    "profile_0L": {
+      "attempts": 6,
+      "exact_archives": 6,
+      "source_bytes": 4130934,
+      "frame_bytes": 974501,
+      "control_bytes": 973776
+    },
+    "profile_minus1": {
+      "attempts": 7,
+      "exact_archives": 6,
+      "source_bytes": 4130934,
+      "frame_bytes": 880412,
+      "control_bytes": 973776
+    }
+  },
+  "original_failure": {
+    "id": "madame-bovary-fr",
+    "partial_bytes": 49152,
+    "timeout_preserved": true
+  },
+  "minus1_language_work_balanced_ratio": 0.9006885450340055,
+  "method": "Read-only independent source/frame/decoded-output/log/binary/source-tree rehash and aggregate recalculation. No additional codec invocation; fresh-process decodes are the preserved original measured calls. No reserved book source or outcome opened."
+}

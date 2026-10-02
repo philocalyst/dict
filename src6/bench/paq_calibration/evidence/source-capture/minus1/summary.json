@@ -1,0 +1,14 @@
+{
+  "all_exact_fresh_decodes": false,
+  "all_source_guards_match": true,
+  "complete": true,
+  "controls": "/workspace/scratch/books2026-dev/controls/prefix-1048576/controls.json",
+  "controls_sha256": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "environment_end_path": "/workspace/scratch/paq8px-v217-level1-books6/environment-end.json",
+  "environment_start_path": "/workspace/scratch/paq8px-v217-level1-books6/environment-start.json",
+  "profile": "-1",
+  "row_count": 6,
+  "rows_path": "/workspace/scratch/paq8px-v217-level1-books6/rows.jsonl",
+  "source_manifest": "/workspace/scratch/books2026-dev/manifest.json",
+  "source_manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d"
+}

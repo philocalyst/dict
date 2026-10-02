@@ -1,0 +1,115 @@
+{
+  "files": [
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/0L/environment-end.json",
+      "sha256": "790f1da6c1b712293f8b97556698c7680b99d46da9e55864ad07b80f0a4d6a0f"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/0L/environment-start.json",
+      "sha256": "790f1da6c1b712293f8b97556698c7680b99d46da9e55864ad07b80f0a4d6a0f"
+    },
+    {
+      "bytes": 59828,
+      "path": "evidence/source-capture/0L/rows.jsonl",
+      "sha256": "2e5873a69c4c5d676c3503d10de8b961d6d4eb7ae8ca8003b1cbafb565002a50"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/0L/smoke-environment-end.json",
+      "sha256": "790f1da6c1b712293f8b97556698c7680b99d46da9e55864ad07b80f0a4d6a0f"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/0L/smoke-environment-start.json",
+      "sha256": "790f1da6c1b712293f8b97556698c7680b99d46da9e55864ad07b80f0a4d6a0f"
+    },
+    {
+      "bytes": 257370,
+      "path": "evidence/source-capture/0L/smoke.json",
+      "sha256": "95dcf7bcc484cbc5090a2de35b1260c91a197bd8f6e210d04f207da2eadc3566"
+    },
+    {
+      "bytes": 15300,
+      "path": "evidence/source-capture/0L/source/capture.py",
+      "sha256": "e1b2a1c7beea78d8ed9860b964df55b95479dc71f1a3f935cb5694e6c530c6df"
+    },
+    {
+      "bytes": 1960,
+      "path": "evidence/source-capture/0L/source/test_capture.py",
+      "sha256": "52bcf983dc0d3da9a479fd98349db2573cffab7c6c479b77a389103644b593fb"
+    },
+    {
+      "bytes": 722,
+      "path": "evidence/source-capture/0L/summary.json",
+      "sha256": "283c20bdec994a2c2b4eb2edca54952e6051a30db4da8d83d18c65c8b290c070"
+    },
+    {
+      "bytes": 1627,
+      "path": "evidence/source-capture/environment-pin-verification.json",
+      "sha256": "da5f38697c0d560802922d8752cc4af1ec4a342c61399b0c3bffeedb9df1d191"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/minus1/environment-end.json",
+      "sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/minus1/environment-start.json",
+      "sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095"
+    },
+    {
+      "bytes": 1199,
+      "path": "evidence/source-capture/minus1/provenance.json",
+      "sha256": "0f67386580a687da3d092d68b1ea14d1f49c4fa6befb95bfa9f1a5d2e12dbeb3"
+    },
+    {
+      "bytes": 266054,
+      "path": "evidence/source-capture/minus1/retry/retry.json",
+      "sha256": "7b426b52fa2c4154296801b5dfb9cee282164fa19c6194a44f79828c51d8282c"
+    },
+    {
+      "bytes": 4434,
+      "path": "evidence/source-capture/minus1/retry/source/retry_bovary.py",
+      "sha256": "462d2a735f8411bf7b01b0d44631177af9036fa92e7f9788a8cc721db153a3d9"
+    },
+    {
+      "bytes": 52681,
+      "path": "evidence/source-capture/minus1/rows.jsonl",
+      "sha256": "0ba928877cf228a075e95a25cb4c09c71f626fdab0c3db40d59adf9dd7776059"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/minus1/smoke-environment-end.json",
+      "sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095"
+    },
+    {
+      "bytes": 120074,
+      "path": "evidence/source-capture/minus1/smoke-environment-start.json",
+      "sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095"
+    },
+    {
+      "bytes": 257443,
+      "path": "evidence/source-capture/minus1/smoke.json",
+      "sha256": "9efb94281373cbb4daaf2810fc1c3768282fc931abc74698c0d476cf0d3484d3"
+    },
+    {
+      "bytes": 15449,
+      "path": "evidence/source-capture/minus1/source/capture_contextmix.py",
+      "sha256": "8c6471471ebfcbe244b755cd0589423954bf413f5633d9c443b57896dc545bc5"
+    },
+    {
+      "bytes": 1313,
+      "path": "evidence/source-capture/minus1/source/test_contextmix.py",
+      "sha256": "04f1351828cce69652d997c1b6b99bfd30315a9d31b61d35a6f8b4a47bb9e9e5"
+    },
+    {
+      "bytes": 743,
+      "path": "evidence/source-capture/minus1/summary.json",
+      "sha256": "0c5f6822a8e3bcb3f4f13c540643ae2427a5414cd45470a23f45f1de90a27cdc"
+    }
+  ],
+  "schema": "PAQ8PX-SOURCE-CAPTURE-FILES/1"
+}

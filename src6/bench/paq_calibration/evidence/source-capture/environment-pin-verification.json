@@ -1,0 +1,52 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "binary_match": true,
+      "build_script_match": true,
+      "commit_match": true,
+      "phase": "environment-start.json",
+      "profile": "-0L",
+      "profile_address_space_limit_bytes": 536870912,
+      "profile_timeout_seconds": null,
+      "source_tree_match": true
+    },
+    {
+      "binary_match": true,
+      "build_script_match": true,
+      "commit_match": true,
+      "phase": "environment-end.json",
+      "profile": "-0L",
+      "profile_address_space_limit_bytes": 536870912,
+      "profile_timeout_seconds": null,
+      "source_tree_match": true
+    },
+    {
+      "binary_match": true,
+      "build_script_match": true,
+      "commit_match": true,
+      "phase": "environment-start.json",
+      "profile": "-1",
+      "profile_address_space_limit_bytes": 1073741824,
+      "profile_timeout_seconds": null,
+      "source_tree_match": true
+    },
+    {
+      "binary_match": true,
+      "build_script_match": true,
+      "commit_match": true,
+      "phase": "environment-end.json",
+      "profile": "-1",
+      "profile_address_space_limit_bytes": 1073741824,
+      "profile_timeout_seconds": null,
+      "source_tree_match": true
+    }
+  ],
+  "expected": {
+    "binary_sha256": "59ffb4c02c56a9de8c73dc5124ff086c23bdd88bb8d64dd26f93630eae5ea9ef",
+    "build_script_sha256": "6b73331349930f61c5d05052f23588b03938b37335802b905dd230ac7abb0c86",
+    "commit": "c84f576fc2c522194cd320743708652a154daf6b",
+    "source_tree_sha256": "045e6271ed4e0dca086a66fdf2c00dbdbf92cef47119c8e6a07181de30060adf"
+  },
+  "schema": "PAQ8PX-ENVIRONMENT-PIN-VERIFICATION/1"
+}

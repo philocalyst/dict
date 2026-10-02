@@ -1,0 +1,21 @@
+{
+  "all_exact_fresh_decodes": false,
+  "attempt_complete": true,
+  "binary_sha256": "59ffb4c02c56a9de8c73dc5124ff086c23bdd88bb8d64dd26f93630eae5ea9ef",
+  "capture_dir": "/workspace/scratch/paq8px-v217-level1-books6",
+  "controls_sha256": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "environment_end_sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095",
+  "environment_start_sha256": "2d9d05b87f88a879369d10d996a0d201f1fbae9bfc170fe483d30f725f375095",
+  "exact_original_profile_source_files": [
+    "capture_contextmix.py",
+    "test_contextmix.py"
+  ],
+  "failed_row_policy": "Preserve original timeout row; independent retry remains separate.",
+  "profile": "-1",
+  "rows_sha256": "0ba928877cf228a075e95a25cb4c09c71f626fdab0c3db40d59adf9dd7776059",
+  "schema": "PAQ8PX-LEVEL1-ORIGINAL-CAPTURE-PROVENANCE/1",
+  "source_commit": "c84f576fc2c522194cd320743708652a154daf6b",
+  "source_manifest_sha256": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d",
+  "source_tree_sha256": "045e6271ed4e0dca086a66fdf2c00dbdbf92cef47119c8e6a07181de30060adf",
+  "summary_sha256": "0c5f6822a8e3bcb3f4f13c540643ae2427a5414cd45470a23f45f1de90a27cdc"
+}

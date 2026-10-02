@@ -271,8 +271,8 @@ are required for decoding.
 
 See [build and reproduction commands](frontier-2026-build.md). The reviewed
 production dictionary changes are pushed to canonical at
-`b06bf9a` (schema 4), following `6f043e2` (schema 3). Experimental source,
-new book studies and their evidence remain under active development.
+`b06bf9a` (schema 4), following `6f043e2` (schema 3). The reviewed experimental
+source, book evaluation loop and retained evidence are pushed in `1bbbfe0`.
 
 ## Complete-book evaluation loop
 
@@ -303,3 +303,15 @@ full decoding and file output; all 72 outputs are exact. Files are resident,
 and inherited coordinator memory limits interpretation of the recorded RSS.
 See the [report and limitations](../bench/frontier_loop/evidence/book-readers-sized-annotation-20261002.json).
 This decoder improvement leaves the complete-book size failure unchanged.
+
+The separate [joint lexical PPM diagnostic](../experiments/lexical_ppm/RESULTS.md)
+tests complete successor distributions, a joint word/separator stream and
+paid terminated spellings. All twelve fixed tokenizer/source rows pass their
+source oracle and memory cap, but even the best optimistic size loses every
+input and totals 11.58% above delivered bzip3 bytes. No native wire follows.
+The [mature PAQ calibration](../bench/paq_calibration/PAQ-BOOK-CALIBRATION-20261002.md)
+provides six exact `-1` archives after a separately retained timeout and clean
+retry, saving 9.59% total bytes against matched development-prefix controls.
+That external reference is a source of modeling evidence, not our compressor;
+the two longest books are prefixes in this calibration. Its gains do not meet
+the 35% aspiration or the fast-reader requirement.

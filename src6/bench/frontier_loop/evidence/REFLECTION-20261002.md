@@ -78,3 +78,21 @@ memory, updates and six development sources before any outcomes. Separate
 spelling, separator and transition costs will determine whether a native wire
 is justified. The mature external PAQ reference supplies a modeling calibration,
 not credit for an invention or a new corpus outcome.
+
+That joint lexical PPM diagnostic is now closed too. Both fixed tokenizers
+reconstruct every source and fit the process cap, but their best optimistic
+sum is 1,086,524 bytes against 973,776 delivered bzip3 bytes (+11.58%); every
+book loses. Known word choices account for about 677 kB, first-use word
+spellings for 197 kB, and separator choices for 138 kB. Complete successor
+distributions and stronger paid spelling therefore do not rescue this model.
+Its ideal lengths do not justify a native wire or a post-result capacity grid.
+
+The separately audited mature PAQ `-1` reference supplies six valid archives
+after a retained infrastructure-interrupted attempt and one clean retry:
+880,412 bytes, 9.59% below the same 973,776-byte bzip3 control. Its language/work
+balanced ratio is 0.90069. It uses a substantially richer text-context stack
+and adaptive histories, and its diagnostic encoding/decoding costs are high.
+This shows a modeling gap in the tested in-house predictors. It does not meet
+the 35% aspiration, establish a new invention, or permit a claim on the reserved
+books. The evidence supports closing these fixed losing candidates while
+retaining the independent grader for a genuinely different future model.

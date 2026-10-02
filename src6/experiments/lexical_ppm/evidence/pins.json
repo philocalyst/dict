@@ -1,0 +1,9 @@
+{
+  "control_manifest": "640c4ed24bc1f2753f0a4f2fe8abf6ac3f7dee7ce2612aab294a732bbba2256f",
+  "ppm_probe_sha256": "7cbe52d67f67f1877cfda647c065e0cdc0af41ea8630eea15bd066733558fd2e",
+  "protocol_sha256": "f97395e701233eb0c648d7329f404df635ad244ed44bb6d8953e9178133b31bb",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+  "screen_sha256": "b127cb7a9d6711e03ca5af5d9f5027e10ac060e638d0af9bac02ecbedc59f099",
+  "source_manifest": "ee6cf531c46f704d6b5af36ca1fafd5ee16b44cc71d76c17d09ed566c623ef9d"
+}
